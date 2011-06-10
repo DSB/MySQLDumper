@@ -1,0 +1,58 @@
+Optik:
+- Das Layout von MySQLDumper wird nun komplett per CSS-Datei gesteuert. Man kann ihn so leicht an eigene Wünsche anpassen.
+- Die Übergabe der Steuerparameter beim Selbstaufruf erfolgt nun nicht per GET sondern per POST. So müsste der Bug in manchen
+  Mozilla-Versionen umgangen werden und MSD sollte nun auch damit funktionieren.
+- Tabellenauswahl beim manuellen Dump war noch nicht an die neue Optik angepasst -> erledigt
+- neues und endgültiges Logo entwickelt und eingebaunde (Danke an René, der es entwickelt hat)
+
+Parser:
+- Inlinekommentare werden jetzt erkannt
+- USE-Befehle werden ignoriert. So kann ein Backup mit USE in eine beliebige Datenbank eingespielt werden.
+- START, BEGIN, TRANSACTION, CREATE IF NOT EXISTS und weitere SQL-Befehle hinzugefügt
+- Bisher kam es zu einer Endlosschleife wenn der Parser auf einen unbekannten Befehl stieß. 
+  Nun wird eine Fehlermeldung ausgegeben und der Vorgang abgebrochen.
+- Problem bei erweiterten Inserts behoben
+
+Verwaltung:
+- Listen optisch verbessert (Summenzeile rechtsbündig, usw...)
+- Dateien werden nun nach dem verschlüsselten Dateidatum im Namen sortiert und nicht mehr nach dem tatsächlichen Dateidatum
+- maximale Dateigröße für Upload per Formular wird nun ermittelt und angezeigt
+- Fehler bei der Auflistung von Multipartfiles behoben
+
+Multipart:
+- Die Dateigröße der einzelnen Parts wird nun wesentlich genauer erkannt. 
+  Bei sehr kleinen Dateigrößen kann es trotzdem passieren, dass die Datei größer wird, als angegeben.
+  Genrell gilt: je größer die Dateigröße gewählt wird, umso genauer werden die Dateien gesplittet. 
+
+Crondump:
+- Spaltennamen werden nun auch von Backticks umschlossen gespeichert
+
+Datenbankerkennung:
+- Die Routine zur Datenbankerkennung wurde verbessert, so dass nur noch Datenbanken gelistet werden, bei denen man
+  tatsächlich Zugriffsrechte hat. Lange Listen mit Einträgen "Datenbank existiert nicht" sollten damit der 
+  Vergangenheit angehören.
+
+Speed:
+- Durch konsequentes Austauschen von Indexen des Formats $var["index"] durch $var['index'] und Austausch von echo "text" 
+  durch echo 'text' wurde ein Performanceschub erreicht
+ 
+Restore:
+- Duplicate entry-Fehler führen nicht mehr zum Abbruch des Wiederherstellungsvorgangs.
+  Es wird ein Hinweis in das ErrorLogfile geschrieben und Hinweise werden beim Restore gezählt.
+  Generell werden Hinweise nun im ErrorLog grün dargestellt und wirkliche Fehler in rot. 
+- automatisches on-the-fly Downgrade implementiert
+  Schlägt der Versuch eine Tabelle anzulegen fehl, so übersetzt MySQLDumper die Create-Anweisung in den 3.x-Syntax und versucht erneut 
+  die Tabelle anzulegen. Damit kann man ein 4.x-Dump (egal woher es stammt) auf einem MySQL-Server älterer Version problemlos einspielen!
+
+Konfiguration:
+- Browserauswahl entfernt (überflüssig, da MSD nun in allen Browsern funktionieren sollte)
+- Link zur SQL-Befehlsliste als Spalte hinzugefügt, damit man von hier zur Befehlsliste gelangt
+- Javascript Fehler bei Listenauswahl im FF beseitigt
+- Query before und Query after Dump-Fehler bei magic_quotes=on gefixt
+
+SQL-Browser:
+- einige Bugs behoben
+- weitere Administrationsmöglichkeiten hinzugefügt
+
+Sonstiges:
+- alle include-Pfade von '../ordner/' auf './../ordner' geändert. Nun sollte MySQLDumper auch problemlos auf ILS-Servern laufen. 
