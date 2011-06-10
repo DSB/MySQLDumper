@@ -1,0 +1,131 @@
+body,td,tr	
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color:#111111;
+		margin:4px;
+		padding:4px;
+		font-size:12px;
+	}
+h6 {
+	font-size:11px;
+}	
+.small
+	{
+		font-size:10px;
+	}
+
+p.meldung 
+	{ 
+		font-size: 10pt;
+		color:#000000;
+		font-weight:normal;
+	}
+
+p.fehler  
+	{ 
+		font-size: 10pt;
+		color:green;
+		font-weight:bold;
+	}
+
+p.warnung 
+	{
+		font-size: 11pt;
+		color:red;
+		font-weight:normal;
+	}
+p.desc
+	{
+		font-size: 9pt;
+		padding-left:20px;
+	}
+	
+a		
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color:#333333;
+		font-weight:normal;
+		font-style:normal;
+		font-size:12px;
+		text-decoration:none;
+	}
+
+a:hover {
+    text-decoration: none;
+    color: #D00030;
+}
+
+form	{ 	padding:0px;
+			margin:0px;	
+		}
+td.tableheads_on {
+    border:1px solid black;
+    color:#ffffff;
+    background:#9f9f9f;
+    padding: 2px;
+    padding-left: 5px;
+    text-align:center;
+    border-spacing:0px;
+}
+
+td.tableheads_off {
+    border:1px solid black;
+    background:#cfcfcf;
+    padding: 2px;
+    padding-left: 5px;
+    text-align:center;
+    border-spacing:0px;
+    color:#ffffff;
+}
+	
+img { border:0px; }
+
+.hd {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background:#ffffcc;
+	vertical-align: top;
+	text-align: center;
+}
+
+.hellblau {
+	background:#B4ECEF;
+}
+
+.Menubutton{
+	border: 0px;
+	color: blue;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Menubutton2{
+	border: 0px;
+	color: blue;
+	FONT-SIZE: 10px;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Formbutton{
+	border: thin solid Navy;
+	color: blue;
+	background-color: Silver;
+	cursor: pointer;
+	width:140px;
+}
+.Formbutton2{
+	border: thin solid Navy;
+	color: blue;
+	FONT-SIZE: 11px;
+	background-color: Silver;
+	cursor: pointer;
+	width:110px;
+}
+.scrollbox{
+	overflow: auto; 
+	border: 1px solid silver; 
+	width:250px; 
+	height: 100px;
+}
+

@@ -1,0 +1,10 @@
+Installation:
+
+- open file "inc/config.php"
+
+- insert data (Host, name, password) for the database you wish to backup
+(all other values can be configured online - there is no need to change other values)
+
+- upload all files to your webspace
+
+- Ready!

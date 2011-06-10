@@ -1,0 +1,10 @@
+Installation:
+
+- öffne die Datei "inc/config.php"
+
+- füge die Daten (Host, Name, Passwort) der zu verwaltenden Datenbanke hinzu
+(alle anderen Einstellungen kannst Du später online verändern)
+
+- lade alle Dateien auf Deinen Webspace hoch
+
+- Fertig! Starte das Script im Browser http://www.deineDomain.de/mysqldump/
