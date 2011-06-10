@@ -1,0 +1,22 @@
+Installation:
+
+- upload all files to your webspace
+- make on file "config.php" chmod 777
+- start the script in your browser (http://www.deineDomain.de/mysqldumper/)
+- Follow the Installationscript
+- in step 2 (Configuration) change Data (Host, Name, Password) of your databaseconnection and save
+  (all other parameters you can change online)
+ 
+- in case of safe_mode=1 you must create the folders manually.
+  create following folders in the Scriptdir:
+  	
+	 - work
+	 - work/backup
+	 - work/config
+	 - work/structure
+	 - work/log
+	 
+  and make chmod 777 on all folders
+  
+- Ready !
+

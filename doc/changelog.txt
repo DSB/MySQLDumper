@@ -1,0 +1,18 @@
+Changelog für MySqlDump:
+
+Version 1.0
+- Dumps von phpMyAdmin und ähnlichen Programmen können nun eingespielt werden
+- Detailansicht der einzelnen Tabellen
+- SQL-Abfragegenerator (Datensatzlistensortierung auf-/absteigend, eigene Abfragen)
+
+
+Version 0.9.3c
+
+- Cronjob als Perlscript, um dem Timeout ein Schäppchen zu schlagen 
+- Cronjob kann standardmäßig eine bestimmte Datenbank sichern (unabhängig - von anderen Eistellungen) 
+- englische Sprachdatei überarbeitet 
+- kleinerer Bugs beseitigt 
+- es werden nur Datenbanken angezeigt, die auch bearbeitet werden können 
+- einfachere Installation durch neue Verzeichnisstruktur (bei Update bitte alte Backups ins neue Backup-Verzeichnis kopieren) 
+- bessere Performance 
+

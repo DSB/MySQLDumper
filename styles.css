@@ -1,0 +1,407 @@
+body	
+{
+	font-family: Verdana,Helvetica,sans-serif;
+	color: #111111;
+	margin: 4px;
+	padding: 4px;
+	font-size: 12px;
+	background-color: #F5F5F5;
+	
+}
+body.menu {
+
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#111111;
+	margin:4px;
+	padding:4px;
+	font-size:12px;
+	background-color:#D0DCE0;
+}
+
+body.control {
+	font-size: 10px;
+	background-color: #D8D8D8;
+	color: Navy;
+}
+td,tr {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#111111;
+	margin:4px;
+	padding:4px;
+	font-size:12px;
+}
+
+td.nomargin {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font-size:16px;
+}
+
+h6 {
+	font-size:11px;
+	background-color:#ccffcc;
+}	
+.small
+	{
+		font-size:10px;
+	}
+.verysmall
+	{
+		font-size: 9px;
+	}
+.meldung 
+	{ 
+		font-size: 10pt;
+		color:#000000;
+		font-weight:normal;
+	}
+
+.success  
+	{ 
+		font-size: 10pt;
+		color:green;
+		font-weight:bold;
+	}
+
+.warnung 
+	{
+		font-size: 11pt;
+		color:red;
+		font-weight:normal;
+	}
+.swarnung 
+	{
+		font-size: 12px;
+		color:red;
+		font-weight:normal;
+	}
+.desc
+	{
+		font-size: 9pt;
+		padding-left:20px;
+	}
+
+a		
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color:#333333;
+		font-weight:normal;
+		font-style:normal;
+		font-size:12px;
+		text-decoration:none;
+	}
+
+a:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #D00030;
+}
+
+a.ul		
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color:#333333;
+		font-weight:normal;
+		font-style:normal;
+		font-size:12px;
+		text-decoration:underline;
+	}
+a.ul:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+a.uls		
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color:#333333;
+		font-weight:normal;
+		font-style:normal;
+		font-size:10px;
+		text-decoration:underline;
+	}
+a.uls:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+a.datacell		
+	{
+		font-family:Verdana,Helvetica,sans-serif;
+		color : black;
+		text-decoration: none;
+		background-color : transparent;
+		
+		padding : 4px; 
+		cursor : default
+	}
+a.ul:datacell {
+    color: black;
+	text-decoration: none;
+	background-color : transparent;
+	border : 1px solid red; 
+	padding : 4px;	
+	cursor : default
+}
+
+form	{ 	padding:0px;
+			margin:0px;	
+		}
+td.tableheads_on {
+    border:1px solid black;
+    color:#ffffff;
+    background:#9f9f9f;
+    padding: 2px;
+    padding-left: 5px;
+    text-align:center;
+    border-spacing:0px;
+}
+
+td.tableheads_off {
+    border:1px solid black;
+    background:#cfcfcf;
+    padding: 2px;
+    padding-left: 5px;
+    text-align:center;
+    border-spacing:0px;
+    color:#ffffff;
+}
+
+td.sm {
+	font-size:8pt;
+}	
+
+.blau {
+	color: Blue;
+}
+img { border:0px; }
+
+.hd {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background:#ffffcc;
+	vertical-align: top;
+	text-align: center;
+}
+.hdl {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background:#ffffcc;
+	vertical-align: top;
+	text-align: left;
+}
+.hd2 {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background:#ffcc33;
+	vertical-align: top;
+	text-align: center;
+}
+.hellblau {
+	background:#B4ECEF;
+}
+
+.green {
+	color: green;
+}
+.green1 {
+	color: green;
+	font-size: 12px;
+	font-weight: bold;
+}
+.Menubutton{
+	border: 0px;
+	color: blue;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Menubutton2{
+	border: 0px;
+	color: blue;
+	FONT-SIZE: 10px;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Formbutton{
+	border: thin solid Navy;
+	color: blue;
+	background-color: Silver;
+	cursor: pointer;
+	width:140px;
+}
+.Formbutton2{
+	border: thin solid Navy;
+	color: blue;
+	FONT-SIZE: 11px;
+	background-color: Silver;
+	cursor: pointer;
+	width:110px;
+}
+.Formbutton3{
+	border: thin solid green;
+	color: blue;
+	background-color: #ccffff;
+	cursor: pointer;
+	FONT-SIZE: 10px;
+	width:160px;
+	
+}
+.Formbutton4{
+	border: thin solid Navy;
+	color: blue;
+	background-color: Silver;
+	cursor: pointer;
+	
+}
+.textk {
+	FONT-SIZE: 10px;
+}
+.scrollbox{
+	overflow: auto; 
+	border: 1px solid silver; 
+	width:250px; 
+	height: 100px;
+}
+.dbscrollbox{
+	overflow: auto; 
+	border: 1px solid silver; 
+	width:100%; 
+	height: 100px;
+}
+.sqlbox
+	{
+	font-size: 9pt;
+	padding: 0px;
+	background-color: #DCDCDC;
+	color: Green;
+	border: thin ridge #5B5B5B;
+	height: auto;
+}
+.sqleditbox
+	{
+	font-size: 9pt;
+	padding: 6px;
+	background-color: #DCDCDC;
+	color: Navy;
+	border: thin solid #525252;
+	height: auto;
+	width: auto;
+}
+.sqloutbox
+	{
+	font-size: 9pt;
+	padding: 6px;
+	background-color: #DCDCDC;
+	color: Navy;
+	border: thin solid #525252;
+	height: auto;
+	width: 90%;
+	overflow: auto;
+}
+.sqlnewbox
+	{
+	font-size: 9pt;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: #FFFFAA;
+	color: #750000;
+	border: thin solid #00008B;
+	height: auto;
+	width: auto;
+}
+.MySQLbox
+	{
+	font-size: 10pt;
+	padding: 6px;
+	background-color: Black;
+	color: White;
+	border: thin solid #999999;
+	height: 200px;
+	width: 80%;
+	text-align: left;
+	overflow: auto; 
+}
+td.sqletbl {
+	color: #000153;
+	vertical-align: top;
+}
+.sbox2 {
+	font-size: 9pt;
+}
+.wtitle {
+	background-color: #7F8E9C;
+	padding: 0px; /*width: 80%;
+	border: thin solid Black;*/
+}
+.sqleingabe {
+	
+	width: 100%;
+	
+}
+.SQLbutton{
+	border: 1px solid Navy;
+	color: blue;
+	FONT-SIZE: 10px;
+	background-color: Silver;
+	cursor: pointer;
+}
+.MYSQLbutton{
+	border: 1px solid Navy;
+	color: blue;
+	FONT-SIZE: 11px;
+	background-color: Silver;
+	cursor: pointer;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:6px;
+	padding-right:6px;
+	width: 140px;
+	text-align: center;
+}
+.SQLCombo {
+	color: Blue;
+	FONT-SIZE: 10px;
+	background-color: Silver;
+}
+.crondumppars{
+	color: #004C01;
+}
+.dumppars{
+	color: #009B01;
+}
+.smallgrey {
+	font-size: 9px; 
+	color:#999999;
+}
+.smallwarnung {
+	font-size: 9px; 
+	color:red;
+	
+}
+.smallblue {
+	font-size: 9px; 
+	color:blue;
+}
+.smallblack {
+	font-size: 9px; 
+	color:black;
+}
+.smallgreen {
+	font-size: 9px; 
+	color:green;
+}
+.smallbrown {
+	ont-size: 9px; 
+	color:brown;
+}
+.smalldblue {
+	ont-size: 9px; 
+	color:#000099;
+}
