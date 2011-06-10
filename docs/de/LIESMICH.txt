@@ -1,0 +1,90 @@
+$Id$
+
+MySQLDumper - Readme_de
+====================
+
+  MySQLDumper ist ein Sicherungsprogramm für MySQL-Datenbanken, 
+  geschrieben in PHP und Perl. Damit können Sicherungskopien der
+  Daten (Forum, Shop, Blog, usw.) erstellt und bei Bedarf auch
+  wieder hergestellt werden. Besonders bei Web-Space ohne Shell-Zugang
+  bietet sich MySQLDumper als sinnvolle Alternative an.
+  
+  Version 1.25
+  ---------------
+  http://www.MySQLDumper.de/
+
+	Copyright (C) 2004-2010 Daniel Schlichtholz (admin@MySQLDumper.de) und mehr
+	
+	This program is free software; you can redistribute it and/or modify it under 
+	the terms of the GNU General Public License as published by the Free Software 
+	Foundation; either version 2 of the License, or (at your option) any later 
+	version.
+	
+	This program is distributed in the hope that it will be useful, but WITHOUT 
+	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+	FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more 
+	details.
+	
+	You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	
+	
+  Voraussetzungen:
+    PHP 4 oder höher
+    MySQL 4.1 oder höher
+    einen Web-Browser
+    optional Perl für das Cron-Script
+
+  Übersicht:
+	Das Problem:
+	PHP-Skripte werden nach einer bestimmten Laufzeit abgebrochen
+	(normalerweise nach 30 Sekunden), und so funktioniert ein Backup mit diversen
+	Tools nur bis zu einer bestimmten Größe.
+
+	Braucht das Skript länger als die vom Server zugestandene Ausführungszeit,
+	so wird es einfach abgebrochen! Man erhält damit keine vollständige
+	Sicherungskopie. Die gleiche Problematik besteht beim Wiedereinspielen eines
+	Backups.
+
+	Wer einmal ein Dumpfile von Hand in viele kleinere Einzelabschnitte zerlegt hat,
+	um eine Datenbank wieder herzustellen, der hat leidvoll und arbeitsintensiv
+	erfahren, wovon wir reden. Mit MySQLDumper gehört dieser manuelle Aufwand
+	glücklicherweise der Vergangenheit an.
+
+	MySQLDumper umgeht den Timeout-Error mit Hilfe eines kleinen Tricks: Er liest
+	nur eine bestimmte Anzahl von Datensätzen aus der Tabelle aus, merkt sich, wie
+	weit er gekommen ist, und ruft sich anschließend selbst auf. Dadurch erhält das
+	Skript bei jedem Aufruf wieder die volle Ausführungszeit und umgeht so geschickt
+	das Problem des Abbruchs durch den Server. Das gleiche Prinzip benutzt MySQLDumper
+	auch beim Wiederherstellen der Daten.
+
+	MySQLDumper kann die Daten beim Sichern sofort packen. Auch das Wiederherstellungs-
+	skript kann direkt aus dieser gepackten Datei lesen, ohne dass sie auf dem Server
+	entpackt werden muss! Das spart Zeit, Platz und Nerven. Natürlich kann man die Datei
+	auch ungepackt lassen, aber spätestens beim Hochladen eines Backups weiß man dies
+	zu schätzen. 
+	
+  Download:
+    Die neuste Version gibt es unter http://www.MySQLDumper.de/
+
+  Credits:
+    Finden Sie auf http://www.MySQLDumper.de/credits/
+
+  Installation:
+    Siehe INSTALL_de.txt.
+
+  Sicherheit:
+  	Um Ihren MySQLDumper vor unberechtigten Zugriff zu schützen, müssen Sie einen sog.
+  	Verzeichnisschutz einrichten. Öffnen Sie dazu bitte mit dem Browser die Startseite
+  	der MySQLDumper-Installation. Dort drücken Sie den Button 'Verzeichnisschutz erstellen'
+  	(funktioniert nur mit dem Apache-Webserver) oder erstellen Sie den Schutz manuell.
+  
+  Änderungen:
+    Siehe changelog_deutsch.txt
+
+  Support:
+    Hilfe finden Sie im Forum unter http://forum.MySQLDumper.de/
+    
+   Viel Spaß!
+    Ihr MySQLDumper-Team
