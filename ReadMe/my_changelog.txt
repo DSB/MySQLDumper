@@ -1,0 +1,46 @@
+Changelog von 1.22 auf 1.23
+
+----------------------------------------
+crondump.pl:
+- Aufruf jetzt mit Optionen über Getopt
+
+perl /pfad/zu/msd/msd_cron/crondump.pl -config=testconfig.conf.php -html_output=1
+
+Anzeige, ob die Konfiguration aus dem Aufruf, der Shell oder der Standardvariablen 
+übernommen wurde (wenn ohne Parameter aufgerufen).
+
+Parameter html_output:
+- es kann gewählt werden, ob die Ausgabe der Meldungen im HTML-Format erfolgen soll oder nicht.
+Standardeinstellung:
+- Aufruf von Shell -> HTML-Ausgabe ist ausgeschaltet
+- Aufruf über HTTP -> HTML-Ausgabe ist eingeschaltet
+
+Durch Übergabe des Parameters im Aufruf kann die Standardeinstellung jederzeit überschrieben werden.
+
+Die Ausgabe der Dateigroesse erfolgt nun im lesbaren Format (1 MB anstatt 1048576 Bytes).
+
+Sendmail:
+- ist in der Konfiguration sendmail aktiviert, so wird die Email via sendmail verschickt. 
+Der Aufruf inkluisve der Parameter wird aus der Konfiguration übernommen.
+- ist in der Konfiguration SMTP gewählt, dann wird die Email via SMTP versandt.
+Der SMTP-Server wird aus der Konfiguration übernommen. Der Port ist fix auf 25 gestellt.
+----------------------------------------
+perltest.pl
+- die Ausgabe ist komplett auf Englisch uebersetzt. 
+Zusätzlich wird klarer ausgegeben wofuer ein Modul benoetigt wird. 
+----------------------------------------
+Wiederherstellung:
+- wird eine Backupdatei von MySQLDumper (ab Version 1.23) zur Wiederherstellung ausgewählt, so kann
+man jetzt wahlweise auch nur bestimmte Tabellen aus dem Backup wiederherstellen.
+----------------------------------------
+SQL-Browser:
+- in der MySQL-Suche (Lupe) kann man die Treffer nun bequem editieren/löschen und kommt danach 
+sofort wieder zur Trefferliste zurück
+----------------------------------------
+refresh_db_list und config_overview.php:
+- beim Neu-Einlesen der Datenbanken geht die Einstellung der gewählten Datenbank für das Cronscript 
+nicht mehr verloren, sondern wird korrekt auf die alte Einstellung zurück gesetzt
+- refresh_db_list.php kann man vor dem eigentlichen Start von crondump.pl aufrufen, wenn sich häufig
+Datenbanken verändern/ gelöscht werden. Die Datenbankliste in der Konfigurationsdatei wird dann aktualisiert.
+Existiert die Datenbank der alten Konfiguration nicht mehr, so wird die erste gefundene Datenbank ausgewählt.
+
