@@ -1,0 +1,103 @@
+<?php
+//generated at 17.03.2007
+
+$lang['config_headline']="Konfiguration";
+$lang['save_success']="Die Einstellungen wurden erfolgreich gespeichert.";
+$lang['save_error']="Die Einstellungen konnten nicht gespeichert werden!";
+$lang['config_email']="E-Mail-Benachrichtigung";
+$lang['config_autodelete']="automatisches Löschen";
+$lang['config_interface']="Interface";
+$lang['multi_part_groesse']="maximale Dateigröße";
+$lang['help_multipart']="Bei eingeschaltetem Multipart werden mehrere Backup-Dateien erzeugt, deren Maximalgröße sich nach der unteren Einstellung richtet";
+$lang['help_multipartgroesse']="Die maximale Größe der einzelnen Backup-Dateien kann hier bei eingeschaltetem Multipart bestimmt werden";
+$lang['empty_db_before_restore']="Datenbank vor Wiederherstellung löschen";
+$lang['allpars']="alle Parameter";
+$lang['cron_extender']="Dateiendung des Scripts";
+$lang['cron_savepath']="Konfigurationsdatei";
+$lang['cron_printout']="Textausgabe";
+$lang['config_cronperl']="Crondump-Einstellungen für das Perlscript";
+$lang['cron_mailprg']="Mailprogramm";
+$lang['cron_ftp']="Backup per FTP senden";
+$lang['optimize']="Tabellen vor dem Backup optimieren";
+$lang['help_optimize']="Wenn die Option aktiviert ist, werden vor jedem Backup alle Tabellen optimiert";
+$lang['help_ftptimeout']="Die Zeit, die bei keiner Übertragung zum Timeout führt, Default = 90 Sekunden.";
+$lang['ftp_timeout']="Verbindungs-Timeout";
+$lang['help_ftpssl']="Gibt an, ob eine sichere SSL-Verbindung für die Übertragung benutzt werden soll.";
+$lang['config_askload']="Sollen die Einstellungen wirklich mit den Anfangseinstellungen überschrieben werden?";
+$lang['load']="Anfangseinstellungen
+laden";
+$lang['load_success']="Die Anfangseinstellungen wurden geladen.";
+$lang['cron_samedb']="Aktuelle Datenbank benutzen";
+$lang['cron_crondbindex']="Datenbank und Tabellen-Präfix<br>      für den Cronjob";
+$lang['withattach']=" mit Anhang";
+$lang['withoutattach']=" ohne Anhang";
+$lang['multidumpconf']="=Multidump Einstellungen=";
+$lang['multidumpall']="=alle Datenbanken=";
+$lang['gzip']="GZip-Kompression";
+$lang['send_mail_form']="E-Mail senden";
+$lang['send_mail_dump']="Backup anhängen";
+$lang['email_adress']="E-Mail-Adresse";
+$lang['email_subject']="Absender der E-Mail";
+$lang['email_maxsize']="maximale Größe des Anhangs";
+$lang['age_of_files']="Alter der Dateien (in Tagen)";
+$lang['number_of_files_form']="Anzahl von Backup-Dateien";
+$lang['language']="Sprache";
+$lang['list_db']="Konfigurierte Datenbanken:";
+$lang['config_ftp']="FTP-Transfer der Backup-Datei";
+$lang['ftp_transfer']="FTP-Transfer";
+$lang['ftp_server']="Server";
+$lang['ftp_port']="Port";
+$lang['ftp_user']="User";
+$lang['ftp_pass']="Passwort";
+$lang['ftp_dir']="Upload-Ordner";
+$lang['ftp_ssl']="sichere SSL-FTP-Verbindung";
+$lang['ftp_useSSL']="benutze SSL-Verbindung";
+$lang['sqlboxheight']="Höhe der SQL-Box";
+$lang['sqllimit']="Anzahl der Datensätze pro Seite";
+$lang['bbparams']="Einstellung für BB-Code";
+$lang['bbtextcolor']="Textfarbe";
+$lang['help_commands']="Man kann vor und nach dem Backup einen Befehl ausführen lassen.
+Dies kann eine SQL-Anweisung sein oder ein Systembefehl (z. B. ein Script)";
+$lang['command']="Befehl";
+$lang['wrong_connectionpars']="Verbindungsparameter stimmen nicht!";
+$lang['connectionpars']="Verbindungsparameter";
+$lang['extendedpars']="erweiterte Parameter";
+$lang['fade_in_out']="ein-/ausblenden";
+$lang['db_backuppars']="Datenbanken Backup-Einstellungen";
+$lang['general']="allgemein";
+$lang['maxsize']="maximale Größe";
+$lang['backup_format']="Backup-Format";
+$lang['inserts_complete']="vollständige Inserts";
+$lang['inserts_extended']="erweiterte Inserts";
+$lang['inserts_delayed']="verzögerte Inserts";
+$lang['inserts_ignore']="fehlerübergehende Inserts";
+$lang['lock_tables']="Tabellen sperren";
+$lang['errorhandling_restore']="Fehlerbehandlung bei Wiederherstellung";
+$lang['ehrestore_continue']="fortfahren und Fehler protokollieren";
+$lang['ehrestore_stop']="anhalten";
+$lang['in_mainframe']="im Hauptframe";
+$lang['in_leftframe']="im linken Frame";
+$lang['width']="Breite";
+$lang['sql_befehle']="SQL-Befehle";
+$lang['download_languages']="andere Sprachen herunterladen";
+$lang['download_styles']="andere Themen herunterladen";
+$lang['connect_to']="Verbinde mit";
+$lang['changedir']="Wechsle in das Verzeichnis ";
+$lang['changedirerror']="Es konnte nicht in das Verzeichnis gewechselt werden!";
+$lang['ftp_ok']="Die Verbindung wurde erfolgreich hergestellt.";
+$lang['install']="Installation";
+$lang['noftppossible']="Es stehen keine FTP-Funktionen zur Verfügung!";
+$lang['found_db']="gefundene DB: ";
+$lang['ftp_choose_mode']="FTP-Übertragungsmodus";
+$lang['ftp_passive']="passiven Übertragungsmodus benutzen";
+$lang['help_ftp_mode']="Gibt den FTP-Übertragungsmodus an. Wenn Probleme im aktiven Modus auftreten, sollte in den passiven Modus umgeschaltet werden.";
+$lang['db_in_list']="Die Datenbank '%s' konnte nicht hinzugefügt werden, da sie bereits vorhanden ist.";
+$lang['add_db_manually']="Datenbank manuell hinzufügen";
+$lang['db_manual_error']="Die Verbindung zur Datenbank '%s' ist fehlgeschlagen!";
+$lang['db_manual_file_error']="Dateifehler: konnte die Datenbank '%s' nicht eintragen!";
+$lang['no_db_found']="Es wurde keine Datenbank gefunden.
+Blende die Verbindungsparameter ein und gebe den Namen Deiner Datenbank manuell ein! ";
+$lang['connect_utf8']="Datenbankverbindung auf utf8 stellen";
+
+
+?>

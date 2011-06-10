@@ -1,0 +1,71 @@
+Installation: 
+
+- Envoyer le répertoire "mysqldumper" sur votre serveur 
+- Chmoder le fichier "config.php" en 777 
+- Débuter le script en saisissant l'adresse suivante dans votre navigateur (http://www.votre_domaine.fr/mysqldumper/) 
+- Suivez les instructions d'installation du script 
+- Dans l'étape 2 (Configuration), changer les données (Serveur, Nom, Mot de passe) par ceux fournis par votre hébergeur puis sauvegardez 
+- Si pour votre serveur le safe_mode=1 vous devez créer manuellement les répertoires suivants: 
+  
+  créer les répertoires ci-dessous dans le répertoire du Script (mysqldumper/): 
+      
+    - work 
+    - work/backup 
+    - work/config 
+    - work/structure 
+    - work/log 
+    
+  et Chmoder ces répertoires en 0777 
+  
+- C'est fini ! 
+
+
+
+Guide pour le script Perl:  
+
+Si vous pouvez exécuter Perl de tous les fichiers, il vous suffit de suivre les étapes suivantes: 
+
+1. Appeler dans MySQLDumper la page 'Sauvegarde' et cliquer "Backup Perl". 
+2. Copier le chemin qui se trouve derrière le texte: crondump.pl pour $absolute_path_of_configdir: 
+3. Ouvrir le fichier "crondump.pl" dans un éditeur 
+4. et transmettre le chemin que vous avez copié près de absolute_path_of_configdir (sans espace) 
+5. Sauvegarder crondump.pl 
+6. Donner les droits CHMOD 755 
+7. Si l'extension .cgi est désirée, changer pour les trois fichiers l'extension de .pl vers .cgi (action renommer) 
+8. Si le script est renommé en *.cgi, changer l'extension du fichier en cgi dans la configuration MySQLDumper (cronscript) 
+
+-C'est fini ! 
+
+-------------------------------------- 
+Quand perl est seulement laissé dans cgi-bin: 
+
+La plupart ont un répertoire cgi-bin, qui permet d'exécuter en Perl. 
+Vous pouvez y accéder dans la majeur partie des cas en saisissant l'adresse suivante dans votre navigateur http://www.domaine.com/cgi-bin/. 
+
+Dans ce cas veuillez suivre les étapes suivantes: 
+
+1. Appeler la page 'Sauvegarde' dans MySQLDumper. 
+2. Copier le chemin qui se trouve derrière le texte: crondump.pl pour $absolute_path_of_configdir: 
+3. Ouvrir le fichier "crondump.pl" dans un éditeur 
+4. et transmettre le chemin que vous venez de copier près de absolute_path_of_configdir (sans espace) 
+5. Sauvegarder crondump.pl 
+6. Copier crondump.pl, ainsi que perltest.pl et simpletest.pl dans le répertoire cgi-bin (Mode-ASCII par FTP) 
+7. Donner les droits CHMOD 755 
+7b. Si l'extension .cgi est désirée, changer pour les trois fichiers l'extension de .pl vers .cgi (action renommer) 
+8. Appeller la configuraion dans MySQLDumper 
+9. Choisir la page script Cron 
+10. Changer le chemin d'exécution Perl vers /cgi-bin/ou ./../cgi-bin (depend de la structure fichiers. Le chemin est relatif de MSD-Dir) 
+10b. Si les scripts ont l'extension .cgi, changer l'extension vers .cgi 
+11. et sauvegarder la configuration 
+
+Voila, c'est terminé, les scripts s'exécutent maintenant d'après la page de sauvegarde. 
+
+---------------------------------------------------------------------------------- 
+
+Les utilisateurs de windows doivent changer la première ligne de tous les scripts de Perls, avec le chemin de Perl.  
+
+Exemple:  
+
+Au lieu de:  #!/usr/bin/perl w 
+Mettre #!C:\perl\bin\perl.exe w 
+

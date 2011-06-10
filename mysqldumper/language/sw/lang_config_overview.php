@@ -1,0 +1,103 @@
+<?php
+//generated at 17.03.2007
+
+$lang['config_headline']="Konfigurering";
+$lang['save_success']="Die Einstellungen wurden erfolgreich gespeichert.";
+$lang['save_error']="Die Einstellungen konnten nicht gespeichert werden!";
+$lang['config_email']="Email-meddelande";
+$lang['config_autodelete']="automatisk radering";
+$lang['config_interface']="Gränssnitt";
+$lang['multi_part_groesse']="maximale Dateigröße";
+$lang['help_multipart']="Bei eingeschaltetem Multipart werden mehrere Backupdateien erzeugt, deren Maximalgröße sich nach der unteren Einstellung richtet";
+$lang['help_multipartgroesse']="Die maximale Größe der einzelnen Backupdateien kann hier bei eingeschaltetem Multipart bestimmt werden";
+$lang['empty_db_before_restore']="Datenbank vor Wiederherstellung löschen";
+$lang['allpars']="alla parametrar";
+$lang['cron_extender']="Skriptets filändelse";
+$lang['cron_savepath']="Konfigureringsfil";
+$lang['cron_printout']="Textutmatning";
+$lang['config_cronperl']="Crondump-inställningar för Perl-skriptet";
+$lang['cron_mailprg']="Mailprogram";
+$lang['cron_ftp']="Skicka backup via FTP";
+$lang['optimize']="Tabellen vor dem Backup optimieren";
+$lang['help_optimize']="Wenn die Option aktiviert ist, werden vor jedem Backup alle Tabellen optimiert";
+$lang['help_ftptimeout']="Die Zeit, die bei keiner Übertragung zum Timeout führt, Default 90 Sekunden.";
+$lang['ftp_timeout']="Verbindungs-Timeout";
+$lang['help_ftpssl']="Choose if the connection will be established via SSL.";
+$lang['config_askload']="Skall inställningarna verkligen skrivas över med grundinställningarna?";
+$lang['load']="Anfangseinstellungen
+laden";
+$lang['load_success']="Die Anfangseinstellungen wurden geladen.";
+$lang['cron_samedb']="Använd aktuell databas";
+$lang['cron_crondbindex']="Databas och tabell-prefix<br>      för cron-jobbet";
+$lang['withattach']=" mit Anhang";
+$lang['withoutattach']=" ohne Anhang";
+$lang['multidumpconf']="=Multidump Einstellungen=";
+$lang['multidumpall']="=alle Datenbanken=";
+$lang['gzip']="GZip-Kompression";
+$lang['send_mail_form']="Email senden";
+$lang['send_mail_dump']="Backup anhängen";
+$lang['email_adress']="Email-Adresse";
+$lang['email_subject']="Absender der Email";
+$lang['email_maxsize']="maximale Größe des Anhangs";
+$lang['age_of_files']="Filernas ålder (i dagar)";
+$lang['number_of_files_form']="Anzahl von Backupdateien";
+$lang['language']="Sprache";
+$lang['list_db']="Konfigurierte Datenbanken:";
+$lang['config_ftp']="FTP-överföring av backup-filen";
+$lang['ftp_transfer']="FTP-Transfer";
+$lang['ftp_server']="Server";
+$lang['ftp_port']="Port";
+$lang['ftp_user']="User";
+$lang['ftp_pass']="Passwort";
+$lang['ftp_dir']="Upload-Ordner";
+$lang['ftp_ssl']="Sichere SSL-FTP-Verbindung";
+$lang['ftp_useSSL']="benutze SSL-Verbindung";
+$lang['sqlboxheight']="Höhe der SQL-Box";
+$lang['sqllimit']="Anzahl der Datensätze pro Seite";
+$lang['bbparams']="Inställningar för BBcode";
+$lang['bbtextcolor']="Textfärg";
+$lang['help_commands']="Man kann vor und nach dem Backup einen Befehl ausführen lassen.
+Dies kann eine SQL-Anweisung sein oder ein Systembefehl (z. B. ein Script)";
+$lang['command']="Kommando";
+$lang['wrong_connectionpars']="Verbindungsparameter stimmen nicht!";
+$lang['connectionpars']="Förbindelse-parametrar";
+$lang['extendedpars']="erweiterte Parameter";
+$lang['fade_in_out']="ein-/ausblenden";
+$lang['db_backuppars']="Databas backup-inställningr";
+$lang['general']="allgemein";
+$lang['maxsize']="max. Größe";
+$lang['backup_format']="Backup-format";
+$lang['inserts_complete']="vollständige Inserts";
+$lang['inserts_extended']="erweiterte Inserts";
+$lang['inserts_delayed']="verzögerte Inserts";
+$lang['inserts_ignore']="fehlerübergehende Inserts";
+$lang['lock_tables']="Tabellen sperren";
+$lang['errorhandling_restore']="Fehlerbehandlung bei Wiederherstellung";
+$lang['ehrestore_continue']="fortsätt och protokollera fel";
+$lang['ehrestore_stop']="stoppa";
+$lang['in_mainframe']="im Hauptframe";
+$lang['in_leftframe']="im linken Frame";
+$lang['width']="Breite";
+$lang['sql_befehle']="SQL-Befehle";
+$lang['download_languages']="ladda hem andra språk";
+$lang['download_styles']="ladda hem andra teman";
+$lang['connect_to']="Förbinder med";
+$lang['changedir']="Hoppa till mapp";
+$lang['changedirerror']="Kunde ej hoppa till mapp!";
+$lang['ftp_ok']="Die Verbindung wurde erfolgreich hergestellt.";
+$lang['install']="Installation";
+$lang['noftppossible']="You don't have FTP functions !";
+$lang['found_db']="found db";
+$lang['ftp_choose_mode']="FTP Transfer Mode";
+$lang['ftp_passive']="use passive mode";
+$lang['help_ftp_mode']="Choose the passive mode when you discover problems while using the active mode.";
+$lang['db_in_list']="The database '%s' couldn't be added because it is allready existing. ";
+$lang['add_db_manually']="Add database manually";
+$lang['db_manual_error']="Sorry, couldn't connect to database '%s'!";
+$lang['db_manual_file_error']="Fileerror: couldn't insert database '%s'!";
+$lang['no_db_found']="I couldn't find any database automatically!
+Please blend in the connection paramter and enter the name of your database manually.";
+$lang['connect_utf8']="Set database connection to utf8";
+
+
+?>

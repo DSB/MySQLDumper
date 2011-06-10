@@ -1,0 +1,135 @@
+Changelog (from Version 1.21 to 1.22):
+
+Added: 
+- used character set is shown while backing up with PHP 
+- used character set is shown while restoring
+
+Deleted:
+- removed some old no longer needed debug-features to speed up backup & restore
+
+Deleted:
+- removed old function "WritePageParams" which is no longer used
+- removed some checkings for temp-files that are no longer created (this will speed up the backup and restore progress!)
+
+Bugfix: unwanted vars have been saved to parameter.php (array $config_dont_save was not recognized - possible mysql character sets have been savedto parameter.php by accident). Fixed.
+
+Added: Set HTML-output of crondump.pl to utf-8
+
+Bugfix: PHP-Emails were still sent in ISO, so some special chars were shown incorrectly. Fixed Emailheader to be utf8. 
+
+Added: sendmail call from configuration is now interpretd by crondump.pl (no more need to fix it manually in crondump.pl)
+
+Added: security - recursively cleaning tags in $_REQUEST-Array (now walks through sub-arrays)
+
+Bugfix: filemanagement.php Date of Perlfiles were shown incorrectly. Fixed 
+
+Bugfix for Firefox: replaced some &amp; in links by &
+
+Bugfix: Filemanagement - Selected Encoding got lost on some servers. Fixed. 
+
+Bugfix: SQLBrowser - there was still a last bug left when BBCode was activated. Not all columns were shown with interpreted BBCode. Now they do. ;)
+
+Bugfix: SQLBrowser - warning when editing fields: "undefined var d_collate" - fixed
+
+Added Feature: SQLBrowser 
+- in table overview some columns are displayed "human readable" (1 MB instead of 1048576)
+- added explaining titles when hovering size (move curosr onto TB and you will see the explanation "TeraByte")
+
+Bugfix: SQLBrowser - BB-Codes are now reactivated. You can activate BBCode-displaying of any char-row again
+
+Bugfix: SQLBrowser - fixed some problems with the listing of table overview (fields were sometimes not in the correct row if a field before was empty) 
+
+Added: most wanted features when restoring ;)
+- if it is a backupfile of MSD -> get character set automatically and restore file with switching MySQL-connection to correct character set
+- let the user choose the charset of backupfile if we can't detect the charset automatically 
+
+Bugfix: enclosed encoding in backticks when writing encoding to dumpfile (problem: encoding is a keyword and must be placed inside backticks) 
+
+Bugfix: for Installation (Warning: mysql_query() [function.mysql-query]: Unable to save result set in 
+/www/htdocs/xxx/inc/functions.php on line 471") - suppressed Warning by adding @
+
+Added: Toolbox - choose character set and collation separatly when creating new tables
+
+Added: Toolbox - language var for charset added
+
+Bugfix: Toolbox - charset and collation was not surrounded by backticks. Error when using charset "binary". Fixed.
+
+Bugfix: fixed some validation errors in sqlbrowser
+
+Bugfix: filemanagement -> bugfix for coloring table rows when listing backup-files
+
+Bugfix: SQLBrowser: undefined index 'Name'
+
+Added: SQLBrowser - edit table structure: Charset-Listing is now sorted alphabetically   
+
+Bugfix: when editing Records in SQLBrowser the tablename got lost
+
+Fixed some missing lang-vars in language pack "de-Du"
+
+Added feature: when backing up via PHP one now can choose the encoding of the backupfile (standard encoding of MySQL-Server is pre-selected)
+SET NAMES character_set now also is written into backupfile when using PHP
+
+Added: Implemented detection of possible character_sets of MySQL-Server for MySQL 4.0 and 4.1 and higher
+
+Added: some language-vars for output (language-packs are updatet)
+
+Bugfix: SQL-Browser: fixed a problem when deleting tables
+
+Added: some language-vars (I found some fixed text-outputs)
+
+Security: began to secure some of the included files. They can't be accessed directly now (still some more to do)
+
+Update crondump.pl: 
+- security: crondump.pl won't do anything if the passed config-parameter contains ":" (should prevent unsecured installations from including external evil configurations)
+- translated some German outputs to English
+- removed some unnecessary breaks and hr's in logfiles and screen-outputs
+- adorned output in some other ways
+- added the possibility to include and evaluate the new .conf.php-file 
+
+Bugfix for warning: undefined index cronfile_savepath
+
+Added feature: show file encoding in filemangement
+
+Security: Perl configuration file is named .conf.php - corrected configuration (config_overview) to get the correct filelist according to the new filenames
+
+Bugfix crondump.pl: when using Multipart and Multidump together the partcounter was not reset to 1 (Part1 of the next database was named part_(part of last database+1)
+
+Added Charset-var: preparing the manual choose of the encoding of the backupfile 
+
+Added charset-var to statusline in order to show it in filemanagement.PHP/msd/trunk/msd_cron/crondump.pl
+
+Bugfix: SET NAMES $charset; has been placed before each table - now it is just written once into each backupfile
+
+Bugfix Perlscript: Use of uninitialized value in concatenation (.) or string 
+
+Added: Perlscript crondump.pl:
+- When backing up, Perl now sets the connection to MySQL to utf8
+- added output "SET NAMES utf8" to Dumpfile. This way MySQL is switched to utf8 when restoring
+
+Added: Delete older perl configuration files
+
+Added: Security issue for typo3
+
+Bugfix for undefined Index-Notices in SQLBrowser
+
+anti vulnerable patch in sql.php
+
+Bugfix: when using InnoDbs nr of records was shown wrong in databaseoverview (Not really a bug because MySQL itself returns the wrong sum - bypassing this by using SELECT count(*) )
+
+Added: output of used Perl compress::zlib version number in perltest.pl
+
+Bugfix: failure when using the converter and the backup contains "decimal" fields. Backticks were set wrong. Fixed.
+
+Added: Portsetting of configuration was not recognized by crondump.pl - now you can choose different ports than 3306 
+
+Bugfix: on some servers some of the configvars in mysqldumper.conf were not saved as 0 but as empty strings. This lead to errore when executing crondump.pl . Fixed by converting those vars to intvalues when saving mysqldumper.conf.
+
+Bugfix: error unknown var $id in sql.php when changing fields
+
+Bugfix: menu.php Javscript-Definition completet
+
+Added some error handling for mysql_search if chosen table is empty
+
+Added string-conversion for output if connection is not set to utf8
+
+Bugfix: JS-Error when selecting a SQL-Command from the SQLLib in other browsers than IE

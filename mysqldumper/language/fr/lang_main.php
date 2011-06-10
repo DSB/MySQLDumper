@@ -1,0 +1,70 @@
+<?php
+//generated at 17.03.2007
+
+$lang['noftppossible']="Il n'y a pas de fonction FTP à disposition!";
+$lang['info_location']="Vous vous trouvez sur ";
+$lang['info_databases']="Les bases de données suivantes sont sur le serveur MySQL:";
+$lang['info_nodb']="Base de données n'existe pas";
+$lang['info_table1']="Table";
+$lang['info_table2']="s";
+$lang['info_dbdetail']="Informations détaillées de la base de données ";
+$lang['info_dbempty']="La base de données est vide !";
+$lang['info_records']="Enregistrements";
+$lang['info_size']="Taille";
+$lang['info_lastupdate']="dernière mise à jour";
+$lang['info_sum']="total";
+$lang['info_optimized']="optimiser";
+$lang['optimize_databases']="Tables optimisées";
+$lang['check_tables']="Vérifier les tables";
+$lang['clear_database']="Vider la base de données";
+$lang['delete_database']="Supprimer la base de données";
+$lang['info_cleared']="a été vidée";
+$lang['info_deleted']="a été supprimé";
+$lang['info_emptydb1']="Voulez-vous que la base de données";
+$lang['info_emptydb2']=" soit vraiment vidée? (ATTENTION: Toutes les données seront supprimées à jamais)";
+$lang['info_killdb']=" soit vraiment supprimée? (ATTENTION: Toutes les données seront supprimées à jamais)";
+$lang['processkill1']="On essaye de terminer le processus ";
+$lang['processkill2']=" .";
+$lang['processkill3']="On essaye depuis ";
+$lang['processkill4']=" sec. de terminer le processus ";
+$lang['htaccess1']="Créer une protection de répertoire";
+$lang['htaccess2']="Mot de passe:";
+$lang['htaccess3']="Répeter mot de passe:";
+$lang['htaccess4']="Type de cryptage:";
+$lang['htaccess5']="Linux ou système Unix (Crypt)";
+$lang['htaccess6']="Linux ou système Unix  (MD5)";
+$lang['htaccess7']="sans cryptage (Windows)";
+$lang['htaccess8']="Il existe déjà une protection de répertoire. Si vous créez un nouveau, l'ancien sera écrasé !";
+$lang['htaccess9']="Vous devez saisir votre nom!<br>";
+$lang['htaccess10']="Les mots de passes ne sont pas identiques ou bien vide!<br>";
+$lang['htaccess11']="Voulez-vous créer maintenant la protection de répertoire?";
+$lang['htaccess12']="La protection de répertoire a été créée.";
+$lang['htaccess13']="Contenu du fichier";
+$lang['htaccess14']="Une erreur est apparue lors de la création du fichier de protection!<br>Veuillez créer manuellement un fichier avec les informations suivantes:";
+$lang['htaccess15']="Conseil d'urgence!";
+$lang['htaccess16']="Éditer .htaccess";
+$lang['htaccess17']="Créer et éditer .htaccess";
+$lang['htaccess18']="Créer .htaccess dans ";
+$lang['htaccess19']="Réinitialiser ";
+$lang['htaccess20']="Exécuter le script";
+$lang['htaccess21']="Ajouter le fournisseur";
+$lang['htaccess22']="Permettre l'exécution";
+$lang['htaccess23']="Listes des répertoires";
+$lang['htaccess24']="Document des erreurs";
+$lang['htaccess25']="Activer 'Rewrite'";
+$lang['htaccess26']="Refusé / Accepté";
+$lang['htaccess27']="Redirection";
+$lang['htaccess28']="Journal d'erreur";
+$lang['htaccess29']="autres exemples et documentations";
+$lang['htaccess30']="Fournisseur";
+$lang['htaccess31']="Général";
+$lang['htaccess32']="Attention! Le fichier .htaccess a une influence directe sur le navigateur.<br>Lors d'un mauvais emploi les pages ne sont plus accessibles.";
+$lang['phpbug']="Bogue dans zlib ! Aucune compression possible";
+$lang['disabledfunctions']="Fonctions désactivées";
+$lang['nogzpossible']="Comme Zlib n'est pas installé, vous ne pouvez pas utiliser les fonctions GZip.";
+$lang['delete_htaccess']="Supprimer la protection des répertoires (suppression .htaccess)";
+$lang['wrong_rights']="Impossible d'écrire le fichier ou le répertoire '%s' .<br> Les chmods ne sont mal configurés ou le propriétaire n'est pas bon.<br>Veuillez vérifier les attributs en utilisant votre logiciel FTP.<br>Le fichier ou le répertoire doivent être sur %s.";
+$lang['cant_create_dir']="Impossible de créer le répertoire '%s'. Veuillez créer ce répertoire manuellement avec votre logiciel FTP.";
+
+
+?>

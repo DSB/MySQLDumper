@@ -1,0 +1,10 @@
+Update einer älteren MySQLDumper-Version:
+
+- überschreibe alle Dateien mit denen aus der neuen Version
+- rufe MySQLDumper im Browser auf, klicke Dich in die Konfiguration und klicke einmal auf "speichern"
+- wenn das crondump.pl-Script per cronjob aufgerufen wird: im Aufruf muss der Parameter config angepasst werden
+(bis Version 1.21 hieß er mysqldumper.conf - seit Version 1.22 heißt er mysqldumper.conf.php !)
+
+Hinweis:
+eventuell wirst Du auf dem Wege dahin auf Warnmeldungen stoßen ["undefinde index ..."]. 
+Diese kannst Du ignorieren. Nach dem Speichern der Konfiguration sind diese verschwunden.

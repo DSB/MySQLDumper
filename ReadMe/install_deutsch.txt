@@ -1,0 +1,96 @@
+Installation:
+
+- lade den Ordner mysqldumper auf Deinen Webspace hoch
+- gebe der Datei config.php die Rechte 777 (es ist nicht nötig die Datei config.php von Hand anzupassen! Das erledigt MySQLDumper während der Installation von alleine.)
+
+- Starte das Script im Browser (http://www.deineDomain.de/mysqldumper/)
+- Folge der Installation
+- in Schritt 2 (Konfiguration) ändere die Daten (Host, Name, Passwort) der zu verwaltenden Datenbanken
+ 
+-  MySQLDumper benötigt zum Speichern der Backups verschiedene Unterordner, die mit den Rechten 0777 versehen werden müssen.
+MySQLDumper erstellt diese Verzeichnisse automatisch.
+
+Sollte der Webserver mit dem Einstellung "safe_mode=on" konfiguriert sein (und nur dann! - Ansonsten kannst Du diesen Punkt überspringen. Solltest Du Dir nicht sicher sein, so meldet Dir MySQLDumper dies während der Installation aber auch zuverlässig), so kann MySQLDUmper die Verzeichnisse aufgrund der Serverbeschränkung nicht selbstständig anlegen.
+Im Falle von safe_mode=on müssen folgende Ordner von Dir manuell mit Deinem FTP-Programm erstellt und mit den Rechten (CHMOD) 0777 versehen werden:
+  	
+	 - work
+	 - work/backup
+	 - work/config
+	 - work/structure
+	 - work/log
+("work/backup" bedeutet, dass im Ordner "work" ein Unterverzeichnis "backup" erstellt wird)
+	 
+- Da wir wissen, dass sich viele User nicht die Mühe machen diese ReadMe-Datei zu lesen, werden alle Einstellungen 
+vom MySQLDumper gewissenhaft überprüft und bei Nicht-Erfüllung jeweils eine entsprechende Bildschirmausgabe gemacht. ;-)
+
+
+- Fertig ! Jetzt kann MySQLDUmper im Browser über http://www.DeineDomain/Dein_MySQLDumper-Verzeichnis/ aufgerufen werden
+-------------------
+
+Verzeichnisschutz erstellen:
+
+Es ist dringend erforderlich den MySQLDUmper vor Fremdzugriffen zu schützen!!!
+Jeder, der Zugriff zum MySQLDUmper hat, kann in der Datenbank beliebige SQL-Befehle ausführen,
+die Daten herunterladen oder einfach alle Daten der Datenbank löschen. 
+Deshalb sollte jeder das MySQLDumper-Verzeichnis durch einen Verzeichnisschutz schützen.
+Dies geschieht über eine sogenannte .htaccess-Datei, welche den besten Schutz bietet.
+Glücklicherweise bietet MySQLDumper eine eigene Routine, um einen Verzeichnisschutz zu erstellen.
+Es gibt aber so viele unterschiedliche Verfahren einen Webserver zu konfigurieren, dass die
+automatische Erstellung nicht immer klappt. Dies merkt der Dumper aber und teilt das auch mit.
+Sollte Dir MySQLDumepr mitteilen, dass das Anlegen des Schutzes nicht funktioniert hat udn Dich auffordern 
+manuell eine Datei anzulegen, dann versuche folgendes:
+
+- gebe dem Hauptverzeichnis des MySQLDumpers mit Deinem FTP-Programm die Rechte 0777
+- starte MySQLDUmper in Deinem Browser und versuche erneut einen Schutz zu erstellen
+
+- die Angabe der Verschlüsselungsart bezieht sich auf das Betriebssystem des Serers Deines Webspaces! Nicht auf Dein lokales Betriebssystem. In 99% aller Fälle ist die voreingestellte Verschlüsselungsart "Linux und Unix-Systeme (Crypt)" richtig! Ändere diese nur, wenn Du genau weißt, dass Dein Webserver (!) auf Windows läuft
+
+- nun sollte der Verzeichnisschutz korrekt erstellt werden. Du merkst das daran, dass Du beim nächsten Seitenaufruf
+nach den Zugangsdaten gefragt wirst. 
+
+- solltest Du nicht nach den Zugangsdaten gefragt werden, so realisiert Dein Hoster den Verzeichnisschutz auf eine andere Art und Weise. Erkundige Dich bei Deinem Hoster, wie man auf seinem Server einen Verzeichnisschutz erstellen kann.
+
+- solltest Du immer wieder nach den Zugangsdaten gefragt werden udn diese nicht anerkannt werden, so hast Du die falsche Verschlüsselungsart gewählt. Lösche dann die Dateien .htaccess und .htpasswd im MySQLDumper-Hauptordner - dann bekommst Du wieder Zugriff. Dummerweise gibt es aber auch Hoster
+
+
+
+Anleitung für das Perlskript:
+
+Wer Perl in allen Verzeichnissen ausführen kann, dem reichen folgende Schritte:
+
+1. Rufe im MySQLDumper die Seite Backup auf. 
+2. Kopiere den Pfad, der hinter Eintrag in crondump.pl für $absolute_path_of_configdir: steht. 
+3. öffne die Datei "crondump.pl" im Editor 
+4. trage den kopierten Pfad dort bei absolute_path_of_configdir ein (keine Leerzeichen) 
+5. Speicher crondump.pl 
+6. gebe den Datein die Rechte 755 
+6b. Wenn die Endung cgi gewünscht ist, ändere bei allen 3 Dateien die Endung von pl -> cgi (umbenennen) 
+(ev. 10b+11 von oben)
+
+Fertig.
+
+--------------------
+Wenn bei Dir Perl nur innerhalb des Verzeichnisses "cgi-bin" ausgeführt werden kann:
+
+1. Rufe im MySQLDumper die Seite Backup auf und klicke auf "Backup Perl". 
+2. Kopiere den Pfad, der hinter Eintrag in crondump.pl für $absolute_path_of_configdir: steht. 
+3. öffne die Datei "crondump.pl" im Editor 
+4. trage den kopierten Pfad dort bei absolute_path_of_configdir ein (keine Leerzeichen) 
+5. Speicher crondump.pl 
+6. kopiere crondump.pl, sowie perltest.pl und simpletest.pl ins cgi-bin-Verzeichnis (Ascii-Modus im FTP) 
+7. gebe den Dateien die Rechte 755 
+7b. Wenn die Endung cgi gewünscht ist, ändere bei allen 3 Dateien die Endung von pl -> cgi (umbenennen) 
+
+8. Rufe die Konfiguration im MySQLDumper auf
+9. wähle Seite Cronscript 
+10. ändere Perl Ausführungspfad in /cgi-bin/ 
+10b. wenn die Scripte .pl haben, ändere die Dateiendung auf .cgi 
+11. speicher die Konfiuguration 
+------------------------
+fertig, die Skripte lassen sich nun von der Backupseite aufrufen 
+
+
+Windowsuser müssen bei allen Scripten die erste Zeile ändern, dort steht der Pfad von Perl. Beispiel: 
+statt: #!/usr/bin/perl -w 
+jetzt #!C:\perl\bin\perl.exe -w 
+
