@@ -1,0 +1,41 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="./bootstrap.php"
+         colors="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         verbose="true"
+         strict="true">
+    <testsuites>
+        <testsuite name="MySQLDumper2TestSuite">
+            <directory>unit/</directory>
+            <directory>functional</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../application/</directory>
+            <directory suffix=".php">../library/Msd</directory>
+            <exclude>
+                <directory suffix=".phtml">../application/</directory>
+                <directory>../application/language</directory>
+                <file>../application/Bootstrap.php</file>
+            </exclude>
+       </whitelist>
+    </filter>
+
+    <logging>
+        <log type="junit" target="./../../build/logs/junit.xml" />
+        <log type="coverage-html" target="./../../build/coverage" charset="UTF-8"
+            yui="true" highlight="true"
+            lowUpperBound="50" highLowerBound="80"/>
+        <log type="coverage-clover" target="./../../build/logs/coverage-clover.xml" charset="UTF-8"
+            highlight="true" lowUpperBound="50" highLowerBound="80"/>
+    </logging>
+</phpunit>

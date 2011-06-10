@@ -1,0 +1,18 @@
+<div id="content">
+<div id="phpinfo" style="position:relative; top:20px;left:20px;width:700px;">
+<?php
+ob_start();
+phpinfo();
+$content = ob_get_clean();
+$content = preg_replace('/\<style type=(.*?)>(.*?)\<\/style>/si','',$content);
+$content = preg_replace('/\<!DOCTYPE (.*?)>/si','',$content);
+$content = preg_replace('/\<title>(.*?)<body>/si','',$content);
+$content = preg_replace('/\<font style="(.*?)">(.*?)\<\/font>/','<span style="$1">$2</span>',$content);
+$content = str_replace('<html><head>','',$content);
+$content = str_replace('</body></html>','',$content);
+$content = str_replace('width="600"','width="800"',$content);
+$content = str_replace('<hr />','',$content);
+$content = str_replace('<img border="0"','<img style="border:0px"',$content);
+echo $content;
+?>
+</div></div>

@@ -1,0 +1,21 @@
+<span id="ajax-<?php echo $this->domId;?>">
+<?php
+if (isset($this->viewOptions['loadingMessage'])) {
+    echo $this->viewOptions['loadingMessage'];
+}
+if (isset($this->viewOptions['showThrobber']) && $this->viewOptions['showThrobber'] == true) {
+    echo $this->getIcon('ajax-loader');
+}
+?>
+<script type="text/javascript">
+$.ajax({
+    url: '<?php echo $this->url($this->ajaxOptions);?>',
+    type: "GET",
+    async : true,
+    cache: false,
+    success: function (data) {
+            $("#ajax-<?php echo $this->domId;?>").html(data);
+        }
+});
+</script>
+</span>

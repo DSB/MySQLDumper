@@ -1,0 +1,27 @@
+<?php
+$lang = Msd_Language::getInstance();
+$language = isset($this->language) ? $this->language : '';
+$firstStepOk = $secondStepOk = $thirdStepOk = $fourthStepOk = '';
+$imageOk = $this->getIcon('Ok', null, 16);
+if ($this->firstStepOK) {
+    $firstStepOk = $imageOk;
+}
+if ($this->secondStepOK) {
+    $secondStepOk = $imageOk;
+}
+if ($this->thirdStepOK) {
+    $thirdStepOk = $imageOk;
+}
+if ($this->fourthStepOK) {
+    $fourthStepOk = $imageOk;
+}
+?>
+<table cellspacing="0" cellpadding="0" border="0" class="bdr" summary="Show active installation step">
+    <tr class="row-even">
+        <td><?php echo $lang->L_STEP;?> 1: <span class="small"><?php echo $lang->L_SELECT_LANGUAGE;?> (<?php echo$this->language;?>)</span><?php echo $firstStepOk;?></td>
+        <td><?php echo $lang->L_STEP;?> 2: <span class="small"><?php echo $lang->L_CHECK_DIRS;?></span><?php echo $secondStepOk;?></td>
+        <td><?php echo $lang->L_STEP;?> 3: <span class="small"><?php echo $lang->L_AUTHENTICATE;?></span><?php echo $thirdStepOk;?></td>
+        <td><?php echo $lang->L_STEP;?> 4: <span class="small"><?php echo $lang->L_DBPARAMETER;?></span><?php echo $fourthStepOk;?></td>
+    </tr>
+</table><br/>
+<h3><?php echo $lang->L_STEP ?> <?php echo $this->stepInfo['number'];?>: <?php echo $this->stepInfo['description'];?></h3>

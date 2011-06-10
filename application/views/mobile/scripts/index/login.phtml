@@ -1,0 +1,36 @@
+<?php
+$t = Msd_Language::getInstance()->getTranslator();
+
+?>
+<div data-role="page" id="login">
+            <div data-role="header"><h1>MySQL Dumper</h1></div>
+            <div class="ui-bar ui-bar-b">
+                <h1><?php echo $t->_('L_LOGIN');?></h1>
+            </div>
+            <div data-role="content">
+                <form id="login_form" action="<?php
+                    echo $this->url(array(
+                    'controller' => 'index',
+                    'action' => 'login',
+                    ), null, true);
+                    ?>" method="post" rel="external" data-ajax="false">
+                    <div data-role="fieldcontain">
+                        <label for="login_user"><?php echo $t->_('L_USERNAME'); ?>:</label><input type="text" name="user" id="login_user" />
+                        <br />
+                        <label for="login_password"><?php echo $t->_('L_PASSWORD'); ?>:</label><input type="password" name="pass" id="login_password" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="autologin"><?php echo $t->_('L_LOGIN_AUTOLOGIN'); ?>:</label>
+                        <select name="autologin" id="autologin" data-role="slider">
+                            <option value="1"><?php echo $t->_('L_MOBILE_ON'); ?></option>
+                            <option value="0"><?php echo $t->_('L_MOBILE_OFF'); ?></option>
+                        </select>
+                    </div>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-b">
+                            <input id="login_login" type="submit" data-iconpos="right" data-theme="b" data-icon="arrow-r" value="<?php echo $t->_('L_LOGIN'); ?>"></input>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>

@@ -1,0 +1,1059 @@
+/**************************/ /*Basics, Colors & Typography*/ /**************************/
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+html {
+	text-align: left;
+	overflow: auto;
+	height: 101%;
+}
+
+body {
+	min-width: 782px;
+	min-height: 100%;
+	font-size: 62.5%; /*Resets 1em to 10px*/
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-weight: normal;
+	color: #000;
+	text-align: left;
+    padding:0;
+    margin:0;
+}
+#page-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display:none;
+}
+.hidden {
+	display:none;
+}
+h1 {
+	margin: 0 0 20px 0;
+	font-size: 2.4em;
+	font-weight: normal;
+	color: #256777;
+}
+
+h2 {
+	margin: 0 0 0.92em 0;
+	padding: 4px 0px 3px 0px;
+	font-size: 2.2em;
+	font-weight: normal;
+	color: #256777;
+	border-bottom: 1px solid #c7c7c7;
+}
+
+h3 {
+	margin: 0 0 12px 0;
+	padding: 3px 0px 0px 4px;
+	font-size: 1.8em;
+	font-weight: normal;
+	color: #256777;
+	background: url(pics/bg-headings.gif) repeat-x;
+}
+
+h4 {
+	margin: 0 0 0.8em 0;
+	padding: 0px 4px;
+	font-size: 1.5em;
+	color: #256777;
+}
+
+p {
+	margin-bottom: 1.5em;
+	padding-left: 4px;
+	font-size: 1.2em;
+/*	line-height: 0.5em; */
+}
+
+a {
+	color: #256777;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e87b00;
+	text-decoration: none;
+}
+
+img {
+    display: inline;
+    border: 0px;
+}
+
+/*IE4, IE5, IE5.5, IE6 PNG-Fix
+* html img {
+	behavior: url(pngfix/iepngfix.htc);
+	}
+*/ /*IE7 PNG-Fix
+* + html img {
+	behavior: url(pngfix/iepngfix.htc);
+	}
+*/ /**********/ /*Container*/ /**********/
+#container {
+	float: left;
+	min-width: 100%;
+	width: auto;
+	padding-bottom: 10px;
+	border-top: 5px solid #256777;
+	background: #fff url(pics/bg-body.gif) repeat-x 0 0;
+}
+
+#header {
+	width: auto;
+	margin: 0px auto;
+	padding: 0px 18px;
+	text-align: center;
+}
+
+#sidebar {
+	float: left;
+	min-width: 190px;
+	width: 19em;
+}
+
+#content {
+	clear: right;
+	width: auto;
+	margin-left: 19em;
+	padding: 0px 18px;
+}
+
+* html #content {
+	float: left;
+	margin-left: 0px;
+}
+
+*+html #content {
+	float: left;
+	margin-left: 0px;
+}
+
+*+html #content h2 {
+	min-width: 100%;
+}
+
+#fullcontent {
+	width: auto;
+	margin: 0px auto;
+	padding: 0px 18px;
+	text-align: center;
+}
+
+#footer {
+	clear: both;
+	width: auto;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#footer h4 {
+	margin: 0px;
+}
+
+/*******/ /*Menu*/ /*******/
+ul.menu {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	list-style: none;
+}
+
+ul.menu li {
+	border-bottom: 1px solid #ddd;
+}
+
+ul.menu a {
+    padding: 0.35em 0.85em;
+	font-size: 1.2em;
+	line-height: 2.0em;
+	outline: none;
+	display: block;
+}
+
+ul.menu img { padding:2px 8px 0 0;float:left;}
+#tabs ul li a img,
+#breadcrumb ul li  a img,
+#headnavi ul li a img {
+    padding:0px 6px 0px 0px;float:left;
+}
+
+ul.menu a:hover {
+	background: #eee;
+}
+
+ul.menu li.active {
+	border-bottom: 1px solid #256777;
+}
+
+ul.menu li.active a,ul.menu li.active a:hover {
+	font-weight: bold;
+	color: #e87b00;
+	background: transparent;
+}
+
+/******/ /*Lists*/ /******/
+ul {
+	margin-bottom: 1.5em;
+	padding-left: 18px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	list-style-type: disc;
+}
+
+/********/ /*Tables*/ /********/
+table {
+	/* margin-bottom: 1.5em; */
+	color: #000;
+}
+
+.row-even {
+	background-color: #fcfdfd;
+}
+
+.row-odd {
+	background-color: #f8fafb;
+}
+
+.row-highlight {
+    background-color: #f9f3ed;
+}
+.row-even:hover,
+.row-odd:hover,
+.row-highlight:hover {
+    background-color:#EEE;
+}
+
+/************/ /*Formbuttons*/ /************/
+a.Formbutton {
+	display: inline-block;
+	width: auto;
+	height: 16px;
+	margin: 0px 6px 20px 0px;
+	padding: 3px 6px;
+	font: 13px verdana, arial, sans-serif;
+	color: #e87b00;
+	border: 1px solid #ddd;
+	background: url(pics/bg-buttons.gif) repeat-x;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+button.Formbutton {
+	width: auto;
+	height: 24px;
+	/* margin: 0px 6px 20px 0px; */
+	padding: 0px 6px;
+	font: 13px verdana, arial, sans-serif;
+	color: #e87b00;
+	border: 1px solid #ddd;
+	background: url(pics/bg-buttons.gif) repeat-x;
+	vertical-align: top;
+	overflow: visible;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+input.Formbutton {
+	width: auto;
+	height: 24px;
+	margin: 0px 6px 20px 0px;
+	padding: 0px 6px;
+	font: 13px verdana, arial, sans-serif;
+	color: #e87b00;
+	border: 1px solid #ddd;
+	background: url(pics/bg-buttons.gif) repeat-x;
+	vertical-align: top;
+	overflow: visible;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+ul.Formbutton {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	list-style: none;
+}
+
+ul.Formbutton li {
+	display: inline;
+}
+
+select.Formbutton {
+	width: auto;
+	margin: 0px 6px 0px 0px;
+}
+
+td .Formbutton {
+	margin: 0px 6px 0px 0px;
+}
+th .Formbutton {
+    margin: 6px;
+}
+
+.buttonBar {
+    height: 20px;
+    margin: 5px 0px 10px 0px;
+}
+
+.buttonBar .Formbutton {
+    margin: 0px !important;
+}
+
+div.toggleBar {
+    width: 25px;
+}
+
+/*Firefox , Safari , not IE8*/
+#html#body,a.Formbutton {
+	margin: 0px 6px 1.5em 0px;
+}
+
+/*IE7*/
+*+html a.Formbutton {
+	margin: 0px 6px 20px 0px;
+}
+
+/*Firefox , Safari , not IE8*/
+#html#body,button.Formbutton {
+/*	margin: 0px 6px 1.5em 0px; */
+	padding: 0px 3px 2px 3px;
+}
+
+/*IE4 , IE5 , IE5.5 , IE6*/
+* html button.Formbutton {
+	padding: 0px 5px;
+}
+
+/*IE7*/
+*+html button.Formbutton {
+	margin: 0px 6px 20px 0px;
+	padding: 0px 5px;
+}
+
+/*Firefox , Safari , not IE8*/
+#html#body,input.Formbutton {
+	margin: 0px 6px 1.5em 0px;
+	padding: 0px 3px 2px 3px;
+}
+
+/*IE4 , IE5 , IE5.5 , IE6*/
+* html input.Formbutton {
+	padding: 0px 5px;
+}
+
+/*IE7*/
+*+html input.Formbutton {
+	margin: 0px 6px 20px 0px;
+	padding: 0px 5px;
+}
+
+.Formbutton img {
+	margin: 0px 6px 0px 2px;
+	padding: 0px 0px 3px 0px;
+	border: 0px;
+	vertical-align: middle;
+	display: inline;
+}
+
+button.Formbutton img {
+	padding: 0px 0px 1px 0px;
+}
+
+/*IE4 , IE5 , IE5.5 , IE6*/
+* html .Formbutton img {
+	padding: 0px;
+}
+
+/*IE7*/
+*+html .Formbutton img {
+	padding: 0px;
+}
+
+a.Formbutton:hover,button.Formbutton:hover,input.Formbutton:hover {
+	color: #256777 !important;
+}
+
+.Formbutton:disabled {
+	color: #888 !important;
+	cursor: default;
+}
+/********** breadcrumb *******/
+#breadcrumb ul {
+    list-style: none;
+    padding: 0 0 12px 0;
+    margin: 0;
+}
+
+#breadcrumb ul li,
+#breadcrumb ul li a {
+    float: left;
+    padding: 0 6px 0 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/**********/ /*Messages*/ /**********/
+.message {
+	display: inline-block;
+	padding: 6px;
+	font-size: 1.2em;
+	border: 1px solid #ff0000;
+	background: #ffff00 url(pics/truck_bg.png) no-repeat;
+	background-position: right;
+	z-index: 1;
+}
+
+.message div.Growler-notice-exit {
+	float: right;
+	cursor: pointer;
+	margin: 0px;
+	background: transparent;
+}
+
+.message div.Growler-notice-body {
+	padding: 6px 82px 6px 6px;
+}
+
+.message div.Growler-notice-head {
+	padding: 6px;
+}
+
+/*------------------*/ /*old CSS Build*/ /*-----------------*/
+#version {
+	font-size: 1.1em;
+	color: #4E5665;
+	text-align: center;
+}
+
+#version a:hover {
+	color: #4E5665;
+}
+
+#menu {
+	margin: 1px 0px 23px 0px;
+}
+
+#server0 {
+	position: fixed;
+	bottom: 4px;
+	text-align: center;
+	left: 10px;
+	color: #000;
+}
+
+#server1 {
+	position: absolute;
+	right: 16px;
+	text-align: center;
+	top: 10px;
+	z-index: 1;
+}
+
+label {
+	cursor: pointer;
+}
+
+a.ul {
+	text-decoration: underline;
+}
+
+.small {
+	font-size: 0.9em !important;
+}
+
+.ssmall {
+	font-size: 0.8em !important;
+}
+
+td.small {
+	font-size: 11px !important;
+}
+
+td.ssmall {
+	font-size: 10px !important;
+}
+
+.vmiddle {
+	vertical-align: middle;
+}
+.success {
+	color: green;
+	font-weight: bold;
+}
+
+.error {
+	color: #E87B00;
+	background-color: yellow;
+	font-weight: bold;
+}
+.inputError {
+	border: 2px solid #E87B00 !important;
+}
+.explain {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+.explain:hover {
+	cursor: help;
+}
+
+.active_db {
+	font-weight: bold;
+	border-bottom: 1px dotted;
+	color: #9AA2B1;
+}
+
+table {
+	color: #000;
+}
+
+table.bdr,.bdr {
+	border: 1px solid #ddd !important;
+	/* border-collapse: collapse !important; */
+}
+
+#fullcontent table.bdr {
+	margin: 0px auto;
+}
+
+table td {
+	text-align: left;
+	vertical-align: top;
+	padding: 0 6px;
+	font-size: 12px;
+}
+
+table .center {
+    text-align: center;
+}
+
+table th {
+	padding: 4px 6px;
+}
+
+table th.toggle {
+    padding: 4px 6px;
+    text-align: center;
+}
+
+
+fieldset {
+	margin: 0px;
+	margin-bottom: 12px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	color: #256777;
+}
+
+body.content legend {
+	font-weight: bold;
+	color: #256777;
+}
+
+body.menu fieldset p {
+	margin: 5px 0 0;
+	text-align: center;
+}
+
+/* MAIN */
+#topnavi {
+	list-style: none;
+	margin: 10px 0 20px;
+}
+
+#topnavi li {
+	float: left;
+	margin-right: 6px;
+}
+
+#topnavi li a {
+	float: left;
+	font: 1.1em verdana, arial, sans-serif;
+	border: 1px solid #ddd;
+	background: url(pics/bg-buttons.gif) repeat-x;
+	color: #E87B00;
+	padding: 3px 6px;
+	vertical-align: bottom;
+	cursor: pointer;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#topnavi li a span {
+	color: #256777;
+}
+
+#topnavi li a:hover {
+	color: #256777;
+}
+
+#topnavi li a:hover span {
+	color: #E87B00;
+}
+
+/*Tabellen */
+.row-even {
+	background: #FCFDFD;
+}
+
+.row-odd {
+	background: #F8FAFB;
+}
+
+table tr.row-even  a,table tr.row-odd a,table tr.row-highlight a {
+	margin: 0px 3px 0px 0px;
+}
+
+.row-highlight {
+	background: #F9F3ED;
+	color: #000;
+}
+.row-highlight a:hover {
+	color: #E87B00;
+}
+
+.treffer {
+	background: #000;
+}
+
+/* Treffer bei der MySQL-Suche */
+table tr.row-even .treffer,table tr.row-odd .treffer {
+	color: yellow;
+	background-color: #E87B00;
+}
+
+table.border {
+	border: 1px solid #738C88;
+}
+
+table td.sum {
+	background-color: red;
+	font-weight: bold;
+	text-align: right;
+}
+
+table tr.thead th,table tr.thead td {
+	background: url(pics/bg-buttons.gif) repeat-x;
+	border: 1px solid #ddd;
+	color: #256777;
+    vertical-align:middle;
+}
+
+.tdcompact {
+	width: 100px;
+	height: 16px;
+	overflow: hidden;
+	font-size: 11px;
+}
+
+.tdnormal {
+	white-space: nowrap;
+	padding: 1px;
+}
+
+.sqlheadmenu a {
+
+}
+
+td a.Formbutton,td button.Formbutton,td input.Formbutton {
+	float: none;
+	margin: 0px 6px 0px 0px;
+	display: inline-block;
+}
+
+input.Formtext {
+	background: url(pics/bg-buttons.gif) repeat-x;
+	float: left;
+	width: auto;
+	margin: 2px 6px 0px 0px;
+	padding: 1px 2px;
+	border: 1px solid #ddd;
+	color: #000;
+	overflow: hidden;
+	cursor: text;
+}
+
+#content .SQLbutton {
+	font-size: 11px;
+	background: #E4E9E8;
+	cursor: pointer;
+}
+
+/* htaccess edit area */
+#content textarea {
+	width: 100%;
+	background: #FFF;
+	border: 1px solid #ddd;
+	overflow: auto;
+}
+
+#content textarea.hta_content {
+	border: 0px;
+}
+
+input.radio,input.checkbox {
+	background-color: transparent;
+}
+
+/* margins and paddings for input elements */
+.radio,.checkbox,.text,.select,.margin {
+    margin: 2px 4px 2px 4px;
+}
+
+.noleftmargin {
+	margin-left: 0px !important;
+}
+
+/* options in select lists */
+option {
+	padding: 0px 6px 0 6px;
+	border-bottom: 1px solid #eee;
+}
+
+/* save button at left site in configuration screen */
+.save-button {
+	float: left;
+	padding-top: 12px;
+}
+
+/* Colors for Formelements */
+input.text,input.small {
+	padding: 1px 2px;
+	border: 1px solid #256777;
+	background: #fff;
+	color: #000;
+}
+
+input.text:disabled {
+	border-color: #cccccc;
+}
+
+select {
+	padding: 1px;
+	border: 1px solid #7F9DB9;
+	background: #FFF;
+	color: #000;
+    font-size: 11px;
+}
+
+textarea {
+	background: #B3C2C0;
+	color: #4E5665;
+}
+
+/* disabled textarea when editign rows in SQLBrowser */
+.off {
+	background-color: #ccc !important;
+}
+
+/* for Geckos */
+input[disabled] {
+	color: #888 !important;
+}
+
+/* special elements */
+.MySQLbox {
+	font-size: 10pt;
+	padding: 0px;
+	background: #000;
+	color: #fff;
+	border: thin solid #999999;
+	height: 200px;
+	width: 100%;
+	text-align: left;
+	overflow: auto;
+}
+
+#content #sqlheaderbox,.sqlbox-warning {
+	width: 100%;
+	padding: 6px 0px;
+	background: url(pics/bg-buttons.gif) repeat-x;
+	border: 1px solid #ddd;
+	color: #256777;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+#sqlheaderbox .Formbutton {
+	line-height: 14px;
+	margin: 0px 6px 0px 0px;
+}
+
+#sqltextarea {
+	width: 100% !important;
+	margin-right: 30px !important;
+	border: 1px solid #ddd;
+	overflow: auto;
+}
+
+#content #sqleditbox {
+	border: 1px solid #738C88;
+	background: #EEEEEE;
+	margin-bottom: 10px;
+}
+
+#content #sqleditbox form {
+	margin: 10px;
+}
+
+#content #sqleditbox p {
+	background: #A5B6B4;
+	font-weight: bold;
+	text-align: center;
+}
+
+#content #sqlnewbox {
+	border: 1px solid #738C88;
+	background: #E4E9E8;
+}
+
+#content #sqlnewbox p {
+	background: #A5B6B4;
+	font-weight: bold;
+	text-align: center;
+}
+
+#content #sqloutbox {
+	font-size: 11px;
+	width: 700px;
+	padding: 6px;
+	background: #D5DDDC;
+	border: 1px solid #738C88;
+	overflow: auto;
+}
+
+#content p.autodel {
+	font-size: 11px;
+	border-bottom: 1px dashed #fff;
+	margin-bottom: 12px;
+}
+
+#content .Logbox {
+	font: 12px/ 1.2 "Courier New", Courier, monospace;
+	padding: 6px;
+	border: 1px solid #ddd;
+	height: 320px;
+	width: 90%;
+	text-align: left;
+	overflow: auto;
+}
+
+#content .Logbox span {
+	color: #738C88;
+}
+
+#content .backupmsg {
+	padding-left: 20px;
+	font-size: 11px;
+}
+
+#content .backupmsg .success,#content .backupmsg a {
+	color: #999;
+	font-size: 11px;
+}
+
+#content .backupmsg .error {
+	color: red;
+}
+
+.panel, .block {
+	display: block;
+}
+
+#selectConfig {
+	margin: 0px 6px;
+	width: 180px;
+	height: 196px;
+}
+
+pre { font-size:12px; color:#000; }
+
+
+#ilog {
+	border: 1px solid #ddd !important;
+	padding: 12px;
+	background-color: #fcfcfc;
+}
+
+.center {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.floatLeft {
+    float:left;
+}
+.right {
+	text-align: right;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.inputsize-middle {
+	width: 90px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.nodisplay {
+	display: none;
+}
+
+/* Installation */
+#fullcontent .bdr td {
+	border: 1px solid #ddd;
+	vertical-align: middle;
+}
+
+#close_button {
+	position: absolute;
+	width: 100px;
+	left: 230px;
+	bottom: 4px;
+}
+
+.paginationPages {
+	float: right;
+	font-size: 13px;
+	margin-top: 3px;
+	width: 88%;
+}
+#logout {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	height: 20px;
+	width:300px;
+	vertical-align: middle;
+}
+#icon {
+	position: relative;
+	float:right;
+	padding:3px 2px 0 0;
+	margin:0;
+}
+#username {
+	position:relative;
+	padding: 0;
+	margin: 0;
+	top: 4px;
+	float:right;
+}
+
+/* used for invisble elements */
+.invisible {
+	display:none;
+}
+
+#fadeMenuOut {
+    display:none;
+    position:absolute;
+    width:25px;
+    float:left;
+    top:126px;
+    left:0px;
+    z-index:0;
+    cursor:pointer;
+}
+
+#fadeMenuIn {
+    display:none;
+    position:absolute;
+    width:25px;
+    top:126px;
+    left:0px;
+    z-index:0;
+    cursor:pointer;
+}
+
+/* Tooltips that are generated from title tag */
+span.tooltip {
+    cursor:default;
+}
+
+span.tooltip-text {
+    display:none;
+    position:absolute;
+    font-size:11px;
+    font-weight:bold;
+    padding:6px;
+    margin: 0;
+    color:#256777;
+    border:1px solid #e87b00;
+    background:#FFF url(pics/bg-buttons.gif) repeat-x;
+
+}
+
+/* used for styling of phpinfo output */
+#phpinfo * { font-family: arial, sans-serif; font-size:14px; }
+#phpinfo pre {margin: 0px; font-family: monospace;}
+#phpinfo a { color:#000;}
+#phpinfo a:link {color: #000000; text-decoration: none; background-color: #ffffff;}
+#phpinfo a:hover {text-decoration: underline;}
+#phpinfo table {border-collapse: collapse;}
+#phpinfo .center {text-align: center;}
+#phpinfo .center table { margin-left: auto; margin-right: auto; text-align: left;}
+#phpinfo .center th { text-align: center !important; }
+#phpinfo td, th { border: 1px solid #000000; padding:4px; vertical-align: baseline;}
+#phpinfo th { background: url(../msd/pics/bg-body.gif) repeat-x;}
+#phpinfo h1 {font-size: 150%;width:800px;}
+#phpinfo h2 { border:0;width:800px;background: url(../msd/pics/bg-headings.gif) repeat-x;}
+#phpinfo h2 a {font-size: 22px; color:#00618B;}
+#phpinfo .p {text-align: left; color:#000; font-weight:bold; font-size:26px;}
+#phpinfo .e {background-color: #DDD; font-weight: normal; color: #B84B00;
+    background: url(../msd/pics/bg-body.gif) repeat-x; white-space: nowrap;}
+#phpinfo .h {background-color: #00618B; font-weight: bold; color: #000000;}
+#phpinfo .v {background-color: #EEEEEE; color: #000000;background: url(../msd/pics/bg-headings.gif) repeat-x;}
+#phpinfo .vr {background-color: #EEEEEE; text-align: right; color: #000000;}
+#phpinfo img {float: right; border: 0px;}
+#phpinfo hr {width: 800px; background-color: #EEEEEE; border: 0px; height: 1px; color: #000000;}
+
+/* used for password strength */
+#scorebar {
+	background-image: url(../msd/pics/bg_strength_gradient.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 100px;
+	height: 18px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+#scorebardiv {
+	width: 100px;
+	border: 1px solid #cccccc;
+	background: #fff;
+	height: 18px;
+	margin: 2px 4px 2px 4px;
+	color: #000;
+}
+.pointer {
+    cursor:pointer;
+}
+/*
+ * jQuery UI overrides.
+ */
+.ui-button { margin-left: -1px; }
+.ui-button-icon-only .ui-button-text { padding: 0.35em; }
+.ui-autocomplete-input { width: 30px; margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+.ui-menu { list-style:none; padding: 2px; margin: 0; display:block; float: left; }
+.ui-menu .ui-menu { margin-top: -3px; }
+.ui-menu .ui-menu-item { margin:0; padding: 0; zoom: 1; float: left; clear: left; width: 100%; background-color: white; border: 1px solid #E8E8E8; }
+.ui-menu .ui-menu-item a { text-decoration:none; display:block; padding:.2em .4em; line-height:1.5; zoom:1; }
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active { font-weight: normal; margin: -1px; }

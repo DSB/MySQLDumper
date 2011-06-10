@@ -1,0 +1,33 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="./bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         verbose="true"
+         strict="true">
+    <testsuites>
+        <testsuite name="MySQLDumper2TestSuite">
+            <directory>unit/</directory>
+            <directory>functional</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../application/</directory>
+            <directory suffix=".php">../library/Msd</directory>
+            <exclude>
+                <directory suffix=".phtml">../application/</directory>
+                <directory>../application/language</directory>
+                <file>../application/Bootstrap.php</file>
+                <file>./unit/library/Msd/Validate/File/AccessibleTest.php</file>
+            </exclude>
+       </whitelist>
+    </filter>
+</phpunit>

@@ -1,0 +1,19 @@
+<?php
+    $t = Msd_Language::getInstance()->getTranslator();
+?>
+<div data-role="header" data-position="inline">
+    <?php if(isset($this->lastPage)): ?>
+    <?php $lastPage = $this->lastPage;?>
+        <?php if($lastPage['url'] != 'back'): ?>
+            <a href="<?php echo $lastPage['url'];?>" data-ajax="false" data-icon="back">
+        <?php else: ?>
+            <a href="#" data-rel="back" data-icon="back">
+        <?php endif; ?>
+        <?php echo $t->_($lastPage['title']);?></a>
+    <?php endif; ?>
+    <h1><?php echo $t->_($this->title); ?></h1>
+    <a href="<?php echo $this->absoluteUrl(array(
+        'controller' => 'index',
+        'action'     => 'index'
+    )); ?>" data-ajax="false" data-icon="home"><?php echo $t->_('L_HOME'); ?></a>
+</div>

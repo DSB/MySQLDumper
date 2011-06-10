@@ -1,0 +1,53 @@
+<a onclick="getLog('<?php echo $this->url(array('action' => 'ajax', 'log' => $this->log, 'reverse' => $this->reverse, 'offset' => null))?>');"
+   href="#" class="Formbutton" accesskey="s">
+   <?php
+        if ($this->reverse == 0) {
+            echo $this->getIcon('ArrowUp', '', 16);
+        } else {
+            echo $this->getIcon('ArrowDown', '', 16);
+        }
+    ?>
+<?php echo$this->sortIcon;?></a>
+<?php echo$this->paginagion;?>
+<?php echo $this->paginationControl($this->logEntries,
+                'Sliding',
+                'log/paginator.phtml',
+                array($this->x)); ?>
+
+<a class="Formbutton" href="<?php echo $this->url(array('controller' => 'log', 'action' => 'index', 'offset' => null, 'delete' => 1))?>"
+    onclick="if(!(confirm('<?php echo $this->jsEscape(sprintf($this->lang->L_CONFIRM_DELETE_FILE, $this->log), true); ?>'))) return false;">
+    <?php echo $this->getIcon('DustbinFull', '', 16);?>
+    <?php echo $this->lang->L_DELETE.' '.$this->log;?>
+</a>
+<br />
+<table id="table_log" class="bdr" summary="Show log file data">
+    <tr class="thead">
+        <th class="left">#</th>
+        <th class="left"><?php echo$this->lang->L_TIMESTAMP?></th>
+        <th class="left"><?php echo$this->lang->L_MESSAGE?></th>
+    </tr>
+<?php
+    $i=1;
+    if ($this->page>0) {
+        $i=(($this->page-1) * $this->entriesPerPage)+1;
+    }
+    foreach ($this->logEntries as $line) :
+        $data=explode(' ', $line, 2);
+?>
+    <tr class="<?php echo$this->cycle(array('row-even', 'row-odd'))->next();?>">
+        <td class="small right"><?php echo $i;?>.</td>
+        <td class="small nowrap">
+        <?php
+            echo $this->timeToDate($data[0]);
+        ?></td>
+        <td class="small">
+        <?php
+            if (!empty($data[1])) {
+                echo $data[1];
+            }
+        ?></td>
+    </tr>
+<?php
+    $i++;
+endforeach; ?>
+</table>

@@ -1,0 +1,19 @@
+<?php
+$this->config = $this->parent->config;
+$this->lang = $this->parent->lang;
+$d = $this->parent->dumpData;
+if ($this->config->get('config.general.multiPart') == 0) { ?>
+    <tr class="row-odd">
+        <td class="small"><?php echo $this->lang->L_MULTI_PART?>:</td>
+        <td class="small right" colspan="2"><?php echo $this->lang->L_NO?></td>
+    </tr>
+<?php } else { ?>
+    <tr class="row-odd">
+        <td class="small"><?php echo $this->lang->L_MULTI_PART?>:</td>
+        <td class="small right"><?php echo $this->lang->L_YES?></td>
+    </tr>
+    <tr>
+        <td class="small">&nbsp;&nbsp;<?php echo $this->lang->L_MULTIPART_SIZE?>:</td>
+        <td class="small right"><?php echo$this->byteOutput($this->config->multipartGroesse);?></td>
+    </tr>
+<?php }

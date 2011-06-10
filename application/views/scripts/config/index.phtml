@@ -1,0 +1,254 @@
+<?php
+$addReciptientCcUrl = $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'add.Recipient.Cc',
+    ),
+    null,
+    true
+);
+$deleteReciptientCcUrl = $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'delete.Recipient.Cc',
+    ),
+    null,
+    true
+);
+$addFtpConnectionUrl = $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'add.Ftp.Connection',
+    ),
+    null,
+    true
+);
+$deleteFtpConnectionUrl = $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'delete.Ftp.Connection',
+    ),
+    null,
+    true
+);
+?>
+<script type="text/javascript">
+/*<![CDATA[*/
+    $(function() {
+        $("#tabs").tabs({
+            event: 'click'
+        });
+
+        $('#tabs').bind('tabsselect', function(event, ui) {
+            $('#selectedTab').val(ui.panel.id);
+        });
+
+        /* make sure to reopen the same panel after reloading or saving */
+        $("#tabs").tabs('select', '#<?php echo $this->currentTab;?>');
+
+        /* init dialog box */
+        $("#dialog").dialog({
+            modal: true,
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+        /* turn off autocomplete for password fields in form */
+        $('input[type=password]').each( function() {
+            $(this).attr('autocomplete','off');
+        });
+
+        /* enable/disabled dependant input elements and set correct state */
+        $('input[class*="toggler"]').each(
+                function (el) {
+                    if ($(this).attr('checked') == true) {
+                        // get onclick function
+                        var onclick = $(this).attr('onclick').toString();
+                        // remove line breaks
+                        onclick = onclick.replace(/\n/g, '');
+                        onclick = onclick.replace(/\r/g, '');
+                        // extract myToggle function call
+                        var exp = /(.*){(.*)}(.*)/;
+                        exp.exec(onclick);
+                        var call = RegExp.$2;
+                        call = call.replace(');', '');
+                        call = call.replace(/"/g, '');
+                        call = call.replace(/'/g, '');
+                        call = call.replace(/ /g, '');
+                        // extract myToggle params
+                        var params = call.split(',');
+                        // call function to set state
+                        myToggle(this, params[1], params[2]);
+                    }
+        });
+        toggleEmailProgram();
+    });
+
+    function myToggle(obj, enableVal, myClass) {
+        if ($(obj).attr('value') == enableVal) {
+            $('.'+myClass).each(
+                    function () {
+                        $(this).removeAttr('disabled');
+                    });
+        } else {
+            $('.'+myClass).each(
+                function () {
+                    $(this).attr('disabled', 'disabled');
+                });
+        }
+    }
+
+    function myHide(jqObject) {
+        if (jqObject.css('display') == 'block') {
+            jqObject.hide();
+        }
+    }
+
+    function myShow(jqObject) {
+        if (jqObject.css('display') == 'none') {
+            jqObject.show();
+        }
+    }
+
+    function toggleEmailProgram() {
+        var value = $('#toggleEmailSettings').val();
+        switch (value) {
+        case 'php':
+            myHide($('.sendmailConfig'));
+            myHide($('.smtpConfig'));
+            break;
+        case 'sendmail':
+            myShow($('.sendmailConfig'));
+            myHide($('.smtpConfig'));
+            break;
+        case 'smtp':
+            myHide($('.sendmailConfig'));
+            myShow($('.smtpConfig'));
+            break;
+        }
+    }
+
+    //enable inputs right before submit for not losing
+    //content of disabled inputs
+    function enableInputs( myClass) {
+        $('input[class*="Toggle"]').each(
+                    function () {
+                        $(this).removeAttr('disabled');
+                    });
+    }
+
+    function addEmailReciptientCc()
+    {
+        $('#config_form').attr('action','<?php echo $addReciptientCcUrl; ?>');
+        $('#config_form').submit();
+    }
+
+    function deleteEmailReciptientCc(recipientId)
+    {
+        setParam(recipientId);
+        $('#config_form').attr('action','<?php echo $deleteReciptientCcUrl; ?>');
+        $('#config_form').submit();
+    }
+
+    function addFtpConnection()
+    {
+        $('#config_form').attr('action','<?php echo $addFtpConnectionUrl; ?>');
+        $('#config_form').submit();
+    }
+
+    function deleteFtpConnection(recipientId)
+    {
+        setParam(recipientId);
+        $('#config_form').attr('action','<?php echo $deleteFtpConnectionUrl; ?>');
+        $('#config_form').submit();
+    }
+
+    function setParam(value)
+    {
+        $('#param').val(value);
+    }
+
+    /*]]>*/
+</script>
+
+<div id="content">
+<h2><?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->config->get('dynamic.configFile');?>
+<span class="small">(<?php echo $this->lang->L_MSD_MODE;?>: <?php echo $this->config->get('config.general.mode');?>)</span></h2>
+<form method="post" action="<?php
+echo $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'index'
+    ),
+    null,
+    true
+);
+?>"
+    id="config_form" onsubmit="enableInputs('Toggle');">
+<div id="tabs">
+    <ul>
+        <li>
+            <a href="#tab_general">
+                <?php echo $this->getIcon('Configure', '', 16);?><?php echo $this->lang->L_GENERAL;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_dbuser">
+                <?php echo $this->getIcon('Database', '', 16);?><?php echo $this->lang->L_DBS;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_interface">
+                <?php echo $this->getIcon('Lookup', '', 16);?><?php echo $this->lang->L_CONFIG_INTERFACE;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_autodelete">
+                <?php echo $this->getIcon('DustbinFull', '', 16);?><?php echo $this->lang->L_CONFIG_AUTODELETE;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_email">
+                <?php echo $this->getIcon('Options', '', 16);?><?php echo $this->lang->L_EMAIL;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_ftp">
+                <?php echo $this->getIcon('RemoteAccess', '', 16);?><?php echo $this->lang->L_FTP;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_cronscript">
+                <?php echo $this->getIcon('Options', '', 16);?><?php echo $this->lang->L_CRONSCRIPT;?>
+            </a>
+        </li>
+        <li>
+            <a href="#tab_configfiles">
+                <?php echo $this->getIcon('CardFile', '', 16);?><?php echo $this->lang->L_CONFIGFILES;?>
+            </a>
+        </li>
+    </ul>
+
+    <?php echo $this->form; ?>
+    <div id="tab_configfiles">coming soon...</div>
+</div>
+</form>
+<br /><br /><br /><br />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    <?php if (count((array) $this->config->get('dynamic.databases')) == 0): ?>
+        mySlideDown('connection-params');
+    <?php endif; ?>
+/*]]>*/
+</script>
+</div>
+<?php
+if ($this->jsMessage > '') { ?>
+    <div id="dialog" title="Information">
+        <p><?php echo $this->jsMessage; ?></p>
+    </div>
+<?php
+}

@@ -1,0 +1,13 @@
+<?php
+$lang = Msd_Language::getInstance();
+?>
+<table class="bdr" style="width:70%" summary="Installation error - old version of MySQL or PHP">
+<tr class="thead"><th><?php echo $lang->L_ERROR;?></th></tr>
+<tr>
+    <td>
+        <div class="error" id="installError" style="padding:12px;">
+            <?php echo $this->message; ?>
+        </div>
+    </td>
+</tr>
+</table>

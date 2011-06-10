@@ -1,0 +1,132 @@
+<?php
+$phpLogUrl = $this->url(array('controller' => 'log',
+                              'action'     => 'index',
+                              'log'        => Msd_Log::PHP,
+                              'revers'     => $this->revers),
+                        'default',
+                        TRUE);
+
+$errorLogUrl = $this->url(array('controller' => 'log',
+                                'action'     => 'index',
+                                'log'        => Msd_Log::ERROR,
+                                'revers'     => $this->revers),
+                          'default',
+                          TRUE);
+
+$perlLogUrl = $this->url(array('controller' => 'log',
+                               'action'     => 'index',
+                               'log'        => Msd_Log::PERL,
+                               'revers' => $this->revers),
+                         'default',
+                         TRUE);
+
+$perlCompleteLogUrl = $this->url(array('controller' => 'log',
+                                       'action'     => 'index',
+                                       'log'        => Msd_Log::PERL_COMPLETE,
+                                       'revers'     => $this->revers),
+                                 'default',
+                                 TRUE);
+
+// get log param to set the active item in TabBar
+$activeLog = Zend_Controller_Front::getInstance()->getRequest()->getParam('log', '');
+
+// format action name and escape possible dot in action name
+if (!empty($activeLog)) {
+    $activeLog = '"#' . str_replace('.', '\\\.', $activeLog) . '"';
+} else {
+    $activeLog = '"#PHP-Log"';  // default
+}
+?>
+
+<?php $this->jQuery()->javascriptCaptureStart(); ?>
+
+    // set selected tab
+    $(document).ready(function() {
+        $(<?php echo $activeLog; ?>).addClass("ui-tabs-selected");
+    });
+
+<?php $this->jQuery()->javascriptCaptureEnd(); ?>
+
+
+<div id="content">
+    <h2><?php echo $this->lang->L_LOG; ?></h2>
+
+<div id="logButtonBar" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+        <li id="PHP-Log" class="ui-state-default ui-corner-top" onmouseover="tabOver(this)" onmouseout="tabOut(this)">
+            <a href="<?php echo $phpLogUrl; ?>">
+                <?php echo $this->getIcon('Info', '', 16);?>
+                <?php echo $this->lang->L_PHP_LOG; ?>
+            </a>
+        </li>
+        <li id="Error-Log" class="ui-state-default ui-corner-top" onmouseover="tabOver(this)" onmouseout="tabOut(this)">
+            <a href="<?php echo $errorLogUrl; ?>">
+                <?php echo $this->getIcon('Info', '', 16);?>
+                <?php echo $this->lang->L_ERROR_LOG?>
+            </a>
+        </li>
+        <li id="PERL-Log"  class="ui-state-default ui-corner-top" onmouseover="tabOver(this)" onmouseout="tabOut(this)">
+            <a href="<?php echo $perlLogUrl; ?>">
+                <?php echo $this->getIcon('Info', '', 16);?>
+                <?php echo $this->lang->L_PERL_LOG?>
+            </a>
+        </li>
+        <li id="PERL-Complete-Log" class="ui-state-default ui-corner-top" onmouseover="tabOver(this)" onmouseout="tabOut(this)">
+            <a href="<?php echo $perlCompleteLogUrl;?>">
+                <?php echo $this->getIcon('Info', '', 16);?>
+                <?php echo $this->lang->L_PERL_COMPLETELOG?>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="left">
+    <br />
+    <table class="bdr" summary="Show log file sizes">
+        <tr class="thead">
+            <th><?php echo $this->lang->L_NAME?></th>
+            <th class="right"><?php echo $this->lang->L_FILESIZE?></th>
+        </tr>
+        <tr>
+            <td><?php echo Msd_Log::PHP;?></td>
+            <td class="right">
+                <?php echo $this->filesize($this->log->getFile(Msd_Log::PHP));?>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo Msd_Log::ERROR;?></td>
+            <td class="right">
+                <?php echo $this->filesize($this->log->getFile(Msd_Log::ERROR));?>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo Msd_Log::PERL;?></td>
+            <td class="right">
+                <?php echo $this->filesize($this->log->getFile(Msd_Log::PERL));?>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo Msd_Log::PERL_COMPLETE;?></td>
+            <td class="right">
+                <?php echo $this->filesize($this->log->getFile(Msd_Log::PERL_COMPLETE));?>
+            </td>
+        </tr>
+    </table>
+<br />
+</div>
+
+<div class="left" style="width: 100%">
+<h3><?php echo $this->lang->L_LOG?> "<?php echo $this->activeLog?>": <img alt="Loading..." title="Loading..." style="display: none;"
+    class="ajax-reload" src="<?php echo $this->baseUrl();?>/css/msd/icons/ajax-loader.gif" /></h3>
+
+<script type="text/javascript">
+        /*<![CDATA[*/
+            $(document).ready(function() {
+                getLog('<?php echo $this->url(array('controller' => 'log', 'action'=>'ajax','log'=>$this->activeLog,'revers'=>$this->revers, 'offset'=>$this->offset))?>');
+            });
+        /*]]>*/
+        </script>
+<div id="ilog" class="small"></div>
+</div>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="Zend">
+    <description>MySQLDumper2 coding standard</description>
+    <rule ref="Zend" />
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120" />
+        </properties>
+    </rule>
+</ruleset>

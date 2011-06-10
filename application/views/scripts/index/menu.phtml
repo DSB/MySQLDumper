@@ -1,0 +1,220 @@
+<?php
+$theme = $this->config->get('config.interface.theme');
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$this->controller = $request->getControllerName();
+$this->action = $request->getActionName();
+$menuToggleUrl = $this->url(array('controller' => 'index', 'action'=>'ajax.toggle.menu'));
+$this->jQuery()->onLoadCaptureStart();
+// menu needs to be hidden?
+if ($this->showMenu == 0) { ?>
+        $('#sidebar').hide(0);
+        $("#content").animate({"marginLeft": "1em"}, 0);
+        $('#fadeMenuIn').show(0);
+<?php } ?>
+
+$('#version').hover(
+        function () {
+            $('#fadeMenuOut').show(50);
+        },
+        function () {
+            $('#fadeMenuOut').hide(50);
+        }
+);
+
+$('#fadeMenuOut').click(function() {
+    $.ajax({ url: '<?php echo $menuToggleUrl;?>/showMenu/0'});
+    $('#fadeMenuOut').hide();
+    $('#sidebar').hide('fast', function () {
+        $("#content").animate({"marginLeft": "1em"}, "slow", function () {
+            $('#fadeMenuIn').show();
+        });
+    });
+    return false;
+});
+
+$('#fadeMenuIn').click(function() {
+    $.ajax({ url: '<?php echo $menuToggleUrl;?>/showMenu/1'});
+    $('#fadeMenuIn').hide(0);
+    $("#content").animate({"marginLeft": "19em"}, "slow", function () {
+        $('#sidebar').show('fast');
+    });
+    return false;
+});
+<?php
+    if ($this->config->get('config.interface.showTooltips') == 'y') { ?>
+        SetupTooltips();
+<?php }
+$this->jQuery()->onLoadCaptureEnd();
+?>
+<div id="fadeMenuIn">
+    <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/icons/handRight.png"
+        alt="<?php echo $this->lang->L_MENU_SHOW;?>" title="<?php echo $this->lang->L_MENU_SHOW;?>" />
+</div>
+<div id="sidebar">
+
+<a href="http://www.mysqldumper.net" class="new-window"
+    title="<?php echo$this->lang->L_VISIT_HOMEPAGE; ?> www.mysqldumper.net">
+        <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/pics/menu-headlogo.gif" alt="MySQLDumper - Homepage" /></a>
+
+<div id="version">
+    <div id="fadeMenuOut" title="blend out menu">
+        <img style="margin-left:6px;" src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/icons/handLeft.png"
+            alt="<?php echo $this->lang->L_MENU_HIDE;?>" title="<?php echo $this->lang->L_MENU_HIDE;?>" />
+    </div>
+        <span class="version-line">Version <?php echo $this->msdVersion;?></span>
+        <?php if ($this->config->get('config.general.mode') == 'easy') {?>
+            <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/pics/navi_bg.jpg" alt="" />
+        <?php } else { ?>
+            <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/pics/navi_bg_expert.jpg" alt="" />
+        <?php } ?>
+</div>
+
+<div id="menu">
+    <ul class="menu">
+        <li
+            <?php if ($this->controller == 'index') {
+                echo ' class="active"';
+            };?>
+            ><a href="<?php echo $this->baseUrl();?>/index"><?php echo$this->getIcon('Home', $this->lang->L_HOME, 20);?><?php echo$this->lang->L_HOME;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'config') {
+                echo ' class="active"';
+            };?>>
+            <a href="<?php echo $this->baseUrl();?>/config"><?php echo$this->getIcon('Configure', '', 20);?><?php echo$this->lang->L_CONFIG;?></a>
+        </li>
+        <?php if (count($this->databases) > 0) { ?>
+        <li
+            <?php if ($this->controller == 'dump') {
+                echo ' class="active"';
+            };?>>
+            <a href="<?php echo $this->baseUrl();?>/dump"><?php echo$this->getIcon('BackupDatabase', '', 20);?><?php echo$this->lang->L_DUMP;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'files' && $this->action == 'restore') {
+                echo ' class="active"';
+            };?>
+            >
+            <a href="<?php echo $this->baseUrl();?>/files/restore"><?php echo$this->getIcon('RestoreDatabase', '', 20);?><?php echo$this->lang->L_RESTORE;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'files' && $this->action != 'restore') {
+                echo ' class="active"';
+            };?>
+            >
+            <a href="<?php echo $this->baseUrl();?>/files"><?php echo$this->getIcon('FileManagement', '', 20);?><?php echo$this->lang->L_FILE_MANAGE;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'sql') {
+                echo ' class="active"';
+            };?>
+            >
+            <a  href="<?php echo $this->baseUrl();?>/sql/show.tables"><?php echo$this->getIcon('SqlBrowser', '', 20);?><?php echo$this->lang->L_SQL_BROWSER;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'sql.server') {
+                echo ' class="active"';
+            };?>
+            ><a href="<?php echo $this->baseUrl();?>/sql.server"><?php echo$this->getIcon('Server', '', 20);?><?php echo$this->lang->L_SQL_SERVER;?></a>
+        </li>
+        <li
+            <?php if ($this->controller == 'log') {
+                echo ' class="active"';
+            };?>
+            ><a href="<?php echo $this->baseUrl();?>/log"><?php echo$this->getIcon('log', '', 20);?><?php echo$this->lang->L_LOG;?></a>
+        </li>
+        <?php } ?>
+        <li><a href="http://www.mysqldumper.net/credits/" class="new-window">
+                <?php echo$this->getIcon('Help', '', 20);?><?php echo$this->lang->L_CREDITS;?>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="selectConfig">
+    <form action="<?php echo $this->baseUrl();?>/index/selectdb" method="post" id="formSelectDb">
+        <fieldset id="dbSelect"><legend><?php echo$this->lang->L_CHOOSE_DB;?>:</legend>
+            <input type ="hidden" name="lastController" value="<?php echo $this->controller;?>" />
+            <input type ="hidden" name="lastAction" value="<?php echo $this->action;?>" />
+            <?php if (count($this->databases) > 0 ) { ?>
+                <select name="selectedDb" id="selectedDb" style="width:157px;" onchange="this.form.submit()">
+                <?php
+                    foreach ($this->databases as $db) {
+                        echo '<option value="'.base64_encode($db).'"';
+                        if ($db == $this->config->get('dynamic.dbActual')) {
+                            echo ' selected="selected"';
+                        }
+                        echo '>'.$db.'</option>';
+                    }
+                ?>
+                </select>
+            <?php } else {
+                echo $this->lang->L_NO_DB_FOUND;
+            } ?>
+           <a href="#" onclick="$('#formSelectDb').attr('action', '<?php echo $this->baseUrl();?>/index/dbrefresh');$('#formSelectDb').submit();"><?php echo$this->lang->L_LOAD_DATABASE;?></a>
+        </fieldset>
+    </form>
+    <form action="<?php echo $this->baseUrl();?>/index/switchconfig" method="post">
+        <fieldset id="configSelect"><legend><?php echo$this->lang->L_CONFIG;?>:</legend>
+            <input type ="hidden" name="lastController" value="<?php echo $this->controller;?>" />
+            <input type ="hidden" name="lastAction" value="<?php echo $this->action;?>" />
+            <select name="selectedConfig" style="width: 157px;" onchange="this.form.submit()">
+            <?php
+                $this->configFiles = Msd_File::getConfigNames();
+                foreach ($this->configFiles as $file) {
+                    echo "\n" . '<option value="' . base64_encode($file) . '"';
+                    if ($this->config->get('dynamic.configFile') == $file) {
+                        echo ' selected="selected"';
+                    }
+                    echo '>'.$this->getConfigTitle($file).'</option>';
+                }
+            ?>
+            </select>
+        </fieldset>
+    </form>
+    <?php if (in_array($this->config->get('config.interface.language'), array('de', 'ch'))) {; ?>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <p style="text-align:center">
+            <input type="image" src="<?php echo $this->baseUrl();?>/images/paypal-de.gif" name="submit" alt="Spende an MySQLDumper" />
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" />
+            <img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+        </p>
+        </form>
+    <?php } else { ?>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <p style="text-align:center">
+                <input type="image" src="<?php echo $this->baseUrl();?>/images/paypal-en.gif" name="submit" alt="Donation to MySQLDumper" />
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" />
+                <img alt="" src="https://www.paypal.com/en_EN/i/scr/pixel.gif" width="1" height="1" />
+            </p>
+        </form>
+    <?php } ?>
+</div>
+
+</div>
+
+<?php
+if ($this->config->get('config.interface.showServerCaption') == "y") {
+?>
+    <div id="server0">
+        <?php echo$this->lang->L_SERVER;?>:
+        <a class="new-window server"
+            href="<?php echo $this->getServerProtocol() . $_SERVER['SERVER_NAME'];?>"
+            title="<?php echo $_SERVER['SERVER_NAME'];?>">
+            <?php echo $_SERVER['SERVER_NAME'];?>
+        </a>
+    </div>
+<?php } ?>
+<div id="logout">
+    <div id="username">
+        <p>
+            <strong><?php echo $this->getUsername(); ?></strong> |
+            <a href="<?php echo $this->baseUrl();?>/index/logout/">
+                <?php echo $this->lang->L_LOGOUT; ?>
+            </a>
+        </p>
+    </div>
+    <div id="icon"><?php echo $this->getIcon('LockUser', $this->lang->L_LOGGED_IN, 16);?></div>
+</div>

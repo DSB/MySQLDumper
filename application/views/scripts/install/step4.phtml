@@ -1,0 +1,128 @@
+<form action="<?php
+echo $this->url(array(
+    'controller' => 'install',
+    'action' => 'step4',
+));
+
+$okIcon = $this->getIcon('Ok', null, 16);
+$request = Zend_Controller_Front::getInstance()->getRequest();
+
+?>" method="post" enctype="multipart/formdata">
+<table cellpadding="0" cellspacing="0" class="bdr" style="width: 700px;" summary="Provide MySQL access data">
+<?php
+if (isset($this->success) && $this->success) {
+?>
+    <tr class="thead">
+        <td style="text-align:center;" colspan="2">
+            <br />
+            <button class="Formbutton" type="submit">
+                <?php echo $this->getIcon('save'); ?> <?php echo $this->lang->L_SAVEANDCONTINUE; ?>
+            </button><br class="clear" /><br />
+        </td>
+    </tr>
+<?php
+}
+?>
+    <tr class="row-even">
+        <td><?php echo $this->lang->L_DB_HOST; ?>:</td>
+        <td><input type="text" class="text" name="host" maxlength="100" style="width:250px;"
+            value="<?php echo $request->getParam('host', 'localhost'); ?>"
+            autocomplete="off" /></td>
+    </tr>
+    <tr class="row-odd">
+        <td><?php echo $this->lang->L_DB_USER; ?>:</td>
+        <td><input type="text" class="text" name="user" maxlength="100" style="width:250px;"
+            value="<?php echo $request->getParam('user', 'root'); ?>"
+            autocomplete="off" /></td>
+    </tr>
+    <tr class="row-even">
+        <td><?php echo $this->lang->L_DB_PASS; ?>:</td>
+        <td><input type="password" class="text" name="pass" maxlength="100" style="width:250px;"
+            value="<?php echo $request->getParam('pass', ''); ?>"
+            autocomplete="off" /></td>
+    </tr>
+    <tr class="row-odd">
+        <td><?php echo $this->lang->L_DB; ?>:
+        <p class="small"><?php echo $this->lang->L_ENTER_DB_INFO; ?></p></td>
+        <td><input type="text" class="text" name="manual" maxlength="100" style="width:250px;" value="<?php echo $request->getParam('manual', ''); ?>" /></td>
+    </tr>
+    <tr class="row-even">
+        <td><?php echo $this->lang->L_PORT; ?>:
+        <p class="small"><?php echo $this->lang->L_INSTALL_HELP_PORT; ?></p></td>
+        <td><input type="text" class="text" name="port" maxlength="100" style="width:250px;" value="<?php echo $request->getParam('port', ''); ?>" /></td>
+    </tr>
+    <tr class="row-odd">
+        <td><?php echo $this->lang->L_SOCKET; ?>:
+        <p class="small"><?php echo $this->lang->L_INSTALL_HELP_SOCKET; ?></p></td>
+        <td><input type="text" class="text" name="socket" maxlength="100" style="width:250px;" value="<?php echo $request->getParam('socket', ''); ?>" /></td>
+    </tr>
+    <tr class="row-even">
+        <td><?php echo $this->lang->L_TESTCONNECTION; ?>:</td>
+        <td><button type="submit" class="Formbutton">
+            <?php echo $this->getIcon('Connect', null, 16); ?> <?php echo $this->lang->L_CONNECTTOMYSQL; ?>
+        </button></td>
+    </tr>
+</table>
+<?php
+if(isset($this->success)) {
+?><br/><br/>
+<table class="bdr" cellpadding="0" cellspacing="0" style="width:700px;" summary="MySQL connection results">
+<?php
+    if ($this->success) {
+?>
+    <tr class="thead">
+        <th><?php echo $this->lang->L_DBCONNECTION; ?> <?php echo $okIcon; ?></th>
+    </tr>
+<?php
+        if (count($this->databases) > 0) {
+            foreach ($this->databases as $database) {
+?>
+    <tr class="dbrow">
+        <td class="small success">
+                <div style="float:left; padding-right: 5px;" title="<?php echo $this->lang->L_INSTALL_DB_DEFAULT; ?>">
+                        <input type="radio" name="defaultDb" value="<?php echo $database; ?>" />
+                </div>
+                <?php echo $database; ?>
+                <div style="float:right;">
+                       <?php echo $okIcon; ?>
+                </div>
+        </td>
+    </tr>
+<?php
+            }
+        } else {
+?>
+    <tr>
+        <td><?php echo $okIcon; ?> <?php echo $this->lang->L_NO_DB_FOUND_INFO; ?></td>
+    </tr>
+<?php
+        }
+?>
+    <tr class="thead">
+        <td style="text-align:center;">
+            <br />
+            <button class="Formbutton" type="submit">
+                <?php echo $this->getIcon('save'); ?> <?php echo $this->lang->L_SAVEANDCONTINUE; ?>
+            </button><br class="clear" /><br />
+            <input type="hidden" name="save" value="1"/>
+        </td>
+    </tr>
+<?php
+    } else {
+?>
+    <tr class="thead">
+        <th><?php echo $this->lang->L_DBCONNECTION; ?> <?php echo $this->getIcon('delete'); ?></th>
+    </tr>
+    <tr>
+        <td class="error">
+            <br /><?php echo $this->errorMessage; ?><br /><br/>
+        </td>
+    </tr>
+<?php
+    }
+?>
+</table>
+<?php
+}
+?>
+</form>

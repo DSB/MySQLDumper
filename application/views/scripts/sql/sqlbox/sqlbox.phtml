@@ -1,0 +1,95 @@
+<div id="content">
+<h2><?php echo $this->lang->L_SQLBOX;?></h2>
+<?php echo $this->sqlHeadNavi(); ?>
+
+    <div id="mysqlbox">
+        <form action="<?php echo $this->url(array('controller'=>'sql','action'=>'sqlbox'));?>" method="post" id="myForm">
+            <div id="sqlheaderbox" style="height:28px;">
+                    <div style="padding:2px 8px 0 4px; float:left;">
+                        <a href="sqlbox.phtml#" onclick="$('#sqltextarea').animate({ height: '-0'}, 300);return false;"><?php echo $this->getIcon('ArrowUp', '', 16);?></a>
+                        <a href="sqlbox.phtml#" onclick="$('#sqltextarea').animate({ height: '+=60'}, 300);return false;"><?php echo $this->getIcon('plus');?></a>
+                        <a href="sqlbox.phtml#" onclick="$('#sqltextarea').animate({ height: '-=60'}, 300);return false;"><?php echo $this->getIcon('minus');?></a>
+                    </div>
+                        <span style="float:left;">
+                            <?php echo $this->lang->L_TABLE;?>: <select id="selectTable" class="text" onchange="setShowTableQuery();"><?php echo $this->tableSelectBox;?></select>
+                            <input class="Formbutton" type="submit" name="execsql" value="<?php echo $this->lang->L_SQL_EXEC;?>" />
+                            <input class="Formbutton" type="button" value="<?php echo $this->lang->L_RESET;?>" onclick="$('#sqltextarea').val('');"/>
+                        </span>
+                <br class="clear" />
+            </div>
+            <div>
+                <textarea style="height:<?php echo $this->config->get('config.interface.sqlboxHeight');?>px;" name="sqltextarea" id="sqltextarea" rows="4" cols="10"><?php echo $this->boxcontent;?></textarea>
+                <div class="sqlbox-warning small center"><?php echo $this->lang->L_SQL_WARNING;?></div>
+            </div>
+        </form>
+    </div>
+    <br />
+<?php
+$this->jQuery()->javascriptCaptureStart();
+if (isset($this->errorMessage)) {
+    $this->popUpMessage()->addMessage(
+        'SqlError',
+        $this->lang->L_ERROR,
+        $this->errorMessage,
+        array(
+            'modal' => true,
+            'height' => 220,
+            'width' => 400,
+            'dialogClass' => 'error'
+        )
+    );
+}
+?>
+function setShowTableQuery()
+{
+    query = $('#selectTable').attr('value');
+    query = 'SELECT * FROM `' + query + '`';
+    $('#sqltextarea').val(query);
+    $('#myForm').submit();
+}
+<?php
+$this->jQuery()->javascriptCaptureEnd();
+
+if (isset($this->resultset)) {
+    $res = $this->resultset;
+    if (count($res)>0) {
+        $fieldNames = array_keys($res[0]);
+        $i = 1;
+        $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
+        ?>
+        <table class="bdr" summary="Table lists result sets">
+            <tr class="thead">
+                <th class="right">#</th>
+                <?php
+                foreach ($fieldNames as $field) {
+                    echo '<th>' . $field .'</th>';
+                }
+                ?>
+            </tr>
+                <?php
+                foreach ($res as $row) {
+                ?>
+                    <tr class="<?php echo $cycleHelper->next()?>">
+                    <td class="small right"><?php echo $this->numberFormat($i);?>.</td>
+                    <?php
+                    foreach ($row as $data) {
+                        if (is_numeric($data)) {
+                            echo '<td class="small right">' . $data . '</td>';
+                        } else {
+                            echo '<td class="small">' . $this->out($data) . '</td>';
+                        }
+                    }
+                    echo '</tr>';
+                    $i++;
+                }
+                ?>
+        </table>
+        <?php
+            } else {
+        echo '<p>' . $this->lang->L_NO_ENTRIES . '</p>';
+    }
+}
+    ?>
+
+
+</div>

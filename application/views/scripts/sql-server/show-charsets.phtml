@@ -1,0 +1,50 @@
+<div id="content">
+<h2><?php echo $this->lang->L_CHARSETS;?></h2>
+<?php echo $this->render('sql-server/head-navi.phtml'); ?>
+<table class="bdr" summary="Show possible character sets">
+    <tr class="thead">
+        <th class="right">#</th>
+        <th class="head"><?php echo $this->lang->L_DESCRIPTION;?></th>
+        <th class="head"><?php echo $this->lang->L_CHARSET;?></th>
+        <th class="head">
+            <span class="tooltip explain" title="<?php echo $this->lang->L_MAXIMUM_LENGTH_EXPLAIN;?>">
+                <?php echo $this->lang->L_MAXIMUM_LENGTH;?>
+            </span>
+        </th>
+        <th class="head"><?php echo $this->lang->L_DEFAULT_COLLATION_NAME;?></th>
+        <th class="head">
+            <span class="tooltip explain" title="<?php echo $this->lang->L_POSSIBLE_COLLATIONS_EXPLAIN;?>">
+                <?php echo $this->lang->L_POSSIBLE_COLLATIONS;?>
+            </span>
+        </th>
+    </tr>
+    <?php
+        $i = 1;
+        $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
+        foreach ($this->charsets as $set) {
+            $collations = $this->collations[$set['CHARACTER_SET_NAME']];
+         ?>
+            <tr class="<?php echo $cycleHelper->next()?>">
+                <td class="small right"><?php echo $i;?>.</td>
+                <td class="small"><?php echo $this->escape($set['DESCRIPTION']);?></td>
+                <td class="small"><?php echo $this->escape($set['CHARACTER_SET_NAME']);?></td>
+                <td class="small"><?php echo $this->escape($set['MAXLEN']);?></td>
+                <td class="small"><?php echo $this->escape($set['DEFAULT_COLLATE_NAME']);?></td>
+                <td class="small"><?php echo $this->out($collations[0]);?></td>
+            </tr>
+    <?php
+        unset($collations[0]);
+        foreach ($collations as $collation) { ?>
+            <tr class="<?php echo $cycleHelper->next()?>">
+                <td class="small" colspan="4">&nbsp;</td>
+                <td class="small">&nbsp;</td>
+                <td class="small"><?php echo $this->escape($collation);?></td>
+            </tr>
+        <?php
+            }
+            $i++;
+        };
+    ?>
+</table>
+<br /><br /><br />
+</div>

@@ -1,0 +1,37 @@
+<table cellpadding="0" cellspacing="0" class="bdr" summary="Show write status of directories">
+    <tr class="thead">
+        <th><?php echo $this->lang->L_DIR; ?></th>
+        <th colspan="2"><?php echo $this->lang->L_STATUS; ?></th>
+        <th>&nbsp;</th>
+    </tr>
+<?php
+$counter = 1;
+foreach ($this->status as $directory => $statusInfo) {
+    $rowClass = 'row-' . ((($counter % 2) == 0)? 'odd' : 'even');
+    if (!$statusInfo['exists'] ||
+        !$statusInfo['writable'] ||
+        $statusInfo['chmod'] != '0777'
+    ) {
+        $icon = $this->getIcon('delete');
+    } else {
+        $icon = $this->getIcon('Ok', null, 16);
+    }
+?>
+    <tr class="<?php echo $rowClass; ?>">
+        <td rowspan="3"><?php echo $directory; ?></td>
+        <td>Exists</td>
+        <td><?php echo $statusInfo['exists'] ? 'yes' : 'no'; ?></td>
+        <td rowspan="3"><?php echo $icon; ?></td>
+    </tr>
+    <tr class="<?php echo $rowClass; ?>">
+        <td>Writable</td>
+        <td><?php echo $statusInfo['writable'] ? 'yes' : 'no'; ?></td>
+    </tr>
+    <tr class="<?php echo $rowClass; ?>">
+        <td>chmod</td>
+        <td><?php echo $statusInfo['chmod']; ?></td>
+    </tr>
+<?php
+    $counter++;
+}
+?></table>

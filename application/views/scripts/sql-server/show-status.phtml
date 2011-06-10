@@ -1,0 +1,38 @@
+<div id="content">
+<h2><?php echo $this->lang->L_STATUS;?></h2>
+<?php echo $this->render('sql-server/head-navi.phtml'); ?>
+<form action="" method="post" id="groupChange">
+    <p>
+        <?php echo $this->lang->L_FILTER_BY; ?>:
+        <select name="group" id="group" onchange="$('#groupChange').submit();">
+            <?php echo $this->groupOptions;?>
+        </select>
+        <button class="Formbutton" onclick="$('#group').val('');$('#groupChange').submit();" type="button">
+            <?php
+                echo $this->getIcon('delete');
+                echo $this->lang->L_DESELECT_ALL;?>
+        </button>
+    </p>
+</form>
+<table class="bdr">
+    <tr class="thead">
+        <th class="right">#</th>
+        <th><strong><?php echo $this->lang->L_NAME;?></strong></th>
+        <th><strong><?php echo $this->lang->L_VALUE;?></strong></th>
+    </tr>
+    <?php
+        $i = 1;
+        $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
+        foreach ($this->variables as $name => $value) : ?>
+            <tr class="<?php echo $cycleHelper->next()?>">
+                <td class="small right"><?php echo $i;?>.</td>
+                <td class="small"><?php echo $this->escape($name);?></td>
+                <td class="small"><?php echo $this->escape($value);?></td>
+            </tr>
+    <?php
+        ++$i;
+        endforeach;
+    ?>
+</table>
+<br /><br /><br />
+</div>

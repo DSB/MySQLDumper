@@ -1,0 +1,24 @@
+<div id="fullcontent">
+    <h1>
+        <img src="<?php echo $this->baseUrl(); ?>/css/msd/pics/menu-headlogo.gif" alt="" />
+        <br /><br /><?php echo$this->lang->L_LOGIN;?>
+    </h1>
+        <br /><br />
+    <div style="width:500px;margin: auto auto; vertical-align:middle;
+        background: url(<?php echo $this->baseUrl(); ?>/css/msd/pics/User.png) no-repeat 5% 36%; ">
+    <form action="<?php
+        echo $this->url(array(
+        'controller' => 'index',
+        'action' => 'login',
+    ), null, true); ?>" method="post" enctype="multipart/formdata">
+<?php
+echo $this->form;
+?>
+</form>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#user').focus();
+});
+</script>

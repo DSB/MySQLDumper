@@ -1,0 +1,163 @@
+<?php
+$t = Msd_Language::getInstance()->getTranslator();
+?>
+<div data-role="page" id="config_menu">
+    <?php echo $this->partial('/partials/header.phtml', array(
+            'title'    => 'L_CONFIG',
+            'lastPage' => array(
+                'title'      => 'L_HOME',
+                'url'        => $this->absoluteUrl(array(
+                        'controller' => 'index',
+                        'action'     => 'index'
+                    )),
+        ))); ?>
+    <div data-role="content">
+        <form id="config_form" action="<?php echo $this->absoluteUrl(array(
+            'controller' => 'config',
+            'action' => 'index'
+        ));?>">
+        <button type="submit"><?php echo $t->_('L_SAVE'); ?></button>
+        <br />
+        <ul id="config_menu_list" data-role="listview">
+            <li>
+            <a href="#config_general">
+                <?php echo $this->lang->L_GENERAL;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_dbuser">
+                <?php echo $this->lang->L_DBS;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_interface">
+                <?php echo $this->lang->L_CONFIG_INTERFACE;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_autodelete">
+                <?php echo $this->lang->L_CONFIG_AUTODELETE;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_email">
+                <?php echo $this->lang->L_EMAIL;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_ftp">
+                <?php echo $this->lang->L_FTP;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_cronscript">
+                <?php echo $this->lang->L_CRONSCRIPT;?>
+            </a>
+        </li>
+        <li>
+            <a href="#config_configfiles">
+                <?php echo $this->lang->L_CONFIGFILES;?>
+            </a>
+        </li>
+        </ul>
+        <br />
+        <button type="submit"><?php echo $t->_('L_SAVE'); ?></button>
+        </form>
+    </div>
+</div>
+
+<div id="config_general" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_GENERAL',
+        'lastPage' => array(
+            'url'   => 'back',
+            'title' => 'L_CONFIG'
+    ))); ?>
+    <div data-role="content">
+       <?php echo $this->form->getSubForm('general'); ?>
+    </div>
+</div>
+
+<div id="config_dbuser" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_DBS',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+    ))); ?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('dbuser'); ?>
+    </div>
+</div>
+
+<div id="config_interface" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_CONFIG_INTERFACE',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+    )));?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('interface'); ?>
+    </div>
+</div>
+
+<div id="config_autodelete" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_CONFIG_AUTODELETE',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+        )));?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('autodelete'); ?>
+    </div>
+</div>
+
+<div id="config_email" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_EMAIL',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+        ))); ?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('email'); ?>
+    </div>
+</div>
+
+<div id="config_ftp" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_FTP',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+        ))); ?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('ftp'); ?>
+    </div>
+</div>
+
+<div id="config_cronscript" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_CRONSCRIPT',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+    ))); ?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('cronscript'); ?>
+    </div>
+</div>
+
+<div id="config_configfiles" data-role="page">
+    <?php echo $this->partial('/partials/header.phtml', array(
+        'title' => 'L_CONFIGFILES',
+        'lastPage' => array(
+            'url' => 'back',
+            'title' => 'L_CONFIG'
+        ))); ?>
+    <div data-role="content">
+        <?php echo $this->form->getSubForm('configfiles'); ?>
+    </div>
+</div>

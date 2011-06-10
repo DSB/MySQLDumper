@@ -1,0 +1,11 @@
+fieldset table {
+    margin-left:66px;
+    padding:12px;
+}
+
+.text {
+    width: 250px;
+}
+#send {
+    margin:6px 0 0 2px;
+}

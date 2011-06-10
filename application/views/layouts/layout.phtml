@@ -1,0 +1,59 @@
+<?php
+$version = new Msd_Version();
+$config = Msd_Configuration::getInstance();
+$lang = Msd_Language::getInstance();
+$theme = $config->get('config.interface.theme');
+$language = $config->get('config.interface.language');
+$this->headMeta()->appendHttpEquiv('content-language', $language);
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=utf-8')
+     ->appendHttpEquiv('expires', 'Wed, 26 Feb 1997 08:21:57 GMT')
+     ->appendHttpEquiv('pragma', 'no-cache')
+     ->appendHttpEquiv('Cache-Control', 'no-cache')
+     ->appendName('author', 'Daniel Schlichtholz')
+     ->appendName('robots', 'noindex,nofollow');
+
+$this->jQuery()->addStylesheet($this->baseUrl('/css/' . $theme . '/jquery' . '/jquery-ui.custom.css'));
+$this->jQuery()->addStylesheet($this->baseUrl('/css/' . $theme . '/jquery' . '/jquery-ui.autocomplete.css'));
+
+$this->jQuery()->addStylesheet($this->baseUrl('/css/' . $theme . '/style.css'));
+$request = Zend_Controller_Front::getInstance()->getRequest();
+if ($request->getActionName() == 'login') {
+    $this->jQuery()->addStylesheet($this->baseUrl('/css/' . $theme . '/login.css'));
+}
+$this->jQuery()->addJavascriptFile($this->baseUrl('/js/script.js'));
+
+$this->jQuery()->setLocalPath($this->baseUrl('/js/jquery/jquery.min.js'));
+$this->jQuery()->setUiLocalPath($this->baseUrl('/js/jquery/jquery-ui.min.js'));
+$this->jQuery()->addJavascriptFile($this->baseUrl('/js/jquery/jquery-combobox.js'));
+$this->jQuery()->setVersion('1.4.2');
+$this->jQuery()->setUiVersion('1.8.15');
+$this->jQuery()->uiEnable();
+
+$menu = $this->menu($version);
+$messages = (string) $this->popUpMessage();
+?>
+<?php echo $this->doctype();?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    lang="<?php echo $language?>"
+    xml:lang="<?php echo $language?>">
+<head>
+    <title>MySQLDumper <?php echo $version->getMsdVersion();?></title>
+    <?php
+        echo (string) $this->jQuery();
+        echo $this->headMeta() . "\n";
+        echo $this->headScript() . "\n";
+    ?>
+    <style type="text/css">body {direction: ltr;}</style>
+</head>
+
+<body>
+    <div id="container">
+        <?php
+            echo $messages;
+            echo $menu;
+            echo $this->layout()->content;
+        ?>
+    </div>
+    <div id="page-loader"><?php echo $this->getIcon('ajax-loader');?></div>
+</body>
+</html>

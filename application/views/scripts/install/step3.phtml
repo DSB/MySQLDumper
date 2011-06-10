@@ -1,0 +1,18 @@
+<form action="<?php echo $this->url(array(
+    'controller' => 'install',
+    'action' => 'step3',
+), null, true);
+?>" method="post" enctype="multipart/formdata">
+    <table cellpadding="0" cellspacing="0" class="bdr" style="width: 700px;" summary="Provide admin user account">
+    <tr class="thead left">
+        <th colspan="2">
+            <h2><?php echo $this->lang->L_NOTICE;?></h2>
+            <?php echo $this->lang->L_REGISTRATION_DESCRIPTION; ?>
+            <br /><br />
+        </th>
+    </tr>
+    <?php
+    echo $this->form;
+    ?>
+    </table>
+</form>

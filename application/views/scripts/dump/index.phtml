@@ -1,0 +1,108 @@
+<?php
+$d = $this->dumpData;
+?>
+<div id="content">
+<h2><?php echo $this->lang->L_DUMP;?></h2>
+
+<div id="headnavi">
+    <ul class="Formbutton" id="tabnav">
+        <li>
+            <a href="#tab_php" id="tab_php" class="tab Formbutton">
+                <?php echo$this->getIcon('BackupDatabase', '', 16);?>
+                <?php echo $this->lang->L_DUMP;?> PHP
+            </a>
+        </li>
+        <li><a href="#tab_perl" id="tab_perl" class="tab Formbutton">
+                <?php echo$this->getIcon('BackupDatabase', '', 16);?>
+                <?php echo $this->lang->L_DUMP;?> Perl
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="panel_php" class="panel">
+    <form id="fm" method="post" action="<?php echo $this->url(array('controller'=>'dump','action'=>'start.dump'));?>/startDump">
+    <h3><?php echo $this->lang->L_DUMP?> PHP</h3>
+    <div>
+        <ul class="Formbutton">
+            <li>
+                <button class="Formbutton" type="submit">
+                    <?php echo$this->getIcon('BackupDatabase', '', 16);?>
+                    <?php echo $this->lang->L_FM_STARTDUMP?>
+                </button>
+            </li>
+            <li>
+                <a href="<?php echo $this->url(array('controller'=>'dump','action'=>'select.tables'));?>" class="Formbutton">
+                    <?php echo$this->getIcon('CheckBoxes', '', 20);?>
+                    <?php echo $this->lang->L_FM_SELECTTABLES?>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <table class="bdr">
+            <tr class="row-even">
+                <td class="small vmiddle">
+                    <label for="comment">
+                        <?php echo $this->lang->L_FM_COMMENT?>:
+                        </label>
+                    </td>
+                <td class="small">
+                    <input type="text" class="text noleftmargin" style="width:260px;" id ="comment"
+                        name="comment" value="<?php echo $this->escape($this->comment)?>" />
+                </td>
+            </tr>
+
+            <?php if ($this->config->get('config.mode') > 0) { ?>
+                <tr class="row-odd">
+                    <td><label for="backup_using_updates">Update (REPLACE Command):</label></td>
+                    <td><input type="checkbox" class="checkbox noleftmargin" name="backup_using_updates" id="backup_using_updates" value="1" /></td>
+                </tr>
+                <tr class="row-odd">
+                    <td>
+                        <label for="sel_dump_encoding"><?php echo $this->lang->L_FM_CHOOSE_ENCODING?>:</label>
+                    </td>
+                    <td>
+                        <select name="sel_dump_encoding" id="sel_dump_encoding">
+                            {POSSIBLE_DUMP_ENCODINGS}
+                        </select>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+        </div>
+    </form>
+</div>
+<br />
+<?php
+echo $this->partial('dump/settings.phtml',array('parent' => $this));
+?>
+<div id="panel_perl" class="panel" style="display:none">
+    <h3><?php echo $this->lang->L_DUMP?> PERL (<?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->config->get('dynamic.configFile')?>)</h3>
+        <button class="Formbutton" name="DoCronscript" onclick="show_perl_output('<?php echo $d->PERL_HTTP_CALL?>')"><?php echo $this->lang->L_DOCRONBUTTON?></button>
+        <button class="Formbutton" name="DoSimpleTest" onclick="show_perl_output('<?php echo $d->PERL_TEST?>')"><?php echo $this->lang->L_DOSIMPLETEST?></button>
+        <button class="Formbutton" name="DoPerlTest" onclick="show_perl_output('<?php echo PERL_MODULTEST?>')"><?php echo $this->lang->L_DOPERLTEST?></button>
+        <br />
+
+        <table class="bdr" style="width:90%" summary="Perl">
+            <tr class="row-odd">
+                <td><?php echo $this->lang->L_PERLOUTPUT2?>:</td>
+                <td style="width:60%"><input class="text" style="width:95%" type="text" value="{PERL_HTTP_CALL}" /></td>
+            </tr>
+            <tr class="row-even">
+                <td><?php echo $this->lang->L_PERLOUTPUT3?>:</td>
+                <td><input class="text" style="width:95%" type="text" value="{PERL_CRONTAB_CALL}" /></td>
+            </tr>
+            <tr class="row-even">
+                <td><?php echo $this->lang->L_PERLOUTPUT1?>:</td>
+                <td><input class="text" style="width:95%" type="text" value="{PERL_ABSOLUTE_PATH_OF_CONFIGDIR?>" /></td>
+            </tr>
+        </table>
+    <br />
+    <div id="perloutput_div" style="width:100%;height:200px;overflow:hidden;display:none;">
+        <iframe id="perloutput" style="width:100%;height:100%;"></iframe>
+    </div>
+</div>
+
+</div>
