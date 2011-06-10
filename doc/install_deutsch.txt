@@ -1,0 +1,63 @@
+Installation:
+
+- lade alle Dateien auf Deinen Webspace hoch
+- gebe der Datei config.php die Rechte 777
+- Starte das Script im Browser (http://www.deineDomain.de/mysqldumper/)
+- Folge der Installation
+- in Schritt 2 (Konfiguration) änder Daten (Host, Name, Passwort) der zu verwaltenden Datenbanken und speicher
+  (alle anderen Einstellungen kannst Du später online verändern)
+ 
+- im Falle von safe_mode=1 müssen die Ordner manuell erstellt werden.
+  erzeuge im Scriptdir die Ordner
+  	
+	 - work
+	 - work/backup
+	 - work/config
+	 - work/structure
+	 - work/log
+	 
+  und gebe allen Ordnern die Rechte 777
+  
+- Fertig !
+
+
+Anleitung für das Perlskript:
+
+Die meisten haben ein cgi-bin Verzeichnis, in dem Perl ausgeführt werden kann. 
+Dies ist meist per Browser über http://www.domain.de/cgi-bin/ erreichbar. 
+
+Für diesen Fall bitte folgende Schritte durchführen:
+
+1. Rufe im MySQLDumper die Seite Backup auf. 
+2. Kopiere den Pfad, der hinter Eintrag in crondump.pl für $absolute_path_of_configdir: steht. 
+3. öffne die Datei "crondump.pl" im Editor 
+4. trage den kopierten Pfad dort bei absolute_path_of_configdir ein (keine Leerzeichen) 
+5. Speicher crondump.pl 
+6. kopiere crondump.pl, sowie perltest.pl und simpletest.pl ins cgi-bin-Verzeichnis (Ascii-Modus im FTP) 
+7. gebe den Datein die Rechte 755 
+7b. Wenn die Endung cgi gewünscht ist, ändere bei allen 3 Dateien die Endung von pl -> cgi (umbenennen) 
+
+8. Rufe die Konfiguration im MySQLDumper auf
+9. wähle Seite Cronscript 
+10. ändere Perl Ausführungspfad in /cgi-bin/ 
+10b. wenn die Scripte .cgi haben, ändere die Dateiendung auf .cgi 
+11. speicher die Konfiuguration 
+
+fertig, die Skripte lassen sich nun von der Backupseite aufrufen 
+
+Wer Perl in allen Verzeichnissen ausführen kann, dem reichen folgende Schritte:
+
+1. Rufe im MySQLDumper die Seite Backup auf. 
+2. Kopiere den Pfad, der hinter Eintrag in crondump.pl für $absolute_path_of_configdir: steht. 
+3. öffne die Datei "crondump.pl" im Editor 
+4. trage den kopierten Pfad dort bei absolute_path_of_configdir ein (keine Leerzeichen) 
+5. Speicher crondump.pl 
+6. gebe den Datein die Rechte 755 
+6b. Wenn die Endung cgi gewünscht ist, ändere bei allen 3 Dateien die Endung von pl -> cgi (umbenennen) 
+(ev. 10b+11 von oben)
+
+
+Windowsuser müssen bei allen Scripten die erste Zeile ändern, dort steht der Pfad von Perl. Beispiel: 
+statt: #!/usr/bin/perl -w 
+jetzt #!C:\perl\bin\perl.exe -w 
+

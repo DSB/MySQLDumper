@@ -1,0 +1,509 @@
+/* STYLESHEET Default
+
+Name: classic
+
+*/
+
+body	
+{
+	font-family: Verdana,Helvetica,sans-serif;
+	color: #111111;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	background-color: #F5F5F5;
+	
+}
+body.menu {
+
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#111111;
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	background-color:#D0DCE0;
+}
+
+body.control {
+	font-size: 10px;
+	background-color: #D8D8D8;
+	color: Navy;
+}
+
+/* LINKS */
+
+a {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#333333;
+	font-weight:normal;
+	font-style:normal;
+	font-size:12px;
+	text-decoration:none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+
+a.ul {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#333333;
+	font-weight:normal;
+	font-style:normal;
+	font-size:12px;
+	text-decoration:underline;
+}
+a.ul:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+a.uls {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#333333;
+	font-weight:normal;
+	font-style:normal;
+	font-size:10px;
+	text-decoration:underline;
+}
+a.uls:hover {
+    text-decoration: underline;
+    color: #D00030;
+}
+a.datacell {
+	font-family:Verdana,Helvetica,sans-serif;
+	color : black;
+	text-decoration: none;
+	background-color : transparent;
+	padding : 4px; 
+	cursor : default
+}
+a.datacell:hover {
+    text-decoration: underline;
+    color: #A52A2A;
+}
+#menu a {
+	display:block;
+	width: 157px;
+	height: 27px;
+	margin: 1em 0;
+	text-align:center;
+	font: 12px/22px verdana, sans-serif;
+	color: black;
+	text-decoration: none;
+	border: 1px solid #767676;
+	background: url(menubutton.gif) 0 0 no-repeat;
+}
+#menu a:hover {	
+	background-position: -157px 0;
+	color: red;
+}
+#menu a:active {
+	background-position: -314px 0;
+	color:white;
+}
+
+/* different Background-Pictures */
+
+#menu a.home 						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.config 						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.backup 						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.restore						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.filemanagement				{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.sql 						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.log							{ background: url("menubutton.gif") 0 0 no-repeat;	}
+#menu a.credit 						{ background: url("menubutton.gif") 0 0 no-repeat;	}
+
+
+/* Opera needs this to show the Buttons correctly */
+#menu a.home:hover 					{ background-position: -157px 0; color: red; }
+#menu a.home:active					{ background-position: -314px 0; color:white;}
+
+#menu a.config:hover 				{ background-position: -157px 0; color: red; }
+#menu a.config:active				{ background-position: -314px 0; color:white;}
+
+#menu a.backup:hover 				{ background-position: -157px 0; color: red; }
+#menu a.backup:active				{ background-position: -314px 0; color:white;}
+
+#menu a.restore:hover 				{ background-position: -157px 0; color: red; }
+#menu a.restore:active				{ background-position: -314px 0; color:white;}
+
+#menu a.filemanagement:hover 		{ background-position: -157px 0; color: red; }
+#menu a.filemanagement:active		{ background-position: -314px 0; color:white;}
+
+#menu a.sql:hover			 		{ background-position: -157px 0; color: red; }
+#menu a.sql:active					{ background-position: -314px 0; color:white;}
+
+#menu a.log:hover			 		{ background-position: -157px 0; color: red; }
+#menu a.credit:active				{ background-position: -314px 0; color:white;}
+
+#menu a.credit:hover 				{ background-position: -157px 0; color:red;}
+#menu a.credit:active				{ background-position: -314px 0; color:white;}
+
+/* TEXT */
+
+h1 {
+	font-size:16px;
+}
+
+h6 {
+	font-size:11px;
+	background-color:#ccffcc;
+	padding-left: 12px;
+}	
+.pagetitle {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #6495ED;
+	letter-spacing: 2px;
+	color: White;
+	background-image: url(cellpic.gif);
+	padding-left: 6px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+.server {
+	background-image: url(cellpic.gif);
+	text-align:center;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+a.server {
+	color:#333333;
+	font-size:10px;
+}
+a.server:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.version {
+	font-size: 10px;
+}
+
+td,tr {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:#111111;
+	margin:4px;
+	padding:4px;
+	font-size:12px;
+	vertical-align:top;
+}
+
+td.nomargin {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+td.sm {
+	font-size:8pt;
+}	
+.hd {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background-color:#ffffcc;
+	vertical-align: top;
+	text-align: center;
+}
+.hdl {
+	FONT-SIZE: 11px;
+	color: #191970;
+	background-color:#ffffcc;
+	vertical-align: top;
+	text-align: left;
+}
+
+.dbrow {
+	background-color:white;
+}
+.dbrow1 {
+	background-color: #E2E2E2;
+}
+.dbrowsel {
+	background-color:#ccffff;
+}
+.hellblau {
+	background-color:#B4ECEF;
+}
+
+.green {
+	color: green;
+}
+
+.sm {
+	font-size:11px;
+}
+.small {
+	font-size:10px;
+}
+.verysmall {
+	font-size: 9px;
+	padding-left: 6px;
+	color: #1E505F; 
+}
+.meldung { 
+	font-size: 10pt;
+	color:#000000;
+	font-weight:normal;
+}
+
+.success { 
+	font-size: 10pt;
+	color:green;
+	font-weight:bold;
+}
+
+.warnung {
+	font-size: 11pt;
+	color:red;
+	font-weight:normal;
+}
+.swarnung {
+	font-size: 12px;
+	color:red;
+	font-weight:normal;
+}
+.desc 	{
+	font-size: 9pt;
+	padding-left:20px;
+}
+.content {
+	padding-left:12px;
+}
+
+.blau {
+	color: Blue;
+}
+
+td.sqletbl {
+	color: #000153;
+	vertical-align: top;
+}
+.sbox2 {
+	font-size: 9pt;
+}
+.wtitle {
+	background-color: #7F8E9C;
+	padding: 0px; /*width: 80%;
+	border: thin solid Black;*/
+}
+
+.crondumppars{
+	color: #004C01;
+}
+.dumppars{
+	color: #009B01;
+}
+.smallgrey {
+	font-size: 9px; 
+	color:#999999;
+}
+.smallwarnung {
+	font-size: 9px; 
+	color:red;
+	
+}
+.smallblue {
+	font-size: 9px; 
+	color:blue;
+}
+.smallblack {
+	font-size: 9px; 
+	color:black;
+}
+.smallgreen {
+	font-size: 9px; 
+	color:green;
+}
+.smallbrown {
+	font-size: 9px; 
+	color: #8B4513;
+}
+.smalldblue {
+	font-size: 9px; 
+	color:#000099;
+}
+
+.sqlNew {
+	background-color: #ffff99;
+}
+
+/* FORM ELEMENTS */
+
+form {
+	padding:0px;
+	margin:0px;	
+}
+
+
+
+
+.Menubutton {
+	border: 0px;
+	color: blue;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Menubutton2 {
+	border: 0px;
+	color: blue;
+	FONT-SIZE: 10px;
+	/*background-color: white;
+	text-decoration: underline;*/
+	cursor: pointer;
+}
+.Formbutton {
+	border: thin solid #686868;
+	color: #F3F3F3;
+	text-align: center;
+	background-color: Silver;
+	background: url(cellpic.gif);
+	cursor: pointer;
+	width: 150px;
+}
+.Formbutton_small{
+	border: thin solid #686868;
+	color: #F3F3F3;
+	FONT-SIZE: 10px;
+	background-color: Silver;
+	background: url(cellpic.gif);
+	cursor: pointer;
+	width:150px;
+}
+.ConfigButton {
+	width:130px;
+	font-size:11px;
+	background-color:#ffffcc;
+}
+.ConfigButtonSelected {
+	width: 130px;
+	font-size: 11px;
+	background-color: #99ff99;
+}
+.SQLbutton{
+	border: 1px solid Navy;
+	color: white;
+	FONT-SIZE: 10px;
+	background-color: Silver;
+	background: url(cellpic.gif);
+	cursor: pointer;
+}
+.MYSQLbutton{
+	border: 1px solid Navy;
+	color: white;
+	FONT-SIZE: 11px;
+	background-color: Silver;
+	background: url(cellpic.gif);
+	cursor: pointer;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:6px;
+	padding-right:6px;
+	width: 140px;
+	text-align: center;
+}
+/* BOXES */
+.scrollbox{
+	overflow: auto; 
+	border: 1px solid silver; 
+	width:250px; 
+	height: 100px;
+}
+.dbscrollbox{
+	overflow: auto; 
+	border: 1px solid silver; 
+	width:100%; 
+	height: 100px;
+}
+.sqlbox
+	{
+	font-size: 9pt;
+	padding: 0px;
+	background-color: #DCDCDC;
+	color: Green;
+	border: thin ridge #5B5B5B;
+	height: auto;
+}
+.sqleditbox
+	{
+	font-size: 9pt;
+	padding: 6px;
+	background-color: #DCDCDC;
+	color: Navy;
+	border: thin solid #525252;
+	height: auto;
+	width: auto;
+}
+.sqloutbox
+	{
+	font-size: 9pt;
+	padding: 6px;
+	background-color: #DCDCDC;
+	color: Navy;
+	border: thin solid #525252;
+	height: auto;
+	width: 90%;
+	overflow: auto;
+}
+.sqlnewbox
+	{
+	font-size: 9pt;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: #FFFFAA;
+	color: #750000;
+	border: thin solid #00008B;
+	height: auto;
+	width: auto;
+}
+.MySQLbox
+	{
+	font-size: 10pt;
+	padding: 6px;
+	background-color: Black;
+	color: White;
+	border: thin solid #999999;
+	height: 200px;
+	width: 80%;
+	text-align: left;
+	overflow: auto; 
+}
+.Logbox
+	{
+	font-size: 10pt;
+	padding: 6px;
+	border: thin solid #999999;
+	height: 320px;
+	width: 90%;
+	text-align: left;
+	overflow: auto; 
+}
+
+.sqleingabe {
+	
+	width: 100%;
+	
+}
+
+.SQLCombo {
+	color: Blue;
+	FONT-SIZE: 10px;
+	background-color: Silver;
+}
+
+input,textarea,select {
+	background-color: white;
+	color: black;
+	
+}
+
+.checkbox {
+	background-color: transparent;
+	color: green;
+}
+.radio {
+	background-color: transparent;
+	color: green;
+}

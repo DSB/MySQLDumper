@@ -1,0 +1,65 @@
+Installation:
+
+- upload all files to your webspace
+- make on file "config.php" chmod 777
+- start the script in your browser (http://www.deineDomain.de/mysqldumper/)
+- Follow the Installationscript
+- in step 2 (Configuration) change Data (Host, Name, Password) of your databaseconnection and save
+  (all other parameters you can change online)
+ 
+- in case of safe_mode=1 you must create the folders manually.
+  create following folders in the Scriptdir:
+  	
+	 - work
+	 - work/backup
+	 - work/config
+	 - work/structure
+	 - work/log
+	 
+  and make chmod 777 on all folders
+  
+- Ready !
+
+Guidance for the Perl script:  
+
+Most have a cgi-bin directory, in which Perl can be executed. 
+This is usually by Browser over http://www.domain.de/cgi-bin/ available. 
+
+Make the following steps for this case please.  
+
+1.  Call in MySQLDumper the page Backup   
+2.  Copy the path, that stands behind entry in crondump.pl for $absolute_path_of_configdir:    
+3. open the file "crondump.pl" in the editor 
+4. paste the copied path there with absolute_path_of_configdir (no blanks) 
+5.  Save crondump.pl 
+6. copy crondump.pl, as well as perltest.pl and simpletest.pl to the cgi-bin directory (ASCII mode in the ftp-client!) 
+7. chmod 755 to the scripts.  
+7b. If the ending cgi is desired, change the ending of all 3 files  pl - > cgi (rename)  
+8.  Call in the MySQLDumper the page Configuration
+9. click on Cronscript 
+10. changes Perl execution path to /cgi-bin/
+10b. if the Scripts are renamed to *.cgi , change Fileextension to cgi 
+11 save the Configuration 
+
+Ready ! The scripts are available from the Page "Backup" 
+
+When you can execute Perl anywhere, only following step are needed:  
+
+1.  Call in MySQLDumper the page Backup.  
+2.  Copy the path, that stands behind entry in crondump.pl for $absolute_path_of_configdir:  
+3. open the file "crondump.pl" in the editor 
+4. paste the copied path there with absolute_path_of_configdir (no blanks) 
+5.  Save crondump.pl 
+
+6. chmod 755 to the scripts.   
+6b. If the ending cgi is desired, change the ending of all 3 files  pl - > cgi (rename)  
+(ev. 10b+11 from above) 
+
+
+Windowsuser must change the first line of all Perlscripts, to the path of Perl.  
+
+Example:  
+
+instead of:  #!/usr/bin/perl w 
+now #!C:\perl\bin\perl.exe w
+

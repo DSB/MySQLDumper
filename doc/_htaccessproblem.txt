@@ -1,0 +1,6 @@
+Standard war:
+AllowOverride None
+
+jetzt wie auf pima:
+AllowOverride AuthConfig FileInfo Indexes Limit
+

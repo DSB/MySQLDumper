@@ -1,0 +1,72 @@
+<?php
+//generated at 28.02.2005
+
+$lang['info_location']="Your location is ";
+$lang['info_browser']="Your Browser is";
+$lang['info_admin']="The Server's administrator is ";
+$lang['info_databases']="The following database(s) are on your server:";
+$lang['info_nodb']="database does not exist.";
+$lang['info_table1']="Table";
+$lang['info_table2']="s";
+$lang['info_dbdetail']="Detail-Info of database ";
+$lang['info_dbempty']="The database is empty !";
+$lang['info_records']="Records";
+$lang['info_size']="Size";
+$lang['info_lastupdate']="last Update";
+$lang['info_sum']="total";
+$lang['info_rechte']="Your Priviliges";
+$lang['info_cronyes']="Du kannst MySQL Dumper als Cronjob durchf&uuml;hren.";
+$lang['info_cronno']="Aufgrund deiner PHP-Einstellungen (safe_mode=on) kannst du MySQL Dumper nicht als Cronjob durchf&uuml;hren!";
+$lang['info_optimized']="optimized";
+$lang['optimize_databases']="Optimize Tables";
+$lang['check_tables']="Check Tables";
+$lang['clear_database']="Clear database";
+$lang['delete_database']="Delete database";
+$lang['button_create_database']="Create";
+$lang['info_created']="created";
+$lang['info_cleared']="was cleared";
+$lang['info_deleted']="was deleted";
+$lang['info_emptydb1']="Should the Database";
+$lang['info_emptydb2']=" be truncated? (Attention: All Data will be lost forever!)";
+$lang['info_killdb']=" be deleted? (Attention: All Data will be lost forever!)";
+$lang['dbnoempty']="Databasename can't be empty !";
+$lang['processkill1']="The script tries to kill process ";
+$lang['processkill2']="";
+$lang['processkill3']="The script tries since  ";
+$lang['processkill4']=" sec. to kill the process ";
+$lang['htaccess1']="create directory protection";
+$lang['htaccess2']="Password:";
+$lang['htaccess3']="Password (repeat):";
+$lang['htaccess4']="Kind of encrypting:";
+$lang['htaccess5']="Crypt (Linux and Unix-Systems)";
+$lang['htaccess6']="MD5 (Windows)";
+$lang['htaccess7']="plain text (no cryption)";
+$lang['htaccess8']="It already exists an directory protection. If you create a new one, the older one will be overwritten !";
+$lang['htaccess9']="You have to enter a name !<br>";
+$lang['htaccess10']="The Passwords are not identically or empty !<br>";
+$lang['htaccess11']="Shell the directory protection be written now ?";
+$lang['htaccess12']="The directory protection was created.";
+$lang['htaccess13']="Contents of file:";
+$lang['htaccess14']="There was an error while creating the directory protection !<br>Pleas create the 2 files manually with following content:";
+$lang['htaccess15']="Urgently recommended !";
+$lang['htaccess16']="edit .htaccess";
+$lang['htaccess17']="create and edit .htaccess";
+$lang['htaccess18']="create .htaccess in ";
+$lang['htaccess19']=" reload ";
+$lang['htaccess20']="execute script";
+$lang['htaccess21']="add handler";
+$lang['htaccess22']="make executable";
+$lang['htaccess23']="Directory-Listing";
+$lang['htaccess24']="Error-Document";
+$lang['htaccess25']="activate Rewrite";
+$lang['htaccess26']="Deny / Allow";
+$lang['htaccess27']="Redirect";
+$lang['htaccess28']="Error-Log";
+$lang['htaccess29']="more examples and documentation";
+$lang['htaccess30']="Provider";
+$lang['htaccess31']="allgemein";
+$lang['htaccess32']="Attention! The .htaccess directly manipulate the browser behavior.<br>With wrong application the sides are no longer attainable.";
+$lang['phpbug']="Bug in zlib ! No Compression possible";
+
+
+?>
