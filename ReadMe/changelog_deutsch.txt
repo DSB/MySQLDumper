@@ -1,0 +1,53 @@
+Changelog der wichtigsten Änderungen im Vergleich zur Version 1.22 (1.23 hat die Beta-Phase nie verlassen):
+
+- MySQLDumper 1.24 funktioniert nach wie vor sowohl mit PHP4 als auch mit PHP5
+- neue, helle und freundliche Optik. Der "alte" Style ist für "Nostaligiker" ebenfalls enthalten.
+- bessere Speicherausnutzung
+- Backup und Wiederherstellung per PHP sind im Schnitt ca. 25 Prozent schneller
+- Möglichkeit beim Sichern und auch beim Wiederherstellen nur bestimmte Tabellen auszuwählen 
+- Nutzen von mehreren MySQL-Servern und -Usern über Konfigurationsprofile. 
+Damit kann man mehrere Server über eine MySQLDumper-Installation warten und sichern.
+- der interne SQL-Parser ist an vielen Stellen verbessert worden (noch mehr Fremdbackups können importiert werden)
+- SQLBrowser: jede Menge Bugfxies und kleinere Erweiterungen (dennoch ist der SQLBrowser noch als experimentell einzustufen)
+- SQLBrowser: über die Lupe kommt man zu einer durchdachten Vollextsuche. Editiert man einen Datensatz, kommt man zur Trefferliste zurück.
+  Das ist recht komfortabel wenn man Stellen finden muss, von denen man nicht genau weiß in welchen Spalten sie vorkommen können.
+- Tools: der Export von Daten als Datei funktionierte in 1.22 nicht. Jetzt klappt das wieder.
+- die Konfiguration in der WEB-GUI wurde an einigen Stellen nochmals vereinfacht und überflüssige Parameter entfernt
+(Du hast kaum noch eine Chance etwas "falsch" einzustellen. :) )
+- FTP-Übertragung kann nun optional auf bis zu 3 unterschiedliche Server gleichzeitig erfolgen
+- Tabellen vom Typ VIEW und MEMORY werden nun automatisch erkannt und deren Daten korrekterweise nicht mitgesichert, wohl aber deren Struktur.
+- das Verzeichnis work/structure wird nicht mehr benötigt
+- die automatisch immer mit angelegten Struktur-Backups wurden entfernt
+- noch besseres, internes Handling der Kodierung von Backups (Umlautproblematik)
+- Fehler (auch beim Sichern) werden noch zuverlässig abgefangen und aussagekräftig im Log notiert
+- Konverter: wurde neu geschrieben. Jetzt werden große Dateien beim Konvertieren automatisch in Multipart-Dateien aufgeteilt
+- keine Notices in Server-Logs mehr
+- Beim Anlegen von gespeicherten SQL-Befehlen können nun mehrere Queries angegeben werden, die bei Nutzung von "Command before/after backup" 
+nacheinander ausgeführt werden. Der Erfolg oder Mißerfolg wird om Logfile notiert. 
+- Beim Anlegen des Verzeichnisschutzes wird die Stärke des Kennworts visualisiert.  
+
+crodump.pl:
+- wenn die crondump.pl im Standardordner "msd_cron" aufgerufen werded kann, braucht man den "$absolute_path_of_configdir" nicht mehr editieren. 
+Hier findet nun eine automatische Erkennung statt.
+- besseres Abfangen von Fehlern
+- es wird präziser mit aussagekräftigen Nachrichten geloggt
+- automatisches Löschen betrachtet Multipart-Dateien nun korrekt als 1 vollständiges Backup und funktioniert wie erwartet
+- das automatische Löschen wird nicht mehr zu Beginn ausgeführt, sondern erst nach Beenden des Sicherungsvorgangs 
+  (somit bleiben im Fehlerfall alte Backups erhalten)
+- der Parameter der zu nutzenden Konfigurationsdatei kann im Aufruf nun auf 3 Arten angegeben werden. 
+Die fehlende Endung ".conf.php" wird bei Bedarf automatisch ergänzt:
+1. config=mysqldumper.conf.php
+2. config=mysqdumper.conf
+3. config=mysqldumper
+
+- Signalhandler entfernt:
+Dieser sollte eigentlich einen Abbruch des Users melden und das Skript beenden. Über einen Cronjob aufgerufen führte dies bei einigen, wenigen 
+Servern zu der Fehlfunktion, dass mehrere Instanzen des Skripts gestartet wurden, die lange in der Prozesliste standen und manuell beendet 
+werden mussten. 
+
+... und viele weitere kleine und große Bugfixes und jede Menge Aufräumarbeiten im Code.
+
+Wer Du es ganz genau wissen möchtest, dann schaue Dir das changelog auf Sourceforge an. Hier ist akribisch 
+jede Änderung am Code dokumentiert:
+
+http://mysqldumper.svn.sourceforge.net/viewvc/mysqldumper/trunk/?view=log

@@ -1,0 +1,50 @@
+Changelog of the most important changes compared to version 1.22 (1.23 never left the beta status):
+
+- MySQLDumper 1.24 still is wokring on PHP4 and PHP5
+- new, light and friendly style. The "old" style is still included. 
+- better use of RAM
+- backup and restore via PHP is about 25 percent faster
+- possibility to select tables when doing an backup or restore
+- use different configuration profiles to manage different MySQL-Server or -user. 
+  This way you can maintain different MySQL-Server with a singel MySQLDumper-Installation.
+- the internal SQL-Parser has been improved (more backups from other programms can be importet)
+- SQLBrowser: a lot of bugfixes and some improvements (nevertheless it must still be regarded as experimental)
+- SQLBrowser: a comfortable fulltext-search lets you find text even when you don't know in what column it can occur
+  After editing a record you get back to the hitlist. That really is comfortable when you need to change data.
+- Tools: in version 1.22 the export of data as file didn't work. Now it is working again.
+- the Web-GUI has been simplified. Some parameters have been removed. (You nearly have no chance to configure something incorrectly :) )
+- FTP-Transfer: address up to 3 ftp configurations simultaneously in one backup process
+- Tables of type VIEW or MEMORY are now detected and data is not saved but the structure of the table is
+- the directory work/structure is no longer needed
+- the automatic "structure only" backup has been removed
+- better and safer handling of encodings of backup files
+- better and safer error-handling
+- the backup converter has been rewritten. Now it also automatically converts big files into Multipart files.
+- no notices in server-logs
+- when adding SQL-Queries to the SQL-Library you can now enter more than one query. If using "commadn before/after backup" 
+  these queries will be executed in a row. Succes or failure is written to the log file. 
+- When creating a password protection the password strength is visualized.
+
+crodump.pl:
+- when you can call crondump.pl in the standard directory "msd_cron" you no longer need to enter the 
+  "$absolute_path_of_configdir" manually. An automatic detection was added. 
+- better and safer catching of errors
+- logging of events is much more precise and gives you clear statements what happened
+- automatic deletion now regards Multipart files as one complete backup and works the way you expect it to work
+- automatic deletion is done after the backup process. In case of errors this retains your old backups you might need.
+- the config parameter - which configuration profile is to be used - can be set in 3 ways. The missing suffix
+  ".conf.php" will be added dynamically. 
+1. config=mysqldumper.conf.php
+2. config=mysqdumper.conf
+3. config=mysqldumper
+
+- removed signalhandler:
+When crondump.pl was started via a cronjob there was a malfunction. On some, rare server this signalhandler caused a second 
+or third instance of the script that never stopped and stuck in the process list. In this case the process must be killed manually.
+
+... and many more small or big bugfixes and cleaning up the code
+
+When you want to know more, just take a look at the changelog of my code changes at Sourceforge. Each change
+of the code is documented here:
+
+http://mysqldumper.svn.sourceforge.net/viewvc/mysqldumper/trunk/?view=log
