@@ -1,0 +1,152 @@
+/* MySQLDumper STYLESHEET
+
+Name: msd
+
+*/
+
+* {margin: 0;padding: 0;}
+img {border:0;}
+
+
+
+body {font:12px/1.5 Verdana,Helvetica,sans-serif;color:#4E5665;background: #C7D1D0;}
+body.menu {font:12px Verdana,Helvetica,sans-serif;color:#4E5665;background:#738C88;}
+
+/* LINKS */
+
+a {color:#4E5665 ; text-decoration:underline; font:12px verdana, sans-serif}
+a:hover {color:#E87B00; text-decoration:none}
+a.ul {text-decoration:underline;}
+
+
+/* general */ 
+#pagetitle {font-size: 18px;font-weight: bold;background:url(pics/pagetitle.gif) #A9AFBB;letter-spacing: 2px;color:White;padding:2px 6px;}
+
+#server0 {position:absolute;bottom:4px;text-align:center; left:10px; color:white;}
+#server1 {position:absolute;right:16px;text-align:center;padding:10px;}
+a.server {color:#333333;font-size:10px;}
+a.server:hover {text-decoration: underline;color: white;}
+
+.version {font-size: 11px;font-weight:bold; }
+.small {font-size:11px;}
+.ssmall {font-size:10px;}
+.success {font-weight:bold;}
+.error {color:red;font-weight:bold;}
+
+table td {text-align:left;vertical-align:top;padding:0 6px;}
+table th {padding:0 6px;}
+
+/* MENU */
+#wrapmenu { background:url(pics/pagetitle.gif) #A9AFBB; background-repeat:repeat-x;}
+#db-select { font:12px Verdana,Helvetica,sans-serif;color:#4E5665;background:#A9AFBB; }
+
+#menu {margin-top:1px;background: url(pics/navi_bg.jpg) no-repeat; text-align:center;}
+#menu ul {margin-top:174px;padding:0;list-style:none;border-top:1px solid #9AA2B1}
+#menu ul li { height:20px;}
+#menu ul li a {display:block;position:relative; /*fuer den ie*/ font:11px/20px verdana, sans-serif;text-decoration:none;color:#4E5665; background:url(pics/mainnavi.gif) repeat-x 0 -20px;padding:0 15px;height:20px;text-align:left;}
+#menu ul li a:hover {color:#fff; background:url(pics/mainnavi.gif) repeat-x 0 0px;}
+/*der aktive link in der navi*/
+#menu ul li.active a {font-weight:bold;color:#fff; background:url(pics/mainnavi.gif) repeat-x 0 -40px; display:block;}
+
+#menu p,#menu p a{color:#fff;line-height:1.5;font-size:11px;}
+
+#db-selectbox
+{
+	position:relative;
+	top:0px;
+	width:190px;
+	background:transparent;
+	text-align:center;
+	font:11px/1.5 Verdana,Helvetica,sans-serif;
+	color:white;
+}
+
+#db-selectbox a { font:11px/1.5 Verdana,Helvetica,sans-serif; color:white;text-decoration:underline; }
+#db-selectbox a:hover { text-decoration:none}
+
+/* MAIN */
+#topnavi {text-align:center;margin:6px;}
+#content {margin-left:12px;}
+#content p {margin-bottom:8px;}
+
+/*Tabellen */
+table tr.dbrow {background:#E4E9E8;}
+table tr.dbrow1 {background:#D5DDDC;}
+table tr.dbrowsel {background:#fff;}
+
+table.bordersmall,table.border {border:2px solid #738C88;width:84%;}
+table.border th,table.bordersmall th {font-size:11px;color:#738C88;}
+table.border tr.thead,table.bordersmall tr.thead {background:#A5B6B4;height:24px;}
+table td.sum { background-color:red;font-weight:bold;text-align:right;}
+
+
+table.bordersmall input,table.bordersmall select,table.bordersmall td, 
+#sqlheaderbox select,#configright select, #configright a {font-size:11px;}
+.tdcompact {width:100px;height:16px;overflow:hidden;font-size:11px;}
+.tdnormal {white-space:nowrap;padding:4px;}
+.sqlheadmenu a {}
+
+
+/* FORM-Elements */
+#content .Formbutton {white-space:nowrap;margin:6px;font:10px verdana, sans-serif; border: 1px solid #4E5665; background:#A9B2B1; color:#4E5665;padding:2px;cursor: pointer;}
+#content .SQLbutton {font-size:11px;background:#E4E9E8;cursor: pointer;}
+#content textarea #thta {font-size:11px;color:blue;width:400px;height:300px;overflow:scroll;}
+#content textarea {width:100%;background:#B3C2C0;}
+
+input.radio,input.checkbox {background-color: transparent;}
+
+/* Colors for Formelements */
+input.text,input.small {background:#B3C2C0;color:#4E5665;}
+select {background:#B3C2C0;color:#4E5665;}
+textarea {background:#B3C2C0;color:#4E5665;}
+
+/* for Geckos */
+input[disabled] {color:#888;}
+
+
+/*horizontales Menü */
+
+#hormenu {}
+#hormenu ul {border-bottom:thin solid #D5DDDC;margin-bottom:8px;width:80%;}
+#hormenu ul li {display:inline;}
+#hormenu ul li a {font:11px/20px verdana, sans-serif;text-decoration:none;color:#4E5665;padding:0 14px;border:0;}
+#hormenu ul li a:hover {color:#E87B00;}
+#hormenu ul li#active a{font:bold 11px/20px verdana, sans-serif;text-decoration:none; color:#E87B00; float:left; padding:0 14px;}
+#hormenu ul li#active a:hover{color:#E87B00; }
+
+/* spezielle Elemente */
+.MySQLbox{font-size: 10pt;padding: 6px;background:#000;	color: #fff;border: thin solid #999999;height: 200px;width: 80%;text-align: left;overflow: auto; }
+#content #mysqlbox {border:1px solid #738C88;background:#D5DDDC;}
+#content #sqlheaderbox {white-space:nowrap;height:20px;vertical-align:middle;padding-top:2px;}
+#content #sqleditbox {border:1px solid #738C88;background:#E4E9E8;margin-bottom:10px;}
+#content #sqleditbox p {background:#A5B6B4;font-weight:bold;text-align:center;}
+#content #sqlnewbox {border:1px solid #738C88;background:#E4E9E8;}
+#content #sqlnewbox p {background:#A5B6B4;font-weight:bold;text-align:center;}
+#content #sqloutbox {font-size: 11px;width:700px;padding:6px;background:#D5DDDC;border:1px solid #738C88;overflow:auto;height:240px;}
+#content p.autodel {font-size:11px;border-bottom:1px dashed #fff;margin-bottom:12px;}
+#content .Logbox {font:12px/1.2 "Courier New", Courier, monospace;padding: 6px;border: thin solid #738C88;height: 320px;width: 90%;text-align: left;overflow: auto;}
+#content .Logbox span {color:#738C88;}
+#content .backupmsg {padding-left:20px;font-size:11px;}
+#content .backupmsg .success,#content .backupmsg a{color:#999;font-size:11px;}
+#content .backupmsg .error {color:red;}
+
+/* TEXT */
+
+h1 {font-size:16px;}
+h5 {font-size:14px;margin:12px 0;}
+h6 {font-size:11px;	background:#D1D4DC;border:1px solid #9AA2B1;text-indent: 12px;margin:8px 0;}
+
+/* Config */
+#configleft {float:left;width:160px;margin-top:24px;}
+#configleft .Formbutton {width:130px;margin:8px 0;}
+#configleft .ConfigButton {width:130px;font-size:11px;background:#E4E9E8;}
+#configleft .ConfigButtonSelected {width: 130px;font-size: 11px;background: #D5DDDC;}
+
+#configright {font-size:11px;margin-left:160px;} 
+#configright fieldset {border:1px solid #D5DDDC;padding:12px;width:90%;}
+#configright legend {color:#646968;margin:8px 0;}
+
+
+#footer {font-size:11px;text-align:center;border-top:1px dashed #eee;margin-top:36px;}
+#footer a {font-size:11px;}
+

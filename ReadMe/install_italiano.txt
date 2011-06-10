@@ -1,0 +1,65 @@
+Installazione:
+
+- carica la cartella mysqldumper sul tuo spazio web
+- metti i diritti del file config.php a 777
+- fai partire lo script nel tuo Browser (http://www.il tuo dominio.it/mysqldumper/)
+- segui la installazione
+- nel secondo passo (configurazione) cambia i tuoi dati (Host, nome, password) della banca dati da gestire
+
+- nel caso di safe_mode=1 dovete creare le cartelle manualmente.
+  crea nella cartella di MySQLDumper le cartelle
+
+              - works
+              - works/backup
+              - works/config
+              - works/sturcture
+              - works/log
+
+
+  metti i diritti delle cartelle a 777
+
+- finito !
+
+Istruzioni Perlskript:
+ 
+Molti hanno un elenco con cartella cgi-bin in cui puo essere efettuato Perl. 
+A maggior parte dei casi questo e raggingibile tramite Browser http://www.domain.de/cgi-bin/. 
+
+Chi puo usare Perl in tutti gli elenchi deve seguire semplicemente i seguenti passi:
+
+1.   Chiama nel MySQLDumper la pagina Backup. 
+2.   Copia il cammino, che è scritto nella crondump.pl per $absolute_path_of_configdir. 
+3.   Apri il dato "crondump.pl" in editor 
+4.   Porta il cammino dove c`è absolute_path_of_configdir (senza spazi) 
+5.   Salva crondump.pl 
+6.   Metti i permessi dei dati a CHMOD 755 
+6b. Se preferite cgi, cambiate tutti i 3 dati da pl -> cgi (rinominare) 
+     (ev. 10b+11 da sopra)
+
+finito. 
+
+---------------------
+
+Nel caso che puoi effettuare Perl in "cgi-bin"consigliamo di effettuare i seguenti passi:
+
+1.    Chiama nel MySQLDumper la pagina Backup e clicca "Backup Perl". 
+2.    Copia il cammino, che è scritto nella crondump.pl per $absolute_path_of_configdir: 
+3.    Apri il dato "crondump.pl" in editor 
+4.    Porta il cammino dove c`è absolute_path_of_configdir (senza spazi) 
+5.    Salva crondump.pl 
+6.    Copia crondump.pl, perltest.pl e simpletest.pl nel elenco cgi-bin (nel modo Ascii con FTP) 
+7.    Metti i permessi dei dati in CHMOD 755 
+7b.  Se preferite cgi come nome del dato, allora cambiate tutti i 3 dati da pl -> cgi (rinominare) 
+
+8.    Chiama la configurazione nel MySQLDumper 
+9.    Scegli la pagina Cronscript 
+10.  Cambia l`esecuzione di cammino di Perl in /cgi-bin/ 
+10b.Se gli script hanno .pl, cambiali in .cgi 
+11.  Salva la configurazione. 
+---------------------
+Hai finito, i tuoi script si fanno caricare nella tua pagina backup.
+
+Se usate Windows dovete cambiare in tutti i dati la prima riga; dove trovate il cammino di Perl. Esempio: 
+aposto di: #!/usr/bin/perl -w 
+adesso #!C:\perl\bin\perl.exe -w
+

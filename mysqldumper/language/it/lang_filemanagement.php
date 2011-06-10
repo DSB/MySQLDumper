@@ -1,0 +1,74 @@
+<?php
+//generated at 13.04.2006
+
+$lang['convert_start']="Fai partire la conversione";
+$lang['convert_title']="Convertire Dump in MSD-Format";
+$lang['convert_wrong_parameters']="Parametri sbagliati!  Conversione non possibile.";
+$lang['fm_uploadfilerequest']="Prego, scegliere un dato (file).";
+$lang['fm_uploadnotallowed1']="Questo tipo di dato (file) non &egrave; permesso.";
+$lang['fm_uploadnotallowed2']="Tipi validi sono: *.gz e *.sql-files";
+$lang['fm_uploadmoveerror']="Non &egrave; stato possibile spostare il dato (file) caricato nella cartella giusta.";
+$lang['fm_uploadfailed']="Il caricamento &egrave; fallito!";
+$lang['fm_uploadfileexists']="Esiste gia un dato(file) con questo nome!";
+$lang['fm_nofile']="Non hai scelto nessun dato (file)!";
+$lang['fm_delete1']="L`archivio dati (file) ";
+$lang['fm_delete2']="&egrave; stato cancellato con successo.";
+$lang['fm_delete3']="non &egrave; stato cancellato!";
+$lang['fm_choose_file']="Dato (file) scelto:";
+$lang['fm_filesize']="Grandezza dato (file)";
+$lang['fm_filedate']="Data ";
+$lang['fm_nofilesfound']="Nessun dato(file) trovato.";
+$lang['fm_tables']="Tabelle";
+$lang['fm_records']="Registrazioni";
+$lang['fm_all_bu']="tutti i backups";
+$lang['fm_anz_bu']="Backups";
+$lang['fm_last_bu']="ultimo backup";
+$lang['fm_totalsize']="Grandezza totale";
+$lang['fm_selecttables']="Scegli tabelle";
+$lang['fm_comment']="Inserisci commento";
+$lang['fm_restore']="Ripristina";
+$lang['fm_alertrestore1']="Vuoi ricreare la banca dati";
+$lang['fm_alertrestore2']="con lo stesso contenuto";
+$lang['fm_alertrestore3']=" ?";
+$lang['fm_delete']="Eliminare";
+$lang['fm_askdelete1']="Vuoi cancellare ";
+$lang['fm_askdelete2']="veramente questo dato (file)?";
+$lang['fm_askdelete3']="Vuoi effettuare la cancellazione in automatico secondo le regole impostate da te?";
+$lang['fm_askdelete4']="Vuoi cancellare tutti i backup?";
+$lang['fm_askdelete5']="Vuoi cancellare tutti i dati (file) backup con ";
+$lang['fm_askdelete5_2']="_* adesso?";
+$lang['fm_deleteauto']="Fai partire la cancellazione automatica manualmente";
+$lang['fm_deleteall']="cancella tutti i dati backup";
+$lang['fm_deleteallfilter']="cancellare tutti con ";
+$lang['fm_deleteallfilter2']="_*";
+$lang['fm_startdump']="Fai partire un nuovo backup";
+$lang['fm_fileupload']="Caricare dato (file)";
+$lang['fm_dbname']="Nome della banca dati";
+$lang['fm_files1']="Banca dati Backups";
+$lang['fm_files2']="Struttura banca dati";
+$lang['fm_autodel1']="Cancellazione in automatico: Seguenti dati (file) sono stati cancellati per causa del massimo contenuto:";
+$lang['fm_autodel2']="Cancellazione in automatico: Seguenti dati (file) sono stati cancellati a causa della data di creazione:";
+$lang['fm_dumpsettings']="Configurazione per Perl-Cronscript";
+$lang['fm_dumpsettings_cron']="Configurazione per Perl-Cronscript";
+$lang['fm_oldbackup']="(sconosciuto)";
+$lang['fm_restore_header']="Ripristino della banca dati <strong>\"";
+$lang['fm_restore_header2']="\"</strong>";
+$lang['fm_dump_header']="Backup";
+$lang['DoCronButton']="Esegui Perl-Cronscript";
+$lang['DoPerlTest']="Prova moduli-perl";
+$lang['DoSimpleTest']="Prova Perl";
+$lang['perloutput1']="Registrazione in crondump.pl per absolute_path_of_configdir";
+$lang['perloutput2']="Url per il Browser oppure per Cronjob esterno";
+$lang['perloutput3']="Linea di commandi nella Shell oppure per il Crontab";
+$lang['converter']="Convertitore-Backup";
+$lang['convert_file']="dato (file) da convertire";
+$lang['convert_filename']="Nome della destinazione del dato (file) (senza estenzione)";
+$lang['converting']="Conversione";
+$lang['convert_fileread']="Leggi dati (file) '%s'";
+$lang['convert_finished']="Conversione eseguita, '%s' sono stati scritti con successo.";
+$lang['no_msd_backupfile']="Backups di altri programmi";
+$lang['max_upload_size']="Grandezza massima del dato (file)";
+$lang['max_upload_size_info']="Se il tuo dato(file) backup &egrave; piu grande del limite imposto, allora lo devi caricare tramite FTP nella cartella \"work/backup\". Dopo verr&agrave; vissualizato questo dato qui nella amministrazione e puo essere scelto per il ripristino.";
+
+
+?>

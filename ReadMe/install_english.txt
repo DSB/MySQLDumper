@@ -1,0 +1,70 @@
+Installation:
+
+- upload the folder mysqldumper to your webspace
+- chmod the file "config.php" to 777
+- start the script in your browser (http://www.deineDomain.de/mysqldumper/)
+- Follow the Installationscript
+- in step 2 (Configuration) change Data (Host, Name, Password) of your databaseconnection and save
+- in case of safe_mode=1 you must create the folders manually.
+  create following folders in the Scriptdir:
+  	
+	 - work
+	 - work/backup
+	 - work/config
+	 - work/structure
+	 - work/log
+	 
+  and chmod these folders to 0777
+  
+- Ready !
+
+
+
+Guidance for the Perl script:  
+
+When you can execute Perl anywhere:  
+
+1. In MySQLDumper switch to the page Backup.  
+2. Copy the path, that stands behind entry in crondump.pl for $absolute_path_of_configdir:  
+3. open the file "crondump.pl" in the editor 
+4. paste the copied path there to the $absolute_path_of_configdir-variable (no blanks,no new line) 
+5. Save crondump.pl 
+6. chmod the scripts to 0755.   
+7. If the ending .cgi is desired, change the ending of all 3 files from .pl to .cgi (rename)  
+8. If the Scripts are renamed to *.cgi , change Fileextension to cgi in the MySQLDumper Configuration (cronscript)
+
+Done.
+
+--------------------------------------
+When perl is only allowed in cgi-bin: 
+
+Many user have a cgi-bin directory, in which Perl can be executed. 
+This is usually available via Browser http://www.domain.com/cgi-bin/ . 
+
+In this casse do the following steps:  
+
+1.  in MySQLDumper call the page Backup and click "Backup Perl".
+2.  Copy the path, that stands behind entry in crondump.pl for $absolute_path_of_configdir:    
+3. open the file "crondump.pl" in the editor 
+4. paste the copied path there with absolute_path_of_configdir (no blanks, no new line) 
+5.  Save crondump.pl 
+6. copy crondump.pl, as well as perltest.pl and simpletest.pl to the cgi-bin directory (ASCII mode in the ftp-client!) 
+7. chmod 755 the scripts to 0755.  
+7b. If the ending cgi is desired, change the ending of all 3 files .pl to .cgi (rename)  
+8.  in MySQLDumper switch to the page Configuration
+9. click on Cronscript 
+10. change the Perl execution path to /cgi-bin/ or ./../cgi-bin (depending on your file-structure. Path is relative from MSD-Dir)
+10b. if the Scripts are renamed to *.cgi , change Fileextension to cgi 
+11 save the Configuration 
+-------------------------------------
+
+Ready ! The scripts are now available from the Page "Backup".
+
+
+Windowsuser must change the first line of all Perlscripts, to the path of Perl.  
+
+Example:  
+
+instead of:  #!/usr/bin/perl w 
+now #!C:\perl\bin\perl.exe w
+
