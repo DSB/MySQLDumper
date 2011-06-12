@@ -1018,7 +1018,6 @@ $lang['L_WRONG_RIGHTS']="Il file o la directory '%s' non è"
     ." vostro programma FTP.<br /> Il file o"
     ." la directory hanno bisogno di essere"
     ." impostati a %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="sì";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

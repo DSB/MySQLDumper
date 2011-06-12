@@ -1075,7 +1075,6 @@ Chế độ chmod"
 File hay"
     ." thư mục cần được thiết"
     ." lập thành %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="Có";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Phiên bản Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Tên tập tin '%value%' không phải"

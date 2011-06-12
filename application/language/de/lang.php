@@ -1057,7 +1057,6 @@ $lang['L_WRONG_RIGHTS']="Die Datei oder das Verzeichnis '%s'"
     ." mit Ihrem FTP-Programm. Die Datei oder"
     ." das Verzeichnis benötigt die Rechte"
     ." %s.";
-$lang['L_XXXX']="x";
 $lang['L_YES']="ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Der angegebene Dateiname '%value%' ist"

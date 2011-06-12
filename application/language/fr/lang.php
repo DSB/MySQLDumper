@@ -1082,7 +1082,6 @@ $lang['L_WRONG_RIGHTS']="Impossible d'écrire le fichier ou le"
     ." attributs en utilisant votre logiciel"
     ." FTP.<br />Le fichier ou le répertoire"
     ." doivent être sur %s.";
-$lang['L_XXXX']="x";
 $lang['L_YES']="oui";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Version Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Le nom du fichier '%value%' n'est pas"

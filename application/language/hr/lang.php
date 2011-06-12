@@ -972,7 +972,6 @@ $lang['L_WRONG_RIGHTS']="The file or the directory '%s' is not"
     ." correct attributes using your FTP"
     ." program. The file or the directory"
     ." needs to be set to %s.";
-$lang['L_XXXX']="x";
 $lang['L_YES']="yes";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

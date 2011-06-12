@@ -1054,7 +1054,6 @@ Por favor, compruebe"
     ." de FTP.<br />
 El archivo o directorio"
     ." debe ser configurado a %s.";
-$lang['L_XXXX']="x";
 $lang['L_YES']="si";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Versión de Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="El nombre de archivo dado '%value%' no"

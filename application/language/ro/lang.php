@@ -983,7 +983,6 @@ $lang['L_WRONG_RIGHTS']="Fişier sau director '%s' nu poate fi"
     ." corect cu programul FTP.<br />Fişier"
     ." sau director are nevoie de drepturi"
     ." %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="da";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

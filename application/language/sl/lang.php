@@ -969,7 +969,6 @@ $lang['L_WRONG_RIGHTS']="Datoteka ali mapa '%s' ni zapisljiva"
     ." pravilne lastnosti z uporabo FTP"
     ." programa.<br /> Datoteka ali mapa mora"
     ." biti nastavljena na %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="da";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework različica";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

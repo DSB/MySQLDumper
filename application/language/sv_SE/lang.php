@@ -960,7 +960,6 @@ $lang['L_WRONG_RIGHTS']="Filen eller mappen '%s' kan ej skrivas"
     ." (Chmod).<br />Ställ in rätt attribut"
     ." med ett FTP-program. <br />Filen eller"
     ." mappen måste ha %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Det angivna filnamnet '%value%' är"

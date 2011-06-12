@@ -1003,7 +1003,6 @@ Prosí nastavte"
     ." klienta.<br />
 Súbor alebo adresár"
     ." musí byť nastavený na %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="áno";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework verzia";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Názov súboru '% Hodnoty %' nie je"

@@ -988,7 +988,6 @@ $lang['L_WRONG_RIGHTS']="Dosya yada Klasör '%s' yazılamıyor"
     ." haklarını düzenleyin.<br />Dosya /"
     ." Klasör için gerekli erişim hakkı"
     ." %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="evet";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

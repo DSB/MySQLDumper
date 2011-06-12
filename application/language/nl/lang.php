@@ -991,7 +991,6 @@ Stel de correcte"
     ." />
 Het bestand of de directorie moeten"
     ." zijn ingesteld naar %s.<br />";
-$lang['L_XXXX']="x";
 $lang['L_YES']="Ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Versie";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Het opgegeven bestandsnaam '%value%'"
