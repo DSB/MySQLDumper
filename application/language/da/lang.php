@@ -967,6 +967,7 @@ $lang['L_WRONG_RIGHTS']="Kan ikke skrive til filen eller"
     ." de korrekte attributter via din"
     ." FTP-klient.<br /> Filen eller mappen"
     ." skal være sat til %s.<br />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

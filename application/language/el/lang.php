@@ -1412,6 +1412,7 @@ $lang['L_WRONG_RIGHTS']="Το αρχείο ή ο"
     ." αρχείο ή ο κατάλογος"
     ." πρέπει να ρυθμιστεί"
     ." σε %s.<br />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="ναι";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Εκδοση Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Το όνομα αρχείου"

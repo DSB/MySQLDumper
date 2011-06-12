@@ -55,7 +55,7 @@ $lang['L_CHANGE']="redigera";
 $lang['L_CHANGEDIR']="Hoppa till mapp";
 $lang['L_CHANGEDIRERROR']="Kunde ej hoppa till mapp!";
 $lang['L_CHARSET']="Teckensats";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Teckensatser";
 $lang['L_CHECK']="Kontrollera";
 $lang['L_CHECK_DIRS']="kontrollera mina mappar";
 $lang['L_CHOOSE_CHARSET']="Tyvärr kunde ej fastställas"
@@ -191,7 +191,7 @@ $lang['L_DELETE_FILE_ERROR']="Filen \"%s\" kunde ej raderas!";
 $lang['L_DELETE_FILE_SUCCESS']="Filen \"%s\" har raderats.";
 $lang['L_DELETE_HTACCESS']="Avlägsna mappskyddet (radera"
     ." .htaccess-filen)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Beskrivning";
 $lang['L_DESELECT_ALL']="Avmarkera alla";
 $lang['L_DIR']="Mapp";
 $lang['L_DISABLEDFUNCTIONS']="Deaktiverade funktioner";
@@ -443,7 +443,7 @@ $lang['L_IMPORTSOURCE']="Importkälla";
 $lang['L_IMPORTTABLE']="Import till tabellen";
 $lang['L_IMPORT_NOTABLE']="Ingen tabell har valts för importen!";
 $lang['L_IN']="i";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="Indexstorlek";
 $lang['L_INFO_ACTDB']="Aktuell databas";
 $lang['L_INFO_DATABASES']="Följande databas(er) finns på"
     ." MySQL-servern";
@@ -498,7 +498,7 @@ $lang['L_LOG_NOT_READABLE']="Loggfilen '%s' existerar ej eller kan"
 $lang['L_MAILERROR']="Tyvärr uppträdde ett fel när"
     ." epostmeddelandet skickades!";
 $lang['L_MAILPROGRAM']="Epostprogram";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
+$lang['L_MAXIMUM_LENGTH']="Maximal längd";
 $lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
     ." one character needs, when it is saved"
     ." to disk.";
@@ -535,9 +535,9 @@ $lang['L_MYSQLVARS']="MySQL-variabler";
 $lang['L_MYSQL_CLIENT_VERSION']="MySQL-klient";
 $lang['L_MYSQL_CONNECTION_ENCODING']="MySQL-serverns standardkodering";
 $lang['L_MYSQL_DATA']="MySQL-data";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
+$lang['L_MYSQL_ROUTINE']="Rutin";
+$lang['L_MYSQL_ROUTINES']="Rutiner";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="Sparade funktioner och procedurer";
 $lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
     ." in which one can save data (records)."
     ." Each record represents a row in the"
@@ -557,9 +557,10 @@ As an alternative you could"
     ." MySQLDumper in that case.";
 $lang['L_MYSQL_VIEW']="View";
 $lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Views visar (filtrade) masker av"
+    ." dataposterna ur en eller flera"
+    ." tabeller. Själva viewerna innehåller"
+    ." ingen data.";
 $lang['L_NAME']="Namn";
 $lang['L_NEW']="ny";
 $lang['L_NEWTABLE']="ny tabell";
@@ -574,7 +575,7 @@ $lang['L_NOGZPOSSIBLE']="Det står inga GZIP-funktioner till"
 $lang['L_NONE']="inga";
 $lang['L_NOREVERSE']="Äldsta posten först";
 $lang['L_NOTAVAIL']="<em>existerar ej</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="Det finns inget att göra.";
 $lang['L_NOTICE']="Hänvisning";
 $lang['L_NOTICES']="Hänvisningar";
 $lang['L_NOT_ACTIVATED']="ej aktiverat";
@@ -601,7 +602,7 @@ $lang['L_NO_ENTRIES']="Tabellen \"<b>%s</b>\" är tom och har"
     ." inga poster.";
 $lang['L_NO_MSD_BACKUPFILE']="Filer skapade med andra program";
 $lang['L_NO_NAME_GIVEN']="Du har ej angivit något namn.";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_RECORDS']="Antal dataposter";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabeller har optimerats.";
 $lang['L_NUMBER_OF_FILES_FORM']="Antal backup-filer per databas";
 $lang['L_OF']="av";
@@ -653,7 +654,7 @@ $lang['L_POSITION_NOTIFICATIONS']="Meddelanderutans position";
 $lang['L_POSITION_TC']="uppe i mitten";
 $lang['L_POSITION_TL']="uppe till vänster";
 $lang['L_POSITION_TR']="uppe till höger";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
+$lang['L_POSSIBLE_COLLATIONS']="Möjliga sorteringar";
 $lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
     ." can choose for this character"
     ." set.
@@ -768,7 +769,7 @@ $lang['L_SETPRIMARYKEYSFOR']="Sätt nya primärnycklar för tabellen";
 $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Visa post %s till %s av %s";
 $lang['L_SHOWRESULT']="Visa resultatet";
 $lang['L_SHOW_TABLES']="Visa tabellerna";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="Visa finare tooltips";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="SMTP-server";
 $lang['L_SMTP_PORT']="SMTP-port";
@@ -902,8 +903,8 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Konfigureringsfilen \"%s\" har"
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Konfigureringsfilen \"%s\" har"
     ." raderats.";
 $lang['L_TABLE']="Tabell";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="Tabellnamn";
+$lang['L_TABLENAME_EXPLAIN']="Tabellnamn";
 $lang['L_TABLES']="Tabeller";
 $lang['L_TABLESELECTION']="Välj tabeller";
 $lang['L_TABLE_CREATE_SUCC']="Tabellen '%s' har skapats.";
@@ -926,7 +927,7 @@ $lang['L_TOOLS']="Verktyg";
 $lang['L_TOOLS_TOOLBOX']="Välj databas / Databasfunktioner /"
     ." Import/Export";
 $lang['L_TRUNCATE']="Töm";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE_DATABASE']="Töm databasen";
 $lang['L_UNIT_KB']="Kilobyte";
 $lang['L_UNIT_MB']="Megabyte";
 $lang['L_UNIT_PIXEL']="Pixel";
@@ -959,6 +960,7 @@ $lang['L_WRONG_RIGHTS']="Filen eller mappen '%s' kan ej skrivas"
     ." (Chmod).<br />Ställ in rätt attribut"
     ." med ett FTP-program. <br />Filen eller"
     ." mappen måste ha %s.<br />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Det angivna filnamnet '%value%' är"

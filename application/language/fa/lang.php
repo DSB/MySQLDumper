@@ -1208,6 +1208,7 @@ $lang['L_WRONG_RIGHTS']="قابل نوشتن نيست '%s'"
     ." دسترسي فايل يا پوشه"
     ." بايد تنظيم شود روي <br"
     ." />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="بله";
 $lang['L_ZEND_FRAMEWORK_VERSION']="نسخه فریم ورک";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="مقدار مقابل نام یک"

@@ -60,7 +60,7 @@ $lang['L_CHANGE']="thay đổi";
 $lang['L_CHANGEDIR']="Thay đổi tới Thư mục";
 $lang['L_CHANGEDIRERROR']="Không thể thay đổi thư mục!";
 $lang['L_CHARSET']="Mã hóa";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Bảng mã";
 $lang['L_CHECK']="Kiểm";
 $lang['L_CHECK_DIRS']="Kiểm tra các thư mục";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper đã không thể tự"
@@ -212,7 +212,7 @@ $lang['L_DELETE_FILE_SUCCESS']="File \"%s\" vừa được xóa thành"
     ." công.";
 $lang['L_DELETE_HTACCESS']="Bỏ bảo vệ thư mục (xóa"
     ." .htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Mô tả";
 $lang['L_DESELECT_ALL']="Thôi chọn tất cả";
 $lang['L_DIR']="Thư mục";
 $lang['L_DISABLEDFUNCTIONS']="Vô hiệu hóa những tính năng";
@@ -572,10 +572,10 @@ $lang['L_LOG_NOT_READABLE']="File LOG '%s' không tồn tại"
     ." hoặc không thể đọc.";
 $lang['L_MAILERROR']="Gửi email thất bại!";
 $lang['L_MAILPROGRAM']="Chương trình Mail";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH']="Chiều dài tối đa";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="Đây là số lượng tối đa các"
+    ." byte một bảng mã cần, khi nó"
+    ." được lưu vào đĩa.";
 $lang['L_MAXSIZE']="Kích cỡ tối đa";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Cho mỗi một CSDL";
 $lang['L_MAX_EXECUTION_TIME']="Thời gian thực hiện tối đa";
@@ -612,17 +612,17 @@ $lang['L_MYSQLVARS']="Biến MySQL";
 $lang['L_MYSQL_CLIENT_VERSION']="Phiên bản MySQL";
 $lang['L_MYSQL_CONNECTION_ENCODING']="Mã chuẩn của MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-Data";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
+$lang['L_MYSQL_ROUTINE']="Thủ tục";
+$lang['L_MYSQL_ROUTINES']="Thủ tục";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="Đã lưu trữ hàm và lệnh";
 $lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
     ." in which one can save data (records)."
     ." Each record represents a row in the"
     ." table.";
 $lang['L_MYSQL_VERSION']="Phiên bản MySQL";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Phiên bản MYSQL quá cũ";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
+$lang['L_MYSQL_VIEW']="Xem";
+$lang['L_MYSQL_VIEWS']="Lượt xem";
 $lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
     ." one ore more tables but don't contain"
     ." own records.";
@@ -1012,7 +1012,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="File cấu hình \"%s\" vừa được"
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="File cấu hình \"%s\" vừa được"
     ." xóa thành công.";
 $lang['L_TABLE']="Bảng";
-$lang['L_TABLENAME']="Table name";
+$lang['L_TABLENAME']="Tên bảng";
 $lang['L_TABLENAME_EXPLAIN']="Tên bảng";
 $lang['L_TABLES']="Bảng";
 $lang['L_TABLESELECTION']="Chọn Bảng";
@@ -1075,6 +1075,7 @@ Chế độ chmod"
 File hay"
     ." thư mục cần được thiết"
     ." lập thành %s.<br />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="Có";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Phiên bản Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Tên tập tin '%value%' không phải"

@@ -983,6 +983,7 @@ $lang['L_WRONG_RIGHTS']="Diä Datei oder das Verzeichnis '%s'"
     ." FTP-Programm. <br /> Diä Datei oder"
     ." das Verzeichnis brucht diä Rächt"
     ." %s.<br />";
+$lang['L_XXXX']="x";
 $lang['L_YES']="jo";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"

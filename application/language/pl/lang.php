@@ -975,6 +975,7 @@ Sprawdź atrybuty przy użyciu"
     ." oprogramowania FTP.
 Plik lub katalog"
     ." musi być w %s";
+$lang['L_XXXX']="x";
 $lang['L_YES']="tak";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
