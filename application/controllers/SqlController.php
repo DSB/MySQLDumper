@@ -155,26 +155,6 @@ class SqlController extends Zend_Controller_Action
     }
 
     /**
-     * Get number of records
-     *
-     * //TODO unused at this moment - need to decide if we use this for
-     * table information schema, because showing the nr of records takes too
-     * long if done in one page request!
-     * //TODO create clean http headers for response
-     *
-     * @return void
-     */
-    public function ajaxShowRecordcountAction()
-    {
-        Zend_Layout::getMvcInstance()->disableLayout();
-        Zend_Controller_Front::getInstance()->setParam('noViewRenderer', true);
-        $dbName = $this->_getParam('dbName');
-        $tableName = $this->_getParam('tableName');
-        $records = $this->_db->getNrOfRowsBySelectCount($tableName, $dbName);
-        echo $records;
-    }
-
-    /**
      * Creates a new database
      *
      * @return void
@@ -228,15 +208,14 @@ class SqlController extends Zend_Controller_Action
     {
         $this->_helper->viewRenderer->setNoRender(true);
         if ($this->_request->isPost()) {
-            //selection of db names given
             $databases = $this->_request->getParam('dbNames', array());
             $databases = array_map('base64_decode', $databases);
+            $databaseModel = new Application_Model_Databases($this->_db);
+            $dropResults = $databaseModel->dropDatabases($databases);
+            $this->view->actionResults = $dropResults;
+            $this->view->executedAction = 'L_DELETE_DATABASE';
+            $this->_refreshDbList();
         }
-        $databaseModel = new Application_Model_Databases($this->_db);
-        $dropResults = $databaseModel->dropDatabases($databases);
-        $this->view->actionResults = $dropResults;
-        $this->view->executedAction = 'L_DELETE_DATABASE';
-        $this->_refreshDbList();
         $this->_forward('index', 'sql');
     }
 
