@@ -80,4 +80,22 @@ class Msd_Application_Controller_SqlControllerTest
         $db->query('DROP DATABASE IF EXISTS `testDb`');
     }
 
+    public function testCanDropADatabase()
+    {
+        $this->loginUser();
+        //create our testDb if it exists
+        $db = Msd_Db::getAdapter();
+        $sql = 'CREATE DATABASE `testDb` DEFAULT CHARSET utf8 DEFAULT COLLATE utf8_general_ci';
+        $db->query($sql);
+        // now let's see if we can drop it
+        $this->request->setMethod('POST');
+        $this->request->setPost('dbNames', array(base64_encode('testDb')));
+        $this->dispatch('sql/drop.database');
+        // check action output
+        $this->assertQueryContentContains('h4', 'Aktion - Datenbank löschen:');
+        $this->assertQueryContentContains('td', 'testDb');
+        $this->assertQueryContentContains('td', 'DROP DATABASE `testDb`;');
+        // look for the "ok" icon
+        $this->assertQueryContentContains('td', '/css/msd/icons/16x16/Apply.png');
+    }
 }
