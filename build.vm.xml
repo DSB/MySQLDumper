@@ -37,13 +37,13 @@
   <!-- Generate jdepend.xml and software metrics charts -->
  <target name="pdepend">
     <touch file="${logdir}/jdepend.xml" mkdirs="true" />
-    <exec executable="pdepend">
+    <exec dir="${repodir}" executable="pdepend">
     <arg line="--jdepend-xml=${logdir}/jdepend.xml
         --ignore=language,Zend,ZendX,work,tests
         --suffix=php
         --jdepend-chart=${builddir}/pdepend/dependencies.svg
         --overview-pyramid=${builddir}/pdepend/overview-pyramid.svg
-
+        
         ${repodir}" />
   </exec>
  </target>
@@ -51,7 +51,7 @@
  <!-- Generate pmd.xml - exclude */Zend/*,*/language/*    -->
  <target name="phpmd">
     <touch file="${logdir}/pmd.xml" mkdirs="true" />
-    <exec executable="phpmd">
+    <exec dir="${repodir}" executable="phpmd">
         <arg line="${repodir}/ xml codesize,unusedcode,design,naming
             --reportfile ${builddir}/logs/pmd.xml
             --suffixes php
