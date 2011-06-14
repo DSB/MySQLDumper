@@ -75,7 +75,6 @@ class Msd_Application_Controller_SqlControllerTest
         $expected = 'Die Datenbank wurde nicht erstellt.';
         $this->assertQueryContentContains('div', $expected);
 
-
         // clean up
         $db->query('DROP DATABASE IF EXISTS `testDb`');
     }
@@ -91,6 +90,7 @@ class Msd_Application_Controller_SqlControllerTest
         $this->request->setMethod('POST');
         $this->request->setPost('dbNames', array(base64_encode('testDb')));
         $this->dispatch('sql/drop.database');
+
         // check action output
         $this->assertQueryContentContains('h4', 'Aktion - Datenbank löschen:');
         $this->assertQueryContentContains('td', 'testDb');

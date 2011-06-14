@@ -231,13 +231,6 @@ class SqlController extends Zend_Controller_Action
             //selection of db names given
             $databases = $this->_request->getParam('dbNames', array());
             $databases = array_map('base64_decode', $databases);
-        } else {
-            //link for one db clicked
-            $databases = $this->_request->getParam('dbName', '');
-            if ($databases == '') {
-                return;
-            }
-            $databases = base64_decode($databases);
         }
         $databaseModel = new Application_Model_Databases($this->_db);
         $dropResults = $databaseModel->dropDatabases($databases);
