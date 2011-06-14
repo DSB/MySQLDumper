@@ -98,4 +98,15 @@ class Msd_Application_Controller_SqlControllerTest
         // look for the "ok" icon
         $this->assertQueryContentContains('td', '/css/msd/icons/16x16/Apply.png');
     }
+
+    public function testShowDatabasesCanFallbackOnInvalidActualDatabase()
+    {
+        $this->loginUser();
+        $config = Msd_Configuration::getInstance();
+        $config->set('dynamic.dbActual', 'IDontExist');
+        $this->dispatch('sql/show.databases');
+        // make sure we fall back to first db "information_schema"
+        $expected = '<option value="aW5mb3JtYXRpb25fc2NoZW1h" selected="selected">information_schema</option>';
+        $this->assertQueryContentContains('select', $expected);
+    }
 }
