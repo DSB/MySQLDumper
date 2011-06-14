@@ -68,6 +68,14 @@ class Msd_Application_Controller_SqlControllerTest
         $this->dispatch('sql/create.database');
         $expected = 'Die Datenbank \'testDb\' wurde erfolgreich erstellt.';
         $this->assertQueryContentContains('div', $expected);
+
+        // retry to create the same database - should fail ;)
+        $this->request->setPost('newDbInfo', $newDbInfo);
+        $this->dispatch('sql/create.database');
+        $expected = 'Die Datenbank wurde nicht erstellt.';
+        $this->assertQueryContentContains('div', $expected);
+
+
         // clean up
         $db->query('DROP DATABASE IF EXISTS `testDb`');
     }
