@@ -219,7 +219,6 @@ class SqlController extends Zend_Controller_Action
             }
             $this->view->dbCreated = $dbCreated;
             $this->view->errorInfo = $errorInfo;
-
         }
         $this->view->newDbInfo = $newDbInfo;
     }

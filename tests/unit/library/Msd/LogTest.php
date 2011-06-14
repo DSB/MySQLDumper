@@ -61,11 +61,4 @@ class Msd_LogTest extends PHPUnit_Framework_TestCase
         }
         unset($logger);
     }
-
-    public function testCanWriteToLogFile()
-    {
-        $res = Msd_Log::write(Msd_Log::PHP, 'test message');
-
-        print_r($res);
-    }
 }

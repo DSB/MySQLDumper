@@ -51,4 +51,25 @@ class Msd_Application_Controller_SqlControllerTest
         $expected = 'Datensätze der Tabelle `mysql`.`columns_priv`';
         $this->assertQueryContentContains('h2', $expected);
     }
+
+    public function testCanCreateADatabase()
+    {
+        $this->loginUser();
+        //drop our testDb if it exists
+        $db = Msd_Db::getAdapter();
+        $db->query('DROP DATABASE IF EXISTS `testDb`');
+        $this->request->setMethod('POST');
+        $newDbInfo = array(
+                        'dbName'         => 'testDb',
+                        'dbCharset'      => 'utf8',
+                        'dbCollation'    => 'utf8_general_ci'
+        );
+        $this->request->setPost('newDbInfo', $newDbInfo);
+        $this->dispatch('sql/create.database');
+        $expected = 'Die Datenbank \'testDb\' wurde erfolgreich erstellt.';
+        $this->assertQueryContentContains('div', $expected);
+        // clean up
+        $db->query('DROP DATABASE IF EXISTS `testDb`');
+    }
+
 }
