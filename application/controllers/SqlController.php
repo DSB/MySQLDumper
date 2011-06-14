@@ -200,16 +200,12 @@ class SqlController extends Zend_Controller_Action
                     $newDbInfo['dbCharset'],
                     $newDbInfo['dbCollation']
                 );
-                if (!$dbCreated) {
-                    $errorInfo = $this->_db->getLastError();
-                } else {
-                    //db created - refresh db list for menu
-                    $this->view->config->set(
-                        'dynamic.dbActual',
-                        $newDbInfo['dbName']
-                    );
-                    $this->_refreshDbList('create.database');
-                }
+                //db created - refresh db list for menu
+                $this->view->config->set(
+                    'dynamic.dbActual',
+                    $newDbInfo['dbName']
+                );
+                $this->_refreshDbList('create.database');
             } catch (Msd_Exception $e) {
                 $dbCreated = false;
                 $errorInfo = array(
