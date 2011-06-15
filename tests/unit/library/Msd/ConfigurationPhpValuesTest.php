@@ -9,6 +9,7 @@ class Msd_ConfigurationPhpValuesTest extends PHPUnit_Framework_TestCase
         ini_set('max_execution_time', 31);
         $dynamicValues = Msd_ConfigurationPhpValues::getDynamicValues();
         $this->assertEquals(30, $dynamicValues->maxExecutionTime);
+        ini_set('max_execution_time', 0);
     }
 
     public function testCanFallbackTo16MbRam()
