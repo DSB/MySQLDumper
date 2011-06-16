@@ -14,7 +14,7 @@ class Msd_Application_Controller_SqlControllerTest
         $this->assertQueryContentContains('h2', $expected);
         // make sure we see the "show tables" link for db information_schema
         $expected = base64_encode("information_schema");
-        $this->assertXpath("//a[contains(@href, '" . $expected ."')]");
+        $this->assertXpath("//a[contains(@href, '" . $expected . "')]");
     }
 
     public function testCanShowTableList()
@@ -43,6 +43,21 @@ class Msd_Application_Controller_SqlControllerTest
         $this->assertQueryContentContains('table > tr > td', $expected);
     }
 
+    public function testShowTableDataCanDetectEmptyDatabase()
+    {
+        //create empty testDb
+        $db = Msd_Db::getAdapter();
+        $db->query('DROP DATABASE IF EXISTS `testDb`');
+        $sql = 'CREATE DATABASE `testDb` DEFAULT CHARSET utf8 DEFAULT COLLATE utf8_general_ci';
+        $db->query($sql);
+        $this->dispatch('sql/show.table.data/dbName/' . base64_encode('testDb') . '/tableName/IDontExits');
+        // make sure we see an error message
+        $this->assertXpathCount('//p[@class="error"]', 1);
+        // make sure message is "Database is empty!"
+        $expected = 'Die Datenbank ist leer!';
+        $this->assertQueryContentContains('p', $expected);
+    }
+
     public function testCanFallbackToShowingDataOfFirstTableOnIncorrectTable()
     {
         $this->loginUser();
@@ -60,9 +75,9 @@ class Msd_Application_Controller_SqlControllerTest
         $db->query('DROP DATABASE IF EXISTS `testDb`');
         $this->request->setMethod('POST');
         $newDbInfo = array(
-                        'dbName'         => 'testDb',
-                        'dbCharset'      => 'utf8',
-                        'dbCollation'    => 'utf8_general_ci'
+            'dbName' => 'testDb',
+            'dbCharset' => 'utf8',
+            'dbCollation' => 'utf8_general_ci'
         );
         $this->request->setPost('newDbInfo', $newDbInfo);
         $this->dispatch('sql/create.database');
@@ -79,10 +94,13 @@ class Msd_Application_Controller_SqlControllerTest
         $db->query('DROP DATABASE IF EXISTS `testDb`');
     }
 
+    /**
+     * @depends testCanCreateADatabase
+     */
     public function testCanDropADatabase()
     {
         $this->loginUser();
-        //create our testDb if it exists
+        //create our testDb
         $db = Msd_Db::getAdapter();
         $sql = 'CREATE DATABASE `testDb` DEFAULT CHARSET utf8 DEFAULT COLLATE utf8_general_ci';
         $db->query($sql);
@@ -109,4 +127,5 @@ class Msd_Application_Controller_SqlControllerTest
         $expected = '<option value="aW5mb3JtYXRpb25fc2NoZW1h" selected="selected">information_schema</option>';
         $this->assertQueryContentContains('select', $expected);
     }
+
 }
