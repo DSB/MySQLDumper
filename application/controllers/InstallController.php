@@ -73,7 +73,7 @@ class InstallController extends Zend_Controller_Action
             $this->_response->setRedirect($redirectUrl);
         }
         // set selected languge
-        $language = $this->_getParam('language', 'en');
+        $language = $this->_getParam('language', null);
         $languages = $lang->getAvailableLanguages();
 
         // check user browser language
