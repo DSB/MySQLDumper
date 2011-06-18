@@ -9,12 +9,22 @@
  * @author     $Author: DSB $
  */
 
-require_once 'Msd/Exception.php';
 /**
- * Exception class for all SQL-Parser exceptions.
+ * Interface definition for MySQL statement parsers.
  *
  * @package         MySQLDumper
  * @subpackage      SQL-Browser
  */
-class Msd_Sql_Parser_Exception extends Msd_Exception
-{ }
+interface Msd_Sql_Parser_Interface
+{
+    /**
+     * Parse the statement.
+     *
+     * @abstract
+     *
+     * @param string $statement MySQL INSERT statement.
+     *
+     * @return void
+     */
+    public function parse($statement);
+}

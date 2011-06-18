@@ -1,9 +1,36 @@
 <?php
+/**
+ * This file is part of MySQLDumper released under the GNU/GPL 2 license
+ * http://www.mysqldumper.net
+ *
+ * @package    MySQLDumper
+ * @subpackage SQL-Browser
+ * @version    SVN: $Rev: 1227 $
+ * @author     $Author: DSB $
+ */
 
+require_once "Msd/Sql/Parser/Interface.php";
+/**
+ * Class to parse MySQL queries.
+ * This enables you to analyze and modify MySQL queries, which the user has entered.
+ *
+ * @package         MySQLDumper
+ * @subpackage      SQL-Browser
+ */
 class Msd_Sql_Parser
 {
+    /**
+     * Saves the raw MySQL Query.
+     *
+     * @var string
+     */
     private $_rawQuery = null;
 
+    /**
+     * Available MySQL statements, divided and sorted by their length.
+     *
+     * @var array
+     */
     protected $_sqlStatements = array(
         2 => array(
             'do', 'xa'
@@ -35,10 +62,21 @@ class Msd_Sql_Parser
         ),
     );
 
+    /**
+     * MySQL comment types.
+     *
+     * @var array
+     */
     protected $_sqlComments = array(
         '--' => "\n", '/*' => '*/'
     );
 
+    /**
+     * Class constructor.
+     * Creates a new instance of the MySQL parser and optionally assign the raw MySQL query.
+     *
+     * @param string $sqlQuery Raw MySQL query to parse
+     */
     public function __construct($sqlQuery = null)
     {
         if ($sqlQuery !== null) {
@@ -46,6 +84,16 @@ class Msd_Sql_Parser
         }
     }
 
+    /**
+     * Parses a raw MySQL query.
+     * This could include more than one MySQL statement.
+     *
+     * @throws Msd_Sql_Parser_Exception
+     *
+     * @param string $sqlQuery Raw MySQL query to parse
+     *
+     * @return void
+     */
     public function parse($sqlQuery = null)
     {
         if ($sqlQuery === null) {
@@ -87,13 +135,23 @@ class Msd_Sql_Parser
                 include_once 'Msd/Sql/Parser/Exception.php';
                 throw new Msd_Sql_Parser_Exception("Unknown MySQL statement is found: '$statement'");
             }
-            $parserClass = 'Msd_Sql_Parser_' . ucwords($statement);
+            $parserClass = 'Msd_Sql_Parser_Statement_' . ucwords($statement);
             $endPos = $this->_getStatementEndPos($sqlQuery, $startPos);
             $completeStatement = trim(substr($sqlQuery, $startPos, $endPos - $startPos));
             $startPos = $endPos + 1;
+
+            $this->_parseStatement($completeStatement, $parserClass);
         }
     }
 
+    /**
+     * Searches the end of a MySQL statement and returns its position.
+     *
+     * @param string $sqlQuery The complete MySQL query
+     * @param int    $startPos Index, where to start the search.
+     *
+     * @return int End position of the statement
+     */
     private function _getStatementEndPos($sqlQuery, $startPos = 0)
     {
         $nextString = strpos($sqlQuery, "'", $startPos);
@@ -116,5 +174,26 @@ class Msd_Sql_Parser
         }
 
         return $nextSemicolon;
+    }
+
+    /**
+     * Creates an instance of a statement parser class and invokes statement parsing.
+     *
+     * @param string $statement   MySQL statement to parse
+     * @param string $parserClass Parser class to use
+     *
+     * @return void
+     */
+    private function _parseStatement($statement, $parserClass)
+    {
+        $classFilename = str_replace('_', '/', $parserClass) . '.php';
+        include_once $classFilename;
+        $parserObject = new $parserClass;
+
+        if (!$parserObject instanceof Msd_Sql_Parser_Interface) {
+            throw new Msd_Sql_Parser_Exception('The given parser class must implement Msd_Sql_Parser_Interface!');
+        }
+
+        $parserObject->parse($statement);
     }
 }
