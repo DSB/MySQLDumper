@@ -182,7 +182,7 @@ class Msd_Sql_Object
         $pointer = $this->getPointer();
         $offset = $pointer;
         $notFound = true;
-        $length = $this->getLength()-1;
+        $length = $this->getLength() - 1;
         while ($notFound && $offset < $length) {
             //echo "<br>Checking: ". substr($this->_data, $offset);
             $nextHit = strpos($this->_data, $match, $offset);
@@ -192,15 +192,15 @@ class Msd_Sql_Object
             }
             // now check if we found an escaped occurance
             $string = substr($this->_data, $pointer, $nextHit);
-            $string=str_replace('\\\\','',trim($string));
-            $quotes=substr_count($string,'\'');
-            $escaped_quotes=substr_count($string,'\\\'');
-            if (($quotes-$escaped_quotes) % 2 == 0) {
+            $string = str_replace('\\\\', '', trim($string));
+            $quotes = substr_count($string, '\'');
+            $escaped_quotes = substr_count($string, '\\\'');
+            if (($quotes - $escaped_quotes) % 2 == 0) {
                 // hit was not escaped - we found the match
                 $notFound = false;
             } else {
                 // keep on looking, this was escaped
-                $offset = $pointer + $nextHit +1;
+                $offset = $pointer + $nextHit + 1;
             }
         }
         return $nextHit;
