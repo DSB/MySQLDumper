@@ -21,11 +21,11 @@ class Msd_Sql_Parser_Statement_Lock implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL LOCK statement.
+     * @param Msd_Sql_Object $statement MySQL LOCK statement.
      *
      * @return void
      */
-    public function parse($statement)
+    public function parse(Msd_Sql_Object $statement)
     {
         return $statement;
     }

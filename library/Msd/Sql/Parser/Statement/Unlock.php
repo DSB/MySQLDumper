@@ -21,11 +21,11 @@ class Msd_Sql_Parser_Statement_Unlock implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL UNLOCK statement.
+     * @param Msd_Sql_Object $statement MySQL UNLOCK statement.
      *
      * @return void
      */
-    public function parse($statement)
+    public function parse(Msd_Sql_Object $statement)
     {
         return $statement;
     }

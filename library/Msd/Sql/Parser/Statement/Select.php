@@ -21,7 +21,7 @@ class Msd_Sql_Parser_Statement_Select implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL comment.
+     * @param Msd_Sql_Object $statement MySQL comment.
      *
      * @return void
      */
