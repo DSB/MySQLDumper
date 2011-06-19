@@ -5,8 +5,8 @@
  *
  * @package    MySQLDumper
  * @subpackage SQL-Browser
- * @version    SVN: $Rev: 1227 $
- * @author     $Author: DSB $
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 
 /**
@@ -22,7 +22,7 @@ interface Msd_Sql_Parser_Interface
      *
      * @abstract
      *
-     * @param string $statement MySQL INSERT statement.
+     * @param string $statement MySQL statement.
      *
      * @return void
      */

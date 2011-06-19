@@ -5,8 +5,8 @@
  *
  * @package    MySQLDumper
  * @subpackage SQL-Browser
- * @version    SVN: $Rev: 1227 $
- * @author     $Author: DSB $
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 
 require_once 'Msd/Exception.php';

@@ -11,23 +11,23 @@
 
 require_once "Msd/Sql/Parser/Interface.php";
 /**
- * Class to parse MySQL DROP statements.
+ * Class to parse MySQL comments.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
  *
  * @package         MySQLDumper
  * @subpackage      SQL-Browser
  */
-class Msd_Sql_Parser_Statement_Drop implements Msd_Sql_Parser_Interface
+class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
 {
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL DROP statement.
+     * @param string $statement MySQL comment.
      *
      * @return void
      */
     public function parse($statement)
     {
-        echo "$statement\n";
+        echo "Comment: $statement\n";
     }
 }

@@ -5,8 +5,8 @@
  *
  * @package    MySQLDumper
  * @subpackage SQL-Browser
- * @version    SVN: $Rev: 1227 $
- * @author     $Author: DSB $
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 
 require_once "Msd/Sql/Parser/Interface.php";
@@ -22,7 +22,7 @@ class Msd_Sql_Parser_Statement_Unlock implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL INSERT statement.
+     * @param string $statement MySQL UNLOCK statement.
      *
      * @return void
      */

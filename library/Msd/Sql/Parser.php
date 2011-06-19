@@ -5,8 +5,8 @@
  *
  * @package    MySQLDumper
  * @subpackage SQL-Browser
- * @version    SVN: $Rev: 1227 $
- * @author     $Author: DSB $
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 
 require_once "Msd/Sql/Parser/Interface.php";
@@ -17,7 +17,7 @@ require_once "Msd/Sql/Parser/Interface.php";
  * @package         MySQLDumper
  * @subpackage      SQL-Browser
  */
-class Msd_Sql_Parser
+class Msd_Sql_Parser implements Traversable
 {
     /**
      * Saves the raw MySQL Query.
@@ -25,6 +25,21 @@ class Msd_Sql_Parser
      * @var string
      */
     private $_rawQuery = null;
+
+    /**
+     * Parsed MySQL statements.
+     *
+     * @var array
+     */
+    private $_parsedStatements = array();
+
+    /**
+     * Holds the summary of the parsing process.
+     * The summary contains the count of each statement in the query.
+     *
+     * @var array
+     */
+    private $_parsingSummary = array();
 
     /**
      * Available MySQL statements, divided and sorted by their length.
@@ -124,14 +139,17 @@ class Msd_Sql_Parser
             $commentCheck = substr($statement, 0, 2);
             if (array_key_exists($commentCheck, $this->_sqlComments)) {
                 $commentEnd = $this->_sqlComments[$commentCheck];
-                $startPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
+                $endPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
+                $comment = substr($sqlQuery, $startPos, $endPos - $startPos);
+                $this->_parseStatement($comment, 'Msd_Sql_Parser_Comment');
+                $startPos = $endPos;
                 continue;
             }
             $statementLength = strlen($statement);
-            if (!isset($this->_sqlStatements[$statementLength])) {
-                die("$statement\n");
-            }
-            if (!in_array($statement, $this->_sqlStatements[$statementLength])) {
+            if (
+                !isset($this->_sqlStatements[$statementLength]) ||
+                !in_array($statement, $this->_sqlStatements[$statementLength])
+            ) {
                 include_once 'Msd/Sql/Parser/Exception.php';
                 throw new Msd_Sql_Parser_Exception("Unknown MySQL statement is found: '$statement'");
             }
@@ -140,7 +158,11 @@ class Msd_Sql_Parser
             $completeStatement = trim(substr($sqlQuery, $startPos, $endPos - $startPos));
             $startPos = $endPos + 1;
 
-            $this->_parseStatement($completeStatement, $parserClass);
+            $this->_parsedStatements[] = $this->_parseStatement($completeStatement, $parserClass);
+            if (!isset($this->_parsingSummary[$statement])) {
+                $this->_parsingSummary[$statement] = 0;
+            }
+            $this->_parsingSummary[$statement]++;
         }
     }
 
@@ -182,7 +204,7 @@ class Msd_Sql_Parser
      * @param string $statement   MySQL statement to parse
      * @param string $parserClass Parser class to use
      *
-     * @return void
+     * @return array
      */
     private function _parseStatement($statement, $parserClass)
     {
@@ -194,6 +216,66 @@ class Msd_Sql_Parser
             throw new Msd_Sql_Parser_Exception('The given parser class must implement Msd_Sql_Parser_Interface!');
         }
 
-        $parserObject->parse($statement);
+        return $parserObject->parse($statement);
+    }
+
+    /**
+     * Returns the parsing summary.
+     *
+     * @return array
+     */
+    public function getSummary()
+    {
+        return $this->_parsingSummary;
+    }
+
+    /**
+     * Rewind (reset) the internal pointer position af the parsed statements array.
+     *
+     * @return mixed
+     */
+    public function rewind()
+    {
+        return reset($this->_parsedStatements);
+    }
+
+    /**
+     * Return the current value af the parsed statements array.
+     *
+     * @return mixed
+     */
+    public function current()
+    {
+        return current($this->_parsedStatements);
+    }
+
+    /**
+     * Return the current key af the parsed statements array.
+     *
+     * @return mixed
+     */
+    public function key()
+    {
+        return key($this->_parsedStatements);
+    }
+
+    /**
+     * Move the internal pointer af the parsed statements array to the next position.
+     *
+     * @return mixed
+     */
+    public function next()
+    {
+        return next($this->_parsedStatements);
+    }
+
+    /**
+     * Validates the internal pointer position af the parsed statements array.
+     *
+     * @return bool
+     */
+    public function valid()
+    {
+        return key($this->_parsedStatements) !== null;
     }
 }
