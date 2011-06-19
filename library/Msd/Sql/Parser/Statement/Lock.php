@@ -25,8 +25,12 @@ class Msd_Sql_Parser_Statement_Lock implements Msd_Sql_Parser_Interface
      *
      * @return void
      */
-    public function parse(Msd_Sql_Object $statement)
+    public function parse(Msd_Sql_Object $sql)
     {
+        $sql->setState('Lock');
+        $endOfStatement = $sql->getPosition(';');
+        $statement = $sql->getData($endOfStatement);
+        $sql->setPointer($endOfStatement+1);
         return $statement;
     }
 }
