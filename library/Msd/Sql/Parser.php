@@ -83,20 +83,27 @@ class Msd_Sql_Parser implements Iterator
      * @var array
      */
     protected $_sqlComments = array(
-        '--' => "\n", '/*' => '*/'
+        '--' => "\n", '/*' => '*/', '/*!' => '*/'
     );
+
+    /**
+     * @var bool
+     */
+    private $_debug = false;
 
     /**
      * Class constructor.
      * Creates a new instance of the MySQL parser and optionally assign the raw MySQL query.
      *
      * @param string $sqlQuery Raw MySQL query to parse
+     * @param bool   $debug    If turned on, detection of queries is logged
      */
-    public function __construct($sqlQuery = null)
+    public function __construct($sqlQuery = null, $debug = false)
     {
         if ($sqlQuery !== null) {
             $this->_rawQuery = $sqlQuery;
         }
+        $this->_debug = $debug;
     }
 
     /**
@@ -124,6 +131,9 @@ class Msd_Sql_Parser implements Iterator
 
         $statementCounter = 0;
         $startPos = 0;
+        if ($this->_debug) {
+            ob_start();
+        }
         while ($startPos < strlen($sqlQuery)) {
             $statementCounter++;
             $firstSpace = strpos($sqlQuery, ' ', $startPos);
@@ -136,8 +146,9 @@ class Msd_Sql_Parser implements Iterator
                 $startPos = $startPos + 1;
                 continue;
             }
+            // check for comments or conditional comments
             $commentCheck = substr($statement, 0, 2);
-            if (array_key_exists($commentCheck, $this->_sqlComments)) {
+            if (isset($this->_sqlComments[$commentCheck]) || substr($statement, 0, 3) == '/*!') {
                 $commentEnd = $this->_sqlComments[$commentCheck];
                 $endPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
                 $comment = substr($sqlQuery, $startPos, $endPos - $startPos);
@@ -145,6 +156,7 @@ class Msd_Sql_Parser implements Iterator
                 $startPos = $endPos;
                 continue;
             }
+
             $statementLength = strlen($statement);
             if (
                 !isset($this->_sqlStatements[$statementLength]) ||
@@ -163,6 +175,14 @@ class Msd_Sql_Parser implements Iterator
                 $this->_parsingSummary[$statement] = 0;
             }
             $this->_parsingSummary[$statement]++;
+        }
+
+        if ($this->_debug != false) {
+            $buffer = ob_get_contents();
+            ob_end_clean();
+            echo "<br />".$buffer."<br />";
+        } else {
+            ob_get_clean();
         }
     }
 

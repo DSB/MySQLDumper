@@ -358,7 +358,7 @@ class SqlController extends Zend_Controller_Action
         if ($this->_request->isPost() && !empty($tables)) {
 
             foreach ($tables as $tableName) {
-                $res = $this->_db->truncateTable($tableName);
+                $this->_db->truncateTable($tableName);
             }
             $this->view->actionResult = $truncateResults;
         }
@@ -387,14 +387,17 @@ class SqlController extends Zend_Controller_Action
             $config->set('dynamic.sqlboxQuery', $query);
             $query = trim($query);
             if ($query > '') {
-                $parser = new Msd_Sqlparser($query);
-                $query = $parser->parse();
+                $parser = new Msd_Sql_Parser($query, true);
+                $parser->parse();
+                $statements = $parser->getParsedStatements();
                 $this->_db->selectDb($config->get('dynamic.dbActual'));
-                try {
-                    $res = $this->_db->query($query, Msd_Db::ARRAY_ASSOC);
-                    $this->view->resultset = $res;
-                } catch (Exception $e) {
-                    $this->view->errorMessage = $e->getMessage();
+                foreach ($statements as $statement) {
+                    try {
+                        $res = $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
+                        $this->view->resultset = $res;
+                    } catch (Exception $e) {
+                        $this->view->errorMessage = $e->getMessage();
+                    }
                 }
             }
         }

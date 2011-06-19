@@ -10,24 +10,24 @@
  */
 
 /**
- * Class to parse MySQL CREATE statements.
+ * Class to parse MySQL comments.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
  *
  * @package         MySQLDumper
  * @subpackage      SQL-Parser
  */
-class Msd_Sql_Parser_Statement_Create implements Msd_Sql_Parser_Interface
+class Msd_Sql_Parser_Statement_Select implements Msd_Sql_Parser_Interface
 {
     /**
      * Parse the statement.
      *
-     * @param string $statement MySQL CREATE statement.
+     * @param string $statement MySQL comment.
      *
      * @return void
      */
     public function parse($statement)
     {
-        echo "Create: $statement\n";
+        echo "Select: $statement\n";
         return $statement;
     }
 }

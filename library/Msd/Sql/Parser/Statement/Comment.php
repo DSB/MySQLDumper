@@ -9,13 +9,12 @@
  * @author     $Author$
  */
 
-require_once "Msd/Sql/Parser/Interface.php";
 /**
  * Class to parse MySQL comments.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
  *
  * @package         MySQLDumper
- * @subpackage      SQL-Browser
+ * @subpackage      SQL-Parser
  */
 class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
 {
@@ -29,5 +28,6 @@ class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
     public function parse($statement)
     {
         echo "Comment: $statement\n";
+        return $statement;
     }
 }
