@@ -161,7 +161,7 @@ class Msd_Sql_Parser
                 return strlen($sqlQuery);
             }
 
-           return $nextSemicolon;
+            return $nextSemicolon;
         }
 
         while ($nextString < $nextSemicolon) {

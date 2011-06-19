@@ -17,4 +17,5 @@ require_once 'Msd/Exception.php';
  * @subpackage      SQL-Browser
  */
 class Msd_Sql_Parser_Exception extends Msd_Exception
-{ }
+{
+}
