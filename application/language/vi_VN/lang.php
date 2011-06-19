@@ -615,17 +615,18 @@ $lang['L_MYSQL_DATA']="MySQL-Data";
 $lang['L_MYSQL_ROUTINE']="Thủ tục";
 $lang['L_MYSQL_ROUTINES']="Thủ tục";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Đã lưu trữ hàm và lệnh";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Bảng có một cấu trúc cột"
+    ." được định nghĩa trong đó"
+    ." người ta có thể lưu dữ liệu"
+    ." (bản ghi). Mỗi bản ghi đại"
+    ." diện cho một hàng trong bảng.";
 $lang['L_MYSQL_VERSION']="Phiên bản MySQL";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Phiên bản MYSQL quá cũ";
 $lang['L_MYSQL_VIEW']="Xem";
 $lang['L_MYSQL_VIEWS']="Lượt xem";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Hiển thị (lọc) bản ghi của 1"
+    ." hoặc nhiều bảng nhưng không"
+    ." chứa nội dung bản ghi.";
 $lang['L_NAME']="Tên";
 $lang['L_NEW']="mới";
 $lang['L_NEWTABLE']="Bảng mới";
@@ -738,7 +739,7 @@ $lang['L_POSITION_NOTIFICATIONS']="Vị trí của cửa sổ thông báo";
 $lang['L_POSITION_TC']="giữa-đỉnh";
 $lang['L_POSITION_TL']="đỉnh trái";
 $lang['L_POSITION_TR']="đỉnh phải";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
+$lang['L_POSSIBLE_COLLATIONS']="Có thể đối chiếu";
 $lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
     ." can choose for this character"
     ." set.
