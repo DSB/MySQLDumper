@@ -17,7 +17,7 @@ require_once "Msd/Sql/Parser/Interface.php";
  * @package         MySQLDumper
  * @subpackage      SQL-Browser
  */
-class Msd_Sql_Parser implements Traversable
+class Msd_Sql_Parser implements Iterator, Traversable
 {
     /**
      * Saves the raw MySQL Query.
