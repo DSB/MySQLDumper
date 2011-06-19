@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Create implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "Create: $statement\n";
         return $statement;
     }
 }

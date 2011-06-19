@@ -87,9 +87,19 @@ class Msd_Sql_Parser implements Iterator
     );
 
     /**
+     * Whether to save debug output
+     *
      * @var bool
      */
     private $_debug = false;
+
+    /**
+     * Debug output buffer
+     *
+     * @var string
+     */
+    private $_debugOutput = '';
+
 
     /**
      * Class constructor.
@@ -120,10 +130,8 @@ class Msd_Sql_Parser implements Iterator
     {
         if ($sqlQuery === null) {
             if ($this->_rawQuery === null) {
-                include_once 'Msd/Sql/Parser/Exception.php';
                 throw new Msd_Sql_Parser_Exception('You must specify a MySQL query for parsing!');
             }
-
             $sqlQuery = $this->_rawQuery;
         }
 
@@ -131,11 +139,14 @@ class Msd_Sql_Parser implements Iterator
 
         $statementCounter = 0;
         $startPos = 0;
-        if ($this->_debug) {
-            ob_start();
-        }
-        while ($startPos < strlen($sqlQuery)) {
+        $queryLength = strlen($sqlQuery);
+        while ($startPos < $queryLength) {
             $statementCounter++;
+            // move pointer to the next character we can interprete
+            WHILE ($startPos < $queryLength && in_array($sqlQuery[$startPos], array(' ', "\n", "\r"))) {
+                $startPos++;
+            }
+
             $firstSpace = strpos($sqlQuery, ' ', $startPos);
             $statement = trim(strtolower(substr($sqlQuery, $startPos, $firstSpace - $startPos)));
             $lengthCheck = strlen($statement);
@@ -153,7 +164,7 @@ class Msd_Sql_Parser implements Iterator
                 $endPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
                 $comment = substr($sqlQuery, $startPos, $endPos - $startPos);
                 $this->_parseStatement($comment, 'Msd_Sql_Parser_Statement_Comment');
-                $startPos = $endPos;
+                $startPos = $endPos+1;
                 continue;
             }
 
@@ -162,27 +173,22 @@ class Msd_Sql_Parser implements Iterator
                 !isset($this->_sqlStatements[$statementLength]) ||
                 !in_array($statement, $this->_sqlStatements[$statementLength])
             ) {
-                include_once 'Msd/Sql/Parser/Exception.php';
                 throw new Msd_Sql_Parser_Exception("Unknown MySQL statement is found: '$statement'");
             }
             $parserClass = 'Msd_Sql_Parser_Statement_' . ucwords($statement);
             $endPos = $this->_getStatementEndPos($sqlQuery, $startPos);
             $completeStatement = trim(substr($sqlQuery, $startPos, $endPos - $startPos));
             $startPos = $endPos + 1;
-
-            $this->_parsedStatements[] = $this->_parseStatement($completeStatement, $parserClass);
+            $foundStatement = $this->_parseStatement($completeStatement, $parserClass);
+            if ($this->_debug) {
+                $this->_debugOutput .= '<br />Extracted statement: '.$foundStatement;
+            }
+            $this->_parsedStatements[] = $foundStatement;
+            // increment query type counter
             if (!isset($this->_parsingSummary[$statement])) {
                 $this->_parsingSummary[$statement] = 0;
             }
             $this->_parsingSummary[$statement]++;
-        }
-
-        if ($this->_debug != false) {
-            $buffer = ob_get_contents();
-            ob_end_clean();
-            echo "<br />".$buffer."<br />";
-        } else {
-            ob_get_clean();
         }
     }
 
@@ -203,7 +209,7 @@ class Msd_Sql_Parser implements Iterator
                 return strlen($sqlQuery);
             }
 
-            return $nextSemicolon;
+            return $nextSemicolon+1;
         }
 
         while ($nextString < $nextSemicolon) {
@@ -221,6 +227,7 @@ class Msd_Sql_Parser implements Iterator
     /**
      * Creates an instance of a statement parser class and invokes statement parsing.
      *
+     * @throws Exception
      * @param string $statement   MySQL statement to parse
      * @param string $parserClass Parser class to use
      *
@@ -228,11 +235,9 @@ class Msd_Sql_Parser implements Iterator
      */
     private function _parseStatement($statement, $parserClass)
     {
-        $classFilename = str_replace('_', '/', $parserClass) . '.php';
-        include_once $classFilename;
-        $parserObject = new $parserClass;
-
-        if (!$parserObject instanceof Msd_Sql_Parser_Interface) {
+        try {
+            $parserObject = new $parserClass;
+        } catch (Exception $e) {
             throw new Msd_Sql_Parser_Exception('The given parser class must implement Msd_Sql_Parser_Interface!');
         }
 
@@ -307,5 +312,15 @@ class Msd_Sql_Parser implements Iterator
     public function valid()
     {
         return key($this->_parsedStatements) !== null;
+    }
+
+    /**
+     * Get debug output buffer
+     *
+     * @return array
+     */
+    public function getDebugOutput()
+    {
+        return $this->_debugOutput;
     }
 }

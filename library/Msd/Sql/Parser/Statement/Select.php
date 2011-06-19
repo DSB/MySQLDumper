@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Select implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "Select: $statement\n";
         return $statement;
     }
 }

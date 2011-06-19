@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Drop implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "Drop: $statement\n";
         return $statement;
     }
 }

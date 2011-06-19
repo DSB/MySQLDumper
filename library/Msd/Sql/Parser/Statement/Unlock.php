@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Unlock implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "UNLOCK: $statement\n";
         return $statement;
     }
 }

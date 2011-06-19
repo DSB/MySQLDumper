@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Lock implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "Lock: $statement\n";
         return $statement;
     }
 }

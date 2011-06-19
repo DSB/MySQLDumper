@@ -27,7 +27,6 @@ class Msd_Sql_Parser_Statement_Insert implements Msd_Sql_Parser_Interface
      */
     public function parse($statement)
     {
-        echo "Insert: $statement\n";
         return $statement;
     }
 }
