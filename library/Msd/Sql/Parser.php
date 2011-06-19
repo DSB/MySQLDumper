@@ -42,42 +42,6 @@ class Msd_Sql_Parser implements Iterator
     private $_parsingSummary = array();
 
     /**
-     * Available MySQL statements, divided and sorted by their length.
-     *
-     * @var array
-     */
-    protected $_sqlStatements = array(
-        2 => array(
-            'do', 'xa'
-        ),
-        3 => array(
-            'set', 'use'
-        ),
-        4 => array(
-            'call', 'drop', 'help', 'kill', 'load', 'lock', 'show'
-        ),
-        5 => array(
-            'alter', 'check', 'flush', 'grant', 'purge', 'reset', 'slave', 'start'
-        ),
-        6 => array(
-            'backup', 'change', 'commit', 'create', 'delete', 'insert', 'rename', 'repair', 'revoke', 'select',
-            'unlock', 'update'
-        ),
-        7 => array(
-            'analyze', 'execute', 'handler', 'install', 'preload', 'prepare', 'release', 'replace', 'restore'
-        ),
-        8 => array(
-            'checksum', 'describe', 'optimize', 'keycache', 'rollback', 'truncate'
-        ),
-        9 => array(
-            'savepoint', 'uninstall'
-        ),
-        10 => array(
-            'deallocate'
-        ),
-    );
-
-    /**
      * MySQL comment types.
      *
      * @var array
@@ -143,7 +107,7 @@ class Msd_Sql_Parser implements Iterator
         while ($startPos < $queryLength) {
             $statementCounter++;
             // move pointer to the next character we can interprete
-            WHILE ($startPos < $queryLength && in_array($sqlQuery[$startPos], array(' ', "\n", "\r"))) {
+            while ($startPos < $queryLength && in_array($sqlQuery[$startPos], array(' ', "\n", "\r"))) {
                 $startPos++;
             }
 
@@ -168,13 +132,6 @@ class Msd_Sql_Parser implements Iterator
                 continue;
             }
 
-            $statementLength = strlen($statement);
-            if (
-                !isset($this->_sqlStatements[$statementLength]) ||
-                !in_array($statement, $this->_sqlStatements[$statementLength])
-            ) {
-                throw new Msd_Sql_Parser_Exception("Unknown MySQL statement is found: '$statement'");
-            }
             $parserClass = 'Msd_Sql_Parser_Statement_' . ucwords($statement);
             $endPos = $this->_getStatementEndPos($sqlQuery, $startPos);
             $completeStatement = trim(substr($sqlQuery, $startPos, $endPos - $startPos));
@@ -227,7 +184,8 @@ class Msd_Sql_Parser implements Iterator
     /**
      * Creates an instance of a statement parser class and invokes statement parsing.
      *
-     * @throws Exception
+     * @throws Msd_Sql_Parser_Exception
+     *
      * @param string $statement   MySQL statement to parse
      * @param string $parserClass Parser class to use
      *
@@ -238,7 +196,7 @@ class Msd_Sql_Parser implements Iterator
         try {
             $parserObject = new $parserClass;
         } catch (Exception $e) {
-            throw new Msd_Sql_Parser_Exception('The given parser class must implement Msd_Sql_Parser_Interface!');
+            throw new Msd_Sql_Parser_Exception("Can't suitable parser for the statement!");
         }
 
         return $parserObject->parse($statement);
