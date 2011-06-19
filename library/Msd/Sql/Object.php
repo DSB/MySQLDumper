@@ -194,8 +194,8 @@ class Msd_Sql_Object
             $string = substr($this->_data, $pointer, $nextHit);
             $string = str_replace('\\\\', '', trim($string));
             $quotes = substr_count($string, '\'');
-            $escaped_quotes = substr_count($string, '\\\'');
-            if (($quotes - $escaped_quotes) % 2 == 0) {
+            $escapedQuotes = substr_count($string, '\\\'');
+            if (($quotes - $escapedQuotes) % 2 == 0) {
                 // hit was not escaped - we found the match
                 $notFound = false;
             } else {
