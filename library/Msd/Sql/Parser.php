@@ -17,7 +17,7 @@ require_once "Msd/Sql/Parser/Interface.php";
  * @package         MySQLDumper
  * @subpackage      SQL-Browser
  */
-class Msd_Sql_Parser implements Iterator, Traversable
+class Msd_Sql_Parser implements Iterator
 {
     /**
      * Saves the raw MySQL Query.
@@ -141,7 +141,7 @@ class Msd_Sql_Parser implements Iterator, Traversable
                 $commentEnd = $this->_sqlComments[$commentCheck];
                 $endPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
                 $comment = substr($sqlQuery, $startPos, $endPos - $startPos);
-                $this->_parseStatement($comment, 'Msd_Sql_Parser_Comment');
+                $this->_parseStatement($comment, 'Msd_Sql_Parser_Statement_Comment');
                 $startPos = $endPos;
                 continue;
             }
@@ -217,6 +217,16 @@ class Msd_Sql_Parser implements Iterator, Traversable
         }
 
         return $parserObject->parse($statement);
+    }
+
+    /**
+     * Returns the array with the parsed statements.
+     *
+     * @return array
+     */
+    public function getParsedStatements()
+    {
+        return $this->_parsedStatements;
     }
 
     /**
