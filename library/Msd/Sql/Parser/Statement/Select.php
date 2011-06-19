@@ -4,7 +4,7 @@
  * http://www.mysqldumper.net
  *
  * @package    MySQLDumper
- * @subpackage SQL-Browser
+ * @subpackage SQL-Parser
  * @version    SVN: $Rev$
  * @author     $Author$
  */
@@ -25,8 +25,12 @@ class Msd_Sql_Parser_Statement_Select implements Msd_Sql_Parser_Interface
      *
      * @return void
      */
-    public function parse($statement)
+    public function parse(Msd_Sql_Object $sql)
     {
+        $sql->setState('Select');
+        $endOfStatement = $sql->getPosition(';');
+        $statement = $sql->getData($endOfStatement);
+        $sql->setPointer($endOfStatement+1);
         return $statement;
     }
 }

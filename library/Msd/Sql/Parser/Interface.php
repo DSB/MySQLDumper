@@ -4,7 +4,7 @@
  * http://www.mysqldumper.net
  *
  * @package    MySQLDumper
- * @subpackage SQL-Browser
+ * @subpackage SQL-Parser
  * @version    SVN: $Rev$
  * @author     $Author$
  */
@@ -13,7 +13,7 @@
  * Interface definition for MySQL statement parsers.
  *
  * @package         MySQLDumper
- * @subpackage      SQL-Browser
+ * @subpackage      SQL-Parser
  */
 interface Msd_Sql_Parser_Interface
 {
@@ -22,9 +22,9 @@ interface Msd_Sql_Parser_Interface
      *
      * @abstract
      *
-     * @param string $statement MySQL statement.
+     * @param Msd_Sql_Object $sqlObject MySQL statement object.
      *
      * @return void
      */
-    public function parse($statement);
+    public function parse(Msd_Sql_Object $sqlObject);
 }

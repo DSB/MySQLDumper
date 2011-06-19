@@ -4,12 +4,11 @@
  * http://www.mysqldumper.net
  *
  * @package    MySQLDumper
- * @subpackage SQL-Browser
+ * @subpackage SQL-Parser
  * @version    SVN: $Rev$
  * @author     $Author$
  */
 
-require_once 'Msd/Exception.php';
 /**
  * Exception class for all SQL-Parser exceptions.
  *

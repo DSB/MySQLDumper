@@ -388,9 +388,10 @@ class SqlController extends Zend_Controller_Action
             $query = trim($query);
             if ($query > '') {
                 $this->_db->selectDb($config->get('dynamic.dbActual'));
-                $parser = new Msd_Sql_Parser($query, true);
+                $sqlObject = new Msd_Sql_Object($query);
+                $parser = new Msd_Sql_Parser($sqlObject, true);
                 $parser->parse();
-                print_r($parser->getDebugOutput());
+                //echo $parser->getDebugOutput();
                 $statements = $parser->getParsedStatements();
                 foreach ($statements as $statement) {
                     try {

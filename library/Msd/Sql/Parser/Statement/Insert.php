@@ -4,7 +4,7 @@
  * http://www.mysqldumper.net
  *
  * @package    MySQLDumper
- * @subpackage SQL-Browser
+ * @subpackage SQL-Parser
  * @version    SVN: $Rev$
  * @author     $Author$
  */

@@ -4,12 +4,11 @@
  * http://www.mysqldumper.net
  *
  * @package    MySQLDumper
- * @subpackage SQL-Browser
+ * @subpackage SQL-Parser
  * @version    SVN: $Rev$
  * @author     $Author$
  */
 
-require_once "Msd/Sql/Parser/Interface.php";
 /**
  * Class to parse MySQL queries.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
@@ -69,14 +68,12 @@ class Msd_Sql_Parser implements Iterator
      * Class constructor.
      * Creates a new instance of the MySQL parser and optionally assign the raw MySQL query.
      *
-     * @param string $sqlQuery Raw MySQL query to parse
-     * @param bool   $debug    If turned on, detection of queries is logged
+     * @param Msd_Sql_Object $sqlObject SQL-Object holding the data to be parsed
+     * @param bool           $debug     If turned on, detection of queries is logged
      */
-    public function __construct($sqlQuery = null, $debug = false)
+    public function __construct(Msd_Sql_Object $sqlObject, $debug = false)
     {
-        if ($sqlQuery !== null) {
-            $this->_rawQuery = $sqlQuery;
-        }
+        $this->_sql = $sqlObject;
         $this->_debug = $debug;
     }
 
@@ -86,61 +83,32 @@ class Msd_Sql_Parser implements Iterator
      *
      * @throws Msd_Sql_Parser_Exception
      *
-     * @param string $sqlQuery Raw MySQL query to parse
-     *
      * @return void
      */
-    public function parse($sqlQuery = null)
+    public function parse()
     {
-        if ($sqlQuery === null) {
-            if ($this->_rawQuery === null) {
-                throw new Msd_Sql_Parser_Exception('You must specify a MySQL query for parsing!');
-            }
-            $sqlQuery = $this->_rawQuery;
-        }
-
-        $sqlQuery = trim($sqlQuery);
-
+        // get first characters to extract the kind of query we have to process
         $statementCounter = 0;
-        $startPos = 0;
-        $queryLength = strlen($sqlQuery);
-        while ($startPos < $queryLength) {
-            $statementCounter++;
-            // move pointer to the next character we can interprete
-            while ($startPos < $queryLength && in_array($sqlQuery[$startPos], array(' ', "\n", "\r"))) {
-                $startPos++;
-            }
+        while ($this->_sql->hasMoreToProcess()) {
+            $this->_sql->movePointerToNextCommand();
+            $endOfCommand = $this->_sql->getPosition(' ');
+            $sqlQuery = $this->_sql->getData($endOfCommand);
+            //echo "<br>Query beginn: ".$sqlQuery;
 
-            $firstSpace = strpos($sqlQuery, ' ', $startPos);
-            $statement = trim(strtolower(substr($sqlQuery, $startPos, $firstSpace - $startPos)));
-            $lengthCheck = strlen($statement);
-            if ($lengthCheck == 0) {
-                break;
-            }
-            if ($lengthCheck == 1 || $statement{1} == ';' || $statement{1} == "\n") {
-                $startPos = $startPos + 1;
-                continue;
-            }
+            $parts = explode(' ', $sqlQuery);
+            $statement = strtolower($parts[0]);
             // check for comments or conditional comments
-            $commentCheck = substr($statement, 0, 2);
+            $commentCheck = substr($sqlQuery, 0, 2);
             if (isset($this->_sqlComments[$commentCheck]) || substr($statement, 0, 3) == '/*!') {
-                $commentEnd = $this->_sqlComments[$commentCheck];
-                $endPos = strpos($sqlQuery, $commentEnd, $startPos) + strlen($commentEnd);
-                $comment = substr($sqlQuery, $startPos, $endPos - $startPos);
-                $this->_parseStatement($comment, 'Msd_Sql_Parser_Statement_Comment');
-                $startPos = $endPos+1;
-                continue;
+                $statement = 'Comment';
             }
 
-            $parserClass = 'Msd_Sql_Parser_Statement_' . ucwords($statement);
-            $endPos = $this->_getStatementEndPos($sqlQuery, $startPos);
-            $completeStatement = trim(substr($sqlQuery, $startPos, $endPos - $startPos));
-            $startPos = $endPos + 1;
-            $foundStatement = $this->_parseStatement($completeStatement, $parserClass);
+            $foundStatement = $this->_parseStatement($this->_sql, ucwords($statement));
             if ($this->_debug) {
                 $this->_debugOutput .= '<br />Extracted statement: '.$foundStatement;
             }
             $this->_parsedStatements[] = $foundStatement;
+            $statementCounter++;
             // increment query type counter
             if (!isset($this->_parsingSummary[$statement])) {
                 $this->_parsingSummary[$statement] = 0;
@@ -150,56 +118,25 @@ class Msd_Sql_Parser implements Iterator
     }
 
     /**
-     * Searches the end of a MySQL statement and returns its position.
-     *
-     * @param string $sqlQuery The complete MySQL query
-     * @param int    $startPos Index, where to start the search.
-     *
-     * @return int End position of the statement
-     */
-    private function _getStatementEndPos($sqlQuery, $startPos = 0)
-    {
-        $nextString = strpos($sqlQuery, "'", $startPos);
-        $nextSemicolon = strpos($sqlQuery, ';', $startPos);
-        if ($nextString === false) {
-            if ($nextSemicolon === false) {
-                return strlen($sqlQuery);
-            }
-
-            return $nextSemicolon+1;
-        }
-
-        while ($nextString < $nextSemicolon) {
-            $nextString = strpos($sqlQuery, "'", $nextString + 1);
-            $nextSemicolon = strpos($sqlQuery, ';', $nextString + 1);
-            $nextString = strpos($sqlQuery, "'", $nextString + 1);
-            if ($nextString === false) {
-                break;
-            }
-        }
-
-        return $nextSemicolon;
-    }
-
-    /**
      * Creates an instance of a statement parser class and invokes statement parsing.
      *
      * @throws Msd_Sql_Parser_Exception
      *
-     * @param string $statement   MySQL statement to parse
-     * @param string $parserClass Parser class to use
+     * @param Msd_Sql_Object $sqlObject MySQL statement to parse
+     * @param string         $statement Parser class to use
      *
      * @return array
      */
-    private function _parseStatement($statement, $parserClass)
+    private function _parseStatement(Msd_Sql_Object $sqlObject, $statement)
     {
-        try {
-            $parserObject = new $parserClass;
-        } catch (Exception $e) {
-            throw new Msd_Sql_Parser_Exception("Can't suitable parser for the statement!");
+        $statementPath = '/Msd/Sql/Parser/Statement/' . $statement;
+        if ($statement !== 'Select') die("Not implemented yet: ".$statement);
+        if (!file_exists(LIBRARY_PATH . $statementPath . '.php')) {
+            throw new Msd_Sql_Parser_Exception("Can't find statement class for statement: " . $statement);
         }
-
-        return $parserObject->parse($statement);
+        $statementClass = 'Msd_Sql_Parser_Statement_' . $statement;
+        $parserObject = new $statementClass;
+        return $parserObject->parse($sqlObject);
     }
 
     /**

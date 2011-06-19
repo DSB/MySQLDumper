@@ -9,6 +9,12 @@ defined('APPLICATION_PATH') || define(
     )
 );
 
+defined('LIBRARY_PATH') || define(
+    'LIBRARY_PATH', realpath(
+        dirname(__FILE__) . DS . '..' . DS . 'library'
+    )
+);
+
 // Define application environment
 if (!defined('APPLICATION_ENV')) {
     $appEnvironment = getenv('APPLICATION_ENV');
