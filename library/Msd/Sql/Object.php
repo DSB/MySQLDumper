@@ -109,10 +109,15 @@ class Msd_Sql_Object
         $pointer = $this->getPointer();
         $dataSize = strlen($this->_data);
         $skip = array(';', ' ', "\n", "\r");
-        while ($pointer < $dataSize && in_array($this->_data[$pointer], $skip)) {
-            $pointer++;
+        if (in_array($this->_data[$pointer], $skip)) {
+            while ($pointer < $dataSize && in_array($this->_data[$pointer], $skip)) {
+                $pointer++;
+            }
         }
         $this->setPointer($pointer);
+        if ($pointer == $this->getLength()) {
+            $pointer = false;
+        }
         return $pointer;
     }
 
@@ -182,13 +187,12 @@ class Msd_Sql_Object
         $pointer = $this->getPointer();
         $offset = $pointer;
         $notFound = true;
+        $nextHit = 0;
         $length = $this->getLength() - 1;
         while ($notFound && $offset < $length) {
-            //echo "<br>Checking: ". substr($this->_data, $offset);
             $nextHit = strpos($this->_data, $match, $offset);
-            //echo "<br>Next hit is :".intval($nextHit);
             if ($nextHit === false) {
-                $nextHit = $this->getLength() - $pointer;
+                return $this->getLength() - $pointer;
             }
             // now check if we found an escaped occurance
             $string = substr($this->_data, $pointer, $nextHit);
@@ -200,7 +204,7 @@ class Msd_Sql_Object
                 $notFound = false;
             } else {
                 // keep on looking, this was escaped
-                $offset = $pointer + $nextHit + 1;
+                $offset = $pointer + $nextHit;
             }
         }
         return $nextHit;

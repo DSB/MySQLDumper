@@ -30,7 +30,7 @@ class Msd_Sql_Parser_Statement_Select implements Msd_Sql_Parser_Interface
         $sql->setState('Select');
         $endOfStatement = $sql->getPosition(';');
         $statement = $sql->getData($endOfStatement);
-        $sql->setPointer($endOfStatement+1);
+        $sql->setPointer($endOfStatement);
         return $statement;
     }
 }
