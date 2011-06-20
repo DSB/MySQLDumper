@@ -10,7 +10,7 @@
  */
 
 /**
- * Class to parse MySQL CREATE statements.
+ * Class to parse MySQL ALTER statements.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
  *
  * @package         MySQLDumper

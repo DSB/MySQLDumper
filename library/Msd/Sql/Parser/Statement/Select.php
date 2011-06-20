@@ -10,7 +10,7 @@
  */
 
 /**
- * Class to parse MySQL comments.
+ * Class to parse MySQL SELECT commands.
  * This enables you to analyze and modify MySQL queries, which the user has entered.
  *
  * @package         MySQLDumper
