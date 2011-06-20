@@ -596,6 +596,7 @@ $lang['L_NO_ENTRIES']="Tabellen \"<b>%s</b>\" är tom och har"
     ." inga poster.";
 $lang['L_NO_MSD_BACKUPFILE']="Filer skapade med andra program";
 $lang['L_NO_NAME_GIVEN']="Du har ej angivit något namn.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Antal dataposter";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabeller har optimerats.";
 $lang['L_NUMBER_OF_FILES_FORM']="Antal backup-filer per databas";
@@ -674,6 +675,7 @@ $lang['L_PROGRESS_TABLE']="Genomfört av tabell";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processer";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Rättigheter";
 $lang['L_RECORDS']="Dataposter";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> dataposter har överförts.";
@@ -708,6 +710,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Hittills har <b>%d</b> av <b>%d</b>"
     ." tabeller skapats.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Hittills har <b>%d</b> av <b>%d</b>"
     ." tabeller skapats.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Nyaste posten först";
 $lang['L_SAFEMODEDESC']="Eftersom PHP utförs med optionen"
     ." \"safe_mode=on\" på denna server"

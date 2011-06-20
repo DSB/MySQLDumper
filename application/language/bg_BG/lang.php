@@ -620,6 +620,7 @@ $lang['L_NO_ENTRIES']="Table is empty and doesn't have any"
     ." entry.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups of other scripts";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tables have been optimized.";
 $lang['L_NUMBER_OF_FILES_FORM']="Delete by number of files per database";
@@ -696,6 +697,7 @@ $lang['L_PROGRESS_TABLE']="Progress of table";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processes";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Permissions";
 $lang['L_RECORDS']="Records";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> records inserted.";
@@ -729,6 +731,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Up to now <b>%d</b> of <b>%d</b>"
     ." tables were created.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Up to now <b>%d</b> tables were"
     ." created.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Last entry first";
 $lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"
     ." you need to create the following"

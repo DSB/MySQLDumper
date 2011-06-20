@@ -610,6 +610,7 @@ $lang['L_NO_ENTRIES']="Tabulka \"<b>%s</b>\" je prázdna a"
     ." nemá žiadny záznam.";
 $lang['L_NO_MSD_BACKUPFILE']="Zálohovanie iných skriptov";
 $lang['L_NO_NAME_GIVEN']="Nezadali ste meno.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabuľiek bolo optimalizovaných.";
 $lang['L_NUMBER_OF_FILES_FORM']="Zmazať podľa počtu záloh v jednej"
@@ -690,6 +691,7 @@ $lang['L_PROGRESS_TABLE']="Záloha db / tabuľky";
 $lang['L_PROVIDER']="Poskytovatel";
 $lang['L_PROZESSE']="Procesy";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Oprávnenie";
 $lang['L_RECORDS']="Záznamov";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> záznamov vložených.";
@@ -726,6 +728,7 @@ $lang['L_RESTORE_TABLE']="Obnova tabuľky '%s' dokončená";
 $lang['L_RESTORE_TABLES_COMPLETED']="Práve <b>%d</b> tabuliek zo <b>%d</b>"
     ."  bolo vytvorených.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="<b>%d</b> Tabuliek bolo vytvorených";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Posledný záznam prvý<br /><br /><br"
     ." />";
 $lang['L_SAFEMODEDESC']="Pretože PHP je spustená v safe_mode"

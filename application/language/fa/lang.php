@@ -771,6 +771,7 @@ $lang['L_NO_MSD_BACKUPFILE']="تهيه بکاپ توسط"
     ." اسکريپت هاي ديگر";
 $lang['L_NO_NAME_GIVEN']="شما نامي وارد نکرده"
     ." ايد";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="جدول بهينه شدند. %s";
 $lang['L_NUMBER_OF_FILES_FORM']="حذف توسط شماره فايل"
@@ -866,6 +867,7 @@ $lang['L_PROGRESS_TABLE']="جدول هاي در جريان";
 $lang['L_PROVIDER']="ارائه دهنده";
 $lang['L_PROZESSE']="فرآيندها";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="دسترسي ها";
 $lang['L_RECORDS']="رکورد ها";
 $lang['L_RECORDS_INSERTED']="رکورد به ثبت رسيد"
@@ -909,6 +911,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="جدول هاي ساخته شده"
     ." <b>%d</b> جدول از <b>%d</b>";
 $lang['L_RESTORE_TABLES_COMPLETED0']="جدول هاي ساخته شده"
     ." <b>%d</b>";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="ابتدا جديد تر ها";
 $lang['L_SAFEMODEDESC']="به دليل اينکه اف تي"
     ." پي در حالت سيف مود"

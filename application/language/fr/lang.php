@@ -679,6 +679,7 @@ $lang['L_NO_ENTRIES']="La table \"<b>%s</b>\" est vide ou ne"
 $lang['L_NO_MSD_BACKUPFILE']="Copies de sécurités d'autres"
     ." programmes";
 $lang['L_NO_NAME_GIVEN']="Vous n'avez pas entré de nom.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tables ont été optimisées.";
 $lang['L_NUMBER_OF_FILES_FORM']="Nombre de fichiers de sauvegarde par"
@@ -761,6 +762,7 @@ $lang['L_PROGRESS_TABLE']="Progression de la table";
 $lang['L_PROVIDER']="Fournisseur";
 $lang['L_PROZESSE']="Processus";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Droits";
 $lang['L_RECORDS']="Enregistrement";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> enregistrements ont été"
@@ -797,6 +799,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Jusqu'à présent <b>%d</b> de"
     ." <b>%d</b> tables ont été créés.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Jusqu'à présent <b>%d</b> tables ont"
     ." été créés.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Montrer les entrées les plus"
     ." récentes en premier";
 $lang['L_SAFEMODEDESC']="La configuration de ce serveur étant"

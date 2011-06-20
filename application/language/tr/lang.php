@@ -606,6 +606,7 @@ $lang['L_NO_ENTRIES']="\"<b>%s</b>\" isimli Tablo boş ve"
     ." hiçbirşey yazılmamış.";
 $lang['L_NO_MSD_BACKUPFILE']="Başka yazılımların dosyaları:";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s Tablo arındırıldı.";
 $lang['L_NUMBER_OF_FILES_FORM']="Yedek dosyaların sayısı";
@@ -684,6 +685,7 @@ $lang['L_PROGRESS_TABLE']="Tablo işlem durumu";
 $lang['L_PROVIDER']="Hosting Şirketi";
 $lang['L_PROZESSE']="İşlemler";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Haklar (CHMOD)";
 $lang['L_RECORDS']="Kayıtlar";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> Kayıtlar işlendi.";
@@ -718,6 +720,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Şimdiye kadar <b>%d</b> / <b>%d</b>"
     ." Tablo oluşturuldu.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Şimdiye kadar <b>%d</b> tablo"
     ." oluşturuldu.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Yeni kayıtlar önce";
 $lang['L_SAFEMODEDESC']="Bu sunucudaki PHP ayarlarında"
     ." \"safe_mode=on\" tespit edilmiştır,"

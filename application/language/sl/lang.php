@@ -608,6 +608,7 @@ $lang['L_NO_ENTRIES']="Tabela \"<b>%s</b>\" je prazna in nima"
     ." nobenih zapisov.";
 $lang['L_NO_MSD_BACKUPFILE']="Arhivi drugih skript";
 $lang['L_NO_NAME_GIVEN']="Niste vnesli imena.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabel je bilo optimizirano.";
 $lang['L_NUMBER_OF_FILES_FORM']="Izbriši po številu datotek na"
@@ -684,6 +685,7 @@ $lang['L_PROGRESS_TABLE']="Napredek tabele";
 $lang['L_PROVIDER']="Ponudnik";
 $lang['L_PROZESSE']="Procesi";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Dovoljenja";
 $lang['L_RECORDS']="Zapisi";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> zapisov vstavljenih.";
@@ -719,6 +721,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Do sedaj je bilo <b>%d</b> od"
     ." <b>%d</b> tabel kreiranih.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Do sedaj je bilo kreiranih <b>%d</b>"
     ." tabel.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Zadnji vnos na začetek";
 $lang['L_SAFEMODEDESC']="Ker PHP deluje z vklopljenim načinom"
     ." safe_mode, je potrebno ročno"

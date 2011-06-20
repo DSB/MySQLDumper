@@ -631,6 +631,7 @@ $lang['L_NO_ENTRIES']="La tabella \"<b>%s</b>\" è vuota e"
     ." non contiene nessun dato.";
 $lang['L_NO_MSD_BACKUPFILE']="Backup di altri programmi";
 $lang['L_NO_NAME_GIVEN']="Non hai inserito alcun nome.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabelle sono state ottimizzate.";
 $lang['L_NUMBER_OF_FILES_FORM']="Cancella per numero di file per"
@@ -715,6 +716,7 @@ $lang['L_PROGRESS_TABLE']="Avanzamento della tabella";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processi";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Permessi";
 $lang['L_RECORDS']="Record";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> record sono stati inseriti.";
@@ -751,6 +753,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Finora <b>%d</b> di <b>%d</b> tabelle"
     ." sono stae create.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Finora <b>%d</b> tabelle sono state"
     ." create.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Prima il piu recente";
 $lang['L_SAFEMODEDESC']="Poichè PHP è in esecuzione in"
     ." \"safe_mode\" devi creare manualmente"

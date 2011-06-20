@@ -660,6 +660,7 @@ $lang['L_NO_ENTRIES']="Bảng \"<b>%s</b>\" trống rỗng"
     ." nào.";
 $lang['L_NO_MSD_BACKUPFILE']="Bản sao lưu khác";
 $lang['L_NO_NAME_GIVEN']="Bạn chưa điền tên.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Số bản ghi";
 $lang['L_NR_TABLES_OPTIMIZED']="%s những bảng đã được tối"
     ." ưu hóa.";
@@ -748,6 +749,7 @@ $lang['L_PROGRESS_TABLE']="Tiến trình của bảng";
 $lang['L_PROVIDER']="Nhà cung cấp";
 $lang['L_PROZESSE']="Tiến trình";
 $lang['L_QUERY']="Truy vấn";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Cho phép";
 $lang['L_RECORDS']="Bản ghi(Records)";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> bản ghi được chèn"
@@ -786,6 +788,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Tính đến giờ, <b>%d</b> trong"
     ." tạo.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Cho tới giờ, <b>%d</b> bảng đã"
     ." được tạo ra.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Mới lên trên";
 $lang['L_SAFEMODEDESC']="Vì PHP đang chạy trong chế độ"
     ." safe_mode nên bạn phải tạo thư"

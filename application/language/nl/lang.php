@@ -615,6 +615,7 @@ $lang['L_NO_ENTRIES']="Tabel \"<b>%s</b>\" is leeg en heeft"
     ." geen entry.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups van andere scripts";
 $lang['L_NO_NAME_GIVEN']="U heeft geen naam aangegeven.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabellen zijn geoptimaliseerd.";
 $lang['L_NUMBER_OF_FILES_FORM']="Verwijderd door aantal bestanden per"
@@ -694,6 +695,7 @@ $lang['L_PROGRESS_TABLE']="Voortgang van de tabel";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processen";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Permissie";
 $lang['L_RECORDS']="Records";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> records ingevoegd.";
@@ -727,6 +729,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Tot nu toe zijn er <b>%d</b> van de"
     ." <b>%d</b> tabellen aangemaakt.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Tot nu toe zijn er <b>%d</b> tabellen"
     ." aangemaakt.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Laatste invoer eerst";
 $lang['L_SAFEMODEDESC']="Omdat PHP is draait in safe_mode moet"
     ." u de volgende directories handmatig"

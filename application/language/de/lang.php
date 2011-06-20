@@ -656,6 +656,7 @@ $lang['L_NO_ENTRIES']="Die Tabelle ist leer und enthält"
     ." keine Einträge.";
 $lang['L_NO_MSD_BACKUPFILE']="Dateien anderer Programme";
 $lang['L_NO_NAME_GIVEN']="Sie haben keinen Namen angegeben.";
+$lang['L_NR_OF_QUERIES']="Anzahl Querys";
 $lang['L_NR_OF_RECORDS']="Anzahl der Datensätze";
 $lang['L_NR_TABLES_OPTIMIZED']="%s Tabellen wurden optimiert.";
 $lang['L_NUMBER_OF_FILES_FORM']="Anzahl von Backup-Dateien pro"
@@ -743,6 +744,7 @@ $lang['L_PROGRESS_TABLE']="Fortschritt Tabelle";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Prozesse";
 $lang['L_QUERY']="Abfrage";
+$lang['L_QUERY_TYPE']="Query-Typ";
 $lang['L_RECHTE']="Rechte";
 $lang['L_RECORDS']="Datensätze";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> Datensätze wurden"
@@ -782,6 +784,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Es wurden bisher <b>%d</b> von"
     ." <b>%d</b> Tabellen angelegt.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Es wurden bisher <b>%d</b> Tabellen"
     ." angelegt.";
+$lang['L_RESULT']="Ergebnis";
 $lang['L_REVERSE']="Neuster Eintrag zuerst";
 $lang['L_SAFEMODEDESC']="Da PHP auf diesem Server mit der"
     ." Option \"safe_mode=on\" ausgeführt"

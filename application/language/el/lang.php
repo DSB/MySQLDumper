@@ -896,6 +896,7 @@ $lang['L_NO_ENTRIES']="Ο πίνακας \"<b>%s</b>\""
 $lang['L_NO_MSD_BACKUPFILE']="Αντίγραφα Ασφαλείας"
     ." άλλων scripts";
 $lang['L_NO_NAME_GIVEN']="Δεν δώσατε όνομα";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s πίνακες έχουν"
     ." βελτιστοποιηθεί.";
@@ -1005,6 +1006,7 @@ $lang['L_PROGRESS_TABLE']="Πρόοδος του πίνακα";
 $lang['L_PROVIDER']="Πάροχος";
 $lang['L_PROZESSE']="Διαδικασίες";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Προσβάσεις";
 $lang['L_RECORDS']="Εγγραφή";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> εγγραφές έχουν"
@@ -1055,6 +1057,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Μέχρι τώρα <b>%d</b> από"
 $lang['L_RESTORE_TABLES_COMPLETED0']="μέχρι τώρα"
     ." δημιουργήθηκαν <b>%d</b>"
     ." πίνακες.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Πρώτα τελευταίες"
     ." εγγραφές";
 $lang['L_SAFEMODEDESC']="Επειδή η PHP τρέχει σε"

@@ -620,6 +620,7 @@ $lang['L_NO_ENTRIES']="A tabela \"<b>%s</b>\" está vazia e"
     ." não contêm nenhuma entrada.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups de outros scripts";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabelas foram otimizadas.";
 $lang['L_NUMBER_OF_FILES_FORM']="Excluir pelo número de arquivos";
@@ -697,6 +698,7 @@ $lang['L_PROGRESS_TABLE']="Progresso da tabela";
 $lang['L_PROVIDER']="Provedor";
 $lang['L_PROZESSE']="Processos";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Permissões";
 $lang['L_RECORDS']="Registros";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> registros inseridos.";
@@ -731,6 +733,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Até agora <b>%d</b> de <b>%d</b>"
     ." tabelas foram criadas.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Até agora <b>%d</b> tabelas foram"
     ." criadas.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Últimas entradas primeiro";
 $lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"
     ." you need to create the following"

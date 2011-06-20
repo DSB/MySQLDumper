@@ -595,6 +595,7 @@ $lang['L_NO_ENTRIES']="Tabel \"<b>%s</b>\" er tom og"
     ." indeholder ingen poster.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups af andre scripts";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabeller er blevet optimeret.";
 $lang['L_NUMBER_OF_FILES_FORM']="Slet ud fra antal filer";
@@ -672,6 +673,7 @@ $lang['L_PROGRESS_TABLE']="Fremskridt i tabel";
 $lang['L_PROVIDER']="Leverandør";
 $lang['L_PROZESSE']="Processer";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Tilladelser";
 $lang['L_RECORDS']="Poster";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> poster indsat.";
@@ -705,6 +707,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Foreløbigt er der oprettet <b>%d</b>"
     ." af <b>%d</b> tabeller.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Foreløbigt er der oprettet <b>%d</b>"
     ." tabeller.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Seneste indlæg først";
 $lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"
     ." you need to create the following"

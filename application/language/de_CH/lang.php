@@ -617,6 +617,7 @@ $lang['L_NO_ENTRIES']="Diä Tabälle \"<b>%s</b>\" ist läär"
     ." und hät keine Iiträg.";
 $lang['L_NO_MSD_BACKUPFILE']="Dateie vo andere Programm";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s Tabälle sind optimiert worde.";
 $lang['L_NUMBER_OF_FILES_FORM']="Aazahl vo Backup-Dateie";
@@ -692,6 +693,7 @@ $lang['L_PROGRESS_TABLE']="Fortschritt Tabälle";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Prozäss";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="Rächt";
 $lang['L_RECORDS']="Datesätz";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> Datesätz sind iitreit"
@@ -727,6 +729,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Es sind bis ez <b>%d</b> vo <b>%d</b>"
     ." Tabälle agleit worde.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Es sind bis ez <b>%d</b> Tabälle"
     ." agleit worde.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="neuschte Iitrag zerscht";
 $lang['L_SAFEMODEDESC']="Will PHP uf däm Server mit de Option"
     ." \"safe_mode=on\" usgfuert wird, müend"

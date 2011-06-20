@@ -736,6 +736,7 @@ $lang['L_NO_ENTRIES']="الجدول \"<b>%s</b>\" فارغ"
 $lang['L_NO_MSD_BACKUPFILE']="النسخ الاحتياطي"
     ." لمخطوطات اخرى";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s تم اصلاح وتحسين"
     ." الجداول.";
@@ -820,6 +821,7 @@ $lang['L_PROGRESS_TABLE']="وصف متقدم للجدول";
 $lang['L_PROVIDER']="مقدمه";
 $lang['L_PROZESSE']="العمليات";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="الرخصة";
 $lang['L_RECORDS']="سجلات";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> ادراج سجلات.";
@@ -858,6 +860,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="البدء لآن <b>%d</b> of"
     ." الجداول.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="البدء لآن <b>%d</b> تم"
     ." انشاء الجداول.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="بيانات الدخول"
     ." الاخيره";
 $lang['L_SAFEMODEDESC']="السبب PHP يعمل في"

@@ -652,6 +652,7 @@ $lang['L_NO_ENTRIES']="La tabla \"<b>%s</b>\" está vacía y"
     ." no contiene ninguna entrada.";
 $lang['L_NO_MSD_BACKUPFILE']="Copias de seguridad de otros programas";
 $lang['L_NO_NAME_GIVEN']="No ha introducido un nombre.";
+$lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tablas optimizadas.";
 $lang['L_NUMBER_OF_FILES_FORM']="Cantidad de archivos de copia de"
@@ -736,6 +737,7 @@ $lang['L_PROGRESS_TABLE']="Progreso de la tabla actual";
 $lang['L_PROVIDER']="Proveedor";
 $lang['L_PROZESSE']="Proceso";
 $lang['L_QUERY']="Query";
+$lang['L_QUERY_TYPE']="Query type";
 $lang['L_RECHTE']="derechos";
 $lang['L_RECORDS']="registros";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> registros insertados.";
@@ -774,6 +776,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Hasta el momento, se han recuperado"
     ." <b>%d</b> de <b>%d</b> tablas.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Hasta el momento, se han recuperado"
     ." <b>%d</b> tablas.";
+$lang['L_RESULT']="Result";
 $lang['L_REVERSE']="Mostrar las entradas más nuevas"
     ." primero";
 $lang['L_SAFEMODEDESC']="Debido a que en este servidor está"
