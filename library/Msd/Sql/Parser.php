@@ -84,7 +84,7 @@ class Msd_Sql_Parser implements Iterator
         while ($this->_sql->hasMoreToProcess() && $this->_sql->movePointerToNextCommand()!==false) {
             $startPosition = $this->_sql->getPointer();
             // get first "word" of query to extract the kind we have to process
-            $endOfFirstWord = $this->_sql->getPosition(' ');
+            $endOfFirstWord = $this->_sql->getPosition(' ', false);
             // get substring from actual position to found position
             $sqlQuery = $this->_sql->getData($endOfFirstWord - $startPosition);
             $statement = strtolower($sqlQuery);
@@ -99,7 +99,7 @@ class Msd_Sql_Parser implements Iterator
             } catch (Msd_Sql_Parser_Exception $e) {
                 // stop parsing by setting pointer to the end
                 $this->_sql->setPointer($this->_sql->getLength()-1);
-                //echo "<br>Error: ".$e->getMessage();
+                echo "<br>Error: ".$e->getMessage();
             }
             if ($this->_debug) {
                 $this->_debugOutput .= '<br />Extracted statement: '.$foundStatement;
@@ -128,7 +128,7 @@ class Msd_Sql_Parser implements Iterator
     {
         $statementPath = '/Msd/Sql/Parser/Statement/' . $statement;
         if (!file_exists(LIBRARY_PATH . $statementPath . '.php')) {
-            throw new Msd_Sql_Parser_Exception("Can't find statement class for statement: " . $statement);
+            throw new Msd_Sql_Parser_Exception("Can't find statement class for statement: '" . $statement ."'");
         }
         $statementClass = 'Msd_Sql_Parser_Statement_' . $statement;
         $parserObject = new $statementClass();

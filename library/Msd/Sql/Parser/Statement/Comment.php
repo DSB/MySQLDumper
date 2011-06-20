@@ -25,8 +25,31 @@ class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
      *
      * @return void
      */
-    public function parse(Msd_Sql_Object$statement)
+    public function parse(Msd_Sql_Object $sql)
     {
-        return $statement;
+        $sql->setState('Comment');
+        $firstChars = $sql->getData(3);
+        $returnStatement = false;
+        if (substr($firstChars, 0, 2) == '--' || substr($firstChars, 0, 1) == '#') {
+            // one line comment -> match new line
+            $match = "\n";
+        } else {
+            if ($firstChars == '/*!') {
+                // conditionial statement
+                $match = '*/;';
+                $returnStatement = true;
+            } else {
+                // multi line comment
+                $match = '*/';
+            }
+        }
+        $endOfStatement = $sql->getPosition($match);
+        $statement = $sql->getData($endOfStatement);
+        $sql->setPointer($endOfStatement);
+        if ($returnStatement === true) {
+            return $statement;
+        } else {
+            return false;
+        }
     }
 }

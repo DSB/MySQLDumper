@@ -41,6 +41,13 @@ class Msd_Sql_Object
     private $_state = '';
 
     /**
+     * Holds parsing errors.
+     *
+     * @var string
+     */
+    private $_errors = array();
+
+    /**
      * Constructor
      *
      * @param null $sqlData SQl data to be parsed
@@ -178,11 +185,12 @@ class Msd_Sql_Object
      *
      * Begins to search at the actual postion of the pointer.
      *
-     * @param string $match
+     * @param string $match        The string to find
+     * @param bool   $includeMatch Whether to add length of $match to position
      *
      * @return int
      */
-    public function getPosition($match = ';')
+    public function getPosition($match = ';', $includeMatch = true)
     {
         $pointer = $this->getPointer();
         $offset = $pointer;
@@ -192,7 +200,16 @@ class Msd_Sql_Object
         while ($notFound && $offset < $length) {
             $nextHit = strpos($this->_data, $match, $offset);
             if ($nextHit === false) {
-                return $this->getLength() - $pointer;
+            $lang = Msd_Language::getInstance()->getTranslator();
+                $msg = sprintf(
+                            $lang->_('L_SQL_INCOMPLETE_STATEMENT_DETECTED'),
+                            $this->getState(),
+                            $match,
+                            $this->getData(200)
+                );
+                $this->setError($msg);
+                $this->setPointer($this->getLength());
+                return false;
             }
             // now check if we found an escaped occurance
             $string = substr($this->_data, $pointer, $nextHit);
@@ -202,11 +219,60 @@ class Msd_Sql_Object
             if (($quotes - $escapedQuotes) % 2 == 0) {
                 // hit was not escaped - we found the match
                 $notFound = false;
+                if ($includeMatch) {
+                    $nextHit += strlen($match);
+                }
             } else {
                 // keep on looking, this was escaped
                 $offset = $pointer + $nextHit;
             }
         }
         return $nextHit;
+    }
+
+    /**
+     * Set an error message
+     *
+     * @param string $msg The error message
+     *
+     * @return void
+     */
+    public function setError($msg)
+    {
+        $this->_errors[] = $msg;
+    }
+
+    /**
+     * Get error messages
+     *
+     * @return array
+     */
+    public function getErrors()
+    {
+        return $this->_errors;
+    }
+
+    /**
+     * Check if errors occured.
+     *
+     * @return bool
+     */
+    public function hasErrors()
+    {
+        $ret = false;
+        if (sizeof($this->_errors) > 0) {
+            $ret = true;
+        }
+        return $ret;
+    }
+
+    /**
+     * Get actual parsing state
+     *
+     * @return array
+     */
+    public function getState()
+    {
+        return $this->_state;
     }
 }
