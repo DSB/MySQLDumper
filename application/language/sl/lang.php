@@ -11,31 +11,23 @@
 $lang=array();
 $lang['L_ACTION']="Akcija";
 $lang['L_ACTIVATED']="vključeno";
-$lang['L_ACTUALLY_INSERTED_RECORDS']="Do sedaj je bilo uspešno dodanih"
-    ." <b>%s</b> zapisov.";
-$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Do sedaj je bilo uspešno dodanih"
-    ." <b>%s</b> od <b>%s</b> zapisov.";
+$lang['L_ACTUALLY_INSERTED_RECORDS']="Do sedaj je bilo uspešno dodanih"<br />    ." <b>%s</b> zapisov.";
+$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Do sedaj je bilo uspešno dodanih"<br />    ." <b>%s</b> od <b>%s</b> zapisov.";
 $lang['L_ADD']="Dodaj";
 $lang['L_ADDED']="dodano";
 $lang['L_ADD_DB_MANUALLY']="Ročno dodaj podatkovno zbirko";
 $lang['L_ADD_RECIPIENT']="Dodaj prejemnika";
 $lang['L_ALL']="vse";
 $lang['L_ANALYZE']="Analizirati";
-$lang['L_ANALYZING_TABLE']="Trenutno se podatki tabele '<b>%s</b>'"
-    ." analizirajo.";
-$lang['L_ASKDBCOPY']="Ali želite kopirati podatkovno zbirko"
-    ." '%s' v podatkovno zbirko '%s'?";
-$lang['L_ASKDBDELETE']="Ali želite izbrisati podatkovno"
-    ." zbirko '%s' z vsebino?";
-$lang['L_ASKDBEMPTY']="Ali želite izprazniti podatkovno"
-    ." zbirko '%s'?";
+$lang['L_ANALYZING_TABLE']="Trenutno se podatki tabele '<b>%s</b>'"<br />    ." analizirajo.";
+$lang['L_ASKDBCOPY']="Ali želite kopirati podatkovno zbirko"<br />    ." '%s' v podatkovno zbirko '%s'?";
+$lang['L_ASKDBDELETE']="Ali želite izbrisati podatkovno"<br />    ." zbirko '%s' z vsebino?";
+$lang['L_ASKDBEMPTY']="Ali želite izprazniti podatkovno"<br />    ." zbirko '%s'?";
 $lang['L_ASKDELETEFIELD']="Ali želite izbrisati polje?";
-$lang['L_ASKDELETERECORD']="Ali ste prepričani da želite"
-    ." izbrisati ta zapis?";
+$lang['L_ASKDELETERECORD']="Ali ste prepričani da želite"<br />    ." izbrisati ta zapis?";
 $lang['L_ASKDELETETABLE']="Ali naj bo tabela '%s' izbrisana?";
 $lang['L_ASKTABLEEMPTY']="Ali naj bo tabela '%s' izpraznjena?";
-$lang['L_ASKTABLEEMPTYKEYS']="Ali naj bo tabela '%s' izpraznjena in"
-    ." kazalci ponastavljeni?";
+$lang['L_ASKTABLEEMPTYKEYS']="Ali naj bo tabela '%s' izpraznjena in"<br />    ." kazalci ponastavljeni?";
 $lang['L_ATTACHED_AS_FILE']="pripeto kot datoteka";
 $lang['L_ATTACH_BACKUP']="Pripni arhiv";
 $lang['L_AUTHENTICATE']="Prijavna informacija";
@@ -45,14 +37,11 @@ $lang['L_BACK']="nazaj";
 $lang['L_BACKUPFILESANZAHL']="V arhivski mapi je";
 $lang['L_BACKUPS']="Arhivi";
 $lang['L_BACKUP_DBS']="Podatkovne zbirke za arhiviranje";
-$lang['L_BACKUP_TABLE_DONE']="Izpis tabele '%s' je končan. &s"
-    ." zapisov je bilo shranjenih.";
+$lang['L_BACKUP_TABLE_DONE']="Izpis tabele '%s' je končan. &s"<br />    ." zapisov je bilo shranjenih.";
 $lang['L_BACK_TO_OVERVIEW']="Pregled podatkovne zbirke";
 $lang['L_CALL']="Kliči";
 $lang['L_CANCEL']="Prekliči";
-$lang['L_CANT_CREATE_DIR']="Ni bilo mogoče kreirati mape '%s'."
-    ." Prosimo kreirajte ga s pomočjo FTP"
-    ." programa.";
+$lang['L_CANT_CREATE_DIR']="Ni bilo mogoče kreirati mape '%s'."<br />    ." Prosimo kreirajte ga s pomočjo FTP"<br />    ." programa.";
 $lang['L_CHANGE']="spremeni";
 $lang['L_CHANGEDIR']="Spremeni na Mapo";
 $lang['L_CHANGEDIRERROR']="Mape ni bilo mogoče spremeniti!";
@@ -60,15 +49,7 @@ $lang['L_CHARSET']="nabor znakov";
 $lang['L_CHARSETS']="Character Sets";
 $lang['L_CHECK']="Preveri";
 $lang['L_CHECK_DIRS']="Preveri moje mape";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper ni mogel samodejno zaznati"
-    ." kodiranja arhivske datoteke.<br"
-    ." />Izbrati morate nabor znakov s"
-    ." katerimi je bil ta arhiv shranjen. <br"
-    ." />Če ste odkrili kakšne napake z"
-    ." znaki po obnavljanju, ponovite proces"
-    ." arhiviranja in izberite drug nabor"
-    ." znakov.
-<br />Srečno. ;)";
+$lang['L_CHOOSE_CHARSET']="MySQLDumper ni mogel samodejno zaznati"<br />    ." kodiranja arhivske datoteke.<br"<br />    ." />Izbrati morate nabor znakov s"<br />    ." katerimi je bil ta arhiv shranjen. <br"<br />    ." />Če ste odkrili kakšne napake z"<br />    ." znaki po obnavljanju, ponovite proces"<br />    ." arhiviranja in izberite drug nabor"<br />    ." znakov.<br /><br />Srečno. ;)";
 $lang['L_CHOOSE_DB']="Izberi podatkovno bazo";
 $lang['L_CLEAR_DATABASE']="Pobriši podatkovno bazo";
 $lang['L_CLOSE']="Zapri";
@@ -84,49 +65,33 @@ $lang['L_CONFIGFILE']="Nastavitvena datoteka";
 $lang['L_CONFIGFILES']="Nastavitvene datoteke";
 $lang['L_CONFIGURATIONS']="Nastavitve";
 $lang['L_CONFIG_AUTODELETE']="Samodejno brisanje";
-$lang['L_CONFIG_CRONPERL']="Nastavitve za cron odložiče za Perl"
-    ." skripto";
+$lang['L_CONFIG_CRONPERL']="Nastavitve za cron odložiče za Perl"<br />    ." skripto";
 $lang['L_CONFIG_EMAIL']="E-mail obvestilo";
 $lang['L_CONFIG_FTP']="FTP prenos arhivske datoteke";
 $lang['L_CONFIG_HEADLINE']="Nastavitve";
 $lang['L_CONFIG_INTERFACE']="Vmesnik";
-$lang['L_CONFIG_LOADED']="Nastavitev \"%s\" je bila uspešno"
-    ." uvožena.";
-$lang['L_CONFIRM_CONFIGFILE_DELETE']="Ali res želite izbrisati nastavitveno"
-    ." datoteko %s?";
-$lang['L_CONFIRM_DELETE_FILE']="Ali naj bo datoteka '%s' res"
-    ." izbrisana?";
-$lang['L_CONFIRM_DELETE_TABLES']="Ali res želite izbrisati izbrane"
-    ." tabele?";
-$lang['L_CONFIRM_DROP_DATABASES']="Ali naj bodo izbrane podatkovne zbirke"
-    ." resnično izbrisane? Pozor: vsi"
-    ." podatko bodo izbrisani! Mogoče bi"
-    ." prej naredili varnostno kopijo.";
-$lang['L_CONFIRM_RECIPIENT_DELETE']="Ali naj bo prejemnik \"%s\" res"
-    ." izbrisan?";
-$lang['L_CONFIRM_TRUNCATE_DATABASES']="Ali naj bodo tabele izbranih"
-    ." podatkovnih zbirk resnično"
-    ." izbrisane?. Pozor: vsi podatko bodo"
-    ." izbrisani! Mogoče bi prej naredili"
-    ." varnostno kopijo.";
+$lang['L_CONFIG_LOADED']="Nastavitev \"%s\" je bila uspešno"<br />    ." uvožena.";
+$lang['L_CONFIRM_CONFIGFILE_DELETE']="Ali res želite izbrisati nastavitveno"<br />    ." datoteko %s?";
+$lang['L_CONFIRM_DELETE_FILE']="Ali naj bo datoteka '%s' res"<br />    ." izbrisana?";
+$lang['L_CONFIRM_DELETE_TABLES']="Ali res želite izbrisati izbrane"<br />    ." tabele?";
+$lang['L_CONFIRM_DROP_DATABASES']="Ali naj bodo izbrane podatkovne zbirke"<br />    ." resnično izbrisane? Pozor: vsi"<br />    ." podatko bodo izbrisani! Mogoče bi"<br />    ." prej naredili varnostno kopijo.";
+$lang['L_CONFIRM_RECIPIENT_DELETE']="Ali naj bo prejemnik \"%s\" res"<br />    ." izbrisan?";
+$lang['L_CONFIRM_TRUNCATE_DATABASES']="Ali naj bodo tabele izbranih"<br />    ." podatkovnih zbirk resnično"<br />    ." izbrisane?. Pozor: vsi podatko bodo"<br />    ." izbrisani! Mogoče bi prej naredili"<br />    ." varnostno kopijo.";
 $lang['L_CONFIRM_TRUNCATE_TABLES']="Ali res izpraznim izbrane tabele?";
 $lang['L_CONNECT']="poveži";
 $lang['L_CONNECTIONPARS']="Povezovalni parameter";
 $lang['L_CONNECTTOMYSQL']="Poveži na MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Nadaljevanje večdelnega obnavljanja z"
-    ." naslednjo datoteko '%s'.";
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Nadaljevanje večdelnega obnavljanja z"<br />    ." naslednjo datoteko '%s'.";
 $lang['L_CONVERTED_FILES']="Pretvorjene datoteke";
 $lang['L_CONVERTER']="Arhivski pretvornik";
 $lang['L_CONVERTING']="Pretvarjanje";
 $lang['L_CONVERT_FILE']="Datoteka za pretvarjanja";
 $lang['L_CONVERT_FILENAME']="Ime ciljne datoteke (brez končnice)";
 $lang['L_CONVERT_FILEREAD']="Preberi datoteko '%s'";
-$lang['L_CONVERT_FINISHED']="Pretvarjanje končano, '%s' je bila"
-    ." uspešno zapisana.";
+$lang['L_CONVERT_FINISHED']="Pretvarjanje končano, '%s' je bila"<br />    ." uspešno zapisana.";
 $lang['L_CONVERT_START']="Začni pretvorbo";
 $lang['L_CONVERT_TITLE']="Pretvori arhiv v MSD obliko";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Napačni parametri! Pretvorba ni"
-    ." mogoča.";
+$lang['L_CONVERT_WRONG_PARAMETERS']="Napačni parametri! Pretvorba ni"<br />    ." mogoča.";
 $lang['L_CREATE']="Ustvari";
 $lang['L_CREATED']="Kreirano";
 $lang['L_CREATEDIRS']="Ustvari mape";
@@ -144,27 +109,20 @@ $lang['L_CRON_PRINTOUT']="Prikaži izhod na monitorju.";
 $lang['L_CSVOPTIONS']="CSV možnosti";
 $lang['L_CSV_EOL']="Loči vrstice z";
 $lang['L_CSV_ERRORCREATETABLE']="Napaka med ustvarjanjem tabele '%s'!";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="Število polj se ne ujema s podatki za"
-    ." uvoz (%d namesto %d).";
+$lang['L_CSV_FIELDCOUNT_NOMATCH']="Število polj se ne ujema s podatki za"<br />    ." uvoz (%d namesto %d).";
 $lang['L_CSV_FIELDSENCLOSED']="Polja ograjena s/z";
 $lang['L_CSV_FIELDSEPERATE']="Polja ločena s/z";
 $lang['L_CSV_FIELDSESCAPE']="Polja ubežana s/z";
-$lang['L_CSV_FIELDSLINES']="%d polj je prepoznanih, skupaj %d"
-    ." vrstic";
+$lang['L_CSV_FIELDSLINES']="%d polj je prepoznanih, skupaj %d"<br />    ." vrstic";
 $lang['L_CSV_FILEOPEN']="Odpri CSV datoteko";
 $lang['L_CSV_NAMEFIRSTLINE']="Imena polj v prvi vrstici";
 $lang['L_CSV_NODATA']="Ni najdenih podatkov za uvoz!";
 $lang['L_CSV_NULL']="Zamenjaj NULL z";
 $lang['L_DATABASES_OF_USER']="Podatkovna zbirka uporabnikov";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.
-MySQL"
-    ." returns:<br/>
-%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br />MySQL"<br />    ." returns:<br/><br />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"<br />    ." successfully.";
 $lang['L_DATASIZE']="Velikost podatkov";
-$lang['L_DATASIZE_INFO']="To je velikost zapisov - ne velikost"
-    ." arhivske datoteke";
+$lang['L_DATASIZE_INFO']="To je velikost zapisov - ne velikost"<br />    ." arhivske datoteke";
 $lang['L_DAY']="Dan";
 $lang['L_DAYS']="Dnevov";
 $lang['L_DB']="Podatkovna baza";
@@ -175,12 +133,10 @@ $lang['L_DB_ADAPTER']="Vmesnik podatkovne zbirke";
 $lang['L_DB_BACKUPPARS']="Parameter arhiva podatkovne zbirke";
 $lang['L_DB_DEFAULT']="Default database";
 $lang['L_DB_HOST']="Gostitelj";
-$lang['L_DB_IN_LIST']="Podatkovna zbirka '%s' ni bila dodana"
-    ." ker že obstaja.";
+$lang['L_DB_IN_LIST']="Podatkovna zbirka '%s' ni bila dodana"<br />    ." ker že obstaja.";
 $lang['L_DB_NAME']="Ime podatkovne zbirke";
 $lang['L_DB_PASS']="Geslo";
-$lang['L_DB_SELECT_ERROR']="<br />Napala:<br />Izbira podatkovne"
-    ." zbirke <b>";
+$lang['L_DB_SELECT_ERROR']="<br />Napala:<br />Izbira podatkovne"<br />    ." zbirke <b>";
 $lang['L_DB_SELECT_ERROR2']="</b> je spodletelo!";
 $lang['L_DB_USER']="Uporabnik";
 $lang['L_DEFAULT_CHARACTER_SET_NAME']="Privzeta kodna nastavitev";
@@ -189,10 +145,8 @@ $lang['L_DEFAULT_COLLATION_NAME']="Privzeto ime zbirke";
 $lang['L_DELETE']="Izbriši";
 $lang['L_DELETE_DATABASE']="Izbriši podatkovno bazo";
 $lang['L_DELETE_FILE_ERROR']="Napaka med brisanjem datoteke \"%s\"!";
-$lang['L_DELETE_FILE_SUCCESS']="Datoteka \"%s\" je bila uspešno"
-    ." izbrisana.";
-$lang['L_DELETE_HTACCESS']="Odstrani zaščito mape (izbriši"
-    ." .htaccess)";
+$lang['L_DELETE_FILE_SUCCESS']="Datoteka \"%s\" je bila uspešno"<br />    ." izbrisana.";
+$lang['L_DELETE_HTACCESS']="Odstrani zaščito mape (izbriši"<br />    ." .htaccess)";
 $lang['L_DESCRIPTION']="Description";
 $lang['L_DESELECT_ALL']="Odznači vse";
 $lang['L_DIR']="Mapa";
@@ -206,55 +160,22 @@ $lang['L_DOSIMPLETEST']="Testiraj Perl";
 $lang['L_DOWNLOAD_FILE']="Prenesi datoteko";
 $lang['L_DO_NOW']="deluj zdaj";
 $lang['L_DUMP']="Arhiviraj";
-$lang['L_DUMP_ENDERGEBNIS']="Datoteka vsebuje <b>%s</b> tabel z"
-    ." <b></b> zapisi.<br />";
+$lang['L_DUMP_ENDERGEBNIS']="Datoteka vsebuje <b>%s</b> tabel z"<br />    ." <b></b> zapisi.<br />";
 $lang['L_DUMP_FILENAME']="Arhivska datoteka";
 $lang['L_DUMP_HEADLINE']="Ustvari arhiv...";
-$lang['L_DUMP_NOTABLES']="Ni najdenih tabel v podatkovni zbirki"
-    ." '%s'";
-$lang['L_DUMP_OF_DB_FINISHED']="Arhiviranje podatkovne zbirke '%s' je"
-    ." končano";
+$lang['L_DUMP_NOTABLES']="Ni najdenih tabel v podatkovni zbirki"<br />    ." '%s'";
+$lang['L_DUMP_OF_DB_FINISHED']="Arhiviranje podatkovne zbirke '%s' je"<br />    ." končano";
 $lang['L_DURATION']="Trajanje";
 $lang['L_EDIT']="uredi";
 $lang['L_EHRESTORE_CONTINUE']="nadaljuj in zapiši napake";
 $lang['L_EHRESTORE_STOP']="ustavi";
 $lang['L_EMAIL']="E-Mail";
-$lang['L_EMAILBODY_ATTACH']="Priponka vsebuje arhiv vaše MySQL"
-    ." podatkovne zbirke.<br /> Arhiv"
-    ." podatkovne zbirke '%s' <br /><br"
-    ." />Kreirana je bila datoteka:<br /><br"
-    ." />%s <br /><br />Lepe pozdrave<br"
-    ." /><br /> MySQLDumper<br />";
-$lang['L_EMAILBODY_FOOTER']="<br /><br />Lepe pozdrave<br /><br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_ATTACH']="Večdelni arhiv je bil kreiran.<br"
-    ." />Arhivske datoteke so priložene v"
-    ." ločenih emailih.<br />Arhiv"
-    ." Podatkovne zbirke '%s' <br /><br"
-    ." />Skreirane so bile datoteke:<br /><br"
-    ." />%s <br /><br />Lepe pozdrave<br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_NOATTACH']="Večdelni arhiv je bil ustvarjen.<br"
-    ." />Arhivske datoteke niso priložene"
-    ." temu email-u!<br />Arhiv podatkovne"
-    ." zbirke '%s' <br /><br />Sledeče"
-    ." datoteke so bile ustvarjene:<br /><br"
-    ." />%s <br /><br />Lep pozdrav<br /><br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_NOATTACH']="Datoteke niso bile priložene temu"
-    ." email-u!<br />Arhiv podatkovne zbirke"
-    ." '%s' <br /><br />Sledeče datoteke so"
-    ." bile ustvarjene:<br /><br />%s <br"
-    ." /><br /> Lep pozdrav<br /><br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_TOOBIG']="Arhivska datoteka je presegla"
-    ." največjo velikost od %s in ni bila"
-    ." pripete temu email-u.<br />Arhiv"
-    ." podakovne zbirke '%s' <br /><br"
-    ." />Sledeča datoteka je bila"
-    ." ustvarjena:<br /><br />%s <br /><br"
-    ." />Lep pozdrav<br /><br"
-    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_ATTACH']="Priponka vsebuje arhiv vaše MySQL"<br />    ." podatkovne zbirke.<br /> Arhiv"<br />    ." podatkovne zbirke '%s' <br /><br"<br />    ." />Kreirana je bila datoteka:<br /><br"<br />    ." />%s <br /><br />Lepe pozdrave<br"<br />    ." /><br /> MySQLDumper<br />";
+$lang['L_EMAILBODY_FOOTER']="<br /><br />Lepe pozdrave<br /><br"<br />    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_MP_ATTACH']="Večdelni arhiv je bil kreiran.<br"<br />    ." />Arhivske datoteke so priložene v"<br />    ." ločenih emailih.<br />Arhiv"<br />    ." Podatkovne zbirke '%s' <br /><br"<br />    ." />Skreirane so bile datoteke:<br /><br"<br />    ." />%s <br /><br />Lepe pozdrave<br"<br />    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_MP_NOATTACH']="Večdelni arhiv je bil ustvarjen.<br"<br />    ." />Arhivske datoteke niso priložene"<br />    ." temu email-u!<br />Arhiv podatkovne"<br />    ." zbirke '%s' <br /><br />Sledeče"<br />    ." datoteke so bile ustvarjene:<br /><br"<br />    ." />%s <br /><br />Lep pozdrav<br /><br"<br />    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_NOATTACH']="Datoteke niso bile priložene temu"<br />    ." email-u!<br />Arhiv podatkovne zbirke"<br />    ." '%s' <br /><br />Sledeče datoteke so"<br />    ." bile ustvarjene:<br /><br />%s <br"<br />    ." /><br /> Lep pozdrav<br /><br"<br />    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_TOOBIG']="Arhivska datoteka je presegla"<br />    ." največjo velikost od %s in ni bila"<br />    ." pripete temu email-u.<br />Arhiv"<br />    ." podakovne zbirke '%s' <br /><br"<br />    ." />Sledeča datoteka je bila"<br />    ." ustvarjena:<br /><br />%s <br /><br"<br />    ." />Lep pozdrav<br /><br"<br />    ." />MySQLDumper<br />";
 $lang['L_EMAIL_ADDRESS']="E-Mail naslov";
 $lang['L_EMAIL_CC']="CC-Prejemnik";
 $lang['L_EMAIL_MAXSIZE']="Največja velikost priponke";
@@ -270,22 +191,15 @@ $lang['L_EMPTY_DB_BEFORE_RESTORE']="Izbriši tabele pred obnavljanjem";
 $lang['L_ENCODING']="Kodiranje";
 $lang['L_ENCRYPTION_TYPE']="Tip enkripcije";
 $lang['L_ENGINE']="Motor";
-$lang['L_ENTER_DB_INFO']="Najprej kliknite na gumb \"Poveži na"
-    ." MySQL\". Samo, če ne bo zaznana"
-    ." nobena  podatkovna zbirka, morate"
-    ." tukaj navesti ime podatkovne zbirke.";
+$lang['L_ENTER_DB_INFO']="Najprej kliknite na gumb \"Poveži na"<br />    ." MySQL\". Samo, če ne bo zaznana"<br />    ." nobena  podatkovna zbirka, morate"<br />    ." tukaj navesti ime podatkovne zbirke.";
 $lang['L_ENTRY']="Vstop";
 $lang['L_ERROR']="Napaka";
 $lang['L_ERRORHANDLING_RESTORE']="Napaka upravljanja med obnavljanjem";
-$lang['L_ERROR_CONFIGFILE_NAME']="Ime datoteke \"%s\" vsebuje neveljavne"
-    ." znake.";
-$lang['L_ERROR_DELETING_CONFIGFILE']="Napaka: nastavitvene datoteke %s ni"
-    ." bilo mogoče izbrisati!";
-$lang['L_ERROR_LOADING_CONFIGFILE']="Nastavitvene datoteke \"%s\" ni bilo"
-    ." mogoče naložiti.";
+$lang['L_ERROR_CONFIGFILE_NAME']="Ime datoteke \"%s\" vsebuje neveljavne"<br />    ." znake.";
+$lang['L_ERROR_DELETING_CONFIGFILE']="Napaka: nastavitvene datoteke %s ni"<br />    ." bilo mogoče izbrisati!";
+$lang['L_ERROR_LOADING_CONFIGFILE']="Nastavitvene datoteke \"%s\" ni bilo"<br />    ." mogoče naložiti.";
 $lang['L_ERROR_LOG']="Dnevnik napak";
-$lang['L_ERROR_MULTIPART_RESTORE']="Večdelno obnavljanje: ni mogoče"
-    ." najti naslednje datoteke '%s'!";
+$lang['L_ERROR_MULTIPART_RESTORE']="Večdelno obnavljanje: ni mogoče"<br />    ." najti naslednje datoteke '%s'!";
 $lang['L_ESTIMATED_END']="Predviden konec";
 $lang['L_EXCEL2003']="Excel od 2003";
 $lang['L_EXISTS']="Obstaja";
@@ -295,21 +209,17 @@ $lang['L_EXPORTLINES']="<strong>%s</strong> vrstic izvoženih";
 $lang['L_EXPORTOPTIONS']="Možnosti izvoza";
 $lang['L_EXTENDEDPARS']="Razširjen parameter";
 $lang['L_FADE_IN_OUT']="Prikaži vključeno/izključeno";
-$lang['L_FATAL_ERROR_DUMP']="Kritična napaka: stavek CREATE v"
-    ." tabeli '%s' in podatkovni zbirki '%s'"
-    ." ni mogoče prebrati!";
+$lang['L_FATAL_ERROR_DUMP']="Kritična napaka: stavek CREATE v"<br />    ." tabeli '%s' in podatkovni zbirki '%s'"<br />    ." ni mogoče prebrati!";
 $lang['L_FIELDS']="Polja";
 $lang['L_FIELDS_OF_TABLE']="Polj tabele";
 $lang['L_FILE']="Datoteka";
 $lang['L_FILES']="Datoteke";
 $lang['L_FILESIZE']="Velikost datoteke";
 $lang['L_FILE_MANAGE']="Upravljanje datotek";
-$lang['L_FILE_OPEN_ERROR']="Napala: datoteke ni bilo mogoče"
-    ." odpreti.";
+$lang['L_FILE_OPEN_ERROR']="Napala: datoteke ni bilo mogoče"<br />    ." odpreti.";
 $lang['L_FILE_SAVED_SUCCESSFULLY']="Datoteka je bila uspešno shranjena";
 $lang['L_FILE_SAVED_UNSUCCESSFULLY']="Datoteka ni bila uspešno shranjena";
-$lang['L_FILE_UPLOAD_SUCCESSFULL']="Datoteka '%s' je bila uspešno"
-    ." naložena.";
+$lang['L_FILE_UPLOAD_SUCCESSFULL']="Datoteka '%s' je bila uspešno"<br />    ." naložena.";
 $lang['L_FILTER_BY']="Sortiranje po";
 $lang['L_FM_ALERTRESTORE1']="Ali naj bo podatkovna zbirka";
 $lang['L_FM_ALERTRESTORE2']="obnovljena z zapisi iz datoteke";
@@ -318,16 +228,11 @@ $lang['L_FM_ALL_BU']="Vsi arhivi";
 $lang['L_FM_ANZ_BU']="Arhivi";
 $lang['L_FM_ASKDELETE1']="Ali naj bo(do) datoteka(e)";
 $lang['L_FM_ASKDELETE2']="res izbrisana(e)?";
-$lang['L_FM_ASKDELETE3']="Ali naj bo samodejno brisanje izvedeno"
-    ." z nastavljenemi pravili?";
-$lang['L_FM_ASKDELETE4']="Ali želite izbrisati vse arhivske"
-    ." datoteke?";
-$lang['L_FM_ASKDELETE5']="Ali želite izbrisati vse arhivske"
-    ." datoteke z";
+$lang['L_FM_ASKDELETE3']="Ali naj bo samodejno brisanje izvedeno"<br />    ." z nastavljenemi pravili?";
+$lang['L_FM_ASKDELETE4']="Ali želite izbrisati vse arhivske"<br />    ." datoteke?";
+$lang['L_FM_ASKDELETE5']="Ali želite izbrisati vse arhivske"<br />    ." datoteke z";
 $lang['L_FM_ASKDELETE5_2']="*?";
-$lang['L_FM_AUTODEL1']="Samodejno brisanje: sledeče datoteke"
-    ." so bile izbrisane zaradi nastavitve"
-    ." največjega števila datotek:";
+$lang['L_FM_AUTODEL1']="Samodejno brisanje: sledeče datoteke"<br />    ." so bile izbrisane zaradi nastavitve"<br />    ." največjega števila datotek:";
 $lang['L_FM_CHOOSE_ENCODING']="Izberite kodiranje arhivske datoteke";
 $lang['L_FM_COMMENT']="Vnesite komentar";
 $lang['L_FM_DELETE']="Izbriši";
@@ -349,8 +254,7 @@ $lang['L_FM_NOFILE']="Niste izbrali datoteke!";
 $lang['L_FM_NOFILESFOUND']="Datoteka ni bila najdena.";
 $lang['L_FM_RECORDS']="Zapisov";
 $lang['L_FM_RESTORE']="Obnovi";
-$lang['L_FM_RESTORE_HEADER']="Obnova podatkovne zbirke"
-    ." <strong>%s</strong>";
+$lang['L_FM_RESTORE_HEADER']="Obnova podatkovne zbirke"<br />    ." <strong>%s</strong>";
 $lang['L_FM_SELECTTABLES']="Izberi tabele";
 $lang['L_FM_STARTDUMP']="Začni novo arhiviranje";
 $lang['L_FM_TABLES']="Tabele";
@@ -358,44 +262,33 @@ $lang['L_FM_TOTALSIZE']="Skupna velikost";
 $lang['L_FM_UPLOADFAILED']="Nalaganje datoteke je spodletelo!";
 $lang['L_FM_UPLOADFILEEXISTS']="Datoteka z istim imeno že obstaja!";
 $lang['L_FM_UPLOADFILEREQUEST']="prosim izberite datoteko.";
-$lang['L_FM_UPLOADMOVEERROR']="Izbrane datoteke ni bilo mogoče"
-    ." premakniti v mapo za nalaganje.";
+$lang['L_FM_UPLOADMOVEERROR']="Izbrane datoteke ni bilo mogoče"<br />    ." premakniti v mapo za nalaganje.";
 $lang['L_FM_UPLOADNOTALLOWED1']="Datoteka tega tipa ni podprta.";
-$lang['L_FM_UPLOADNOTALLOWED2']="Veljavne datoteke so: *.gz in *.sql"
-    ." datoteke";
+$lang['L_FM_UPLOADNOTALLOWED2']="Veljavne datoteke so: *.gz in *.sql"<br />    ." datoteke";
 $lang['L_FOUND_DB']="najdena PZ";
 $lang['L_FROMFILE']="iz datoteke";
 $lang['L_FROMTEXTBOX']="iz tekstovnega okna";
 $lang['L_FTP']="FTP";
 $lang['L_FTP_ADD_CONNECTION']="Dodaj povezavo";
 $lang['L_FTP_CHOOSE_MODE']="Način FTP prenosa";
-$lang['L_FTP_CONFIRM_DELETE']="Ali naj bo ta FTP povezava res"
-    ." izbrisana?";
+$lang['L_FTP_CONFIRM_DELETE']="Ali naj bo ta FTP povezava res"<br />    ." izbrisana?";
 $lang['L_FTP_CONNECTION']="FTP-Povezava";
 $lang['L_FTP_CONNECTION_CLOSED']="FTP-Povezava zaprta";
 $lang['L_FTP_CONNECTION_DELETE']="Izbriši povezavo";
-$lang['L_FTP_CONNECTION_ERROR']="Povezava na strežnik '%s' z uporabo"
-    ." vrat %s ni bila vzpostavljena";
-$lang['L_FTP_CONNECTION_SUCCESS']="Povezava na strežnik '%s' z uporabo"
-    ." vrat %s je bila uspešno vzpostavljena";
+$lang['L_FTP_CONNECTION_ERROR']="Povezava na strežnik '%s' z uporabo"<br />    ." vrat %s ni bila vzpostavljena";
+$lang['L_FTP_CONNECTION_SUCCESS']="Povezava na strežnik '%s' z uporabo"<br />    ." vrat %s je bila uspešno vzpostavljena";
 $lang['L_FTP_DIR']="Naloži mapo";
 $lang['L_FTP_FILE_TRANSFER_ERROR']="Prenos datoteke '%s' je bil nepopoln";
-$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Datoteka '%s' je bila prenesena"
-    ." uspešno";
-$lang['L_FTP_LOGIN_ERROR']="Prijava kot uporabnik '%s' je bila"
-    ." zavrnjena";
-$lang['L_FTP_LOGIN_SUCCESS']="Prijava kot uporabnik '%s' je bila"
-    ." uspešna";
+$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Datoteka '%s' je bila prenesena"<br />    ." uspešno";
+$lang['L_FTP_LOGIN_ERROR']="Prijava kot uporabnik '%s' je bila"<br />    ." zavrnjena";
+$lang['L_FTP_LOGIN_SUCCESS']="Prijava kot uporabnik '%s' je bila"<br />    ." uspešna";
 $lang['L_FTP_OK']="Povezava uspešna.";
 $lang['L_FTP_PASS']="Geslo";
 $lang['L_FTP_PASSIVE']="uporabi pasiven način";
-$lang['L_FTP_PASV_ERROR']="Preklop na pasiven način ni bil"
-    ." uspešen";
-$lang['L_FTP_PASV_SUCCESS']="Preklop na pasiven način je bil"
-    ." uspešen";
+$lang['L_FTP_PASV_ERROR']="Preklop na pasiven način ni bil"<br />    ." uspešen";
+$lang['L_FTP_PASV_SUCCESS']="Preklop na pasiven način je bil"<br />    ." uspešen";
 $lang['L_FTP_PORT']="Vrata";
-$lang['L_FTP_SEND_TO']="do <strong>%s</strong><br /> v"
-    ." <strong>%s</strong>";
+$lang['L_FTP_SEND_TO']="do <strong>%s</strong><br /> v"<br />    ." <strong>%s</strong>";
 $lang['L_FTP_SERVER']="Strežnik";
 $lang['L_FTP_SSL']="Varna SSL FTP povezava";
 $lang['L_FTP_START']="Začnite FTP prenos";
@@ -411,42 +304,27 @@ $lang['L_HOUR']="Ura";
 $lang['L_HOURS']="Ur";
 $lang['L_HTACC_ACTIVATE_REWRITE_ENGINE']="Aktiviraj 'rewrite'";
 $lang['L_HTACC_ADD_HANDLER']="Dodaj uporavljalca";
-$lang['L_HTACC_CONFIRM_DELETE']="Ali naj se zaščita mape"
-    ." zapiše?
-Should the directory"
-    ." protection be written now ?";
+$lang['L_HTACC_CONFIRM_DELETE']="Ali naj se zaščita mape"<br />    ." zapiše?<br />Should the directory"<br />    ." protection be written now ?";
 $lang['L_HTACC_CONTENT']="Vsebina datoteke";
 $lang['L_HTACC_CREATE']="Ustvari zaščito mape";
 $lang['L_HTACC_CREATED']="Zaščita mape je bila narejena.";
-$lang['L_HTACC_CREATE_ERROR']="Prišlo je do napake med ustvarjanjem"
-    ." zaščite mape! <br /> Ustvarite 2"
-    ." datoteki s sledečo vsebino";
-$lang['L_HTACC_CRYPT']="Kriptiraj 8 znakov maksimalno (Linux"
-    ." in Unix-Sistemi)";
+$lang['L_HTACC_CREATE_ERROR']="Prišlo je do napake med ustvarjanjem"<br />    ." zaščite mape! <br /> Ustvarite 2"<br />    ." datoteki s sledečo vsebino";
+$lang['L_HTACC_CRYPT']="Kriptiraj 8 znakov maksimalno (Linux"<br />    ." in Unix-Sistemi)";
 $lang['L_HTACC_DENY_ALLOW']="Zavrni / Dovoli";
 $lang['L_HTACC_DIR_LISTING']="Seznam map";
 $lang['L_HTACC_EDIT']="Uredi .htaccess";
 $lang['L_HTACC_ERROR_DOC']="Napaka dokumenta";
 $lang['L_HTACC_EXAMPLES']="Več primerov in dokumentacije";
-$lang['L_HTACC_EXISTS']="Zaščita mape že obstaja. Če boste"
-    ." kreirali novo, bo stara prepisana!
-It"
-    ." already exists an directory"
-    ." protection. If you create a new one,"
-    ." the older one will be overwritten !";
+$lang['L_HTACC_EXISTS']="Zaščita mape že obstaja. Če boste"<br />    ." kreirali novo, bo stara prepisana!<br />It"<br />    ." already exists an directory"<br />    ." protection. If you create a new one,"<br />    ." the older one will be overwritten !";
 $lang['L_HTACC_MAKE_EXECUTABLE']="Ustvari izvedljivo";
 $lang['L_HTACC_MD5']="MD5 (Linux and Unix-Sistemi)";
-$lang['L_HTACC_NO_ENCRYPTION']="navadno besedilo, brez kodiranja"
-    ." (Windows)";
+$lang['L_HTACC_NO_ENCRYPTION']="navadno besedilo, brez kodiranja"<br />    ." (Windows)";
 $lang['L_HTACC_NO_USERNAME']="Vnesti morate ime!";
 $lang['L_HTACC_PROPOSED']="Nujno priporočeno";
 $lang['L_HTACC_REDIRECT']="Prevezava";
 $lang['L_HTACC_SCRIPT_EXEC']="Izvedi skripto";
 $lang['L_HTACC_SHA1']="SHA1 (vsi Sistemi)";
-$lang['L_HTACC_WARNING']="Pozor! .htaccess direktno vpliva na"
-    ." brskalnikovo obnašanje. <br />Z"
-    ." napačno vsebino so te strani lahko"
-    ." nedostopne.";
+$lang['L_HTACC_WARNING']="Pozor! .htaccess direktno vpliva na"<br />    ." brskalnikovo obnašanje. <br />Z"<br />    ." napačno vsebino so te strani lahko"<br />    ." nedostopne.";
 $lang['L_IMPORT']="Uvozi";
 $lang['L_IMPORTIEREN']="Uvozi";
 $lang['L_IMPORTOPTIONS']="Uvozi možnosti";
@@ -458,17 +336,7 @@ $lang['L_INDEX_SIZE']="Size of index";
 $lang['L_INFO_ACTDB']="Izbrana podatkovna baza";
 $lang['L_INFO_DATABASES']="Dostopne podatkovne baze";
 $lang['L_INFO_DBEMPTY']="Podatkovna baza je prazna!";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="Na tem strežniku je PHP ukaz"
-    ." fsockopen() onemogočen s"
-    ." strežniškimi nastavitvami. Zaradi"
-    ." tega avtomatsko prenašanje jezikovnih"
-    ." paketov ni mogoče. Če hočete to"
-    ." zaobiti, lahko pakete preneste ročno,"
-    ." jih razširite lokano in jih preneste"
-    ." v mapo \"language\" v vaši"
-    ." inštalacij MySQLDumper-ja. Kasneje bo"
-    ." nov jezikovni paket mogoč na tej"
-    ." strani.";
+$lang['L_INFO_FSOCKOPEN_DISABLED']="Na tem strežniku je PHP ukaz"<br />    ." fsockopen() onemogočen s"<br />    ." strežniškimi nastavitvami. Zaradi"<br />    ." tega avtomatsko prenašanje jezikovnih"<br />    ." paketov ni mogoče. Če hočete to"<br />    ." zaobiti, lahko pakete preneste ročno,"<br />    ." jih razširite lokano in jih preneste"<br />    ." v mapo \"language\" v vaši"<br />    ." inštalacij MySQLDumper-ja. Kasneje bo"<br />    ." nov jezikovni paket mogoč na tej"<br />    ." strani.";
 $lang['L_INFO_LASTUPDATE']="Zadnja posodobitev";
 $lang['L_INFO_LOCATION']="Vaša lokacija je";
 $lang['L_INFO_NODB']="podatkovna baza ne obstaja.";
@@ -498,31 +366,21 @@ $lang['L_LOGFILES']="Dnevniške datoteke";
 $lang['L_LOGGED_IN']="Prijavljeni";
 $lang['L_LOGIN']="Prijava";
 $lang['L_LOGIN_AUTOLOGIN']="Samodejna prijava";
-$lang['L_LOGIN_INVALID_USER']="Neznana kombinacija uporabniškega"
-    ." imena in gesla.";
+$lang['L_LOGIN_INVALID_USER']="Neznana kombinacija uporabniškega"<br />    ." imena in gesla.";
 $lang['L_LOGOUT']="Odjava";
-$lang['L_LOG_CREATED']="Dnevniška datoteka je bila"
-    ." ustvarjena.";
+$lang['L_LOG_CREATED']="Dnevniška datoteka je bila"<br />    ." ustvarjena.";
 $lang['L_LOG_DELETE']="odstrani dnevnik";
 $lang['L_LOG_MAXSIZE']="Maximum size of log files";
-$lang['L_LOG_NOT_READABLE']="Dnevniška datoteka '%s' ne obstaja"
-    ." ali pa je ni možno prebrati.";
+$lang['L_LOG_NOT_READABLE']="Dnevniška datoteka '%s' ne obstaja"<br />    ." ali pa je ni možno prebrati.";
 $lang['L_MAILERROR']="Pošiljanje e-maila ni uspelo!";
 $lang['L_MAILPROGRAM']="Mail program";
 $lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"<br />    ." one character needs, when it is saved"<br />    ." to disk.";
 $lang['L_MAXSIZE']="Največja velikost";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Za vsako podatkovno bazo";
 $lang['L_MAX_EXECUTION_TIME']="Maksimalni čas izvrševanja";
 $lang['L_MAX_UPLOAD_SIZE']="Največje velikost datoteke";
-$lang['L_MAX_UPLOAD_SIZE_INFO']="Če je vaša arhivska datoteka večja"
-    ." kot zgoraj omenjena omejitev, morate"
-    ." naložiti datoteko preko FTP-ja v mapo"
-    ." \"work/backup\". Po tem jo lahko"
-    ." izberete in začnete obnovitveni"
-    ." postopek.";
+$lang['L_MAX_UPLOAD_SIZE_INFO']="Če je vaša arhivska datoteka večja"<br />    ." kot zgoraj omenjena omejitev, morate"<br />    ." naložiti datoteko preko FTP-ja v mapo"<br />    ." \"work/backup\". Po tem jo lahko"<br />    ." izberete in začnete obnovitveni"<br />    ." postopek.";
 $lang['L_MEMORY']="Spomin";
 $lang['L_MENU_HIDE']="Skrij meni";
 $lang['L_MENU_SHOW']="Prikaži meni";
@@ -538,42 +396,23 @@ $lang['L_MSD_INFO']="MySQLDumper informacije";
 $lang['L_MSD_MODE']="MySQLDumper-način";
 $lang['L_MSD_VERSION']="MySQLDumper verzija";
 $lang['L_MULTIDUMP']="Mnogokratno arhiviranje";
-$lang['L_MULTIDUMP_FINISHED']="Arhiv podatkovne zbirke <b>%d</b>"
-    ." narejen";
+$lang['L_MULTIDUMP_FINISHED']="Arhiv podatkovne zbirke <b>%d</b>"<br />    ." narejen";
 $lang['L_MULTIPART_ACTUAL_PART']="Dejanski del";
 $lang['L_MULTIPART_SIZE']="maksimalna velikost datoteke";
 $lang['L_MULTI_PART']="Večdelno arhiviranje";
 $lang['L_MYSQLVARS']="MySQL spremenljivke";
 $lang['L_MYSQL_CLIENT_VERSION']="MySQL odjemalec";
-$lang['L_MYSQL_CONNECTION_ENCODING']="Standardno kodiranje MySQL"
-    ." strežnika
-Standard encoding of"
-    ." MySQL-Server";
+$lang['L_MYSQL_CONNECTION_ENCODING']="Standardno kodiranje MySQL"<br />    ." strežnika<br />Standard encoding of"<br />    ." MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-podatki";
 $lang['L_MYSQL_ROUTINE']="Routine";
 $lang['L_MYSQL_ROUTINES']="Routinen";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"<br />    ." in which one can save data (records)."<br />    ." Each record represents a row in the"<br />    ." table.";
 $lang['L_MYSQL_VERSION']="MySQL različica";
-$lang['L_MYSQL_VERSION_TOO_OLD']="Žal nam je: nameščena MySQL"
-    ." različica %s je prestara in ne more"
-    ." delovati skupaj s to verzijo"
-    ." MySQLDumper-ja. Prosimo nadgradite"
-    ." MySQL različico vsaj na verzijo %s."
-    ." Kot alternativo lahko namestite"
-    ." MySQLDumper različico 1.24, katera"
-    ." lahko deluje skupaj s starejšimi"
-    ." MySQL različicami. Ampak izgubili"
-    ." boste nekaj novih MySQLDumper"
-    ." funkcionalnosti.";
+$lang['L_MYSQL_VERSION_TOO_OLD']="Žal nam je: nameščena MySQL"<br />    ." različica %s je prestara in ne more"<br />    ." delovati skupaj s to verzijo"<br />    ." MySQLDumper-ja. Prosimo nadgradite"<br />    ." MySQL različico vsaj na verzijo %s."<br />    ." Kot alternativo lahko namestite"<br />    ." MySQLDumper različico 1.24, katera"<br />    ." lahko deluje skupaj s starejšimi"<br />    ." MySQL različicami. Ampak izgubili"<br />    ." boste nekaj novih MySQLDumper"<br />    ." funkcionalnosti.";
 $lang['L_MYSQL_VIEW']="View";
 $lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"<br />    ." one ore more tables but don't contain"<br />    ." own records.";
 $lang['L_NAME']="Ime";
 $lang['L_NEW']="nov";
 $lang['L_NEWTABLE']="Nova tabela";
@@ -581,8 +420,7 @@ $lang['L_NEXT_AUTO_INCREMENT']="Naslednji samodejni indeks";
 $lang['L_NEXT_AUTO_INCREMENT_SHORT']="št. samodejnega indeks";
 $lang['L_NO']="ne";
 $lang['L_NOFTPPOSSIBLE']="Nimate FTP funkcij!";
-$lang['L_NOGZPOSSIBLE']="Ker Zlib ni nameščen, ne morete"
-    ." uporabljati funkcij GZip!";
+$lang['L_NOGZPOSSIBLE']="Ker Zlib ni nameščen, ne morete"<br />    ." uporabljati funkcij GZip!";
 $lang['L_NONE']="brez";
 $lang['L_NOREVERSE']="Najstarejšz vnos na začetel";
 $lang['L_NOTAVAIL']="<em>ni na voljo</em>";
@@ -591,40 +429,21 @@ $lang['L_NOTICE']="Obvestilo";
 $lang['L_NOTICES']="Obvestila";
 $lang['L_NOT_ACTIVATED']="ni aktivirano";
 $lang['L_NOT_SUPPORTED']="Ta arhiv ne podpira te funkcije.";
-$lang['L_NO_DB_FOUND']="Nisem mogel najti nobenih podatkovnih"
-    ." zbirk samodejno! Prosimo razkrijte"
-    ." povezovalne parametre in vnesite ime"
-    ." podatkovne zbirke ročno.";
-$lang['L_NO_DB_FOUND_INFO']="Povezava na podatkovno zbirko je bila"
-    ." uspešno vzpostavljena.<br /> Vaše"
-    ." uporabniško ime je veljavno in je"
-    ." bilo sprejeto iz strani"
-    ." MySQL-strežnika.<br /> Ampak"
-    ." MySQLDumper ni mogel najti nobene"
-    ." podatkovne zbirke.<br /> Samodejno"
-    ." zaznavanje je blokirano na nekaterih"
-    ." strežnikih.<br /> Ročno morate"
-    ." vnesti ime vaše podatkovne zbirke"
-    ." potem ko je namestitev končana."
-    ." Kliknite na \"nastavitve\""
-    ." \"Nastavitveni parameter - prikaz\" in"
-    ." tam vnesite ime podatkovne zbirke.";
+$lang['L_NO_DB_FOUND']="Nisem mogel najti nobenih podatkovnih"<br />    ." zbirk samodejno! Prosimo razkrijte"<br />    ." povezovalne parametre in vnesite ime"<br />    ." podatkovne zbirke ročno.";
+$lang['L_NO_DB_FOUND_INFO']="Povezava na podatkovno zbirko je bila"<br />    ." uspešno vzpostavljena.<br /> Vaše"<br />    ." uporabniško ime je veljavno in je"<br />    ." bilo sprejeto iz strani"<br />    ." MySQL-strežnika.<br /> Ampak"<br />    ." MySQLDumper ni mogel najti nobene"<br />    ." podatkovne zbirke.<br /> Samodejno"<br />    ." zaznavanje je blokirano na nekaterih"<br />    ." strežnikih.<br /> Ročno morate"<br />    ." vnesti ime vaše podatkovne zbirke"<br />    ." potem ko je namestitev končana."<br />    ." Kliknite na \"nastavitve\""<br />    ." \"Nastavitveni parameter - prikaz\" in"<br />    ." tam vnesite ime podatkovne zbirke.";
 $lang['L_NO_DB_SELECTED']="Podatkovna zbirka ni izbrana.";
-$lang['L_NO_ENTRIES']="Tabela \"<b>%s</b>\" je prazna in nima"
-    ." nobenih zapisov.";
+$lang['L_NO_ENTRIES']="Tabela \"<b>%s</b>\" je prazna in nima"<br />    ." nobenih zapisov.";
 $lang['L_NO_MSD_BACKUPFILE']="Arhivi drugih skript";
 $lang['L_NO_NAME_GIVEN']="Niste vnesli imena.";
 $lang['L_NR_OF_RECORDS']="Number of records";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabel je bilo optimizirano.";
-$lang['L_NUMBER_OF_FILES_FORM']="Izbriši po številu datotek na"
-    ." podatkovno zbirko";
+$lang['L_NUMBER_OF_FILES_FORM']="Izbriši po številu datotek na"<br />    ." podatkovno zbirko";
 $lang['L_OF']="od";
 $lang['L_OK']="V redu";
 $lang['L_OPTIMIZE']="Optimiziraj";
 $lang['L_OPTIMIZE_TABLES']="Optimiziraj tabele pred arhiviranjem";
 $lang['L_OPTIMIZE_TABLE_ERR']="Napaka pri optimizaciji tabele '%s'.";
-$lang['L_OPTIMIZE_TABLE_SUCC']="Optimizacija tabele '%s' je bila"
-    ." uspešna.";
+$lang['L_OPTIMIZE_TABLE_SUCC']="Optimizacija tabele '%s' je bila"<br />    ." uspešna.";
 $lang['L_OS']="Operacijski sistem";
 $lang['L_OVERHEAD']="Privzdignjen";
 $lang['L_PAGE']="Stran";
@@ -634,10 +453,8 @@ $lang['L_PASSWORD']="Geslo";
 $lang['L_PASSWORDS_UNEQUAL']="Gesla niso enaka ali prazno!";
 $lang['L_PASSWORD_REPEAT']="Geslo (ponovi)";
 $lang['L_PASSWORD_STRENGTH']="Moč gesla";
-$lang['L_PERLOUTPUT1']="Vnos v crondump.pl za"
-    ." absolute_path_of_con";
-$lang['L_PERLOUTPUT2']="URL za brskalnik ali za zunanji Cron"
-    ." job";
+$lang['L_PERLOUTPUT1']="Vnos v crondump.pl za"<br />    ." absolute_path_of_con";
+$lang['L_PERLOUTPUT2']="URL za brskalnik ali za zunanji Cron"<br />    ." job";
 $lang['L_PERLOUTPUT3']="Ukazna vrstica v lupini ali za Crontab";
 $lang['L_PERL_COMPLETELOG']="Perl-komplet-dnevnik";
 $lang['L_PERL_LOG']="Perl-dnevnik";
@@ -646,13 +463,7 @@ $lang['L_PHPMAIL']="PHP-funkcija mail()";
 $lang['L_PHP_EXTENSIONS']="PHP razširitve";
 $lang['L_PHP_LOG']="PHP-Log";
 $lang['L_PHP_VERSION']="PHP različica";
-$lang['L_PHP_VERSION_TOO_OLD']="Žal nam je: nameščena PHP"
-    ." različica je prestara. MySQLDumper"
-    ." potrebuje PHP različico %s ali več."
-    ." Strežnik ima PHP različico %s,"
-    ." katera je prestara. Pred namestitvijo"
-    ." in uporabo MySQLDumper-ja morate"
-    ." nadgraditi vaš strežnik.";
+$lang['L_PHP_VERSION_TOO_OLD']="Žal nam je: nameščena PHP"<br />    ." različica je prestara. MySQLDumper"<br />    ." potrebuje PHP različico %s ali več."<br />    ." Strežnik ima PHP različico %s,"<br />    ." katera je prestara. Pred namestitvijo"<br />    ." in uporabo MySQLDumper-ja morate"<br />    ." nadgraditi vaš strežnik.";
 $lang['L_POP3_PORT']="POP3-port";
 $lang['L_POP3_SERVER']="POP3-Strežnik";
 $lang['L_PORT']="Vrata";
@@ -667,13 +478,7 @@ $lang['L_POSITION_TC']="zgoraj sredina";
 $lang['L_POSITION_TL']="zgoraj levo";
 $lang['L_POSITION_TR']="zgoraj desno";
 $lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character"
-    ." set.
-
-_cs = case sensitiv
-_ci = case"
-    ." insensitive";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"<br />    ." can choose for this character"<br />    ." set.<br /><br />_cs = case sensitiv<br />_ci = case"<br />    ." insensitive";
 $lang['L_PREFIX']="Predpona";
 $lang['L_PRIMARYKEYS_CHANGED']="Primarni ključi spremenjeni";
 $lang['L_PRIMARYKEYS_CHANGINGERROR']="Napaka spreminjanja primarnih ključev";
@@ -700,17 +505,7 @@ $lang['L_RECORDS_OF_TABLE']="Zapisov v tabeli";
 $lang['L_RECORDS_PER_PAGECALL']="Zapisov na klicano stran";
 $lang['L_REFRESHTIME']="Čas osveževanja";
 $lang['L_REFRESHTIME_PROCESSLIST']="Čas za osveževanje seznama procesov";
-$lang['L_REGISTRATION_DESCRIPTION']="Prosimo vnesite administratorski"
-    ." račun sedaj. S tem uporabniškim"
-    ." računom se boste prijavili v"
-    ." MySQLDumper. Pozor: te podatke si"
-    ." dobro zapomnite ali zapišite."
-    ." Uporabniško ime in geslo si lahko"
-    ." prosto izberete. Izberite si"
-    ." najvarnejšo kombinacijo"
-    ." uporabniškega imena in gesla za"
-    ." zaščito MySQLDumper-ja pred"
-    ." nepooblaščenim dostopom!";
+$lang['L_REGISTRATION_DESCRIPTION']="Prosimo vnesite administratorski"<br />    ." račun sedaj. S tem uporabniškim"<br />    ." računom se boste prijavili v"<br />    ." MySQLDumper. Pozor: te podatke si"<br />    ." dobro zapomnite ali zapišite."<br />    ." Uporabniško ime in geslo si lahko"<br />    ." prosto izberete. Izberite si"<br />    ." najvarnejšo kombinacijo"<br />    ." uporabniškega imena in gesla za"<br />    ." zaščito MySQLDumper-ja pred"<br />    ." nepooblaščenim dostopom!";
 $lang['L_RELOAD']="Ponovno naloži";
 $lang['L_REMOVE']="Odstrani";
 $lang['L_REPAIR']="Popravi";
@@ -718,46 +513,30 @@ $lang['L_RESET']="Ponastavi";
 $lang['L_RESET_SEARCHWORDS']="ponastavi iskalne besede";
 $lang['L_RESTORE']="Obnovi";
 $lang['L_RESTORE_COMPLETE']="<b>%s</b> tabel kreiranih.";
-$lang['L_RESTORE_DB']="Podatkovna zbirka '<b>%s</b>' na"
-    ." '<b>%s</b>'.";
-$lang['L_RESTORE_DB_COMPLETE_IN']="Obnavljanje podatkovne zbirke '%s' se"
-    ." je končalo v %s.";
+$lang['L_RESTORE_DB']="Podatkovna zbirka '<b>%s</b>' na"<br />    ." '<b>%s</b>'.";
+$lang['L_RESTORE_DB_COMPLETE_IN']="Obnavljanje podatkovne zbirke '%s' se"<br />    ." je končalo v %s.";
 $lang['L_RESTORE_OF_TABLES']="Izberite tabele za obnovitev";
 $lang['L_RESTORE_TABLE']="Obnavljanje tabele '%s'";
-$lang['L_RESTORE_TABLES_COMPLETED']="Do sedaj je bilo <b>%d</b> od"
-    ." <b>%d</b> tabel kreiranih.";
-$lang['L_RESTORE_TABLES_COMPLETED0']="Do sedaj je bilo kreiranih <b>%d</b>"
-    ." tabel.";
+$lang['L_RESTORE_TABLES_COMPLETED']="Do sedaj je bilo <b>%d</b> od"<br />    ." <b>%d</b> tabel kreiranih.";
+$lang['L_RESTORE_TABLES_COMPLETED0']="Do sedaj je bilo kreiranih <b>%d</b>"<br />    ." tabel.";
 $lang['L_REVERSE']="Zadnji vnos na začetek";
-$lang['L_SAFEMODEDESC']="Ker PHP deluje z vklopljenim načinom"
-    ." safe_mode, je potrebno ročno"
-    ." ustvariti mapo z vašim FTP programom:";
+$lang['L_SAFEMODEDESC']="Ker PHP deluje z vklopljenim načinom"<br />    ." safe_mode, je potrebno ročno"<br />    ." ustvariti mapo z vašim FTP programom:";
 $lang['L_SAVE']="Shrani";
 $lang['L_SAVEANDCONTINUE']="Shrani in nadaljuj namestitev";
-$lang['L_SAVE_ERROR']="Napaka - nastavitev ni bilo mogoče"
-    ." shraniti";
-$lang['L_SAVE_SUCCESS']="Nastavitve so bile uspešno shranjene"
-    ." v nastavitveno datoteko \"%s\".";
-$lang['L_SAVING_DATA_TO_FILE']="Shranjevanje podatkov podatkovne"
-    ." zbirke '%s' v datoteko '%s'";
-$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Največja velikost datoteke je"
-    ." dosežena: nadaljujem z datoteko '%s'";
+$lang['L_SAVE_ERROR']="Napaka - nastavitev ni bilo mogoče"<br />    ." shraniti";
+$lang['L_SAVE_SUCCESS']="Nastavitve so bile uspešno shranjene"<br />    ." v nastavitveno datoteko \"%s\".";
+$lang['L_SAVING_DATA_TO_FILE']="Shranjevanje podatkov podatkovne"<br />    ." zbirke '%s' v datoteko '%s'";
+$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Največja velikost datoteke je"<br />    ." dosežena: nadaljujem z datoteko '%s'";
 $lang['L_SAVING_DB_FORM']="Podatkovna baza";
 $lang['L_SAVING_TABLE']="Shranjevanje tabele";
 $lang['L_SEARCH_ACCESS_KEYS']="Brskaj: naprej=ALT+V, nazaj=ALT+C";
 $lang['L_SEARCH_IN_TABLE']="Išči v tabeli";
-$lang['L_SEARCH_NO_RESULTS']="Iskanje za \"<b>%s</b>\" v tabeli"
-    ." \"<b>%s</b>\" ni vrnilo rezultatov!";
+$lang['L_SEARCH_NO_RESULTS']="Iskanje za \"<b>%s</b>\" v tabeli"<br />    ." \"<b>%s</b>\" ni vrnilo rezultatov!";
 $lang['L_SEARCH_OPTIONS']="Možnosti iskanja";
-$lang['L_SEARCH_OPTIONS_AND']="stolpec mora vsebovati vse iskalne"
-    ." besede (IN-iskanje)";
-$lang['L_SEARCH_OPTIONS_CONCAT']="vrstica mora vsebovati vse iskalne"
-    ." besede ampak so lahko v kateremkoli"
-    ." stolpcu (lahko vzame nekaj časa)";
-$lang['L_SEARCH_OPTIONS_OR']="stolpec mora imeti vsaj eno iskalno"
-    ." besedo (ALI-iskanje)";
-$lang['L_SEARCH_RESULTS']="Iskanje za \"<b>%s</b>\" v tabeli"
-    ." \"<b>%s</b>\" vrne naslednje rezultate";
+$lang['L_SEARCH_OPTIONS_AND']="stolpec mora vsebovati vse iskalne"<br />    ." besede (IN-iskanje)";
+$lang['L_SEARCH_OPTIONS_CONCAT']="vrstica mora vsebovati vse iskalne"<br />    ." besede ampak so lahko v kateremkoli"<br />    ." stolpcu (lahko vzame nekaj časa)";
+$lang['L_SEARCH_OPTIONS_OR']="stolpec mora imeti vsaj eno iskalno"<br />    ." besedo (ALI-iskanje)";
+$lang['L_SEARCH_RESULTS']="Iskanje za \"<b>%s</b>\" v tabeli"<br />    ." \"<b>%s</b>\" vrne naslednje rezultate";
 $lang['L_SECOND']="Sekunda";
 $lang['L_SECONDS']="Sekund";
 $lang['L_SELECT']="Izberi";
@@ -817,11 +596,8 @@ $lang['L_SQL_CREATED']="je bilo kreirano.";
 $lang['L_SQL_CREATEINDEX']="ustvari nov indeks";
 $lang['L_SQL_CREATETABLE']="ustvari tabelo";
 $lang['L_SQL_DATAVIEW']="Pogled podatkov";
-$lang['L_SQL_DBCOPY']="Vsebina podatkovne zbirke '%s' je bila"
-    ." kopirana v podatkovno zbirko '%s'.";
-$lang['L_SQL_DBSCOPY']="Struktura podatkovne zbirke '%s' je"
-    ." bila kopirana v podatkovno zbirko"
-    ." '%s'.";
+$lang['L_SQL_DBCOPY']="Vsebina podatkovne zbirke '%s' je bila"<br />    ." kopirana v podatkovno zbirko '%s'.";
+$lang['L_SQL_DBSCOPY']="Struktura podatkovne zbirke '%s' je"<br />    ." bila kopirana v podatkovno zbirko"<br />    ." '%s'.";
 $lang['L_SQL_DELETED']="je bilo izbrisano.";
 $lang['L_SQL_DESTTABLE_EXISTS']="Ciljna tabela obstaja!";
 $lang['L_SQL_EDIT']="urejaj";
@@ -837,11 +613,7 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Napaka: Ni pravilnega imena polja";
 $lang['L_SQL_FIRST']="prvo";
 $lang['L_SQL_IMEXPORT']="Uvoz-Izvoz";
 $lang['L_SQL_IMPORT']="Uvoz v podatkovno zbirko '%s'";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
-    ." detected.
-Couldn't find closing match"
-    ." for '%s' in query:
-%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"<br />    ." detected.<br />Couldn't find closing match"<br />    ." for '%s' in query:<br /><br />%s";
 $lang['L_SQL_INDEXES']="Določilo";
 $lang['L_SQL_INSERTFIELD']="vstavi polje";
 $lang['L_SQL_INSERTNEWFIELD']="vstavi novo polje";
@@ -850,8 +622,7 @@ $lang['L_SQL_NAMEDEST_MISSING']="Ime cilje manjka!";
 $lang['L_SQL_NEWFIELD']="Novo polje";
 $lang['L_SQL_NODATA']="ni zapisov";
 $lang['L_SQL_NODEST_COPY']="Ni kopiranja brez cilja!";
-$lang['L_SQL_NOFIELDDELETE']="Izbris ni mogoč, ker tabela potrebuje"
-    ." vsaj eno polje.";
+$lang['L_SQL_NOFIELDDELETE']="Izbris ni mogoč, ker tabela potrebuje"<br />    ." vsaj eno polje.";
 $lang['L_SQL_NOTABLESINDB']="Ni najdenih tabel v podatkovni zbirki";
 $lang['L_SQL_NOTABLESSELECTED']="Ni izbranih tabel!";
 $lang['L_SQL_OPENFILE']="Odpri SQL datoteko";
@@ -860,11 +631,7 @@ $lang['L_SQL_OUT1']="Izvršeno";
 $lang['L_SQL_OUT2']="Ukazi";
 $lang['L_SQL_OUT3']="Je imel";
 $lang['L_SQL_OUT4']="Komentarji";
-$lang['L_SQL_OUT5']="Ker izhod vsebuje več kot 5000"
-    ." vrstic, ni bil prikazan.
-Because the"
-    ." output contains more than 5000 lines"
-    ." it isn't displayed.";
+$lang['L_SQL_OUT5']="Ker izhod vsebuje več kot 5000"<br />    ." vrstic, ni bil prikazan.<br />Because the"<br />    ." output contains more than 5000 lines"<br />    ." it isn't displayed.";
 $lang['L_SQL_OUTPUT']="SQL Izhod";
 $lang['L_SQL_QUERYENTRY']="Poizvedba vsebuje";
 $lang['L_SQL_RECORDDELETED']="Zapis je bil izbrisan";
@@ -874,8 +641,7 @@ $lang['L_SQL_RECORDNEW']="nov zapis";
 $lang['L_SQL_RECORDUPDATED']="Zapis je bil posodobljen";
 $lang['L_SQL_RENAMEDB']="Preimenuj podatkovno zbirko";
 $lang['L_SQL_RENAMEDTO']="je bila preimenovana v";
-$lang['L_SQL_SCOPY']="Struktura tabele `%s` je bila"
-    ." skopirana v tabelo `%s`.";
+$lang['L_SQL_SCOPY']="Struktura tabele `%s` je bila"<br />    ." skopirana v tabelo `%s`.";
 $lang['L_SQL_SEARCH']="Iskanje";
 $lang['L_SQL_SEARCHWORDS']="Iskane besede";
 $lang['L_SQL_SELECTTABLE']="izberi tabelo";
@@ -884,8 +650,7 @@ $lang['L_SQL_SHOWDATATABLE']="Prikaži podatke tabele";
 $lang['L_SQL_STRUCTUREDATA']="Struktura in podatki";
 $lang['L_SQL_STRUCTUREONLY']="Samo struktura";
 $lang['L_SQL_TABLEEMPTIED']="Tabela '%s' je bila izbrisana.";
-$lang['L_SQL_TABLEEMPTIEDKEYS']="Tabela '%s' je bila izbrisana in"
-    ." kazalci ponastavljeni.";
+$lang['L_SQL_TABLEEMPTIEDKEYS']="Tabela '%s' je bila izbrisana in"<br />    ." kazalci ponastavljeni.";
 $lang['L_SQL_TABLEINDEXES']="Indeksi tabele";
 $lang['L_SQL_TABLENEW']="Uredi tabele";
 $lang['L_SQL_TABLENOINDEXES']="Ni indeksov v tabeli";
@@ -894,35 +659,27 @@ $lang['L_SQL_TABLESOFDB']="Tabele podatkovne zbirke";
 $lang['L_SQL_TABLEVIEW']="Prikaži tabelo";
 $lang['L_SQL_TBLNAMEEMPTY']="Ime tabele ne sme biti prazno!";
 $lang['L_SQL_TBLPROPSOF']="Lastnosti tabele od";
-$lang['L_SQL_TCOPY']="Tabela '%s' je bila kopirana s podatki"
-    ." iz tabele '%s'.";
+$lang['L_SQL_TCOPY']="Tabela '%s' je bila kopirana s podatki"<br />    ." iz tabele '%s'.";
 $lang['L_SQL_UPLOADEDFILE']="naložena datoteka:";
 $lang['L_SQL_VIEW_COMPACT']="Pogled: stisnjen";
 $lang['L_SQL_VIEW_STANDARD']="Pogled: običajen";
 $lang['L_SQL_VONINS']="od celote";
-$lang['L_SQL_WARNING']="Izvedba SQL ukazov lahko upravlja s"
-    ." podatko. PREVIDNO! Avtorji ne"
-    ." sprejmejo odgovornosti za poškodovane"
-    ." ali izgubljene podatke.";
+$lang['L_SQL_WARNING']="Izvedba SQL ukazov lahko upravlja s"<br />    ." podatko. PREVIDNO! Avtorji ne"<br />    ." sprejmejo odgovornosti za poškodovane"<br />    ." ali izgubljene podatke.";
 $lang['L_SQL_WASCREATED']="je bilo kreirano";
 $lang['L_SQL_WASEMPTIED']="je bilo izpraznjeno";
 $lang['L_STARTDUMP']="Začni arhiviranje";
-$lang['L_START_RESTORE_DB_FILE']="Začetek obnavljanja podatkovne zbirke"
-    ." '%s' iz datoteke '%s'.";
+$lang['L_START_RESTORE_DB_FILE']="Začetek obnavljanja podatkovne zbirke"<br />    ." '%s' iz datoteke '%s'.";
 $lang['L_START_SQL_SEARCH']="začni iskanje";
 $lang['L_STATUS']="Stanje";
 $lang['L_STEP']="Korak";
-$lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavitvena datoteka \"%s\" je bila"
-    ." uspešno kreirana.";
-$lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavitvena datoteka \"%s\" je bila"
-    ." uspešno izbrisana.";
+$lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavitvena datoteka \"%s\" je bila"<br />    ." uspešno kreirana.";
+$lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavitvena datoteka \"%s\" je bila"<br />    ." uspešno izbrisana.";
 $lang['L_TABLE']="Tabela";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";
 $lang['L_TABLES']="Tabele";
 $lang['L_TABLESELECTION']="Izbira tabele";
-$lang['L_TABLE_CREATE_SUCC']="Tabela '%s' je bila ustvarjena"
-    ." uspešno.";
+$lang['L_TABLE_CREATE_SUCC']="Tabela '%s' je bila ustvarjena"<br />    ." uspešno.";
 $lang['L_TABLE_TYPE']="Vrsta";
 $lang['L_TESTCONNECTION']="Preiskus povezave";
 $lang['L_THEME']="Tema";
@@ -939,8 +696,7 @@ $lang['L_TITLE_SHOW_DATA']="Prikaži podatke";
 $lang['L_TITLE_UPLOAD']="Naloži SQL datoteko";
 $lang['L_TO']="do";
 $lang['L_TOOLS']="Orodja";
-$lang['L_TOOLS_TOOLBOX']="Izberi podatkovno zbirko / funkcije"
-    ." podatkovne zbirke / uvoz - izvoz";
+$lang['L_TOOLS_TOOLBOX']="Izberi podatkovno zbirko / funkcije"<br />    ." podatkovne zbirke / uvoz - izvoz";
 $lang['L_TRUNCATE']="Truncate";
 $lang['L_TRUNCATE_DATABASE']="Truncate database";
 $lang['L_UNIT_KB']="KB";
@@ -949,8 +705,7 @@ $lang['L_UNIT_PIXEL']="Piksel";
 $lang['L_UNKNOWN']="neznano";
 $lang['L_UNKNOWN_SQLCOMMAND']="neznan SQL ukaz";
 $lang['L_UPDATE']="Posodobi";
-$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"
-    ." server '%s' could not be established.";
+$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"<br />    ." server '%s' could not be established.";
 $lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
 $lang['L_UPTO']="do";
 $lang['L_USERNAME']="Uporabniško ime";
@@ -964,63 +719,33 @@ $lang['L_WITH']="z";
 $lang['L_WITHATTACH']="s priponko";
 $lang['L_WITHOUTATTACH']="brez priponke";
 $lang['L_WITHPRAEFIX']="s predpono";
-$lang['L_WRONGCONNECTIONPARS']="Parametri za povezavo so napačni ali"
-    ." mankajoči!";
+$lang['L_WRONGCONNECTIONPARS']="Parametri za povezavo so napačni ali"<br />    ." mankajoči!";
 $lang['L_WRONG_CONNECTIONPARS']="Povezovalni parametri so napačni!";
-$lang['L_WRONG_RIGHTS']="Datoteka ali mapa '%s' ni zapisljiva"
-    ." za mene.<br /> Pravice (chmod) niso"
-    ." nastavljene pravilno ali pa imajo"
-    ." napačnega lastnika.<br /> Nastavite"
-    ." pravilne lastnosti z uporabo FTP"
-    ." programa.<br /> Datoteka ali mapa mora"
-    ." biti nastavljena na %s.<br />";
+$lang['L_WRONG_RIGHTS']="Datoteka ali mapa '%s' ni zapisljiva"<br />    ." za mene.<br /> Pravice (chmod) niso"<br />    ." nastavljene pravilno ali pa imajo"<br />    ." napačnega lastnika.<br /> Nastavite"<br />    ." pravilne lastnosti z uporabo FTP"<br />    ." programa.<br /> Datoteka ali mapa mora"<br />    ." biti nastavljena na %s.<br />";
 $lang['L_YES']="da";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework različica";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
-    ." directory.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"
-    ." file.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"
-    ." link.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"
-    ." executable.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"
-    ." doesn't exists.";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"
-    ." readable.";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"
-    ." uploaded file.";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"
-    ." writable.";
-$lang['L_ZEND_ID_DIGITS_INVALID']="Podan napačen tip. Pričakovan je"
-    ." niz, celo število ali decimalno"
-    ." število.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"<br />    ." directory.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"<br />    ." file.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"<br />    ." link.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"<br />    ." executable.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"<br />    ." doesn't exists.";
+$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"<br />    ." readable.";
+$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"<br />    ." uploaded file.";
+$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"<br />    ." writable.";
+$lang['L_ZEND_ID_DIGITS_INVALID']="Podan napačen tip. Pričakovan je"<br />    ." niz, celo število ali decimalno"<br />    ." število.";
 $lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="Vrednost je prazen niz.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="Email naslov se ne ujema z pika afna"
-    ." zapisom.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Podan napačen tip. Pričakovan je"
-    ." niz.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="Email naslov se ne ujema z pika afna"<br />    ." zapisom.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Podan napačen tip. Pričakovan je"<br />    ." niz.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Email zapis je napačen.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Ime gostitelja je napačno.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Lokalni del email naslova"
-    ." (<local-part>@<domain>.<tld>) je"
-    ." napačen.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Ni veljavnega MX zapisa za ta email"
-    ." naslov.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="Ime gostitelja je najdeno v"
-    ." neusmerjevalniškem omrežju. Email"
-    ." naslov ne bo razrešen iz javnega"
-    ." omrežja.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Email naslov je predolg. Največja"
-    ." dolžina je 320 znakov.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Email naslov ne more biti primerjan z"
-    ." nizi v navednicah.";
-$lang['L_ZEND_ID_IS_EMPTY']="Vrednost je zahtevana in ne more biti"
-    ." prazna.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Lokalni del email naslova"<br />    ." (<local-part>@<domain>.<tld>) je"<br />    ." napačen.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Ni veljavnega MX zapisa za ta email"<br />    ." naslov.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="Ime gostitelja je najdeno v"<br />    ." neusmerjevalniškem omrežju. Email"<br />    ." naslov ne bo razrešen iz javnega"<br />    ." omrežja.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Email naslov je predolg. Največja"<br />    ." dolžina je 320 znakov.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Email naslov ne more biti primerjan z"<br />    ." nizi v navednicah.";
+$lang['L_ZEND_ID_IS_EMPTY']="Vrednost je zahtevana in ne more biti"<br />    ." prazna.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Žeton ni bil določen za primerjavo.";
 $lang['L_ZEND_ID_NOT_DIGITS']="Samo številke so dovoljene.";
-$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Podan je napačen tip. Niz, celo"
-    ." število, decimalno število, logična"
-    ." vrednost ali polje je pričakovan tip.";
+$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Podan je napačen tip. Niz, celo"<br />    ." število, decimalno število, logična"<br />    ." vrednost ali polje je pričakovan tip.";
 $lang['L_ZEND_ID_NOT_SAME']="Ta dva žetona se ne ujemata.";
 return $lang;
