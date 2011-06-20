@@ -115,33 +115,48 @@ class Msd_Sql_Object
     {
         $pointer = $this->getPointer();
         $dataSize = strlen($this->_data);
-        $skip = array(';', ' ', "\n", "\r");
+        $skip = array(' ', "\n", "\r", "\t");
+        if ($this->_state !== 'Comment') {
+            $skip[] = "\n";
+        }
         if (in_array($this->_data[$pointer], $skip)) {
             while ($pointer < $dataSize && in_array($this->_data[$pointer], $skip)) {
                 $pointer++;
             }
         }
         $this->setPointer($pointer);
-        if ($pointer == $this->getLength()) {
+        if ($pointer >= $this->getLength()) {
             $pointer = false;
         }
         return $pointer;
     }
+    /**
+     * Move pointer forward by $positions positions.
+     *
+     * @param integer $positions Move pointer forward by $positions
+     *
+     * @return void
+     */
+    public function movePointerForward($positions)
+    {
+        $this->setPointer($this->getPointer() + $positions);
+    }
 
     /**
-     * Get some characters of data.
+     * Get data from actual pointer to given position.
      *
-     * @param int $nrOfCharacters Number of characters to get
+     * @param int  $endPosition End position of pointer
+     * @param bool $movePointer Move pointer behind fetched data
      *
      * @return string Sql data from the pointer position to end or to the nr of chars to fetch
      */
-    public function getData($nrOfCharacters = null)
+    public function getData($endPosition, $movePointer = true)
     {
-        if ($nrOfCharacters > 0) {
-            return substr($this->_data, $this->_pointer, $nrOfCharacters);
-        } else {
-            return substr($this->_data, $this->_pointer);
+        $data = substr($this->_data, $this->_pointer, ($endPosition - $this->_pointer));
+        if ($movePointer === true) {
+            $this->setPointer($endPosition +1);
         }
+        return $data;
     }
 
     /**
@@ -185,8 +200,8 @@ class Msd_Sql_Object
      *
      * Begins to search at the actual postion of the pointer.
      *
-     * @param string $match        The string to find
-     * @param bool   $includeMatch Whether to add length of $match to position
+     * @param string $match          The string to find
+     * @param bool   $includeMatch   Whether to add length of $match to position
      *
      * @return int
      */
@@ -195,12 +210,20 @@ class Msd_Sql_Object
         $pointer = $this->getPointer();
         $offset = $pointer;
         $notFound = true;
-        $nextHit = 0;
-        $length = $this->getLength() - 1;
+        $nextHit = false;
+        $length = $this->getLength() - 1; // zero-based
         while ($notFound && $offset < $length) {
             $nextHit = strpos($this->_data, $match, $offset);
+            //echo "<br>getPosition: Search for '".$match."' P: ".$offset."-> Hit at :".$nextHit;
             if ($nextHit === false) {
-            $lang = Msd_Language::getInstance()->getTranslator();
+                // check special case for comments
+                if ($this->getState() == 'Comment' && strpos($this->_data, "\n", $pointer) === false) {
+                    // there is no next line - return statement "as is"
+                    $this->setPointer($this->getLength());
+                    return $this->getLength();
+                }
+                // we haven't found the correct end of the query - inform user
+                $lang = Msd_Language::getInstance()->getTranslator();
                 $msg = sprintf(
                             $lang->_('L_SQL_INCOMPLETE_STATEMENT_DETECTED'),
                             $this->getState(),
@@ -211,23 +234,49 @@ class Msd_Sql_Object
                 $this->setPointer($this->getLength());
                 return false;
             }
-            // now check if we found an escaped occurance
-            $string = substr($this->_data, $pointer, $nextHit);
-            $string = str_replace('\\\\', '', trim($string));
-            $quotes = substr_count($string, '\'');
-            $escapedQuotes = substr_count($string, '\\\'');
-            if (($quotes - $escapedQuotes) % 2 == 0) {
+
+            $data = $this->getData($nextHit, false);
+            if (!$this->isEscaped($data)) {
                 // hit was not escaped - we found the match
                 $notFound = false;
                 if ($includeMatch) {
-                    $nextHit += strlen($match);
+                    $nextHit += strlen($match)-1;
                 }
             } else {
-                // keep on looking, this was escaped
-                $offset = $pointer + $nextHit;
+                // keep on looking, this one was escaped
+                $offset = $nextHit+1;
             }
         }
         return $nextHit;
+    }
+
+    /**
+     * Get data upto the next new line
+     *
+     * @return string
+     */
+    public function getDataUntilNewLine()
+    {
+
+    }
+
+    /**
+     * Check if hit is escaped.
+     *
+     * @param string $string String to analyse
+     *
+     * @return bool
+     */
+    private function isEscaped($string)
+    {
+        $string = str_replace('\\\\', '', $string);
+        $quotes = substr_count($string, '\'');
+        $escapedQuotes = substr_count($string, '\\\'');
+        if (($quotes - $escapedQuotes) % 2 == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**

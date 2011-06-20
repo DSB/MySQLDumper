@@ -394,12 +394,11 @@ class SqlController extends Zend_Controller_Action
                 if ($sqlObject->hasErrors()) {
                     $this->view->errorMessage = implode('<br />', $sqlObject->getErrors());
                 }
-                //echo $parser->getDebugOutput();
                 $statements = $parser->getParsedStatements();
                 foreach ($statements as $statement) {
-                    echo "<br>- ".$statement;
+                    //echo "<br>Extracted statement: ".$statement;
                     try {
-                        $res = array(); //$this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
+                        $res = $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
                         $this->view->resultset = $res;
                     } catch (Exception $e) {
                         $this->view->errorMessage = $e->getMessage();

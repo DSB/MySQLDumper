@@ -30,7 +30,6 @@ class Msd_Sql_Parser_Statement_Alter implements Msd_Sql_Parser_Interface
         $sql->setState('Alter');
         $endOfStatement = $sql->getPosition(';');
         $statement = $sql->getData($endOfStatement);
-        $sql->setPointer($endOfStatement);
         return $statement;
     }
 }

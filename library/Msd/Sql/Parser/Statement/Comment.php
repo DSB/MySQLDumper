@@ -21,18 +21,20 @@ class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param Msd_Sql_Object $statement MySQL comment.
+     * @param Msd_Sql_Object $sql MySQL comment.
      *
-     * @return void
+     * @return string
      */
     public function parse(Msd_Sql_Object $sql)
     {
         $sql->setState('Comment');
-        $firstChars = $sql->getData(3);
+        $firstChars = $sql->getData($sql->getPointer() + 3, false);
+        $includeMatch = true;
         $returnStatement = false;
         if (substr($firstChars, 0, 2) == '--' || substr($firstChars, 0, 1) == '#') {
             // one line comment -> match new line
             $match = "\n";
+            $includeMatch = false;
         } else {
             if ($firstChars == '/*!') {
                 // conditionial statement
@@ -43,13 +45,12 @@ class Msd_Sql_Parser_Statement_Comment implements Msd_Sql_Parser_Interface
                 $match = '*/';
             }
         }
-        $endOfStatement = $sql->getPosition($match);
+        $endOfStatement = $sql->getPosition($match, $includeMatch);
         $statement = $sql->getData($endOfStatement);
-        $sql->setPointer($endOfStatement);
         if ($returnStatement === true) {
             return $statement;
         } else {
-            return false;
+            return '';
         }
     }
 }

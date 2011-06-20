@@ -30,7 +30,6 @@ class Msd_Sql_Parser_Statement_Lock implements Msd_Sql_Parser_Interface
         $sql->setState('Lock');
         $endOfStatement = $sql->getPosition(';');
         $statement = $sql->getData($endOfStatement);
-        $sql->setPointer($endOfStatement);
         return $statement;
     }
 }

@@ -44,12 +44,11 @@ class Msd_Html
      * Returns a new array containing the different prefixes. Used for building
      * filter select boxes (e.g. sqlserver/show.variables).
      *
-     * @param array   $array         Array to scan for prefixes
-     * @param boolean $addNoneOption Whether to add a first entry '---'
+     * @param array $array Array to scan for prefixes
      *
-     * @return $prefix_array array The array conatining the unique prefixes
+     * @return array The array conatining the unique prefixes
      */
-    public static function getPrefixArray($array, $addNoneOption = true)
+    public static function getPrefixArray($array)
     {
         $prefixes = array();
         $keys = array_keys($array);

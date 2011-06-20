@@ -43,7 +43,7 @@ if (isset($this->errorMessage)) {
 function setShowTableQuery()
 {
     query = $('#selectTable').attr('value');
-    query = 'SELECT * FROM `' + query + '`';
+    query = 'SELECT * FROM `' + query + '`;';
     $('#sqltextarea').val(query);
     $('#myForm').submit();
 }

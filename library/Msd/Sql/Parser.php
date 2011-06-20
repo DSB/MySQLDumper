@@ -82,30 +82,31 @@ class Msd_Sql_Parser implements Iterator
     {
         $statementCounter = 0;
         while ($this->_sql->hasMoreToProcess() && $this->_sql->movePointerToNextCommand()!==false) {
-            $startPosition = $this->_sql->getPointer();
-            // get first "word" of query to extract the kind we have to process
-            $endOfFirstWord = $this->_sql->getPosition(' ', false);
-            // get substring from actual position to found position
-            $sqlQuery = $this->_sql->getData($endOfFirstWord - $startPosition);
-            $statement = strtolower($sqlQuery);
             // check for comments or conditional comments
-            $commentCheck = substr($sqlQuery, 0, 2);
-            if (isset($this->_sqlComments[$commentCheck]) || substr($statement, 0, 3) == '/*!') {
+            $commentCheck = $this->_sql->getData($this->_sql->getPointer() + 3, false);
+            if (substr($commentCheck,0 , 2) == '--' || substr($commentCheck, 0, 2) == '/*') {
                 $statement = 'Comment';
+            } else {
+                //$this->_sql->movePointerToNextCommand();
+                // get first "word" of query to extract the kind we have to process
+                $endOfFirstWord = $this->_sql->getPosition(' ', false);
+                $sqlQuery = $this->_sql->getData($endOfFirstWord, false);
+                $statement = strtolower($sqlQuery);
             }
 
             try {
                 $foundStatement = $this->_parseStatement($this->_sql, ucfirst($statement));
             } catch (Msd_Sql_Parser_Exception $e) {
                 // stop parsing by setting pointer to the end
-                $this->_sql->setPointer($this->_sql->getLength()-1);
-                echo "<br>Error: ".$e->getMessage();
+                $this->_sql->setPointer($this->_sql->getLength());
             }
             if ($this->_debug) {
                 $this->_debugOutput .= '<br />Extracted statement: '.$foundStatement;
             }
-            $this->_parsedStatements[] = $foundStatement;
-            $statementCounter++;
+            if ($foundStatement > '') {
+                $this->_parsedStatements[] = $foundStatement;
+                $statementCounter++;
+            }
             // increment query type counter
             if (!isset($this->_parsingSummary[$statement])) {
                 $this->_parsingSummary[$statement] = 0;
