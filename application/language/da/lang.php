@@ -837,6 +837,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fejl: Ikke gyldigt feltnavn";
 $lang['L_SQL_FIRST']="først";
 $lang['L_SQL_IMEXPORT']="Import-Eksport";
 $lang['L_SQL_IMPORT']="Import i Database `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indeks";
 $lang['L_SQL_INSERTFIELD']="indsæt felt";
 $lang['L_SQL_INSERTNEWFIELD']="indsæt nyt felt";

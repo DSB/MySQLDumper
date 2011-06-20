@@ -914,6 +914,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="ERROR: nombre de campo inválido";
 $lang['L_SQL_FIRST']="primero";
 $lang['L_SQL_IMEXPORT']="Im-/Exportar";
 $lang['L_SQL_IMPORT']="Importar a la base de datos `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="índices";
 $lang['L_SQL_INSERTFIELD']="insertar campo";
 $lang['L_SQL_INSERTNEWFIELD']="insertar nuevo campo";

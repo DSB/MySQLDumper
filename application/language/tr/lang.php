@@ -857,6 +857,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Hata: alanadı geçersiz";
 $lang['L_SQL_FIRST']="önce";
 $lang['L_SQL_IMEXPORT']="Al / ver";
 $lang['L_SQL_IMPORT']="`%s` Veritabanına dışalım";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="İndeksler";
 $lang['L_SQL_INSERTFIELD']="Alan ekle";
 $lang['L_SQL_INSERTNEWFIELD']="Yeni alan ekle";

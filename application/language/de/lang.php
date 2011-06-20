@@ -924,6 +924,12 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fehler: Kein gültiger Feldname";
 $lang['L_SQL_FIRST']="zuerst";
 $lang['L_SQL_IMEXPORT']="Im-/Export";
 $lang['L_SQL_IMPORT']="Import in Datenbank `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: unvöllständige Anweisung"
+    ." gefunden.
+Konnte schließende"
+    ." Übereinstimmung '%s' nicht finden."
+    ." Query:
+%s";
 $lang['L_SQL_INDEXES']="Indizes";
 $lang['L_SQL_INSERTFIELD']="Feld einfügen";
 $lang['L_SQL_INSERTNEWFIELD']="Neues Feld einfügen";

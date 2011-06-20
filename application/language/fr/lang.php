@@ -945,6 +945,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Erreur: Nom de champs invalide";
 $lang['L_SQL_FIRST']="en premier";
 $lang['L_SQL_IMEXPORT']="Import/Export";
 $lang['L_SQL_IMPORT']="Import dans la base de données `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indices";
 $lang['L_SQL_INSERTFIELD']="Créer champs";
 $lang['L_SQL_INSERTNEWFIELD']="créer nouveau champs";

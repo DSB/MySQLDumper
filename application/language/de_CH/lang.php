@@ -854,6 +854,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fähler: Kei gültige Fäldname";
 $lang['L_SQL_FIRST']="zerscht";
 $lang['L_SQL_IMEXPORT']="Im-/Export";
 $lang['L_SQL_IMPORT']="Import i Datebank `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indizes";
 $lang['L_SQL_INSERTFIELD']="Fäld iifüege";
 $lang['L_SQL_INSERTNEWFIELD']="neus Fäld iifüege";

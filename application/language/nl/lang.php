@@ -858,6 +858,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="FOUT: geen geldige veldnaam";
 $lang['L_SQL_FIRST']="eerst";
 $lang['L_SQL_IMEXPORT']="Importeer-Exporteer";
 $lang['L_SQL_IMPORT']="Importeer in Database `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indexes";
 $lang['L_SQL_INSERTFIELD']="plaats veld";
 $lang['L_SQL_INSERTNEWFIELD']="plaats nieuw veld";

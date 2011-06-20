@@ -832,6 +832,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fel: fältnamnet ej giltigt";
 $lang['L_SQL_FIRST']="först";
 $lang['L_SQL_IMEXPORT']="Import/export";
 $lang['L_SQL_IMPORT']="Import till databasen `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Index";
 $lang['L_SQL_INSERTFIELD']="infoga fält";
 $lang['L_SQL_INSERTNEWFIELD']="infoga nytt fält";

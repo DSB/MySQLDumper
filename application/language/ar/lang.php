@@ -1016,6 +1016,11 @@ $lang['L_SQL_FIRST']="first";
 $lang['L_SQL_IMEXPORT']="تصدير-استيراد";
 $lang['L_SQL_IMPORT']="`%s`استيراد من قاعدة"
     ." البيانات";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indices";
 $lang['L_SQL_INSERTFIELD']="insert field";
 $lang['L_SQL_INSERTNEWFIELD']="insert new field";

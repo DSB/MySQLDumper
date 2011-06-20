@@ -837,6 +837,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Napaka: Ni pravilnega imena polja";
 $lang['L_SQL_FIRST']="prvo";
 $lang['L_SQL_IMEXPORT']="Uvoz-Izvoz";
 $lang['L_SQL_IMPORT']="Uvoz v podatkovno zbirko '%s'";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Določilo";
 $lang['L_SQL_INSERTFIELD']="vstavi polje";
 $lang['L_SQL_INSERTNEWFIELD']="vstavi novo polje";

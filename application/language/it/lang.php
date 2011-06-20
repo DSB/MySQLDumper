@@ -883,6 +883,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Errore: nome del campo non valido";
 $lang['L_SQL_FIRST']="prima";
 $lang['L_SQL_IMEXPORT']="Importa / Esporta";
 $lang['L_SQL_IMPORT']="Importa nel database `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indici";
 $lang['L_SQL_INSERTFIELD']="inserisci campo";
 $lang['L_SQL_INSERTNEWFIELD']="inserisci nuovo campo";

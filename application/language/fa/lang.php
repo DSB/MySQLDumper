@@ -1050,6 +1050,11 @@ $lang['L_SQL_IMEXPORT']="وارد نمودن - خارج"
     ." نمودن";
 $lang['L_SQL_IMPORT']="`%s` وارد نمودن"
     ." ديتابيس";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="شاخص ها";
 $lang['L_SQL_INSERTFIELD']="درج فيلد";
 $lang['L_SQL_INSERTNEWFIELD']="درج فيلد جديد";

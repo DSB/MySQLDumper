@@ -866,6 +866,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Chyba: Žiadny platný názov poľa";
 $lang['L_SQL_FIRST']="prvá";
 $lang['L_SQL_IMEXPORT']="Import-Export";
 $lang['L_SQL_IMPORT']="Import v databáze `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indexy";
 $lang['L_SQL_INSERTFIELD']="vložiť pole";
 $lang['L_SQL_INSERTNEWFIELD']="vložiť nové pole";

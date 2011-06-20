@@ -933,6 +933,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Lỗi: Tên Trường không hợp"
 $lang['L_SQL_FIRST']="đầu tiên";
 $lang['L_SQL_IMEXPORT']="Nhập-Xuất";
 $lang['L_SQL_IMPORT']="Nhập trong CSDL `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Chỉ số";
 $lang['L_SQL_INSERTFIELD']="chèn vào";
 $lang['L_SQL_INSERTNEWFIELD']="chèn vùng mới";

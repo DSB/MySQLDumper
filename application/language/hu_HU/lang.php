@@ -873,6 +873,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Hiba: érvénytelen mezőnév";
 $lang['L_SQL_FIRST']="első";
 $lang['L_SQL_IMEXPORT']="Importálás-Exportálás";
 $lang['L_SQL_IMPORT']="Importálás a(z) `%s` adatbázisba";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Indices";
 $lang['L_SQL_INSERTFIELD']="mező beszúrása";
 $lang['L_SQL_INSERTNEWFIELD']="új mező beszúrása";

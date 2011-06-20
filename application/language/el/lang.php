@@ -1230,6 +1230,11 @@ $lang['L_SQL_FIRST']="πρώτο";
 $lang['L_SQL_IMEXPORT']="Εισαγωγή-Εξαγωγή";
 $lang['L_SQL_IMPORT']="Εισαγωγή στη"
     ." Β.Δεδομένων `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Ευρετήρια";
 $lang['L_SQL_INSERTFIELD']="εισαγωγή πεδίου";
 $lang['L_SQL_INSERTNEWFIELD']="εισαγωγή νέου πεδίου";

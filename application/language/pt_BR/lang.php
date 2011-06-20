@@ -874,6 +874,11 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Erro: Nenhum nome de campo válido";
 $lang['L_SQL_FIRST']="primeiro";
 $lang['L_SQL_IMEXPORT']="Importar-Exportar";
 $lang['L_SQL_IMPORT']="Importar no banco de dados `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"
+    ." detected.
+Couldn't find closing match"
+    ." for '%s' in query:
+%s";
 $lang['L_SQL_INDEXES']="Índices";
 $lang['L_SQL_INSERTFIELD']="inserir campo";
 $lang['L_SQL_INSERTNEWFIELD']="inserir novo campo";
