@@ -396,9 +396,9 @@ class SqlController extends Zend_Controller_Action
                 }
                 $statements = $parser->getParsedStatements();
                 foreach ($statements as $statement) {
-                    //echo "<br>Extracted statement: ".$statement;
+                    echo "<br>Extracted statement: ".$statement;
                     try {
-                        $res = $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
+                        $res = array(); // $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
                         $this->view->resultset = $res;
                     } catch (Exception $e) {
                         $this->view->errorMessage = $e->getMessage();

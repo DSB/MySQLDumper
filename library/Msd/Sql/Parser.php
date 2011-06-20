@@ -34,15 +34,6 @@ class Msd_Sql_Parser implements Iterator
     private $_parsingSummary = array();
 
     /**
-     * MySQL comment types.
-     *
-     * @var array
-     */
-    protected $_sqlComments = array(
-        '--' => "\n", '/*' => '*/', '/*!' => '*/'
-    );
-
-    /**
      * Whether to save debug output
      *
      * @var bool
@@ -66,7 +57,7 @@ class Msd_Sql_Parser implements Iterator
      */
     public function __construct(Msd_Sql_Object $sqlObject, $debug = false)
     {
-        $this->_sql   = $sqlObject;
+        $this->_sql = $sqlObject;
         $this->_debug = $debug;
     }
 
@@ -80,38 +71,34 @@ class Msd_Sql_Parser implements Iterator
      */
     public function parse()
     {
-        $statementCounter = 0;
-        while ($this->_sql->hasMoreToProcess() && $this->_sql->movePointerToNextCommand()!==false) {
+        while ($this->_sql->hasMoreToProcess() && $this->_sql->movePointerToNextCommand() !== false) {
             // check for comments or conditional comments
             $commentCheck = $this->_sql->getData($this->_sql->getPointer() + 3, false);
-            if (substr($commentCheck,0 , 2) == '--' || substr($commentCheck, 0, 2) == '/*') {
-                $statement = 'Comment';
+            if (substr($commentCheck, 0, 2) == '--' || substr($commentCheck, 0, 2) == '/*') {
+                $queryType = 'Comment';
             } else {
-                //$this->_sql->movePointerToNextCommand();
-                // get first "word" of query to extract the kind we have to process
+                // get first "word" of query to get the kind we have to process
                 $endOfFirstWord = $this->_sql->getPosition(' ', false);
                 $sqlQuery = $this->_sql->getData($endOfFirstWord, false);
-                $statement = strtolower($sqlQuery);
+                $queryType = strtolower($sqlQuery);
             }
 
             try {
-                $foundStatement = $this->_parseStatement($this->_sql, ucfirst($statement));
+                $foundStatement = $this->_parseStatement($this->_sql, ucfirst($queryType));
             } catch (Msd_Sql_Parser_Exception $e) {
+                $this->_sql->setError($e->getMessage());
                 // stop parsing by setting pointer to the end
-                $this->_sql->setPointer($this->_sql->getLength());
+                $this->_sql->setPointer($this->_sql->getLength() + 1);
             }
-            if ($this->_debug) {
-                $this->_debugOutput .= '<br />Extracted statement: '.$foundStatement;
-            }
+
             if ($foundStatement > '') {
                 $this->_parsedStatements[] = $foundStatement;
-                $statementCounter++;
+                // increment query type counter
+                if (!isset($this->_parsingSummary[$queryType])) {
+                    $this->_parsingSummary[$queryType] = 0;
+                }
+                $this->_parsingSummary[$queryType]++;
             }
-            // increment query type counter
-            if (!isset($this->_parsingSummary[$statement])) {
-                $this->_parsingSummary[$statement] = 0;
-            }
-            $this->_parsingSummary[$statement]++;
         }
     }
 
@@ -129,7 +116,7 @@ class Msd_Sql_Parser implements Iterator
     {
         $statementPath = '/Msd/Sql/Parser/Statement/' . $statement;
         if (!file_exists(LIBRARY_PATH . $statementPath . '.php')) {
-            throw new Msd_Sql_Parser_Exception("Can't find statement class for statement: '" . $statement ."'");
+            throw new Msd_Sql_Parser_Exception("Unknown statement: '" . $statement . "'");
         }
         $statementClass = 'Msd_Sql_Parser_Statement_' . $statement;
         $parserObject = new $statementClass();
