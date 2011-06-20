@@ -225,10 +225,10 @@ class Msd_Sql_Object
                 // we haven't found the correct end of the query - inform user
                 $lang = Msd_Language::getInstance()->getTranslator();
                 $msg = sprintf(
-                            $lang->_('L_SQL_INCOMPLETE_STATEMENT_DETECTED'),
-                            $this->getState(),
-                            $match,
-                            $this->getData(200)
+                    $lang->_('L_SQL_INCOMPLETE_STATEMENT_DETECTED'),
+                    $this->getState(),
+                    $match,
+                    $this->getData(200)
                 );
                 $this->setError($msg);
                 $this->setPointer($this->getLength());
