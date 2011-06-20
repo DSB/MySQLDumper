@@ -11,23 +11,30 @@
 $lang=array();
 $lang['L_ACTION']="Action";
 $lang['L_ACTIVATED']="aktiveret";
-$lang['L_ACTUALLY_INSERTED_RECORDS']="foreløbigt er der korrekt tilføjet"<br />    ." <b>%s</b> poster.";
-$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Foreløbigt er der korrekt tilføjet "<br />    ." <b>%s</b> af <b>%s</b> poster.";
+$lang['L_ACTUALLY_INSERTED_RECORDS']="foreløbigt er der korrekt tilføjet"
+    ." <b>%s</b> poster.";
+$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Foreløbigt er der korrekt tilføjet "
+    ." <b>%s</b> af <b>%s</b> poster.";
 $lang['L_ADD']="Add";
 $lang['L_ADDED']="tilføjet";
 $lang['L_ADD_DB_MANUALLY']="Opret manuelt database";
 $lang['L_ADD_RECIPIENT']="Add recipient";
 $lang['L_ALL']="alle";
 $lang['L_ANALYZE']="Analyze";
-$lang['L_ANALYZING_TABLE']="Tabellen '<b>%s</b>' er under"<br />    ." genetablering.";
-$lang['L_ASKDBCOPY']="Vil du kopiere database `%s` til"<br />    ." database `%s`?";
-$lang['L_ASKDBDELETE']="Vil du slette databasen `%s` med alt"<br />    ." indhold?";
+$lang['L_ANALYZING_TABLE']="Tabellen '<b>%s</b>' er under"
+    ." genetablering.";
+$lang['L_ASKDBCOPY']="Vil du kopiere database `%s` til"
+    ." database `%s`?";
+$lang['L_ASKDBDELETE']="Vil du slette databasen `%s` med alt"
+    ." indhold?";
 $lang['L_ASKDBEMPTY']="Vil du tømme databasen `%s` ?";
 $lang['L_ASKDELETEFIELD']="Vil du slette feltet?";
-$lang['L_ASKDELETERECORD']="Er du sikker på at du vil slette"<br />    ." denne post?";
+$lang['L_ASKDELETERECORD']="Er du sikker på at du vil slette"
+    ." denne post?";
 $lang['L_ASKDELETETABLE']="Skal tabellen `%s` slettes?";
 $lang['L_ASKTABLEEMPTY']="Skal tabellen `%s` tømmes?";
-$lang['L_ASKTABLEEMPTYKEYS']="Skal tabellen `%s` tømmes og"<br />    ." indeksene nulstilles?";
+$lang['L_ASKTABLEEMPTYKEYS']="Skal tabellen `%s` tømmes og"
+    ." indeksene nulstilles?";
 $lang['L_ATTACHED_AS_FILE']="attached as file";
 $lang['L_ATTACH_BACKUP']="Vedhæft backup";
 $lang['L_AUTHENTICATE']="Login information";
@@ -37,11 +44,13 @@ $lang['L_BACK']="tilbage";
 $lang['L_BACKUPFILESANZAHL']="I Backup folderen er";
 $lang['L_BACKUPS']="Backups";
 $lang['L_BACKUP_DBS']="DBs to backup";
-$lang['L_BACKUP_TABLE_DONE']="Dumping of table `%s` finished. %s"<br />    ." records have been saved.";
+$lang['L_BACKUP_TABLE_DONE']="Dumping of table `%s` finished. %s"
+    ." records have been saved.";
 $lang['L_BACK_TO_OVERVIEW']="Databaseoversigt";
 $lang['L_CALL']="Call";
 $lang['L_CANCEL']="Cancel";
-$lang['L_CANT_CREATE_DIR']="Kunne ikke oprette folderen '%s'."<br />    ." Opret den venligst med en FTP-klient.";
+$lang['L_CANT_CREATE_DIR']="Kunne ikke oprette folderen '%s'."
+    ." Opret den venligst med en FTP-klient.";
 $lang['L_CHANGE']="skift";
 $lang['L_CHANGEDIR']="Skifter til folder";
 $lang['L_CHANGEDIRERROR']="Kunne ikke skifte folder!";
@@ -49,7 +58,16 @@ $lang['L_CHARSET']="Tegnsæt";
 $lang['L_CHARSETS']="Character Sets";
 $lang['L_CHECK']="Check";
 $lang['L_CHECK_DIRS']="Check mine foldere";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"<br />    ." encoding of the backup file"<br />    ." automatically.<br /><br />You must choose"<br />    ." the charset with which this backup was"<br />    ." saved.<br /><br />If you discover any"<br />    ." problems with some characters after"<br />    ." restoring, you can repeat the"<br />    ." backup-progress and then choose"<br />    ." another character set.<br /><br />Good"<br />    ." luck. ;)";
+$lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"
+    ." encoding of the backup file"
+    ." automatically.<br /><br />You must"
+    ." choose the charset with which this"
+    ." backup was saved.<br /><br />If you"
+    ." discover any problems with some"
+    ." characters after restoring, you can"
+    ." repeat the backup-progress and then"
+    ." choose another character set.<br /><br"
+    ." />Good luck. ;)<br /><br />";
 $lang['L_CHOOSE_DB']="Vælg Database";
 $lang['L_CLEAR_DATABASE']="Tøm database";
 $lang['L_CLOSE']="Close";
@@ -70,28 +88,43 @@ $lang['L_CONFIG_EMAIL']="Email-notifikation";
 $lang['L_CONFIG_FTP']="FTP-overførsel af Backupfil";
 $lang['L_CONFIG_HEADLINE']="Konfiguration";
 $lang['L_CONFIG_INTERFACE']="Brugerflade";
-$lang['L_CONFIG_LOADED']="Configuration \"%s\" has been imported"<br />    ." successfully.";
-$lang['L_CONFIRM_CONFIGFILE_DELETE']="Really delete the configuration file"<br />    ." %s?";
-$lang['L_CONFIRM_DELETE_FILE']="Should the file '%s' really be"<br />    ." deleted?";
+$lang['L_CONFIG_LOADED']="Configuration \"%s\" has been imported"
+    ." successfully.";
+$lang['L_CONFIRM_CONFIGFILE_DELETE']="Really delete the configuration file"
+    ." %s?";
+$lang['L_CONFIRM_DELETE_FILE']="Should the file '%s' really be"
+    ." deleted?";
 $lang['L_CONFIRM_DELETE_TABLES']="Really delete the selected tables?";
-$lang['L_CONFIRM_DROP_DATABASES']="Should the selected databases really"<br />    ." be deleted?<br /><br />Attention: all data will"<br />    ." be deleted! Maybe you should create a"<br />    ." backup first.";
-$lang['L_CONFIRM_RECIPIENT_DELETE']="Should the recipient \"%s\" really be"<br />    ." deleted?";
-$lang['L_CONFIRM_TRUNCATE_DATABASES']="Should all tables of the selected"<br />    ." databases really be"<br />    ." deleted?<br /><br />Attention: all data will be"<br />    ." deleted! Maybe you want to create a"<br />    ." backup first.";
+$lang['L_CONFIRM_DROP_DATABASES']="Should the selected databases really"
+    ." be deleted?<br /><br />Attention: all"
+    ." data will be deleted! Maybe you should"
+    ." create a backup first.";
+$lang['L_CONFIRM_RECIPIENT_DELETE']="Should the recipient \"%s\" really be"
+    ." deleted?";
+$lang['L_CONFIRM_TRUNCATE_DATABASES']="Should all tables of the selected"
+    ." databases really be deleted?<br /><br"
+    ." />Attention: all data will be deleted!"
+    ." Maybe you want to create a backup"
+    ." first.";
 $lang['L_CONFIRM_TRUNCATE_TABLES']="Really empty the selected tables?";
 $lang['L_CONNECT']="forbind";
 $lang['L_CONNECTIONPARS']="Forbindelsesparametre";
 $lang['L_CONNECTTOMYSQL']="Forbind til MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"<br />    ." file '%s'.";
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
+    ." file '%s'.";
 $lang['L_CONVERTED_FILES']="Converted Files";
 $lang['L_CONVERTER']="Backupkonvertering";
 $lang['L_CONVERTING']="Konverterer";
 $lang['L_CONVERT_FILE']="Fil der skal konverteres";
-$lang['L_CONVERT_FILENAME']="Navn på destinationsfilen (uden"<br />    ." filtype)";
+$lang['L_CONVERT_FILENAME']="Navn på destinationsfilen (uden"
+    ." filtype)";
 $lang['L_CONVERT_FILEREAD']="Læs fil '%s'";
-$lang['L_CONVERT_FINISHED']="Konvertering afsluttet, '%s' blev"<br />    ." skrevet korrekt.";
+$lang['L_CONVERT_FINISHED']="Konvertering afsluttet, '%s' blev"
+    ." skrevet korrekt.";
 $lang['L_CONVERT_START']="Start konvertering";
 $lang['L_CONVERT_TITLE']="Konvertér dump til MSD-format";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Forkerte parametre!  Konvertering er"<br />    ." ikke muligt.";
+$lang['L_CONVERT_WRONG_PARAMETERS']="Forkerte parametre!  Konvertering er"
+    ." ikke muligt.";
 $lang['L_CREATE']="Opret";
 $lang['L_CREATED']="Created";
 $lang['L_CREATEDIRS']="Opret foldere";
@@ -109,7 +142,9 @@ $lang['L_CRON_PRINTOUT']="Udskriv output til skærmen.";
 $lang['L_CSVOPTIONS']="CSV-opsætning";
 $lang['L_CSV_EOL']="Udskil linier med";
 $lang['L_CSV_ERRORCREATETABLE']="Fejl ved oprettelse af tabel `%s` !";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="Felt-tælleren stemmer ikke overens"<br />    ." med de importerede data (%d i stedet"<br />    ." for %d).";
+$lang['L_CSV_FIELDCOUNT_NOMATCH']="Felt-tælleren stemmer ikke overens"
+    ." med de importerede data (%d i stedet"
+    ." for %d).";
 $lang['L_CSV_FIELDSENCLOSED']="Felter lukket inde i";
 $lang['L_CSV_FIELDSEPERATE']="Felter adskilt med";
 $lang['L_CSV_FIELDSESCAPE']="Felter escaped med";
@@ -119,10 +154,13 @@ $lang['L_CSV_NAMEFIRSTLINE']="Feltnavne i første linie";
 $lang['L_CSV_NODATA']="Ingen data fundet til import!";
 $lang['L_CSV_NULL']="Erstat NULL med";
 $lang['L_DATABASES_OF_USER']="Databases of user";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br />MySQL"<br />    ." returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"<br />    ." successfully.";
+$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
+    ." />MySQL returns:<br/><br />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
+    ." successfully.";
 $lang['L_DATASIZE']="Size of data";
-$lang['L_DATASIZE_INFO']="This is the size of the records - not"<br />    ." the size of the backup file";
+$lang['L_DATASIZE_INFO']="This is the size of the records - not"
+    ." the size of the backup file";
 $lang['L_DAY']="Day";
 $lang['L_DAYS']="Days";
 $lang['L_DB']="Database";
@@ -133,7 +171,8 @@ $lang['L_DB_ADAPTER']="DB-Adapter";
 $lang['L_DB_BACKUPPARS']="Database backupparametre";
 $lang['L_DB_DEFAULT']="Default database";
 $lang['L_DB_HOST']="Hostnavn";
-$lang['L_DB_IN_LIST']="Databasen '%s' kunne ikke tilføjes da"<br />    ." den allerede findes.";
+$lang['L_DB_IN_LIST']="Databasen '%s' kunne ikke tilføjes da"
+    ." den allerede findes.";
 $lang['L_DB_NAME']="Databasenavn";
 $lang['L_DB_PASS']="Kodeord";
 $lang['L_DB_SELECT_ERROR']="<br />Fejl:<br />Valg af database <b>";
@@ -146,7 +185,8 @@ $lang['L_DELETE']="Slet";
 $lang['L_DELETE_DATABASE']="Slet database";
 $lang['L_DELETE_FILE_ERROR']="Error deleting file \"%s\"!";
 $lang['L_DELETE_FILE_SUCCESS']="File \"%s\" was deleted successfully.";
-$lang['L_DELETE_HTACCESS']="Fjern folderbeskyttelse (slet"<br />    ." .htaccess)";
+$lang['L_DELETE_HTACCESS']="Fjern folderbeskyttelse (slet"
+    ." .htaccess)";
 $lang['L_DESCRIPTION']="Description";
 $lang['L_DESELECT_ALL']="Fravælg alle";
 $lang['L_DIR']="Folder";
@@ -160,7 +200,8 @@ $lang['L_DOSIMPLETEST']="Test Perl";
 $lang['L_DOWNLOAD_FILE']="Download file";
 $lang['L_DO_NOW']="gør det nu";
 $lang['L_DUMP']="Backup";
-$lang['L_DUMP_ENDERGEBNIS']="Filen indeholder <b>%s</b> tabeller"<br />    ." med <b>%s</b> poster.<br />";
+$lang['L_DUMP_ENDERGEBNIS']="Filen indeholder <b>%s</b> tabeller"
+    ." med <b>%s</b> poster.<br />";
 $lang['L_DUMP_FILENAME']="Backup Fil";
 $lang['L_DUMP_HEADLINE']="Lav backup...";
 $lang['L_DUMP_NOTABLES']="Ingen tabeller fundet i database `%s`";
@@ -170,12 +211,43 @@ $lang['L_EDIT']="ret";
 $lang['L_EHRESTORE_CONTINUE']="fortsæt og log fejl";
 $lang['L_EHRESTORE_STOP']="stop";
 $lang['L_EMAIL']="E-Mail";
-$lang['L_EMAILBODY_ATTACH']="Den vedhæftede fil indeholder backup"<br />    ." af din MySQL-Database.<br />Backup af"<br />    ." Database `%s`<br /><br /><br />Følgende"<br />    ." fil blev oprettet:<br /><br />%s <br"<br />    ." /><br />Venlig hilsen<br /><br"<br />    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_FOOTER']="<br /><br />Venlig hilsen<br /><br"<br />    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_ATTACH']="En Multipart Backup er blevet"<br />    ." oprettet.<br />Backupfilerne er"<br />    ." vedhæftet separate emails.<br"<br />    ." />Backup af Database `%s`<br /><br /><br"<br />    ." />Følgende filer blev oprettet:<br"<br />    ." /><br />%s <br /><br />Med venlig"<br />    ." hilsen<br /><br />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_NOATTACH']="En Multipart Backup blev oprettet.<br"<br />    ." />Backupfilerne er ikke vedhæftet"<br />    ." denne email!<br />Backup af Database"<br />    ." `%s`<br /><br /><br />Følgende filer blev"<br />    ." oprettet:<br /><br />%s<br /><br /><br"<br />    ." />Venlig hilsen<br /><br"<br />    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_NOATTACH']="Filer er ikke vedhæftet denne"<br />    ." email!<br />Backup af Database"<br />    ." `%s`<br /><br /><br />Følgende fil blev"<br />    ." oprettet:<br /><br />%s<br /><br /><br"<br />    ." />Venlig hilsen<br /><br"<br />    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_TOOBIG']="Backupfilen oversteg"<br />    ." maksimumstørrelsen på %s og blev"<br />    ." ikke vedhæftet denne email.<br"<br />    ." />Backup sf Database `%s`<br /><br /><br"<br />    ." />Følgende fil blev oprettet:<br"<br />    ." /><br />%s<br /><br /><br />Venlig"<br />    ." hilsen<br /><br />MySQLDumper<br />";
+$lang['L_EMAILBODY_ATTACH']="Den vedhæftede fil indeholder backup"
+    ." af din MySQL-Database.<br />Backup af"
+    ." Database `%s`<br /><br /><br"
+    ." />Følgende fil blev oprettet:<br"
+    ." /><br />%s <br /><br />Venlig"
+    ." hilsen<br /><br />MySQLDumper<br />";
+$lang['L_EMAILBODY_FOOTER']="<br /><br />Venlig hilsen<br /><br"
+    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_MP_ATTACH']="En Multipart Backup er blevet"
+    ." oprettet.<br />Backupfilerne er"
+    ." vedhæftet separate emails.<br"
+    ." />Backup af Database `%s`<br /><br"
+    ." /><br />Følgende filer blev"
+    ." oprettet:<br /><br />%s <br /><br"
+    ." />Med venlig hilsen<br /><br"
+    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_MP_NOATTACH']="En Multipart Backup blev oprettet.<br"
+    ." />Backupfilerne er ikke vedhæftet"
+    ." denne email!<br />Backup af Database"
+    ." `%s`<br /><br /><br />Følgende filer"
+    ." blev oprettet:<br /><br />%s<br /><br"
+    ." /><br />Venlig hilsen<br /><br"
+    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_NOATTACH']="Filer er ikke vedhæftet denne"
+    ." email!<br />Backup af Database `%s`<br"
+    ." /><br /><br />Følgende fil blev"
+    ." oprettet:<br /><br />%s<br /><br /><br"
+    ." />Venlig hilsen<br /><br"
+    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_TOOBIG']="Backupfilen oversteg"
+    ." maksimumstørrelsen på %s og blev"
+    ." ikke vedhæftet denne email.<br"
+    ." />Backup sf Database `%s`<br /><br"
+    ." /><br />Følgende fil blev"
+    ." oprettet:<br /><br />%s<br /><br /><br"
+    ." />Venlig hilsen<br /><br"
+    ." />MySQLDumper<br />";
 $lang['L_EMAIL_ADDRESS']="E-Mail-Address";
 $lang['L_EMAIL_CC']="CC-Receiver";
 $lang['L_EMAIL_MAXSIZE']="Maksimumstørrelse på vedhæftede";
@@ -191,15 +263,21 @@ $lang['L_EMPTY_DB_BEFORE_RESTORE']="Slet tabeller før genetablering";
 $lang['L_ENCODING']="encoding";
 $lang['L_ENCRYPTION_TYPE']="Krypteringsmetode";
 $lang['L_ENGINE']="Engine";
-$lang['L_ENTER_DB_INFO']="First click the button \"Connect to"<br />    ." MySQL\". Only if no database could be"<br />    ." detected you need to provide a"<br />    ." database name here.";
+$lang['L_ENTER_DB_INFO']="First click the button \"Connect to"
+    ." MySQL\". Only if no database could be"
+    ." detected you need to provide a"
+    ." database name here.";
 $lang['L_ENTRY']="Indlæg";
 $lang['L_ERROR']="Fejl";
 $lang['L_ERRORHANDLING_RESTORE']="Fejlhandling under genetablering";
-$lang['L_ERROR_CONFIGFILE_NAME']="Filename \"%s\" contains invalid"<br />    ." characters.";
-$lang['L_ERROR_DELETING_CONFIGFILE']="Error: couldn't delete configuration"<br />    ." file %s!";
+$lang['L_ERROR_CONFIGFILE_NAME']="Filename \"%s\" contains invalid"
+    ." characters.";
+$lang['L_ERROR_DELETING_CONFIGFILE']="Error: couldn't delete configuration"
+    ." file %s!";
 $lang['L_ERROR_LOADING_CONFIGFILE']="Couldn't load configfile \"%s\".";
 $lang['L_ERROR_LOG']="Error Log";
-$lang['L_ERROR_MULTIPART_RESTORE']="Multipart-Restore: couldn't finde the"<br />    ." next file '%s'!";
+$lang['L_ERROR_MULTIPART_RESTORE']="Multipart-Restore: couldn't finde the"
+    ." next file '%s'!";
 $lang['L_ESTIMATED_END']="Estimated end";
 $lang['L_EXCEL2003']="Excel fra 2003";
 $lang['L_EXISTS']="Exists";
@@ -209,7 +287,9 @@ $lang['L_EXPORTLINES']="<strong>%s</strong> linier eksporteret";
 $lang['L_EXPORTOPTIONS']="Eksport-opsætning";
 $lang['L_EXTENDEDPARS']="Udvidede parametre";
 $lang['L_FADE_IN_OUT']="Visning til/fra";
-$lang['L_FATAL_ERROR_DUMP']="Fatal error: the CREATE-Statement of"<br />    ." table '%s' in database '%s' couldn't"<br />    ." be read!";
+$lang['L_FATAL_ERROR_DUMP']="Fatal error: the CREATE-Statement of"
+    ." table '%s' in database '%s' couldn't"
+    ." be read!";
 $lang['L_FIELDS']="Felter";
 $lang['L_FIELDS_OF_TABLE']="Fields of table";
 $lang['L_FILE']="Fil";
@@ -219,7 +299,8 @@ $lang['L_FILE_MANAGE']="Fil Administration";
 $lang['L_FILE_OPEN_ERROR']="Fejl: kunne ikke åbne fil.";
 $lang['L_FILE_SAVED_SUCCESSFULLY']="The file has been saved successfully.";
 $lang['L_FILE_SAVED_UNSUCCESSFULLY']="The file couldn't be saved!";
-$lang['L_FILE_UPLOAD_SUCCESSFULL']="The file '%s' was uploaded"<br />    ." successfully.";
+$lang['L_FILE_UPLOAD_SUCCESSFULL']="The file '%s' was uploaded"
+    ." successfully.";
 $lang['L_FILTER_BY']="Filter by";
 $lang['L_FM_ALERTRESTORE1']="Skal databasen";
 $lang['L_FM_ALERTRESTORE2']="genetableres med posterne fra filen";
@@ -228,11 +309,14 @@ $lang['L_FM_ALL_BU']="Alle backups";
 $lang['L_FM_ANZ_BU']="Backups";
 $lang['L_FM_ASKDELETE1']="Skal filen";
 $lang['L_FM_ASKDELETE2']="virkelig slettes?";
-$lang['L_FM_ASKDELETE3']="Vil du køre autoslet med de"<br />    ." konfigurerede regler nu?";
+$lang['L_FM_ASKDELETE3']="Vil du køre autoslet med de"
+    ." konfigurerede regler nu?";
 $lang['L_FM_ASKDELETE4']="Vil du slette alle backupfiler?";
 $lang['L_FM_ASKDELETE5']="Vil du slette alle backupfiler med";
 $lang['L_FM_ASKDELETE5_2']="* ?";
-$lang['L_FM_AUTODEL1']="Autoslet: følgende filer blev slettet"<br />    ." grundet maksimalt antal"<br />    ." filer-indstillingen:";
+$lang['L_FM_AUTODEL1']="Autoslet: følgende filer blev slettet"
+    ." grundet maksimalt antal"
+    ." filer-indstillingen:";
 $lang['L_FM_CHOOSE_ENCODING']="Choose encoding of backup file";
 $lang['L_FM_COMMENT']="Indtast kommentar";
 $lang['L_FM_DELETE']="Slet";
@@ -254,15 +338,18 @@ $lang['L_FM_NOFILE']="Du valgte ikke en fil!";
 $lang['L_FM_NOFILESFOUND']="Ingen fil fundet.";
 $lang['L_FM_RECORDS']="Poster";
 $lang['L_FM_RESTORE']="Genetabler";
-$lang['L_FM_RESTORE_HEADER']="Genetablering af Database"<br />    ." `<strong>%s</strong>`";
+$lang['L_FM_RESTORE_HEADER']="Genetablering af Database"
+    ." `<strong>%s</strong>`";
 $lang['L_FM_SELECTTABLES']="Vælg tabeller";
 $lang['L_FM_STARTDUMP']="Start ny backup";
 $lang['L_FM_TABLES']="Tabeller";
 $lang['L_FM_TOTALSIZE']="Total størrelse";
 $lang['L_FM_UPLOADFAILED']="Upload slog fejl!";
-$lang['L_FM_UPLOADFILEEXISTS']="Der findes allerede en fil med samme"<br />    ." navn!";
+$lang['L_FM_UPLOADFILEEXISTS']="Der findes allerede en fil med samme"
+    ." navn!";
 $lang['L_FM_UPLOADFILEREQUEST']="vælg venligst en fil.";
-$lang['L_FM_UPLOADMOVEERROR']="Kunne ikke flytte valgte fil til"<br />    ." upload folderen.";
+$lang['L_FM_UPLOADMOVEERROR']="Kunne ikke flytte valgte fil til"
+    ." upload folderen.";
 $lang['L_FM_UPLOADNOTALLOWED1']="Denne filtype understøttes ikke.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Gyldige typer er: *.gz og *.sql-filer";
 $lang['L_FOUND_DB']="fundet db:";
@@ -271,24 +358,31 @@ $lang['L_FROMTEXTBOX']="fra tekstboks";
 $lang['L_FTP']="FTP";
 $lang['L_FTP_ADD_CONNECTION']="Add connection";
 $lang['L_FTP_CHOOSE_MODE']="FTP-overførselstilstand";
-$lang['L_FTP_CONFIRM_DELETE']="Should this FTP-Connection really be"<br />    ." deleted?";
+$lang['L_FTP_CONFIRM_DELETE']="Should this FTP-Connection really be"
+    ." deleted?";
 $lang['L_FTP_CONNECTION']="FTP-Connection";
 $lang['L_FTP_CONNECTION_CLOSED']="FTP-Connection closed";
 $lang['L_FTP_CONNECTION_DELETE']="Delete connection";
-$lang['L_FTP_CONNECTION_ERROR']="The connection to server '%s' using"<br />    ." port %s couldn't be established";
-$lang['L_FTP_CONNECTION_SUCCESS']="The connection to server '%s' using"<br />    ." port %s was established successfully";
+$lang['L_FTP_CONNECTION_ERROR']="The connection to server '%s' using"
+    ." port %s couldn't be established";
+$lang['L_FTP_CONNECTION_SUCCESS']="The connection to server '%s' using"
+    ." port %s was established successfully";
 $lang['L_FTP_DIR']="Upload-folder";
 $lang['L_FTP_FILE_TRANSFER_ERROR']="Transfer of file '%s' was faulty";
-$lang['L_FTP_FILE_TRANSFER_SUCCESS']="The file '%s' was transferred"<br />    ." successfully";
+$lang['L_FTP_FILE_TRANSFER_SUCCESS']="The file '%s' was transferred"
+    ." successfully";
 $lang['L_FTP_LOGIN_ERROR']="Login as user '%s' was denied";
 $lang['L_FTP_LOGIN_SUCCESS']="Login as user '%s' was successfull";
 $lang['L_FTP_OK']="Forbindelse etableret.";
 $lang['L_FTP_PASS']="Kodeord";
 $lang['L_FTP_PASSIVE']="brug passiv-tilstand";
-$lang['L_FTP_PASV_ERROR']="Switching to passive mode was"<br />    ." unsuccessful";
-$lang['L_FTP_PASV_SUCCESS']="Switching to passive mode was"<br />    ." successfull";
+$lang['L_FTP_PASV_ERROR']="Switching to passive mode was"
+    ." unsuccessful";
+$lang['L_FTP_PASV_SUCCESS']="Switching to passive mode was"
+    ." successfull";
 $lang['L_FTP_PORT']="Port";
-$lang['L_FTP_SEND_TO']="to <strong>%s</strong><br /> into"<br />    ." <strong>%s</strong>";
+$lang['L_FTP_SEND_TO']="to <strong>%s</strong><br /> into"
+    ." <strong>%s</strong>";
 $lang['L_FTP_SERVER']="Server";
 $lang['L_FTP_SSL']="Sikker SSL FTP-forbindelse";
 $lang['L_FTP_START']="Starting FTP transfer";
@@ -308,14 +402,20 @@ $lang['L_HTACC_CONFIRM_DELETE']="Skal folderbeskyttelsen gemmes nu?";
 $lang['L_HTACC_CONTENT']="Indhold af fil";
 $lang['L_HTACC_CREATE']="Opret folderbeskyttelse";
 $lang['L_HTACC_CREATED']="Folderbeskyttelsen blev oprettet.";
-$lang['L_HTACC_CREATE_ERROR']="Der opstod en fejl ved oprettelse af"<br />    ." folderbeskyttelsen!<br />Opret"<br />    ." venligst de 2 filer manuelt med"<br />    ." følgende indhold";
+$lang['L_HTACC_CREATE_ERROR']="Der opstod en fejl ved oprettelse af"
+    ." folderbeskyttelsen!<br />Opret"
+    ." venligst de 2 filer manuelt med"
+    ." følgende indhold";
 $lang['L_HTACC_CRYPT']="Crypt (Linux og Unix-systemer)";
 $lang['L_HTACC_DENY_ALLOW']="Deny / Allow";
 $lang['L_HTACC_DIR_LISTING']="Folder-indholdslistning";
 $lang['L_HTACC_EDIT']="Rediger .htaccess";
 $lang['L_HTACC_ERROR_DOC']="Fejl-dokument";
 $lang['L_HTACC_EXAMPLES']="Flere eksempler og dokumentation";
-$lang['L_HTACC_EXISTS']="Der findes allerede en"<br />    ." folderbeskyttelse. Hvis du opretter en"<br />    ." ny, vil den tidligere blive"<br />    ." overskrevet!";
+$lang['L_HTACC_EXISTS']="Der findes allerede en"
+    ." folderbeskyttelse. Hvis du opretter en"
+    ." ny, vil den tidligere blive"
+    ." overskrevet!";
 $lang['L_HTACC_MAKE_EXECUTABLE']="Lav til eksekverbar";
 $lang['L_HTACC_MD5']="MD5 (Linux og Unix-systemer)";
 $lang['L_HTACC_NO_ENCRYPTION']="plain text, ingen kryptering (Windows)";
@@ -324,7 +424,10 @@ $lang['L_HTACC_PROPOSED']="Stærkt anbefalet";
 $lang['L_HTACC_REDIRECT']="Redirect";
 $lang['L_HTACC_SCRIPT_EXEC']="Udfør script";
 $lang['L_HTACC_SHA1']="SHA1 (all Systems)";
-$lang['L_HTACC_WARNING']="Bemærk! .htaccess påvirker dirkte"<br />    ." browserens opførsel.<br />Med forkert"<br />    ." indhold kan disse sider blive"<br />    ." utilgængelige.";
+$lang['L_HTACC_WARNING']="Bemærk! .htaccess påvirker dirkte"
+    ." browserens opførsel.<br />Med forkert"
+    ." indhold kan disse sider blive"
+    ." utilgængelige.";
 $lang['L_IMPORT']="Import";
 $lang['L_IMPORTIEREN']="Import";
 $lang['L_IMPORTOPTIONS']="Import-opsætning";
@@ -334,9 +437,21 @@ $lang['L_IMPORT_NOTABLE']="Ingen tabel valgt til import!";
 $lang['L_IN']="i";
 $lang['L_INDEX_SIZE']="Size of index";
 $lang['L_INFO_ACTDB']="Aktuel Database";
-$lang['L_INFO_DATABASES']="Følgende database(r) er tilgængelige"<br />    ." på din server";
+$lang['L_INFO_DATABASES']="Følgende database(r) er tilgængelige"
+    ." på din server";
 $lang['L_INFO_DBEMPTY']="Databasen er tom !";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="On this server the PHP command"<br />    ." fsockopen() is disabled by the"<br />    ." server's configuration. Because of"<br />    ." this the automatic download of"<br />    ." language packs is not possible. To"<br />    ." bypass this, you can download packages"<br />    ." manually, extract them locally and"<br />    ." upload them to the directory"<br />    ." \"language\" of your MySQLDumper"<br />    ." installation. Afterwards the new"<br />    ." language pack is available on this"<br />    ." site.";
+$lang['L_INFO_FSOCKOPEN_DISABLED']="On this server the PHP command"
+    ." fsockopen() is disabled by the"
+    ." server's configuration. Because of"
+    ." this the automatic download of"
+    ." language packs is not possible. To"
+    ." bypass this, you can download packages"
+    ." manually, extract them locally and"
+    ." upload them to the directory"
+    ." \"language\" of your MySQLDumper"
+    ." installation. Afterwards the new"
+    ." language pack is available on this"
+    ." site.";
 $lang['L_INFO_LASTUPDATE']="Sidst opdateret";
 $lang['L_INFO_LOCATION']="Din lokation er";
 $lang['L_INFO_NODB']="database findes ikke.";
@@ -366,21 +481,31 @@ $lang['L_LOGFILES']="Logfiles";
 $lang['L_LOGGED_IN']="Logged in";
 $lang['L_LOGIN']="Login";
 $lang['L_LOGIN_AUTOLOGIN']="Automatic login";
-$lang['L_LOGIN_INVALID_USER']="Unknown combination of username and"<br />    ." password.";
+$lang['L_LOGIN_INVALID_USER']="Unknown combination of username and"
+    ." password.";
 $lang['L_LOGOUT']="Log out";
 $lang['L_LOG_CREATED']="Log file created.";
 $lang['L_LOG_DELETE']="slet Log";
 $lang['L_LOG_MAXSIZE']="Maximum size of log files";
-$lang['L_LOG_NOT_READABLE']="The log file '%s' does not exist or is"<br />    ." not readable.";
+$lang['L_LOG_NOT_READABLE']="The log file '%s' does not exist or is"
+    ." not readable.";
 $lang['L_MAILERROR']="Afsendelse af email slog fejl!";
 $lang['L_MAILPROGRAM']="Mailprogram";
 $lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"<br />    ." one character needs, when it is saved"<br />    ." to disk.";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
+    ." one character needs, when it is saved"
+    ." to disk.";
 $lang['L_MAXSIZE']="maks. størrelse";
 $lang['L_MAX_BACKUP_FILES_EACH2']="For hver database";
 $lang['L_MAX_EXECUTION_TIME']="Max execution time";
 $lang['L_MAX_UPLOAD_SIZE']="Maksimal filstørrelse";
-$lang['L_MAX_UPLOAD_SIZE_INFO']="Hvis din Dumpfil er større end den"<br />    ." ovennævnte grænse, skal du uploade"<br />    ." den via FTP til folderen"<br />    ." \"work/backup\". <br />Derefter kan du"<br />    ." vælge den og begynde"<br />    ." genetableringsprocessen.";
+$lang['L_MAX_UPLOAD_SIZE_INFO']="Hvis din Dumpfil er større end den"
+    ." ovennævnte grænse, skal du uploade"
+    ." den via FTP til folderen"
+    ." \"work/backup\". <br />Derefter kan du"
+    ." vælge den og begynde"
+    ." genetableringsprocessen.<br /><br"
+    ." /><br />";
 $lang['L_MEMORY']="Memory";
 $lang['L_MENU_HIDE']="Hide menu";
 $lang['L_MENU_SHOW']="Show menu";
@@ -407,20 +532,38 @@ $lang['L_MYSQL_DATA']="MySQL-Data";
 $lang['L_MYSQL_ROUTINE']="Routine";
 $lang['L_MYSQL_ROUTINES']="Routinen";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"<br />    ." in which one can save data (records)."<br />    ." Each record represents a row in the"<br />    ." table.";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
+    ." in which one can save data (records)."
+    ." Each record represents a row in the"
+    ." table.";
 $lang['L_MYSQL_VERSION']="MySQL-Version";
-$lang['L_MYSQL_VERSION_TOO_OLD']="We are sorry: the installed"<br />    ." MySQL-Version %s is too old and can"<br />    ." not be used together with this version"<br />    ." of MySQLDumper. Please update your"<br />    ." MySQL-Version to at least version"<br />    ." %s.<br />As an alternative you could"<br />    ." install MySQLDumper version 1.24,"<br />    ." which is able to work together with"<br />    ." older MySQL-Versions. But you will"<br />    ." lose some of the new functions of"<br />    ." MySQLDumper in that case.";
+$lang['L_MYSQL_VERSION_TOO_OLD']="We are sorry: the installed"
+    ." MySQL-Version %s is too old and can"
+    ." not be used together with this version"
+    ." of MySQLDumper. Please update your"
+    ." MySQL-Version to at least version"
+    ." %s.<br />As an alternative you could"
+    ." install MySQLDumper version 1.24,"
+    ." which is able to work together with"
+    ." older MySQL-Versions. But you will"
+    ." lose some of the new functions of"
+    ." MySQLDumper in that case.<br />";
 $lang['L_MYSQL_VIEW']="View";
 $lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"<br />    ." one ore more tables but don't contain"<br />    ." own records.";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
+    ." one ore more tables but don't contain"
+    ." own records.";
 $lang['L_NAME']="Name";
 $lang['L_NEW']="ny";
 $lang['L_NEWTABLE']="Ny tabel";
 $lang['L_NEXT_AUTO_INCREMENT']="Next automatic index";
 $lang['L_NEXT_AUTO_INCREMENT_SHORT']="Autoindex";
 $lang['L_NO']="nej";
-$lang['L_NOFTPPOSSIBLE']="Du har ingen FTP-funktioner til"<br />    ." rådighed!";
-$lang['L_NOGZPOSSIBLE']="Da Zlib ikke er"<br />    ." installeret/tilgængeligt, kan du ikke"<br />    ." bruge GZip-funktionerne!";
+$lang['L_NOFTPPOSSIBLE']="Du har ingen FTP-funktioner til"
+    ." rådighed!";
+$lang['L_NOGZPOSSIBLE']="Da Zlib ikke er"
+    ." installeret/tilgængeligt, kan du ikke"
+    ." bruge GZip-funktionerne!";
 $lang['L_NONE']="ingen";
 $lang['L_NOREVERSE']="Ældste indlæg først";
 $lang['L_NOTAVAIL']="<em>ikke tilgængelig</em>";
@@ -428,11 +571,28 @@ $lang['L_NOTHING_TO_DO']="There is nothing to do.";
 $lang['L_NOTICE']="Notice";
 $lang['L_NOTICES']="Bemærkninger";
 $lang['L_NOT_ACTIVATED']="ikke aktiveret";
-$lang['L_NOT_SUPPORTED']="Denne backup understøtter ikke denne"<br />    ." funktion.";
-$lang['L_NO_DB_FOUND']="kunne ikke automatisk finde nogen"<br />    ." database! Åbn forbindelsesparametrene"<br />    ." og indtast manuelt navnet på"<br />    ." databasen.";
-$lang['L_NO_DB_FOUND_INFO']="Forbindelsen til databasen blev"<br />    ." korrekt etableret.<br /> Dine"<br />    ." brugerdata er gyldige og blev"<br />    ." accepteret af MySQL-serveren.<br />"<br />    ." Men MySQLDumper kunne ikke finde nogen"<br />    ." database.<br /> Den automatiske"<br />    ." visning af databaser via script er"<br />    ." slået fra på visse servere.<br /> Du"<br />    ." skal indtaste databasenavnet manuelt"<br />    ." efter installationen er færdiggjort."<br />    ." Klik på \"konfiguration\""<br />    ." \"Forbindelsesparametr - vis\" og"<br />    ." indtast databasenavnet dér.";
+$lang['L_NOT_SUPPORTED']="Denne backup understøtter ikke denne"
+    ." funktion.";
+$lang['L_NO_DB_FOUND']="kunne ikke automatisk finde nogen"
+    ." database! Åbn forbindelsesparametrene"
+    ." og indtast manuelt navnet på"
+    ." databasen.";
+$lang['L_NO_DB_FOUND_INFO']="Forbindelsen til databasen blev"
+    ." korrekt etableret.<br /> Dine"
+    ." brugerdata er gyldige og blev"
+    ." accepteret af MySQL-serveren.<br />"
+    ." Men MySQLDumper kunne ikke finde nogen"
+    ." database.<br /> Den automatiske"
+    ." visning af databaser via script er"
+    ." slået fra på visse servere.<br /> Du"
+    ." skal indtaste databasenavnet manuelt"
+    ." efter installationen er færdiggjort."
+    ." Klik på \"konfiguration\""
+    ." \"Forbindelsesparametr - vis\" og"
+    ." indtast databasenavnet dér.";
 $lang['L_NO_DB_SELECTED']="No database selected.";
-$lang['L_NO_ENTRIES']="Tabel \"<b>%s</b>\" er tom og"<br />    ." indeholder ingen poster.";
+$lang['L_NO_ENTRIES']="Tabel \"<b>%s</b>\" er tom og"
+    ." indeholder ingen poster.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups af andre scripts";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
 $lang['L_NR_OF_RECORDS']="Number of records";
@@ -450,20 +610,31 @@ $lang['L_PAGE']="Page";
 $lang['L_PAGE_REFRESHS']="Pageviews";
 $lang['L_PASS']="Kodeord";
 $lang['L_PASSWORD']="Password";
-$lang['L_PASSWORDS_UNEQUAL']="Kodeordene er ikke identiske eller"<br />    ." tomme!";
+$lang['L_PASSWORDS_UNEQUAL']="Kodeordene er ikke identiske eller"
+    ." tomme!";
 $lang['L_PASSWORD_REPEAT']="Password (repeat)";
 $lang['L_PASSWORD_STRENGTH']="Password strength";
-$lang['L_PERLOUTPUT1']="Linie i crondump.pl for"<br />    ." absolute_path_of_configdir";
-$lang['L_PERLOUTPUT2']="URL for browseren eller for eksternt"<br />    ." Cron job";
-$lang['L_PERLOUTPUT3']="Kommandolinie i Shell eller for"<br />    ." Crontab";
+$lang['L_PERLOUTPUT1']="Linie i crondump.pl for"
+    ." absolute_path_of_configdir";
+$lang['L_PERLOUTPUT2']="URL for browseren eller for eksternt"
+    ." Cron job";
+$lang['L_PERLOUTPUT3']="Kommandolinie i Shell eller for"
+    ." Crontab";
 $lang['L_PERL_COMPLETELOG']="Perl-Complete-Log";
 $lang['L_PERL_LOG']="Perl-Log";
-$lang['L_PHPBUG']="Fejl i zlib ! Ingen komprimering"<br />    ." mulig!";
+$lang['L_PHPBUG']="Fejl i zlib ! Ingen komprimering"
+    ." mulig!";
 $lang['L_PHPMAIL']="PHP-Function mail()";
 $lang['L_PHP_EXTENSIONS']="PHP-Extensions";
 $lang['L_PHP_LOG']="PHP-Log";
 $lang['L_PHP_VERSION']="PHP-Version";
-$lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"<br />    ." PHP-Version is too old. MySQLDumper"<br />    ." needs a PHP-Version of %s or higher."<br />    ." This server has a PHP-Version of %s"<br />    ." which is too old. You need to update"<br />    ." your PHP-Version before you can"<br />    ." install and use MySQLDumper.";
+$lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"
+    ." PHP-Version is too old. MySQLDumper"
+    ." needs a PHP-Version of %s or higher."
+    ." This server has a PHP-Version of %s"
+    ." which is too old. You need to update"
+    ." your PHP-Version before you can"
+    ." install and use MySQLDumper. <br />";
 $lang['L_POP3_PORT']="POP3-Port";
 $lang['L_POP3_SERVER']="POP3-Server";
 $lang['L_PORT']="Port";
@@ -478,7 +649,10 @@ $lang['L_POSITION_TC']="top center";
 $lang['L_POSITION_TL']="top left";
 $lang['L_POSITION_TR']="top right";
 $lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"<br />    ." can choose for this character"<br />    ." set.<br /><br />_cs = case sensitiv<br />_ci = case"<br />    ." insensitive";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
+    ." can choose for this character set.<br"
+    ." /><br />_cs = case sensitiv<br />_ci ="
+    ." case insensitive";
 $lang['L_PREFIX']="Præfiks";
 $lang['L_PRIMARYKEYS_CHANGED']="Primary keys changed";
 $lang['L_PRIMARYKEYS_CHANGINGERROR']="Error changing primary keys";
@@ -505,7 +679,16 @@ $lang['L_RECORDS_OF_TABLE']="Records of table";
 $lang['L_RECORDS_PER_PAGECALL']="Records per pagecall";
 $lang['L_REFRESHTIME']="Refresh time";
 $lang['L_REFRESHTIME_PROCESSLIST']="Refreshing time of the process list";
-$lang['L_REGISTRATION_DESCRIPTION']="Please enter the administrator account"<br />    ." now. You will login into MySQLDumper"<br />    ." with this user. Note the dates now"<br />    ." given good reason.<br /><br />You can choose"<br />    ." your username and password free."<br />    ." Please make sure to choose the safest"<br />    ." possible combination of user name and"<br />    ." password to protect access to"<br />    ." MySQLDumper against unauthorized"<br />    ." access best!";
+$lang['L_REGISTRATION_DESCRIPTION']="Please enter the administrator account"
+    ." now. You will login into MySQLDumper"
+    ." with this user. Note the dates now"
+    ." given good reason.<br /><br />You can"
+    ." choose your username and password"
+    ." free. Please make sure to choose the"
+    ." safest possible combination of user"
+    ." name and password to protect access to"
+    ." MySQLDumper against unauthorized"
+    ." access best!";
 $lang['L_RELOAD']="Genindlæs";
 $lang['L_REMOVE']="Remove";
 $lang['L_REPAIR']="Repair";
@@ -514,29 +697,46 @@ $lang['L_RESET_SEARCHWORDS']="nulstil søgeord";
 $lang['L_RESTORE']="Genetabler";
 $lang['L_RESTORE_COMPLETE']="<b>%s</b> tabeller oprettet.";
 $lang['L_RESTORE_DB']="Database '<b>%s</b>' på '<b>%s</b>'.";
-$lang['L_RESTORE_DB_COMPLETE_IN']="Restoring of database '%s' finished in"<br />    ." %s.";
+$lang['L_RESTORE_DB_COMPLETE_IN']="Restoring of database '%s' finished in"
+    ." %s.";
 $lang['L_RESTORE_OF_TABLES']="Choose tables to be restored";
 $lang['L_RESTORE_TABLE']="Restoring of table '%s'";
-$lang['L_RESTORE_TABLES_COMPLETED']="Foreløbigt er der oprettet <b>%d</b>"<br />    ." af <b>%d</b> tabeller.";
-$lang['L_RESTORE_TABLES_COMPLETED0']="Foreløbigt er der oprettet <b>%d</b>"<br />    ." tabeller.";
+$lang['L_RESTORE_TABLES_COMPLETED']="Foreløbigt er der oprettet <b>%d</b>"
+    ." af <b>%d</b> tabeller.";
+$lang['L_RESTORE_TABLES_COMPLETED0']="Foreløbigt er der oprettet <b>%d</b>"
+    ." tabeller.";
 $lang['L_REVERSE']="Seneste indlæg først";
-$lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"<br />    ." you need to create the following"<br />    ." directories manually using your"<br />    ." FTP-Programm:";
+$lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"
+    ." you need to create the following"
+    ." directories manually using your"
+    ." FTP-Programm:";
 $lang['L_SAVE']="Gem";
 $lang['L_SAVEANDCONTINUE']="Gem og fortsæt installation";
 $lang['L_SAVE_ERROR']="Fejl - kunne ikke gemme konfiguration!";
-$lang['L_SAVE_SUCCESS']="Configuration was saved succesfully"<br />    ." into configuration file \"%s\".";
-$lang['L_SAVING_DATA_TO_FILE']="Saving data of database '%s' to file"<br />    ." '%s'";
-$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximum filesize reached: proceeding"<br />    ." with file '%s'";
+$lang['L_SAVE_SUCCESS']="Configuration was saved succesfully"
+    ." into configuration file \"%s\".";
+$lang['L_SAVING_DATA_TO_FILE']="Saving data of database '%s' to file"
+    ." '%s'";
+$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximum filesize reached: proceeding"
+    ." with file '%s'";
 $lang['L_SAVING_DB_FORM']="Database";
 $lang['L_SAVING_TABLE']="Gemmer tabel";
 $lang['L_SEARCH_ACCESS_KEYS']="Bladre: fremad=ALT+V, baglæns=ALT+C";
 $lang['L_SEARCH_IN_TABLE']="Søg i tabel";
-$lang['L_SEARCH_NO_RESULTS']="Søgningen efter \"<b>%s</b>\" i tabel"<br />    ." \"<b>%s</b>\" gav ingen rsultater!";
+$lang['L_SEARCH_NO_RESULTS']="Søgningen efter \"<b>%s</b>\" i tabel"
+    ." \"<b>%s</b>\" gav ingen rsultater!";
 $lang['L_SEARCH_OPTIONS']="Søgeindstillinger";
-$lang['L_SEARCH_OPTIONS_AND']="en kolonne skal indeholde ALLE"<br />    ." søgeord (OG-søgning)";
-$lang['L_SEARCH_OPTIONS_CONCAT']="en række skal indeholde alle"<br />    ." søgeordene men kan være i"<br />    ." hvilkensomhelst kolonne (kan tage"<br />    ." noget tid)";
-$lang['L_SEARCH_OPTIONS_OR']="en kolonne skal indeholde et af"<br />    ." søgeordene (ELLER-søgning)";
-$lang['L_SEARCH_RESULTS']="Søgningen efter \"<b>%s</b>\" i"<br />    ." tabellen \"<b>%s</b>\" giver følgende"<br />    ." resultater";
+$lang['L_SEARCH_OPTIONS_AND']="en kolonne skal indeholde ALLE"
+    ." søgeord (OG-søgning)";
+$lang['L_SEARCH_OPTIONS_CONCAT']="en række skal indeholde alle"
+    ." søgeordene men kan være i"
+    ." hvilkensomhelst kolonne (kan tage"
+    ." noget tid)";
+$lang['L_SEARCH_OPTIONS_OR']="en kolonne skal indeholde et af"
+    ." søgeordene (ELLER-søgning)";
+$lang['L_SEARCH_RESULTS']="Søgningen efter \"<b>%s</b>\" i"
+    ." tabellen \"<b>%s</b>\" giver følgende"
+    ." resultater";
 $lang['L_SECOND']="Second";
 $lang['L_SECONDS']="Seconds";
 $lang['L_SELECT']="Select";
@@ -584,7 +784,8 @@ $lang['L_SQL_CARDINALITY']="Kardinalitet";
 $lang['L_SQL_CHANGED']="blev ændret.";
 $lang['L_SQL_CHANGEFIELD']="ændre felt";
 $lang['L_SQL_CHOOSEACTION']="Vælg handling";
-$lang['L_SQL_COLLATENOTMATCH']="Tegnsæt og Kollation passer ikke"<br />    ." sammen!";
+$lang['L_SQL_COLLATENOTMATCH']="Tegnsæt og Kollation passer ikke"
+    ." sammen!";
 $lang['L_SQL_COLUMNS']="Kolonner";
 $lang['L_SQL_COMMANDS']="SQL-kommandoer";
 $lang['L_SQL_COMMANDS_IN']="linier i";
@@ -596,8 +797,10 @@ $lang['L_SQL_CREATED']="blev oprettet.";
 $lang['L_SQL_CREATEINDEX']="opret nyt indeks";
 $lang['L_SQL_CREATETABLE']="opret tabel";
 $lang['L_SQL_DATAVIEW']="Data Visning";
-$lang['L_SQL_DBCOPY']="Indholdet af database `%s` blev"<br />    ." kopieret til database `%s`.";
-$lang['L_SQL_DBSCOPY']="Database-strukturen fra database `%s`"<br />    ." blev kopieret til database `%s`.";
+$lang['L_SQL_DBCOPY']="Indholdet af database `%s` blev"
+    ." kopieret til database `%s`.";
+$lang['L_SQL_DBSCOPY']="Database-strukturen fra database `%s`"
+    ." blev kopieret til database `%s`.";
 $lang['L_SQL_DELETED']="blev slettet";
 $lang['L_SQL_DESTTABLE_EXISTS']="Destinationstabel findes allerede!";
 $lang['L_SQL_EDIT']="ret";
@@ -613,7 +816,9 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fejl: Ikke gyldigt feltnavn";
 $lang['L_SQL_FIRST']="først";
 $lang['L_SQL_IMEXPORT']="Import-Eksport";
 $lang['L_SQL_IMPORT']="Import i Database `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement"<br />    ." detected.<br />Couldn't find closing match"<br />    ." for '%s' in query:<br /><br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
+    ." />Couldn't find closing match for '%s'"
+    ." in query:<br />%s";
 $lang['L_SQL_INDEXES']="Indeks";
 $lang['L_SQL_INSERTFIELD']="indsæt felt";
 $lang['L_SQL_INSERTNEWFIELD']="indsæt nyt felt";
@@ -622,7 +827,8 @@ $lang['L_SQL_NAMEDEST_MISSING']="Destinationsnavn mangler!";
 $lang['L_SQL_NEWFIELD']="Nyt felt";
 $lang['L_SQL_NODATA']="ingen poster";
 $lang['L_SQL_NODEST_COPY']="Ingen kopiering uden en destination!";
-$lang['L_SQL_NOFIELDDELETE']="Slet er ikke muligt da tabeller skal"<br />    ." indeholde mindst et felt.";
+$lang['L_SQL_NOFIELDDELETE']="Slet er ikke muligt da tabeller skal"
+    ." indeholde mindst et felt.";
 $lang['L_SQL_NOTABLESINDB']="Ingen tabeller fundet i Database";
 $lang['L_SQL_NOTABLESSELECTED']="Ingen tabeller valgt!";
 $lang['L_SQL_OPENFILE']="Åbn SQL-fil";
@@ -631,7 +837,8 @@ $lang['L_SQL_OUT1']="Udført";
 $lang['L_SQL_OUT2']="Kommandoer";
 $lang['L_SQL_OUT3']="Den havde";
 $lang['L_SQL_OUT4']="Kommentarer";
-$lang['L_SQL_OUT5']="Da outputtet indeholder mere end 5000"<br />    ." linier vises det ikke.";
+$lang['L_SQL_OUT5']="Da outputtet indeholder mere end 5000"
+    ." linier vises det ikke.";
 $lang['L_SQL_OUTPUT']="SQL-Output";
 $lang['L_SQL_QUERYENTRY']="Forespørgslen indeholder";
 $lang['L_SQL_RECORDDELETED']="Post blev slettet";
@@ -641,7 +848,8 @@ $lang['L_SQL_RECORDNEW']="ny post";
 $lang['L_SQL_RECORDUPDATED']="Post blev opdateret";
 $lang['L_SQL_RENAMEDB']="Omdøb database";
 $lang['L_SQL_RENAMEDTO']="blev omdøbt til";
-$lang['L_SQL_SCOPY']="Tabelstrukturen fra `%s` blev kopieret"<br />    ." ind i Tabel `%s`.";
+$lang['L_SQL_SCOPY']="Tabelstrukturen fra `%s` blev kopieret"
+    ." ind i Tabel `%s`.";
 $lang['L_SQL_SEARCH']="Søg";
 $lang['L_SQL_SEARCHWORDS']="Søgeord";
 $lang['L_SQL_SELECTTABLE']="vælg tabel";
@@ -650,7 +858,8 @@ $lang['L_SQL_SHOWDATATABLE']="Vis Data i Tabel";
 $lang['L_SQL_STRUCTUREDATA']="Struktur og Data";
 $lang['L_SQL_STRUCTUREONLY']="Kun Struktur";
 $lang['L_SQL_TABLEEMPTIED']="Tabel `%s` blev tømt.";
-$lang['L_SQL_TABLEEMPTIEDKEYS']="Tabel `%s` blev tømt og indeksene"<br />    ." blev nulstillet.";
+$lang['L_SQL_TABLEEMPTIEDKEYS']="Tabel `%s` blev tømt og indeksene"
+    ." blev nulstillet.";
 $lang['L_SQL_TABLEINDEXES']="Indeks på tabel";
 $lang['L_SQL_TABLENEW']="Ret Tabeller";
 $lang['L_SQL_TABLENOINDEXES']="Ingen indeks i tabel";
@@ -659,27 +868,36 @@ $lang['L_SQL_TABLESOFDB']="Tabeller i Database";
 $lang['L_SQL_TABLEVIEW']="Tabel-visning";
 $lang['L_SQL_TBLNAMEEMPTY']="Tabelnavnet kan ikke være tomt!";
 $lang['L_SQL_TBLPROPSOF']="Tabelegenskaber for";
-$lang['L_SQL_TCOPY']="Tabel `%s` blev kopieret med data ind"<br />    ." i Tabel `%s`.";
+$lang['L_SQL_TCOPY']="Tabel `%s` blev kopieret med data ind"
+    ." i Tabel `%s`.";
 $lang['L_SQL_UPLOADEDFILE']="indlæst fil:";
 $lang['L_SQL_VIEW_COMPACT']="View: compact";
 $lang['L_SQL_VIEW_STANDARD']="View: standard";
 $lang['L_SQL_VONINS']="fra totalt";
-$lang['L_SQL_WARNING']="Udførelse af SQL-sætninger kan"<br />    ." manipulere data. PAS PÅ! Forfatterne"<br />    ." af dette system påtager sig intet"<br />    ." ansvar for beskadigede eller tabte"<br />    ." data.";
+$lang['L_SQL_WARNING']="Udførelse af SQL-sætninger kan"
+    ." manipulere data. PAS PÅ! Forfatterne"
+    ." af dette system påtager sig intet"
+    ." ansvar for beskadigede eller tabte"
+    ." data.";
 $lang['L_SQL_WASCREATED']="blev oprettet";
 $lang['L_SQL_WASEMPTIED']="blev tømt";
 $lang['L_STARTDUMP']="Start Backup";
-$lang['L_START_RESTORE_DB_FILE']="Starting restore of database '%s' from"<br />    ." file '%s'.";
+$lang['L_START_RESTORE_DB_FILE']="Starting restore of database '%s' from"
+    ." file '%s'.";
 $lang['L_START_SQL_SEARCH']="Start søgning";
 $lang['L_STATUS']="Tilstand";
 $lang['L_STEP']="Trin";
-$lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuration file \"%s\" has"<br />    ." successfully been created.";
-$lang['L_SUCCESS_DELETING_CONFIGFILE']="The configuration file \"%s\" has"<br />    ." successfully been deleted.";
+$lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuration file \"%s\" has"
+    ." successfully been created.";
+$lang['L_SUCCESS_DELETING_CONFIGFILE']="The configuration file \"%s\" has"
+    ." successfully been deleted.";
 $lang['L_TABLE']="Tabel";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";
 $lang['L_TABLES']="Tabeller";
 $lang['L_TABLESELECTION']="Tabelvælg";
-$lang['L_TABLE_CREATE_SUCC']="The table '%s' has been created"<br />    ." successfully.";
+$lang['L_TABLE_CREATE_SUCC']="The table '%s' has been created"
+    ." successfully.";
 $lang['L_TABLE_TYPE']="Table Type";
 $lang['L_TESTCONNECTION']="Test forbindelse";
 $lang['L_THEME']="Theme";
@@ -696,7 +914,8 @@ $lang['L_TITLE_SHOW_DATA']="Show data";
 $lang['L_TITLE_UPLOAD']="Upload SQL file";
 $lang['L_TO']="til";
 $lang['L_TOOLS']="Funktioner";
-$lang['L_TOOLS_TOOLBOX']="Vælg Database / Datebasefunktioner /"<br />    ." Import - Eksport";
+$lang['L_TOOLS_TOOLBOX']="Vælg Database / Datebasefunktioner /"
+    ." Import - Eksport";
 $lang['L_TRUNCATE']="Truncate";
 $lang['L_TRUNCATE_DATABASE']="Truncate database";
 $lang['L_UNIT_KB']="KiloByte";
@@ -705,7 +924,8 @@ $lang['L_UNIT_PIXEL']="Pixel";
 $lang['L_UNKNOWN']="ukendt";
 $lang['L_UNKNOWN_SQLCOMMAND']="ukendt SQL-kommando";
 $lang['L_UPDATE']="Update";
-$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"<br />    ." server '%s' could not be established.";
+$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"
+    ." server '%s' could not be established.";
 $lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
 $lang['L_UPTO']="op til";
 $lang['L_USERNAME']="Username";
@@ -719,33 +939,60 @@ $lang['L_WITH']="med";
 $lang['L_WITHATTACH']="med vedhæftede";
 $lang['L_WITHOUTATTACH']="uden vedhæftede";
 $lang['L_WITHPRAEFIX']="med præfiks";
-$lang['L_WRONGCONNECTIONPARS']="Forkerte eller manglende"<br />    ." forbindelsesparametre!";
+$lang['L_WRONGCONNECTIONPARS']="Forkerte eller manglende"
+    ." forbindelsesparametre!";
 $lang['L_WRONG_CONNECTIONPARS']="Forbindelsesparametre er forkerte!";
-$lang['L_WRONG_RIGHTS']="Kan ikke skrive til filen eller"<br />    ." folderen '%s'.<br /> Fil-rettighederne"<br />    ." (chmod) er ikke sat korrekt eller har"<br />    ." den forkerte ejer.<br /> Sæt venligst"<br />    ." de korrekte attributter via din"<br />    ." FTP-klient.<br /> Filen eller mappen"<br />    ." skal være sat til %s.<br />";
+$lang['L_WRONG_RIGHTS']="Kan ikke skrive til filen eller"
+    ." folderen '%s'.<br /> Fil-rettighederne"
+    ." (chmod) er ikke sat korrekt eller har"
+    ." den forkerte ejer.<br /> Sæt venligst"
+    ." de korrekte attributter via din"
+    ." FTP-klient.<br /> Filen eller mappen"
+    ." skal være sat til %s.<br />";
 $lang['L_YES']="ja";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"<br />    ." directory.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"<br />    ." file.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"<br />    ." link.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"<br />    ." executable.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"<br />    ." doesn't exists.";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"<br />    ." readable.";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"<br />    ." uploaded file.";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"<br />    ." writable.";
-$lang['L_ZEND_ID_DIGITS_INVALID']="Invalid type given. String, integer or"<br />    ." float expected.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
+    ." directory.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"
+    ." file.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"
+    ." link.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"
+    ." executable.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"
+    ." doesn't exists.";
+$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"
+    ." readable.";
+$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"
+    ." uploaded file.";
+$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"
+    ." writable.";
+$lang['L_ZEND_ID_DIGITS_INVALID']="Invalid type given. String, integer or"
+    ." float expected.";
 $lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="Value is an empty string.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="The email address can not be matched"<br />    ." against dot-atom format.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="The email address can not be matched"
+    ." against dot-atom format.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Invalid type given. String expected.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="The email address format is invalid.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="The hostname is invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="The local part of the email address"<br />    ." (<local-part>@<domain>.<tld>) is"<br />    ." invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="There is no valid MX record for this"<br />    ." email address.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="The hostname is located in a not"<br />    ." routable network segment. The email"<br />    ." address can not be resolved from"<br />    ." public network.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="The email address is too long. The"<br />    ." maximum length is 320 chars.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="The email addess can not be matched"<br />    ." against quoted-string format.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="The local part of the email address"
+    ." (<local-part>@<domain>.<tld>) is"
+    ." invalid.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="There is no valid MX record for this"
+    ." email address.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="The hostname is located in a not"
+    ." routable network segment. The email"
+    ." address can not be resolved from"
+    ." public network.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="The email address is too long. The"
+    ." maximum length is 320 chars.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="The email addess can not be matched"
+    ." against quoted-string format.";
 $lang['L_ZEND_ID_IS_EMPTY']="Value is required and can't be empty.";
-$lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"<br />    ." against.";
+$lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"
+    ." against.";
 $lang['L_ZEND_ID_NOT_DIGITS']="Only digits are allowed.";
-$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Invalid type given. String, integer,"<br />    ." float, boolean or array expected.";
+$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Invalid type given. String, integer,"
+    ." float, boolean or array expected.";
 $lang['L_ZEND_ID_NOT_SAME']="The two given tokens do not match.";
 return $lang;
