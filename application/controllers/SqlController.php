@@ -410,7 +410,6 @@ class SqlController extends Zend_Controller_Action
                         // process one query
                         try {
                             $res = $this->_db->query($statements[0], Msd_Db::ARRAY_ASSOC);
-                            print_r($res);
                             $this->view->resultset = $res;
                         } catch (Exception $e) {
                             $this->view->errorMessage = $e->getMessage();

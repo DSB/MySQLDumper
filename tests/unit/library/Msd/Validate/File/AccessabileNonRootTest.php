@@ -36,7 +36,7 @@ if (get_current_user() != 'root') {
                 $this->markTestIncomplete('This test can not be run as user root.');
                 return;
             }
-            $this->chmod(0400);
+            $this->chmod(0400, $this->_testFile);
             $this->validator->setOptions(array('accessTypes' => "write"));
             $this->assertEquals(false, $this->validator->isValid($this->_testFile));
         }
