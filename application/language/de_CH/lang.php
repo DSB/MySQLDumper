@@ -915,6 +915,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="D Konfigurationsdatei \"%s\" isch"
     ." erfolgriich aagleit worde.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="D Konfigurationsdatei \"%s\" isch"
     ." erfolgriich glöscht worde.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabälle";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

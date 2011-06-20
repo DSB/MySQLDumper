@@ -975,6 +975,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Die Konfigurationsdatei \"%s\" wurde"
     ." erfolgreich angelegt.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Die Konfigurationsdatei \"%s\" wurde"
     ." erfolgreich gelöscht.";
+$lang['L_SUM_TOTAL']="Summe";
 $lang['L_TABLE']="Tabelle";
 $lang['L_TABLENAME']="Tabellenname";
 $lang['L_TABLENAME_EXPLAIN']="Name der Tabelle";

@@ -1077,6 +1077,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="ملف التهيئة \"%s\" تم"
     ." انشاؤه بنجاح.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="ملف التهيئة \"%s\" تم"
     ." حذفه بنجاح.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="جدول";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

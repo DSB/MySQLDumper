@@ -933,6 +933,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavenie zálohovania %s bolo<br />"
     ." úspešne vytvorené.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavenie zálohovania %s bolo<br />"
     ." úspešne odstránené.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabulk";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

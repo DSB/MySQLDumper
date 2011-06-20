@@ -946,6 +946,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Il file di configurazione \"%s\" è"
     ." stato creato con successo.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Il file di configurazione \"%s\" è"
     ." stato cancellato con successo.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabella";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

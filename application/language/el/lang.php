@@ -1317,6 +1317,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Το αρχείο ρύθμισης"
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Το αρχείο ρύθμισης"
     ." \"%s\" διαγράφηκε"
     ." επιτυχώς.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Πίνακας";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

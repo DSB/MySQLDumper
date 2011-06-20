@@ -894,6 +894,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Konfigureringsfilen \"%s\" har"
     ." skapats.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Konfigureringsfilen \"%s\" har"
     ." raderats.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabell";
 $lang['L_TABLENAME']="Tabellnamn";
 $lang['L_TABLENAME_EXPLAIN']="Tabellnamn";

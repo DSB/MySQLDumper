@@ -906,6 +906,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Fişier de configurare \"%s\" a fost"
     ." creat cu succes.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Fişier de configurare \"%s\" a fost"
     ." şters cu succes.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabele";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

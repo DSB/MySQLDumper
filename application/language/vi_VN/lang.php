@@ -991,6 +991,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="File cấu hình \"%s\" vừa được"
     ." tạo thành công.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="File cấu hình \"%s\" vừa được"
     ." xóa thành công.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Bảng";
 $lang['L_TABLENAME']="Tên bảng";
 $lang['L_TABLENAME_EXPLAIN']="Tên bảng";

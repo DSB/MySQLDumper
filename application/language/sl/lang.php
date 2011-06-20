@@ -904,6 +904,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavitvena datoteka \"%s\" je bila"
     ." uspešno kreirana.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavitvena datoteka \"%s\" je bila"
     ." uspešno izbrisana.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabela";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

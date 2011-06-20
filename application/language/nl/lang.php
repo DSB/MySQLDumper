@@ -914,6 +914,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuratie bestand %s is succesvol"
     ." aangemaakt.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Het configuratie bestand %s is"
     ." succesvol verwijderd.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabel";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

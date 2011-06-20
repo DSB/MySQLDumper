@@ -923,6 +923,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="A(z) \"%s\" konfigurációs fájl"
     ." sikeresen létrehozva.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="A(z) \"%s\" konfigurációs fájl"
     ." sikeresen törölve.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tábla";
 $lang['L_TABLENAME']="Tábla neve";
 $lang['L_TABLENAME_EXPLAIN']="Tábla neve";

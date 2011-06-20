@@ -923,6 +923,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuration file \"%s\" has"
     ." successfully been created.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="The configuration file \"%s\" has"
     ." successfully been deleted.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabela";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

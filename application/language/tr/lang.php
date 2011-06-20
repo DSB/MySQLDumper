@@ -908,6 +908,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="\"%s\" isimli ayar dosyası başarı"
     ." ile oluşturuldu";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Ayar dosyası \"%s\" başarıyla"
     ." silindi.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tablo";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

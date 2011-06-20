@@ -1125,6 +1125,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="با موفقيت ساخته شد %s"
     ." پيکربندي فايل";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="با موفقيت حذف شد %s"
     ." پيکربندي فايل";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="جدول";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

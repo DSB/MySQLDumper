@@ -974,6 +974,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="El archivo de configuración \"%s\" se"
     ." ha creado correctamente.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="El archivo de configuración \"%s\" ha"
     ." sido eliminado.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabla";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";

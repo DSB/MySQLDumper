@@ -1003,6 +1003,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Le fichier de configuration \"%s\" a"
     ." été créé avec succès.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Le fichier de configuration \"%s\" a"
     ." été supprimé avec succès.";
+$lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Table";
 $lang['L_TABLENAME']="Table name";
 $lang['L_TABLENAME_EXPLAIN']="Table name";
