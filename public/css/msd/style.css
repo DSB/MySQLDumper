@@ -634,9 +634,8 @@ table.border {
 }
 
 table td.sum {
-	background-color: red;
+    border-top:  1px solid #CCC;
 	font-weight: bold;
-	text-align: right;
 }
 
 table tr.thead th,table tr.thead td {

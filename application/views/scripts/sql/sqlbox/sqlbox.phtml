@@ -50,7 +50,7 @@ function setShowTableQuery()
 <?php
 $this->jQuery()->javascriptCaptureEnd();
 
-if (isset($this->resultset)) {
+if (isset($this->resultset) && is_array($this->resultset)) {
     $res = $this->resultset;
     if (count($res)>0) {
         $fieldNames = array_keys($res[0]);
@@ -85,11 +85,42 @@ if (isset($this->resultset)) {
                 ?>
         </table>
         <?php
-            } else {
+    } else {
         echo '<p>' . $this->lang->L_NO_ENTRIES . '</p>';
     }
 }
+
+if (isset($this->resultSummary)) {
+    $i = 1;
+    $totalQueries = 0;
+    $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
     ?>
-
-
+    <table class="bdr" summary="Table lists result sets">
+        <tr class="thead">
+            <th colspan="3"><?php echo $this->lang->L_RESULT;?>:</th>
+        </tr>
+        <tr class="thead">
+            <th class="right">#</th>
+            <th><?php echo $this->lang->L_QUERY_TYPE;?></th>
+            <th><?php echo $this->lang->L_NR_OF_QUERIES;?></th>
+        </tr>
+        <?php
+        foreach ($this->resultSummary as $type => $count) {
+            $totalQueries += $count;
+        ?>
+            <tr class="<?php echo $cycleHelper->next();?>">
+                <td class="small right"><?php echo $this->numberFormat($i);?>.</td>
+                <td class="small"><?php echo ucfirst($type);?></td>
+                <td class="small right"><?php echo $this->numberFormat($count);?></td>
+            </tr>
+            <?php $i++;
+        } ?>
+        <tr class="<?php echo $cycleHelper->next();?>">
+            <td class="small sum">&nbsp;</td>
+            <td class="small sum"><?php echo $this->lang->L_SUM_TOTAL;;?></td>
+            <td class="small right sum"><?php echo $this->numberFormat($totalQueries);?></td>
+        </tr>
+    </table>
+<?php
+} ?>
 </div>

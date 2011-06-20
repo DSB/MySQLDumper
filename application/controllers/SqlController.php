@@ -393,15 +393,28 @@ class SqlController extends Zend_Controller_Action
                 $parser->parse();
                 if ($sqlObject->hasErrors()) {
                     $this->view->errorMessage = implode('<br />', $sqlObject->getErrors());
-                }
-                $statements = $parser->getParsedStatements();
-                foreach ($statements as $statement) {
-                    //echo "<br>Extracted statement: ".$statement;
-                    try {
-                        $res = $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
-                        $this->view->resultset = $res;
-                    } catch (Exception $e) {
-                        $this->view->errorMessage = $e->getMessage();
+                } else {
+                    $statements = $parser->getParsedStatements();
+                    if (sizeof($statements) > 1) {
+                        // we have more than one query to execute
+                        foreach ($statements as $statement) {
+                            try {
+                                $this->_db->query($statement, Msd_Db::ARRAY_ASSOC);
+                            } catch (Exception $e) {
+                                $this->view->errorMessage = $e->getMessage();
+                            }
+                        }
+                        $summary = $parser->getSummary();
+                        $this->view->resultSummary = $summary;
+                    } else {
+                        // process one query
+                        try {
+                            $res = $this->_db->query($statements[0], Msd_Db::ARRAY_ASSOC);
+                            print_r($res);
+                            $this->view->resultset = $res;
+                        } catch (Exception $e) {
+                            $this->view->errorMessage = $e->getMessage();
+                        }
                     }
                 }
             }
