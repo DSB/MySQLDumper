@@ -11,7 +11,7 @@
 
 /**
  * Class to represent sql data to be parsed.
- * Object is intended to be handed over to the parser classes so that they can work on it.
+ * Object is intended to be handled over to the parser classes so that they can work on it.
  *
  * @package         MySQLDumper
  * @subpackage      SQL-Parser
@@ -26,7 +26,7 @@ class Msd_Sql_Object
     private $_data = '';
 
     /**
-     * Holdes a pointer to the actual examined part as offset.
+     * Holds a pointer to the actual examined part as offset.
      *
      * @var string
      */
@@ -251,7 +251,7 @@ class Msd_Sql_Object
     }
 
     /**
-     * Get data upto the next new line
+     * Get data up to the next new line
      *
      * @return string
      */
@@ -302,7 +302,7 @@ class Msd_Sql_Object
     }
 
     /**
-     * Check if errors occured.
+     * Check if errors occurred.
      *
      * @return bool
      */

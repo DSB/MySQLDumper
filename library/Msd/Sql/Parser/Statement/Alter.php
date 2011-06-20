@@ -21,9 +21,9 @@ class Msd_Sql_Parser_Statement_Alter implements Msd_Sql_Parser_Interface
     /**
      * Parse the statement.
      *
-     * @param Msd_Sql_Object $statement MySQL CREATE statement.
+     * @param Msd_Sql_Object $sql MySQL CREATE statement.
      *
-     * @return void
+     * @return string
      */
     public function parse(Msd_Sql_Object $sql)
     {
