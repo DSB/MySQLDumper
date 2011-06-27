@@ -494,9 +494,9 @@ $lang['L_MAILERROR']="Tyvärr uppträdde ett fel när"
     ." epostmeddelandet skickades!";
 $lang['L_MAILPROGRAM']="Epostprogram";
 $lang['L_MAXIMUM_LENGTH']="Maximal längd";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="Detta är antalet bytes som används"
+    ." av ett tecken när du sparar i denna"
+    ." teckensats.";
 $lang['L_MAXSIZE']="max. storlek";
 $lang['L_MAX_BACKUP_FILES_EACH2']="för varje databas";
 $lang['L_MAX_EXECUTION_TIME']="Maximal exekveringstid";
@@ -533,22 +533,21 @@ $lang['L_MYSQL_DATA']="MySQL-data";
 $lang['L_MYSQL_ROUTINE']="Rutin";
 $lang['L_MYSQL_ROUTINES']="Rutiner";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Sparade funktioner och procedurer";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Tabeller har en definierad"
+    ." kolumnstruktur som dataposterna kan"
+    ." sparas i. Varje datapost motsvarar en"
+    ." rad i tabellen.";
 $lang['L_MYSQL_VERSION']="MySQL-version";
-$lang['L_MYSQL_VERSION_TOO_OLD']="We are sorry: the installed"
-    ." MySQL-Version %s is too old and can"
-    ." not be used together with this version"
-    ." of MySQLDumper. Please update your"
-    ." MySQL-Version to at least version"
-    ." %s.<br />As an alternative you could"
-    ." install MySQLDumper version 1.24,"
-    ." which is able to work together with"
-    ." older MySQL-Versions. But you will"
-    ." lose some of the new functions of"
-    ." MySQLDumper in that case.<br />";
+$lang['L_MYSQL_VERSION_TOO_OLD']="Ledsen: MySQL-versionen %s är tyvärr"
+    ." för gammal och kan inte användas"
+    ." tillsammans med denna"
+    ." MySQLDumper-version. Uppdatera minst"
+    ." till MySQL-version %s eller högre."
+    ." Alternativt kan du använda"
+    ." MySQLDumper-version 1.24 som kan"
+    ." fungera med äldre MySQL-servrar. Du"
+    ." förlorar i detta fall nya"
+    ." MySQLDumper-funktioner.";
 $lang['L_MYSQL_VIEW']="View";
 $lang['L_MYSQL_VIEWS']="Views";
 $lang['L_MYSQL_VIEWS_EXPLAIN']="Views visar (filtrade) masker av"
@@ -596,7 +595,7 @@ $lang['L_NO_ENTRIES']="Tabellen \"<b>%s</b>\" är tom och har"
     ." inga poster.";
 $lang['L_NO_MSD_BACKUPFILE']="Filer skapade med andra program";
 $lang['L_NO_NAME_GIVEN']="Du har ej angivit något namn.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
+$lang['L_NR_OF_QUERIES']="Antal querys";
 $lang['L_NR_OF_RECORDS']="Antal dataposter";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabeller har optimerats.";
 $lang['L_NUMBER_OF_FILES_FORM']="Antal backup-filer per databas";
@@ -629,13 +628,14 @@ $lang['L_PHPMAIL']="PHP-funktion mail()";
 $lang['L_PHP_EXTENSIONS']="PHP-extensioner";
 $lang['L_PHP_LOG']="PHP-logg";
 $lang['L_PHP_VERSION']="PHP-version";
-$lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"
-    ." PHP-Version is too old. MySQLDumper"
-    ." needs a PHP-Version of %s or higher."
-    ." This server has a PHP-Version of %s"
-    ." which is too old. You need to update"
-    ." your PHP-Version before you can"
-    ." install and use MySQLDumper. <br />";
+$lang['L_PHP_VERSION_TOO_OLD']="Ledsen: Denna PHP-version är för"
+    ." gammal för att kunna använda"
+    ." MySQLDumper. PHP måste vara version"
+    ." %s eller högre. Tyvärr är"
+    ." PHP-version %s på den här servern"
+    ." för gammal. PHP-versionen måste"
+    ." uppdateras innan MySQLDumper kan"
+    ." installeras och användas.";
 $lang['L_POP3_PORT']="POP3-port";
 $lang['L_POP3_SERVER']="POP3-server";
 $lang['L_PORT']="Port";
@@ -650,10 +650,12 @@ $lang['L_POSITION_TC']="uppe i mitten";
 $lang['L_POSITION_TL']="uppe till vänster";
 $lang['L_POSITION_TR']="uppe till höger";
 $lang['L_POSSIBLE_COLLATIONS']="Möjliga sorteringar";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
-    ." /><br />_cs = case sensitiv<br />_ci ="
-    ." case insensitive";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="Detta är de möjliga"
+    ." sorteringsreglerna för denna"
+    ." teckenuppsättning.<br /><br />_cs ="
+    ." case sensitiv -> stora/små bokstäver"
+    ." beaktas<br />_ci = case insensitive ->"
+    ." stora/små bokstäver beaktas ej";
 $lang['L_PREFIX']="Prefix";
 $lang['L_PRIMARYKEYS_CHANGED']="Den primära nyckeln har ändrats";
 $lang['L_PRIMARYKEYS_CHANGINGERROR']="Ett fel uppträdde när den primära"
@@ -675,7 +677,7 @@ $lang['L_PROGRESS_TABLE']="Genomfört av tabell";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processer";
 $lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY_TYPE']="Query-typ";
 $lang['L_RECHTE']="Rättigheter";
 $lang['L_RECORDS']="Dataposter";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> dataposter har överförts.";
@@ -683,16 +685,18 @@ $lang['L_RECORDS_OF_TABLE']="Dataposter i tabellen";
 $lang['L_RECORDS_PER_PAGECALL']="Dataposter per sidoladdning";
 $lang['L_REFRESHTIME']="Aktualiseringsintervall";
 $lang['L_REFRESHTIME_PROCESSLIST']="Processlistans aktualiseringsintervall";
-$lang['L_REGISTRATION_DESCRIPTION']="Please enter the administrator account"
-    ." now. You will login into MySQLDumper"
-    ." with this user. Note the dates now"
-    ." given good reason.<br /><br />You can"
-    ." choose your username and password"
-    ." free. Please make sure to choose the"
-    ." safest possible combination of user"
-    ." name and password to protect access to"
-    ." MySQLDumper against unauthorized"
-    ." access best!";
+$lang['L_REGISTRATION_DESCRIPTION']="Ange nu information för"
+    ." administratörs-kontot. Med denna"
+    ." användare kommer du att kunna logga"
+    ." in i MySQLDumper i framtiden. Notera"
+    ." datan noga.<br /><br />Du kan fritt"
+    ." välja ett användarnamn och"
+    ." lösenord. Var dock noga med att"
+    ." välja den säkraste möjliga"
+    ." kombination av användarnamn och"
+    ." lösenord för att styra åtkomsten"
+    ." till MySQLDumper och för att skydda"
+    ." mot obehörig åtkomst!";
 $lang['L_RELOAD']="Ladda om";
 $lang['L_REMOVE']="Avlägsna";
 $lang['L_REPAIR']="Reparera";
@@ -710,7 +714,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Hittills har <b>%d</b> av <b>%d</b>"
     ." tabeller skapats.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Hittills har <b>%d</b> av <b>%d</b>"
     ." tabeller skapats.";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="Resultat";
 $lang['L_REVERSE']="Nyaste posten först";
 $lang['L_SAFEMODEDESC']="Eftersom PHP utförs med optionen"
     ." \"safe_mode=on\" på denna server"
@@ -824,9 +828,10 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Fel: fältnamnet ej giltigt";
 $lang['L_SQL_FIRST']="först";
 $lang['L_SQL_IMEXPORT']="Import/export";
 $lang['L_SQL_IMPORT']="Import till databasen `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: hittade ofullständiga"
+    ." anvisningar. Kunde ej hitta stängande"
+    ." överensstämmelse '%s'.<br />Query:"
+    ." %s";
 $lang['L_SQL_INDEXES']="Index";
 $lang['L_SQL_INSERTFIELD']="infoga fält";
 $lang['L_SQL_INSERTNEWFIELD']="infoga nytt fält";
@@ -897,7 +902,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Konfigureringsfilen \"%s\" har"
     ." skapats.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Konfigureringsfilen \"%s\" har"
     ." raderats.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="Summa";
 $lang['L_TABLE']="Tabell";
 $lang['L_TABLENAME']="Tabellnamn";
 $lang['L_TABLENAME_EXPLAIN']="Tabellnamn";

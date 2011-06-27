@@ -60,9 +60,9 @@ $lang['L_CHANGE']="change";
 $lang['L_CHANGEDIR']="Könyvtár váltása";
 $lang['L_CHANGEDIRERROR']="Nem lehet könyvtárat váltani!";
 $lang['L_CHARSET']="Karakterkészlet";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Karakterkészletek";
 $lang['L_CHECK']="Ellenőrzés";
-$lang['L_CHECK_DIRS']="Check my directories";
+$lang['L_CHECK_DIRS']="Könyvtárak ellenőrzése";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"
     ." encoding of the backup file"
     ." automatically.<br /><br />You must"
@@ -77,7 +77,7 @@ $lang['L_CHOOSE_DB']="Adatbázis kiválasztása";
 $lang['L_CLEAR_DATABASE']="Adatbázis kiürítése";
 $lang['L_CLOSE']="Bezár";
 $lang['L_COLLATION']="Collation";
-$lang['L_COMMAND']="Command";
+$lang['L_COMMAND']="Parancs";
 $lang['L_COMMAND_AFTER_BACKUP']="Command after backup";
 $lang['L_COMMAND_BEFORE_BACKUP']="Command before backup";
 $lang['L_COMMENT']="Megjegyzés";
@@ -139,7 +139,7 @@ $lang['L_CONVERT_WRONG_PARAMETERS']="Hibás paraméterek! A konvertálás"
 $lang['L_CREATE']="Create";
 $lang['L_CREATED']="Létrehozva";
 $lang['L_CREATEDIRS']="Könyvtárak létrehozása";
-$lang['L_CREATE_AUTOINDEX']="Create Auto-Index";
+$lang['L_CREATE_AUTOINDEX']="Autoindex létrehozása";
 $lang['L_CREATE_CONFIGFILE']="Új konfigurációs fájl"
     ." létrehozása";
 $lang['L_CREATE_DATABASE']="Új adatbázis létrehozása";
@@ -167,10 +167,11 @@ $lang['L_CSV_NAMEFIRSTLINE']="Field names in first line";
 $lang['L_CSV_NODATA']="No data found for import!";
 $lang['L_CSV_NULL']="Replace NULL with";
 $lang['L_DATABASES_OF_USER']="Felhasználó adatbázisai";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
+$lang['L_DATABASE_CREATED_FAILED']="Az adatbázist nem sikerült"
+    ." létrehozni. A MySQL a következő"
+    ." hibaüzenetet adta:<br/><br />%s";
 $lang['L_DATABASE_CREATED_SUCCESS']="A(z) '%s' adatbázis sikeresen"
-    ." elkészült.";
+    ." létrehozva.";
 $lang['L_DATASIZE']="Size of data";
 $lang['L_DATASIZE_INFO']="Ez a rekordok mérete, nem pedig a"
     ." biztonsági mentésé";
@@ -364,9 +365,9 @@ $lang['L_FM_LAST_BU']="Last Backup";
 $lang['L_FM_NOFILE']="Nincs fájl kiválasztva!";
 $lang['L_FM_NOFILESFOUND']="A fájl nem található.";
 $lang['L_FM_RECORDS']="Rekordok";
-$lang['L_FM_RESTORE']="Restore";
-$lang['L_FM_RESTORE_HEADER']="Restore of Database"
-    ." `<strong>%s</strong>`";
+$lang['L_FM_RESTORE']="Visszaállítás";
+$lang['L_FM_RESTORE_HEADER']="A(z) `<strong>%s</strong>` adatbázis"
+    ." visszaállítása";
 $lang['L_FM_SELECTTABLES']="Táblák kiválasztása";
 $lang['L_FM_STARTDUMP']="Start New Backup";
 $lang['L_FM_TABLES']="Táblák";
@@ -464,7 +465,7 @@ $lang['L_IMPORT_NOTABLE']="No table was selected for import!";
 $lang['L_IN']="in";
 $lang['L_INDEX_SIZE']="Size of index";
 $lang['L_INFO_ACTDB']="Kiválasztott adatbázis";
-$lang['L_INFO_DATABASES']="Accessable database(s)";
+$lang['L_INFO_DATABASES']="Hozzáférhető adatbázis(ok)";
 $lang['L_INFO_DBEMPTY']="Az adatbázis üres!";
 $lang['L_INFO_FSOCKOPEN_DISABLED']="Ezen a szerveren a fsockopen() PHP"
     ." funkció le van tiltva, ezért nem"
@@ -497,7 +498,7 @@ $lang['L_LANGUAGE_NAME']="Magyar";
 $lang['L_LASTBACKUP']="Last Backup";
 $lang['L_LOAD']="Alapértelmezett beállítások"
     ." betöltése";
-$lang['L_LOAD_DATABASE']="Reload databases";
+$lang['L_LOAD_DATABASE']="Adatbázisok frissítése";
 $lang['L_LOAD_FILE']="Load file";
 $lang['L_LOG']="Log";
 $lang['L_LOGFILENOTWRITABLE']="Can't write to logfile!";
@@ -540,7 +541,7 @@ $lang['L_MOBILE_OFF']="Ki";
 $lang['L_MOBILE_ON']="Be";
 $lang['L_MODE_EASY']="Könnyű";
 $lang['L_MODE_EXPERT']="Expert";
-$lang['L_MSD_INFO']="MySQLDumper-Information";
+$lang['L_MSD_INFO']="MySQLDumper-információk";
 $lang['L_MSD_MODE']="MySQLDumper-Mode";
 $lang['L_MSD_VERSION']="MySQLDumper-Version";
 $lang['L_MULTIDUMP']="Multidump";
@@ -726,7 +727,8 @@ $lang['L_RESET']="Reset";
 $lang['L_RESET_SEARCHWORDS']="reset search words";
 $lang['L_RESTORE']="Visszaállítás";
 $lang['L_RESTORE_COMPLETE']="<b>%s</b> tábla létrehozva.";
-$lang['L_RESTORE_DB']="Database '<b>%s</b>' on '<b>%s</b>'.";
+$lang['L_RESTORE_DB']="A(z) '<b>%s</b>' adatbázis a(z)"
+    ." '<b>%s</b>' szerveren.";
 $lang['L_RESTORE_DB_COMPLETE_IN']="A(z) '%s' adatbázis visszaállítása"
     ." %s múlva lesz készen.";
 $lang['L_RESTORE_OF_TABLES']="Válaszd ki a visszaállítandó"
@@ -826,7 +828,8 @@ $lang['L_SQL_COMMANDS']="SQL Commands";
 $lang['L_SQL_COMMANDS_IN']="lines in";
 $lang['L_SQL_COMMANDS_IN2']="sec. parsed.";
 $lang['L_SQL_COPYDATADB']="Copy complete Database to";
-$lang['L_SQL_COPYSDB']="Copy Structure of Database";
+$lang['L_SQL_COPYSDB']="Adatbázis struktúrájának"
+    ." másolása";
 $lang['L_SQL_COPYTABLE']="tábla másolása";
 $lang['L_SQL_CREATED']="was created.";
 $lang['L_SQL_CREATEINDEX']="új index létrehozása";
@@ -834,8 +837,8 @@ $lang['L_SQL_CREATETABLE']="tábla létrehozása";
 $lang['L_SQL_DATAVIEW']="Adat nézet";
 $lang['L_SQL_DBCOPY']="A(z) adatbázis tartalma átmásolva"
     ." a(z) `%s` adatbázisba.";
-$lang['L_SQL_DBSCOPY']="The Structure of Database `%s` was"
-    ." copied in Database `%s`.";
+$lang['L_SQL_DBSCOPY']="A(z) `%s` adatbázis struktúrája"
+    ." átmásolva a(z) `%s` adatbázisba.";
 $lang['L_SQL_DELETED']="törölve";
 $lang['L_SQL_DESTTABLE_EXISTS']="Destination Table exists !";
 $lang['L_SQL_EDIT']="szerkesztés";
@@ -881,8 +884,8 @@ $lang['L_SQL_RECORDDELETED']="Rekord törölve";
 $lang['L_SQL_RECORDEDIT']="rekord szerkesztése";
 $lang['L_SQL_RECORDINSERTED']="rekord hozzáadva";
 $lang['L_SQL_RECORDNEW']="új rekord";
-$lang['L_SQL_RECORDUPDATED']="Record was updated";
-$lang['L_SQL_RENAMEDB']="Rename Database";
+$lang['L_SQL_RECORDUPDATED']="Rekord frissítve";
+$lang['L_SQL_RENAMEDB']="Adatbázis átnevezése";
 $lang['L_SQL_RENAMEDTO']="átnevezve";
 $lang['L_SQL_SCOPY']="Table structure of `%s` was copied in"
     ." Table `%s`.";
@@ -900,7 +903,7 @@ $lang['L_SQL_TABLEINDEXES']="Indexes of table";
 $lang['L_SQL_TABLENEW']="Táblák szerkesztése";
 $lang['L_SQL_TABLENOINDEXES']="No Indexes in Table";
 $lang['L_SQL_TABLENONAME']="Table needs a name!";
-$lang['L_SQL_TABLESOFDB']="Tables of Database";
+$lang['L_SQL_TABLESOFDB']="Adatbázis táblái";
 $lang['L_SQL_TABLEVIEW']="Tábla nézet";
 $lang['L_SQL_TBLNAMEEMPTY']="A tábla név nem lehet üres!";
 $lang['L_SQL_TBLPROPSOF']="Table properties of";
@@ -933,7 +936,7 @@ $lang['L_TABLENAME_EXPLAIN']="Tábla neve";
 $lang['L_TABLES']="Tables";
 $lang['L_TABLESELECTION']="Table selection";
 $lang['L_TABLE_CREATE_SUCC']="A(z) '%s' tábla sikeresen"
-    ." elkészült.";
+    ." létrehozva.";
 $lang['L_TABLE_TYPE']="Tábla típusa";
 $lang['L_TESTCONNECTION']="Test Connection";
 $lang['L_THEME']="Theme";
@@ -959,7 +962,7 @@ $lang['L_UNIT_MB']="MegaByte";
 $lang['L_UNIT_PIXEL']="pixel";
 $lang['L_UNKNOWN']="ismeretlen";
 $lang['L_UNKNOWN_SQLCOMMAND']="unknown SQL-Command";
-$lang['L_UPDATE']="Update";
+$lang['L_UPDATE']="Frissítés";
 $lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"
     ." server '%s' could not be established.";
 $lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
@@ -967,7 +970,7 @@ $lang['L_UPTO']="up to";
 $lang['L_USERNAME']="Felhasználónév";
 $lang['L_USE_SSL']="SSL használata";
 $lang['L_VALUE']="Value";
-$lang['L_VERSIONSINFORMATIONEN']="Version Information";
+$lang['L_VERSIONSINFORMATIONEN']="Verzió információ";
 $lang['L_VIEW']="view";
 $lang['L_VISIT_HOMEPAGE']="Honlap megtekintése";
 $lang['L_VOM']="from";

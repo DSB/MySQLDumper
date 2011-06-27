@@ -660,7 +660,7 @@ $lang['L_NO_ENTRIES']="Bảng \"<b>%s</b>\" trống rỗng"
     ." nào.";
 $lang['L_NO_MSD_BACKUPFILE']="Bản sao lưu khác";
 $lang['L_NO_NAME_GIVEN']="Bạn chưa điền tên.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
+$lang['L_NR_OF_QUERIES']="Số lượng các truy vấn";
 $lang['L_NR_OF_RECORDS']="Số bản ghi";
 $lang['L_NR_TABLES_OPTIMIZED']="%s những bảng đã được tối"
     ." ưu hóa.";
@@ -720,10 +720,11 @@ $lang['L_POSITION_TC']="giữa-đỉnh";
 $lang['L_POSITION_TL']="đỉnh trái";
 $lang['L_POSITION_TR']="đỉnh phải";
 $lang['L_POSSIBLE_COLLATIONS']="Có thể đối chiếu";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
-    ." /><br />_cs = case sensitiv<br />_ci ="
-    ." case insensitive";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="Đây là những quy tắc phân"
+    ." loại có thể chọn cho bộ ký"
+    ." tự này. <br /><br />_cs = case"
+    ." sensitiv (chính xác)<br />_ci = case"
+    ." insensitive (không chính xác)";
 $lang['L_PREFIX']="Tiền tố bảng";
 $lang['L_PRIMARYKEYS_CHANGED']="Khóa chính (Primary key) đã"
     ." được thay đổi";
@@ -749,7 +750,7 @@ $lang['L_PROGRESS_TABLE']="Tiến trình của bảng";
 $lang['L_PROVIDER']="Nhà cung cấp";
 $lang['L_PROZESSE']="Tiến trình";
 $lang['L_QUERY']="Truy vấn";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY_TYPE']="Loại truy vấn";
 $lang['L_RECHTE']="Cho phép";
 $lang['L_RECORDS']="Bản ghi(Records)";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> bản ghi được chèn"
@@ -788,7 +789,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Tính đến giờ, <b>%d</b> trong"
     ." tạo.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Cho tới giờ, <b>%d</b> bảng đã"
     ." được tạo ra.";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="Kết quả";
 $lang['L_REVERSE']="Mới lên trên";
 $lang['L_SAFEMODEDESC']="Vì PHP đang chạy trong chế độ"
     ." safe_mode nên bạn phải tạo thư"
@@ -912,9 +913,14 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Lỗi: Tên Trường không hợp"
 $lang['L_SQL_FIRST']="đầu tiên";
 $lang['L_SQL_IMEXPORT']="Nhập-Xuất";
 $lang['L_SQL_IMPORT']="Nhập trong CSDL `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="% S: phát hiện bảng kê không"
+    ." hoàn thiện. Không tìm thấy"
+    ." kết thúc trận đấu với &#39;%"
+    ." s&#39; trong truy vấn:% s <br /><br"
+    ." />%s: phát hiện bảng kê không"
+    ." hoàn thiện.<br />Không thể tìm"
+    ." thấy kết thúc với '%s' trong"
+    ." truy vấn:<br />%s";
 $lang['L_SQL_INDEXES']="Chỉ số";
 $lang['L_SQL_INSERTFIELD']="chèn vào";
 $lang['L_SQL_INSERTNEWFIELD']="chèn vùng mới";
@@ -994,7 +1000,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="File cấu hình \"%s\" vừa được"
     ." tạo thành công.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="File cấu hình \"%s\" vừa được"
     ." xóa thành công.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="Tổng";
 $lang['L_TABLE']="Bảng";
 $lang['L_TABLENAME']="Tên bảng";
 $lang['L_TABLENAME_EXPLAIN']="Tên bảng";
