@@ -58,7 +58,7 @@ $lang['L_CHANGE']="zmena";
 $lang['L_CHANGEDIR']="Zmena na adresár";
 $lang['L_CHANGEDIRERROR']="Nemôžem zmeniť adresár!";
 $lang['L_CHARSET']="Kódovanie";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Znaková sada";
 $lang['L_CHECK']="Kontrola";
 $lang['L_CHECK_DIRS']="Vytvorenie adresárov - work";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper nemože zistiť kódovanie"
@@ -193,7 +193,7 @@ $lang['L_DELETE_FILE_SUCCESS']="Záloha \"%s\" bola úspešne"
     ." odstránená.";
 $lang['L_DELETE_HTACCESS']="Odstráňiť ochranu adresárov"
     ." (zmazať .htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Popis";
 $lang['L_DESELECT_ALL']="Zrušiť vyber";
 $lang['L_DIR']="Adresár";
 $lang['L_DISABLEDFUNCTIONS']="Blokovaná Funkcia";
@@ -450,7 +450,7 @@ $lang['L_IMPORTSOURCE']="Import Zdroj";
 $lang['L_IMPORTTABLE']="Import v tabuľke";
 $lang['L_IMPORT_NOTABLE']="Neboli vybraté Tabuľky pre import!";
 $lang['L_IN']="v";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="Veľkosť indexu";
 $lang['L_INFO_ACTDB']="Vybratá Databáza";
 $lang['L_INFO_DATABASES']="Tieto databázy sú na serveri:";
 $lang['L_INFO_DBEMPTY']="Databáza je prázdna !";
@@ -507,7 +507,7 @@ $lang['L_LOG_NOT_READABLE']="Log súbor '%s' neexistuje, alebo nie"
     ." je čitateľný.";
 $lang['L_MAILERROR']="Odoslanie e-mailu zlyhalo!";
 $lang['L_MAILPROGRAM']="Mail program";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
+$lang['L_MAXIMUM_LENGTH']="Maximálna dĺžka";
 $lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
     ." one character needs, when it is saved"
     ." to disk.";
@@ -545,7 +545,7 @@ $lang['L_MYSQL_CONNECTION_ENCODING']="Štandardné kódovanie MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-Data";
 $lang['L_MYSQL_ROUTINE']="Routine";
 $lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="Uložené funkcie a procesy";
 $lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
     ." in which one can save data (records)."
     ." Each record represents a row in the"
@@ -611,7 +611,7 @@ $lang['L_NO_ENTRIES']="Tabulka \"<b>%s</b>\" je prázdna a"
 $lang['L_NO_MSD_BACKUPFILE']="Zálohovanie iných skriptov";
 $lang['L_NO_NAME_GIVEN']="Nezadali ste meno.";
 $lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_RECORDS']="Počet záznamov";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabuľiek bolo optimalizovaných.";
 $lang['L_NUMBER_OF_FILES_FORM']="Zmazať podľa počtu záloh v jednej"
     ." databáze";
