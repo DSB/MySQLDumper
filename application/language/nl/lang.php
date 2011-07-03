@@ -1005,8 +1005,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Ongeldige type gegeven. String"
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Het e-mailadress formaat is ongeldig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="De hostnaam is ongeldig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Het lokale gedeelte van het"
-    ." e-mailadres"
-    ." (<local-part>@<domain>.<tld>) is"
+    ." e-mailadres (local-part@domain.tld) is"
     ." ongeldig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Er is geen geldige MX record voor dit"
     ." e-mailadress.";

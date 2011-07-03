@@ -989,8 +989,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Ogiltig typ överförd. Förväntar"
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Epostadressens format är ogiltigt.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Domännamnet är ogiltigt.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Epostadressens lokala del"
-    ." (<lokal-del>@<domän>.<TLD>) är"
-    ." ogiltig.";
+    ." (lokal-del@domän.TLD) är ogiltig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Epostadressen har inget giltigt"
     ." MX-register.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="Domänen befinner sig ej inom ett"

@@ -1439,7 +1439,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Το όνομα Domain που
     ." δώσατε είναι άκυρο";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Το τοπικό σημείο της"
     ." διεύθυνσης"
-    ." (<τοπικό-σημείο>@<domain>.<tld>)"
+    ." (τοπικό-σημείο@domain.tld)"
     ." είναι άκυρο.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Δεν υπάρχει ισχύον MX"
     ." record για αυτή τη"

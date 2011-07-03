@@ -1092,9 +1092,8 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Định dạng email không h�
     ." lệ.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Tên host không hợp lệ";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Thành phần local part của địa"
-    ." chỉ email"
-    ." (<local-part>@<domain>.<tld>) không"
-    ." hợp lệ.";
+    ." chỉ email (local-part@domain.tld)"
+    ." không hợp lệ.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Không có bản ghi MX hợp lệ cho"
     ." địa chỉ email này.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="Tên host này nằm trong một phân"

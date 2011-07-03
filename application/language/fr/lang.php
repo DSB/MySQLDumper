@@ -1097,8 +1097,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Le format de l'adresse email es
     ." invalide.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Le nom d'hôte est invalide.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="The local part of the email address"
-    ." (<local-part>@<domain>.<tld>) is"
-    ." invalid.";
+    ." (local-part@domain.tld) is invalid.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="There is no valid MX record for this"
     ." email address.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="The hostname is located in a not"

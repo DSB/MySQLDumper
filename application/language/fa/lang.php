@@ -1226,7 +1226,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="فرمت آدرس ایمیل"
     ." ناصحیح است";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="نام هاست اشتباه است";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="نمونه ایمیل صحیح :"
-    ." <local-part>@<domain>.<tld>";
+    ." local-part@domain.tld";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="هیچ رکورد صحیحی از"
     ." این آدرس ایمیل به ثبت"
     ." نرسیده است";

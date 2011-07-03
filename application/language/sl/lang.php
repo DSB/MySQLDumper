@@ -995,8 +995,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Podan napačen tip. Pričakovan je"
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Email zapis je napačen.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Ime gostitelja je napačno.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Lokalni del email naslova"
-    ." (<local-part>@<domain>.<tld>) je"
-    ." napačen.";
+    ." (local-part@domain.tld) je napačen.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Ni veljavnega MX zapisa za ta email"
     ." naslov.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="Ime gostitelja je najdeno v"

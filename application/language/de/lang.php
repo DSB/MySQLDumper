@@ -1070,7 +1070,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Das Format der E-Mail-Adresse i
     ." ungültig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Der Domainname ist ungültig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Der lokale Teil der E-Mail-Adresse"
-    ." (<Lokaler-Teil>@<Domain>.<TLD>) ist"
+    ." (Lokaler-Teil@Domain.TLD) ist"
     ." ungültig.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Für die E-Mail-Adresse gibt es keinen"
     ." gültigen MX-Eintrag.";

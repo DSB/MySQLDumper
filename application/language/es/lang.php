@@ -1069,8 +1069,8 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="La dirección de correo electr�
     ." es incorrecta.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="El nombre de host no es válido.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="La parte local de la dirección de"
-    ." correo electrónico (<Parte"
-    ." local>@<Dominio>.<TLD>) no es válido.";
+    ." correo electrónico (Parte"
+    ." local@Dominio.TLD) no es válido.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Para este dirección de correo"
     ." electrónico no existe un registro MX"
     ." valida.";

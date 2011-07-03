@@ -1010,8 +1010,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="Formát e-mailová adresa nie j
     ." platná";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Názov domény nie je platný.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="Táto časť e-mailovej adresy"
-    ." (<local-part>@<domain>.<tld>) je"
-    ." neplatná.";
+    ." (local-part@domain.tld) je neplatná.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Pre e-mailovú adresu nie je platný"
     ." MX záznam.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="The hostname ist located in a not"
