@@ -1,16 +1,13 @@
 <?php
-//TODO security -> implement whitelist of characters for langId
-$country = str_replace(
-    array('..', "\x00"),
-    '',
-    $_GET['langId']
-);
+$country = $_GET['langId'];
 
-$languageDir = realpath(dirname(__FILE__) . '/../application/language');
+if (preg_match('/^[A-Z0-9_]+\z/i', $country)) {
+    define('DS', DIRECTORY_SEPARATOR);
+    $languageDir = realpath(dirname(__FILE__) . '/../application/language');
+    $image = $languageDir . DS . $country . DS . 'flag.gif';
 
-header('Content-Type: image/gif');
-
-define('DS', DIRECTORY_SEPARATOR);
-$image = $languageDir . DS . $country . DS . 'flag.gif';
-
-readfile(realpath($image));
+    if (file_exists($image)) {
+        header('Content-Type: image/gif');
+        readfile(realpath($image));
+    }
+}
