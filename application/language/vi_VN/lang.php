@@ -1106,6 +1106,14 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Địa chỉ email quá dài, 
     ." tự.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Địa chỉ email không được có"
     ." dấu nháy kép.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
+    ." hostname cannot be decoded.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
+    ." invalid position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
+    ." expected structure.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
+    ." schema for given TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Giá trị này không được để"
     ." trống.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Chuỗi so sánh (Token) được cung"

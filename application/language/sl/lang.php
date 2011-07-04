@@ -1006,6 +1006,14 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Email naslov je predolg. Najve
     ." dolžina je 320 znakov.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Email naslov ne more biti primerjan z"
     ." nizi v navednicah.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
+    ." hostname cannot be decoded.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
+    ." invalid position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
+    ." expected structure.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
+    ." schema for given TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Vrednost je zahtevana in ne more biti"
     ." prazna.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Žeton ni bil določen za primerjavo.";

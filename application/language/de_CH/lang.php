@@ -1016,6 +1016,14 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="The email address is too long.
     ." maximum length is 320 chars.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="The email addess can not be matched"
     ." against quoted-string format.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
+    ." hostname cannot be decoded.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
+    ." invalid position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
+    ." expected structure.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
+    ." schema for given TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Value is required and can't be empty.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"
     ." against.";

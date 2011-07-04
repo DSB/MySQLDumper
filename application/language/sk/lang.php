@@ -1021,6 +1021,14 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="E-mailová adresa je príliš 
     ." Môžete byť až 320 znakov.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="E-mail adresa nemôže byť uzavretá"
     ." prw Quoted-formáte reťazca.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
+    ." hostname cannot be decoded.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
+    ." invalid position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
+    ." expected structure.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
+    ." schema for given TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Hodnota je povinná a nesmie byť"
     ." prázdna.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Žiadna funkcia na kontrolu";

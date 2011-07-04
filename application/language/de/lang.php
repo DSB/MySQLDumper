@@ -1083,6 +1083,16 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Die E-Mail-Adresse ist zu lang
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Die E-Mail-Adresse kann nicht gegen"
     ." das \"Quoted-String\"-Format geprüft"
     ." werden.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="Die angegebene Punycode-Schreibweise"
+    ." des Domainnamen kann nicht dekodiert"
+    ." werden.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="Der Domainname enthält einen"
+    ." Bindestrich an einer ungültigen"
+    ." Position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="Der Domainname entspricht nicht der"
+    ." erwarteten Struktur.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="Der Domainname entspricht nicht dem"
+    ." Schema der angegebenen TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Der Wert wird benötigt und darf nicht"
     ." leer sein.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Es wurde kein Merkmal zum Gegenprüfen"
