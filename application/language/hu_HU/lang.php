@@ -1030,10 +1030,21 @@ $lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation 
     ." hostname cannot be decoded.";
 $lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
     ." invalid position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
 $lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
     ." expected structure.";
 $lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
     ." schema for given TLD.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
+    ." network name.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
+    ." syntax.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
+    ." allowed.";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
+    ." not allowed.";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Value is required and can't be empty.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"
     ." against.";
