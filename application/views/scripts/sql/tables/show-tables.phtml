@@ -220,7 +220,7 @@ if ($this->tables->getTotalItemCount() >= 1) {
     $i++;
     endforeach;
     if ($this->tables->getTotalItemCount() <= 0) { ?>
-        <tr><td colspan="12" class="error"><?php echo $this->lang->L_INFO_DBEMPTY;?></td></tr>
+        <tr><td colspan="15" class="error"><?php echo $this->lang->L_INFO_DBEMPTY;?></td></tr>
     <?php }
         echo $this->partial('/sql/tables/table-header.phtml',
                 array('lang' => $this->lang));

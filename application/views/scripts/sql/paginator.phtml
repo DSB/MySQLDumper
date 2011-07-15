@@ -35,7 +35,7 @@ if ($this->pageCount) {
         </a>
     <?php
     } else { ?>
-        <button class="Formbutton"><?php echo $this->getIcon('ForwardDisabled', '', 16);?></button>
+        <button class="Formbutton" disabled="disabled"><?php echo $this->getIcon('ForwardDisabled', '', 16);?></button>
     <?php
     }
 
@@ -45,7 +45,7 @@ if ($this->pageCount) {
         </a>
     <?php
     } else { ?>
-        <button disabled="disabled" class="Formbutton"><?php echo $this->getIcon('LastDisabled', '', 16);?></button>
+        <button class="Formbutton" disabled="disabled"><?php echo $this->getIcon('LastDisabled', '', 16);?></button>
     <?php
     }
 }  ?>

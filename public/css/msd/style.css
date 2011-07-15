@@ -80,6 +80,10 @@ a:hover {
 	text-decoration: none;
 }
 
+a[disabled] {
+	cursor: default;
+}
+
 img {
     display: inline;
     border: 0px;
@@ -379,10 +383,11 @@ a.Formbutton:hover,button.Formbutton:hover,input.Formbutton:hover {
 	color: #256777 !important;
 }
 
-.Formbutton:disabled {
+.Formbutton:disabled,.Formbutton:disabled:hover {
 	color: #888 !important;
 	cursor: default;
 }
+
 /********** breadcrumb *******/
 #breadcrumb ul {
     list-style: none;
