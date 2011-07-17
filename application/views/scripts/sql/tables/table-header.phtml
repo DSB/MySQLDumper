@@ -6,12 +6,12 @@
              class="pointer tooltip"
              title="<?php echo $this->lang->L_SELECT_ALL;?>"
              alt="<?php echo $this->lang->L_SELECT_ALL;?>"
-             onclick="checkAll($('[type=checkbox]'));"/>
+             onclick="checkAll($('[type=checkbox]'));checkButtonState();"/>
         <img src="<?php echo $this->getIconSrc('minus', '');?>"
              class="pointer tooltip"
              title="<?php echo $this->lang->L_DESELECT_ALL;?>"
              alt="<?php echo $this->lang->L_DESELECT_ALL;?>"
-             onclick="unCheckAll($('[type=checkbox]'));"/>
+             onclick="unCheckAll($('[type=checkbox]'));checkButtonState();"/>
         </div>
     </th>
     <th class="center">#</th>
