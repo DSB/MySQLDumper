@@ -1000,25 +1000,27 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Epostadressen är för lång. 
     ." innehålla maximalt 320 tecken.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Epostadressen kan ej kontrolleras mot"
     ." \"Quoted-String\"-formatet.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="Punycode-skrivsättet för"
+    ." domännamnet kan ej dekoderas.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="Domännamnet innheåller ett"
+    ." bindesträck vid en ogiltig position.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Ogiltig typ överförd. String"
+    ." förväntas.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="Domännamnet motsvarar ej förväntad"
+    ." struktur.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="Domännamnet motsvarar ej schemat för"
+    ." använd TLD.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="Domännamnet innehåller ett ogiltigt"
+    ." lokalt nätverksnamn.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="Domännamnet motsvarar ej"
+    ." URL-syntaxen.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP-adresser är ej tillåtna i"
+    ." domännamn.";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Lokala nätverksnamn är ej tillåtna"
+    ." i domännamn.";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="TLD kan ej extraheras ur domännamnet.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="Domännamnet innehåller en okänd"
+    ." TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Värdet är erforderligt och får ej"
     ." vara tomt.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Inget kriterium för kontroll angavs.";
