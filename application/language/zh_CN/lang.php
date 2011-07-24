@@ -9,7 +9,7 @@
  * @author        $Author: $
  */
 $lang=array();
-$lang['L_ACTION']="Action";
+$lang['L_ACTION']="Test";
 $lang['L_ACTIVATED']="activated";
 $lang['L_ACTUALLY_INSERTED_RECORDS']="Up to now <b>%s</b> records were"
     ." successfully added.";
