@@ -79,7 +79,7 @@ $lang['L_CHANGEDIR']="Αλλαγή σε κατάλογο";
 $lang['L_CHANGEDIRERROR']="Αδυναμία αλλαγής"
     ." καταλόγου!";
 $lang['L_CHARSET']="Κωδικοποίηση";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Σετ χαρακτήρων";
 $lang['L_CHECK']="Ελεγχος πινάκων";
 $lang['L_CHECK_DIRS']="Ελεγχος καταλόγων";
 $lang['L_CHOOSE_CHARSET']="Το MySQLDumper δε μπόρεσε"
@@ -237,10 +237,13 @@ $lang['L_CSV_NODATA']="Δε βρέθηκαν δεδομένα"
 $lang['L_CSV_NULL']="Αντικατάσταση NULL με";
 $lang['L_DATABASES_OF_USER']="Β.Δεδομένων του"
     ." χρήστη";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASE_CREATED_FAILED']="Η Β.Δεδομένων δεν"
+    ." δημιουργήθηκε<br />Η"
+    ." MySQL επιστρέφει:<br/><br"
+    ." />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="Η Β.Δεδομένων '%s' έχει"
+    ." δημιουργηθεί"
+    ." επιτυχώς.";
 $lang['L_DATASIZE']="Μέγεθος δεδομένων";
 $lang['L_DATASIZE_INFO']="Αυτό είναι το"
     ." μέγεθος εγγραφών,"
@@ -259,7 +262,8 @@ $lang['L_DB_BACKUPPARS']="Παράμετροι"
     ." Αντιγράφων"
     ." ασφαλείας"
     ." Β.Δεδομένων";
-$lang['L_DB_DEFAULT']="Default database";
+$lang['L_DB_DEFAULT']="Προεπιλεγμένη"
+    ." Β.Δεδομένων";
 $lang['L_DB_HOST']="Ονομα Host";
 $lang['L_DB_IN_LIST']="Η Β.Δεδομένων '%s' δε"
     ." μπόρεσε να προστεθεί"
@@ -286,7 +290,7 @@ $lang['L_DELETE_HTACCESS']="Κατάργηση"
     ." προστασίας"
     ." καταλόγου (διαγραφή"
     ." .htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Περιγραφή";
 $lang['L_DESELECT_ALL']="Αποεπιλογή όλων";
 $lang['L_DIR']="Κατάλογος";
 $lang['L_DISABLEDFUNCTIONS']="Ανενεργές"
@@ -661,7 +665,7 @@ $lang['L_IMPORT_NOTABLE']="Δεν επιλέχθηκε"
     ." πίνακας για"
     ." εισαγωγή!";
 $lang['L_IN']="σε";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="Μέγεθος καταλόγου";
 $lang['L_INFO_ACTDB']="Παρούσα Β.Δεδομένων";
 $lang['L_INFO_DATABASES']="Οι παρακάτω"
     ." Β.Δεδομένων"
@@ -706,7 +710,9 @@ $lang['L_INFO_SIZE']="Μέγεθος";
 $lang['L_INFO_SUM']="σύνολο";
 $lang['L_INSTALL']="Εγκατάσταση";
 $lang['L_INSTALLED']="Εγκαταστάθηκε";
-$lang['L_INSTALL_DB_DEFAULT']="Use as default database";
+$lang['L_INSTALL_DB_DEFAULT']="Χρήση ώς"
+    ." προεπιλεγμένης"
+    ." Β.Δεδομένων";
 $lang['L_INSTALL_HELP_PORT']="(άδειο ="
     ." προεπιλεγμένη θύρα)";
 $lang['L_INSTALL_HELP_SOCKET']="(άδειο ="
@@ -744,10 +750,13 @@ $lang['L_LOG_NOT_READABLE']="Το αρχείο καταγραφής"
 $lang['L_MAILERROR']="Η αποστολή email"
     ." απέτυχε!";
 $lang['L_MAILPROGRAM']="Πρόγραμμα Mail";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH']="Μέγιστο μήκος";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="Αυτό είναι ο"
+    ." μέγιστος αριθμός bytes"
+    ." που χρειάζεται ένας"
+    ." χαρακτήρας όταν"
+    ." αποθηκεύεται στον"
+    ." δίσκο.";
 $lang['L_MAXSIZE']="Μέγιστο μέγεθος";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Για κάθε Β.Δεδομένων";
 $lang['L_MAX_EXECUTION_TIME']="Μεγ. χρόνος"
@@ -793,13 +802,19 @@ $lang['L_MYSQL_CONNECTION_ENCODING']="Στανταρ"
     ." κωδικοποίηση του"
     ." διακομιστή MySQL";
 $lang['L_MYSQL_DATA']="Δεδομένα MySQL";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_ROUTINE']="Ρουτίνα";
+$lang['L_MYSQL_ROUTINES']="Ρουτίνες";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="Αποθηκευμένες"
+    ." λειτουργίες και"
+    ." διαδικασίες";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Οι πίνακες έχουν"
+    ." ορισμένη δομή στήλης"
+    ." που μπορεί κάποιος"
+    ." να αποθηκεύσει"
+    ." δεδομένα (εγγραφές)."
+    ." Κάθε εγγραφή"
+    ." αναπαριστά μία"
+    ." γραμμή στον πίνακα";
 $lang['L_MYSQL_VERSION']="Εκδοση MySQL";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Η εγκατεστημένη"
     ." έκδοση MySQL %s είναι"
@@ -824,11 +839,15 @@ $lang['L_MYSQL_VERSION_TOO_OLD']="Η εγκατεστημένη"
     ." κάποιες από τις νέες"
     ." λειτουργίες του"
     ." MySQLDumper.";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEW']="Προβολή";
+$lang['L_MYSQL_VIEWS']="Προβολές";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Οι προβολές δείχνουν"
+    ." (φιλτραρισμένες)"
+    ." εγγραφές ενός ή"
+    ." περισσότερων"
+    ." πινάκων αλλά δεν"
+    ." περιλαμβάνουν τις"
+    ." δικές τους εγγραφές.";
 $lang['L_NAME']="Ονομα";
 $lang['L_NEW']="νεο";
 $lang['L_NEWTABLE']="Νέος πίνακας";
@@ -847,7 +866,8 @@ $lang['L_NONE']="κανένα";
 $lang['L_NOREVERSE']="Πρώτα παλιές"
     ." εγγραφές";
 $lang['L_NOTAVAIL']="<em>δεν υπάρχει</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="Δεν υπάρχει κάτι να"
+    ." γίνει.";
 $lang['L_NOTICE']="Σημείωση";
 $lang['L_NOTICES']="Σημειώσεις";
 $lang['L_NOT_ACTIVATED']="ανενεργό";
@@ -896,8 +916,8 @@ $lang['L_NO_ENTRIES']="Ο πίνακας \"<b>%s</b>\""
 $lang['L_NO_MSD_BACKUPFILE']="Αντίγραφα Ασφαλείας"
     ." άλλων scripts";
 $lang['L_NO_NAME_GIVEN']="Δεν δώσατε όνομα";
-$lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_QUERIES']="Αριθμός ερωτημάτων";
+$lang['L_NR_OF_RECORDS']="Αριθμός εγγραφών";
 $lang['L_NR_TABLES_OPTIMIZED']="%s πίνακες έχουν"
     ." βελτιστοποιηθεί.";
 $lang['L_NUMBER_OF_FILES_FORM']="Διαγραφή ανά αριθμό"
@@ -941,7 +961,7 @@ $lang['L_PHPBUG']="Σφάλμα στο zlib ! Δε"
     ." γίνεται συμπίεση!";
 $lang['L_PHPMAIL']="PHP-Function mail()";
 $lang['L_PHP_EXTENSIONS']="Επεκτάσεις PHP";
-$lang['L_PHP_LOG']="PHP-Log";
+$lang['L_PHP_LOG']="ημερολόγιο PHP";
 $lang['L_PHP_VERSION']="Εκδοση PHP";
 $lang['L_PHP_VERSION_TOO_OLD']="Η εγκατεστημένη"
     ." έκδοση PHP είναι πολύ"
@@ -970,9 +990,11 @@ $lang['L_POSITION_NOTIFICATIONS']="Θέση παραθύρου"
 $lang['L_POSITION_TC']="Πάνω-Κέντρο";
 $lang['L_POSITION_TL']="Πάνω-Αριστερά";
 $lang['L_POSITION_TR']="Πάνω-Δεξιά";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
+$lang['L_POSSIBLE_COLLATIONS']="Πιθανά collation";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="Αυτά είναι τα πιθανά"
+    ." collation που μπορεί να"
+    ." επιλεχθούν για αυτό"
+    ." το σέτ χαρακτήρων.<br"
     ." /><br />_cs = case sensitiv<br />_ci ="
     ." case insensitive";
 $lang['L_PREFIX']="Πρόθεμα πίνακα";
@@ -1005,8 +1027,8 @@ $lang['L_PROGRESS_OVER_ALL']="Συνολική Πρόοδος";
 $lang['L_PROGRESS_TABLE']="Πρόοδος του πίνακα";
 $lang['L_PROVIDER']="Πάροχος";
 $lang['L_PROZESSE']="Διαδικασίες";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY']="Ερώτημα";
+$lang['L_QUERY_TYPE']="Τύπος ερωτήματος";
 $lang['L_RECHTE']="Προσβάσεις";
 $lang['L_RECORDS']="Εγγραφή";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> εγγραφές έχουν"
@@ -1057,7 +1079,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Μέχρι τώρα <b>%d</b> από"
 $lang['L_RESTORE_TABLES_COMPLETED0']="μέχρι τώρα"
     ." δημιουργήθηκαν <b>%d</b>"
     ." πίνακες.";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="Αποτέλεσμα";
 $lang['L_REVERSE']="Πρώτα τελευταίες"
     ." εγγραφές";
 $lang['L_SAFEMODEDESC']="Επειδή η PHP τρέχει σε"
@@ -1136,7 +1158,8 @@ $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Προβολή %s έως %s από %s";
 $lang['L_SHOWRESULT']="προβολή"
     ." αποτελεσμάτων";
 $lang['L_SHOW_TABLES']="Προβολή πινάκων";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="Προβολή καλύτερων"
+    ." συμβουλών";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="Διακομιστής SMTP";
 $lang['L_SMTP_PORT']="Θύρα SMTP";
@@ -1214,9 +1237,12 @@ $lang['L_SQL_FIRST']="πρώτο";
 $lang['L_SQL_IMEXPORT']="Εισαγωγή-Εξαγωγή";
 $lang['L_SQL_IMPORT']="Εισαγωγή στη"
     ." Β.Δεδομένων `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: ανιχνεύθηκε"
+    ." ελλιπής δήλωση.<br"
+    ." />Δεν βρέθηκε"
+    ." κοντινότερο"
+    ." αποτέλεσμα για '%s'"
+    ." στο ερώτημα:<br />%s";
 $lang['L_SQL_INDEXES']="Ευρετήρια";
 $lang['L_SQL_INSERTFIELD']="εισαγωγή πεδίου";
 $lang['L_SQL_INSERTNEWFIELD']="εισαγωγή νέου πεδίου";
@@ -1320,10 +1346,10 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Το αρχείο ρύθμισης"
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Το αρχείο ρύθμισης"
     ." \"%s\" διαγράφηκε"
     ." επιτυχώς.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="Αθροισμα";
 $lang['L_TABLE']="Πίνακας";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="Ονομα πίνακα";
+$lang['L_TABLENAME_EXPLAIN']="Ονομα πίνακα";
 $lang['L_TABLES']="Πίνακες";
 $lang['L_TABLESELECTION']="Επιλογή πίνακα";
 $lang['L_TABLE_CREATE_SUCC']="Ο πίνακας '%s'"
@@ -1351,8 +1377,8 @@ $lang['L_TOOLS_TOOLBOX']="Επιλογή Β.Δεδομένων /"
     ." Λειτουργίες"
     ." Β.Δεδομένων /"
     ." Εισαγωγή - Εξαγωγή";
-$lang['L_TRUNCATE']="Truncate";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE']="Περικοπή";
+$lang['L_TRUNCATE_DATABASE']="Περικοπή Β.Δεδομένων";
 $lang['L_UNIT_KB']="KiloByte";
 $lang['L_UNIT_MB']="MegaByte";
 $lang['L_UNIT_PIXEL']="Pixel";
@@ -1457,25 +1483,39 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Η διεύθυνση email ε
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Η διεύθυνση email δεν"
     ." ταιριάζει με τη"
     ." μορφή quoted-string.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="Η δεδομένη σημείωση"
+    ." punycode του hostname δεν"
+    ." μπορεί να"
+    ." αποκωδικοποιηθεί.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="Το hostname περιλαμβάνει"
+    ." παύλα σε λάθος θέση.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Δόθηκε άκυρος τύπος."
+    ." Αναμενόταν σειρά"
+    ." (string)";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="Το hostname δεν"
+    ." ταιριάζει με την"
+    ." αναμενόμενη δομή.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="Το hostname δεν"
+    ." ταιριάζει με το"
+    ." σχήμα για το"
+    ." συγκεκριμένο TLD.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="Το hostname περιλαμβάνει"
+    ." άκυρο όνομα τοπικού"
+    ." δικτύου.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="Το hostname δεν"
+    ." ταιριάζει με τη"
+    ." σύνταξη URI.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="Η διεύθυνση ΙΡ δεν"
+    ." επιτρέπεται στο"
+    ." hostname.";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Τα ονόματα τοπικών"
+    ." δικτύων στα hostname δεν"
+    ." επιτρέπονται.";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Δεν μπορεί να"
+    ." εξαχθεί TLD από το"
+    ." hostname.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="Το hostname περιλαμβάνει"
+    ." άγνωστο TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Η τιμή απαιτείται"
     ." και δεν μπορεί να"
     ." είναι κενή";
