@@ -9,7 +9,7 @@
  * @author        $Author: $
  */
 $lang=array();
-$lang['L_ACTION']="Test";
+$lang['L_ACTION']="Action";
 $lang['L_ACTIVATED']="activated";
 $lang['L_ACTUALLY_INSERTED_RECORDS']="Up to now <b>%s</b> records were"
     ." successfully added.";
@@ -473,7 +473,7 @@ $lang['L_INSTALL_HELP_SOCKET']="(empty = Default Socket)";
 $lang['L_IS_WRITABLE']="Is writable";
 $lang['L_KILL_PROCESS']="Stop process";
 $lang['L_LANGUAGE']="Language";
-$lang['L_LANGUAGE_NAME']="English";
+$lang['L_LANGUAGE_NAME']="Chinese Simplified";
 $lang['L_LASTBACKUP']="Last Backup";
 $lang['L_LOAD']="Load default settings";
 $lang['L_LOAD_DATABASE']="Reload databases";
