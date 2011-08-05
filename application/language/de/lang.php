@@ -153,7 +153,7 @@ $lang['L_CREATE_TABLE_SAVED']="Definition der Tabelle `%s`"
     ." gespeichert.";
 $lang['L_CREDITS']="Credits / Hilfe";
 $lang['L_CRONSCRIPT']="Cronscript";
-$lang['L_CRON_COMMENT']="Kommentar eingeben<br /><br /><br />";
+$lang['L_CRON_COMMENT']="Kommentar eingeben";
 $lang['L_CRON_COMPLETELOG']="Komplette Ausgabe loggen";
 $lang['L_CRON_EXECPATH']="Pfad der Perlskripte";
 $lang['L_CRON_EXTENDER']="Dateiendung des Scripts";
