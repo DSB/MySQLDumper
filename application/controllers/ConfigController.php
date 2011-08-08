@@ -268,11 +268,13 @@ class ConfigController extends Zend_Controller_Action
     {
         $index = (int)$this->_request->getPost('param');
         $ftpConfig = $this->view->config->get('config.ftp');
-        if (isset($ftpConfig[$index])) {
-            unset($ftpConfig[$index]);
-            sort($ftpConfig);
+        if (count($ftpConfig) > 1) {
+            if (isset($ftpConfig[$index])) {
+            	unset($ftpConfig[$index]);
+           	 	sort($ftpConfig);
+        	}
+        	$this->view->config->set('config.ftp', $ftpConfig);
         }
-        $this->view->config->set('config.ftp', $ftpConfig);
         $this->_forward('index');
     }
 
@@ -290,8 +292,8 @@ class ConfigController extends Zend_Controller_Action
             $group = $subForm->getName();
             $elements = array_keys($subForm->getElements());
             foreach ($elements as $element) {
-                $element = str_replace($group . '_', '', $element);
-                $element = str_replace('_', '.', $element);
+              $element = str_replace($group . '_', '', $element);
+              $element = str_replace('_', '.', $element);
                 $value = $this->view->config->get(
                     'config.' .
                     $group . '.' .
