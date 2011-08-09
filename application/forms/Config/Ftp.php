@@ -319,22 +319,24 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             )
         );
 
-        $this->addElement(
-            'button',
-            'ftpDelete' . $index,
-            array(
-                'disableLoadDefaultDecorators' => true,
-                'content' =>
-                    $this->getView()->getIcon('delete') . ' ' .
-                    $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
-                'decorators' => array('LineEnd'),
-                'escape' => false,
-                'label' => '',
-                'class' => 'Formbutton',
-                'onclick' => "deleteFtpConnection(" .
-                    $index . ");",
-            )
-        );
+        if ($index > 0) {
+            $this->addElement(
+                'button',
+                'ftpDelete' . $index,
+                array(
+                    'disableLoadDefaultDecorators' => true,
+                    'content' =>
+                        $this->getView()->getIcon('delete') . ' ' .
+                        $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
+                    'decorators' => array('LineEnd'),
+                    'escape' => false,
+                    'label' => '',
+                    'class' => 'Formbutton',
+                    'onclick' => "deleteFtpConnection(" .
+                        $index . ");",
+                )
+            );
+        }
     }
 
     /**
