@@ -302,6 +302,12 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     private function _addButtonsTestAndDelete($index)
     {
+        if ($index == 0) {
+            // don't show delete button for first ftp profile
+            $buttonDecorator = 'default';
+        } else {
+            $buttonDecorator = 'LineStart';
+        }
         $this->addElement(
             'button',
             'ftpCheck' . $index,
@@ -310,7 +316,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'content' =>
                     $this->getView()->getIcon('Connect', '', 16) . ' ' .
                     $this->_lang->getTranslator()->_('L_TESTCONNECTION'),
-                'decorators' => array('LineStart'),
+                'decorators' => array($buttonDecorator),
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton ftpToggle' . $index,
