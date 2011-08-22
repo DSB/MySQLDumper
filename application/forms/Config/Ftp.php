@@ -42,6 +42,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
         $ftpConfig = $config->get('config.ftp');
         $ftpKeys = array_keys($ftpConfig);
+        $ftpKeysComplete = count($ftpKeys, 1);
         foreach ($ftpKeys as $ftpConnectionId) {
             $this->_addRadioActivated($ftpConnectionId);
             $this->_addInputTimeout($ftpConnectionId);
@@ -54,6 +55,13 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
             $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION')
                 . ' ' . ($ftpConnectionId + 1);
+
+            if ($ftpKeysComplete > 1) {
+                $buttonDelete = 'ftpDelete' . $ftpConnectionId;
+                } else {
+                $buttonDelete = '';
+            }
+            
             $this->addDisplayGroup(
                 array(
                     'ftp_' . $ftpConnectionId . '_use',
@@ -66,7 +74,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                     'ftp_' . $ftpConnectionId . '_pass',
                     'ftp_' . $ftpConnectionId . '_dir',
                     'ftpCheck' . $ftpConnectionId,
-                    'ftpDelete' . $ftpConnectionId,
+                    $buttonDelete,
                 ),
                 'ftp' . $ftpConnectionId,
                 array(
@@ -302,12 +310,6 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     private function _addButtonsTestAndDelete($index)
     {
-        if ($index == 0) {
-            // don't show delete button for first ftp profile
-            $buttonDecorator = 'default';
-        } else {
-            $buttonDecorator = 'LineStart';
-        }
         $this->addElement(
             'button',
             'ftpCheck' . $index,
@@ -316,7 +318,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'content' =>
                     $this->getView()->getIcon('Connect', '', 16) . ' ' .
                     $this->_lang->getTranslator()->_('L_TESTCONNECTION'),
-                'decorators' => array($buttonDecorator),
+                'decorators' => array('LineStart'),
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton ftpToggle' . $index,
@@ -325,24 +327,22 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             )
         );
 
-        if ($index > 0) {
-            $this->addElement(
-                'button',
-                'ftpDelete' . $index,
-                array(
-                    'disableLoadDefaultDecorators' => true,
-                    'content' =>
-                        $this->getView()->getIcon('delete') . ' ' .
-                        $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
-                    'decorators' => array('LineEnd'),
-                    'escape' => false,
-                    'label' => '',
-                    'class' => 'Formbutton',
-                    'onclick' => "deleteFtpConnection(" .
-                        $index . ");",
-                )
-            );
-        }
+        $this->addElement(
+            'button',
+            'ftpDelete' . $index,
+            array(
+                'disableLoadDefaultDecorators' => true,
+                'content' =>
+                    $this->getView()->getIcon('delete') . ' ' .
+                    $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
+                'decorators' => array('LineEnd'),
+                'escape' => false,
+                'label' => '',
+                'class' => 'Formbutton',
+                'onclick' => "deleteFtpConnection(" .
+                    $index . ");",
+            )
+        );
     }
 
     /**
