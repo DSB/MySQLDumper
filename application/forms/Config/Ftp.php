@@ -58,7 +58,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
             if ($ftpKeysComplete > 1) {
                 $buttonDelete = 'ftpDelete' . $ftpConnectionId;
-                } else {
+            } else {
                 $buttonDelete = '';
             }
             
