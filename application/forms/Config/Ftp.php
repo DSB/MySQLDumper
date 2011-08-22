@@ -42,7 +42,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
         $ftpConfig = $config->get('config.ftp');
         $ftpKeys = array_keys($ftpConfig);
-        $ftpKeysComplete = count($ftpKeys, 1);
+        $nrOfFtpProfiles = count($ftpKeys, 1);
         foreach ($ftpKeys as $ftpConnectionId) {
             $this->_addRadioActivated($ftpConnectionId);
             $this->_addInputTimeout($ftpConnectionId);
@@ -56,12 +56,12 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION')
                 . ' ' . ($ftpConnectionId + 1);
 
-            if ($ftpKeysComplete > 1) {
+            if ($nrOfFtpProfiles > 1) {
                 $buttonDelete = 'ftpDelete' . $ftpConnectionId;
             } else {
                 $buttonDelete = '';
             }
-            
+
             $this->addDisplayGroup(
                 array(
                     'ftp_' . $ftpConnectionId . '_use',
