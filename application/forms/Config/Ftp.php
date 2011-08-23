@@ -51,16 +51,17 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             $this->_addInputServerAndPort($ftpConnectionId);
             $this->_addInputUserAndPass($ftpConnectionId);
             $this->_addInputPath($ftpConnectionId);
-            $this->_addButtonsTestAndDelete($ftpConnectionId);
-
-            $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION')
-                . ' ' . ($ftpConnectionId + 1);
-
+            
             if ($nrOfFtpProfiles > 1) {
                 $buttonDelete = 'ftpDelete' . $ftpConnectionId;
             } else {
                 $buttonDelete = '';
             }
+
+            $this->_addButtonsTestAndDelete($ftpConnectionId, $buttonDelete);
+
+            $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION')
+                . ' ' . ($ftpConnectionId + 1);
 
             $this->addDisplayGroup(
                 array(
@@ -303,13 +304,21 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
     /**
      * Add Button "Test connection"
-     *
+     * Add Button "Delete connection"
+     * 
      * @param int $index
+     * @param string $buttonDelete
      *
      * @return void
      */
-    private function _addButtonsTestAndDelete($index)
+    private function _addButtonsTestAndDelete($index, $buttonDelete)
     {
+        if (!empty($buttonDelete)) {
+            $buttonDecorator = 'LineStart';
+        } else {
+            $buttonDecorator = 'Default';
+        }
+       
         $this->addElement(
             'button',
             'ftpCheck' . $index,
@@ -318,7 +327,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'content' =>
                     $this->getView()->getIcon('Connect', '', 16) . ' ' .
                     $this->_lang->getTranslator()->_('L_TESTCONNECTION'),
-                'decorators' => array('LineStart'),
+                'decorators' => array($buttonDecorator),
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton ftpToggle' . $index,
