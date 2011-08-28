@@ -333,11 +333,26 @@ class ConfigController extends Zend_Controller_Action
                 }
             } else {
                 $configData = $form->getValidValues($postData);
+                $configData = $this->_addNonConfigurableConfigParams($configData);
                 $configValidator =
                         new Application_Model_Config_FormValidator($configData);
                 $configValidator->validate($this->view);
             }
         }
+    }
+
+    /**
+     * Add configuration params that are not configurable in gui but must be saved.
+     *
+     * @param array $configData The config array
+     *
+     * @return array
+     */
+    private function _addNonConfigurableConfigParams($configData)
+    {
+        $config = Msd_Configuration::getInstance();
+        $configData['systemDatabases'] = $config->get('config.systemDatabases');
+        return $configData;
     }
 
     /**
