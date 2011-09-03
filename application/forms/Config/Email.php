@@ -49,7 +49,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         $this->_addSender();
         $this->_addRecipient();
         $this->_addButtonAddRecipientCc();
-
+       
         // add Recipients CC
         $ccElements = $this->_setRecipientCc(
             $this->_config->get('config.email.RecipientCc')
@@ -57,7 +57,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
 
         $this->_addAttachement();
         $this->_addEmailProgram();
-
+      
         // create and add display group
         $elements = array(
                 'sendEmail',
@@ -65,7 +65,8 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'SenderName',
                 'RecipientAddress',
                 'RecipientName',
-                'AddCc');
+                'AddCc'
+        );
         // add cc-recipients
         if (count($ccElements)>0) {
             $elements = array_merge(
@@ -73,6 +74,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 $ccElements
             );
         }
+
         $elements = array_merge(
             $elements,
             array(
@@ -151,92 +153,6 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
             )
         );
     }
-    /**
-     * Add Cc-Recipients
-     *
-     * @param array $configRecipientCc All Cc-Recipients
-     *
-     * @return array Element names to add to display group
-     */
-    private function _setRecipientCc($recipientsCc)
-    {
-        if ($recipientsCc === null) {
-            return;
-        }
-
-        if (count($recipientsCc) == 0) {
-            return;
-        }
-
-        $elements = array();
-        //$i = 0;
-        foreach ($recipientsCc as $i => $recipient) {
-            //Recipient CC email
-            $this->addElement(
-                'text',
-                'RecipientCc_'.$i.'_Address',
-                array(
-                    'class' => 'text emailToggle',
-                    'label' => 'L_EMAIL_CC',
-                    'listsep' => ' ',
-                    'size' => 30,
-                    'disableLoadDefaultDecorators' => true,
-                    'decorators' => array('LineStart'),
-                    'validators' => array('EmailAddress'),
-
-                )
-            );
-
-            //CC name
-            $this->addElement(
-                'text',
-                'RecipientCc_'.$i.'_Name',
-                array(
-                    'class' => 'text emailToggle',
-                    'label' => 'L_NAME',
-                    'listsep' => ' ',
-                    'size' => 30,
-                    'disableLoadDefaultDecorators' => true,
-                    'decorators' => array('LineMiddle'),
-                )
-            );
-
-            //button delete recipient
-            $confirmDelete = sprintf(
-                $this->_lang->getTranslator()->_('L_CONFIRM_RECIPIENT_DELETE'),
-                $recipient['Name']
-            );
-            $confirmDelete = Msd_Html::getJsQuote($confirmDelete, true);
-            $this->addElement(
-                'button',
-                'DeleteCc_'.$i,
-                array(
-                    'disableLoadDefaultDecorators' => true,
-                    'content' =>
-                        $this->getView()->getIcon('delete') . ' ' .
-                        $this->_lang->getTranslator()->_('L_DELETE'),
-                    'decorators' => array('LineEnd'),
-                    'escape' => false,
-                    'label' => '',
-                    'class' => 'Formbutton emailToggle',
-                    'onclick' =>
-                        'if (!confirm(\'Ha\')) return false;'
-                        .' deleteEmailReciptientCc(\'' . $i .'\');',
-                )
-            );
-
-            $elements = array_merge(
-                $elements,
-                array(
-                    'RecipientCc_'.$i.'_Address',
-                    'RecipientCc_'.$i.'_Name',
-                    'DeleteCc_'.$i,
-                )
-            );
-            $i++;
-        }
-        return $elements;
-    }
 
     /**
      * Adds line with sender inputs
@@ -255,11 +171,9 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
+                'required' => true,
                 'decorators' => array('LineStart'),
-                'validators' => array(
-                    new Zend_Validate_NotEmpty(Zend_Validate_NotEmpty::STRING),
-                    'EmailAddress'
-                ),
+                'validators' => array('EmailAddress'),
             )
         );
 
@@ -273,6 +187,48 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
+                'required' => true,
+                'decorators' => array('LineEnd'),
+                'validators' => array('NotEmpty'),
+            )
+        );
+    }
+
+    /**
+     * Add line with recipient name and e-mail
+     *
+     * @return void
+     */
+    private function _addRecipient()
+    {
+        
+        //Recipient email
+        $this->addElement(
+            'text',
+            'RecipientAddress',
+            array(
+                'class' => 'text emailToggle',
+                'label' => 'L_EMAIL_RECIPIENT',
+                'size' => 30,
+                'listsep' => ' ',
+                'disableLoadDefaultDecorators' => true,
+                'required' => true,
+                'decorators' => array('LineStart'),
+                'validators' => array('EmailAddress'),
+            )
+        );
+
+        //Recipient name
+        $this->addElement(
+            'text',
+            'RecipientName',
+            array(
+                'class' => 'text emailToggle',
+                'label' => 'L_NAME',
+                'size' => 30,
+                'listsep' => ' ',
+                'disableLoadDefaultDecorators' => true,
+                'required' => true,
                 'decorators' => array('LineEnd'),
                 'validators' => array('NotEmpty'),
             )
@@ -298,46 +254,101 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton emailToggle',
-                'onclick' => "addEmailReciptientCc();",
+                'onclick' => "addEmailRecipientCc();",
             )
         );
     }
-    /**
-     * Add line with recipient name and e-mail
+
+/**
+     * Add Cc-Recipients
      *
-     * @return void
+     * @param $recipientsCc
+     *
+     * @internal param array $configRecipientCc All Cc-Recipients
+     *
+     * @return array Element names to add to display group
      */
-    private function _addRecipient()
+    private function _setRecipientCc($recipientsCc)
     {
+        if ($recipientsCc === null) {
+            return;
+        }
 
-        //Recipient email
-        $this->addElement(
-            'text',
-            'RecipientAddress',
-            array(
-                'class' => 'text emailToggle',
-                'label' => 'L_EMAIL_RECIPIENT',
-                'size' => 30,
-                'listsep' => ' ',
-                'disableLoadDefaultDecorators' => true,
-                'decorators' => array('LineStart'),
-                'validators' => array('EmailAddress'),
-            )
-        );
+        if (count($recipientsCc) == 0) {
+            return;
+        }
 
-        //Recipient name
-        $this->addElement(
-            'text',
-            'RecipientName',
-            array(
-                'class' => 'text emailToggle',
-                'label' => 'L_NAME',
-                'size' => 30,
-                'listsep' => ' ',
-                'disableLoadDefaultDecorators' => true,
-                'decorators' => array('LineEnd'),
-            )
-        );
+        $elements = array();
+        #$i = 0;
+        foreach ($recipientsCc as $i => $recipient) {
+            //Recipient CC email
+            $this->addElement(
+                'text',
+                'RecipientCc_'.$i.'_Address',
+                array(
+                    'class' => 'text emailToggle',
+                    'label' => 'L_EMAIL_CC',
+                    'listsep' => ' ',
+                    'size' => 30,
+                    'disableLoadDefaultDecorators' => true,
+                    'required' => true,
+                    'decorators' => array('LineStart'),
+                    'validators' => array('EmailAddress'),
+
+                )
+            );
+
+            //CC name
+            $this->addElement(
+                'text',
+                'RecipientCc_'.$i.'_Name',
+                array(
+                    'class' => 'text emailToggle',
+                    'label' => 'L_NAME',
+                    'listsep' => ' ',
+                    'size' => 30,
+                    'disableLoadDefaultDecorators' => true,
+                    'required' => true,
+                    'decorators' => array('LineMiddle'),
+                    'validators' => array('NotEmpty'),
+                )
+            );
+
+            //button delete recipient
+            $confirmDelete = sprintf(
+                $this->_lang->getTranslator()->_('L_CONFIRM_RECIPIENT_DELETE'),
+                $recipient['Name']
+            );
+            $confirmDelete = Msd_Html::getJsQuote($confirmDelete, true);
+            $this->addElement(
+                'button',
+                'DeleteCc_'.$i,
+                array(
+                    'disableLoadDefaultDecorators' => true,
+                    'content' =>
+                        $this->getView()->getIcon('delete') . ' ' .
+                        $this->_lang->getTranslator()->_('L_DELETE'),
+                    'decorators' => array('LineEnd'),
+                    'escape' => false,
+                    'label' => '',
+                    'class' => 'Formbutton emailToggle',
+                    'onclick' =>
+                        'if (!confirm(\'Ha\')) return false;'
+                        .' deleteEmailRecipientCc(\'' . $i .'\');',
+                )
+            );
+
+            $elements = array_merge(
+                $elements,
+                array(
+                    'RecipientCc_'.$i.'_Address',
+                    'RecipientCc_'.$i.'_Name',
+                    'DeleteCc_'.$i,
+                )
+            );
+            $i++;
+        }
+        return $elements;
     }
 
     /**
@@ -443,6 +454,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'label' => $this->_lang->getTranslator()->_('L_SMTP_HOST'),
                 'disableLoadDefaultDecorators' => true,
                 'decorators' => array('Default'),
+                'validators' => array('NotEmpty'),
             )
         );
         $this->addElement(
@@ -523,22 +535,22 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         $values = parent::getValidValues($data, true);
         $newArray = array();
         while (false !== (list($key, $value) = each($values))) {
-            if (substr($key, 0, 18) != 'email_RecipientCc_') {
+            if (substr($key, 0, 12) != 'RecipientCc_') {
                 continue;
             }
             list($prefix, $index, $fieldKey) = explode('_', $key);
-            if (!isset($values['email_Recipient'])) {
+            if (!isset($values['RecipientCc'])) {
                 $values[$prefix] = array();
             }
-            if (!isset($newArray[$index])) {
-                $newArray[$index] = array();
+            if (!isset($values[$key])) {
+                $values[$key] = array();
             }
             $newArray[$index][$fieldKey] = $value;
             unset($values[$key]);
         }
 
-        $values['email_RecipientCc'] = array_values($newArray);
-
+        $values['RecipientCc'] = array_values($newArray);
+        
         return $values;
     }
 
@@ -568,6 +580,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         }
         return parent::setDefaults($defaults);
     }
+
     /**
      * Set input default value
      *

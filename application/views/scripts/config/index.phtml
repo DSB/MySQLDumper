@@ -1,5 +1,5 @@
 <?php
-$addReciptientCcUrl = $this->url(
+$addRecipientCcUrl = $this->url(
     array(
         'controller' => 'config',
         'action' => 'add.Recipient.Cc',
@@ -7,7 +7,7 @@ $addReciptientCcUrl = $this->url(
     null,
     true
 );
-$deleteReciptientCcUrl = $this->url(
+$deleteRecipientCcUrl = $this->url(
     array(
         'controller' => 'config',
         'action' => 'delete.Recipient.Cc',
@@ -139,16 +139,16 @@ $deleteFtpConnectionUrl = $this->url(
                     });
     }
 
-    function addEmailReciptientCc()
+    function addEmailRecipientCc()
     {
-        $('#config_form').attr('action','<?php echo $addReciptientCcUrl; ?>');
+        $('#config_form').attr('action','<?php echo $addRecipientCcUrl; ?>');
         $('#config_form').submit();
     }
 
-    function deleteEmailReciptientCc(recipientId)
+    function deleteEmailRecipientCc(recipientId)
     {
         setParam(recipientId);
-        $('#config_form').attr('action','<?php echo $deleteReciptientCcUrl; ?>');
+        $('#config_form').attr('action','<?php echo $deleteRecipientCcUrl; ?>');
         $('#config_form').submit();
     }
 
