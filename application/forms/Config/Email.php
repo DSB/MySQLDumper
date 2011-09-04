@@ -49,7 +49,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         $this->_addSender();
         $this->_addRecipient();
         $this->_addButtonAddRecipientCc();
-       
+
         // add Recipients CC
         $ccElements = $this->_setRecipientCc(
             $this->_config->get('config.email.RecipientCc')
@@ -57,7 +57,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
 
         $this->_addAttachement();
         $this->_addEmailProgram();
-      
+
         // create and add display group
         $elements = array(
                 'sendEmail',
@@ -201,7 +201,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
      */
     private function _addRecipient()
     {
-        
+
         //Recipient email
         $this->addElement(
             'text',
@@ -279,7 +279,6 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         }
 
         $elements = array();
-        #$i = 0;
         foreach ($recipientsCc as $i => $recipient) {
             //Recipient CC email
             $this->addElement(
@@ -333,8 +332,8 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                     'label' => '',
                     'class' => 'Formbutton emailToggle',
                     'onclick' =>
-                        'if (!confirm(\'Ha\')) return false;'
-                        .' deleteEmailRecipientCc(\'' . $i .'\');',
+                        'if (!confirm("' . $confirmDelete . '")) return false;'
+                        .' deleteEmailRecipientCc(' . $i .');',
                 )
             );
 
@@ -346,7 +345,6 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                     'DeleteCc_'.$i,
                 )
             );
-            $i++;
         }
         return $elements;
     }
@@ -550,7 +548,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         }
 
         $values['RecipientCc'] = array_values($newArray);
-        
+
         return $values;
     }
 

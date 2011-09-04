@@ -248,6 +248,7 @@ $this->jQuery()->onLoadCaptureStart();
 $('.tableCheckbox').change(function() {
     checkButtonState();
 });
+checkButtonState();
 <?php
 $this->jQuery()->onLoadCaptureEnd();
 ?>
@@ -261,5 +262,4 @@ function checkButtonState() {
         objs_disable(objs);
     }
 }
-checkButtonState();
 </script>
