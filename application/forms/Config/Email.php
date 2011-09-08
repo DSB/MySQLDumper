@@ -44,15 +44,22 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
             'Msd_Form_Decorator',
             'Msd/Form/Decorator/'
         );
-        $this->setDisplayGroupDecorators(array('DisplayGroup'));
+
+        if (isset($_POST['sendEmail']) && $_POST['sendEmail'] == 'y') {
+            $activateValidator = true;
+        } else {
+            $activateValidator = false;
+        }
+
         $this->_addActivateButton();
-        $this->_addSender();
-        $this->_addRecipient();
+        $this->_addSender($activateValidator);
+        $this->_addRecipient($activateValidator);
         $this->_addButtonAddRecipientCc();
 
         // add Recipients CC
         $ccElements = $this->_setRecipientCc(
-            $this->_config->get('config.email.RecipientCc')
+            $this->_config->get('config.email.RecipientCc'),
+            $activateValidator
         );
 
         $this->_addAttachement();
@@ -157,9 +164,11 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
     /**
      * Adds line with sender inputs
      *
+     * @param bool $activateValidator
+     *
      * @return void
      */
-    private function _addSender()
+    private function _addSender($activateValidator)
     {
         //Sender email
         $this->addElement(
@@ -171,7 +180,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
-                'required' => true,
+                'required' => $activateValidator,
                 'decorators' => array('LineStart'),
                 'validators' => array('EmailAddress'),
             )
@@ -187,7 +196,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
-                'required' => true,
+                'required' => $activateValidator,
                 'decorators' => array('LineEnd'),
                 'validators' => array('NotEmpty'),
             )
@@ -197,11 +206,12 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
     /**
      * Add line with recipient name and e-mail
      *
+     * @param bool $activateValidator
+     *
      * @return void
      */
-    private function _addRecipient()
+    private function _addRecipient($activateValidator)
     {
-
         //Recipient email
         $this->addElement(
             'text',
@@ -212,7 +222,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
-                'required' => true,
+                'required' => $activateValidator,
                 'decorators' => array('LineStart'),
                 'validators' => array('EmailAddress'),
             )
@@ -228,7 +238,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                 'size' => 30,
                 'listsep' => ' ',
                 'disableLoadDefaultDecorators' => true,
-                'required' => true,
+                'required' => $activateValidator,
                 'decorators' => array('LineEnd'),
                 'validators' => array('NotEmpty'),
             )
@@ -259,16 +269,17 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
         );
     }
 
-/**
+    /**
      * Add Cc-Recipients
      *
      * @param $recipientsCc
+     * @param bool $activateValidator
      *
      * @internal param array $configRecipientCc All Cc-Recipients
      *
      * @return array Element names to add to display group
      */
-    private function _setRecipientCc($recipientsCc)
+    private function _setRecipientCc($recipientsCc, $activateValidator)
     {
         if ($recipientsCc === null) {
             return;
@@ -290,7 +301,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                     'listsep' => ' ',
                     'size' => 30,
                     'disableLoadDefaultDecorators' => true,
-                    'required' => true,
+                    'required' => $activateValidator,
                     'decorators' => array('LineStart'),
                     'validators' => array('EmailAddress'),
 
@@ -307,7 +318,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
                     'listsep' => ' ',
                     'size' => 30,
                     'disableLoadDefaultDecorators' => true,
-                    'required' => true,
+                    'required' => $activateValidator,
                     'decorators' => array('LineMiddle'),
                     'validators' => array('NotEmpty'),
                 )
