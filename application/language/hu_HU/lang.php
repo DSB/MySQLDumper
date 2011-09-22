@@ -18,7 +18,7 @@ $lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Up to now  <b>%s</b> of <b>%s</b>"
 $lang['L_ADD']="Hozzáadás";
 $lang['L_ADDED']="hozzáadva";
 $lang['L_ADD_DB_MANUALLY']="Adatbázis hozzáadása manuálisan";
-$lang['L_ADD_RECIPIENT']="Add recipient";
+$lang['L_ADD_RECIPIENT']="Címzett hozzáadása";
 $lang['L_ALL']="összes";
 $lang['L_ANALYZE']="Analyze";
 $lang['L_ANALYZING_TABLE']="Now data of the table '<b>%s</b>' is"
@@ -48,8 +48,8 @@ $lang['L_BACK']="vissza";
 $lang['L_BACKUPFILESANZAHL']="A biztonsági mentés könyvtárban";
 $lang['L_BACKUPS']="Biztonsági mentések";
 $lang['L_BACKUP_DBS']="DBs to backup";
-$lang['L_BACKUP_TABLE_DONE']="Dumping of table `%s` finished. %s"
-    ." records have been saved.";
+$lang['L_BACKUP_TABLE_DONE']="A(z) adatbázis mentése"
+    ." befejeződött. `%s` rekord mentve.";
 $lang['L_BACK_TO_OVERVIEW']="Adatbázis áttekintése";
 $lang['L_CALL']="Call";
 $lang['L_CANCEL']="Mégse";
@@ -63,16 +63,17 @@ $lang['L_CHARSET']="Karakterkészlet";
 $lang['L_CHARSETS']="Karakterkészletek";
 $lang['L_CHECK']="Ellenőrzés";
 $lang['L_CHECK_DIRS']="Könyvtárak ellenőrzése";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"
-    ." encoding of the backup file"
-    ." automatically.<br /><br />You must"
-    ." choose the charset with which this"
-    ." backup was saved.<br /><br />If you"
-    ." discover any problems with some"
-    ." characters after restoring, you can"
-    ." repeat the backup-progress and then"
-    ." choose another character set.<br /><br"
-    ." />Good luck. ;)<br /><br />";
+$lang['L_CHOOSE_CHARSET']="A MySQLDumper sajnos nem tudja"
+    ." automatikusan felismerni a"
+    ." karakterkódolást.<br /><br"
+    ." />Válaszd ki, milyen"
+    ." karakterkódolással szeretnél"
+    ." menteni.<br /><br />Ha"
+    ." visszaállítás után problémákat"
+    ." észlelsz a karakterekkel,"
+    ." megismételheted a mentést egy másik"
+    ." karakterkészlettel.<br /><br />Sok"
+    ." szerencsét! ;)";
 $lang['L_CHOOSE_DB']="Adatbázis kiválasztása";
 $lang['L_CLEAR_DATABASE']="Adatbázis kiürítése";
 $lang['L_CLOSE']="Bezár";
@@ -92,7 +93,7 @@ $lang['L_CONFIG_CRONPERL']="Crondump Settings for Perl script";
 $lang['L_CONFIG_EMAIL']="E-mail értesítés";
 $lang['L_CONFIG_FTP']="FTP Transfer of Backup file";
 $lang['L_CONFIG_HEADLINE']="Beállítások";
-$lang['L_CONFIG_INTERFACE']="Interface";
+$lang['L_CONFIG_INTERFACE']="Interfész";
 $lang['L_CONFIG_LOADED']="A(z) \"%s\" beállítás sikeresen"
     ." importálva.";
 $lang['L_CONFIRM_CONFIGFILE_DELETE']="Biztosan törölni akarod a(z) %s"
@@ -107,8 +108,8 @@ $lang['L_CONFIRM_DROP_DATABASES']="Biztosan törölni akarod a"
     ." törölve lesz! Talán szeretnél egy"
     ." biztonsági mentést készíteni"
     ." először.";
-$lang['L_CONFIRM_RECIPIENT_DELETE']="Should the recipient \"%s\" really be"
-    ." deleted?";
+$lang['L_CONFIRM_RECIPIENT_DELETE']="Biztosan törölni akarod a(z) '%s' "
+    ." címzettet?";
 $lang['L_CONFIRM_TRUNCATE_DATABASES']="Biztosan törölni akarod a"
     ." kiválasztott adatbázisok összes"
     ." tábláját?<br /><br"
@@ -119,14 +120,14 @@ $lang['L_CONFIRM_TRUNCATE_DATABASES']="Biztosan törölni akarod a"
 $lang['L_CONFIRM_TRUNCATE_TABLES']="Biztosan törlöd a kiválasztott"
     ." táblákat?";
 $lang['L_CONNECT']="kapcsolódás";
-$lang['L_CONNECTIONPARS']="Connection Parameter";
+$lang['L_CONNECTIONPARS']="Kapcsolat paraméterei";
 $lang['L_CONNECTTOMYSQL']="Kapcsolódás a MySQl-hez";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
-    ." file '%s'.";
-$lang['L_CONVERTED_FILES']="Converted Files";
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Többrészes visszaállítás"
+    ." folytatása a(z) '%s' fájllal.";
+$lang['L_CONVERTED_FILES']="Konvertált fájlok";
 $lang['L_CONVERTER']="Backup Converter";
 $lang['L_CONVERTING']="Konvertálás";
-$lang['L_CONVERT_FILE']="File to be converted";
+$lang['L_CONVERT_FILE']="konvertálandó fájlok";
 $lang['L_CONVERT_FILENAME']="Name of destination file (without"
     ." extension)";
 $lang['L_CONVERT_FILEREAD']="A(z) '%s' fájl olvasása";
@@ -149,15 +150,15 @@ $lang['L_CRONSCRIPT']="Cronscript";
 $lang['L_CRON_COMMENT']="Megjegyzés hozzáadása";
 $lang['L_CRON_COMPLETELOG']="Log complete output";
 $lang['L_CRON_EXECPATH']="Path of Perl scripts";
-$lang['L_CRON_EXTENDER']="File extension";
+$lang['L_CRON_EXTENDER']="Fájlkiterjesztés";
 $lang['L_CRON_PRINTOUT']="Print output on screen.";
 $lang['L_CSVOPTIONS']="CSV opciók";
 $lang['L_CSV_EOL']="Seperate lines with";
 $lang['L_CSV_ERRORCREATETABLE']="Hiba a `%s` tábla létrehozása"
     ." közben!";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
-    ." that of the data to import (%d instead"
-    ." of %d).";
+$lang['L_CSV_FIELDCOUNT_NOMATCH']="A mezők száma nem egyezik az"
+    ." importálandó adatokkal (%d helyett"
+    ." %d).";
 $lang['L_CSV_FIELDSENCLOSED']="Fields enclosed by";
 $lang['L_CSV_FIELDSEPERATE']="Fields separated with";
 $lang['L_CSV_FIELDSESCAPE']="Fields escaped with";
@@ -179,7 +180,7 @@ $lang['L_DAY']="Nap";
 $lang['L_DAYS']="Nap";
 $lang['L_DB']="Adatbázis";
 $lang['L_DBCONNECTION']="Adatbázis kapcsolat";
-$lang['L_DBPARAMETER']="Database Parameters";
+$lang['L_DBPARAMETER']="Adatbázis paraméterei";
 $lang['L_DBS']="Adatbázisok";
 $lang['L_DB_ADAPTER']="DB-Adapter";
 $lang['L_DB_BACKUPPARS']="Database Backup Parameter";
@@ -204,7 +205,7 @@ $lang['L_DELETE_FILE_SUCCESS']="A(z) \"%s\" sikeresen törölve.";
 $lang['L_DELETE_HTACCESS']="Remove directory protection (delete"
     ." .htaccess)";
 $lang['L_DESCRIPTION']="Leírás";
-$lang['L_DESELECT_ALL']="Deselect all";
+$lang['L_DESELECT_ALL']="Egyik sem";
 $lang['L_DIR']="Könyvtár";
 $lang['L_DISABLEDFUNCTIONS']="Letiltott funkciók";
 $lang['L_DO']="Execute";
@@ -304,8 +305,8 @@ $lang['L_ERROR_LOADING_CONFIGFILE']="nem sikerült betölteni a(z) \"%s\""
 $lang['L_ERROR_LOG']="Error Log";
 $lang['L_ERROR_MULTIPART_RESTORE']="Multipart-Restore: couldn't finde the"
     ." next file '%s'!";
-$lang['L_ESTIMATED_END']="Estimated end";
-$lang['L_EXCEL2003']="Excel from 2003";
+$lang['L_ESTIMATED_END']="Várható befejezés";
+$lang['L_EXCEL2003']="Excel 2003";
 $lang['L_EXISTS']="Exists";
 $lang['L_EXPORT']="Exportálás";
 $lang['L_EXPORTFINISHED']="Exportálás befejezve.";
@@ -349,19 +350,19 @@ $lang['L_FM_CHOOSE_ENCODING']="Choose encoding of backup file";
 $lang['L_FM_COMMENT']="Megjegyzése hozzáadása";
 $lang['L_FM_DELETE']="Törlés";
 $lang['L_FM_DELETE1']="A fájl";
-$lang['L_FM_DELETE2']="was deleted successfully.";
-$lang['L_FM_DELETE3']="couldn't be deleted!";
+$lang['L_FM_DELETE2']="sikeresen törölve.";
+$lang['L_FM_DELETE3']="nem törölhető.";
 $lang['L_FM_DELETEALL']="Delete all backup files";
 $lang['L_FM_DELETEALLFILTER']="Delete all with";
 $lang['L_FM_DELETEAUTO']="Run autodelete manually";
 $lang['L_FM_DUMPSETTINGS']="Biztonsági mentés beállításai";
-$lang['L_FM_DUMP_HEADER']="Backup";
-$lang['L_FM_FILEDATE']="File date";
+$lang['L_FM_DUMP_HEADER']="Biztonsági mentés";
+$lang['L_FM_FILEDATE']="Dátum";
 $lang['L_FM_FILES1']="Database Backups";
 $lang['L_FM_FILESIZE']="Fájlméret";
 $lang['L_FM_FILEUPLOAD']="Fájl feltöltése";
 $lang['L_FM_FREESPACE']="Szabad hely a szerveren";
-$lang['L_FM_LAST_BU']="Last Backup";
+$lang['L_FM_LAST_BU']="Legutóbbi biztonsági mentés";
 $lang['L_FM_NOFILE']="Nincs fájl kiválasztva!";
 $lang['L_FM_NOFILESFOUND']="A fájl nem található.";
 $lang['L_FM_RECORDS']="Rekordok";
@@ -369,7 +370,7 @@ $lang['L_FM_RESTORE']="Visszaállítás";
 $lang['L_FM_RESTORE_HEADER']="A(z) `<strong>%s</strong>` adatbázis"
     ." visszaállítása";
 $lang['L_FM_SELECTTABLES']="Táblák kiválasztása";
-$lang['L_FM_STARTDUMP']="Start New Backup";
+$lang['L_FM_STARTDUMP']="Új biztonsági mentés kezdése";
 $lang['L_FM_TABLES']="Táblák";
 $lang['L_FM_TOTALSIZE']="Teljes méret";
 $lang['L_FM_UPLOADFAILED']="Nem sikerült a feltöltés!";
@@ -417,12 +418,12 @@ $lang['L_FTP_TIMEOUT']="Connection Timeout";
 $lang['L_FTP_TRANSFER']="FTP Transfer";
 $lang['L_FTP_USER']="Felhasználó";
 $lang['L_FTP_USESSL']="SSL kapcsolat használata";
-$lang['L_GENERAL']="General";
+$lang['L_GENERAL']="Általános";
 $lang['L_GZIP']="GZip tömörítés";
 $lang['L_GZIP_COMPRESSION']="GZip tömörítés";
 $lang['L_HOME']="Kezdőlap";
 $lang['L_HOUR']="Óra";
-$lang['L_HOURS']="Hours";
+$lang['L_HOURS']="Óra";
 $lang['L_HTACC_ACTIVATE_REWRITE_ENGINE']="Activate rewrite";
 $lang['L_HTACC_ADD_HANDLER']="Add handler";
 $lang['L_HTACC_CONFIRM_DELETE']="Should the directory protection be"
@@ -460,7 +461,7 @@ $lang['L_IMPORT']="Importálás";
 $lang['L_IMPORTIEREN']="Importálás";
 $lang['L_IMPORTOPTIONS']="Importálási opciók";
 $lang['L_IMPORTSOURCE']="Import Source";
-$lang['L_IMPORTTABLE']="Import in Table";
+$lang['L_IMPORTTABLE']="Importálás táblába";
 $lang['L_IMPORT_NOTABLE']="No table was selected for import!";
 $lang['L_IN']="in";
 $lang['L_INDEX_SIZE']="Size of index";
@@ -483,7 +484,7 @@ $lang['L_INFO_NOPROCESSES']="nincsenek futó folyamatok";
 $lang['L_INFO_NOSTATUS']="no status available";
 $lang['L_INFO_NOVARS']="no variables available";
 $lang['L_INFO_OPTIMIZED']="optimized";
-$lang['L_INFO_RECORDS']="Records";
+$lang['L_INFO_RECORDS']="Rekordok";
 $lang['L_INFO_SIZE']="Méret";
 $lang['L_INFO_SUM']="Összesen";
 $lang['L_INSTALL']="Telepítés";
@@ -492,10 +493,10 @@ $lang['L_INSTALL_DB_DEFAULT']="Use as default database";
 $lang['L_INSTALL_HELP_PORT']="(üres = alapértelmezett port)";
 $lang['L_INSTALL_HELP_SOCKET']="(empty = Default Socket)";
 $lang['L_IS_WRITABLE']="Írható";
-$lang['L_KILL_PROCESS']="Stop process";
+$lang['L_KILL_PROCESS']="Folyamat befejezése";
 $lang['L_LANGUAGE']="Nyelv";
 $lang['L_LANGUAGE_NAME']="Magyar";
-$lang['L_LASTBACKUP']="Last Backup";
+$lang['L_LASTBACKUP']="Legutóbbi biztonsági mentés";
 $lang['L_LOAD']="Alapértelmezett beállítások"
     ." betöltése";
 $lang['L_LOAD_DATABASE']="Adatbázisok frissítése";
@@ -536,7 +537,7 @@ $lang['L_MENU_SHOW']="Menü mutatása";
 $lang['L_MESSAGE']="Message";
 $lang['L_MESSAGE_TYPE']="Message type";
 $lang['L_MINUTE']="Perc";
-$lang['L_MINUTES']="Minutes";
+$lang['L_MINUTES']="Perc";
 $lang['L_MOBILE_OFF']="Ki";
 $lang['L_MOBILE_ON']="Be";
 $lang['L_MODE_EASY']="Könnyű";
@@ -621,7 +622,7 @@ $lang['L_NO_DB_SELECTED']="Nincs adatbázis kiválasztva.";
 $lang['L_NO_ENTRIES']="Table is empty and doesn't have any"
     ." entry.";
 $lang['L_NO_MSD_BACKUPFILE']="Más szkriptek mentései";
-$lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NO_NAME_GIVEN']="Nincs név megadva.";
 $lang['L_NR_OF_QUERIES']="Number of queries";
 $lang['L_NR_OF_RECORDS']="Rekordok száma";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tables have been optimized.";
@@ -783,7 +784,7 @@ $lang['L_SELECT_FILE']="Fájl kiválasztása";
 $lang['L_SELECT_LANGUAGE']="Nyelv kiválasztása";
 $lang['L_SENDMAIL']="Sendmail";
 $lang['L_SENDRESULTASFILE']="eredmény elküldése fájlként";
-$lang['L_SEND_MAIL_FORM']="Send email report";
+$lang['L_SEND_MAIL_FORM']="E-mail küldése";
 $lang['L_SERVER']="Szerver";
 $lang['L_SERVERCAPTION']="Display Server";
 $lang['L_SETPRIMARYKEYSFOR']="Set new primary keys for table";
