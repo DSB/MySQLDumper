@@ -133,12 +133,14 @@ $this->jQuery()->onLoadCaptureEnd();
 
 <div id="selectConfig">
     <form action="<?php echo $this->baseUrl();?>/index/selectdb" method="post" id="formSelectDb">
-        <fieldset id="dbSelect"><legend><?php echo$this->lang->L_CHOOSE_DB;?>:</legend>
+        <fieldset id="dbSelect"><legend><?php echo $this->lang->L_CHOOSE_DB;?>:</legend>
             <input type ="hidden" name="lastController" value="<?php echo $this->controller;?>" />
             <input type ="hidden" name="lastAction" value="<?php echo $this->action;?>" />
             <?php if (count($this->databases) > 0 ) { ?>
                 <select name="selectedDb" id="selectedDb" style="width:157px;" onchange="this.form.submit()">
                 <?php
+                    $dbAdapter = Msd_Db::getAdapter();
+                    $this->databases = $dbAdapter->getDatabaseNames();
                     foreach ($this->databases as $db) {
                         echo '<option value="'.base64_encode($db).'"';
                         if ($db == $this->config->get('dynamic.dbActual')) {

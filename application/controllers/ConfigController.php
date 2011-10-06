@@ -182,6 +182,14 @@ class ConfigController extends Zend_Controller_Action
             array_combine($databases, $databases)
         );
 
+        // set dynamic actual database if it's changed in the panel
+        if ($this->_request->isPost()) {
+            $actualDb = $this->view->config->get('dynamic.dbActual');
+            if (isset($_POST['defaultDb']) && ($_POST['defaultDb'] != $actualDb)) {
+                $this->view->config->set('dynamic.dbActual', $_POST['defaultDb']);
+            }
+        }
+
         return $formDb;
     }
 
