@@ -86,8 +86,8 @@ $lang['L_CONFIGFILE']="Nastavené zálohovanie";
 $lang['L_CONFIGFILES']="Nastavené zálohovanie";
 $lang['L_CONFIGURATIONS']="Nastavenie";
 $lang['L_CONFIG_AUTODELETE']="Automazanie";
-$lang['L_CONFIG_CRONPERL']="Cron zalohovanie - Nastavenia pre Perl"
-    ." skript";
+$lang['L_CONFIG_CRONPERL']="Cron zálohovanie - Nastavenia pre"
+    ." Perl skript";
 $lang['L_CONFIG_EMAIL']="Email Oznámenie";
 $lang['L_CONFIG_FTP']="FTP Prevod záloh medzi ftp";
 $lang['L_CONFIG_HEADLINE']="Nastavenie";
@@ -401,7 +401,7 @@ $lang['L_FTP_SEND_TO']="z <strong>%s</strong><br /> do"
 $lang['L_FTP_SERVER']="Server";
 $lang['L_FTP_SSL']="Bezpečné SSL FTP pripojenie";
 $lang['L_FTP_START']="Spustenie FTP prenos";
-$lang['L_FTP_TIMEOUT']="Pripojenie Timeout";
+$lang['L_FTP_TIMEOUT']="Časový limit pripojenia";
 $lang['L_FTP_TRANSFER']="FTP Prevod";
 $lang['L_FTP_USER']="Užívateľ";
 $lang['L_FTP_USESSL']="použiť SSL pripojenie";
