@@ -699,7 +699,7 @@ $lang['L_RECORDS_INSERTED']="<b>%s</b> záznamov vložených.";
 $lang['L_RECORDS_OF_TABLE']="Záznamy v tabuľke";
 $lang['L_RECORDS_PER_PAGECALL']="Záznamov na stránku";
 $lang['L_REFRESHTIME']="Aktualizácia času";
-$lang['L_REFRESHTIME_PROCESSLIST']="Update interval proces zoznamu";
+$lang['L_REFRESHTIME_PROCESSLIST']="Interval procesu aktualizácie zoznamu";
 $lang['L_REGISTRATION_DESCRIPTION']="Prosím, zadajte svoje prihlasovacie"
     ." údaje. Budete prihlásení do"
     ." MySQLDumper s týmto užívateľom."
@@ -774,7 +774,7 @@ $lang['L_SELECT_FILE']="Vyberte zálohu";
 $lang['L_SELECT_LANGUAGE']="Vyberte jazyk";
 $lang['L_SENDMAIL']="Odoslať e-mail";
 $lang['L_SENDRESULTASFILE']="odoslať výsledok ako súbor";
-$lang['L_SEND_MAIL_FORM']="Poslať e-mail správu";
+$lang['L_SEND_MAIL_FORM']="Poslať správu cez e-mail";
 $lang['L_SERVER']="Server";
 $lang['L_SERVERCAPTION']="Zobraziť Server";
 $lang['L_SETPRIMARYKEYSFOR']="Nastavte nové primárne kľúče na"
@@ -933,7 +933,7 @@ $lang['L_TABLE_CREATE_SUCC']="Tabuľka '%s'  bola úspešne"
     ." vytvorená.";
 $lang['L_TABLE_TYPE']="Typ";
 $lang['L_TESTCONNECTION']="Test pripojenia";
-$lang['L_THEME']="Tema";
+$lang['L_THEME']="Téma";
 $lang['L_TIME']="Čas";
 $lang['L_TIMESTAMP']="Časový interval";
 $lang['L_TITLE_INDEX']="Index";
