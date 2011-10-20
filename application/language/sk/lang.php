@@ -667,7 +667,7 @@ $lang['L_POSITION_NOTIFICATIONS']="Pozícia oznámenia - okná";
 $lang['L_POSITION_TC']="hore v strede";
 $lang['L_POSITION_TL']="vľavo hore";
 $lang['L_POSITION_TR']="v pravo hore";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
+$lang['L_POSSIBLE_COLLATIONS']="Test Translation";
 $lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
     ." can choose for this character set.<br"
     ." /><br />_cs = case sensitiv<br />_ci ="
