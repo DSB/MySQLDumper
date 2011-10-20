@@ -576,7 +576,7 @@ $lang['L_NEXT_AUTO_INCREMENT']="Ďalšie automatické index";
 $lang['L_NEXT_AUTO_INCREMENT_SHORT']="n. Auto-Index";
 $lang['L_NO']="nie";
 $lang['L_NOFTPPOSSIBLE']="Neexistujú žiadne FTP funkcie!";
-$lang['L_NOGZPOSSIBLE']="Vzhľadom k tomu,%ze Zlib nie je"
+$lang['L_NOGZPOSSIBLE']="Vzhľadom k tomu,% ze Zlib nie je"
     ." nainštalovaný, nemožno použiť"
     ." gzip-Funkciu!";
 $lang['L_NONE']="žiadny";
@@ -607,7 +607,7 @@ $lang['L_NO_DB_FOUND_INFO']="Pripojenie k databáze bol úspešne"
     ." - display\" a zadajte názov databázy"
     ." tu.";
 $lang['L_NO_DB_SELECTED']="Neexistuje žiadna zvolená databáza.";
-$lang['L_NO_ENTRIES']="Tabulka \"<b>%s</b>\" je prázdna a"
+$lang['L_NO_ENTRIES']="Tabuľka \"<b>%s</b>\" je prázdna a"
     ." nemá žiadny záznam.";
 $lang['L_NO_MSD_BACKUPFILE']="Zálohovanie iných skriptov";
 $lang['L_NO_NAME_GIVEN']="Nezadali ste meno.";
@@ -668,9 +668,9 @@ $lang['L_POSITION_NOTIFICATIONS']="Pozícia oznámenia - okná";
 $lang['L_POSITION_TC']="Hore v strede";
 $lang['L_POSITION_TL']="vľavo hore";
 $lang['L_POSITION_TR']="v pravo hore";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
+$lang['L_POSSIBLE_COLLATIONS']="Možné radenie";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="Jedná sa možné radenie ako možnú"
+    ." voľbu pre túto znakovú sadu.<br"
     ." /><br />_cs = case sensitiv<br />_ci ="
     ." case insensitive";
 $lang['L_PREFIX']="Prefix";
@@ -896,7 +896,7 @@ $lang['L_SQL_TABLEINDEXES']="Indexy v tabuľke";
 $lang['L_SQL_TABLENEW']="Úpravy tabuľky";
 $lang['L_SQL_TABLENOINDEXES']="Žiadene indexy v tabuľke";
 $lang['L_SQL_TABLENONAME']="Tabuľka potrebuje meno!";
-$lang['L_SQL_TABLESOFDB']="Tabulka databázy";
+$lang['L_SQL_TABLESOFDB']="Tabuľka databázy";
 $lang['L_SQL_TABLEVIEW']="Zobraziť Tabuľky";
 $lang['L_SQL_TBLNAMEEMPTY']="Názov tabuľky nesmie't byť"
     ." prázdne!";
