@@ -17,7 +17,7 @@ $lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Práve  <b>%s</b> záznamov zo"
     ." <b>%s</b>  bolo úspešne pridané.";
 $lang['L_ADD']="Pridať";
 $lang['L_ADDED']="pridané";
-$lang['L_ADD_DB_MANUALLY']="Pridať databázu manualne";
+$lang['L_ADD_DB_MANUALLY']="Pridať databázu manuálne";
 $lang['L_ADD_RECIPIENT']="Pridať príjemcu";
 $lang['L_ALL']="všetko";
 $lang['L_ANALYZE']="Analyzovať";
@@ -68,9 +68,9 @@ $lang['L_CHOOSE_CHARSET']="MySQLDumper nemože zistiť kódovanie"
     ." urobená.<br /><br />Ak zistíte"
     ." akékoľvek problémy s niektorými"
     ." znakmi po reštaurovaní, môžete"
-    ." opakovať spracovanie zálohy a potom"
-    ." zvoľte inú znakovú sadu.<br /><br"
-    ." />Veľa šťastia. ;)";
+    ." opakovať výkon spracovania zálohy a"
+    ." potom zvoľte inú znakovú sadu.<br"
+    ." /><br />Veľa šťastia. ;)";
 $lang['L_CHOOSE_DB']="Vyberte databázu";
 $lang['L_CLEAR_DATABASE']="Vyprázdniť databázu";
 $lang['L_CLOSE']="Zavrieť";
@@ -94,11 +94,11 @@ $lang['L_CONFIG_HEADLINE']="Nastavenie";
 $lang['L_CONFIG_INTERFACE']="Jazyk*Vzhľad";
 $lang['L_CONFIG_LOADED']="Nastavenie \"%s\" bolo úspešne"
     ." nahraté.";
-$lang['L_CONFIRM_CONFIGFILE_DELETE']="Naozaj zmazať Nastavenie zalohovania"
-    ." %s?";
+$lang['L_CONFIRM_CONFIGFILE_DELETE']="Naozaj mám zmazať Nastavenie"
+    ." zalohovania %s?";
 $lang['L_CONFIRM_DELETE_FILE']="Naozaj si prajete vymazať zálohu"
     ." '%s' ?";
-$lang['L_CONFIRM_DELETE_TABLES']="Naozaj zmazať vybrané tabuľky?";
+$lang['L_CONFIRM_DELETE_TABLES']="Naozaj mám zmazať vybrané tabuľky?";
 $lang['L_CONFIRM_DROP_DATABASES']="Prajete si vybrané databázy naozaj "
     ." vymazať? Upozornenie: Všetky údaje"
     ." budú vymazané! Možno by ste mali"
@@ -115,7 +115,7 @@ $lang['L_CONFIRM_TRUNCATE_TABLES']="Naozaj chcete vyprazdnit vybrané"
 $lang['L_CONNECT']="pripojiť";
 $lang['L_CONNECTIONPARS']="Nastavenie pripojenia";
 $lang['L_CONNECTTOMYSQL']="Pripojit k MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Spustiť viacdielne obnovenie zalohy "
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Spustiť viacdielne obnovenie zálohy "
     ." '%s' .";
 $lang['L_CONVERTED_FILES']="Prenesené súbory";
 $lang['L_CONVERTER']="Konvert Zálohovania";
@@ -138,7 +138,7 @@ $lang['L_CREATE_CONFIGFILE']="Vytvoriť nové nastavenie";
 $lang['L_CREATE_DATABASE']="Vytvoriť novú databázu";
 $lang['L_CREATE_TABLE_SAVED']="Definícia tabuľky `%s` uložená.";
 $lang['L_CREDITS']="Pomoc";
-$lang['L_CRONSCRIPT']="Cron script";
+$lang['L_CRONSCRIPT']="Skript Cron";
 $lang['L_CRON_COMMENT']="Zadajte komentár";
 $lang['L_CRON_COMPLETELOG']="Log kompletný výstup";
 $lang['L_CRON_EXECPATH']="Cesta skriptov Perl";
@@ -155,19 +155,20 @@ $lang['L_CSV_FIELDSESCAPE']="Fields escaped with";
 $lang['L_CSV_FIELDSLINES']="%d polia poznal, úplne %d lines";
 $lang['L_CSV_FILEOPEN']="Otvoriť CSV súbor";
 $lang['L_CSV_NAMEFIRSTLINE']="Názvy polí v prvej línii";
-$lang['L_CSV_NODATA']="Neboly nájdené žiadne dáta pre"
+$lang['L_CSV_NODATA']="Neboli nájdené žiadne dáta pre"
     ." import!";
 $lang['L_CSV_NULL']="Nahradiť NULL s";
 $lang['L_DATABASES_OF_USER']="Databáza užívateľov";
-$lang['L_DATABASE_CREATED_FAILED']="Vytvorenie databázy neúspešné";
-$lang['L_DATABASE_CREATED_SUCCESS']="Databáza vytvorená úspešne";
+$lang['L_DATABASE_CREATED_FAILED']="Vytvorenie databázy prebehlo"
+    ." neúspešne";
+$lang['L_DATABASE_CREATED_SUCCESS']="Databáza bola vytvorená úspešne";
 $lang['L_DATASIZE']="Veľkosť dát";
 $lang['L_DATASIZE_INFO']="Toto je veľkosť dát - nie veľkosť"
     ." súboru zálohy";
 $lang['L_DAY']="Deň";
 $lang['L_DAYS']="Dni";
 $lang['L_DB']="Databáza";
-$lang['L_DBCONNECTION']="Databaza Pripojenie";
+$lang['L_DBCONNECTION']="Databáza Pripojenie";
 $lang['L_DBPARAMETER']="Údaje k Databáze";
 $lang['L_DBS']="Databáza";
 $lang['L_DB_ADAPTER']="DB-Adaptér";
@@ -791,7 +792,7 @@ $lang['L_SQLBOX']="SQL-Box";
 $lang['L_SQLBOXHEIGHT']="Výška SQL-Box";
 $lang['L_SQLLIB_ACTIVATEBOARD']="aktivovať stránku";
 $lang['L_SQLLIB_BOARDS']="Stránka";
-$lang['L_SQLLIB_DEACTIVATEBOARD']="deactivovat stránku";
+$lang['L_SQLLIB_DEACTIVATEBOARD']="deaktivovať stránku";
 $lang['L_SQLLIB_GENERALFUNCTIONS']="všeobecné funkcie";
 $lang['L_SQLLIB_RESETAUTO']="Auto-Reset hodnoty";
 $lang['L_SQLLIMIT']="Počet záznamov každej stránky";
@@ -924,8 +925,8 @@ $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavenie zálohovania %s bolo"
     ." úspešne odstránené.";
 $lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabuľka";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="Názov tabuľky";
+$lang['L_TABLENAME_EXPLAIN']="Názov tabuľky";
 $lang['L_TABLES']="Tabuliek";
 $lang['L_TABLESELECTION']="Tabuľka výberu";
 $lang['L_TABLE_CREATE_SUCC']="Tabuľka '%s'  bola úspešne"
