@@ -20,7 +20,7 @@ $lang['L_ADDED']="pridané";
 $lang['L_ADD_DB_MANUALLY']="Pridať databázu manualne";
 $lang['L_ADD_RECIPIENT']="Pridať príjemcu";
 $lang['L_ALL']="všetko";
-$lang['L_ANALYZE']="Analyzovat";
+$lang['L_ANALYZE']="Analyzovať";
 $lang['L_ANALYZING_TABLE']="Tabuľka '<b>%s</b>' sa obnovuje.";
 $lang['L_ASKDBCOPY']="Chcete skopírovať databázu `%s` k"
     ." databáze `%s`?";
@@ -65,16 +65,16 @@ $lang['L_CHOOSE_CHARSET']="MySQLDumper nemože zistiť kódovanie"
     ." súboru zálohy automaticky.<br /><br"
     ." />Musíte vybrať znakovú sadu, s"
     ." ktorými bola táto záloha"
-    ." urobená.<br /><br />Zistíte-li"
+    ." urobená.<br /><br />Ak zistíte"
     ." akékoľvek problémy s niektorými"
     ." znakmi po reštaurovaní, môžete"
-    ." opakovať backup-pokrok a potom"
+    ." opakovať spracovanie zálohy a potom"
     ." zvoľte inú znakovú sadu.<br /><br"
     ." />Veľa šťastia. ;)";
-$lang['L_CHOOSE_DB']="Vyberťe databázu";
-$lang['L_CLEAR_DATABASE']="Vyprázdniť databazu";
+$lang['L_CHOOSE_DB']="Vyberte databázu";
+$lang['L_CLEAR_DATABASE']="Vyprázdniť databázu";
 $lang['L_CLOSE']="Zavrieť";
-$lang['L_COLLATION']="Kodovanie";
+$lang['L_COLLATION']="Kódovanie";
 $lang['L_COMMAND']="Príkaz";
 $lang['L_COMMAND_AFTER_BACKUP']="Príkaz po Zálohovaní";
 $lang['L_COMMAND_BEFORE_BACKUP']="Príkaz pred zálohovaním";
@@ -82,8 +82,8 @@ $lang['L_COMMENT']="Komentár";
 $lang['L_COMPRESSED']="Komprimované (gz)";
 $lang['L_CONFBASIC']="Základné nastavenie";
 $lang['L_CONFIG']="Nastavenie";
-$lang['L_CONFIGFILE']="Nastavené zalohovanie";
-$lang['L_CONFIGFILES']="Nastavené zalohovanie";
+$lang['L_CONFIGFILE']="Nastavené zálohovanie";
+$lang['L_CONFIGFILES']="Nastavené zálohovanie";
 $lang['L_CONFIGURATIONS']="Nastavenie";
 $lang['L_CONFIG_AUTODELETE']="Automazanie";
 $lang['L_CONFIG_CRONPERL']="Cron zalohovanie - Nastavenia pre Perl"
