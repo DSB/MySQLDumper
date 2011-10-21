@@ -253,7 +253,7 @@ $lang['L_EMAILBODY_NOATTACH']="Súbory nie sú pripojené na tento"
     ." />%s<br /><br /><br />S pozdravom<br"
     ." /><br />MySQLDumper<br />";
 $lang['L_EMAILBODY_TOOBIG']="Záložný súbor prekročil"
-    ." maximálnu veľkosť % s, a nebolo"
+    ." maximálnu veľkosť %s, a nebolo"
     ." pripojené k tomuto e-mailu.<br"
     ." />Zálohovanie databázy `%s`<br /><br"
     ." /><br />Nasledujúci súbor bol"
@@ -305,7 +305,7 @@ $lang['L_FATAL_ERROR_DUMP']="Vážna chyba: Správa o vytvorení"
     ." tabuľky '%s' v databáza '%s' sa"
     ." nedá čítať!";
 $lang['L_FIELDS']="Oblasti";
-$lang['L_FIELDS_OF_TABLE']="Oblasti tabulky";
+$lang['L_FIELDS_OF_TABLE']="Oblasti tabuľky";
 $lang['L_FILE']="Záloha";
 $lang['L_FILES']="Zálohy";
 $lang['L_FILESIZE']="Veľkosť zálohy";
@@ -320,7 +320,7 @@ $lang['L_FM_ALERTRESTORE2']="vybratá záloha pre obnovenie";
 $lang['L_FM_ALERTRESTORE3']="Prajete si ju obnoviť?";
 $lang['L_FM_ALL_BU']="Všetky Zálohy";
 $lang['L_FM_ANZ_BU']="Zálohy";
-$lang['L_FM_ASKDELETE1']="Vybrali ste zalohu(y)";
+$lang['L_FM_ASKDELETE1']="Vybrali ste zálohu(y)";
 $lang['L_FM_ASKDELETE2']="Prajete si naozaj odstrániť?";
 $lang['L_FM_ASKDELETE3']="Prajete si zmazať automazania a"
     ." nastavit nové pravidlá pre"
@@ -382,13 +382,13 @@ $lang['L_FTP_CONNECTION_ERROR']="Pripojenie na server '%s' pomocou"
 $lang['L_FTP_CONNECTION_SUCCESS']="Pripojenie na server '%s' pomocou"
     ." portu %s bolo úspešné";
 $lang['L_FTP_DIR']="Nahrať do adresára";
-$lang['L_FTP_FILE_TRANSFER_ERROR']="Prevod zálohy '%s' bol chybný";
+$lang['L_FTP_FILE_TRANSFER_ERROR']="Prevod zálohy '%s' zlyhal";
 $lang['L_FTP_FILE_TRANSFER_SUCCESS']="Záloha '%s' bola prevedená úspešne";
 $lang['L_FTP_LOGIN_ERROR']="Prihlásenie užívateľom '%s' bolo"
     ." zamietnuté";
 $lang['L_FTP_LOGIN_SUCCESS']="Prihlásenie užívateľom '%s' bolo"
     ." úspešné";
-$lang['L_FTP_OK']="Pripojenie úspešné.";
+$lang['L_FTP_OK']="Pripojenie bolo úspešné.";
 $lang['L_FTP_PASS']="Heslo";
 $lang['L_FTP_PASSIVE']="používať pasívny mód";
 $lang['L_FTP_PASV_ERROR']="Zmena v pasívnom režime FTP nebola"
@@ -510,9 +510,9 @@ $lang['L_LOG_NOT_READABLE']="Log súbor '%s' neexistuje, alebo nie"
 $lang['L_MAILERROR']="Odoslanie e-mailu zlyhalo!";
 $lang['L_MAILPROGRAM']="Mail program";
 $lang['L_MAXIMUM_LENGTH']="Maximálna dĺžka";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="Toto je maximálny počet bytov,"
+    ." potrebných pre jeden znak, ak sa"
+    ." uloží na disk";
 $lang['L_MAXSIZE']="max. Veľkosť";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Pre každú databázu";
 $lang['L_MAX_EXECUTION_TIME']="Maximálna doba realizácie";
@@ -537,11 +537,11 @@ $lang['L_MSD_INFO']="MySQL Dumper";
 $lang['L_MSD_MODE']="MySQLDumper-Mód";
 $lang['L_MSD_VERSION']="MySQLDumper-Verzia";
 $lang['L_MULTIDUMP']="Zálohovanie na časti";
-$lang['L_MULTIDUMP_FINISHED']="Záloha <b>% d </ b> Databázy beží";
+$lang['L_MULTIDUMP_FINISHED']="Záloha <b>%d </ b> Databázy beží";
 $lang['L_MULTIPART_ACTUAL_PART']="Podľa aktuálneho súboru";
 $lang['L_MULTIPART_SIZE']="Maximálna veľkosť zálohy";
 $lang['L_MULTI_PART']="Rozdelenie zálohy";
-$lang['L_MYSQLVARS']="MySQL Ukazovatele";
+$lang['L_MYSQLVARS']="MySQL Ukazovateľe";
 $lang['L_MYSQL_CLIENT_VERSION']="MySQL-Client";
 $lang['L_MYSQL_CONNECTION_ENCODING']="Štandardné kódovanie MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-Data";
