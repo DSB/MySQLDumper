@@ -741,11 +741,11 @@ $lang['L_SAVEANDCONTINUE']="Uložiť a pokračovať v inštalácii";
 $lang['L_SAVE_ERROR']="Chyba - nemôžem uložiť nastavenie!";
 $lang['L_SAVE_SUCCESS']="Nastavenie bolo úspešne uložené do"
     ." nastavenia zálohovania \"%s\".";
-$lang['L_SAVING_DATA_TO_FILE']="Ukladanie dát z databázy '% s' do"
-    ." zálohy '% s'";
+$lang['L_SAVING_DATA_TO_FILE']="Ukladanie dát z databázy '%s' do"
+    ." zálohy '%s'";
 $lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximálna veľkosť zálohy bola"
-    ." dosiahnutá: Pokračovanie v zálohe"
-    ." '% s'";
+    ." dosiahnutá: Mám pokračovať v"
+    ." zálohe '%s'";
 $lang['L_SAVING_DB_FORM']="Databáza";
 $lang['L_SAVING_TABLE']="Uložené tabuľky";
 $lang['L_SEARCH_ACCESS_KEYS']="Prehľadávať: dopredu = ALT + V,"
@@ -987,14 +987,14 @@ $lang['L_WRONG_RIGHTS']="Do adresára'%s' nemožno"
     ." %s.<br />";
 $lang['L_YES']="áno";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework verzia";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Názov súboru '% Hodnoty %' nie je"
+$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="Názov súboru '%value%' nie je"
     ." adresár.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="Meno '% hodnoty%' nie je súbor.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="Meno '% hodnoty %' nie je odkaz.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="Meno súboru alebo priečinka '%"
-    ." hodnoty %' nevymáhateľné.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="Názov súboru alebo priečinka '%"
-    ." hodnoty %' neexistuje";
+$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="Meno '%value%' nie je súbor.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="Meno '%value%' nie je odkaz.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="Meno súboru alebo priečinka"
+    ." '%value%' nevymáhateľné.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="Názov súboru alebo priečinka"
+    ." '%value%' neexistuje";
 $lang['L_ZEND_ID_ACCESS_NOT_READABLE']="Súbor alebo adresár '% hodnoty %'"
     ." nevie čítať.";
 $lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="Súbor '% hodnota %' sa nedá nahrať.";
