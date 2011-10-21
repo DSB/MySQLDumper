@@ -275,10 +275,10 @@ $lang['L_EMPTY_DB_BEFORE_RESTORE']="Odstrániť tabuľky pred obnovením";
 $lang['L_ENCODING']="Kódovanie";
 $lang['L_ENCRYPTION_TYPE']="Druh šifrovania";
 $lang['L_ENGINE']="Typ";
-$lang['L_ENTER_DB_INFO']="Skôr kliknite na tlačidlo \"Pripojit"
-    ." k MySQL\". Tu zadajte názov databázy"
-    ." len vtedy pokial sa neda pripojit k"
-    ." databaze.<br /><br /><br />";
+$lang['L_ENTER_DB_INFO']="Najprv kliknite na tlačitko"
+    ." \"Pripojit k MySQL\". Sem zadajte"
+    ." názov databázy len vtedy pokial sa"
+    ." neda pripojit k databaze.";
 $lang['L_ENTRY']="Vstup";
 $lang['L_ERROR']="Chyba";
 $lang['L_ERRORHANDLING_RESTORE']="Ošetrenie chýb pri obnovovaní";
