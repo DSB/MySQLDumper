@@ -995,11 +995,11 @@ $lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="Meno súboru alebo priečinka"
     ." '%value%' nevymáhateľné.";
 $lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="Názov súboru alebo priečinka"
     ." '%value%' neexistuje";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="Súbor alebo adresár '% hodnoty %'"
-    ." nevie čítať.";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="Súbor '% hodnota %' sa nedá nahrať.";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="Súbor alebo adresár '% hodnota %'"
-    ." nieje zapisovaťeľny.";
+$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="Súbor alebo adresár '%value%' nevie"
+    ." čítať.";
+$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="Súbor '%value%' sa nedá nahrať.";
+$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="Súbor alebo adresár '%value%' nie je"
+    ." zapisovaťeľny.";
 $lang['L_ZEND_ID_DIGITS_INVALID']="Neplatný typ. Reťazec, integer alebo"
     ." float sa očakávalo.";
 $lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="Hodnota je prázdny reťazec.";
