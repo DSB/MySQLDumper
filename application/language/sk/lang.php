@@ -187,7 +187,7 @@ $lang['L_DEFAULT_CHARACTER_SET_NAME']="Štandardná znaková sada";
 $lang['L_DEFAULT_CHARSET']="Predvolená znaková sada";
 $lang['L_DEFAULT_COLLATION_NAME']="Predvolené radenie";
 $lang['L_DELETE']="Zmazať";
-$lang['L_DELETE_DATABASE']="Zmazať databazu";
+$lang['L_DELETE_DATABASE']="Zmazať databázu";
 $lang['L_DELETE_FILE_ERROR']="Chyba pri odstraňovaní zálohy"
     ." \"%s\"!";
 $lang['L_DELETE_FILE_SUCCESS']="Záloha \"%s\" bola úspešne"
@@ -209,7 +209,7 @@ $lang['L_DO_NOW']="Teraz beží";
 $lang['L_DUMP']="Záloha";
 $lang['L_DUMP_ENDERGEBNIS']="Záloha obsahuje <b>%s</b> tabuliek a"
     ." <b>%s</b> záznamov.<br />";
-$lang['L_DUMP_FILENAME']="Názov zalohy";
+$lang['L_DUMP_FILENAME']="Názov zálohy";
 $lang['L_DUMP_HEADLINE']="Vytváram zálohu...";
 $lang['L_DUMP_NOTABLES']="Nenašli sa žiadne tabuľky v"
     ." databáze `<b>%s</b>`";
@@ -222,7 +222,7 @@ $lang['L_EHRESTORE_CONTINUE']="pokračovať v prepisovaní a"
 $lang['L_EHRESTORE_STOP']="stop";
 $lang['L_EMAIL']="Mail";
 $lang['L_EMAILBODY_ATTACH']="Príloha obsahuje zálohu"
-    ." MySQL-Databaze.<br />Zálohovanie"
+    ." MySQL-Databázy.<br />Zálohovanie"
     ." databázy `%s`<br /><br /><br"
     ." />Nasledujúci súbor bol"
     ." vytvorený:<br /><br />%s <br /><br"
@@ -296,13 +296,14 @@ $lang['L_EXCEL2003']="Excel od roku 2003";
 $lang['L_EXISTS']="Existuje";
 $lang['L_EXPORT']="Export";
 $lang['L_EXPORTFINISHED']="Export ukončený.";
-$lang['L_EXPORTLINES']="<strong>%s</strong> lines exported";
+$lang['L_EXPORTLINES']="<strong>%s</strong> riadkov bolo"
+    ." exportovaných";
 $lang['L_EXPORTOPTIONS']="Voľby exportu";
 $lang['L_EXTENDEDPARS']="Rozšírené Nastavenie";
 $lang['L_FADE_IN_OUT']="Zobraziť on/off";
 $lang['L_FATAL_ERROR_DUMP']="Vážna chyba: Správa o vytvorení"
-    ." tabuľky '%s' v databaze '%s' sa nedá"
-    ." čítať!<br /><br /><br />";
+    ." tabuľky '%s' v databáza '%s' sa"
+    ." nedá čítať!";
 $lang['L_FIELDS']="Oblasti";
 $lang['L_FIELDS_OF_TABLE']="Oblasti tabulky";
 $lang['L_FILE']="Záloha";
@@ -376,17 +377,16 @@ $lang['L_FTP_CONFIRM_DELETE']="Chcete toto FTP pripojenie  naozaj"
 $lang['L_FTP_CONNECTION']="FTP-pripojenie";
 $lang['L_FTP_CONNECTION_CLOSED']="FTP-Spojenie ukončené";
 $lang['L_FTP_CONNECTION_DELETE']="Odstrániť pripojenie";
-$lang['L_FTP_CONNECTION_ERROR']="Pripojenie na server '% s' pomocou"
-    ." portu% s nemoholo byť stanovené";
-$lang['L_FTP_CONNECTION_SUCCESS']="Pripojenie na server '% s' pomocou"
-    ." portu% s bolo úspešné";
+$lang['L_FTP_CONNECTION_ERROR']="Pripojenie na server '%s' pomocou"
+    ." portu %s nemohlo byť stanovené";
+$lang['L_FTP_CONNECTION_SUCCESS']="Pripojenie na server '%s' pomocou"
+    ." portu %s bolo úspešné";
 $lang['L_FTP_DIR']="Nahrať do adresára";
-$lang['L_FTP_FILE_TRANSFER_ERROR']="Prevod zálohy '% s' bol chybný";
-$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Záloha '% s' bola prevedená"
-    ." úspešne";
-$lang['L_FTP_LOGIN_ERROR']="Prihlásenie užívateľom '% s' bolo"
+$lang['L_FTP_FILE_TRANSFER_ERROR']="Prevod zálohy '%s' bol chybný";
+$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Záloha '%s' bola prevedená úspešne";
+$lang['L_FTP_LOGIN_ERROR']="Prihlásenie užívateľom '%s' bolo"
     ." zamietnuté";
-$lang['L_FTP_LOGIN_SUCCESS']="Prihlásenie užívateľom '% s' bolo"
+$lang['L_FTP_LOGIN_SUCCESS']="Prihlásenie užívateľom '%s' bolo"
     ." úspešné";
 $lang['L_FTP_OK']="Pripojenie úspešné.";
 $lang['L_FTP_PASS']="Heslo";
@@ -442,8 +442,9 @@ $lang['L_HTACC_SCRIPT_EXEC']="Spustenie skriptu";
 $lang['L_HTACC_SHA1']="SHA1 (Celý System)";
 $lang['L_HTACC_WARNING']="Pozor! . Htaccess priamo ovplyvňuje"
     ." správanie prehliadača. <br /> Pri"
-    ." nesprávnom obsahu, môže byť že"
-    ." vaše stránky už nebudú dostupné";
+    ." nesprávnom obsahu, sa môže stať"
+    ." že vaše stránky už nebudú"
+    ." dostupné";
 $lang['L_IMPORT']="Import";
 $lang['L_IMPORTIEREN']="Import";
 $lang['L_IMPORTOPTIONS']="Import Možnosti";
@@ -456,16 +457,16 @@ $lang['L_INFO_ACTDB']="Vybratá Databáza";
 $lang['L_INFO_DATABASES']="Tieto databázy sú na serveri:";
 $lang['L_INFO_DBEMPTY']="Databáza je prázdna !";
 $lang['L_INFO_FSOCKOPEN_DISABLED']="Na tomto serveri PHP-príkaz fsockopen"
-    ." () je zakázaná konfigurácia"
-    ." servera. Pretože toto automatické"
+    ." () je zakázaný konfiguráciov"
+    ." servera. Preto toto automatické"
     ." sťahovanie jazykových balíčkov nie"
     ." je možné. Ak chcete toto obísť,"
     ." môžete si stiahnuť packack  ručne,"
     ." extrahujte ho do vážho počítača a"
-    ." nahrajte ich do adresára \"language\""
+    ." nahrajte ho do adresára \"language\""
     ." vašej inštalácie MySQLDumper. Potom"
-    ." nový jazyk balíček je k dispozícii"
-    ." na tejto stránke.";
+    ." nový jazykový balík je k"
+    ." dispozícii na tejto stránke.";
 $lang['L_INFO_LASTUPDATE']="Posledná aktualizácia";
 $lang['L_INFO_LOCATION']="Preložil : <b>Harry  - <a"
     ." href=\"http://warezhaus.sk\">\"warezhaus.sk\"</a></b><br"
@@ -474,7 +475,7 @@ $lang['L_INFO_NODB']="databáza neexistuje.";
 $lang['L_INFO_NOPROCESSES']="žiadne bežiace procesy";
 $lang['L_INFO_NOSTATUS']="nie sú dispozícii žiadne správy o"
     ." stave";
-$lang['L_INFO_NOVARS']="ukazovateľa nie je k dispozícii";
+$lang['L_INFO_NOVARS']="ukazovateľ nie je k dispozícii";
 $lang['L_INFO_OPTIMIZED']="Optimalizované";
 $lang['L_INFO_RECORDS']="Záznamov";
 $lang['L_INFO_SIZE']="Veľkosť";
