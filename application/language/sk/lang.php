@@ -548,10 +548,10 @@ $lang['L_MYSQL_DATA']="MySQL-Data";
 $lang['L_MYSQL_ROUTINE']="Routine";
 $lang['L_MYSQL_ROUTINES']="Routinen";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Uložené funkcie a procesy";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Tabuľky sú definované v štruktúre"
+    ." blokov, v ktorých sa ukladajú dáta"
+    ." (záznamy). Každý záznam"
+    ." predstavuje riadok v tabuľke.";
 $lang['L_MYSQL_VERSION']="MySQL-Verzia";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Je nám ľúto: nainštalovalovaná"
     ." MySQL-verzia %s je príliš stará a"
@@ -730,7 +730,7 @@ $lang['L_RESTORE_TABLE']="Obnova tabuľky '%s' dokončená";
 $lang['L_RESTORE_TABLES_COMPLETED']="Práve <b>%d</b> tabuliek zo <b>%d</b>"
     ."  bolo vytvorených.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="<b>%d</b> Tabuliek bolo vytvorených";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="Výsledok";
 $lang['L_REVERSE']="Posledný záznam prvý<br /><br /><br"
     ." />";
 $lang['L_SAFEMODEDESC']="Pretože PHP je spustená v safe_mode"
@@ -1023,25 +1023,28 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="E-mailová adresa je príliš 
     ." Môžete byť až 320 znakov.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="E-mail adresa nemôže byť uzavretá"
     ." prw Quoted-formáte reťazca.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="Uvedený zápis malého kódu, názvu"
+    ." hostiteľa sa nedá dekódovať.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="Názov hostiteľa obsahuje pomlčku v"
+    ." neplatnej pozícii.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Uvedený typ nie je platný. Očakáva"
+    ." sa reťazec.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="Názov hostiteľa nezodpovedá"
+    ." očakávanej štruktúre.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="Názov hostiteľa sa nemôže"
+    ." zhodovať z danov schémov TLD.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="Názov hostiteľa obsahuje neplatný"
+    ." názov lokálnej siete";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="Názov hostiteľa nezodpovedá syntax"
+    ." URI.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP adresa v názve hostiteľa nie je"
+    ." povolená";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Miestny názov sieti a názov"
+    ." hostiteľa nie je povolený";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="TLD sa nedá extrahovať z časti"
+    ." názvu hostiteľa";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="Názov hostiteľa obsahuje neznáme"
+    ." TLD";
 $lang['L_ZEND_ID_IS_EMPTY']="Hodnota je povinná a nesmie byť"
     ." prázdna.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Žiadna funkcia na kontrolu";
