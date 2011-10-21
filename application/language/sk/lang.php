@@ -577,9 +577,9 @@ $lang['L_NEXT_AUTO_INCREMENT']="Ďalšie automatické index";
 $lang['L_NEXT_AUTO_INCREMENT_SHORT']="n. Auto-Index";
 $lang['L_NO']="nie";
 $lang['L_NOFTPPOSSIBLE']="Neexistujú žiadne FTP funkcie!";
-$lang['L_NOGZPOSSIBLE']="Vzhľadom k tomu,% ze Zlib nie je"
-    ." nainštalovaný, nemožno použiť"
-    ." gzip-Funkciu!";
+$lang['L_NOGZPOSSIBLE']="Vzhľadom k tomu, že Zlib nie je"
+    ." nainštalovaný, nedá sa použiť"
+    ." funkcia-gzip!";
 $lang['L_NONE']="žiadny";
 $lang['L_NOREVERSE']="Najstarší záznam prvý";
 $lang['L_NOTAVAIL']="<em>nie je k dispozícii</em>";
