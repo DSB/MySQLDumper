@@ -961,7 +961,7 @@ $lang['L_UPDATE_CONNECTION_FAILED']="Aktualizácia sa nepodarila, pretože"
     ." vytvoriť.";
 $lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
 $lang['L_UPTO']="až";
-$lang['L_USERNAME']="Užívaťeľské meno";
+$lang['L_USERNAME']="Užívateľské meno";
 $lang['L_USE_SSL']="Použiť SSL";
 $lang['L_VALUE']="Hodnota";
 $lang['L_VERSIONSINFORMATIONEN']="Verzia";
