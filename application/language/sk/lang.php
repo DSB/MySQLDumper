@@ -106,10 +106,10 @@ $lang['L_CONFIRM_DROP_DATABASES']="Prajete si vybrané databázy naozaj "
 $lang['L_CONFIRM_RECIPIENT_DELETE']="Prajete si príjemcu \"%s\" naozaj"
     ." odstrániť?";
 $lang['L_CONFIRM_TRUNCATE_DATABASES']="Prajete si vymazať všetky tabuľky"
-    ." vybraných databáz s? Upozornenie:"
-    ." Všetky údaje budú vymazané! Možno"
-    ." by ste mali urobiť zálohu pre"
-    ." neskoršie obnovenie.";
+    ." vybraných databáz?<br /><br"
+    ." />Upozornenie: Všetky údaje budú"
+    ." vymazané! Možno by ste mali urobiť"
+    ." zálohu pre neskoršie obnovenie.";
 $lang['L_CONFIRM_TRUNCATE_TABLES']="Naozaj chcete vyprazdnit vybrané"
     ." tabuľky?";
 $lang['L_CONNECT']="pripojiť";
