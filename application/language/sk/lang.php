@@ -926,7 +926,7 @@ $lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabuľka";
 $lang['L_TABLENAME']="Názov tabuľky";
 $lang['L_TABLENAME_EXPLAIN']="Názov tabuľky";
-$lang['L_TABLES']="Tabuliek";
+$lang['L_TABLES']="Tabuľky";
 $lang['L_TABLESELECTION']="Tabuľka výberu";
 $lang['L_TABLE_CREATE_SUCC']="Tabuľka '%s'  bola úspešne"
     ." vytvorená.";
