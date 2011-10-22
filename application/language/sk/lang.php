@@ -845,9 +845,9 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Chyba: Žiadny platný názov poľa";
 $lang['L_SQL_FIRST']="prvá";
 $lang['L_SQL_IMEXPORT']="Import-Export";
 $lang['L_SQL_IMPORT']="Import v databáze `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: detekoval neúplný údaj. Neviem"
-    ." nájsť zhodu pre uzavretie: '%s' v"
-    ." dotaze: %s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: detekoval neúplný údaj. <br"
+    ." />Neviem nájsť zhodu pre uzavretie:"
+    ." '%s' v dotaze: %s";
 $lang['L_SQL_INDEXES']="Indexy";
 $lang['L_SQL_INSERTFIELD']="vložiť pole";
 $lang['L_SQL_INSERTNEWFIELD']="vložiť nové pole";
