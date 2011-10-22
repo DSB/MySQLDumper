@@ -738,7 +738,7 @@ $lang['L_SAVE']="Uložiť";
 $lang['L_SAVEANDCONTINUE']="Uložiť a pokračovať v inštalácii";
 $lang['L_SAVE_ERROR']="Chyba - nemôžem uložiť nastavenie!";
 $lang['L_SAVE_SUCCESS']="Nastavenie bolo úspešne uložené do"
-    ." nastavenia zálohovania \"%s\".";
+    ." konfiguračného súboru \"%s\".";
 $lang['L_SAVING_DATA_TO_FILE']="Ukladanie dát z databázy '%s' do"
     ." zálohy '%s'";
 $lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximálna veľkosť zálohy bola"
