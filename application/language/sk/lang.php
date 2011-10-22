@@ -496,7 +496,7 @@ $lang['L_LOAD_FILE']="Nahrať súbor";
 $lang['L_LOG']="Protokol";
 $lang['L_LOGFILENOTWRITABLE']="Nedá sa zapisovať do súboru"
     ." protokolu !";
-$lang['L_LOGFILES']="Log súbory";
+$lang['L_LOGFILES']="Súbory protokolov";
 $lang['L_LOGGED_IN']="Prihlásený";
 $lang['L_LOGIN']="Prihlásiť sa";
 $lang['L_LOGIN_AUTOLOGIN']="Automatické prihlásenie";
