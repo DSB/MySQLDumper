@@ -546,8 +546,8 @@ $lang['L_MYSQLVARS']="Premenné MySQL";
 $lang['L_MYSQL_CLIENT_VERSION']="MySQL-Client";
 $lang['L_MYSQL_CONNECTION_ENCODING']="Štandardné kódovanie MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-Data";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
+$lang['L_MYSQL_ROUTINE']="Rutina";
+$lang['L_MYSQL_ROUTINES']="Rutiny";
 $lang['L_MYSQL_ROUTINES_EXPLAIN']="Uložené funkcie a procesy";
 $lang['L_MYSQL_TABLES_EXPLAIN']="Tabuľky sú definované v štruktúre"
     ." blokov, v ktorých sa ukladajú dáta"
@@ -566,11 +566,12 @@ $lang['L_MYSQL_VERSION_TOO_OLD']="Je nám ľúto: nainštalovalovaná"
     ." verziami MySQL-. Ale stratíte"
     ." niektoré z nových funkcií"
     ." MySQLDumper .";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEW']="Náhľad";
+$lang['L_MYSQL_VIEWS']="Zobrazenie";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Ukážka (filtrovaného) zobrazenia"
+    ." záznamov, jednej alebo viacerých"
+    ." tabuliek, neobsahuje vlastné"
+    ." záznamy.";
 $lang['L_NAME']="Názov";
 $lang['L_NEW']="nový";
 $lang['L_NEWTABLE']="Nová tabuľka";
@@ -584,7 +585,7 @@ $lang['L_NOGZPOSSIBLE']="Vzhľadom k tomu, že Zlib nie je"
 $lang['L_NONE']="žiadny";
 $lang['L_NOREVERSE']="Najstarší záznam prvý";
 $lang['L_NOTAVAIL']="<em>nie je k dispozícii</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="Nedá sa nič robiť.";
 $lang['L_NOTICE']="Poznámka:";
 $lang['L_NOTICES']="Oznámenie";
 $lang['L_NOT_ACTIVATED']="Neaktívne";
@@ -613,7 +614,7 @@ $lang['L_NO_ENTRIES']="Tabuľka \"<b>%s</b>\" je prázdna a"
     ." nemá žiadny záznam.";
 $lang['L_NO_MSD_BACKUPFILE']="Zálohovanie iných skriptov";
 $lang['L_NO_NAME_GIVEN']="Nezadali ste meno.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
+$lang['L_NR_OF_QUERIES']="Počet dotazov";
 $lang['L_NR_OF_RECORDS']="Počet záznamov";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabuľiek bolo optimalizovaných.";
 $lang['L_NUMBER_OF_FILES_FORM']="Zmazať podľa počtu záloh v jednej"
@@ -693,8 +694,8 @@ $lang['L_PROGRESS_OVER_ALL']="Celkový priebeh";
 $lang['L_PROGRESS_TABLE']="Záloha db / tabuľky";
 $lang['L_PROVIDER']="Poskytovatel";
 $lang['L_PROZESSE']="Procesy";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY']="Dotaz";
+$lang['L_QUERY_TYPE']="Typ dotazu";
 $lang['L_RECHTE']="Oprávnenie";
 $lang['L_RECORDS']="Záznamy";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> záznamov vložených.";
@@ -781,7 +782,7 @@ $lang['L_SETPRIMARYKEYSFOR']="Nastavte nové primárne kľúče na"
 $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Zobrazené dáta %s / %s zo %s";
 $lang['L_SHOWRESULT']="Zobraziť výsledky";
 $lang['L_SHOW_TABLES']="Zobraziť tabuľky";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="Zobraziť krajšie tipy nástrojov";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="SMTP-Server";
 $lang['L_SMTP_PORT']="SMTP-Port";
@@ -844,9 +845,9 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Chyba: Žiadny platný názov poľa";
 $lang['L_SQL_FIRST']="prvá";
 $lang['L_SQL_IMEXPORT']="Import-Export";
 $lang['L_SQL_IMPORT']="Import v databáze `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: detekoval neúplný údaj. Neviem"
+    ." nájsť zhodu pre uzavretie: '%s' v"
+    ." dotaze: %s";
 $lang['L_SQL_INDEXES']="Indexy";
 $lang['L_SQL_INSERTFIELD']="vložiť pole";
 $lang['L_SQL_INSERTNEWFIELD']="vložiť nové pole";
@@ -922,7 +923,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavenie zálohovania %s bolo"
     ." úspešne vytvorené.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavenie zálohovania %s bolo"
     ." úspešne odstránené.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="Resumé";
 $lang['L_TABLE']="Tabuľka";
 $lang['L_TABLENAME']="Názov tabuľky";
 $lang['L_TABLENAME_EXPLAIN']="Názov tabuľky";
@@ -949,7 +950,7 @@ $lang['L_TOOLS']="Nástroje";
 $lang['L_TOOLS_TOOLBOX']="Vybrať databázu / Funkcie Databázy"
     ." / Import - Export";
 $lang['L_TRUNCATE']="Prázdny";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE_DATABASE']="Prázdne databázy";
 $lang['L_UNIT_KB']="KB";
 $lang['L_UNIT_MB']="MB";
 $lang['L_UNIT_PIXEL']="Px";
