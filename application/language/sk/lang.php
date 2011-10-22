@@ -288,7 +288,7 @@ $lang['L_ERROR_DELETING_CONFIGFILE']="Chyba: nemožno odstrániť"
     ." konfiguračný súbor %s!";
 $lang['L_ERROR_LOADING_CONFIGFILE']="Nepodarilo sa načítať"
     ." konfiguračný súbor \"%s\".";
-$lang['L_ERROR_LOG']="Chyba Logu";
+$lang['L_ERROR_LOG']="Protokol Chýb";
 $lang['L_ERROR_MULTIPART_RESTORE']="Viacdielna-Obnova: Nemôžem nájst"
     ." další zalohovací súbor '%s'!";
 $lang['L_ESTIMATED_END']="Predpokladané ukončenie";
@@ -494,7 +494,8 @@ $lang['L_LOAD']="Nahrať predvolené nastavenia";
 $lang['L_LOAD_DATABASE']="Znovu načítať databázu";
 $lang['L_LOAD_FILE']="Nahrať súbor";
 $lang['L_LOG']="Protokol";
-$lang['L_LOGFILENOTWRITABLE']="Nemožno zapísať log súbora !";
+$lang['L_LOGFILENOTWRITABLE']="Nedá sa zapisovať do súboru"
+    ." protokolu !";
 $lang['L_LOGFILES']="Log súbory";
 $lang['L_LOGGED_IN']="Prihlásený";
 $lang['L_LOGIN']="Prihlásiť sa";
@@ -502,9 +503,9 @@ $lang['L_LOGIN_AUTOLOGIN']="Automatické prihlásenie";
 $lang['L_LOGIN_INVALID_USER']="Neznáma kombinácia užívateľského"
     ." mena a hesla.";
 $lang['L_LOGOUT']="Odhlásiť sa";
-$lang['L_LOG_CREATED']="Log súbor vytvorený";
-$lang['L_LOG_DELETE']="Zmazať Log";
-$lang['L_LOG_MAXSIZE']="Maximálna veľkosť logu";
+$lang['L_LOG_CREATED']="Súbor protokolu bol vytvorený";
+$lang['L_LOG_DELETE']="Zmazať Protokol";
+$lang['L_LOG_MAXSIZE']="Maximálna veľkosť protokolu";
 $lang['L_LOG_NOT_READABLE']="Súbor protokolu '%s' neexistuje,"
     ." alebo nie je čitateľný.";
 $lang['L_MAILERROR']="Odoslanie e-mailu zlyhalo!";
