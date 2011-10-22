@@ -85,7 +85,7 @@ $lang['L_CONFIG']="Nastavenie";
 $lang['L_CONFIGFILE']="Nastavené zálohovanie";
 $lang['L_CONFIGFILES']="Nastavenie zálohovania";
 $lang['L_CONFIGURATIONS']="Nastavenie";
-$lang['L_CONFIG_AUTODELETE']="Automazanie";
+$lang['L_CONFIG_AUTODELETE']="Auto.mazanie";
 $lang['L_CONFIG_CRONPERL']="Cron zálohovanie - Nastavenia pre"
     ." Perl skript";
 $lang['L_CONFIG_EMAIL']="Email Oznámenie";
@@ -322,15 +322,15 @@ $lang['L_FM_ALL_BU']="Všetky Zálohy";
 $lang['L_FM_ANZ_BU']="Zálohy";
 $lang['L_FM_ASKDELETE1']="Vybrali ste zálohu(y)";
 $lang['L_FM_ASKDELETE2']="Prajete si naozaj odstrániť?";
-$lang['L_FM_ASKDELETE3']="Prajete si zmazať automazania a"
-    ." nastavit nové pravidlá pre"
-    ." automazanie?";
+$lang['L_FM_ASKDELETE3']="Chcete odstrániť nastavenie"
+    ." auto.vymazania záloh a nastavit nové"
+    ." pravidlá pre auto.mazanie?";
 $lang['L_FM_ASKDELETE4']="Prajete si zmazať všetky zálohy?";
 $lang['L_FM_ASKDELETE5']="Prajete si zmazať všetky zálohy s"
     ." príponou";
 $lang['L_FM_ASKDELETE5_2']="*  Teraz odstrániť?";
-$lang['L_FM_AUTODEL1']="Automazanie: Nasledujúce zálohy boli"
-    ." vymazané, pretože maximálne"
+$lang['L_FM_AUTODEL1']="Auto.mazanie: Nasledujúce zálohy"
+    ." boli vymazané, pretože maximálne"
     ." ponechanie záloh na ftp je:";
 $lang['L_FM_CHOOSE_ENCODING']="Vyberte kódovanie súboru zálohy";
 $lang['L_FM_COMMENT']="Zadajte komentár";
@@ -340,7 +340,7 @@ $lang['L_FM_DELETE2']="bola úspešne odstránená.";
 $lang['L_FM_DELETE3']="nemožno odstrániť!";
 $lang['L_FM_DELETEALL']="Zmazať Všetky zálohy";
 $lang['L_FM_DELETEALLFILTER']="Zmazať všetko s";
-$lang['L_FM_DELETEAUTO']="Automazanie spustiť manuálne";
+$lang['L_FM_DELETEAUTO']="Auto.mazanie spustiť manuálne";
 $lang['L_FM_DUMPSETTINGS']="Konfigurácia Zálohy";
 $lang['L_FM_DUMP_HEADER']="Záloha";
 $lang['L_FM_FILEDATE']="Dátum";
