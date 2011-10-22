@@ -493,7 +493,7 @@ $lang['L_LASTBACKUP']="Posledná záloha";
 $lang['L_LOAD']="Nahrať predvolené nastavenia";
 $lang['L_LOAD_DATABASE']="Znovu načítať databázu";
 $lang['L_LOAD_FILE']="Nahrať súbor";
-$lang['L_LOG']="Log";
+$lang['L_LOG']="Protokol";
 $lang['L_LOGFILENOTWRITABLE']="Nemožno zapísať log súbora !";
 $lang['L_LOGFILES']="Log súbory";
 $lang['L_LOGGED_IN']="Prihlásený";
@@ -505,8 +505,8 @@ $lang['L_LOGOUT']="Odhlásiť sa";
 $lang['L_LOG_CREATED']="Log súbor vytvorený";
 $lang['L_LOG_DELETE']="Zmazať Log";
 $lang['L_LOG_MAXSIZE']="Maximálna veľkosť logu";
-$lang['L_LOG_NOT_READABLE']="Log súbor '%s' neexistuje, alebo nie"
-    ." je čitateľný.";
+$lang['L_LOG_NOT_READABLE']="Súbor protokolu '%s' neexistuje,"
+    ." alebo nie je čitateľný.";
 $lang['L_MAILERROR']="Odoslanie e-mailu zlyhalo!";
 $lang['L_MAILPROGRAM']="Mail program";
 $lang['L_MAXIMUM_LENGTH']="Maximálna dĺžka";
@@ -641,8 +641,8 @@ $lang['L_PERLOUTPUT2']="URL pre prehliadače alebo pre"
     ." externú prácu Cron";
 $lang['L_PERLOUTPUT3']="Príkazové pre Shell alebo pre"
     ." crontab";
-$lang['L_PERL_COMPLETELOG']="Perl-kompletné-Log";
-$lang['L_PERL_LOG']="Perl-Log";
+$lang['L_PERL_COMPLETELOG']="Kompletný-Protokol-Perl";
+$lang['L_PERL_LOG']="Protokol-Perl";
 $lang['L_PHPBUG']="Chyba v zlib!Nemožno kompresie!";
 $lang['L_PHPMAIL']="PHP-Mail Funkcia()";
 $lang['L_PHP_EXTENSIONS']="PHP-Rozšírenie";
