@@ -647,7 +647,7 @@ $lang['L_PERL_LOG']="Protokol-Perl";
 $lang['L_PHPBUG']="Chyba v zlib!Nemožno kompresie!";
 $lang['L_PHPMAIL']="PHP-Mail Funkcia()";
 $lang['L_PHP_EXTENSIONS']="PHP-Rozšírenie";
-$lang['L_PHP_LOG']="PHP-Log";
+$lang['L_PHP_LOG']="Protokol-PHP";
 $lang['L_PHP_VERSION']="PHP-Verzia";
 $lang['L_PHP_VERSION_TOO_OLD']="Je nám ľúto: nainštalovaná"
     ." PHP-verzia je príliš zastaralá."
