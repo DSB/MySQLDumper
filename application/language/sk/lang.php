@@ -703,18 +703,15 @@ $lang['L_RECORDS_PER_PAGECALL']="Záznamov na stránku";
 $lang['L_REFRESHTIME']="Aktualizácia času";
 $lang['L_REFRESHTIME_PROCESSLIST']="Interval procesu aktualizácie zoznamu";
 $lang['L_REGISTRATION_DESCRIPTION']="Prosím, zadajte svoje prihlasovacie"
-    ." údaje. Budete prihlásení do"
-    ." MySQLDumper s týmto užívateľom."
-    ." Poznámka: Uschovajte si svoje udaje"
-    ." na bezpečné miesto. Môžete si"
-    ." vybrať užívateľské meno a heslo"
-    ." zadarmo. Uistite sa, že vybrať"
-    ." najbezpečnejšie možná kombinácia"
-    ." užívateľského mena a hesla pre"
-    ." ochranu prístupu k MySQLDumper proti"
-    ." neoprávnenému prístupu"
-    ." najlepší!<br />Vypočuť<br"
-    ." />Čítať foneticky";
+    ." údaje. Tieto prihlasovacie údaje"
+    ." budete používať pre prihlásenie do"
+    ." MySQLDumper. Poznámka: Uschovajte si"
+    ." svoje údaje na bezpečné miesto. <br"
+    ." /><br />Zadajte najbezpečnejšiu"
+    ." možnú kombináciu užívateľského"
+    ." mena a hesla pre ochranu prístupu k"
+    ." MySQLDumper proti neoprávnenému"
+    ." prístupu!";
 $lang['L_RELOAD']="Znovu";
 $lang['L_REMOVE']="Odstrániť";
 $lang['L_REPAIR']="Opraviť";
