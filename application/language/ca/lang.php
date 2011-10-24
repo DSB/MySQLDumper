@@ -443,18 +443,7 @@ $lang['L_INDEX_SIZE']="Size of index";
 $lang['L_INFO_ACTDB']="Selected Database";
 $lang['L_INFO_DATABASES']="Accessable database(s)";
 $lang['L_INFO_DBEMPTY']="The database is empty !";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="On this server the PHP command"
-    ." fsockopen() is disabled by the"
-    ." server's configuration. Because of"
-    ." this the automatic download of"
-    ." language packs is not possible. To"
-    ." bypass this, you can download packages"
-    ." manually, extract them locally and"
-    ." upload them to the directory"
-    ." \"language\" of your MySQLDumper"
-    ." installation. Afterwards the new"
-    ." language pack is available on this"
-    ." site.";
+$lang['L_INFO_FSOCKOPEN_DISABLED']="test55";
 $lang['L_INFO_LASTUPDATE']="Last update";
 $lang['L_INFO_LOCATION']="Your location is";
 $lang['L_INFO_NODB']="database does not exist.";
