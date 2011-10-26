@@ -11,32 +11,34 @@
 $lang=array();
 $lang['L_ACTION']="Acción";
 $lang['L_ACTIVATED']="activo";
-$lang['L_ACTUALLY_INSERTED_RECORDS']="Hasta el momento, se han recuperado"
-    ." <b>%s</b> de tablas.";
-$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Hasta ahora se han importado <b>%s</b>"
-    ." de <b>%s</b> registros.";
+$lang['L_ACTUALLY_INSERTED_RECORDS']="Hasta el momento, se han añadido con"
+    ." éxito <b>%s</b> registros.";
+$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Hasta ahora se han añadido con éxito"
+    ." <b>%s</b> de <b>%s</b> registros.";
 $lang['L_ADD']="Añadir";
 $lang['L_ADDED']="añadido";
 $lang['L_ADD_DB_MANUALLY']="Añadir base de datos manualmente";
 $lang['L_ADD_RECIPIENT']="Añadir destinatario";
 $lang['L_ALL']="todos";
 $lang['L_ANALYZE']="Analizar";
-$lang['L_ANALYZING_TABLE']="Se está llenando de datos la tabla"
-    ." '<b>%s</b>'.";
+$lang['L_ANALYZING_TABLE']="Ahora se están analizando los datos"
+    ." de la tabla '<b>%s</b>'.";
 $lang['L_ASKDBCOPY']="¿Desea copiar el contenido de la base"
     ." de datos `%s` a la base de datos `%s`?";
 $lang['L_ASKDBDELETE']="¿Desea realmente eliminar la base de"
-    ." datos `%s` así como todos sus"
-    ." contenidos?";
+    ." datos `%s` así como todo su"
+    ." contenido?";
 $lang['L_ASKDBEMPTY']="¿Desea realmente vaciar la base de"
     ." datos `%s` ?";
 $lang['L_ASKDELETEFIELD']="¿Desea eliminar el campo?";
-$lang['L_ASKDELETERECORD']="¿Desea eliminar el registro?";
-$lang['L_ASKDELETETABLE']="Desea eliminar la tabla `%s`?";
-$lang['L_ASKTABLEEMPTY']="¿Desea vaciar la tabla `%s`?";
-$lang['L_ASKTABLEEMPTYKEYS']="¿Desea vaciar la tabla `%s` y"
-    ." resetear sus índices?";
-$lang['L_ATTACHED_AS_FILE']="adjunta como un archivo";
+$lang['L_ASKDELETERECORD']="¿Realmente desea eliminar este"
+    ." registro?";
+$lang['L_ASKDELETETABLE']="¿Debería ser eliminada la tabla"
+    ." `%s`?";
+$lang['L_ASKTABLEEMPTY']="¿Debería ser vaciada la tabla `%s`?";
+$lang['L_ASKTABLEEMPTYKEYS']="¿Debería ser vaciada la tabla `%s` y"
+    ." reseteados sus índices?";
+$lang['L_ATTACHED_AS_FILE']="adjunto como un archivo";
 $lang['L_ATTACH_BACKUP']="Adjuntar copia de seguridad";
 $lang['L_AUTHENTICATE']="Información de acceso";
 $lang['L_AUTHORIZE']="Autorizar";
@@ -45,24 +47,26 @@ $lang['L_AUTODELETE']="Eliminación automática de las copias"
 $lang['L_BACK']="atrás";
 $lang['L_BACKUPFILESANZAHL']="En el directorio de copias de"
     ." seguridad se encuentran";
-$lang['L_BACKUPS']="copias de seguridad";
+$lang['L_BACKUPS']="Copias de seguridad";
 $lang['L_BACKUP_DBS']="BB.DD. a copiar";
-$lang['L_BACKUP_TABLE_DONE']="Seguridad de la tabla `%s` completado."
-    ." %s registros fueron almacenados.";
-$lang['L_BACK_TO_OVERVIEW']="Información general de bases de datos";
-$lang['L_CALL']="Llamada";
+$lang['L_BACKUP_TABLE_DONE']="Completado el volcado de la tabla"
+    ." `%s`. Se almacenaron %s registros.";
+$lang['L_BACK_TO_OVERVIEW']="Información general de la base de"
+    ." datos";
+$lang['L_CALL']="Llamar";
 $lang['L_CANCEL']="Cancelar";
-$lang['L_CANT_CREATE_DIR']="No se puede crear el directorio"
+$lang['L_CANT_CREATE_DIR']="No se pudo crear el directorio"
     ." '%s'.<br />Cree este directorio"
     ." manualmente utilizando un programa de"
     ." FTP.";
 $lang['L_CHANGE']="Cambiar";
 $lang['L_CHANGEDIR']="Cambiando al directorio";
-$lang['L_CHANGEDIRERROR']="No se ha podido cambiar el directorio";
-$lang['L_CHARSET']="Juego de caracteres";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHANGEDIRERROR']="¡No se ha podido cambiar de"
+    ." directorio!";
+$lang['L_CHARSET']="Juego de carácteres";
+$lang['L_CHARSETS']="Juego de carácteres";
 $lang['L_CHECK']="Comprobar";
-$lang['L_CHECK_DIRS']="Comprobar los directorios";
+$lang['L_CHECK_DIRS']="Comprobar mis directorios";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper no pudo detectar la"
     ." codificación de los archivos de la"
     ." copia de seguridad de forma"

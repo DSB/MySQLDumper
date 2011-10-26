@@ -9,56 +9,60 @@
  * @author        $Author$
  */
 $lang=array();
-$lang['L_ACTION']="Action";
-$lang['L_ACTIVATED']="activated";
-$lang['L_ACTUALLY_INSERTED_RECORDS']="Up to now <b>%s</b> records were"
-    ." successfully added.";
-$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Up to now  <b>%s</b> of <b>%s</b>"
-    ." records were successfully added.";
-$lang['L_ADD']="Add";
-$lang['L_ADDED']="added";
-$lang['L_ADD_DB_MANUALLY']="Add database manually";
-$lang['L_ADD_RECIPIENT']="Add recipient";
-$lang['L_ALL']="all";
-$lang['L_ANALYZE']="Analyze";
-$lang['L_ANALYZING_TABLE']="Now data of the table '<b>%s</b>' is"
-    ." being analyzed.";
-$lang['L_ASKDBCOPY']="Do you  want to copy database `%s` to"
-    ." database `%s`?";
-$lang['L_ASKDBDELETE']="Do you want to delete the Database"
-    ." `%s` with the content?";
-$lang['L_ASKDBEMPTY']="Do you want to empty the Database `%s`"
-    ." ?";
-$lang['L_ASKDELETEFIELD']="Do you want to delete the Field?";
-$lang['L_ASKDELETERECORD']="Are you sure to delete this record?";
-$lang['L_ASKDELETETABLE']="Should the table `%s` be deleted?";
-$lang['L_ASKTABLEEMPTY']="Should the table `%s` be emptied?";
-$lang['L_ASKTABLEEMPTYKEYS']="Should the table `%s` be emptied and"
-    ." the Indices reset?";
-$lang['L_ATTACHED_AS_FILE']="attached as file";
-$lang['L_ATTACH_BACKUP']="Attach backup";
-$lang['L_AUTHENTICATE']="Login information";
-$lang['L_AUTHORIZE']="Authorize";
-$lang['L_AUTODELETE']="Delete backups automatically";
-$lang['L_BACK']="back";
-$lang['L_BACKUPFILESANZAHL']="In the Backup directory there are";
-$lang['L_BACKUPS']="Backups";
-$lang['L_BACKUP_DBS']="DBs to backup";
-$lang['L_BACKUP_TABLE_DONE']="Dumping of table `%s` finished. %s"
-    ." records have been saved.";
-$lang['L_BACK_TO_OVERVIEW']="Database Overview";
-$lang['L_CALL']="Call";
-$lang['L_CANCEL']="Cancel";
-$lang['L_CANT_CREATE_DIR']="Couldn' t create dir '%s'. <br"
-    ." />Please create it using your FTP"
-    ." program.";
-$lang['L_CHANGE']="change";
-$lang['L_CHANGEDIR']="Changing to Directory";
-$lang['L_CHANGEDIRERROR']="Couldn`t change directory!";
-$lang['L_CHARSET']="Charset";
-$lang['L_CHARSETS']="Character Sets";
-$lang['L_CHECK']="Check";
-$lang['L_CHECK_DIRS']="Check my directories";
+$lang['L_ACTION']="Acció";
+$lang['L_ACTIVATED']="actiu";
+$lang['L_ACTUALLY_INSERTED_RECORDS']="Fins ara, s'han afegit amb èxit"
+    ." <b>%s</b> registres.";
+$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Fins ara s'han afegit amb èxit"
+    ." <b>%s</b> de <b>%s</b> registres.";
+$lang['L_ADD']="Afegir";
+$lang['L_ADDED']="afegit";
+$lang['L_ADD_DB_MANUALLY']="Afegir base de dades manualment";
+$lang['L_ADD_RECIPIENT']="Afegir destinatari";
+$lang['L_ALL']="tots";
+$lang['L_ANALYZE']="Analitzar";
+$lang['L_ANALYZING_TABLE']="Ara s'estàn analitzant les dades de"
+    ." la taula '<b>%s</b>'.";
+$lang['L_ASKDBCOPY']="¿Vol copiar el contingut de la base"
+    ." de dades `%s` a la base de dades `%s`?";
+$lang['L_ASKDBDELETE']="¿Realment vol eliminar la base de"
+    ." dades `%s` i tot el seu contingut?";
+$lang['L_ASKDBEMPTY']="Realment vol buidar la base de dades"
+    ." `%s`?";
+$lang['L_ASKDELETEFIELD']="Realment vol eliminar el camp?";
+$lang['L_ASKDELETERECORD']="Realment vol eliminar aquest registre?";
+$lang['L_ASKDELETETABLE']="Hauria de ser eliminada la taula `%s`?";
+$lang['L_ASKTABLEEMPTY']="Hauria de ser buidada la taula `%s`?";
+$lang['L_ASKTABLEEMPTYKEYS']="Hauria de ser buidada la taula `%s` i"
+    ." resetejats els seus índexs?";
+$lang['L_ATTACHED_AS_FILE']="adjunt com a arxiu";
+$lang['L_ATTACH_BACKUP']="Adjuntar còpia de seguretat";
+$lang['L_AUTHENTICATE']="Informació d'accés";
+$lang['L_AUTHORIZE']="Autoritzar";
+$lang['L_AUTODELETE']="Eliminació automàtica de les còpies"
+    ." de seguretat";
+$lang['L_BACK']="enrere";
+$lang['L_BACKUPFILESANZAHL']="Al directori de còpies de seguretat"
+    ." trobem";
+$lang['L_BACKUPS']="Còpies de seguretat";
+$lang['L_BACKUP_DBS']="BB.DD. a copiar";
+$lang['L_BACKUP_TABLE_DONE']="Completat el volcat de la taula `%s`."
+    ." S'han guardat %s registres.";
+$lang['L_BACK_TO_OVERVIEW']="Informació general de la base de"
+    ." dades";
+$lang['L_CALL']="Trucar";
+$lang['L_CANCEL']="Cancelar";
+$lang['L_CANT_CREATE_DIR']="No s'ha pogut crear el directori"
+    ." '%s'.<br />Crei aquest directori"
+    ." manualment utilitzant un programa de"
+    ." FTP.";
+$lang['L_CHANGE']="Canviar";
+$lang['L_CHANGEDIR']="Canviant al directori";
+$lang['L_CHANGEDIRERROR']="No s'ha pogut canviar de directori!";
+$lang['L_CHARSET']="Joc de caràcters";
+$lang['L_CHARSETS']="Joc de caràcters";
+$lang['L_CHECK']="Comprovar";
+$lang['L_CHECK_DIRS']="Comprovar els meus directoris";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"
     ." encoding of the backup file"
     ." automatically.<br /><br />You must"
@@ -443,7 +447,18 @@ $lang['L_INDEX_SIZE']="Size of index";
 $lang['L_INFO_ACTDB']="Selected Database";
 $lang['L_INFO_DATABASES']="Accessable database(s)";
 $lang['L_INFO_DBEMPTY']="The database is empty !";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="test55";
+$lang['L_INFO_FSOCKOPEN_DISABLED']="On this server the PHP command"
+    ." fsockopen() is disabled by the"
+    ." server's configuration. Because of"
+    ." this the automatic download of"
+    ." language packs is not possible. To"
+    ." bypass this, you can download packages"
+    ." manually, extract them locally and"
+    ." upload them to the directory"
+    ." \"language\" of your MySQLDumper"
+    ." installation. Afterwards the new"
+    ." language pack is available on this"
+    ." site.";
 $lang['L_INFO_LASTUPDATE']="Last update";
 $lang['L_INFO_LOCATION']="Your location is";
 $lang['L_INFO_NODB']="database does not exist.";

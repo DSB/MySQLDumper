@@ -145,7 +145,7 @@ $lang['L_CRON_EXTENDER']="Extinderea script-ul";
 $lang['L_CRON_PRINTOUT']="Textul in scris";
 $lang['L_CSVOPTIONS']="CSV Options";
 $lang['L_CSV_EOL']="Seperate lines with";
-$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s` !";
+$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s`!";
 $lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
     ." that of the data to import (%d instead"
     ." of %d).";

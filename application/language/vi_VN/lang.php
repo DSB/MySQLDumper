@@ -1106,25 +1106,33 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Địa chỉ email quá dài, 
     ." tự.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Địa chỉ email không được có"
     ." dấu nháy kép.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="Không thể giải mã ký hiệu"
+    ." punycode của hostname.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="Tên máy chủ có chứa một dấu"
+    ." gạch ngang ở vị trí không"
+    ." hợp lệ.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Không hợp lệ. Cần là một"
+    ." chuỗi (string)";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="Hostname không phù hợp với cấu"
+    ." trúc quy định.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="Các tên miền không phù hợp"
+    ." với sơ đồ của tên miền"
+    ." cấp cao (TLD) chỉ định.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="Các tên miền có chứa một tên"
+    ." mạng nội bộ (local) không hợp"
+    ." lệ.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="Hostname không phù hợp với cú"
+    ." pháp URI.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="Địa chỉ IP trong tên máy chủ"
+    ." không được chấp nhận.";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Tên mạng nội bộ trong tên máy"
+    ." chủ không được phép.";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Không thể trích xuất một"
+    ." phần tên miền cấp cao nhất"
+    ." (TLD) từ tên máy.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="Các tên miền có chứa tên"
+    ." miền cấp cao (TLD) chưa được"
+    ." biết đến.";
 $lang['L_ZEND_ID_IS_EMPTY']="Giá trị này không được để"
     ." trống.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Chuỗi so sánh (Token) được cung"

@@ -213,7 +213,7 @@ $lang['L_CRON_EXTENDER']="File extension";
 $lang['L_CRON_PRINTOUT']="Print output on screen.";
 $lang['L_CSVOPTIONS']="Настройки CSV";
 $lang['L_CSV_EOL']="Seperate lines with";
-$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s` !";
+$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s`!";
 $lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
     ." that of the data to import (%d instead"
     ." of %d).";
