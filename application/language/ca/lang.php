@@ -63,540 +63,591 @@ $lang['L_CHARSET']="Joc de caràcters";
 $lang['L_CHARSETS']="Joc de caràcters";
 $lang['L_CHECK']="Comprovar";
 $lang['L_CHECK_DIRS']="Comprovar els meus directoris";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper couldn't detect the"
-    ." encoding of the backup file"
-    ." automatically.<br /><br />You must"
-    ." choose the charset with which this"
-    ." backup was saved.<br /><br />If you"
-    ." discover any problems with some"
-    ." characters after restoring, you can"
-    ." repeat the backup-progress and then"
-    ." choose another character set.<br /><br"
-    ." />Good luck. ;)<br /><br />";
-$lang['L_CHOOSE_DB']="Select Database";
-$lang['L_CLEAR_DATABASE']="Clear database";
-$lang['L_CLOSE']="Close";
-$lang['L_COLLATION']="Collation";
-$lang['L_COMMAND']="Command";
-$lang['L_COMMAND_AFTER_BACKUP']="Command after backup";
-$lang['L_COMMAND_BEFORE_BACKUP']="Command before backup";
-$lang['L_COMMENT']="Comment";
-$lang['L_COMPRESSED']="compressed (gz)";
-$lang['L_CONFBASIC']="Basic Parameter";
-$lang['L_CONFIG']="Configuration";
-$lang['L_CONFIGFILE']="Config File";
-$lang['L_CONFIGFILES']="Configuration Files";
-$lang['L_CONFIGURATIONS']="Configurations";
-$lang['L_CONFIG_AUTODELETE']="Autodelete";
-$lang['L_CONFIG_CRONPERL']="Crondump Settings for Perl script";
-$lang['L_CONFIG_EMAIL']="Email Notification";
-$lang['L_CONFIG_FTP']="FTP Transfer of Backup file";
-$lang['L_CONFIG_HEADLINE']="Configuration";
-$lang['L_CONFIG_INTERFACE']="Interface";
-$lang['L_CONFIG_LOADED']="Configuration \"%s\" has been imported"
-    ." successfully.";
-$lang['L_CONFIRM_CONFIGFILE_DELETE']="Really delete the configuration file"
-    ." %s?";
-$lang['L_CONFIRM_DELETE_FILE']="Should the file '%s' really be"
-    ." deleted?";
-$lang['L_CONFIRM_DELETE_TABLES']="Really delete the selected tables?";
-$lang['L_CONFIRM_DROP_DATABASES']="Should the selected databases really"
-    ." be deleted?<br /><br />Attention: all"
-    ." data will be deleted! Maybe you should"
-    ." create a backup first.";
-$lang['L_CONFIRM_RECIPIENT_DELETE']="Should the recipient \"%s\" really be"
-    ." deleted?";
-$lang['L_CONFIRM_TRUNCATE_DATABASES']="Should all tables of the selected"
-    ." databases really be deleted?<br /><br"
-    ." />Attention: all data will be deleted!"
-    ." Maybe you want to create a backup"
-    ." first.";
-$lang['L_CONFIRM_TRUNCATE_TABLES']="Really empty the selected tables?";
-$lang['L_CONNECT']="connect";
-$lang['L_CONNECTIONPARS']="Connection Parameter";
-$lang['L_CONNECTTOMYSQL']="Connect to MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
-    ." file '%s'.";
-$lang['L_CONVERTED_FILES']="Converted Files";
-$lang['L_CONVERTER']="Backup Converter";
-$lang['L_CONVERTING']="Converting";
-$lang['L_CONVERT_FILE']="File to be converted";
-$lang['L_CONVERT_FILENAME']="Name of destination file (without"
-    ." extension)";
-$lang['L_CONVERT_FILEREAD']="Read file '%s'";
-$lang['L_CONVERT_FINISHED']="Conversion finished, '%s' was written"
-    ." successfully.";
-$lang['L_CONVERT_START']="Start Conversion";
-$lang['L_CONVERT_TITLE']="Convert Dump to MSD Format";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Wrong parameters!  Conversion is not"
-    ." possible.";
-$lang['L_CREATE']="Create";
-$lang['L_CREATED']="Created";
-$lang['L_CREATEDIRS']="Create Directories";
-$lang['L_CREATE_AUTOINDEX']="Create Auto-Index";
-$lang['L_CREATE_CONFIGFILE']="Create a new configuration file";
-$lang['L_CREATE_DATABASE']="Create new database";
-$lang['L_CREATE_TABLE_SAVED']="Definition of table `%s` saved.";
-$lang['L_CREDITS']="Credits / Help";
-$lang['L_CRONSCRIPT']="Cronscript";
-$lang['L_CRON_COMMENT']="Enter Comment";
-$lang['L_CRON_COMPLETELOG']="Log complete output";
-$lang['L_CRON_EXECPATH']="Path of Perl scripts";
-$lang['L_CRON_EXTENDER']="File extension";
-$lang['L_CRON_PRINTOUT']="Print output on screen.";
-$lang['L_CSVOPTIONS']="CSV Options";
-$lang['L_CSV_EOL']="Seperate lines with";
-$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s`!";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
-    ." that of the data to import (%d instead"
-    ." of %d).";
-$lang['L_CSV_FIELDSENCLOSED']="Fields enclosed by";
-$lang['L_CSV_FIELDSEPERATE']="Fields separated with";
-$lang['L_CSV_FIELDSESCAPE']="Fields escaped with";
-$lang['L_CSV_FIELDSLINES']="%d fields recognized, totally %d lines";
-$lang['L_CSV_FILEOPEN']="Open CSV file";
-$lang['L_CSV_NAMEFIRSTLINE']="Field names in first line";
-$lang['L_CSV_NODATA']="No data found for import!";
-$lang['L_CSV_NULL']="Replace NULL with";
-$lang['L_DATABASES_OF_USER']="Databases of user";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
-$lang['L_DATASIZE']="Size of data";
-$lang['L_DATASIZE_INFO']="This is the size of the records - not"
-    ." the size of the backup file";
-$lang['L_DAY']="Day";
-$lang['L_DAYS']="Days";
-$lang['L_DB']="Database";
-$lang['L_DBCONNECTION']="Database Connection";
-$lang['L_DBPARAMETER']="Database Parameters";
-$lang['L_DBS']="Databases";
-$lang['L_DB_ADAPTER']="DB-Adapter";
-$lang['L_DB_BACKUPPARS']="Database Backup Parameter";
-$lang['L_DB_DEFAULT']="Default database";
-$lang['L_DB_HOST']="Hostname";
-$lang['L_DB_IN_LIST']="The database '%s' couldn't be added"
-    ." because it is allready existing.";
-$lang['L_DB_NAME']="Database name";
-$lang['L_DB_PASS']="Password";
-$lang['L_DB_SELECT_ERROR']="<br />Error:<br />Selection of"
-    ." database <b>";
-$lang['L_DB_SELECT_ERROR2']="</b> failed!";
-$lang['L_DB_USER']="User";
-$lang['L_DEFAULT_CHARACTER_SET_NAME']="Default character set";
-$lang['L_DEFAULT_CHARSET']="Default character set";
-$lang['L_DEFAULT_COLLATION_NAME']="Default collation";
-$lang['L_DELETE']="Delete";
-$lang['L_DELETE_DATABASE']="Delete database";
-$lang['L_DELETE_FILE_ERROR']="Error deleting file \"%s\"!";
-$lang['L_DELETE_FILE_SUCCESS']="File \"%s\" was deleted successfully.";
-$lang['L_DELETE_HTACCESS']="Remove directory protection (delete"
-    ." .htaccess)";
-$lang['L_DESCRIPTION']="Description";
-$lang['L_DESELECT_ALL']="Deselect all";
-$lang['L_DIR']="Directory";
-$lang['L_DISABLEDFUNCTIONS']="Disabled Functions";
-$lang['L_DO']="Execute";
-$lang['L_DOCRONBUTTON']="Run the Perl Cron script";
-$lang['L_DONE']="Done!";
-$lang['L_DONT_ATTACH_BACKUP']="Don't attach backup";
-$lang['L_DOPERLTEST']="Test Perl Modules";
-$lang['L_DOSIMPLETEST']="Test Perl";
-$lang['L_DOWNLOAD_FILE']="Download file";
-$lang['L_DO_NOW']="operate now";
-$lang['L_DUMP']="Backup";
-$lang['L_DUMP_ENDERGEBNIS']="The file contains <b>%s</b> tables"
-    ." with <b>%s</b> records.<br />";
-$lang['L_DUMP_FILENAME']="Backup File";
-$lang['L_DUMP_HEADLINE']="Create backup...";
-$lang['L_DUMP_NOTABLES']="No tables found in database `%s`";
-$lang['L_DUMP_OF_DB_FINISHED']="Dumping of database `%s` done";
-$lang['L_DURATION']="Duration";
-$lang['L_EDIT']="edit";
-$lang['L_EHRESTORE_CONTINUE']="continue and log errors";
+$lang['L_CHOOSE_CHARSET']="MySQLDumper no ha pogut detectar la"
+    ." codificació de l'arxiu de la còpia"
+    ." de seguretat de forma automàtica.<br"
+    ." /> Vosté ha d'escollir el joc de"
+    ." caràcters amb el que es va guardar la"
+    ." còpia de seguretat.<br />Si després"
+    ." de la restauració descubreix cap"
+    ." problema amb alguns caràcters, pot"
+    ." repetir la restauració amb un altre"
+    ." joc de caràcters.<br />Bona sort. ;)";
+$lang['L_CHOOSE_DB']="Escollir base de dades";
+$lang['L_CLEAR_DATABASE']="Buidar la base de dades";
+$lang['L_CLOSE']="Tancar";
+$lang['L_COLLATION']="Ordenació";
+$lang['L_COMMAND']="Comanda";
+$lang['L_COMMAND_AFTER_BACKUP']="Comanda després de la còpia";
+$lang['L_COMMAND_BEFORE_BACKUP']="Comanda abans de la còpia";
+$lang['L_COMMENT']="Comentari";
+$lang['L_COMPRESSED']="comprimit (gz)";
+$lang['L_CONFBASIC']="Propietats bàsiques";
+$lang['L_CONFIG']="Configuració";
+$lang['L_CONFIGFILE']="Arxiu de configuració";
+$lang['L_CONFIGFILES']="Arxius de configuració";
+$lang['L_CONFIGURATIONS']="Configuracions";
+$lang['L_CONFIG_AUTODELETE']="Eliminació automàtica";
+$lang['L_CONFIG_CRONPERL']="Configuració del volcat programat"
+    ." (crondump) per l'script de Perl";
+$lang['L_CONFIG_EMAIL']="Notificació per correu electrònic";
+$lang['L_CONFIG_FTP']="Transferència per FTP de les còpies"
+    ." de seguretat";
+$lang['L_CONFIG_HEADLINE']="Configuració";
+$lang['L_CONFIG_INTERFACE']="Interfície";
+$lang['L_CONFIG_LOADED']="La configuració \"%s\" s'ha importat"
+    ." amb èxit.";
+$lang['L_CONFIRM_CONFIGFILE_DELETE']="Està segur de que vol esborrar"
+    ." l'arxiu de configuració %s?";
+$lang['L_CONFIRM_DELETE_FILE']="Realment vol que el fitxer '%s'"
+    ." seleccionat sigui eliminat?";
+$lang['L_CONFIRM_DELETE_TABLES']="Realment vol eliminar les taules"
+    ." seleccionades?";
+$lang['L_CONFIRM_DROP_DATABASES']="Realment vol eliminar les bases de"
+    ." dades seleccionades?<br />Nota: Totes"
+    ." les dades es perderan sense"
+    ." possibilitat de recuperació! Si us"
+    ." plau, faci primer una còpia de"
+    ." seguretat de les dades.";
+$lang['L_CONFIRM_RECIPIENT_DELETE']="Realment vol eliminar el destinatari"
+    ." \"%s\"?";
+$lang['L_CONFIRM_TRUNCATE_DATABASES']="Realment vol eliminar totes les taules"
+    ." de les bases de dades"
+    ." seleccionades?<br />Nota: totes les"
+    ." dades es perdran sense posibilitat de"
+    ." recuperació! Potser vulgui fer primer"
+    ." una còpia de seguretat.";
+$lang['L_CONFIRM_TRUNCATE_TABLES']="Realment vol buidar les taules"
+    ." seleccionades?";
+$lang['L_CONNECT']="conectar";
+$lang['L_CONNECTIONPARS']="Paràmetres de conexió";
+$lang['L_CONNECTTOMYSQL']="Conectar amb MySQL";
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Continuar amb la restauració per"
+    ." parts amb el següent arxiu '%s'.";
+$lang['L_CONVERTED_FILES']="Arxius convertits";
+$lang['L_CONVERTER']="Conversor de còpies de seguretat";
+$lang['L_CONVERTING']="Convertint";
+$lang['L_CONVERT_FILE']="Arxiu que es convertirà";
+$lang['L_CONVERT_FILENAME']="Nom de l'arxiu de destí (sense"
+    ." extensió)";
+$lang['L_CONVERT_FILEREAD']="Llegint l'arxiu '%s'";
+$lang['L_CONVERT_FINISHED']="Conversió finalitzada: '%s' s'ha"
+    ." guardat correctament.";
+$lang['L_CONVERT_START']="Començar la conversió";
+$lang['L_CONVERT_TITLE']="Convertir la còpia de seguretat al"
+    ." format MSD";
+$lang['L_CONVERT_WRONG_PARAMETERS']="Paràmetres incorrectes! No és"
+    ." possible la conversió.";
+$lang['L_CREATE']="Crear";
+$lang['L_CREATED']="Creat";
+$lang['L_CREATEDIRS']="Crear directoris";
+$lang['L_CREATE_AUTOINDEX']="Crear índex automàtic";
+$lang['L_CREATE_CONFIGFILE']="Crear un nou arxiu de configuració";
+$lang['L_CREATE_DATABASE']="Crear una nova base de dades";
+$lang['L_CREATE_TABLE_SAVED']="Definició de la taula '%s' guardada.";
+$lang['L_CREDITS']="Crèdits / Ajuda";
+$lang['L_CRONSCRIPT']="Script Cron";
+$lang['L_CRON_COMMENT']="Escrigui un comentari";
+$lang['L_CRON_COMPLETELOG']="Registrar totes les operacions";
+$lang['L_CRON_EXECPATH']="Ruta dels scripts de Perl";
+$lang['L_CRON_EXTENDER']="Extensió de nom d'arxiu";
+$lang['L_CRON_PRINTOUT']="Sortida de texte";
+$lang['L_CSVOPTIONS']="Opcions CSV";
+$lang['L_CSV_EOL']="separar línies amb";
+$lang['L_CSV_ERRORCREATETABLE']="Error al crear la taula `%s`!";
+$lang['L_CSV_FIELDCOUNT_NOMATCH']="El nombre de camps no coincideix amb"
+    ." el de les dades a importar (%d en lloc"
+    ." de %d).";
+$lang['L_CSV_FIELDSENCLOSED']="Camps delimitats per";
+$lang['L_CSV_FIELDSEPERATE']="Camps separats amb";
+$lang['L_CSV_FIELDSESCAPE']="Camps 'escapats' amb";
+$lang['L_CSV_FIELDSLINES']="%d camps reconeguts, un total de %d"
+    ." línies";
+$lang['L_CSV_FILEOPEN']="Obrir arxiu CSV";
+$lang['L_CSV_NAMEFIRSTLINE']="Noms de camps a la primera línia";
+$lang['L_CSV_NODATA']="No s'han trobat registres per a"
+    ." importar!";
+$lang['L_CSV_NULL']="Reemplaçar NULL amb";
+$lang['L_DATABASES_OF_USER']="Bases de dades de l'usuari";
+$lang['L_DATABASE_CREATED_FAILED']="No s'ha creat la base de dades.<br"
+    ." />MySQL ha retornat:<br /><br />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="La base de dades '%s' s'ha creat amb"
+    ." èxit.";
+$lang['L_DATASIZE']="Tamany de les dades";
+$lang['L_DATASIZE_INFO']="Aquest és el tamany de les dades que"
+    ." conté la base de dades, no de l'arxiu"
+    ." de la còpia de seguretat.";
+$lang['L_DAY']="Dia";
+$lang['L_DAYS']="Dies";
+$lang['L_DB']="Base de dades";
+$lang['L_DBCONNECTION']="Conexió amb la base de dades";
+$lang['L_DBPARAMETER']="Paràmetres de la base de dades";
+$lang['L_DBS']="Bases de dades";
+$lang['L_DB_ADAPTER']="Adaptador de BBDD";
+$lang['L_DB_BACKUPPARS']="Paràmetres de la còpia de seguretat"
+    ." de la base de dades";
+$lang['L_DB_DEFAULT']="Base de dades per defecte";
+$lang['L_DB_HOST']="Servidor (hostname)";
+$lang['L_DB_IN_LIST']="La base de dades '%s' no s'ha pogut"
+    ." afegir perqué ja existeix.";
+$lang['L_DB_NAME']="Nom de la base de dades";
+$lang['L_DB_PASS']="Contrasenya";
+$lang['L_DB_SELECT_ERROR']="<br />Error:<br /> la selecció de la"
+    ." base de dades '<b>";
+$lang['L_DB_SELECT_ERROR2']="</b>' ha fallat!";
+$lang['L_DB_USER']="Usuari";
+$lang['L_DEFAULT_CHARACTER_SET_NAME']="Joc de caràcters per defecte";
+$lang['L_DEFAULT_CHARSET']="Joc de caràcters per defecte";
+$lang['L_DEFAULT_COLLATION_NAME']="Ordre per defecte";
+$lang['L_DELETE']="Eliminar";
+$lang['L_DELETE_DATABASE']="Eliminar la base de dades";
+$lang['L_DELETE_FILE_ERROR']="Ha succeït un error al provar"
+    ." d'esborrar l'arxiu \"%s\"!";
+$lang['L_DELETE_FILE_SUCCESS']="L'arxiu \"%s\" s'ha eliminat amb"
+    ." èxit.";
+$lang['L_DELETE_HTACCESS']="Tregui la protecció del directori"
+    ." (esborri .htaccess)";
+$lang['L_DESCRIPTION']="Descripció";
+$lang['L_DESELECT_ALL']="Deseleccionar totes";
+$lang['L_DIR']="Directori";
+$lang['L_DISABLEDFUNCTIONS']="Funcions deshabilitades";
+$lang['L_DO']="Executa";
+$lang['L_DOCRONBUTTON']="Executar l'script Cron de Perl";
+$lang['L_DONE']="Fet!";
+$lang['L_DONT_ATTACH_BACKUP']="No adjuntar la còpia de seguretat";
+$lang['L_DOPERLTEST']="Provar mòduls Perl";
+$lang['L_DOSIMPLETEST']="Provar Perl";
+$lang['L_DOWNLOAD_FILE']="Descarregar arxiu";
+$lang['L_DO_NOW']="executar ara";
+$lang['L_DUMP']="Còpia de seguretat";
+$lang['L_DUMP_ENDERGEBNIS']="L'arxiu conté <b>%s</b> taules amb"
+    ." <b>%s</b> registres.<br />";
+$lang['L_DUMP_FILENAME']="Arxiu de la còpia de seguretat";
+$lang['L_DUMP_HEADLINE']="Creant la còpia de seguretat...";
+$lang['L_DUMP_NOTABLES']="No s'han trobat taules a la base de"
+    ." dades `%s`";
+$lang['L_DUMP_OF_DB_FINISHED']="Volcat de la base de dades `%s` fet";
+$lang['L_DURATION']="Durada";
+$lang['L_EDIT']="editar";
+$lang['L_EHRESTORE_CONTINUE']="continuar i registrar els errors";
 $lang['L_EHRESTORE_STOP']="stop";
-$lang['L_EMAIL']="E-Mail";
-$lang['L_EMAILBODY_ATTACH']="The Attachment contains the backup of"
-    ." your MySQL-Database.<br />Backup of"
-    ." Database `%s`<br /><br /><br"
-    ." />Following File was created:<br /><br"
-    ." />%s <br /><br />Kind regards<br /><br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_FOOTER']="`<br /><br />Kind regards<br /><br"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_ATTACH']="A Multipart Backup was created.<br"
-    ." />The Backup files are attached to"
-    ." separate emails.<br />Backup of"
-    ." Database `%s`<br /><br /><br"
-    ." />Following Files were created:<br"
-    ." /><br />%s <br /><br />Kind regards<br"
+$lang['L_EMAIL']="Adreça d'email";
+$lang['L_EMAILBODY_ATTACH']="El fitxer adjunt conté la còpia de"
+    ." seguretat de la seva base de dades"
+    ." MySQL.<br />Còpia de seguretat de la"
+    ." base de dades `%s`<br /><br /><br />Se"
+    ." ha creat el següent arxiu:<br /><br"
+    ." />%s <br /><br /><br />Salutacions"
+    ." de<br /><br />MySQLDumper<br />";
+$lang['L_EMAILBODY_FOOTER']="<br /><br /><br />Salutacions de<br"
     ." /><br />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_NOATTACH']="A Multipart Backup was created.<br"
-    ." />The Backup files are not attached to"
-    ." this email!<br />Backup of Database"
-    ." `%s`<br /><br /><br />Following Files"
-    ." were created:<br /><br />%s<br /><br"
-    ." /><br />Kind regards<br /><br"
+$lang['L_EMAILBODY_MP_ATTACH']="S'ha fet una còpia de seguretat per"
+    ." parts.<br />Els arxius d'aquesta"
+    ." còpia s'adjunten en emails"
+    ." separats!<br />Còpia de seguretat de"
+    ." la base de dades `%s`<br /><br /><br"
+    ." />S'han creat aquests arxius:<br /><br"
+    ." />%s <br /><br /><br />Salutacions"
+    ." de<br /><br />MySQLDumper<br />";
+$lang['L_EMAILBODY_MP_NOATTACH']="S'ha fet una còpia de seguretat per"
+    ." parts.<br />Els arxius no s'han"
+    ." adjuntat en aquest email!<br />Còpia"
+    ." de seguretat de la base de dades"
+    ." `%s`<br /><br /><br />Han estat creats"
+    ." aquests arxius:<br /><br />%s<br /><br"
+    ." /><br /><br />Salutacions de<br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_NOATTACH']="Files are not attached to this"
-    ." email!<br />Backup of Database `%s`<br"
-    ." /><br /><br />Following File was"
-    ." created:<br /><br />%s<br /><br /><br"
-    ." />Kind regards<br /><br"
+$lang['L_EMAILBODY_NOATTACH']="No s'ha adjuntat l'arxiu de la còpia"
+    ." de seguretat en aquest email!<br"
+    ." />Còpia de seguretat de la base de"
+    ." dades `%s`<br /><br />S'ha creat"
+    ." aquest arxiu:<br /><br />%s <br /><br"
+    ." /><br />Salutacions de<br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_TOOBIG']="The Backup file exceeded the maximum"
-    ." size of %s and was not attached to"
-    ." this email.<br />Backup of Database"
-    ." `%s`<br /><br /><br />Following File"
-    ." was created:<br /><br />%s<br /><br"
-    ." /><br />Kind regards<br /><br"
+$lang['L_EMAILBODY_TOOBIG']="La còpia de seguretat ha sobrepasat"
+    ." el tamany màxim de %s i per tant no"
+    ." ha estat adjuntada.<br />Còpia de"
+    ." seguretat de la base de dades `%s`<br"
+    ." /><br /><br />S'ha creat aquest"
+    ." arxiu:<br /><br />%s <br /><br /><br"
+    ." />Salutacions de<br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAIL_ADDRESS']="E-Mail-Address";
-$lang['L_EMAIL_CC']="CC-Receiver";
-$lang['L_EMAIL_MAXSIZE']="Maximum size of attachment";
-$lang['L_EMAIL_ONLY_ATTACHMENT']="... attachment only.";
-$lang['L_EMAIL_RECIPIENT']="Receiver";
-$lang['L_EMAIL_SENDER']="Sender address of the email";
-$lang['L_EMAIL_START']="Starting to send e-mail";
-$lang['L_EMAIL_WAS_SEND']="Email was successfully sent to";
-$lang['L_EMPTY']="Empty";
-$lang['L_EMPTYKEYS']="empty and reset indexes";
-$lang['L_EMPTYTABLEBEFORE']="Empty table before";
-$lang['L_EMPTY_DB_BEFORE_RESTORE']="Delete tables before restoring";
-$lang['L_ENCODING']="encoding";
-$lang['L_ENCRYPTION_TYPE']="Kind of encrypting";
-$lang['L_ENGINE']="Engine";
-$lang['L_ENTER_DB_INFO']="First click the button \"Connect to"
-    ." MySQL\". Only if no database could be"
-    ." detected you need to provide a"
-    ." database name here.";
-$lang['L_ENTRY']="Entry";
+$lang['L_EMAIL_ADDRESS']="Adreça d'email";
+$lang['L_EMAIL_CC']="Destinataris en còpia (CC)";
+$lang['L_EMAIL_MAXSIZE']="Tamany màxim per a fitxers adjunts";
+$lang['L_EMAIL_ONLY_ATTACHMENT']="... només el fitxer adjunt";
+$lang['L_EMAIL_RECIPIENT']="Destinatari";
+$lang['L_EMAIL_SENDER']="Remitent";
+$lang['L_EMAIL_START']="Engegar l'enviament de l'email";
+$lang['L_EMAIL_WAS_SEND']="S'ha enviat amb èxit un email a";
+$lang['L_EMPTY']="Buidar";
+$lang['L_EMPTYKEYS']="buidar i resetejar els índexs";
+$lang['L_EMPTYTABLEBEFORE']="Primer buidar la taula";
+$lang['L_EMPTY_DB_BEFORE_RESTORE']="Eliminar les taules abans de la"
+    ." restauració";
+$lang['L_ENCODING']="Codificació";
+$lang['L_ENCRYPTION_TYPE']="Tipus d'encriptació";
+$lang['L_ENGINE']="Màquina";
+$lang['L_ENTER_DB_INFO']="Primer pulsi el botó \"Conectar amb"
+    ." MySQL\". Només si no és possible"
+    ." detectar cap base de dades és"
+    ." necesari que escrigui un nom aquí.";
+$lang['L_ENTRY']="Registre";
 $lang['L_ERROR']="Error";
-$lang['L_ERRORHANDLING_RESTORE']="Error Handling while restoring";
-$lang['L_ERROR_CONFIGFILE_NAME']="Filename \"%s\" contains invalid"
-    ." characters.";
-$lang['L_ERROR_DELETING_CONFIGFILE']="Error: couldn't delete configuration"
-    ." file %s!";
-$lang['L_ERROR_LOADING_CONFIGFILE']="Couldn't load configfile \"%s\".";
-$lang['L_ERROR_LOG']="Error Log";
-$lang['L_ERROR_MULTIPART_RESTORE']="Multipart-Restore: couldn't finde the"
-    ." next file '%s'!";
-$lang['L_ESTIMATED_END']="Estimated end";
-$lang['L_EXCEL2003']="Excel from 2003";
-$lang['L_EXISTS']="Exists";
-$lang['L_EXPORT']="Export";
-$lang['L_EXPORTFINISHED']="Export finished.";
-$lang['L_EXPORTLINES']="<strong>%s</strong> lines exported";
-$lang['L_EXPORTOPTIONS']="Export Options";
-$lang['L_EXTENDEDPARS']="Extended Parameter";
-$lang['L_FADE_IN_OUT']="Display on/off";
-$lang['L_FATAL_ERROR_DUMP']="Fatal error: the CREATE-Statement of"
-    ." table '%s' in database '%s' couldn't"
-    ." be read!";
-$lang['L_FIELDS']="Fields";
-$lang['L_FIELDS_OF_TABLE']="Fields of table";
-$lang['L_FILE']="File";
-$lang['L_FILES']="Files";
-$lang['L_FILESIZE']="File size";
-$lang['L_FILE_MANAGE']="File Administration";
-$lang['L_FILE_OPEN_ERROR']="Error: could not open file.";
-$lang['L_FILE_SAVED_SUCCESSFULLY']="The file has been saved successfully.";
-$lang['L_FILE_SAVED_UNSUCCESSFULLY']="The file couldn't be saved!";
-$lang['L_FILE_UPLOAD_SUCCESSFULL']="The file '%s' was uploaded"
-    ." successfully.";
-$lang['L_FILTER_BY']="Filter by";
-$lang['L_FM_ALERTRESTORE1']="Should the database";
-$lang['L_FM_ALERTRESTORE2']="be restored with the records from the"
-    ." file";
+$lang['L_ERRORHANDLING_RESTORE']="Gestió dels errors en la restauració"
+    ." de dades";
+$lang['L_ERROR_CONFIGFILE_NAME']="El nom d'arxiu \"%s\" conté"
+    ." caràcters no vàlids.";
+$lang['L_ERROR_DELETING_CONFIGFILE']="Error! no s'ha pogut eliminar l'arxiu"
+    ." de configuració %s !";
+$lang['L_ERROR_LOADING_CONFIGFILE']="No s'ha pogut carregar l'arxiu de"
+    ." configuració \"%s\".";
+$lang['L_ERROR_LOG']="Registre d'errors";
+$lang['L_ERROR_MULTIPART_RESTORE']="Restauració per parts: no s'ha trobat"
+    ." el següent arxiu '%s'!";
+$lang['L_ESTIMATED_END']="Estimació de la finalització";
+$lang['L_EXCEL2003']="Excel a partir de la versió 2003";
+$lang['L_EXISTS']="Existeix";
+$lang['L_EXPORT']="Exportar";
+$lang['L_EXPORTFINISHED']="Exportació finalitzada.";
+$lang['L_EXPORTLINES']="<strong>%s</strong> línies exportades";
+$lang['L_EXPORTOPTIONS']="Opcions d'exportació";
+$lang['L_EXTENDEDPARS']="Paràmetres avançats";
+$lang['L_FADE_IN_OUT']="Mostrar/ocultar";
+$lang['L_FATAL_ERROR_DUMP']="Error fatal! la instrucció CREATE de"
+    ." la taula '%s' a la base de dades '%s'"
+    ." no s'ha pogut llegir!";
+$lang['L_FIELDS']="Camps";
+$lang['L_FIELDS_OF_TABLE']="Camps de la taula";
+$lang['L_FILE']="Arxiu";
+$lang['L_FILES']="Arxius";
+$lang['L_FILESIZE']="Tamany d'arxiu";
+$lang['L_FILE_MANAGE']="Gestió d'arxius";
+$lang['L_FILE_OPEN_ERROR']="Error: no s'ha pogut obrir l'arxiu.";
+$lang['L_FILE_SAVED_SUCCESSFULLY']="L'arxiu s'ha guardat amb èxit.";
+$lang['L_FILE_SAVED_UNSUCCESSFULLY']="No s'ha pogut guardar l'arxiu!";
+$lang['L_FILE_UPLOAD_SUCCESSFULL']="L'arxiu '%s' s'ha pujat amb èxit.";
+$lang['L_FILTER_BY']="Filtrar per";
+$lang['L_FM_ALERTRESTORE1']="Vol complir la base de dades";
+$lang['L_FM_ALERTRESTORE2']="amb els registres de l'arxiu";
 $lang['L_FM_ALERTRESTORE3']="?";
-$lang['L_FM_ALL_BU']="All Backups";
-$lang['L_FM_ANZ_BU']="Backups";
-$lang['L_FM_ASKDELETE1']="Should the file(s)";
-$lang['L_FM_ASKDELETE2']="really be deleted?";
-$lang['L_FM_ASKDELETE3']="Do you want autodelete to be executed"
-    ." with configured rules now?";
-$lang['L_FM_ASKDELETE4']="Do you want to delete all backup"
-    ." files?";
-$lang['L_FM_ASKDELETE5']="Do you want to delete all backup files"
-    ." with";
+$lang['L_FM_ALL_BU']="Totes les còpies de seguretat";
+$lang['L_FM_ANZ_BU']="nombre de còpies";
+$lang['L_FM_ASKDELETE1']="Realment vol eliminar l'arxiu";
+$lang['L_FM_ASKDELETE2']="?";
+$lang['L_FM_ASKDELETE3']="Vol executar ara l'eliminació"
+    ." automàtica segons les regles"
+    ." especificades?";
+$lang['L_FM_ASKDELETE4']="Realment vol eliminar tots els arxius"
+    ." de còpies de seguretat?";
+$lang['L_FM_ASKDELETE5']="Vol eliminar tots els arxius de"
+    ." còpies de seguretat amb el prefix";
 $lang['L_FM_ASKDELETE5_2']="* ?";
-$lang['L_FM_AUTODEL1']="Autodelete: the following files were"
-    ." deleted because of maximum files"
-    ." setting:";
-$lang['L_FM_CHOOSE_ENCODING']="Choose encoding of backup file";
-$lang['L_FM_COMMENT']="Enter Comment";
-$lang['L_FM_DELETE']="Delete";
-$lang['L_FM_DELETE1']="The file";
-$lang['L_FM_DELETE2']="was deleted successfully.";
-$lang['L_FM_DELETE3']="couldn't be deleted!";
-$lang['L_FM_DELETEALL']="Delete all backup files";
-$lang['L_FM_DELETEALLFILTER']="Delete all with";
-$lang['L_FM_DELETEAUTO']="Run autodelete manually";
-$lang['L_FM_DUMPSETTINGS']="Backup Configuration";
-$lang['L_FM_DUMP_HEADER']="Backup";
-$lang['L_FM_FILEDATE']="File date";
-$lang['L_FM_FILES1']="Database Backups";
-$lang['L_FM_FILESIZE']="File size";
-$lang['L_FM_FILEUPLOAD']="Upload file";
-$lang['L_FM_FREESPACE']="Free Space on Server";
-$lang['L_FM_LAST_BU']="Last Backup";
-$lang['L_FM_NOFILE']="You didn't choose a file!";
-$lang['L_FM_NOFILESFOUND']="No file found.";
-$lang['L_FM_RECORDS']="Records";
-$lang['L_FM_RESTORE']="Restore";
-$lang['L_FM_RESTORE_HEADER']="Restore of Database"
+$lang['L_FM_AUTODEL1']="Eliminació automàtica: els següents"
+    ." arxius han estat eliminats per superar"
+    ." el nombre màxim d'arxius establert:";
+$lang['L_FM_CHOOSE_ENCODING']="Seleccioni la codificació de l'arxiu"
+    ." de la còpia de seguretat";
+$lang['L_FM_COMMENT']="Faci un comentari";
+$lang['L_FM_DELETE']="Eliminar";
+$lang['L_FM_DELETE1']="L'arxiu";
+$lang['L_FM_DELETE2']="ha estat eliminat.";
+$lang['L_FM_DELETE3']="no ha pogut ser eliminat!";
+$lang['L_FM_DELETEALL']="Eliminar totes les còpies de"
+    ." seguretat";
+$lang['L_FM_DELETEALLFILTER']="Eliminar tots els arxius amb";
+$lang['L_FM_DELETEAUTO']="Executar eliminació automàtica"
+    ." manualment";
+$lang['L_FM_DUMPSETTINGS']="Configuració de la còpia de"
+    ." seguretat";
+$lang['L_FM_DUMP_HEADER']="Còpia de seguretat";
+$lang['L_FM_FILEDATE']="data";
+$lang['L_FM_FILES1']="Còpies de seguretat";
+$lang['L_FM_FILESIZE']="Tamany de l'arxiu";
+$lang['L_FM_FILEUPLOAD']="Pujar arxiu";
+$lang['L_FM_FREESPACE']="Espai lliure al servidor";
+$lang['L_FM_LAST_BU']="Darrera còpia de seguretat";
+$lang['L_FM_NOFILE']="No ha escollit cap arxiu!";
+$lang['L_FM_NOFILESFOUND']="No s'han trobat arxius.";
+$lang['L_FM_RECORDS']="Registres";
+$lang['L_FM_RESTORE']="Restaurar";
+$lang['L_FM_RESTORE_HEADER']="Restauració de la base de dades"
     ." `<strong>%s</strong>`";
-$lang['L_FM_SELECTTABLES']="Select tables";
-$lang['L_FM_STARTDUMP']="Start New Backup";
-$lang['L_FM_TABLES']="Tables";
-$lang['L_FM_TOTALSIZE']="Total Size";
-$lang['L_FM_UPLOADFAILED']="The upload has failed!";
-$lang['L_FM_UPLOADFILEEXISTS']="A file with the same name already"
-    ." exists !";
-$lang['L_FM_UPLOADFILEREQUEST']="please choose a file.";
-$lang['L_FM_UPLOADMOVEERROR']="Couldn't move selected file to the"
-    ." upload directory.";
-$lang['L_FM_UPLOADNOTALLOWED1']="This file type is not supported.";
-$lang['L_FM_UPLOADNOTALLOWED2']="Valid types are: *.gz and *.sql-files";
-$lang['L_FOUND_DB']="found db";
-$lang['L_FROMFILE']="from file";
-$lang['L_FROMTEXTBOX']="from text box";
+$lang['L_FM_SELECTTABLES']="Seleccioni les taules";
+$lang['L_FM_STARTDUMP']="Iniciar nova còpia de seguretat";
+$lang['L_FM_TABLES']="Taules";
+$lang['L_FM_TOTALSIZE']="Tamany total";
+$lang['L_FM_UPLOADFAILED']="Ha fallat la pujada de l'arxiu!";
+$lang['L_FM_UPLOADFILEEXISTS']="Ja existeix un arxiu amb aquest nom!";
+$lang['L_FM_UPLOADFILEREQUEST']="Si us plau, esculli un arxiu.";
+$lang['L_FM_UPLOADMOVEERROR']="No s'ha pogut moure l'arxiu pujat al"
+    ." directori corresponent.";
+$lang['L_FM_UPLOADNOTALLOWED1']="Aquest tipus d'arxiu no està"
+    ." suportat.";
+$lang['L_FM_UPLOADNOTALLOWED2']="Els tipus d'arxius permesos són: *.gz"
+    ." i *.sql";
+$lang['L_FOUND_DB']="Trobada BBDD:";
+$lang['L_FROMFILE']="d'arxiu";
+$lang['L_FROMTEXTBOX']="des de casella de text";
 $lang['L_FTP']="FTP";
-$lang['L_FTP_ADD_CONNECTION']="Add connection";
-$lang['L_FTP_CHOOSE_MODE']="FTP Transfer Mode";
-$lang['L_FTP_CONFIRM_DELETE']="Should this FTP-Connection really be"
-    ." deleted?";
-$lang['L_FTP_CONNECTION']="FTP-Connection";
-$lang['L_FTP_CONNECTION_CLOSED']="FTP-Connection closed";
-$lang['L_FTP_CONNECTION_DELETE']="Delete connection";
-$lang['L_FTP_CONNECTION_ERROR']="The connection to server '%s' using"
-    ." port %s couldn't be established";
-$lang['L_FTP_CONNECTION_SUCCESS']="The connection to server '%s' using"
-    ." port %s was established successfully";
-$lang['L_FTP_DIR']="Upload directory";
-$lang['L_FTP_FILE_TRANSFER_ERROR']="Transfer of file '%s' was faulty";
-$lang['L_FTP_FILE_TRANSFER_SUCCESS']="The file '%s' was transferred"
-    ." successfully";
-$lang['L_FTP_LOGIN_ERROR']="Login as user '%s' was denied";
-$lang['L_FTP_LOGIN_SUCCESS']="Login as user '%s' was successfull";
-$lang['L_FTP_OK']="Connection successful.";
-$lang['L_FTP_PASS']="Password";
-$lang['L_FTP_PASSIVE']="use passive mode";
-$lang['L_FTP_PASV_ERROR']="Switching to passive mode was"
-    ." unsuccessful";
-$lang['L_FTP_PASV_SUCCESS']="Switching to passive mode was"
-    ." successfull";
+$lang['L_FTP_ADD_CONNECTION']="Afegir conexió";
+$lang['L_FTP_CHOOSE_MODE']="Modus de transferència FTP";
+$lang['L_FTP_CONFIRM_DELETE']="Realment vol eliminar aquesta conexió"
+    ." FTP?";
+$lang['L_FTP_CONNECTION']="Conexió FTP";
+$lang['L_FTP_CONNECTION_CLOSED']="Conexió FTP tancada";
+$lang['L_FTP_CONNECTION_DELETE']="Eliminar la conexió";
+$lang['L_FTP_CONNECTION_ERROR']="No s'ha pogut establir conexió amb el"
+    ." servidor '%s' emprant el port %s.";
+$lang['L_FTP_CONNECTION_SUCCESS']="S'ha conectat amb èxit amb el"
+    ." servidor '%s' emprant el port %s";
+$lang['L_FTP_DIR']="Directori de pujada";
+$lang['L_FTP_FILE_TRANSFER_ERROR']="Ha fallat la transferència de l'arxiu"
+    ." '%s'";
+$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Se ha transferido con éxito el"
+    ." archivo '%s'";
+$lang['L_FTP_LOGIN_ERROR']="S'ha denegat l'accés com a usuari"
+    ." '%s'";
+$lang['L_FTP_LOGIN_SUCCESS']="Accés com a usuari '%s' amb èxit";
+$lang['L_FTP_OK']="La conexió s'ha realitzat amb èxit.";
+$lang['L_FTP_PASS']="Contrasenya";
+$lang['L_FTP_PASSIVE']="emprar el modus de transferència"
+    ." pasiva";
+$lang['L_FTP_PASV_ERROR']="No s'ha pogut canviar al modus passiu!";
+$lang['L_FTP_PASV_SUCCESS']="El canvi a modus passiu ha estat un"
+    ." èxit!";
 $lang['L_FTP_PORT']="Port";
-$lang['L_FTP_SEND_TO']="to <strong>%s</strong><br /> into"
-    ." <strong>%s</strong>";
-$lang['L_FTP_SERVER']="Server";
-$lang['L_FTP_SSL']="Secure SSL FTP connection";
-$lang['L_FTP_START']="Starting FTP transfer";
-$lang['L_FTP_TIMEOUT']="Connection Timeout";
-$lang['L_FTP_TRANSFER']="FTP Transfer";
-$lang['L_FTP_USER']="User";
-$lang['L_FTP_USESSL']="use SSL Connection";
-$lang['L_GENERAL']="General";
-$lang['L_GZIP']="GZip compression";
-$lang['L_GZIP_COMPRESSION']="GZip Compression";
-$lang['L_HOME']="Home";
-$lang['L_HOUR']="Hour";
-$lang['L_HOURS']="Hours";
-$lang['L_HTACC_ACTIVATE_REWRITE_ENGINE']="Activate rewrite";
-$lang['L_HTACC_ADD_HANDLER']="Add handler";
-$lang['L_HTACC_CONFIRM_DELETE']="Should the directory protection be"
-    ." written now ?";
-$lang['L_HTACC_CONTENT']="Contents of file";
-$lang['L_HTACC_CREATE']="Create directory protection";
-$lang['L_HTACC_CREATED']="The directory protection was created.";
-$lang['L_HTACC_CREATE_ERROR']="There was an error while creating the"
-    ." directory protection !<br />Please"
-    ." create the 2 files manually with the"
-    ." following content";
-$lang['L_HTACC_CRYPT']="Crypt 8 Chars max (Linux and"
-    ." Unix-Systems)";
-$lang['L_HTACC_DENY_ALLOW']="Deny / Allow";
-$lang['L_HTACC_DIR_LISTING']="Directory Listing";
-$lang['L_HTACC_EDIT']="Edit .htaccess";
-$lang['L_HTACC_ERROR_DOC']="Error Document";
-$lang['L_HTACC_EXAMPLES']="More examples and documentation";
-$lang['L_HTACC_EXISTS']="It already exists an directory"
-    ." protection. If you create a new one,"
-    ." the older one will be overwritten !";
-$lang['L_HTACC_MAKE_EXECUTABLE']="Make executable";
-$lang['L_HTACC_MD5']="MD5 (Linux and Unix-Systems)";
-$lang['L_HTACC_NO_ENCRYPTION']="plain text, no cryption (Windows)";
-$lang['L_HTACC_NO_USERNAME']="You have to enter a name!";
-$lang['L_HTACC_PROPOSED']="Urgently recommended";
-$lang['L_HTACC_REDIRECT']="Redirect";
-$lang['L_HTACC_SCRIPT_EXEC']="Execute script";
-$lang['L_HTACC_SHA1']="SHA1 (all Systems)";
-$lang['L_HTACC_WARNING']="Attention! The .htaccess directly"
-    ." affects the browser's behavior.<br"
-    ." />With incorrect content, these pages"
-    ." may no longer be accessible.";
-$lang['L_IMPORT']="Import";
-$lang['L_IMPORTIEREN']="Import";
-$lang['L_IMPORTOPTIONS']="Import Options";
-$lang['L_IMPORTSOURCE']="Import Source";
-$lang['L_IMPORTTABLE']="Import in Table";
-$lang['L_IMPORT_NOTABLE']="No table was selected for import!";
-$lang['L_IN']="in";
-$lang['L_INDEX_SIZE']="Size of index";
-$lang['L_INFO_ACTDB']="Selected Database";
-$lang['L_INFO_DATABASES']="Accessable database(s)";
-$lang['L_INFO_DBEMPTY']="The database is empty !";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="On this server the PHP command"
-    ." fsockopen() is disabled by the"
-    ." server's configuration. Because of"
-    ." this the automatic download of"
-    ." language packs is not possible. To"
-    ." bypass this, you can download packages"
-    ." manually, extract them locally and"
-    ." upload them to the directory"
-    ." \"language\" of your MySQLDumper"
-    ." installation. Afterwards the new"
-    ." language pack is available on this"
-    ." site.";
-$lang['L_INFO_LASTUPDATE']="Last update";
-$lang['L_INFO_LOCATION']="Your location is";
-$lang['L_INFO_NODB']="database does not exist.";
-$lang['L_INFO_NOPROCESSES']="no running processes";
-$lang['L_INFO_NOSTATUS']="no status available";
-$lang['L_INFO_NOVARS']="no variables available";
-$lang['L_INFO_OPTIMIZED']="optimized";
-$lang['L_INFO_RECORDS']="Records";
-$lang['L_INFO_SIZE']="Size";
+$lang['L_FTP_SEND_TO']="para <strong>%s</strong><br />a"
+    ." <strong>%s</s>";
+$lang['L_FTP_SERVER']="Servidor";
+$lang['L_FTP_SSL']="Conexió segura mediante SSL-FTP";
+$lang['L_FTP_START']="Començar la transferència FTP";
+$lang['L_FTP_TIMEOUT']="Cancelació de la conexió per temps";
+$lang['L_FTP_TRANSFER']="Transferència FTP";
+$lang['L_FTP_USER']="Usuari";
+$lang['L_FTP_USESSL']="utilitza conexió SSL";
+$lang['L_GENERAL']="Genèriques";
+$lang['L_GZIP']="Compressió Gzip";
+$lang['L_GZIP_COMPRESSION']="Compressió GZip";
+$lang['L_HOME']="Inici";
+$lang['L_HOUR']="Hora";
+$lang['L_HOURS']="Hores";
+$lang['L_HTACC_ACTIVATE_REWRITE_ENGINE']="Activar la reescritura";
+$lang['L_HTACC_ADD_HANDLER']="Afegir controlador";
+$lang['L_HTACC_CONFIRM_DELETE']="Vol crear ara la protecció de"
+    ." directori?";
+$lang['L_HTACC_CONTENT']="Contingut de l'arxiu";
+$lang['L_HTACC_CREATE']="Crear protecció de directori";
+$lang['L_HTACC_CREATED']="la protecció de directori ha estat"
+    ." creada.";
+$lang['L_HTACC_CREATE_ERROR']="S'ha produit un error al crear la"
+    ." protecció del directori!<br />Si us"
+    ." plau, coloqui manualment a dintre el"
+    ." següent arxiu, amb el següent"
+    ." contingut";
+$lang['L_HTACC_CRYPT']="Crypt màxim de 8 caràcters (Linux i"
+    ." Unix)";
+$lang['L_HTACC_DENY_ALLOW']="Denegar / Permetre";
+$lang['L_HTACC_DIR_LISTING']="Llistat de directoris";
+$lang['L_HTACC_EDIT']="editar .htaccess";
+$lang['L_HTACC_ERROR_DOC']="Document d'errors";
+$lang['L_HTACC_EXAMPLES']="altres exemples i documentació";
+$lang['L_HTACC_EXISTS']="Ja existeix actualment una protecció"
+    ." del directori. Si en crea una de nova,"
+    ." la vella serà sobreescrita!";
+$lang['L_HTACC_MAKE_EXECUTABLE']="Permetre execució";
+$lang['L_HTACC_MD5']="MD5 (Linux i Unix)";
+$lang['L_HTACC_NO_ENCRYPTION']="text pla, sense encriptació (Windows)";
+$lang['L_HTACC_NO_USERNAME']="Ha de posar-hi un nom!";
+$lang['L_HTACC_PROPOSED']="Molt recomenat";
+$lang['L_HTACC_REDIRECT']="Redirecccionar";
+$lang['L_HTACC_SCRIPT_EXEC']="Executar script";
+$lang['L_HTACC_SHA1']="SHA1 (tots els sistemes)";
+$lang['L_HTACC_WARNING']="Compte! L'arxiu .htaccess afecta"
+    ." directament al comportament dels"
+    ." navegadors.<br />Amb el contingut"
+    ." inadequat, aquestes planes poden no"
+    ." ser accesibles!";
+$lang['L_IMPORT']="Importar";
+$lang['L_IMPORTIEREN']="Importar";
+$lang['L_IMPORTOPTIONS']="Opcions d'importació";
+$lang['L_IMPORTSOURCE']="Origen de la importació";
+$lang['L_IMPORTTABLE']="Importar a taula";
+$lang['L_IMPORT_NOTABLE']="No s'ha seleccionat cap taula per a"
+    ." importar!";
+$lang['L_IN']="a";
+$lang['L_INDEX_SIZE']="Tamany de l'índex";
+$lang['L_INFO_ACTDB']="Base de dades actual";
+$lang['L_INFO_DATABASES']="Bases de dades accesibles";
+$lang['L_INFO_DBEMPTY']="La base de dades està buida!";
+$lang['L_INFO_FSOCKOPEN_DISABLED']="En aquest servidor la instrucció"
+    ." fsockopen() de PHP està deshabilitada"
+    ." per la configuració del servidor."
+    ." Degut a això la descàrrega"
+    ." automàtica de paquets d'idioma no és"
+    ." possible! Per a resoldre això, pot"
+    ." descarregar manualment els paquets,"
+    ." extreure'ls localment i pujarlos al"
+    ." directori \"language\" de la seva"
+    ." instalació de MySQLDumper. Després,"
+    ." el nou paquet d'idioma apareixerà"
+    ." disponible en aquest lloc.";
+$lang['L_INFO_LASTUPDATE']="darrera actualització";
+$lang['L_INFO_LOCATION']="Es troba a";
+$lang['L_INFO_NODB']="Base de dades inexistent";
+$lang['L_INFO_NOPROCESSES']="no hi ha processos en marxa";
+$lang['L_INFO_NOSTATUS']="no hi ha estats disponibles";
+$lang['L_INFO_NOVARS']="no hi ha variables disponibles";
+$lang['L_INFO_OPTIMIZED']="optimitzat";
+$lang['L_INFO_RECORDS']="Registres";
+$lang['L_INFO_SIZE']="Tamany";
 $lang['L_INFO_SUM']="Total";
-$lang['L_INSTALL']="Installation";
-$lang['L_INSTALLED']="Installed";
-$lang['L_INSTALL_DB_DEFAULT']="Use as default database";
-$lang['L_INSTALL_HELP_PORT']="(empty = Default Port)";
-$lang['L_INSTALL_HELP_SOCKET']="(empty = Default Socket)";
-$lang['L_IS_WRITABLE']="Is writable";
-$lang['L_KILL_PROCESS']="Stop process";
-$lang['L_LANGUAGE']="Language";
+$lang['L_INSTALL']="Instalació";
+$lang['L_INSTALLED']="Instalat";
+$lang['L_INSTALL_DB_DEFAULT']="Emprar com a base de dades per defecte";
+$lang['L_INSTALL_HELP_PORT']="(buit = port estandard)";
+$lang['L_INSTALL_HELP_SOCKET']="(buit = socket estàndar)";
+$lang['L_IS_WRITABLE']="Es pot reescriure";
+$lang['L_KILL_PROCESS']="Aturar el procés";
+$lang['L_LANGUAGE']="Idioma";
 $lang['L_LANGUAGE_NAME']="Catalan";
-$lang['L_LASTBACKUP']="Last Backup";
-$lang['L_LOAD']="Load default settings";
-$lang['L_LOAD_DATABASE']="Reload databases";
-$lang['L_LOAD_FILE']="Load file";
-$lang['L_LOG']="Log";
-$lang['L_LOGFILENOTWRITABLE']="Can't write to logfile!";
-$lang['L_LOGFILES']="Logfiles";
-$lang['L_LOGGED_IN']="Logged in";
-$lang['L_LOGIN']="Login";
-$lang['L_LOGIN_AUTOLOGIN']="Automatic login";
-$lang['L_LOGIN_INVALID_USER']="Unknown combination of username and"
-    ." password.";
-$lang['L_LOGOUT']="Log out";
-$lang['L_LOG_CREATED']="Log file created.";
-$lang['L_LOG_DELETE']="delete Log";
-$lang['L_LOG_MAXSIZE']="Maximum size of log files";
-$lang['L_LOG_NOT_READABLE']="The log file '%s' does not exist or is"
-    ." not readable.";
-$lang['L_MAILERROR']="Sending of email failed!";
-$lang['L_MAILPROGRAM']="Mail program";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
-$lang['L_MAXSIZE']="Max. Size";
-$lang['L_MAX_BACKUP_FILES_EACH2']="For each database";
-$lang['L_MAX_EXECUTION_TIME']="Max execution time";
-$lang['L_MAX_UPLOAD_SIZE']="Maximum file size";
-$lang['L_MAX_UPLOAD_SIZE_INFO']="If your Dumpfile is bigger than the"
-    ." above mentioned limit, you must upload"
-    ." it via FTP into the directory"
-    ." \"work/backup\". <br />After that you"
-    ." can choose it to begin a restore"
-    ." progress.";
-$lang['L_MEMORY']="Memory";
-$lang['L_MENU_HIDE']="Hide menu";
-$lang['L_MENU_SHOW']="Show menu";
-$lang['L_MESSAGE']="Message";
-$lang['L_MESSAGE_TYPE']="Message type";
-$lang['L_MINUTE']="Minute";
-$lang['L_MINUTES']="Minutes";
-$lang['L_MOBILE_OFF']="Off";
-$lang['L_MOBILE_ON']="On";
-$lang['L_MODE_EASY']="Easy";
+$lang['L_LASTBACKUP']="Darrera còpia de seguretat";
+$lang['L_LOAD']="Carregar configuració per defecte";
+$lang['L_LOAD_DATABASE']="Refrescar la llista de BBDD";
+$lang['L_LOAD_FILE']="Carregar arxiu";
+$lang['L_LOG']="Arxiu de registre";
+$lang['L_LOGFILENOTWRITABLE']="No es pot escriure a l'arxiu de"
+    ." registre (log)!";
+$lang['L_LOGFILES']="Arxius de registre";
+$lang['L_LOGGED_IN']="Iniciada sessió";
+$lang['L_LOGIN']="Accessar";
+$lang['L_LOGIN_AUTOLOGIN']="Inici de sessió automàtic";
+$lang['L_LOGIN_INVALID_USER']="L'adreça d'email o la contrasenya no"
+    ." són correctes.";
+$lang['L_LOGOUT']="Tancar sessió";
+$lang['L_LOG_CREATED']="Arxiu de registre creat.";
+$lang['L_LOG_DELETE']="Eliminar l'arxiu de registre (log)";
+$lang['L_LOG_MAXSIZE']="Tamany màxim dels arxius de registre"
+    ." (log)";
+$lang['L_LOG_NOT_READABLE']="L'arxiu de registre '%s' no existeix o"
+    ." no és legible.";
+$lang['L_MAILERROR']="Ha fallat l'enviament de l'email!";
+$lang['L_MAILPROGRAM']="Programa de correu electrònic";
+$lang['L_MAXIMUM_LENGTH']="Longitud màxima";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="Aquest és el nombre màxim de bytes"
+    ." que necesita un caràcter per a"
+    ." gravar-se a un disc.";
+$lang['L_MAXSIZE']="Tamany màxim";
+$lang['L_MAX_BACKUP_FILES_EACH2']="per a cada base de dades";
+$lang['L_MAX_EXECUTION_TIME']="Temps màxim d'execució";
+$lang['L_MAX_UPLOAD_SIZE']="Tamany màxim de l'arxiu";
+$lang['L_MAX_UPLOAD_SIZE_INFO']="Si l'arxiu de la còpia de seguretat"
+    ." és més gran que el límit esmentat a"
+    ." dalt, llavors ha de pujar-lo per FTP"
+    ." al directori \"/work/backup\".<br"
+    ." />Després aquest arxiu es mostrarà"
+    ." aquí, i podrà escollir-lo per a fer"
+    ." la restauració.";
+$lang['L_MEMORY']="Memòria";
+$lang['L_MENU_HIDE']="Amagar el menú";
+$lang['L_MENU_SHOW']="Mostrar el menú";
+$lang['L_MESSAGE']="Missatge";
+$lang['L_MESSAGE_TYPE']="Tipus de missatge";
+$lang['L_MINUTE']="Minut";
+$lang['L_MINUTES']="Minuts";
+$lang['L_MOBILE_OFF']="De";
+$lang['L_MOBILE_ON']="a";
+$lang['L_MODE_EASY']="Senzill";
 $lang['L_MODE_EXPERT']="Expert";
-$lang['L_MSD_INFO']="MySQLDumper-Information";
-$lang['L_MSD_MODE']="MySQLDumper-Mode";
-$lang['L_MSD_VERSION']="MySQLDumper-Version";
-$lang['L_MULTIDUMP']="Multidump";
-$lang['L_MULTIDUMP_FINISHED']="Backup of <b>%d</b> Databases done";
-$lang['L_MULTIPART_ACTUAL_PART']="Actual Part";
-$lang['L_MULTIPART_SIZE']="maximum File size";
-$lang['L_MULTI_PART']="Multipart Backup";
-$lang['L_MYSQLVARS']="MySQL Variables";
-$lang['L_MYSQL_CLIENT_VERSION']="MySQL-Client";
-$lang['L_MYSQL_CONNECTION_ENCODING']="Standard encoding of MySQL-Server";
-$lang['L_MYSQL_DATA']="MySQL-Data";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
-$lang['L_MYSQL_VERSION']="MySQL-Version";
-$lang['L_MYSQL_VERSION_TOO_OLD']="We are sorry: the installed"
-    ." MySQL-Version %s is too old and can"
-    ." not be used together with this version"
-    ." of MySQLDumper. Please update your"
-    ." MySQL-Version to at least version"
-    ." %s.<br />As an alternative you could"
-    ." install MySQLDumper version 1.24,"
-    ." which is able to work together with"
-    ." older MySQL-Versions. But you will"
-    ." lose some of the new functions of"
-    ." MySQLDumper in that case.<br />";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
-$lang['L_NAME']="Name";
-$lang['L_NEW']="new";
-$lang['L_NEWTABLE']="Create new table";
-$lang['L_NEXT_AUTO_INCREMENT']="Next automatic index";
-$lang['L_NEXT_AUTO_INCREMENT_SHORT']="Autoindex";
+$lang['L_MSD_INFO']="Informació sobre MySQLDumper";
+$lang['L_MSD_MODE']="Modus MySQLDumper";
+$lang['L_MSD_VERSION']="Versió de MySQLDumper";
+$lang['L_MULTIDUMP']="Volcat per parts";
+$lang['L_MULTIDUMP_FINISHED']="Còpia de seguretat de <b>%d</b> bases"
+    ." de dades finalitzada";
+$lang['L_MULTIPART_ACTUAL_PART']="Sub-arxiu actual";
+$lang['L_MULTIPART_SIZE']="Tamany màxim d'arxiu";
+$lang['L_MULTI_PART']="Còpia de seguretat en múltiples"
+    ." arxius";
+$lang['L_MYSQLVARS']="Variables de MySQL";
+$lang['L_MYSQL_CLIENT_VERSION']="Client MySQL";
+$lang['L_MYSQL_CONNECTION_ENCODING']="Codificació habitual per a servidors"
+    ." MySQL";
+$lang['L_MYSQL_DATA']="Dades MySQL";
+$lang['L_MYSQL_ROUTINE']="Rutina";
+$lang['L_MYSQL_ROUTINES']="Rutines";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="Funcions i procediments emmagatzemats";
+$lang['L_MYSQL_TABLES_EXPLAIN']="Les taules tenen una estructura"
+    ." definida per columnes en les que s'hi"
+    ." pot guardar dades en forma de files"
+    ." (registres). Cada registre de la base"
+    ." de dades es representa doncs per una"
+    ." fila a una taula.";
+$lang['L_MYSQL_VERSION']="Versió de MySQL";
+$lang['L_MYSQL_VERSION_TOO_OLD']="Ho sentim: la versió disponible de"
+    ." MySQL %s és massa antiga i no es pot"
+    ." utilitzar amb aquesta versió de"
+    ." MySQLDumper. Si us plau, actualitzi la"
+    ." versió de MySQL, al menys a la seva"
+    ." versió %s o superior. Com a"
+    ." alternativa, pot instalar la versió"
+    ." 1.24 de MySQLDumper que és compatible"
+    ." amb la gran majoria de servidors"
+    ." MySQL. Però en aquest cas perdrà"
+    ." algunes de les noves característiques"
+    ." de MySQLDumper ;)";
+$lang['L_MYSQL_VIEW']="Vista";
+$lang['L_MYSQL_VIEWS']="Vistes";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="Les vistes mostren (filtrats) conjunts"
+    ." de registres d'una o més taules,"
+    ." però que en sí mateix no són són"
+    ." registres.";
+$lang['L_NAME']="Nom";
+$lang['L_NEW']="nou";
+$lang['L_NEWTABLE']="crear una nova taula";
+$lang['L_NEXT_AUTO_INCREMENT']="Pròxim índex automàtic";
+$lang['L_NEXT_AUTO_INCREMENT_SHORT']="índex automàtic";
 $lang['L_NO']="no";
-$lang['L_NOFTPPOSSIBLE']="You don't have FTP functions !";
-$lang['L_NOGZPOSSIBLE']="Because Zlib is not installed, you"
-    ." cannot use GZip-Functions!";
-$lang['L_NONE']="none";
-$lang['L_NOREVERSE']="Oldest entry first";
-$lang['L_NOTAVAIL']="<em>not available</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
-$lang['L_NOTICE']="Notice";
-$lang['L_NOTICES']="Notices";
-$lang['L_NOT_ACTIVATED']="not activated";
-$lang['L_NOT_SUPPORTED']="This backup doesn't support this"
-    ." function.";
-$lang['L_NO_DB_FOUND']="I couldn't find any databases"
-    ." automatically!<br />Please unhide the"
-    ." connection parameters, and enter the"
-    ." name of your database manually.";
-$lang['L_NO_DB_FOUND_INFO']="The connection to the database was"
-    ." successfully established.<br /><br"
-    ." />Your userdata is valid and was"
-    ." accepted by the MySQL-Server.<br /><br"
-    ." />But MySQLDumper was not able to find"
-    ." any database.<br /><br />The automatic"
-    ." detection via script is blocked on"
-    ." some servers.<br /><br />You must"
-    ." enter your database name manually"
-    ." after the installation is finished.<br"
-    ." />Click on \"configuration\""
-    ." \"Connection Parameter - display\" and"
-    ." enter the database name there.";
-$lang['L_NO_DB_SELECTED']="No database selected.";
-$lang['L_NO_ENTRIES']="Table is empty and doesn't have any"
-    ." entry.";
+$lang['L_NOFTPPOSSIBLE']="Les funcions de FTP no estàn"
+    ." disponibles!";
+$lang['L_NOGZPOSSIBLE']="Donat que Zlib no està instalat en el"
+    ." seu servidor, no pot emprar les"
+    ." funcions de compresió d'arxius GZip!";
+$lang['L_NONE']="cap";
+$lang['L_NOREVERSE']="Mostrar les entrades més antigues"
+    ." primer";
+$lang['L_NOTAVAIL']="<em>no disponible</em>";
+$lang['L_NOTHING_TO_DO']="No hi ha res a fer.";
+$lang['L_NOTICE']="Indicació";
+$lang['L_NOTICES']="Indicacions";
+$lang['L_NOT_ACTIVATED']="inactiu";
+$lang['L_NOT_SUPPORTED']="Aquesta còpia de seguretat no accepta"
+    ." aquesta funció.";
+$lang['L_NO_DB_FOUND']="No s'ha pogut trobar cap base de dades"
+    ." automàticament! Si us plau, mostri"
+    ." els paràmetres de la conexió, i"
+    ." escrigui el nom de la seva base de"
+    ." dades manualmet.";
+$lang['L_NO_DB_FOUND_INFO']="S'ha establert amb èxit la conexió"
+    ." amb el servidor de la base de"
+    ." dades.<br /> Les seves dades d'usuari"
+    ." són vàlides i foren acceptades pel"
+    ." servidor MySQL.<br /><br />Però"
+    ." MySQLDumper no ha pogut trobar cap"
+    ." base de dades!<br />En alguns"
+    ." servidors està bloquejada la"
+    ." detecció automàtica a través"
+    ." d'scripts per questions de"
+    ." seguretat.<br />Ha d'escriure"
+    ." manualment el nom de la seva base de"
+    ." dades un cop que finalitzi la"
+    ." instalació. Pulsi a \"configuració\""
+    ." \"paràmetres de conexió - mostrar\""
+    ." i escrigui allà el nom de la base de"
+    ." dades.";
+$lang['L_NO_DB_SELECTED']="No s'ha seleccionat cap base de dades.";
+$lang['L_NO_ENTRIES']="La taula és buida i no conté cap"
+    ." registre.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups of other scripts";
 $lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
 $lang['L_NR_OF_QUERIES']="Number of queries";

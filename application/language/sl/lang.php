@@ -190,7 +190,7 @@ $lang['L_DELETE_FILE_SUCCESS']="Datoteka \"%s\" je bila uspešno"
     ." izbrisana.";
 $lang['L_DELETE_HTACCESS']="Odstrani zaščito mape (izbriši"
     ." .htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Opis";
 $lang['L_DESELECT_ALL']="Odznači vse";
 $lang['L_DIR']="Mapa";
 $lang['L_DISABLEDFUNCTIONS']="Onemogočene funkcije";
@@ -504,7 +504,7 @@ $lang['L_LOG_NOT_READABLE']="Dnevniška datoteka '%s' ne obstaja"
     ." ali pa je ni možno prebrati.";
 $lang['L_MAILERROR']="Pošiljanje e-maila ni uspelo!";
 $lang['L_MAILPROGRAM']="Mail program";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
+$lang['L_MAXIMUM_LENGTH']="Maksimalna dolžina";
 $lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
     ." one character needs, when it is saved"
     ." to disk.";
@@ -721,7 +721,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Do sedaj je bilo <b>%d</b> od"
     ." <b>%d</b> tabel kreiranih.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Do sedaj je bilo kreiranih <b>%d</b>"
     ." tabel.";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="Rezultat";
 $lang['L_REVERSE']="Zadnji vnos na začetek";
 $lang['L_SAFEMODEDESC']="Ker PHP deluje z vklopljenim načinom"
     ." safe_mode, je potrebno ročno"
