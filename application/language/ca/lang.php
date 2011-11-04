@@ -648,425 +648,481 @@ $lang['L_NO_DB_FOUND_INFO']="S'ha establert amb èxit la conexió"
 $lang['L_NO_DB_SELECTED']="No s'ha seleccionat cap base de dades.";
 $lang['L_NO_ENTRIES']="La taula és buida i no conté cap"
     ." registre.";
-$lang['L_NO_MSD_BACKUPFILE']="Backups of other scripts";
-$lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
-$lang['L_NR_TABLES_OPTIMIZED']="%s tables have been optimized.";
-$lang['L_NUMBER_OF_FILES_FORM']="Delete by number of files per database";
-$lang['L_OF']="of";
-$lang['L_OK']="OK";
-$lang['L_OPTIMIZE']="Optimize";
-$lang['L_OPTIMIZE_TABLES']="Optimize Tables before Backup";
-$lang['L_OPTIMIZE_TABLE_ERR']="Error optimizing table `%s`.";
-$lang['L_OPTIMIZE_TABLE_SUCC']="Optimized table `%s` successfully.";
-$lang['L_OS']="Operating system";
-$lang['L_OVERHEAD']="Overhead";
-$lang['L_PAGE']="Page";
-$lang['L_PAGE_REFRESHS']="Pageviews";
-$lang['L_PASS']="Password";
-$lang['L_PASSWORD']="Password";
-$lang['L_PASSWORDS_UNEQUAL']="The Passwords are not identical or"
-    ." empty !";
-$lang['L_PASSWORD_REPEAT']="Password (repeat)";
-$lang['L_PASSWORD_STRENGTH']="Password strength";
-$lang['L_PERLOUTPUT1']="Entry in crondump.pl for"
-    ." absolute_path_of_configdir";
-$lang['L_PERLOUTPUT2']="URL for the browser or for external"
-    ." Cron job";
-$lang['L_PERLOUTPUT3']="Commandline in the Shell or for the"
-    ." Crontab";
-$lang['L_PERL_COMPLETELOG']="Perl-Complete-Log";
-$lang['L_PERL_LOG']="Perl-Log";
-$lang['L_PHPBUG']="Bug in zlib ! No Compression possible!";
-$lang['L_PHPMAIL']="PHP-Function mail()";
-$lang['L_PHP_EXTENSIONS']="PHP-Extensions";
-$lang['L_PHP_LOG']="PHP-Log";
-$lang['L_PHP_VERSION']="PHP-Version";
-$lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"
-    ." PHP-Version is too old. MySQLDumper"
-    ." needs a PHP-Version of %s or higher."
-    ." This server has a PHP-Version of %s"
-    ." which is too old. You need to update"
-    ." your PHP-Version before you can"
-    ." install and use MySQLDumper. <br />";
-$lang['L_POP3_PORT']="POP3-Port";
-$lang['L_POP3_SERVER']="POP3-Server";
+$lang['L_NO_MSD_BACKUPFILE']="Còpies de seguretat d'altre"
+    ." programari";
+$lang['L_NO_NAME_GIVEN']="No ha escrit un nom.";
+$lang['L_NR_OF_QUERIES']="Nombre de consultes";
+$lang['L_NR_OF_RECORDS']="Nombre de registres";
+$lang['L_NR_TABLES_OPTIMIZED']="S'han optimitzat %s taules.";
+$lang['L_NUMBER_OF_FILES_FORM']="Quantitat d'arxius de còpia de"
+    ." seguretat";
+$lang['L_OF']="de";
+$lang['L_OK']="Ok";
+$lang['L_OPTIMIZE']="Optimitzar";
+$lang['L_OPTIMIZE_TABLES']="Optimitzar les taules abans de la"
+    ." còpia de seguretat";
+$lang['L_OPTIMIZE_TABLE_ERR']="Ha hagut un error provant d'optimitzar"
+    ." la taula `%s`.";
+$lang['L_OPTIMIZE_TABLE_SUCC']="L taula '%s' ha estat optimitzada amb"
+    ." èxit.";
+$lang['L_OS']="Sistema operatiu";
+$lang['L_OVERHEAD']="Sobresortir";
+$lang['L_PAGE']="Plana";
+$lang['L_PAGE_REFRESHS']="Vistes de plana";
+$lang['L_PASS']="Contrasenya";
+$lang['L_PASSWORD']="Contrasenya";
+$lang['L_PASSWORDS_UNEQUAL']="Les contrasenyes són buides o no són"
+    ." idèntiques!";
+$lang['L_PASSWORD_REPEAT']="Contrasenya (reescriure)";
+$lang['L_PASSWORD_STRENGTH']="Fortalesa de la contrasenya";
+$lang['L_PERLOUTPUT1']="Valor per a absolute_path_of_configdir"
+    ." a crondump.pl";
+$lang['L_PERLOUTPUT2']="Accesible des del navegador o des d'un"
+    ." cronjob extern al servidor";
+$lang['L_PERLOUTPUT3']="Instrucció per la consola (shell) o"
+    ." per al Crontab";
+$lang['L_PERL_COMPLETELOG']="Registre complert de Perl";
+$lang['L_PERL_LOG']="Registre de Perl";
+$lang['L_PHPBUG']="Error a la llibreria zlib! No és"
+    ." posible comprimir arxius!";
+$lang['L_PHPMAIL']="Funció mail() de PHP";
+$lang['L_PHP_EXTENSIONS']="Extensions de PHP";
+$lang['L_PHP_LOG']="Registre de PHP";
+$lang['L_PHP_VERSION']="Versió de PHP";
+$lang['L_PHP_VERSION_TOO_OLD']="Ho sentim: la versió de PHP instalada"
+    ." en aquest servidor és massa antiga"
+    ." per a funcionar amb aquesta versió de"
+    ." MySQLDumper. PHP ha d'èsser de la"
+    ." versió %s o posterior. La versió"
+    ." actual de PHP és %s. Ha d'actualitzar"
+    ." la versió de PHP per a poder instalar"
+    ." i usar aquesta versió de MySQLDumper.";
+$lang['L_POP3_PORT']="Port POP3";
+$lang['L_POP3_SERVER']="Servidor POP3";
 $lang['L_PORT']="Port";
-$lang['L_POSITION_BC']="bottom center";
-$lang['L_POSITION_BL']="bottom left";
-$lang['L_POSITION_BR']="bottom right";
-$lang['L_POSITION_MC']="center center";
-$lang['L_POSITION_ML']="middle left";
-$lang['L_POSITION_MR']="middle right";
-$lang['L_POSITION_NOTIFICATIONS']="Position of notification window";
-$lang['L_POSITION_TC']="top center";
-$lang['L_POSITION_TL']="top left";
-$lang['L_POSITION_TR']="top right";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
-    ." /><br />_cs = case sensitiv<br />_ci ="
-    ." case insensitive";
-$lang['L_PREFIX']="Prefix";
-$lang['L_PRIMARYKEYS_CHANGED']="Primary keys changed";
-$lang['L_PRIMARYKEYS_CHANGINGERROR']="Error changing primary keys";
-$lang['L_PRIMARYKEYS_SAVE']="Save primary keys";
-$lang['L_PRIMARYKEY_CONFIRMDELETE']="Really delete primary key?";
-$lang['L_PRIMARYKEY_DELETED']="Primary key deleted";
-$lang['L_PRIMARYKEY_FIELD']="Primary key field";
-$lang['L_PRIMARYKEY_NOTFOUND']="Primary key not found";
-$lang['L_PROCESSKILL1']="The script tries to kill process";
+$lang['L_POSITION_BC']="a sota al centre";
+$lang['L_POSITION_BL']="a sota a l'esquerra";
+$lang['L_POSITION_BR']="a sota a la dreta";
+$lang['L_POSITION_MC']="al mig centrat";
+$lang['L_POSITION_ML']="al mig a l'esquerra";
+$lang['L_POSITION_MR']="al mig a la dreta";
+$lang['L_POSITION_NOTIFICATIONS']="Posició de la finestra de"
+    ." notificacions";
+$lang['L_POSITION_TC']="a dalt al centre";
+$lang['L_POSITION_TL']="a dalt a l'esquerra";
+$lang['L_POSITION_TR']="a dalt a la dreta";
+$lang['L_POSSIBLE_COLLATIONS']="Colacions posibles";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="Aquestes són les posibles locacions"
+    ." que hom pot escollir per a aquest joc"
+    ." de caràcters:<br /><br />_cs ="
+    ." sensible a majúscules<br />_ci = no"
+    ." distingeix majúscules/minúscules";
+$lang['L_PREFIX']="Prefixe";
+$lang['L_PRIMARYKEYS_CHANGED']="Clau principal canviada";
+$lang['L_PRIMARYKEYS_CHANGINGERROR']="Error al canviar la clau principal";
+$lang['L_PRIMARYKEYS_SAVE']="Guardar la clau principal";
+$lang['L_PRIMARYKEY_CONFIRMDELETE']="Realment vol eliminar la clau"
+    ." principal?";
+$lang['L_PRIMARYKEY_DELETED']="Clau principal eliminada";
+$lang['L_PRIMARYKEY_FIELD']="Camp de clau principal";
+$lang['L_PRIMARYKEY_NOTFOUND']="Clau principal no trobada";
+$lang['L_PROCESSKILL1']="Es provarà de forçar la"
+    ." finalització del procés";
 $lang['L_PROCESSKILL2']=".";
-$lang['L_PROCESSKILL3']="The script tries since";
-$lang['L_PROCESSKILL4']="sec. to kill the process";
-$lang['L_PROCESS_ID']="Process ID";
-$lang['L_PROGRESS_FILE']="Progress file";
-$lang['L_PROGRESS_OVER_ALL']="Overall Progress";
-$lang['L_PROGRESS_TABLE']="Progress of table";
-$lang['L_PROVIDER']="Provider";
-$lang['L_PROZESSE']="Processes";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
-$lang['L_RECHTE']="Permissions";
-$lang['L_RECORDS']="Records";
-$lang['L_RECORDS_INSERTED']="<b>%s</b> records inserted.";
-$lang['L_RECORDS_OF_TABLE']="Records of table";
-$lang['L_RECORDS_PER_PAGECALL']="Records per pagecall";
-$lang['L_REFRESHTIME']="Refresh time";
-$lang['L_REFRESHTIME_PROCESSLIST']="Refreshing time of the process list";
-$lang['L_REGISTRATION_DESCRIPTION']="Please enter the administrator account"
-    ." now. You will login into MySQLDumper"
-    ." with this user. Note the dates now"
-    ." given good reason.<br /><br />You can"
-    ." choose your username and password"
-    ." free. Please make sure to choose the"
-    ." safest possible combination of user"
-    ." name and password to protect access to"
-    ." MySQLDumper against unauthorized"
-    ." access best!";
-$lang['L_RELOAD']="Reload";
-$lang['L_REMOVE']="Remove";
-$lang['L_REPAIR']="Repair";
-$lang['L_RESET']="Reset";
-$lang['L_RESET_SEARCHWORDS']="reset search words";
-$lang['L_RESTORE']="Restore";
-$lang['L_RESTORE_COMPLETE']="<b>%s</b> tables created.";
-$lang['L_RESTORE_DB']="Database '<b>%s</b>' on '<b>%s</b>'.";
-$lang['L_RESTORE_DB_COMPLETE_IN']="Restoring of database '%s' finished in"
-    ." %s.";
-$lang['L_RESTORE_OF_TABLES']="Choose tables to be restored";
-$lang['L_RESTORE_TABLE']="Restoring of table '%s'";
-$lang['L_RESTORE_TABLES_COMPLETED']="Up to now <b>%d</b> of <b>%d</b>"
-    ." tables were created.";
-$lang['L_RESTORE_TABLES_COMPLETED0']="Up to now <b>%d</b> tables were"
-    ." created.";
-$lang['L_RESULT']="Result";
-$lang['L_REVERSE']="Last entry first";
-$lang['L_SAFEMODEDESC']="Because PHP is running in safe_mode"
-    ." you need to create the following"
-    ." directories manually using your"
-    ." FTP-Programm:";
-$lang['L_SAVE']="Save";
-$lang['L_SAVEANDCONTINUE']="Save and continue installation";
-$lang['L_SAVE_ERROR']="Error - unable to save configuration!";
-$lang['L_SAVE_SUCCESS']="Configuration was saved succesfully"
-    ." into configuration file \"%s\".";
-$lang['L_SAVING_DATA_TO_FILE']="Saving data of database '%s' to file"
-    ." '%s'";
-$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximum filesize reached: proceeding"
-    ." with file '%s'";
-$lang['L_SAVING_DB_FORM']="Database";
-$lang['L_SAVING_TABLE']="Saving table";
-$lang['L_SEARCH_ACCESS_KEYS']="Browse: forward=ALT+V, backwards=ALT+C";
-$lang['L_SEARCH_IN_TABLE']="Search in table";
-$lang['L_SEARCH_NO_RESULTS']="The search for \"<b>%s</b>\" in table"
-    ." \"<b>%s</b>\" doesn't bring any hits!";
-$lang['L_SEARCH_OPTIONS']="Search options";
-$lang['L_SEARCH_OPTIONS_AND']="a column must contain all search words"
-    ." (AND-search)";
-$lang['L_SEARCH_OPTIONS_CONCAT']="a row must contain all of the search"
-    ." words but they can be in any column"
-    ." (could take some time)";
-$lang['L_SEARCH_OPTIONS_OR']="a column must have one of the search"
-    ." words (OR-search)";
-$lang['L_SEARCH_RESULTS']="The search for \"<b>%s</b>\" in table"
-    ." \"<b>%s</b>\" brings the following"
-    ." results";
-$lang['L_SECOND']="Second";
-$lang['L_SECONDS']="Seconds";
-$lang['L_SELECT']="Select";
-$lang['L_SELECTED_FILE']="Selected file";
-$lang['L_SELECT_ALL']="Select All";
-$lang['L_SELECT_FILE']="Select file";
-$lang['L_SELECT_LANGUAGE']="Select language";
+$lang['L_PROCESSKILL3']="S'ha provat des de fa";
+$lang['L_PROCESSKILL4']="segons per a eliminar el procés";
+$lang['L_PROCESS_ID']="ID del procés";
+$lang['L_PROGRESS_FILE']="Progrés de l'arxiu";
+$lang['L_PROGRESS_OVER_ALL']="Progrés total";
+$lang['L_PROGRESS_TABLE']="Progrés de la taula actual";
+$lang['L_PROVIDER']="Proveidor";
+$lang['L_PROZESSE']="Processos";
+$lang['L_QUERY']="Consulta";
+$lang['L_QUERY_TYPE']="Tipus de consulta";
+$lang['L_RECHTE']="permissos";
+$lang['L_RECORDS']="registres";
+$lang['L_RECORDS_INSERTED']="<b>%s</b> registres inserits.";
+$lang['L_RECORDS_OF_TABLE']="Registres de la taula";
+$lang['L_RECORDS_PER_PAGECALL']="Registres per plana vista";
+$lang['L_REFRESHTIME']="Període per a actualització";
+$lang['L_REFRESHTIME_PROCESSLIST']="Període d'actualització de la llista"
+    ." de processos";
+$lang['L_REGISTRATION_DESCRIPTION']="Si us plau, crei ara el compte"
+    ." d'administrador. Amb ell podrà"
+    ." accedir en el futur a MySQLDumper. Per"
+    ." aquesta raó hauria de prendre nota de"
+    ." les dades d'aquest compte.<br /><br"
+    ." />Vosté pot escollir lliurament el"
+    ." nom d'usuari i la contrasenya. Si us"
+    ." plau, estigui segur d'escollir la"
+    ." combinació més segura posible per a"
+    ." protegir a MySQLDumper contra l'accés"
+    ." no autoritzat!";
+$lang['L_RELOAD']="Tornar a carregar";
+$lang['L_REMOVE']="Eliminar";
+$lang['L_REPAIR']="Reparar";
+$lang['L_RESET']="Reinicialitzar";
+$lang['L_RESET_SEARCHWORDS']="reinicialitzar paraules a buscar";
+$lang['L_RESTORE']="Restaurar";
+$lang['L_RESTORE_COMPLETE']="S'han creat <b>%s</b> taules.";
+$lang['L_RESTORE_DB']="la base de dades '<b>%s</b>' a"
+    ." '<b>%s</b>'.";
+$lang['L_RESTORE_DB_COMPLETE_IN']="Finalitzada la restauració de la base"
+    ." de dades '%s' en %s.";
+$lang['L_RESTORE_OF_TABLES']="Escolli les taules a restaurar";
+$lang['L_RESTORE_TABLE']="Restauració de la taula '%s'";
+$lang['L_RESTORE_TABLES_COMPLETED']="Fins ara, s'han creat <b>%d</b> de"
+    ." <b>%d</b> taules.";
+$lang['L_RESTORE_TABLES_COMPLETED0']="Fins ara, s'han creat <b>%d</b>"
+    ." taules.";
+$lang['L_RESULT']="Resultat";
+$lang['L_REVERSE']="Mostrar les entrades més noves primer";
+$lang['L_SAFEMODEDESC']="Donat que a aquest servidor s'està"
+    ." executant PHP en modus segur"
+    ." (safe_mode), necesita crear els"
+    ." següents directoris manualment"
+    ." emprant el seu programa de FTP:";
+$lang['L_SAVE']="Desar";
+$lang['L_SAVEANDCONTINUE']="Desar i continuar amb la instalació";
+$lang['L_SAVE_ERROR']="Hi ha hagut un error! no s'ha pogut"
+    ." desar la configuració!";
+$lang['L_SAVE_SUCCESS']="La configuració s'ha desat amb èxit"
+    ." a l'arxiu de configuració \"%s\".";
+$lang['L_SAVING_DATA_TO_FILE']="Desar el contingut de la base de dades"
+    ." '%s' a l'arxiu '%s'";
+$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Tamany màxim d'arxiu rebasat:"
+    ." continuant amb l'arxiu '%s'";
+$lang['L_SAVING_DB_FORM']="Base de dades";
+$lang['L_SAVING_TABLE']="Desant taula";
+$lang['L_SEARCH_ACCESS_KEYS']="Navegar: Endavant=ALT+V, Enrere=ALT+C";
+$lang['L_SEARCH_IN_TABLE']="Buscar a la taula";
+$lang['L_SEARCH_NO_RESULTS']="¡La cerca de \"<b>%s</b>\" a la taula"
+    ." \"<b>%s</b>\" no ha produït cap"
+    ." resultat!";
+$lang['L_SEARCH_OPTIONS']="Opcions de cerca";
+$lang['L_SEARCH_OPTIONS_AND']="una columna ha de contenir tots els"
+    ." termes cercats (cerca AND)";
+$lang['L_SEARCH_OPTIONS_CONCAT']="una línia ha de contenir tots els"
+    ." termes cercats, però aquests poden"
+    ." èsser a qualsevol de les columnes"
+    ." (podria trigar una mica!)";
+$lang['L_SEARCH_OPTIONS_OR']="una columna ha de contenir al menys un"
+    ." dels termes cercats (cerca OR)";
+$lang['L_SEARCH_RESULTS']="La cerca de \"<b>%s</b>\" a la taula"
+    ." \"<b>%s</b>\" ha produït els"
+    ." següents resultats";
+$lang['L_SECOND']="Segon";
+$lang['L_SECONDS']="Segons";
+$lang['L_SELECT']="Seleccioni";
+$lang['L_SELECTED_FILE']="arxiu escollit";
+$lang['L_SELECT_ALL']="Escollir totes";
+$lang['L_SELECT_FILE']="Esculli un arxiu";
+$lang['L_SELECT_LANGUAGE']="Escollir idioma";
 $lang['L_SENDMAIL']="Sendmail";
-$lang['L_SENDRESULTASFILE']="send result as file";
-$lang['L_SEND_MAIL_FORM']="Send email report";
-$lang['L_SERVER']="Server";
-$lang['L_SERVERCAPTION']="Display Server";
-$lang['L_SETPRIMARYKEYSFOR']="Set new primary keys for table";
-$lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Showing entry %s to %s of %s";
-$lang['L_SHOWRESULT']="show result";
-$lang['L_SHOW_TABLES']="Show tables";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SENDRESULTASFILE']="Enviar resultats com a arxiu";
+$lang['L_SEND_MAIL_FORM']="Enviar un correu electrònic";
+$lang['L_SERVER']="Servidor";
+$lang['L_SERVERCAPTION']="Visualització del servidor";
+$lang['L_SETPRIMARYKEYSFOR']="Crear nova clau principal per a la"
+    ." taula";
+$lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Mostrant els registres de %s fins a %s"
+    ." de %s";
+$lang['L_SHOWRESULT']="Mostrar resultats";
+$lang['L_SHOW_TABLES']="Mostrar taulas";
+$lang['L_SHOW_TOOLTIPS']="Mostrar consells (tooltips) macos";
 $lang['L_SMTP']="SMTP";
-$lang['L_SMTP_HOST']="SMTP-Host";
-$lang['L_SMTP_PORT']="SMTP-Port";
+$lang['L_SMTP_HOST']="Servidor SMTP";
+$lang['L_SMTP_PORT']="Port STMP";
 $lang['L_SOCKET']="Socket";
-$lang['L_SPEED']="Speed";
-$lang['L_SQLBOX']="SQL-Box";
-$lang['L_SQLBOXHEIGHT']="Height of SQL-Box";
-$lang['L_SQLLIB_ACTIVATEBOARD']="activate Board";
-$lang['L_SQLLIB_BOARDS']="Boards";
-$lang['L_SQLLIB_DEACTIVATEBOARD']="deactivate Board";
-$lang['L_SQLLIB_GENERALFUNCTIONS']="general functions";
-$lang['L_SQLLIB_RESETAUTO']="reset auto-increment";
-$lang['L_SQLLIMIT']="Count of records each page";
-$lang['L_SQL_ACTIONS']="Actions";
-$lang['L_SQL_AFTER']="after";
-$lang['L_SQL_ALLOWDUPS']="Duplicates allowed";
-$lang['L_SQL_ATPOSITION']="insert at position";
-$lang['L_SQL_ATTRIBUTES']="Attributes";
-$lang['L_SQL_BACKDBOVERVIEW']="Back to Overview";
-$lang['L_SQL_BEFEHLNEU']="New command";
-$lang['L_SQL_BEFEHLSAVED1']="SQL Command";
-$lang['L_SQL_BEFEHLSAVED2']="was added";
-$lang['L_SQL_BEFEHLSAVED3']="was saved";
-$lang['L_SQL_BEFEHLSAVED4']="was moved up";
-$lang['L_SQL_BEFEHLSAVED5']="was deleted";
-$lang['L_SQL_BROWSER']="SQL-Browser";
-$lang['L_SQL_CARDINALITY']="Cardinality";
-$lang['L_SQL_CHANGED']="was changed.";
-$lang['L_SQL_CHANGEFIELD']="change field";
-$lang['L_SQL_CHOOSEACTION']="Choose action";
-$lang['L_SQL_COLLATENOTMATCH']="Charset and Collation don't fit"
-    ." together!";
-$lang['L_SQL_COLUMNS']="Columns";
-$lang['L_SQL_COMMANDS']="SQL Commands";
-$lang['L_SQL_COMMANDS_IN']="lines in";
-$lang['L_SQL_COMMANDS_IN2']="sec. parsed.";
-$lang['L_SQL_COPYDATADB']="Copy complete Database to";
-$lang['L_SQL_COPYSDB']="Copy Structure of Database";
-$lang['L_SQL_COPYTABLE']="copy table";
-$lang['L_SQL_CREATED']="was created.";
-$lang['L_SQL_CREATEINDEX']="create new index";
-$lang['L_SQL_CREATETABLE']="create table";
-$lang['L_SQL_DATAVIEW']="Data View";
-$lang['L_SQL_DBCOPY']="The Content of Database `%s` was"
-    ." copied in Database `%s`.";
-$lang['L_SQL_DBSCOPY']="The Structure of Database `%s` was"
-    ." copied in Database `%s`.";
-$lang['L_SQL_DELETED']="was deleted";
-$lang['L_SQL_DESTTABLE_EXISTS']="Destination Table exists !";
-$lang['L_SQL_EDIT']="edit";
-$lang['L_SQL_EDITFIELD']="Edit field";
-$lang['L_SQL_EDIT_TABLESTRUCTURE']="Edit table structure";
-$lang['L_SQL_EMPTYDB']="Empty Database";
-$lang['L_SQL_ERROR1']="Error in Query:";
-$lang['L_SQL_ERROR2']="MySQL says:";
-$lang['L_SQL_EXEC']="Execute SQL Statement";
-$lang['L_SQL_EXPORT']="Export from Database `%s`";
-$lang['L_SQL_FIELDDELETE1']="The Field";
-$lang['L_SQL_FIELDNAMENOTVALID']="Error: No valid fieldname";
-$lang['L_SQL_FIRST']="first";
-$lang['L_SQL_IMEXPORT']="Import-Export";
-$lang['L_SQL_IMPORT']="Import in Database `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
-$lang['L_SQL_INDEXES']="Indices";
-$lang['L_SQL_INSERTFIELD']="insert field";
-$lang['L_SQL_INSERTNEWFIELD']="insert new field";
-$lang['L_SQL_LIBRARY']="SQL Library";
-$lang['L_SQL_NAMEDEST_MISSING']="Name of Destination is missing !";
-$lang['L_SQL_NEWFIELD']="New field";
-$lang['L_SQL_NODATA']="no records";
-$lang['L_SQL_NODEST_COPY']="No Copy without Destination !";
-$lang['L_SQL_NOFIELDDELETE']="Delete is not possible because Tables"
-    ." must contain at least one field.";
-$lang['L_SQL_NOTABLESINDB']="No tables found in Database";
-$lang['L_SQL_NOTABLESSELECTED']="No tables selected !";
-$lang['L_SQL_OPENFILE']="Open SQL-File";
-$lang['L_SQL_OPENFILE_BUTTON']="Upload";
-$lang['L_SQL_OUT1']="Executed";
-$lang['L_SQL_OUT2']="Commands";
-$lang['L_SQL_OUT3']="It had";
-$lang['L_SQL_OUT4']="Comments";
-$lang['L_SQL_OUT5']="Because the output contains more than"
-    ." 5000 lines it isn't displayed.";
-$lang['L_SQL_OUTPUT']="SQL Output";
-$lang['L_SQL_QUERYENTRY']="The Query contains";
-$lang['L_SQL_RECORDDELETED']="Record was deleted";
-$lang['L_SQL_RECORDEDIT']="edit record";
-$lang['L_SQL_RECORDINSERTED']="Record was added";
-$lang['L_SQL_RECORDNEW']="new record";
-$lang['L_SQL_RECORDUPDATED']="Record was updated";
-$lang['L_SQL_RENAMEDB']="Rename Database";
-$lang['L_SQL_RENAMEDTO']="was renamed to";
-$lang['L_SQL_SCOPY']="Table structure of `%s` was copied in"
-    ." Table `%s`.";
-$lang['L_SQL_SEARCH']="Search";
-$lang['L_SQL_SEARCHWORDS']="Searchword(s)";
-$lang['L_SQL_SELECTTABLE']="select table";
-$lang['L_SQL_SERVER']="SQL-Server";
-$lang['L_SQL_SHOWDATATABLE']="Show Data of Table";
-$lang['L_SQL_STRUCTUREDATA']="Structure and Data";
-$lang['L_SQL_STRUCTUREONLY']="Only Structure";
-$lang['L_SQL_TABLEEMPTIED']="Table `%s` was deleted.";
-$lang['L_SQL_TABLEEMPTIEDKEYS']="Table `%s` was deleted and the indices"
-    ." were reset.";
-$lang['L_SQL_TABLEINDEXES']="Indexes of table";
-$lang['L_SQL_TABLENEW']="Edit Tables";
-$lang['L_SQL_TABLENOINDEXES']="No Indexes in Table";
-$lang['L_SQL_TABLENONAME']="Table needs a name!";
-$lang['L_SQL_TABLESOFDB']="Tables of Database";
-$lang['L_SQL_TABLEVIEW']="Table View";
-$lang['L_SQL_TBLNAMEEMPTY']="Table name can't be empty!";
-$lang['L_SQL_TBLPROPSOF']="Table properties of";
-$lang['L_SQL_TCOPY']="Table `%s` was copied with data in"
-    ." Table `%s`.";
-$lang['L_SQL_UPLOADEDFILE']="loaded file:";
-$lang['L_SQL_VIEW_COMPACT']="View: compact";
-$lang['L_SQL_VIEW_STANDARD']="View: standard";
-$lang['L_SQL_VONINS']="from totally";
-$lang['L_SQL_WARNING']="The execution of SQL Statements can"
-    ." manipulate data. TAKE CARE! The"
-    ." Authors don't accept any liability for"
-    ." damaged or lost data.";
-$lang['L_SQL_WASCREATED']="was created";
-$lang['L_SQL_WASEMPTIED']="was emptied";
-$lang['L_STARTDUMP']="Start Backup";
-$lang['L_START_RESTORE_DB_FILE']="Starting restore of database '%s' from"
-    ." file '%s'.";
-$lang['L_START_SQL_SEARCH']="start search";
-$lang['L_STATUS']="State";
-$lang['L_STEP']="Step";
-$lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuration file \"%s\" has"
-    ." successfully been created.";
-$lang['L_SUCCESS_DELETING_CONFIGFILE']="The configuration file \"%s\" has"
-    ." successfully been deleted.";
-$lang['L_SUM_TOTAL']="Sum";
-$lang['L_TABLE']="Table";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
-$lang['L_TABLES']="Tables";
-$lang['L_TABLESELECTION']="Table selection";
-$lang['L_TABLE_CREATE_SUCC']="The table '%s' has been created"
-    ." successfully.";
-$lang['L_TABLE_TYPE']="Table Type";
-$lang['L_TESTCONNECTION']="Test Connection";
-$lang['L_THEME']="Theme";
-$lang['L_TIME']="Time";
-$lang['L_TIMESTAMP']="Timestamp";
-$lang['L_TITLE_INDEX']="Index";
-$lang['L_TITLE_KEY_FULLTEXT']="Fulltext key";
-$lang['L_TITLE_KEY_PRIMARY']="Primary key";
-$lang['L_TITLE_KEY_UNIQUE']="Unique key";
-$lang['L_TITLE_MYSQL_HELP']="MySQL documentation";
-$lang['L_TITLE_NOKEY']="No key";
-$lang['L_TITLE_SEARCH']="Search";
-$lang['L_TITLE_SHOW_DATA']="Show data";
-$lang['L_TITLE_UPLOAD']="Upload SQL file";
-$lang['L_TO']="to";
-$lang['L_TOOLS']="Tools";
-$lang['L_TOOLS_TOOLBOX']="Select Database / Datebase functions /"
-    ." Import - Export";
-$lang['L_TRUNCATE']="Truncate";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
-$lang['L_UNIT_KB']="KiloByte";
-$lang['L_UNIT_MB']="MegaByte";
-$lang['L_UNIT_PIXEL']="Pixel";
-$lang['L_UNKNOWN']="unknown";
-$lang['L_UNKNOWN_SQLCOMMAND']="unknown SQL-Command";
-$lang['L_UPDATE']="Update";
-$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"
-    ." server '%s' could not be established.";
-$lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
-$lang['L_UPTO']="up to";
-$lang['L_USERNAME']="Username";
-$lang['L_USE_SSL']="Use SSL";
-$lang['L_VALUE']="Value";
-$lang['L_VERSIONSINFORMATIONEN']="Version Information";
-$lang['L_VIEW']="view";
-$lang['L_VISIT_HOMEPAGE']="Visit Homepage";
-$lang['L_VOM']="from";
-$lang['L_WITH']="with";
-$lang['L_WITHATTACH']="with attach";
-$lang['L_WITHOUTATTACH']="without attach";
-$lang['L_WITHPRAEFIX']="with prefix";
-$lang['L_WRONGCONNECTIONPARS']="Connection parameters wrong or"
-    ." missing!";
-$lang['L_WRONG_CONNECTIONPARS']="Connection parameters are wrong !";
-$lang['L_WRONG_RIGHTS']="The file or the directory '%s' is not"
-    ." writable for me. The rights (chmod)"
-    ." are not set properly or it has the"
-    ." wrong owner.<br /><br />Please set the"
-    ." correct attributes using your FTP"
-    ." program. The file or the directory"
-    ." needs to be set to %s.";
-$lang['L_YES']="yes";
-$lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
-    ." directory.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"
-    ." file.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"
-    ." link.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"
+$lang['L_SPEED']="Velocitat";
+$lang['L_SQLBOX']="Caixa SQL";
+$lang['L_SQLBOXHEIGHT']="Alçària de la caixa SQL";
+$lang['L_SQLLIB_ACTIVATEBOARD']="activar forum";
+$lang['L_SQLLIB_BOARDS']="Fòrums";
+$lang['L_SQLLIB_DEACTIVATEBOARD']="desactivar fòrum";
+$lang['L_SQLLIB_GENERALFUNCTIONS']="funcions generals";
+$lang['L_SQLLIB_RESETAUTO']="reinicialitzar autoincrement";
+$lang['L_SQLLIMIT']="Nombre de registres per plana";
+$lang['L_SQL_ACTIONS']="Accions";
+$lang['L_SQL_AFTER']="següent";
+$lang['L_SQL_ALLOWDUPS']="Se permiten duplicaciones";
+$lang['L_SQL_ATPOSITION']="inserir a la posició";
+$lang['L_SQL_ATTRIBUTES']="Atributs";
+$lang['L_SQL_BACKDBOVERVIEW']="Tornar al llistat de bases de dades";
+$lang['L_SQL_BEFEHLNEU']="Nova instrucció";
+$lang['L_SQL_BEFEHLSAVED1']="Instrucció SQL";
+$lang['L_SQL_BEFEHLSAVED2']="s'ha afegit";
+$lang['L_SQL_BEFEHLSAVED3']="s'ha desat";
+$lang['L_SQL_BEFEHLSAVED4']="s'ha desplaçat cap amunt";
+$lang['L_SQL_BEFEHLSAVED5']="s'ha eliminat";
+$lang['L_SQL_BROWSER']="Navegador SQL";
+$lang['L_SQL_CARDINALITY']="Cardinalitat";
+$lang['L_SQL_CHANGED']="s'ha modificat.";
+$lang['L_SQL_CHANGEFIELD']="modificar camp";
+$lang['L_SQL_CHOOSEACTION']="Esculli una acció";
+$lang['L_SQL_COLLATENOTMATCH']="Aquest joc de caràcters i la colació"
+    ." escollida no poden funcionar"
+    ." conjuntament!";
+$lang['L_SQL_COLUMNS']="columnes";
+$lang['L_SQL_COMMANDS']="Instruccions SQL";
+$lang['L_SQL_COMMANDS_IN']="línies a";
+$lang['L_SQL_COMMANDS_IN2']="registres procesats per segon.";
+$lang['L_SQL_COPYDATADB']="Copiar el contingut complert de la"
+    ." base de dades a";
+$lang['L_SQL_COPYSDB']="Copiar l'estructura de la base de"
+    ." dades";
+$lang['L_SQL_COPYTABLE']="Copiar taula";
+$lang['L_SQL_CREATED']="s'ha creat.";
+$lang['L_SQL_CREATEINDEX']="crear nou índex";
+$lang['L_SQL_CREATETABLE']="Crear taula";
+$lang['L_SQL_DATAVIEW']="Vista de dades";
+$lang['L_SQL_DBCOPY']="El contingut de la base de dades `%s`"
+    ." ha estat copiat a la base de dades"
+    ." `%s`.";
+$lang['L_SQL_DBSCOPY']="L'estructura de la base de dades `%s`"
+    ." ha estat copiada a la base de dades"
+    ." `%s`.";
+$lang['L_SQL_DELETED']="s'ha eliminat";
+$lang['L_SQL_DESTTABLE_EXISTS']="La taula de destí ja existeix!";
+$lang['L_SQL_EDIT']="editar";
+$lang['L_SQL_EDITFIELD']="editar camp";
+$lang['L_SQL_EDIT_TABLESTRUCTURE']="Modificar l'estructura de la taula";
+$lang['L_SQL_EMPTYDB']="Buidar la base de dades";
+$lang['L_SQL_ERROR1']="Error a la consulta!";
+$lang['L_SQL_ERROR2']="MySQL diu:";
+$lang['L_SQL_EXEC']="executar instrucció SQL";
+$lang['L_SQL_EXPORT']="Exportar des de la base de dades `%s`";
+$lang['L_SQL_FIELDDELETE1']="El camp";
+$lang['L_SQL_FIELDNAMENOTVALID']="Error: nom de camp no vàlid";
+$lang['L_SQL_FIRST']="primer";
+$lang['L_SQL_IMEXPORT']="Importar/Exportar";
+$lang['L_SQL_IMPORT']="Importar a la base de dades `%s`";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: detectada instrucció"
+    ." incomplerta.<br />No s'ha pogut trobar"
+    ." un tancament per a '%s' a la"
+    ." consulta:<br />%s";
+$lang['L_SQL_INDEXES']="Índexs";
+$lang['L_SQL_INSERTFIELD']="insertar camp";
+$lang['L_SQL_INSERTNEWFIELD']="insertar nou camp";
+$lang['L_SQL_LIBRARY']="Librería SQL";
+$lang['L_SQL_NAMEDEST_MISSING']="Falta el nom del destí!";
+$lang['L_SQL_NEWFIELD']="nou camp";
+$lang['L_SQL_NODATA']="No hi ha registres";
+$lang['L_SQL_NODEST_COPY']="No es pot copiar res si no hi ha un"
+    ." destí!";
+$lang['L_SQL_NOFIELDDELETE']="L'eliminació no és posible, doncs la"
+    ." taula ha de contenir un camp com a"
+    ." mínim.";
+$lang['L_SQL_NOTABLESINDB']="No s'ha trobat cap taula a la base de"
+    ." dades";
+$lang['L_SQL_NOTABLESSELECTED']="No s'ha escollit cap taula!";
+$lang['L_SQL_OPENFILE']="Obrir arxiu SQL";
+$lang['L_SQL_OPENFILE_BUTTON']="Pujar";
+$lang['L_SQL_OUT1']="S'ha executat";
+$lang['L_SQL_OUT2']="Instruccions";
+$lang['L_SQL_OUT3']="Va haver-hi";
+$lang['L_SQL_OUT4']="comentaris";
+$lang['L_SQL_OUT5']="Donat que el resultat conté aprop de"
+    ." 5000 registres, aquests no es"
+    ." mostraran.";
+$lang['L_SQL_OUTPUT']="Resposta del SQL";
+$lang['L_SQL_QUERYENTRY']="La consulta conté";
+$lang['L_SQL_RECORDDELETED']="S'ha eliminat el registre";
+$lang['L_SQL_RECORDEDIT']="editar registre";
+$lang['L_SQL_RECORDINSERTED']="S'ha afegit el registre";
+$lang['L_SQL_RECORDNEW']="nuevo registro";
+$lang['L_SQL_RECORDUPDATED']="Registre actualitzat";
+$lang['L_SQL_RENAMEDB']="Canviar el nom a la base de dades";
+$lang['L_SQL_RENAMEDTO']="se li ha canviat el nom a";
+$lang['L_SQL_SCOPY']="L'estructura de la taula `%s` ha estat"
+    ." copiada a la taula `%s`.";
+$lang['L_SQL_SEARCH']="Cerca";
+$lang['L_SQL_SEARCHWORDS']="Paraules a cercar";
+$lang['L_SQL_SELECTTABLE']="esculli taula";
+$lang['L_SQL_SERVER']="Servidor SQL";
+$lang['L_SQL_SHOWDATATABLE']="mostrar les dades de la taula";
+$lang['L_SQL_STRUCTUREDATA']="estructura i dades";
+$lang['L_SQL_STRUCTUREONLY']="només estructura";
+$lang['L_SQL_TABLEEMPTIED']="La taula `%s` ha estat eliminada.";
+$lang['L_SQL_TABLEEMPTIEDKEYS']="La taula `%s` ha estat eliminada i els"
+    ." índexs reinicialitzats.";
+$lang['L_SQL_TABLEINDEXES']="Índexs de la taula";
+$lang['L_SQL_TABLENEW']="Edició de taules";
+$lang['L_SQL_TABLENOINDEXES']="La taula no té cap índex definit";
+$lang['L_SQL_TABLENONAME']="La taula necesita un nom!";
+$lang['L_SQL_TABLESOFDB']="Taules de la base de dades";
+$lang['L_SQL_TABLEVIEW']="Vista de taules";
+$lang['L_SQL_TBLNAMEEMPTY']="El nom de la taula no pot ser buit!";
+$lang['L_SQL_TBLPROPSOF']="Propietats de la taula de";
+$lang['L_SQL_TCOPY']="La taula `%s` ha estat copiada (amb"
+    ." dades) a la taula `%s`.";
+$lang['L_SQL_UPLOADEDFILE']="Arxiu carregat:";
+$lang['L_SQL_VIEW_COMPACT']="Vista: compacta";
+$lang['L_SQL_VIEW_STANDARD']="Vista: estàndar";
+$lang['L_SQL_VONINS']="d'un total de";
+$lang['L_SQL_WARNING']="L'execució d'instruccions SQL serveix"
+    ." per a manipular directament les dades"
+    ." de la base de dades. Els autors de"
+    ." MySQLDumper no es responsabilitzen de"
+    ." la posible pèrdua de dades després"
+    ." d'emprar aquesta utilitat.";
+$lang['L_SQL_WASCREATED']="s'ha creat";
+$lang['L_SQL_WASEMPTIED']="s'ha buidat";
+$lang['L_STARTDUMP']="començar còpia de seguretat";
+$lang['L_START_RESTORE_DB_FILE']="Iniciant la restauració de la base de"
+    ." dades '%s' des de l'arxiu '%s'.";
+$lang['L_START_SQL_SEARCH']="Començar la cerca";
+$lang['L_STATUS']="Estat";
+$lang['L_STEP']="Pas";
+$lang['L_SUCCESS_CONFIGFILE_CREATED']="L'arxiu de configuració \"%s\" s'ha"
+    ." creat correctament.";
+$lang['L_SUCCESS_DELETING_CONFIGFILE']="L'arxiu de configuració \"%s\" s'ha"
+    ." eliminat amb èxit.";
+$lang['L_SUM_TOTAL']="Suma";
+$lang['L_TABLE']="Taula";
+$lang['L_TABLENAME']="Nom de la taula";
+$lang['L_TABLENAME_EXPLAIN']="Nom de la taula";
+$lang['L_TABLES']="Taules";
+$lang['L_TABLESELECTION']="Elecció de taules";
+$lang['L_TABLE_CREATE_SUCC']="La taula '%s' s'ha creat amb èxit.";
+$lang['L_TABLE_TYPE']="Tipus de taula";
+$lang['L_TESTCONNECTION']="Provar connexió";
+$lang['L_THEME']="Tema";
+$lang['L_TIME']="Temps";
+$lang['L_TIMESTAMP']="Marca de temps";
+$lang['L_TITLE_INDEX']="Índex";
+$lang['L_TITLE_KEY_FULLTEXT']="Clau de texte complert";
+$lang['L_TITLE_KEY_PRIMARY']="Clau principal";
+$lang['L_TITLE_KEY_UNIQUE']="Clau única";
+$lang['L_TITLE_MYSQL_HELP']="Documentació de MySQL";
+$lang['L_TITLE_NOKEY']="No hi ha clau";
+$lang['L_TITLE_SEARCH']="Cerca";
+$lang['L_TITLE_SHOW_DATA']="Veure dades";
+$lang['L_TITLE_UPLOAD']="Pujar arxiu SQL";
+$lang['L_TO']="fins";
+$lang['L_TOOLS']="Eines";
+$lang['L_TOOLS_TOOLBOX']="Elecció de la base de dades /"
+    ." Funcions de la base de dades /"
+    ." Importar i exportar";
+$lang['L_TRUNCATE']="Truncar";
+$lang['L_TRUNCATE_DATABASE']="Buidar base de dades";
+$lang['L_UNIT_KB']="Kilobyte";
+$lang['L_UNIT_MB']="Megabyte";
+$lang['L_UNIT_PIXEL']="Píxel";
+$lang['L_UNKNOWN']="desconegut";
+$lang['L_UNKNOWN_SQLCOMMAND']="instrucció SQL desconeguda";
+$lang['L_UPDATE']="Actualitzar";
+$lang['L_UPDATE_CONNECTION_FAILED']="Ha fallat l'actualització perqué no"
+    ." s'ha pogut conectar amb el servidor"
+    ." '%s'.";
+$lang['L_UPDATE_ERROR_RESPONSE']="Ha fallat l'actualització, el"
+    ." servidor ha respost: '%s'";
+$lang['L_UPTO']="fins";
+$lang['L_USERNAME']="Nom d'usuari";
+$lang['L_USE_SSL']="Usar SSL";
+$lang['L_VALUE']="Valor";
+$lang['L_VERSIONSINFORMATIONEN']="Versió";
+$lang['L_VIEW']="veure";
+$lang['L_VISIT_HOMEPAGE']="Visiti la web oficial";
+$lang['L_VOM']="de";
+$lang['L_WITH']="amb";
+$lang['L_WITHATTACH']="amb arxiu adjunt";
+$lang['L_WITHOUTATTACH']="sense cap arxiu adjunt";
+$lang['L_WITHPRAEFIX']="amb prefixe";
+$lang['L_WRONGCONNECTIONPARS']="Paràmetres de conexió erronis o"
+    ." incomplerts!";
+$lang['L_WRONG_CONNECTIONPARS']="Els paàmetres de conexió no són"
+    ." correctes!";
+$lang['L_WRONG_RIGHTS']="No es tenen permisos d'escriptura"
+    ." sobre l'arxiu o directori '%s'.<br"
+    ." />Els permisos (chmod) estan mal"
+    ." configurats o el propietari no és"
+    ." l'adequat.<br /><br />Si us plau,"
+    ." comprovi els atributs"
+    ." d'arxiu/directori utilitzant el seu"
+    ." software de FTP.<br />Aquests han"
+    ." d'èsser establerts a %s.";
+$lang['L_YES']="sí";
+$lang['L_ZEND_FRAMEWORK_VERSION']="Versió de Zend Framework";
+$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="El nom d'arxiu donat '%value%' no és"
+    ." un directori.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="El nom d'arxiu donat '%value%' no és"
+    ." un arxiu.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="El destí proporcionat '%value%' no"
+    ." és un enllaç.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="L'arxiu o directori '%value%' no és"
     ." executable.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"
-    ." doesn't exists.";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"
-    ." readable.";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"
-    ." uploaded file.";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"
-    ." writable.";
-$lang['L_ZEND_ID_DIGITS_INVALID']="Invalid type given. String, integer or"
-    ." float expected.";
-$lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="Value is an empty string.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="The email address can not be matched"
-    ." against dot-atom format.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="The email address format is invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="The hostname is invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="The local part of the email address"
-    ." (local-part@domain.tld) is invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="There is no valid MX record for this"
-    ." email address.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="The hostname is located in a not"
-    ." routable network segment. The email"
-    ." address can not be resolved from"
-    ." public network.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="The email address is too long. The"
-    ." maximum length is 320 chars.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="The email addess can not be matched"
-    ." against quoted-string format.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
-$lang['L_ZEND_ID_IS_EMPTY']="Value is required and can't be empty.";
-$lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"
-    ." against.";
-$lang['L_ZEND_ID_NOT_DIGITS']="Only digits are allowed.";
-$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Invalid type given. String, integer,"
-    ." float, boolean or array expected.";
-$lang['L_ZEND_ID_NOT_SAME']="The two given tokens do not match.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="L'arxiu o directori '%value%' no"
+    ." existeix.";
+$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="L'arxiu o directori '%value%' no és"
+    ." llegible.";
+$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="L'arxiu donat '%value%' no és un"
+    ." arxiu pujat.";
+$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="L'arxiu o directori '%value%' no es"
+    ." pot reescriure.";
+$lang['L_ZEND_ID_DIGITS_INVALID']="Tipus no vàlid. S'esperava String"
+    ." (cadena de text), Integer (nombre"
+    ." sencer) o Float (nombre amb coma"
+    ." flotant).";
+$lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="El valor és buit.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="L'adreça de correu electrònic conté"
+    ." altres caràcters que no són punts"
+    ." (\".\"), ni lletres, ni nombres. És a"
+    ." dir, no cumpleix amb el format"
+    ." \"dot-atom\".";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Tipus no vàlid. S'esperava String"
+    ." (cadena de text).";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="El format de l'adreça de correu"
+    ." electrònic no és vàlida.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="El nom del servidor (host) no és"
+    ." vàlid.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="La part local de l'adreça de correu"
+    ." electrònic (part_local@domini.tld) no"
+    ." és vàlida.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="Per a aquesta adreça de correu"
+    ." electrònic no existeix un registre MX"
+    ." vàlid.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="El nom del servidor (hostname) es"
+    ." troba en un segment de xarxa no"
+    ." enrutable. L'adreça de correu"
+    ." electrònic doncs no pot ser resolta"
+    ." des de la xarxa pública.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="L'adreça d'email és massa llarga. La"
+    ." longitud màxima és de 320"
+    ." caràcters.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="L'adreça d'email no cumpleix amb el"
+    ." format \"quoted-string\".";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="El nom de domini punycode especificat"
+    ." no pot ser decodificat.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="El nom de domini conté un guió en"
+    ." una posició no vàlida.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="Tipus no vàlid. S'esperava String"
+    ." (cadena de text).";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="El nom de domini no coincideix amb"
+    ." l'estructura esperada.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="El nom de domini no cumpleix amb els"
+    ." esquemes donats per a TLD.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="El nom de domini conté un nom de"
+    ." xarxa local no vàlid.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="El nom de domini no cumpleix amb la"
+    ." sintaxis URI.";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="No es permeten adreces IP en els noms"
+    ." de domini (hostnames).";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Noms de xarxes locals no estan"
+    ." permeses com a noms de servidor.";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="No es pot extreure la part TLD del nom"
+    ." de domini.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="El nom de domini conté un TLD"
+    ." desconegut.";
+$lang['L_ZEND_ID_IS_EMPTY']="Aquest valor és necesari i no pot"
+    ." romandre buit.";
+$lang['L_ZEND_ID_MISSING_TOKEN']="Característica no establerta per a"
+    ." contraposar.";
+$lang['L_ZEND_ID_NOT_DIGITS']="Només es permeten digits numerals.";
+$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Tipus no vàlid. S'esperava String"
+    ." (cadena de texte), Integer (nombre"
+    ." sencer), Float (nombre amb coma"
+    ." flotant), Boolean (boleà) o Array"
+    ." (matriz).";
+$lang['L_ZEND_ID_NOT_SAME']="Ambdós IDs no coincideixen.";
 return $lang;
