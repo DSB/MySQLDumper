@@ -31,7 +31,7 @@ class Application_Model_Databases
     /**
      * Class constructor.
      *
-     * @return void
+     * @param Msd_Db $db Database object
      */
     public function __construct(Msd_Db $db)
     {

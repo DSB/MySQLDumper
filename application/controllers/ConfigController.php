@@ -167,7 +167,7 @@ class ConfigController extends Zend_Controller_Action
     /**
      * Get view values for configuration panel databases
      *
-     * @return string
+     * @return Zend_Form_SubForm
      */
     private function _getPanelDatabases()
     {
