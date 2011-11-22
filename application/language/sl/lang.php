@@ -155,8 +155,8 @@ $lang['L_CSV_NAMEFIRSTLINE']="Imena polj v prvi vrstici";
 $lang['L_CSV_NODATA']="Ni najdenih podatkov za uvoz!";
 $lang['L_CSV_NULL']="Zamenjaj NULL z";
 $lang['L_DATABASES_OF_USER']="Podatkovna zbirka uporabnikov";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
+$lang['L_DATABASE_CREATED_FAILED']="Podatkovna zbirka ni bila kreirana.<br"
+    ." />MySQL vrne:<br /><br />%s";
 $lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
     ." successfully.";
 $lang['L_DATASIZE']="Velikost podatkov";
@@ -608,8 +608,8 @@ $lang['L_NO_ENTRIES']="Tabela \"<b>%s</b>\" je prazna in nima"
     ." nobenih zapisov.";
 $lang['L_NO_MSD_BACKUPFILE']="Arhivi drugih skript";
 $lang['L_NO_NAME_GIVEN']="Niste vnesli imena.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_QUERIES']="Število poizvedb";
+$lang['L_NR_OF_RECORDS']="Število zapisov";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabel je bilo optimizirano.";
 $lang['L_NUMBER_OF_FILES_FORM']="Izbriši po številu datotek na"
     ." podatkovno zbirko";
@@ -870,7 +870,7 @@ $lang['L_SQL_SCOPY']="Struktura tabele `%s` je bila"
 $lang['L_SQL_SEARCH']="Iskanje";
 $lang['L_SQL_SEARCHWORDS']="Iskane besede";
 $lang['L_SQL_SELECTTABLE']="izberi tabelo";
-$lang['L_SQL_SERVER']="SQL-Server";
+$lang['L_SQL_SERVER']="SQL-Strežnik";
 $lang['L_SQL_SHOWDATATABLE']="Prikaži podatke tabele";
 $lang['L_SQL_STRUCTUREDATA']="Struktura in podatki";
 $lang['L_SQL_STRUCTUREONLY']="Samo struktura";
@@ -909,8 +909,8 @@ $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavitvena datoteka \"%s\" je bila"
     ." uspešno izbrisana.";
 $lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabela";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="Ime tabele";
+$lang['L_TABLENAME_EXPLAIN']="Ime tabele";
 $lang['L_TABLES']="Tabele";
 $lang['L_TABLESELECTION']="Izbira tabele";
 $lang['L_TABLE_CREATE_SUCC']="Tabela '%s' je bila ustvarjena"
@@ -976,10 +976,10 @@ $lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"
     ." link.";
 $lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"
     ." executable.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="The file or directory '%value%'"
-    ." doesn't exists.";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="The file or directory '%value%' isn't"
-    ." readable.";
+$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="Datoteka ali mapa '%value%' ne"
+    ." obstaja.";
+$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="Datoteke ali mape '%value%' ni možno"
+    ." prebrati.";
 $lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"
     ." uploaded file.";
 $lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"
