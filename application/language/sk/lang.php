@@ -220,7 +220,7 @@ $lang['L_EDIT']="upraviť";
 $lang['L_EHRESTORE_CONTINUE']="pokračovať v prepisovaní a"
     ." nahrávaní chyby";
 $lang['L_EHRESTORE_STOP']="stop";
-$lang['L_EMAIL']="Mail";
+$lang['L_EMAIL']="E-Mail";
 $lang['L_EMAILBODY_ATTACH']="Príloha obsahuje zálohu"
     ." MySQL-Databázy.<br />Zálohovanie"
     ." databázy `%s`<br /><br /><br"
@@ -269,7 +269,7 @@ $lang['L_EMAIL_SENDER']="Adresa odosielateľa e-mailu";
 $lang['L_EMAIL_START']="Spustiť odosielanie e-mailov";
 $lang['L_EMAIL_WAS_SEND']="E-mail bol úspešne odoslaný";
 $lang['L_EMPTY']="Vyprázdniť";
-$lang['L_EMPTYKEYS']="prázdne a reset indexy";
+$lang['L_EMPTYKEYS']="vyprázdniť a resetovať indexy";
 $lang['L_EMPTYTABLEBEFORE']="Prázdne tabuľky pred";
 $lang['L_EMPTY_DB_BEFORE_RESTORE']="Odstrániť tabuľky pred obnovením";
 $lang['L_ENCODING']="Kódovanie";
@@ -281,7 +281,7 @@ $lang['L_ENTER_DB_INFO']="Najprv kliknite na tlačitko"
     ." neda pripojit k databaze.";
 $lang['L_ENTRY']="Vstup";
 $lang['L_ERROR']="Chyba";
-$lang['L_ERRORHANDLING_RESTORE']="Ošetrenie chýb pri obnovovaní";
+$lang['L_ERRORHANDLING_RESTORE']="Opraviť chyby pri obnovovaní";
 $lang['L_ERROR_CONFIGFILE_NAME']="Záloha \"%s\" obsahuje neplatné"
     ." znaky.";
 $lang['L_ERROR_DELETING_CONFIGFILE']="Chyba: nemožno odstrániť"
@@ -468,9 +468,7 @@ $lang['L_INFO_FSOCKOPEN_DISABLED']="Na tomto serveri PHP-príkaz fsockopen"
     ." nový jazykový balík je k"
     ." dispozícii na tejto stránke.";
 $lang['L_INFO_LASTUPDATE']="Posledná aktualizácia";
-$lang['L_INFO_LOCATION']="Preložil : <b>Harry  - <a"
-    ." href=\"http://warezhaus.sk\">\"warezhaus.sk\"</a></b><br"
-    ." /><br /><br />Umiestnenie :";
+$lang['L_INFO_LOCATION']="Umiestnenie :";
 $lang['L_INFO_NODB']="databáza neexistuje.";
 $lang['L_INFO_NOPROCESSES']="žiadne bežiace procesy";
 $lang['L_INFO_NOSTATUS']="nie sú dispozícii žiadne správy o"
@@ -633,8 +631,8 @@ $lang['L_PAGE']="Stránka";
 $lang['L_PAGE_REFRESHS']="Obnovená stránka";
 $lang['L_PASS']="Heslo";
 $lang['L_PASSWORD']="Heslo";
-$lang['L_PASSWORDS_UNEQUAL']="Heslá nie sú zhodné alebo prázdne"
-    ." !";
+$lang['L_PASSWORDS_UNEQUAL']="Heslá nie sú zhodné alebo ste ich"
+    ." nezadali !";
 $lang['L_PASSWORD_REPEAT']="Heslo (opakovať)<br /><br /><br />";
 $lang['L_PASSWORD_STRENGTH']="Sila hesla";
 $lang['L_PERLOUTPUT1']="Vstup do crondump.pl pre"
@@ -645,7 +643,7 @@ $lang['L_PERLOUTPUT3']="Príkazové pre Shell alebo pre"
     ." crontab";
 $lang['L_PERL_COMPLETELOG']="Kompletný-Protokol-Perl";
 $lang['L_PERL_LOG']="Protokol-Perl";
-$lang['L_PHPBUG']="Chyba v zlib!Nemožno kompresie!";
+$lang['L_PHPBUG']="Chyba v zlib ! Nemožno kompresie!";
 $lang['L_PHPMAIL']="PHP-Mail Funkcia()";
 $lang['L_PHP_EXTENSIONS']="PHP-Rozšírenie";
 $lang['L_PHP_LOG']="Protokol-PHP";
@@ -667,7 +665,7 @@ $lang['L_POSITION_BR']="Vpravo dole";
 $lang['L_POSITION_MC']="V strede";
 $lang['L_POSITION_ML']="V strede vľavo";
 $lang['L_POSITION_MR']="V strede vpravo";
-$lang['L_POSITION_NOTIFICATIONS']="Pozícia oznámenia - okná";
+$lang['L_POSITION_NOTIFICATIONS']="Pozícia oznamovacieho okna";
 $lang['L_POSITION_TC']="Hore v strede";
 $lang['L_POSITION_TL']="Vľavo hore";
 $lang['L_POSITION_TR']="Vpravo hore";
@@ -825,7 +823,7 @@ $lang['L_SQL_COPYTABLE']="kopŕovať tabuľku";
 $lang['L_SQL_CREATED']="bol vytvorený.";
 $lang['L_SQL_CREATEINDEX']="vytvoriť nový index";
 $lang['L_SQL_CREATETABLE']="vytvoriť tabuľku";
-$lang['L_SQL_DATAVIEW']="Zobrazenie dát";
+$lang['L_SQL_DATAVIEW']="Zobraziť dáta";
 $lang['L_SQL_DBCOPY']="Obsah databázy `%s` bol kopírovaný"
     ." k databáze `%s`.";
 $lang['L_SQL_DBSCOPY']="Štruktúra databázy `%s` bola"
@@ -836,7 +834,7 @@ $lang['L_SQL_EDIT']="uprava";
 $lang['L_SQL_EDITFIELD']="Upravit pole";
 $lang['L_SQL_EDIT_TABLESTRUCTURE']="Upraviť štruktúry tabuľky";
 $lang['L_SQL_EMPTYDB']="Prázdne databázy";
-$lang['L_SQL_ERROR1']="Chyba v dotaze:";
+$lang['L_SQL_ERROR1']="Chyba v dotáze:";
 $lang['L_SQL_ERROR2']="MySQL hovorí:";
 $lang['L_SQL_EXEC']="Vykonať SQL Príkaz";
 $lang['L_SQL_EXPORT']="Export z databázy `%s`";
@@ -857,7 +855,7 @@ $lang['L_SQL_NEWFIELD']="Nové pole";
 $lang['L_SQL_NODATA']="žiadne záznamy";
 $lang['L_SQL_NODEST_COPY']="Žiadne kopírovanie bez určenia !";
 $lang['L_SQL_NOFIELDDELETE']="Zmazať, nie je možné, pretože"
-    ." tabuľky musí obsahovať aspoň jedno"
+    ." tabuľky musia obsahovať aspoň jedno"
     ." pole.";
 $lang['L_SQL_NOTABLESINDB']="Nenašli sa žiadne tabuľky v"
     ." databáze";
@@ -895,7 +893,7 @@ $lang['L_SQL_TABLEEMPTIEDKEYS']="Tabuľka `%s` bola zmazaná a indexi"
 $lang['L_SQL_TABLEINDEXES']="Indexy v tabuľke";
 $lang['L_SQL_TABLENEW']="Úpravy tabuľky";
 $lang['L_SQL_TABLENOINDEXES']="Žiadene indexy v tabuľke";
-$lang['L_SQL_TABLENONAME']="Tabuľka potrebuje meno!";
+$lang['L_SQL_TABLENONAME']="Tabuľka potrebuje názov!";
 $lang['L_SQL_TABLESOFDB']="Tabuľka databázy";
 $lang['L_SQL_TABLEVIEW']="Zobraziť Tabuľky";
 $lang['L_SQL_TBLNAMEEMPTY']="Názov tabuľky nesmie't byť"
@@ -923,7 +921,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavenie zálohovania %s bolo"
     ." úspešne vytvorené.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavenie zálohovania %s bolo"
     ." úspešne odstránené.";
-$lang['L_SUM_TOTAL']="Resumé";
+$lang['L_SUM_TOTAL']="Súčet";
 $lang['L_TABLE']="Tabuľka";
 $lang['L_TABLENAME']="Názov tabuľky";
 $lang['L_TABLENAME_EXPLAIN']="Názov tabuľky";
@@ -937,11 +935,11 @@ $lang['L_THEME']="Téma";
 $lang['L_TIME']="Čas";
 $lang['L_TIMESTAMP']="Časový interval";
 $lang['L_TITLE_INDEX']="Index";
-$lang['L_TITLE_KEY_FULLTEXT']="Fulltext key";
-$lang['L_TITLE_KEY_PRIMARY']="Primary key";
-$lang['L_TITLE_KEY_UNIQUE']="Unique key";
+$lang['L_TITLE_KEY_FULLTEXT']="Fulltext kľúč";
+$lang['L_TITLE_KEY_PRIMARY']="Primárny kľúč";
+$lang['L_TITLE_KEY_UNIQUE']="Unikátny kľúč";
 $lang['L_TITLE_MYSQL_HELP']="MySQL Dokumentácia";
-$lang['L_TITLE_NOKEY']="Žiadne key";
+$lang['L_TITLE_NOKEY']="Žiadne kľúče";
 $lang['L_TITLE_SEARCH']="Hľadať";
 $lang['L_TITLE_SHOW_DATA']="Zobraziť údaje";
 $lang['L_TITLE_UPLOAD']="Nahrať SQL súbor";
@@ -960,7 +958,8 @@ $lang['L_UPDATE']="Aktualizovať";
 $lang['L_UPDATE_CONNECTION_FAILED']="Aktualizácia sa nepodarila, pretože"
     ." pripojenie k serveru '%s' sa nedá"
     ." vytvoriť.";
-$lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
+$lang['L_UPDATE_ERROR_RESPONSE']="Aktualizácia zlyhala, server vracia :"
+    ." '%s'";
 $lang['L_UPTO']="až";
 $lang['L_USERNAME']="Užívateľské meno";
 $lang['L_USE_SSL']="Použiť SSL";
