@@ -114,9 +114,9 @@ $lang['L_CONNECTIONPARS']="Connection Parameter";
 $lang['L_CONNECTTOMYSQL']="Connect to MySQL";
 $lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
     ." file '%s'.";
-$lang['L_CONVERTED_FILES']="Converted Files";
+$lang['L_CONVERTED_FILES']="Skonwertowane pliki";
 $lang['L_CONVERTER']="Backup Converter";
-$lang['L_CONVERTING']="Converting";
+$lang['L_CONVERTING']="Konwersja";
 $lang['L_CONVERT_FILE']="File to be converted";
 $lang['L_CONVERT_FILENAME']="Name of destination file (without"
     ." extension)";
@@ -125,8 +125,8 @@ $lang['L_CONVERT_FINISHED']="Conversion finished, '%s' was written"
     ." successfully.";
 $lang['L_CONVERT_START']="Start Conversion";
 $lang['L_CONVERT_TITLE']="Convert Dump to MSD Format";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Wrong parameters!  Conversion is not"
-    ." possible.";
+$lang['L_CONVERT_WRONG_PARAMETERS']="Błędne parametry ! Konwersja nie"
+    ." jest możliwa.";
 $lang['L_CREATE']="tworzyć";
 $lang['L_CREATED']="Created";
 $lang['L_CREATEDIRS']="Create Directories";
@@ -135,7 +135,7 @@ $lang['L_CREATE_CONFIGFILE']="Create a new configuration file";
 $lang['L_CREATE_DATABASE']="Tworzenie nowej bazy danych";
 $lang['L_CREATE_TABLE_SAVED']="Definition of table `%s` saved.";
 $lang['L_CREDITS']="Kredyty / Pomoc";
-$lang['L_CRONSCRIPT']="Cronscript";
+$lang['L_CRONSCRIPT']="Skrypt Crona";
 $lang['L_CRON_COMMENT']="Enter Comment";
 $lang['L_CRON_COMPLETELOG']="Zapisz wszystkie dane wyjściowe do"
     ." dziennika";
@@ -182,8 +182,8 @@ $lang['L_DB_SELECT_ERROR']="<br />Error:<br />Selection of"
     ." database <b>";
 $lang['L_DB_SELECT_ERROR2']="</b> failed!";
 $lang['L_DB_USER']="Użytkownik";
-$lang['L_DEFAULT_CHARACTER_SET_NAME']="Default character set";
-$lang['L_DEFAULT_CHARSET']="Default character set";
+$lang['L_DEFAULT_CHARACTER_SET_NAME']="Domyślny zestaw znaków";
+$lang['L_DEFAULT_CHARSET']="Domyślny zestaw znaków";
 $lang['L_DEFAULT_COLLATION_NAME']="Default collation";
 $lang['L_DELETE']="Delete";
 $lang['L_DELETE_DATABASE']="Usuń bazę danych";
@@ -253,12 +253,12 @@ $lang['L_EMAILBODY_TOOBIG']="The Backup file exceeded the maximum"
     ." />MySQLDumper<br />";
 $lang['L_EMAIL_ADDRESS']="Adres e-mail";
 $lang['L_EMAIL_CC']="CC-Receiver";
-$lang['L_EMAIL_MAXSIZE']="Maximum size of attachment";
+$lang['L_EMAIL_MAXSIZE']="Maksymalny rozmiar załącznika";
 $lang['L_EMAIL_ONLY_ATTACHMENT']="... attachment only.";
 $lang['L_EMAIL_RECIPIENT']="Receiver";
 $lang['L_EMAIL_SENDER']="Sender address of the email";
 $lang['L_EMAIL_START']="Starting to send e-mail";
-$lang['L_EMAIL_WAS_SEND']="Email was successfully sent to";
+$lang['L_EMAIL_WAS_SEND']="Wiadomość została wysłana do";
 $lang['L_EMPTY']="Empty";
 $lang['L_EMPTYKEYS']="empty and reset indexes";
 $lang['L_EMPTYTABLEBEFORE']="Empty table before";
@@ -287,8 +287,8 @@ $lang['L_EXISTS']="Exists";
 $lang['L_EXPORT']="Export";
 $lang['L_EXPORTFINISHED']="Eksport zakończony.";
 $lang['L_EXPORTLINES']="<strong>%s</strong> lines exported";
-$lang['L_EXPORTOPTIONS']="Export Options";
-$lang['L_EXTENDEDPARS']="Extended Parameter";
+$lang['L_EXPORTOPTIONS']="Opcje eksportu";
+$lang['L_EXTENDEDPARS']="Rozszerzony parametr";
 $lang['L_FADE_IN_OUT']="Display on/off";
 $lang['L_FATAL_ERROR_DUMP']="Fatal error: the CREATE-Statement of"
     ." table '%s' in database '%s' couldn't"
@@ -299,7 +299,7 @@ $lang['L_FILE']="Plik";
 $lang['L_FILES']="Pliki";
 $lang['L_FILESIZE']="Rozmiar";
 $lang['L_FILE_MANAGE']="Administracja";
-$lang['L_FILE_OPEN_ERROR']="Error: could not open file.";
+$lang['L_FILE_OPEN_ERROR']="Błąd: nie można otworzyć pliku.";
 $lang['L_FILE_SAVED_SUCCESSFULLY']="Backup został zapisany pomyślnie";
 $lang['L_FILE_SAVED_UNSUCCESSFULLY']="Załączki nie mogły być zapisane!";
 $lang['L_FILE_UPLOAD_SUCCESSFULL']="The file '%s' was uploaded"
@@ -315,8 +315,8 @@ $lang['L_FM_ASKDELETE1']="Should the file(s)";
 $lang['L_FM_ASKDELETE2']="really be deleted?";
 $lang['L_FM_ASKDELETE3']="Do you want autodelete to be executed"
     ." with configured rules now?";
-$lang['L_FM_ASKDELETE4']="Do you want to delete all backup"
-    ." files?";
+$lang['L_FM_ASKDELETE4']="Czy chcesz skasować wszystkie pliki"
+    ." backup-u ?";
 $lang['L_FM_ASKDELETE5']="Do you want to delete all backup files"
     ." with";
 $lang['L_FM_ASKDELETE5_2']="* ?";
@@ -327,7 +327,7 @@ $lang['L_FM_CHOOSE_ENCODING']="Choose encoding of backup file";
 $lang['L_FM_COMMENT']="Enter Comment";
 $lang['L_FM_DELETE']="Delete";
 $lang['L_FM_DELETE1']="The file";
-$lang['L_FM_DELETE2']="was deleted successfully.";
+$lang['L_FM_DELETE2']="został skasowany pomyślnie";
 $lang['L_FM_DELETE3']="couldn't be deleted!";
 $lang['L_FM_DELETEALL']="Delete all backup files";
 $lang['L_FM_DELETEALLFILTER']="Delete all with";
@@ -339,9 +339,9 @@ $lang['L_FM_FILES1']="Database Backups";
 $lang['L_FM_FILESIZE']="File size";
 $lang['L_FM_FILEUPLOAD']="Upload file";
 $lang['L_FM_FREESPACE']="Wolne miejsce na serwerze";
-$lang['L_FM_LAST_BU']="Last Backup";
+$lang['L_FM_LAST_BU']="Ostatni backup";
 $lang['L_FM_NOFILE']="You didn't choose a file!";
-$lang['L_FM_NOFILESFOUND']="No file found.";
+$lang['L_FM_NOFILESFOUND']="Plik nie został znaleziony.";
 $lang['L_FM_RECORDS']="Records";
 $lang['L_FM_RESTORE']="Restore";
 $lang['L_FM_RESTORE_HEADER']="Restore of Database"
@@ -349,7 +349,7 @@ $lang['L_FM_RESTORE_HEADER']="Restore of Database"
 $lang['L_FM_SELECTTABLES']="Select tables";
 $lang['L_FM_STARTDUMP']="Start New Backup";
 $lang['L_FM_TABLES']="Tables";
-$lang['L_FM_TOTALSIZE']="Total Size";
+$lang['L_FM_TOTALSIZE']="Całkowity rozmiar";
 $lang['L_FM_UPLOADFAILED']="The upload has failed!";
 $lang['L_FM_UPLOADFILEEXISTS']="A file with the same name already"
     ." exists !";
@@ -362,13 +362,13 @@ $lang['L_FOUND_DB']="found db";
 $lang['L_FROMFILE']="from file";
 $lang['L_FROMTEXTBOX']="from text box";
 $lang['L_FTP']="FTP";
-$lang['L_FTP_ADD_CONNECTION']="Add connection";
-$lang['L_FTP_CHOOSE_MODE']="FTP Transfer Mode";
-$lang['L_FTP_CONFIRM_DELETE']="Should this FTP-Connection really be"
-    ." deleted?";
-$lang['L_FTP_CONNECTION']="FTP-Connection";
-$lang['L_FTP_CONNECTION_CLOSED']="FTP-Connection closed";
-$lang['L_FTP_CONNECTION_DELETE']="Delete connection";
+$lang['L_FTP_ADD_CONNECTION']="Dodaj połączenie";
+$lang['L_FTP_CHOOSE_MODE']="Typ połączenia FTP";
+$lang['L_FTP_CONFIRM_DELETE']="Czy na pewno chcesz usunąć to"
+    ." połączenie FTP ?";
+$lang['L_FTP_CONNECTION']="Połączenie FTP";
+$lang['L_FTP_CONNECTION_CLOSED']="Połączenie FTP zakończone";
+$lang['L_FTP_CONNECTION_DELETE']="Usuń połączenie FTP";
 $lang['L_FTP_CONNECTION_ERROR']="The connection to server '%s' using"
     ." port %s couldn't be established";
 $lang['L_FTP_CONNECTION_SUCCESS']="The connection to server '%s' using"
@@ -380,10 +380,10 @@ $lang['L_FTP_FILE_TRANSFER_SUCCESS']="The file '%s' was transferred"
 $lang['L_FTP_LOGIN_ERROR']="Login as user '%s' was denied";
 $lang['L_FTP_LOGIN_SUCCESS']="Login as user '%s' was successfull";
 $lang['L_FTP_OK']="Connection successful.";
-$lang['L_FTP_PASS']="Password";
+$lang['L_FTP_PASS']="Hasło";
 $lang['L_FTP_PASSIVE']="use passive mode";
-$lang['L_FTP_PASV_ERROR']="Switching to passive mode was"
-    ." unsuccessful";
+$lang['L_FTP_PASV_ERROR']="Przełączenie do trybu pasywnego nie"
+    ." powiodło się";
 $lang['L_FTP_PASV_SUCCESS']="Switching to passive mode was"
     ." successfull";
 $lang['L_FTP_PORT']="Port";
@@ -473,7 +473,7 @@ $lang['L_INSTALL_HELP_PORT']="(empty = Default Port)";
 $lang['L_INSTALL_HELP_SOCKET']="(empty = Default Socket)";
 $lang['L_IS_WRITABLE']="Is writable";
 $lang['L_KILL_PROCESS']="Zakończenia procesów";
-$lang['L_LANGUAGE']="Language";
+$lang['L_LANGUAGE']="Język";
 $lang['L_LANGUAGE_NAME']="Polski";
 $lang['L_LASTBACKUP']="Ostatnia kopia zapasowa";
 $lang['L_LOAD']="Load default settings";
@@ -614,8 +614,8 @@ $lang['L_PAGE_REFRESHS']="Odśwież stronę";
 $lang['L_PASS']="Password";
 $lang['L_PASSWORD']="Password";
 $lang['L_PASSWORDS_UNEQUAL']="Hasła nie są identyczne, albo puste";
-$lang['L_PASSWORD_REPEAT']="Password (repeat)";
-$lang['L_PASSWORD_STRENGTH']="Password strength";
+$lang['L_PASSWORD_REPEAT']="Hasło (powtórzenie)";
+$lang['L_PASSWORD_STRENGTH']="Siła hasła";
 $lang['L_PERLOUTPUT1']="Entry in crondump.pl for"
     ." absolute_path_of_configdir";
 $lang['L_PERLOUTPUT2']="URL for the browser or for external"
@@ -629,7 +629,7 @@ $lang['L_PHPBUG']="Błąd w zlib! Brak możliwości"
 $lang['L_PHPMAIL']="PHP-Function mail()";
 $lang['L_PHP_EXTENSIONS']="PHP-Rozszerzeni";
 $lang['L_PHP_LOG']="PHP-Log";
-$lang['L_PHP_VERSION']="PHP-Wersj";
+$lang['L_PHP_VERSION']="Wersja PHP";
 $lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"
     ." PHP-Version is too old. MySQLDumper"
     ." needs a PHP-Version of %s or higher."
@@ -637,8 +637,8 @@ $lang['L_PHP_VERSION_TOO_OLD']="We are sorry: the installed"
     ." which is too old. You need to update"
     ." your PHP-Version before you can"
     ." install and use MySQLDumper. <br />";
-$lang['L_POP3_PORT']="POP3-Port";
-$lang['L_POP3_SERVER']="POP3-Server";
+$lang['L_POP3_PORT']="Port POP3";
+$lang['L_POP3_SERVER']="Serwer POP3";
 $lang['L_PORT']="Port";
 $lang['L_POSITION_BC']="bottom center";
 $lang['L_POSITION_BL']="bottom left";
@@ -668,7 +668,7 @@ $lang['L_PROCESSKILL1']="Staramy się, aby zakończyć proces";
 $lang['L_PROCESSKILL2']="zakończyć proces";
 $lang['L_PROCESSKILL3']="Próbuje od";
 $lang['L_PROCESSKILL4']="sek. do zakończenia procesami";
-$lang['L_PROCESS_ID']="Process ID";
+$lang['L_PROCESS_ID']="ID procesu";
 $lang['L_PROGRESS_FILE']="Postęp pliku";
 $lang['L_PROGRESS_OVER_ALL']="Overall Progress";
 $lang['L_PROGRESS_TABLE']="Progress of table";
@@ -676,7 +676,7 @@ $lang['L_PROVIDER']="Dostawca";
 $lang['L_PROZESSE']="Proces";
 $lang['L_QUERY']="Query";
 $lang['L_QUERY_TYPE']="Query type";
-$lang['L_RECHTE']="Prawa";
+$lang['L_RECHTE']="Uprawnienia";
 $lang['L_RECORDS']="Zapis";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> records inserted.";
 $lang['L_RECORDS_OF_TABLE']="Records of table";
@@ -724,7 +724,7 @@ $lang['L_SAVING_DATA_TO_FILE']="Saving data of database '%s' to file"
     ." '%s'";
 $lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximum filesize reached: proceeding"
     ." with file '%s'";
-$lang['L_SAVING_DB_FORM']="Bazy danych";
+$lang['L_SAVING_DB_FORM']="Baza danych";
 $lang['L_SAVING_TABLE']="Saving table";
 $lang['L_SEARCH_ACCESS_KEYS']="Browse: forward=ALT+V, backwards=ALT+C";
 $lang['L_SEARCH_IN_TABLE']="Search in table";
@@ -778,12 +778,12 @@ $lang['L_SQL_ALLOWDUPS']="Duplicates allowed";
 $lang['L_SQL_ATPOSITION']="insert at position";
 $lang['L_SQL_ATTRIBUTES']="Attributes";
 $lang['L_SQL_BACKDBOVERVIEW']="Back to Overview";
-$lang['L_SQL_BEFEHLNEU']="New command";
-$lang['L_SQL_BEFEHLSAVED1']="SQL Command";
-$lang['L_SQL_BEFEHLSAVED2']="was added";
-$lang['L_SQL_BEFEHLSAVED3']="was saved";
-$lang['L_SQL_BEFEHLSAVED4']="was moved up";
-$lang['L_SQL_BEFEHLSAVED5']="was deleted";
+$lang['L_SQL_BEFEHLNEU']="Nowe polecenie";
+$lang['L_SQL_BEFEHLSAVED1']="Komenda SQL";
+$lang['L_SQL_BEFEHLSAVED2']="została dodana";
+$lang['L_SQL_BEFEHLSAVED3']="została zapisana";
+$lang['L_SQL_BEFEHLSAVED4']="została przeniesiona wyżej";
+$lang['L_SQL_BEFEHLSAVED5']="została skasowana";
 $lang['L_SQL_BROWSER']="Przeglądarka-SQL";
 $lang['L_SQL_CARDINALITY']="Cardinality";
 $lang['L_SQL_CHANGED']="was changed.";
@@ -817,9 +817,9 @@ $lang['L_SQL_ERROR2']="MySQL mówi:";
 $lang['L_SQL_EXEC']="Execute SQL Statement";
 $lang['L_SQL_EXPORT']="Export from Database `%s`";
 $lang['L_SQL_FIELDDELETE1']="The Field";
-$lang['L_SQL_FIELDNAMENOTVALID']="Error: No valid fieldname";
+$lang['L_SQL_FIELDNAMENOTVALID']="Błąd: Brak poprawnego pola";
 $lang['L_SQL_FIRST']="first";
-$lang['L_SQL_IMEXPORT']="Import-Export";
+$lang['L_SQL_IMEXPORT']="Import-Eksport";
 $lang['L_SQL_IMPORT']="Import in Database `%s`";
 $lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
     ." />Couldn't find closing match for '%s'"
@@ -827,7 +827,7 @@ $lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.
 $lang['L_SQL_INDEXES']="Indices";
 $lang['L_SQL_INSERTFIELD']="insert field";
 $lang['L_SQL_INSERTNEWFIELD']="insert new field";
-$lang['L_SQL_LIBRARY']="SQL Library";
+$lang['L_SQL_LIBRARY']="Biblioteka SQL";
 $lang['L_SQL_NAMEDEST_MISSING']="Name of Destination is missing !";
 $lang['L_SQL_NEWFIELD']="New field";
 $lang['L_SQL_NODATA']="no records";
@@ -883,9 +883,9 @@ $lang['L_SQL_WARNING']="The execution of SQL Statements can"
     ." manipulate data. TAKE CARE! The"
     ." Authors don't accept any liability for"
     ." damaged or lost data.";
-$lang['L_SQL_WASCREATED']="was created";
-$lang['L_SQL_WASEMPTIED']="was emptied";
-$lang['L_STARTDUMP']="Start Backup";
+$lang['L_SQL_WASCREATED']="została utworzona";
+$lang['L_SQL_WASEMPTIED']="została opróżniona";
+$lang['L_STARTDUMP']="Rozpocznij backup";
 $lang['L_START_RESTORE_DB_FILE']="Starting restore of database '%s' from"
     ." file '%s'.";
 $lang['L_START_SQL_SEARCH']="start search";
@@ -897,22 +897,22 @@ $lang['L_SUCCESS_DELETING_CONFIGFILE']="The configuration file \"%s\" has"
     ." successfully been deleted.";
 $lang['L_SUM_TOTAL']="Sum";
 $lang['L_TABLE']="Tabla";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="Nazwa tabeli";
+$lang['L_TABLENAME_EXPLAIN']="Nazwa tabeli";
 $lang['L_TABLES']="Tabele";
 $lang['L_TABLESELECTION']="Table selection";
 $lang['L_TABLE_CREATE_SUCC']="Tabela '%s' została utworzona"
     ." pozytywnie";
-$lang['L_TABLE_TYPE']="Ty";
+$lang['L_TABLE_TYPE']="Typ tabeli";
 $lang['L_TESTCONNECTION']="Spróbuj się podłączyć";
-$lang['L_THEME']="Theme";
+$lang['L_THEME']="Motyw graficzny";
 $lang['L_TIME']="Czas";
 $lang['L_TIMESTAMP']="odstęp czasu";
 $lang['L_TITLE_INDEX']="Index";
 $lang['L_TITLE_KEY_FULLTEXT']="Fulltext key";
 $lang['L_TITLE_KEY_PRIMARY']="Primary key";
 $lang['L_TITLE_KEY_UNIQUE']="Unique key";
-$lang['L_TITLE_MYSQL_HELP']="MySQL documentation";
+$lang['L_TITLE_MYSQL_HELP']="Dokumentacja MySQL";
 $lang['L_TITLE_NOKEY']="No key";
 $lang['L_TITLE_SEARCH']="Search";
 $lang['L_TITLE_SHOW_DATA']="Pokaż dane";
@@ -953,7 +953,7 @@ $lang['L_WRONG_RIGHTS']="Nie można zapisać pliku lub katalogu"
     ." użyciu oprogramowania FTP.<br />Plik"
     ." lub katalog musi być w %s";
 $lang['L_YES']="tak";
-$lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework Version";
+$lang['L_ZEND_FRAMEWORK_VERSION']="Wersja Zend Framework";
 $lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
     ." directory.";
 $lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"
@@ -977,7 +977,7 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="The email address can not be matched"
     ." against dot-atom format.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="Invalid type given. String expected.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="The email address format is invalid.";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="The hostname is invalid.";
+$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="Błędna nazwa hosta.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="The local part of the email address"
     ." (local-part@domain.tld) is invalid.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="There is no valid MX record for this"
@@ -1012,8 +1012,8 @@ $lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
 $lang['L_ZEND_ID_IS_EMPTY']="Value is required and can't be empty.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="No token was provided to match"
     ." against.";
-$lang['L_ZEND_ID_NOT_DIGITS']="Only digits are allowed.";
+$lang['L_ZEND_ID_NOT_DIGITS']="Dopuszczalne są tylko cyfry.";
 $lang['L_ZEND_ID_NOT_EMPTY_INVALID']="Invalid type given. String, integer,"
     ." float, boolean or array expected.";
-$lang['L_ZEND_ID_NOT_SAME']="The two given tokens do not match.";
+$lang['L_ZEND_ID_NOT_SAME']="Tokeny nie pasują do siebie.";
 return $lang;
