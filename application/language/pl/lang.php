@@ -398,8 +398,8 @@ $lang['L_FTP_TRANSFER']="Transfer FTP";
 $lang['L_FTP_USER']="Użytkownik";
 $lang['L_FTP_USESSL']="Użyj połączenia SSL";
 $lang['L_GENERAL']="General";
-$lang['L_GZIP']="GZip compression";
-$lang['L_GZIP_COMPRESSION']="GZip Compression";
+$lang['L_GZIP']="Kompresja GZip";
+$lang['L_GZIP_COMPRESSION']="Kompresja GZip";
 $lang['L_HOME']="Strona główna";
 $lang['L_HOUR']="Godzina";
 $lang['L_HOURS']="Godziny";
@@ -442,7 +442,7 @@ $lang['L_IMPORTSOURCE']="Import Source";
 $lang['L_IMPORTTABLE']="Import in Table";
 $lang['L_IMPORT_NOTABLE']="No table was selected for import!";
 $lang['L_IN']="w";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="Rozmiar indeksu";
 $lang['L_INFO_ACTDB']="Obecna baza danych";
 $lang['L_INFO_DATABASES']="Są następujące bazy danych na"
     ." serwerze MySQL";
@@ -457,10 +457,10 @@ $lang['L_INFO_FSOCKOPEN_DISABLED']="Na tej stronie kliknij fsockopen () w"
     ." \"języka\" instalacji MySQLDumper."
     ." Następnie nowy pakiet językowy jest"
     ." dostępny na tej stronie";
-$lang['L_INFO_LASTUPDATE']="Ostatnia aktualizacj";
+$lang['L_INFO_LASTUPDATE']="Ostatnia aktualizacja";
 $lang['L_INFO_LOCATION']="Jesteś na";
-$lang['L_INFO_NODB']="Baza danych nie istniej";
-$lang['L_INFO_NOPROCESSES']="nie obecnego procesu";
+$lang['L_INFO_NODB']="Baza danych nie istnieje";
+$lang['L_INFO_NOPROCESSES']="brak uruchomionych procesów";
 $lang['L_INFO_NOSTATUS']="Żaden status nie dostępny";
 $lang['L_INFO_NOVARS']="zmienne nie dostÄ™pne";
 $lang['L_INFO_OPTIMIZED']="optymalizu";
@@ -495,13 +495,13 @@ $lang['L_LOG_MAXSIZE']="Maximum size of log files";
 $lang['L_LOG_NOT_READABLE']="The log file '%s' does not exist or is"
     ." not readable.";
 $lang['L_MAILERROR']="Sending of email failed!";
-$lang['L_MAILPROGRAM']="Mail program";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
+$lang['L_MAILPROGRAM']="Program pocztowy";
+$lang['L_MAXIMUM_LENGTH']="Maksymalna długość";
 $lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
     ." one character needs, when it is saved"
     ." to disk.";
-$lang['L_MAXSIZE']="Max. Size";
-$lang['L_MAX_BACKUP_FILES_EACH2']="dla kaÅ¼dej bazy danych";
+$lang['L_MAXSIZE']="Maksymalny rozmiar";
+$lang['L_MAX_BACKUP_FILES_EACH2']="dla każdej bazy danych";
 $lang['L_MAX_EXECUTION_TIME']="Max czas realizacj";
 $lang['L_MAX_UPLOAD_SIZE']="Maximum file size";
 $lang['L_MAX_UPLOAD_SIZE_INFO']="If your Dumpfile is bigger than the"
@@ -510,9 +510,9 @@ $lang['L_MAX_UPLOAD_SIZE_INFO']="If your Dumpfile is bigger than the"
     ." \"work/backup\". <br />After that you"
     ." can choose it to begin a restore"
     ." progress.";
-$lang['L_MEMORY']="Pamię";
-$lang['L_MENU_HIDE']="Hide menu";
-$lang['L_MENU_SHOW']="Show menu";
+$lang['L_MEMORY']="Pamięć";
+$lang['L_MENU_HIDE']="Ukryj menu";
+$lang['L_MENU_SHOW']="Pokaż menu";
 $lang['L_MESSAGE']="Wiadomość";
 $lang['L_MESSAGE_TYPE']="Message type";
 $lang['L_MINUTE']="Minuta<br />";
@@ -522,8 +522,8 @@ $lang['L_MOBILE_ON']="On";
 $lang['L_MODE_EASY']="Łatwy";
 $lang['L_MODE_EXPERT']="Ekspert";
 $lang['L_MSD_INFO']="Informacje o MySQL Dumper";
-$lang['L_MSD_MODE']="MySQLDumper-Mode";
-$lang['L_MSD_VERSION']="MySQLDumper-Wersj";
+$lang['L_MSD_MODE']="MySQLDumper - tryb pracy";
+$lang['L_MSD_VERSION']="MySQLDumper-Wersja";
 $lang['L_MULTIDUMP']="Backup na kilka części: Bazy danych"
     ." %d zostały zapisane";
 $lang['L_MULTIDUMP_FINISHED']="Backup of <b>%d</b> Databases done";
@@ -576,10 +576,10 @@ $lang['L_NOTICES']="Notki<br /><br /><br />";
 $lang['L_NOT_ACTIVATED']="wyłączony";
 $lang['L_NOT_SUPPORTED']="Ta kopia zapasowa nie obsługuje tej"
     ." funkcji";
-$lang['L_NO_DB_FOUND']="I couldn't find any databases"
-    ." automatically!<br />Please unhide the"
-    ." connection parameters, and enter the"
-    ." name of your database manually.";
+$lang['L_NO_DB_FOUND']="Nie można było znaleźć żadnej"
+    ." bazy automatycznie ! Sprawdź"
+    ." parametry połączenia i wpisz nazwę"
+    ." bazy danych ręcznie.";
 $lang['L_NO_DB_FOUND_INFO']="The connection to the database was"
     ." successfully established.<br /><br"
     ." />Your userdata is valid and was"
@@ -594,10 +594,10 @@ $lang['L_NO_DB_FOUND_INFO']="The connection to the database was"
     ." \"Connection Parameter - display\" and"
     ." enter the database name there.";
 $lang['L_NO_DB_SELECTED']="Nie wybrano bazy danych.";
-$lang['L_NO_ENTRIES']="Table is empty and doesn't have any"
-    ." entry.";
+$lang['L_NO_ENTRIES']="Tablica jest pusta i nie zawiera"
+    ." żadnych pozycji";
 $lang['L_NO_MSD_BACKUPFILE']="Backups of other scripts";
-$lang['L_NO_NAME_GIVEN']="You didn't enter a name.";
+$lang['L_NO_NAME_GIVEN']="Nie wpisałeś nazwy";
 $lang['L_NR_OF_QUERIES']="Liczba zapytań";
 $lang['L_NR_OF_RECORDS']="Numery rekordów";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabel zostało zoptymalizowanych";
@@ -610,7 +610,7 @@ $lang['L_OPTIMIZE_TABLE_ERR']="Error optimizing table `%s`.";
 $lang['L_OPTIMIZE_TABLE_SUCC']="Optimized table `%s` successfully.";
 $lang['L_OS']="System operacyjny";
 $lang['L_OVERHEAD']="Overhead";
-$lang['L_PAGE']="Page";
+$lang['L_PAGE']="Strona";
 $lang['L_PAGE_REFRESHS']="Odśwież stronę";
 $lang['L_PASS']="Hasło";
 $lang['L_PASSWORD']="Hasło";
@@ -647,7 +647,7 @@ $lang['L_POSITION_BR']="bottom right";
 $lang['L_POSITION_MC']="center center";
 $lang['L_POSITION_ML']="middle left";
 $lang['L_POSITION_MR']="middle right";
-$lang['L_POSITION_NOTIFICATIONS']="Position of notification window";
+$lang['L_POSITION_NOTIFICATIONS']="Pozycja okna powiadomień";
 $lang['L_POSITION_TC']="top center";
 $lang['L_POSITION_TL']="top left";
 $lang['L_POSITION_TR']="top right";
@@ -657,12 +657,12 @@ $lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
     ." /><br />_cs = case sensitiv<br />_ci ="
     ." case insensitive";
 $lang['L_PREFIX']="Prefiks";
-$lang['L_PRIMARYKEYS_CHANGED']="Primary keys changed";
-$lang['L_PRIMARYKEYS_CHANGINGERROR']="Error changing primary keys";
+$lang['L_PRIMARYKEYS_CHANGED']="Podstawowe klucze zostały zmienione";
+$lang['L_PRIMARYKEYS_CHANGINGERROR']="Błąd zmiany klucza podstawowego";
 $lang['L_PRIMARYKEYS_SAVE']="Zapisz klucze podstawowe";
 $lang['L_PRIMARYKEY_CONFIRMDELETE']="Czy na pewno usunąć podstawowy"
     ." klucz?";
-$lang['L_PRIMARYKEY_DELETED']="Primary key deleted";
+$lang['L_PRIMARYKEY_DELETED']="Podstawowy klucz został skasowany";
 $lang['L_PRIMARYKEY_FIELD']="Pole klucza podstawowego";
 $lang['L_PRIMARYKEY_NOTFOUND']="Primary key not found";
 $lang['L_PROCESSKILL1']="Staramy się, aby zakończyć proces";
