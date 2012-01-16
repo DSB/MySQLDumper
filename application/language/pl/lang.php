@@ -9,18 +9,18 @@
  * @author        $Author$
  */
 $lang=array();
-$lang['L_ACTION']="Akcj";
+$lang['L_ACTION']="Akcja";
 $lang['L_ACTIVATED']="aktywowany";
 $lang['L_ACTUALLY_INSERTED_RECORDS']="Dotychczas <b>%s</b> została dodana"
     ." do rekordów.";
 $lang['L_ACTUALLY_INSERTED_RECORDS_OF']="To <b>%s</b> nagranie <b>%s</b>"
     ." zostało dodane pomyślnie.";
-$lang['L_ADD']="Dodać";
-$lang['L_ADDED']="dodaj";
+$lang['L_ADD']="Dodaj";
+$lang['L_ADDED']="dodany";
 $lang['L_ADD_DB_MANUALLY']="Dodaj bazę danych ręcznie";
 $lang['L_ADD_RECIPIENT']="Dodaj odbiorcę";
 $lang['L_ALL']="wszystko";
-$lang['L_ANALYZE']="Analizować";
+$lang['L_ANALYZE']="Analizuj";
 $lang['L_ANALYZING_TABLE']="Tabela '<b>%s</b>' jest odświeżana.";
 $lang['L_ASKDBCOPY']="Czy chcesz skopiować zawartość bazy"
     ." danych  `%s` w bazie danych  `%s`?";
@@ -108,10 +108,11 @@ $lang['L_CONFIRM_TRUNCATE_DATABASES']="Should all tables of the selected"
     ." />Attention: all data will be deleted!"
     ." Maybe you want to create a backup"
     ." first.";
-$lang['L_CONFIRM_TRUNCATE_TABLES']="Really empty the selected tables?";
-$lang['L_CONNECT']="connect";
-$lang['L_CONNECTIONPARS']="Connection Parameter";
-$lang['L_CONNECTTOMYSQL']="Connect to MySQL";
+$lang['L_CONFIRM_TRUNCATE_TABLES']="Czy na pewno opróżnić wybrane"
+    ." tabele ?";
+$lang['L_CONNECT']="połącz";
+$lang['L_CONNECTIONPARS']="Parametry połączenia";
+$lang['L_CONNECTTOMYSQL']="Połącz z bazą MySQL";
 $lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
     ." file '%s'.";
 $lang['L_CONVERTED_FILES']="Skonwertowane pliki";
@@ -133,18 +134,20 @@ $lang['L_CREATEDIRS']="Create Directories";
 $lang['L_CREATE_AUTOINDEX']="Create Auto-Index";
 $lang['L_CREATE_CONFIGFILE']="Create a new configuration file";
 $lang['L_CREATE_DATABASE']="Tworzenie nowej bazy danych";
-$lang['L_CREATE_TABLE_SAVED']="Definition of table `%s` saved.";
+$lang['L_CREATE_TABLE_SAVED']="Definicja tabeli `%s` została"
+    ." zapisana.";
 $lang['L_CREDITS']="Kredyty / Pomoc";
 $lang['L_CRONSCRIPT']="Skrypt Crona";
-$lang['L_CRON_COMMENT']="Enter Comment";
+$lang['L_CRON_COMMENT']="Wpisz komentarz";
 $lang['L_CRON_COMPLETELOG']="Zapisz wszystkie dane wyjściowe do"
     ." dziennika";
-$lang['L_CRON_EXECPATH']="Path of Perl scripts";
-$lang['L_CRON_EXTENDER']="File extension";
-$lang['L_CRON_PRINTOUT']="Print output on screen.";
-$lang['L_CSVOPTIONS']="CSV Options";
+$lang['L_CRON_EXECPATH']="Ścieżka do skryptu Perla";
+$lang['L_CRON_EXTENDER']="Rozszerzenie pliku";
+$lang['L_CRON_PRINTOUT']="Wydrukuj ekran wyjściowy.";
+$lang['L_CSVOPTIONS']="Opcje CSV";
 $lang['L_CSV_EOL']="Seperate lines with";
-$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s`!";
+$lang['L_CSV_ERRORCREATETABLE']="Wystąpił błąd podczas tworzenia"
+    ." tabeli `%s`!";
 $lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
     ." that of the data to import (%d instead"
     ." of %d).";
@@ -826,31 +829,32 @@ $lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.
     ." />Couldn't find closing match for '%s'"
     ." in query:<br />%s";
 $lang['L_SQL_INDEXES']="Indices";
-$lang['L_SQL_INSERTFIELD']="insert field";
-$lang['L_SQL_INSERTNEWFIELD']="insert new field";
+$lang['L_SQL_INSERTFIELD']="wstaw pole";
+$lang['L_SQL_INSERTNEWFIELD']="wstaw nowe pole";
 $lang['L_SQL_LIBRARY']="Biblioteka SQL";
-$lang['L_SQL_NAMEDEST_MISSING']="Name of Destination is missing !";
-$lang['L_SQL_NEWFIELD']="New field";
-$lang['L_SQL_NODATA']="no records";
+$lang['L_SQL_NAMEDEST_MISSING']="Brak nazwy docelowej !";
+$lang['L_SQL_NEWFIELD']="Nowe pole";
+$lang['L_SQL_NODATA']="brak rekordów";
 $lang['L_SQL_NODEST_COPY']="No Copy without Destination !";
 $lang['L_SQL_NOFIELDDELETE']="Delete is not possible because Tables"
     ." must contain at least one field.";
-$lang['L_SQL_NOTABLESINDB']="No tables found in Database";
-$lang['L_SQL_NOTABLESSELECTED']="No tables selected !";
-$lang['L_SQL_OPENFILE']="Open SQL-File";
+$lang['L_SQL_NOTABLESINDB']="W bazie danych nie znaleziono żadnych"
+    ." tabel.";
+$lang['L_SQL_NOTABLESSELECTED']="Żadna tabela nie została wybrana !";
+$lang['L_SQL_OPENFILE']="Otwórz plik SQL";
 $lang['L_SQL_OPENFILE_BUTTON']="Upload";
 $lang['L_SQL_OUT1']="Executed";
 $lang['L_SQL_OUT2']="Commands";
 $lang['L_SQL_OUT3']="It had";
-$lang['L_SQL_OUT4']="Comments";
+$lang['L_SQL_OUT4']="Komentarze";
 $lang['L_SQL_OUT5']="Because the output contains more than"
     ." 5000 lines it isn't displayed.";
 $lang['L_SQL_OUTPUT']="SQL Output";
 $lang['L_SQL_QUERYENTRY']="Zapytanie zawiera";
 $lang['L_SQL_RECORDDELETED']="Rekord został skasowany";
-$lang['L_SQL_RECORDEDIT']="edit record";
+$lang['L_SQL_RECORDEDIT']="edycja rekordu";
 $lang['L_SQL_RECORDINSERTED']="Rekord został dodany";
-$lang['L_SQL_RECORDNEW']="new record";
+$lang['L_SQL_RECORDNEW']="nowy rekord";
 $lang['L_SQL_RECORDUPDATED']="Rekord został zaktualizowany";
 $lang['L_SQL_RENAMEDB']="Rename Database";
 $lang['L_SQL_RENAMEDTO']="została zmieniona na";

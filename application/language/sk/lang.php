@@ -61,8 +61,8 @@ $lang['L_CHARSET']="Kódovanie";
 $lang['L_CHARSETS']="Znaková sada";
 $lang['L_CHECK']="Kontrola";
 $lang['L_CHECK_DIRS']="Vytvorenie adresárov - work";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper nemože zistiť kódovanie"
-    ." súboru zálohy automaticky.<br /><br"
+$lang['L_CHOOSE_CHARSET']="MySQLDumper nevie automaticky zistiť"
+    ." kódovanie súboru zálohy.<br /><br"
     ." />Musíte vybrať znakovú sadu, s"
     ." ktorými bola táto záloha"
     ." urobená.<br /><br />Ak zistíte"
