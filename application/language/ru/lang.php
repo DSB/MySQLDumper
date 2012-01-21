@@ -83,7 +83,7 @@ $lang['L_CHANGEDIR']="Перейти в другую"
 $lang['L_CHANGEDIRERROR']="Перейти в папку не"
     ." удалось!";
 $lang['L_CHARSET']="Набор символов";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="Набор символов";
 $lang['L_CHECK']="Проверить";
 $lang['L_CHECK_DIRS']="Проверить мои папки";
 $lang['L_CHOOSE_CHARSET']="К сожалению MySQLDumper не"
@@ -162,11 +162,16 @@ $lang['L_CONFIRM_DROP_DATABASES']="Действительно"
 $lang['L_CONFIRM_RECIPIENT_DELETE']="Действительно"
     ." удалить получателя"
     ." \"%s\"?";
-$lang['L_CONFIRM_TRUNCATE_DATABASES']="Should all tables of the selected"
-    ." databases really be deleted?<br /><br"
-    ." />Attention: all data will be deleted!"
-    ." Maybe you want to create a backup"
-    ." first.";
+$lang['L_CONFIRM_TRUNCATE_DATABASES']="Действительно"
+    ." стереть таблицы в"
+    ." выбранных/ой базах/е"
+    ." данных? Осторожно!"
+    ." Все данные будут"
+    ." безвозратно удалены!"
+    ." Мы рекомендуем"
+    ." сначала сделать"
+    ." резервную копию этих"
+    ." данных.";
 $lang['L_CONFIRM_TRUNCATE_TABLES']="Действительно"
     ." опустошить"
     ." выбранные таблицы?";
@@ -255,16 +260,17 @@ $lang['L_DB_SELECT_ERROR']="<br />Error:<br />Selection of"
 $lang['L_DB_SELECT_ERROR2']="</b> failed!";
 $lang['L_DB_USER']="Имя пользователя"
     ." базы данных";
-$lang['L_DEFAULT_CHARACTER_SET_NAME']="Default character set";
+$lang['L_DEFAULT_CHARACTER_SET_NAME']="Стандартный набор"
+    ." символов";
 $lang['L_DEFAULT_CHARSET']="Default character set";
 $lang['L_DEFAULT_COLLATION_NAME']="Default collation";
-$lang['L_DELETE']="Delete";
+$lang['L_DELETE']="Удалить";
 $lang['L_DELETE_DATABASE']="Удалить базу данных";
 $lang['L_DELETE_FILE_ERROR']="Error deleting file \"%s\"!";
 $lang['L_DELETE_FILE_SUCCESS']="File \"%s\" was deleted successfully.";
 $lang['L_DELETE_HTACCESS']="Удалить защиту папки"
     ." (.htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="Описание";
 $lang['L_DESELECT_ALL']="Deselect all";
 $lang['L_DIR']="папка";
 $lang['L_DISABLEDFUNCTIONS']="Disabled Functions";
@@ -287,9 +293,10 @@ $lang['L_DUMP_NOTABLES']="В базе данных `%s` нет"
     ." никаких таблиц.";
 $lang['L_DUMP_OF_DB_FINISHED']="Dumping of database `%s` done";
 $lang['L_DURATION']="Продолжительность";
-$lang['L_EDIT']="edit";
-$lang['L_EHRESTORE_CONTINUE']="continue and log errors";
-$lang['L_EHRESTORE_STOP']="stop";
+$lang['L_EDIT']="Редактировать";
+$lang['L_EHRESTORE_CONTINUE']="Продолжить ведя"
+    ." протокол ошибок";
+$lang['L_EHRESTORE_STOP']="Остановить";
 $lang['L_EMAIL']="E-Mail";
 $lang['L_EMAILBODY_ATTACH']="The Attachment contains the backup of"
     ." your MySQL-Database.<br />Backup of"
