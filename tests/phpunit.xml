@@ -10,7 +10,7 @@
          syntaxCheck="false"
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
          verbose="true"
-         strict="true">
+         strict="false">
     <testsuites>
         <testsuite name="MySQLDumper2TestSuite">
             <directory>unit/</directory>
