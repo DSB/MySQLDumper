@@ -179,172 +179,251 @@ $lang['L_CONNECT']="Соединиться";
 $lang['L_CONNECTIONPARS']="Параметры"
     ." соединения";
 $lang['L_CONNECTTOMYSQL']="Соединиться с MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Continue Multipart-Restore with next"
-    ." file '%s'.";
+$lang['L_CONTINUE_MULTIPART_RESTORE']="Продолжить"
+    ." восстановление со"
+    ." следующего файла '%s'"
+    ." (Multipart)";
 $lang['L_CONVERTED_FILES']="Преобразованные"
     ." файлы";
 $lang['L_CONVERTER']="Переобразователь"
     ." резервных копий";
 $lang['L_CONVERTING']="Преобразование";
-$lang['L_CONVERT_FILE']="File to be converted";
-$lang['L_CONVERT_FILENAME']="Name of destination file (without"
-    ." extension)";
-$lang['L_CONVERT_FILEREAD']="Read file '%s'";
-$lang['L_CONVERT_FINISHED']="Conversion finished, '%s' was written"
-    ." successfully.";
-$lang['L_CONVERT_START']="Start Conversion";
+$lang['L_CONVERT_FILE']="Файл, который должен"
+    ." быть преобразован";
+$lang['L_CONVERT_FILENAME']="Назначение имени"
+    ." файла (без"
+    ." расширения)";
+$lang['L_CONVERT_FILEREAD']="Файл '%s' считывается";
+$lang['L_CONVERT_FINISHED']="Преобразование"
+    ." завершено, '%s' был"
+    ." создан.";
+$lang['L_CONVERT_START']="Начать"
+    ." преобразования";
 $lang['L_CONVERT_TITLE']="Переобразовать"
     ." резервную копию в"
     ." формат MySQLDumper";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Wrong parameters!  Conversion is not"
-    ." possible.";
+$lang['L_CONVERT_WRONG_PARAMETERS']="Неверные параметры!"
+    ." Преобразование не"
+    ." удалось.";
 $lang['L_CREATE']="создать";
-$lang['L_CREATED']="Created";
+$lang['L_CREATED']="Созданно";
 $lang['L_CREATEDIRS']="Создаются папки";
-$lang['L_CREATE_AUTOINDEX']="Create Auto-Index";
+$lang['L_CREATE_AUTOINDEX']="Создать autoindex";
 $lang['L_CREATE_CONFIGFILE']="Создать новый файл"
     ." конфигурации.";
 $lang['L_CREATE_DATABASE']="создать новую базу"
     ." данных";
-$lang['L_CREATE_TABLE_SAVED']="Definition of table `%s` saved.";
+$lang['L_CREATE_TABLE_SAVED']="Спецификациятаблицы"
+    ." сохранена.";
 $lang['L_CREDITS']="Помощь / Участники"
     ." проекта";
-$lang['L_CRONSCRIPT']="Cronscript";
-$lang['L_CRON_COMMENT']="Enter Comment";
+$lang['L_CRONSCRIPT']="CronScript";
+$lang['L_CRON_COMMENT']="Введите комментарий";
 $lang['L_CRON_COMPLETELOG']="Записывать все"
     ." операции в лог";
-$lang['L_CRON_EXECPATH']="Path of Perl scripts";
-$lang['L_CRON_EXTENDER']="File extension";
-$lang['L_CRON_PRINTOUT']="Print output on screen.";
+$lang['L_CRON_EXECPATH']="Путь к Perl-скриптам";
+$lang['L_CRON_EXTENDER']="Расширение имени"
+    ." файла";
+$lang['L_CRON_PRINTOUT']="Вывод текста";
 $lang['L_CSVOPTIONS']="Настройки CSV";
-$lang['L_CSV_EOL']="Seperate lines with";
-$lang['L_CSV_ERRORCREATETABLE']="Error while creating table `%s`!";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="The count of fields doesn't match with"
-    ." that of the data to import (%d instead"
-    ." of %d).";
-$lang['L_CSV_FIELDSENCLOSED']="Fields enclosed by";
-$lang['L_CSV_FIELDSEPERATE']="Fields separated with";
-$lang['L_CSV_FIELDSESCAPE']="Fields escaped with";
+$lang['L_CSV_EOL']="Строки завершаются"
+    ." путем";
+$lang['L_CSV_ERRORCREATETABLE']="Не удалось создать"
+    ." таблицу `%s`!";
+$lang['L_CSV_FIELDCOUNT_NOMATCH']="Количество полей"
+    ." таблицы не совпадает"
+    ." с структурой данных,"
+    ." которые должны быть"
+    ." импортированы (%d"
+    ." вместо %d).";
+$lang['L_CSV_FIELDSENCLOSED']="Поля заключены в";
+$lang['L_CSV_FIELDSEPERATE']="Поля отделяются с"
+    ." помощью";
+$lang['L_CSV_FIELDSESCAPE']="Поля должны"
+    ." завершаться (escape) с";
 $lang['L_CSV_FIELDSLINES']="Количество найденых"
     ." полей: %d, всего строк:"
     ." %d";
 $lang['L_CSV_FILEOPEN']="Открыть CSV-файл";
-$lang['L_CSV_NAMEFIRSTLINE']="Field names in first line";
-$lang['L_CSV_NODATA']="No data found for import!";
+$lang['L_CSV_NAMEFIRSTLINE']="Имена полей в первую"
+    ." строку";
+$lang['L_CSV_NODATA']="Данные для импорта"
+    ." не найдены!";
 $lang['L_CSV_NULL']="Заменять NULL на";
-$lang['L_DATABASES_OF_USER']="Databases of user";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASES_OF_USER']="Базы данных"
+    ." пользователя";
+$lang['L_DATABASE_CREATED_FAILED']="База данных не"
+    ." создана. MySQL"
+    ." определил следующую"
+    ." ошибку:<br/><br />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="База данных '%s' была"
+    ." создана успешно.";
 $lang['L_DATASIZE']="Размер данных";
-$lang['L_DATASIZE_INFO']="This is the size of the records - not"
-    ." the size of the backup file";
+$lang['L_DATASIZE_INFO']="Это размер строк, а"
+    ." не размер файла"
+    ." резервной копии";
 $lang['L_DAY']="день";
 $lang['L_DAYS']="дней";
 $lang['L_DB']="База данных";
-$lang['L_DBCONNECTION']="Database Connection";
-$lang['L_DBPARAMETER']="Database Parameters";
+$lang['L_DBCONNECTION']="Соединение с базой"
+    ." данных";
+$lang['L_DBPARAMETER']="Параметры"
+    ." соединения базы"
+    ." данных";
 $lang['L_DBS']="Базы данных";
 $lang['L_DB_ADAPTER']="Адаптер базы данных";
-$lang['L_DB_BACKUPPARS']="Database Backup Parameter";
+$lang['L_DB_BACKUPPARS']="Настройки";
 $lang['L_DB_DEFAULT']="База данных по"
     ." умолчанию";
 $lang['L_DB_HOST']="Хост базы данных";
-$lang['L_DB_IN_LIST']="The database '%s' couldn't be added"
-    ." because it is allready existing.";
-$lang['L_DB_NAME']="Database name";
+$lang['L_DB_IN_LIST']="'%s' база данных не"
+    ." может быть"
+    ." добавлена, поскольку"
+    ." она уже существует.";
+$lang['L_DB_NAME']="Имя базы данных";
 $lang['L_DB_PASS']="Пароль к базе данных";
-$lang['L_DB_SELECT_ERROR']="<br />Error:<br />Selection of"
-    ." database <b>";
-$lang['L_DB_SELECT_ERROR2']="</b> failed!";
+$lang['L_DB_SELECT_ERROR']="<br />Ошибка:<br />Выбор"
+    ." базы данных '<b>";
+$lang['L_DB_SELECT_ERROR2']="</b>' неправильный!";
 $lang['L_DB_USER']="Имя пользователя"
     ." базы данных";
 $lang['L_DEFAULT_CHARACTER_SET_NAME']="Стандартный набор"
     ." символов";
-$lang['L_DEFAULT_CHARSET']="Default character set";
-$lang['L_DEFAULT_COLLATION_NAME']="Default collation";
+$lang['L_DEFAULT_CHARSET']="Стандартный набор"
+    ." символов";
+$lang['L_DEFAULT_COLLATION_NAME']="Сортировка по"
+    ." умолчанию";
 $lang['L_DELETE']="Удалить";
 $lang['L_DELETE_DATABASE']="Удалить базу данных";
-$lang['L_DELETE_FILE_ERROR']="Error deleting file \"%s\"!";
-$lang['L_DELETE_FILE_SUCCESS']="File \"%s\" was deleted successfully.";
+$lang['L_DELETE_FILE_ERROR']="Файл \"%s\" не может"
+    ." быть удален!";
+$lang['L_DELETE_FILE_SUCCESS']="Файл \"%s\" был успешно"
+    ." удален.";
 $lang['L_DELETE_HTACCESS']="Удалить защиту папки"
     ." (.htaccess)";
 $lang['L_DESCRIPTION']="Описание";
-$lang['L_DESELECT_ALL']="Deselect all";
+$lang['L_DESELECT_ALL']="Отменить выбор";
 $lang['L_DIR']="папка";
-$lang['L_DISABLEDFUNCTIONS']="Disabled Functions";
+$lang['L_DISABLEDFUNCTIONS']="Выключеные Функции";
 $lang['L_DO']="Выполнить";
-$lang['L_DOCRONBUTTON']="Run the Perl Cron script";
+$lang['L_DOCRONBUTTON']="Запустить Perl"
+    ." крон-скрипт";
 $lang['L_DONE']="Готово!";
 $lang['L_DONT_ATTACH_BACKUP']="Не вкладывать"
     ." резервную копию";
-$lang['L_DOPERLTEST']="Test Perl Modules";
-$lang['L_DOSIMPLETEST']="Test Perl";
+$lang['L_DOPERLTEST']="Тест Perl модулeй";
+$lang['L_DOSIMPLETEST']="Perl тест";
 $lang['L_DOWNLOAD_FILE']="Скачать файл";
-$lang['L_DO_NOW']="operate now";
+$lang['L_DO_NOW']="Теперь запустить";
 $lang['L_DUMP']="Сделать резервную"
     ." копию";
-$lang['L_DUMP_ENDERGEBNIS']="The file contains <b>%s</b> tables"
-    ." with <b>%s</b> records.<br />";
-$lang['L_DUMP_FILENAME']="Backup File";
-$lang['L_DUMP_HEADLINE']="Create backup...";
+$lang['L_DUMP_ENDERGEBNIS']="Таблицы с <b>%s</b>"
+    ." наборов данных"
+    ." сохранены";
+$lang['L_DUMP_FILENAME']="Резервный файл";
+$lang['L_DUMP_HEADLINE']="создаю резервный"
+    ." файл...";
 $lang['L_DUMP_NOTABLES']="В базе данных `%s` нет"
     ." никаких таблиц.";
-$lang['L_DUMP_OF_DB_FINISHED']="Dumping of database `%s` done";
+$lang['L_DUMP_OF_DB_FINISHED']="Резервное"
+    ." копирование базы"
+    ." данных завершено";
 $lang['L_DURATION']="Продолжительность";
 $lang['L_EDIT']="Редактировать";
 $lang['L_EHRESTORE_CONTINUE']="Продолжить ведя"
     ." протокол ошибок";
 $lang['L_EHRESTORE_STOP']="Остановить";
-$lang['L_EMAIL']="E-Mail";
-$lang['L_EMAILBODY_ATTACH']="The Attachment contains the backup of"
-    ." your MySQL-Database.<br />Backup of"
-    ." Database `%s`<br /><br /><br"
-    ." />Following File was created:<br /><br"
-    ." />%s <br /><br />Kind regards<br /><br"
+$lang['L_EMAIL']="Электронная почта";
+$lang['L_EMAILBODY_ATTACH']="В приложении Вы"
+    ." найдете резервную"
+    ." копию Вашей базы"
+    ." данных.<br />Резервное"
+    ." копирование базы"
+    ." данных `%s`<br /><br /><br"
+    ." />Следующий файл был"
+    ." создан:<br />:<br /><br />%s <br"
+    ." /><br />С наилучшими"
+    ." пожеланиями,<br /><br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_FOOTER']="`<br /><br />Kind regards<br /><br"
+$lang['L_EMAILBODY_FOOTER']="<br /><br /><br />С"
+    ." наилучшими"
+    ." пожеланиями,<br /><br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_ATTACH']="A Multipart Backup was created.<br"
-    ." />The Backup files are attached to"
-    ." separate emails.<br />Backup of"
-    ." Database `%s`<br /><br /><br"
-    ." />Following Files were created:<br"
-    ." /><br />%s <br /><br />Kind regards<br"
-    ." /><br />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_NOATTACH']="A Multipart Backup was created.<br"
-    ." />The Backup files are not attached to"
-    ." this email!<br />Backup of Database"
-    ." `%s`<br /><br /><br />Following Files"
-    ." were created:<br /><br />%s<br /><br"
-    ." /><br />Kind regards<br /><br"
+$lang['L_EMAILBODY_MP_ATTACH']="Резервная"
+    ." Multipart-копия"
+    ." создана.br>Копии"
+    ." будут доставленны с"
+    ." приложением по"
+    ." электронной почте!<br"
+    ." /> <br />Резервное"
+    ." копирование базы"
+    ." данных `%s`<br /><br"
+    ." />Следующий файл был"
+    ." созданы:<br /><br />%s<br /><br"
+    ." /><br />С наилучшими"
+    ." пожеланиями,<br /><br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_NOATTACH']="Files are not attached to this"
-    ." email!<br />Backup of Database `%s`<br"
-    ." /><br /><br />Following File was"
-    ." created:<br /><br />%s<br /><br /><br"
-    ." />Kind regards<br /><br"
+$lang['L_EMAILBODY_MP_NOATTACH']="Резервная"
+    ." Multipart-копия"
+    ." создана.br>Копии"
+    ." <b>не</b> будут"
+    ." доставленны с"
+    ." приложением по"
+    ." электронной почте!<br"
+    ." /> <br />Резервное"
+    ." копирование базы"
+    ." данных `%s`<br /><br"
+    ." />Следующий файл был"
+    ." созданы:<br /><br />%s<br /><br"
+    ." /><br />С наилучшими"
+    ." пожеланиями,<br /><br /><br"
     ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_TOOBIG']="The Backup file exceeded the maximum"
-    ." size of %s and was not attached to"
-    ." this email.<br />Backup of Database"
-    ." `%s`<br /><br /><br />Following File"
-    ." was created:<br /><br />%s<br /><br"
-    ." /><br />Kind regards<br /><br"
+$lang['L_EMAILBODY_NOATTACH']="Приложение не было"
+    ." приложено.<br"
+    ." />Резервное"
+    ." копирование базы"
+    ." данных`%s`<br /><br /><br"
+    ." />Следующий файл был"
+    ." создан:<br /><br />%s<br /><br"
+    ." /><br />С наилучшими"
+    ." пожеланиями,<br /><br /><br"
+    ." />MySQLDumper<br />";
+$lang['L_EMAILBODY_TOOBIG']="Резервная копия базы"
+    ." данных превышает"
+    ." максимальный размер"
+    ." в %s, поэтому"
+    ." приложение не было"
+    ." приложено.<br"
+    ." />Резервное"
+    ." копирование базы"
+    ." данных `%s`<br /><br"
+    ." />Следующий файл был"
+    ." создан::<br /><br />%s<br /><br"
+    ." /><br />С наилучшими"
+    ." пожеланиями,<br /><br /><br"
     ." />MySQLDumper<br />";
 $lang['L_EMAIL_ADDRESS']="Электронная почта";
-$lang['L_EMAIL_CC']="CC-Receiver";
-$lang['L_EMAIL_MAXSIZE']="Maximum size of attachment";
-$lang['L_EMAIL_ONLY_ATTACHMENT']="... attachment only.";
+$lang['L_EMAIL_CC']="CC получателя";
+$lang['L_EMAIL_MAXSIZE']="Максимальный размер"
+    ." приложения";
+$lang['L_EMAIL_ONLY_ATTACHMENT']="... только приложение";
 $lang['L_EMAIL_RECIPIENT']="Получатель";
-$lang['L_EMAIL_SENDER']="Sender address of the email";
-$lang['L_EMAIL_START']="Starting to send e-mail";
-$lang['L_EMAIL_WAS_SEND']="Email was successfully sent to";
-$lang['L_EMPTY']="Empty";
-$lang['L_EMPTYKEYS']="empty and reset indexes";
-$lang['L_EMPTYTABLEBEFORE']="Empty table before";
-$lang['L_EMPTY_DB_BEFORE_RESTORE']="Delete tables before restoring";
+$lang['L_EMAIL_SENDER']="Отправитель"
+    ." электронной почты";
+$lang['L_EMAIL_START']="Старт отправки по"
+    ." электронной почте";
+$lang['L_EMAIL_WAS_SEND']="Поставка по"
+    ." электронной почте"
+    ." была успешна";
+$lang['L_EMPTY']="без содержания";
+$lang['L_EMPTYKEYS']="Стереть и сбросить"
+    ." индексы";
+$lang['L_EMPTYTABLEBEFORE']="Таблицу"
+    ." предварительно"
+    ." опустошить";
+$lang['L_EMPTY_DB_BEFORE_RESTORE']="Удалить базу данных"
+    ." перед"
+    ." восстановлением";
 $lang['L_ENCODING']="кодировка";
 $lang['L_ENCRYPTION_TYPE']="Способ шифрования";
 $lang['L_ENGINE']="драйвер";
@@ -367,10 +446,10 @@ $lang['L_ESTIMATED_END']="Предпологаемый"
     ." конец";
 $lang['L_EXCEL2003']="Excel from 2003";
 $lang['L_EXISTS']="Exists";
-$lang['L_EXPORT']="Export";
+$lang['L_EXPORT']="Экспорт";
 $lang['L_EXPORTFINISHED']="Экспорт закончен.";
 $lang['L_EXPORTLINES']="<strong>%s</strong> lines exported";
-$lang['L_EXPORTOPTIONS']="Export Options";
+$lang['L_EXPORTOPTIONS']="Экспорт-опции";
 $lang['L_EXTENDEDPARS']="Extended Parameter";
 $lang['L_FADE_IN_OUT']="Display on/off";
 $lang['L_FATAL_ERROR_DUMP']="Fatal error: the CREATE-Statement of"
