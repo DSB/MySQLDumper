@@ -1,3 +1,10 @@
+<?php $this->jQuery()->onLoadCaptureStart(); ?>
+$('#sqltextarea').bind('keyup', function(e){
+    if (e.which == 13 && e.ctrlKey) {
+        $('#execsql').trigger('click');
+    }
+});
+<?php $this->jQuery()->onLoadCaptureEnd(); ?>
 <div id="content">
 <h2><?php echo $this->lang->L_SQLBOX;?></h2>
 <?php echo $this->sqlHeadNavi(); ?>
@@ -12,7 +19,7 @@
                     </div>
                         <span style="float:left;">
                             <?php echo $this->lang->L_TABLE;?>: <select id="selectTable" class="text" onchange="setShowTableQuery();"><?php echo $this->tableSelectBox;?></select>
-                            <input class="Formbutton" type="submit" name="execsql" value="<?php echo $this->lang->L_SQL_EXEC;?>" />
+                            <input class="Formbutton" type="submit" name="execsql" id="execsql" value="<?php echo $this->lang->L_SQL_EXEC;?>" />
                             <input class="Formbutton" type="button" value="<?php echo $this->lang->L_RESET;?>" onclick="$('#sqltextarea').val('');"/>
                         </span>
                 <br class="clear" />
