@@ -286,6 +286,108 @@ class ConfigController extends Zend_Controller_Action
         $this->_forward('index');
     }
 
+   /**
+    * Test FTP-Connection
+    *
+    * @return void
+    */
+    public function testFtpConnectionAction()
+    {
+        $translator = $this->view->lang->getTranslator();
+
+        if ($this->_request->isPost()) {
+
+            $postData = $this->_request->getPost();
+            $index = (int)$this->_request->getPost('param');
+
+            // fetch the required params
+            $server     = $postData['ftp_'.$index.'_server'];
+            $port       = $postData['ftp_'.$index.'_port'];
+            $timeout    = $postData['ftp_'.$index.'_timeout'];
+            $mode       = $postData['ftp_'.$index.'_passiveMode'];
+            $ssl        = $postData['ftp_'.$index.'_ssl'];
+            $user       = $postData['ftp_'.$index.'_user'];
+            $password   = $postData['ftp_'.$index.'_pass'];
+            $directory  = $postData['ftp_'.$index.'_dir'];
+
+            // Params for transferring a test file
+            $name = 'ftp_transfer_testfile.txt';
+            $filename = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_transfer_testfile.txt';
+            $target_folder = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_target/';
+            $upload = false;
+
+            // try to connect via ssl to the ftp server
+            if ($ssl == 'y' && function_exists('ftp_ssl_connect')) {
+                $ftpStream = ftp_ssl_connect($server, $port, $timeout);
+            } else {
+            // otherwise try to connect to the ftp server normally
+                $ftpStream = ftp_connect($server, $port, $timeout);
+            }
+
+            // got resource?
+            if (!is_resource($ftpStream)) {
+                $message = sprintf($translator->_('L_FTP_CONNECTION_ERROR'), $server, $port);
+
+            // connection ok? let's try to login
+            } else if (!ftp_login($ftpStream, $user, $password)) {
+                $message = sprintf($translator->_('L_FTP_LOGIN_ERROR'), $user);
+
+                // if passive mode is set turn it on
+                if ($mode == 'y') {
+                    ftp_pasv($ftpStream, true);
+                }
+
+            // login ok? let's set/change the ftp upload directory
+            } else if (!ftp_chdir($ftpStream, $directory)) {
+                $message = sprintf($translator->_('L_CHANGEDIRERROR'));
+            // chmod target_folder if it's necessary
+            } else if (file_exists($target_folder) && substr(sprintf('%o', fileperms($target_folder)), -4) < '0755') {
+                ftp_chmod($ftpStream, 0755, $target_folder);
+                $message = '';
+            // ftp directory exists and chmod ok? let's test the ftp transfer with a test file
+            } else if (!ftp_put($ftpStream, $target_folder.$name, $filename, FTP_ASCII)) {
+                $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_ERROR'), $name);
+
+            } else {
+                $upload = true;
+                $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_SUCCESS'), $name)
+                                   . '<br /><br />' .
+                                   $translator->_('L_FTP_OK');
+
+                // delete the test file after a successful transfer test
+                if (file_exists($target_folder.$name)) {
+                    ftp_delete($ftpStream, $target_folder.$name);
+                }
+            }
+
+            // let's show the error messages
+            if (!$upload && count($message) > 0) {
+                $this->view->popUpMessage()->addMessage(
+                        'config-validate-error',
+                        'L_ERROR',
+                        $message,
+                        array(
+                            'modal' => true
+                        )
+                );
+            // or show the confirmation message
+            } else if ($upload && count($message) > 0) {
+                $this->view->popUpMessage()->addMessage(
+                        'config-validate-message',
+                        'L_NOTICE',
+                        $message,
+                        array(
+                            'modal' => true
+                        )
+                );
+            }
+
+            // close ftp connection
+            ftp_close($ftpStream);
+        }
+        $this->_forward('index');
+    }
+
     /**
      * Set the default value of all sub forms to the configuration values
      *

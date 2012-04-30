@@ -51,7 +51,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             $this->_addInputServerAndPort($ftpConnectionId);
             $this->_addInputUserAndPass($ftpConnectionId);
             $this->_addInputPath($ftpConnectionId);
-            
+
             if ($nrOfFtpProfiles > 1) {
                 $buttonDelete = 'ftpDelete' . $ftpConnectionId;
             } else {
@@ -305,7 +305,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
     /**
      * Add Button "Test connection"
      * Add Button "Delete connection"
-     * 
+     *
      * @param int $index
      * @param string $buttonDelete
      *
@@ -318,7 +318,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
         } else {
             $buttonDecorator = 'Default';
         }
-       
+
         $this->addElement(
             'button',
             'ftpCheck' . $index,
@@ -331,8 +331,8 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton ftpToggle' . $index,
-                'onclick' => "alert('checkConnection(" .
-                    $index . ")');",
+                'onclick' => "testFtpConnection(" .
+                    $index . ");",
             )
         );
 

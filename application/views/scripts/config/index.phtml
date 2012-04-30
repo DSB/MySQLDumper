@@ -31,6 +31,14 @@ $deleteFtpConnectionUrl = $this->url(
     null,
     true
 );
+$testFtpConnectionUrl = $this->url(
+    array(
+        'controller' => 'config',
+        'action' => 'test.Ftp.Connection',
+    ),
+    null,
+    true
+);
 ?>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -162,6 +170,13 @@ $deleteFtpConnectionUrl = $this->url(
     {
         setParam(recipientId);
         $('#config_form').attr('action','<?php echo $deleteFtpConnectionUrl; ?>');
+        $('#config_form').submit();
+    }
+
+    function testFtpConnection(recipientId)
+    {
+        setParam(recipientId);
+        $('#config_form').attr('action','<?php echo $testFtpConnectionUrl; ?>');
         $('#config_form').submit();
     }
 
