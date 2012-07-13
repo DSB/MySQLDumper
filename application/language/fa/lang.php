@@ -74,7 +74,7 @@ $lang['L_CHANGEDIR']="در حال تغيير پوشه";
 $lang['L_CHANGEDIRERROR']="عدم توانايي در تغيير"
     ." پوشه";
 $lang['L_CHARSET']="تنظيم تبديل";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="تنطیم کاراکتر";
 $lang['L_CHECK']="بررسي";
 $lang['L_CHECK_DIRS']="بررسي پوشه هاي من";
 $lang['L_CHOOSE_CHARSET']="برنامه پشتيبان گير"
@@ -205,10 +205,10 @@ $lang['L_CSV_NODATA']="هيچ اطلاعاتي براي"
     ." ندارد";
 $lang['L_CSV_NULL']="جايگزين کن پوچ با";
 $lang['L_DATABASES_OF_USER']="بانک اطلاعات کاربر";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASE_CREATED_FAILED']="ديتابيس ساخته نشد<br"
+    ." />بازده MySQL:<br/><br />%s";
+$lang['L_DATABASE_CREATED_SUCCESS']="ديتایيس مقابل با"
+    ." موفقيت ساخته شد = '%s'";
 $lang['L_DATASIZE']="حجم داده ها";
 $lang['L_DATASIZE_INFO']="اين حجم رکورد ها"
     ." ميباشد نه حجم فايل"
@@ -222,7 +222,7 @@ $lang['L_DBS']="ديتابيس ها";
 $lang['L_DB_ADAPTER']="DB-Adapter";
 $lang['L_DB_BACKUPPARS']="پارامتر هاي بکاپ"
     ." ديتابيس";
-$lang['L_DB_DEFAULT']="Default database";
+$lang['L_DB_DEFAULT']="ديتابيس پيشفرض";
 $lang['L_DB_HOST']="نام هاست";
 $lang['L_DB_IN_LIST']="زيرا اين ديتابيس"
     ." قبلا اضافه شده است '%s'"
@@ -246,7 +246,7 @@ $lang['L_DELETE_FILE_SUCCESS']="با موفقيت حذف شد \"%s\""
     ." فايل";
 $lang['L_DELETE_HTACCESS']=".htaccess حذف محافظ پوشه -"
     ." حذف";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="شرح";
 $lang['L_DESELECT_ALL']="عدم انتخاب همه";
 $lang['L_DIR']="پوشه";
 $lang['L_DISABLEDFUNCTIONS']="توابع غير فعال باشند";
@@ -578,7 +578,7 @@ $lang['L_IMPORTTABLE']="وارد کردن در جدول";
 $lang['L_IMPORT_NOTABLE']="هيچ جدولي براي وارد"
     ." کردن انتخاب نشده است.";
 $lang['L_IN']="در";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="حجم ايندکس";
 $lang['L_INFO_ACTDB']="ديتابيس انتخاب شده";
 $lang['L_INFO_DATABASES']="ديتابيس هاي زير روي"
     ." سرور شما هستند";
@@ -609,7 +609,8 @@ $lang['L_INFO_SIZE']="اندازه";
 $lang['L_INFO_SUM']="مجموع";
 $lang['L_INSTALL']="نصب";
 $lang['L_INSTALLED']="نصب شده است";
-$lang['L_INSTALL_DB_DEFAULT']="Use as default database";
+$lang['L_INSTALL_DB_DEFAULT']="استفاده از ديتابيس"
+    ." پيشفرض";
 $lang['L_INSTALL_HELP_PORT']="(پورت پيشفرض = خالي)";
 $lang['L_INSTALL_HELP_SOCKET']="(سوکت پيشفرض = خالي)";
 $lang['L_IS_WRITABLE']="قابل نوشتن هست";
@@ -643,10 +644,10 @@ $lang['L_LOG_NOT_READABLE']="گزارشات فایل مقایل"
 $lang['L_MAILERROR']="ارسال ايميل ناموفق"
     ." بود";
 $lang['L_MAILPROGRAM']="برنامه ايميل";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH']="حداکثر طول";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="حداکثر تعداد کاراکتر"
+    ." مورد نیاز است , وقتی"
+    ." که ذخيره ميگردد";
 $lang['L_MAXSIZE']="حداکثر اندازه";
 $lang['L_MAX_BACKUP_FILES_EACH2']="براي هر ديتابيس";
 $lang['L_MAX_EXECUTION_TIME']="حداکثر زمان اجرا";
@@ -690,13 +691,17 @@ $lang['L_MYSQLVARS']="متغيرهاي ماي اسکيو"
 $lang['L_MYSQL_CLIENT_VERSION']="MySQL-Client";
 $lang['L_MYSQL_CONNECTION_ENCODING']="انکودينگ استاندارد";
 $lang['L_MYSQL_DATA']="داده هاي ماي اسکيو ال";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_ROUTINE']="روال";
+$lang['L_MYSQL_ROUTINES']="معمولي";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="توابع و روش ها ذخيره"
+    ." شد";
+$lang['L_MYSQL_TABLES_EXPLAIN']="جدول داراي ساختار"
+    ." ستوني است که"
+    ." ميتوانيد در آن يک"
+    ." داده و يا رکورد را"
+    ." ذخيره فرماييد . هر"
+    ." رکورد نشان دهنده يک"
+    ." رديف در جدول است.";
 $lang['L_MYSQL_VERSION']="نسخه ماي اسکيو ال";
 $lang['L_MYSQL_VERSION_TOO_OLD']="متاسفم! شما از نسخه"
     ." قدیمی %s مای اسکیو ال"
@@ -708,8 +713,8 @@ $lang['L_MYSQL_VERSION_TOO_OLD']="متاسفم! شما از نسخه"
     ." سپس اقدام به نصب"
     ." اسکریپت پشتیبان گیر"
     ." نمایید.";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
+$lang['L_MYSQL_VIEW']="نمايش";
+$lang['L_MYSQL_VIEWS']="نمايش ها";
 $lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
     ." one ore more tables but don't contain"
     ." own records.";
@@ -728,7 +733,8 @@ $lang['L_NOGZPOSSIBLE']="به دليل عدم نصب سيستم"
 $lang['L_NONE']="خالي";
 $lang['L_NOREVERSE']="ابتدا قديمي تر ها";
 $lang['L_NOTAVAIL']="<em>غير فعال</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="چيزي براي انجام وجود"
+    ." ندارد";
 $lang['L_NOTICE']="نکته";
 $lang['L_NOTICES']="توجه";
 $lang['L_NOT_ACTIVATED']="غير فعال";
@@ -771,8 +777,8 @@ $lang['L_NO_MSD_BACKUPFILE']="تهيه بکاپ توسط"
     ." اسکريپت هاي ديگر";
 $lang['L_NO_NAME_GIVEN']="شما نامي وارد نکرده"
     ." ايد";
-$lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_QUERIES']="تعداد کوئری ها";
+$lang['L_NR_OF_RECORDS']="تعدا رکورد ها";
 $lang['L_NR_TABLES_OPTIMIZED']="جدول بهينه شدند. %s";
 $lang['L_NUMBER_OF_FILES_FORM']="حذف توسط شماره فايل"
     ." در ديتابيس";
@@ -808,7 +814,7 @@ $lang['L_PHPBUG']="وجود باگ در سيستم"
     ." فشرده سازي شده است";
 $lang['L_PHPMAIL']="PHP-Function mail()";
 $lang['L_PHP_EXTENSIONS']="الحاقيات پي اچ پي";
-$lang['L_PHP_LOG']="PHP-Log";
+$lang['L_PHP_LOG']="گزارشات پي اچ پي";
 $lang['L_PHP_VERSION']="نسخه پي اچ پي";
 $lang['L_PHP_VERSION_TOO_OLD']="متاسفم! شما از نسخه"
     ." قدیمی پی اچ پی"
@@ -866,8 +872,8 @@ $lang['L_PROGRESS_OVER_ALL']="همه جريان ها";
 $lang['L_PROGRESS_TABLE']="جدول هاي در جريان";
 $lang['L_PROVIDER']="ارائه دهنده";
 $lang['L_PROZESSE']="فرآيندها";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY']="کوئری";
+$lang['L_QUERY_TYPE']="نوع کوئري";
 $lang['L_RECHTE']="دسترسي ها";
 $lang['L_RECORDS']="رکورد ها";
 $lang['L_RECORDS_INSERTED']="رکورد به ثبت رسيد"
@@ -911,7 +917,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="جدول هاي ساخته شده"
     ." <b>%d</b> جدول از <b>%d</b>";
 $lang['L_RESTORE_TABLES_COMPLETED0']="جدول هاي ساخته شده"
     ." <b>%d</b>";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="نتايج";
 $lang['L_REVERSE']="ابتدا جديد تر ها";
 $lang['L_SAFEMODEDESC']="به دليل اينکه اف تي"
     ." پي در حالت سيف مود"
@@ -969,7 +975,7 @@ $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="%s از %s تا %s در حال"
     ." نمايش";
 $lang['L_SHOWRESULT']="نمايش نتايج";
 $lang['L_SHOW_TABLES']="نمایش جدول ها";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="نمايش بهتر tooltips";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="SMTP-Host";
 $lang['L_SMTP_PORT']="پورت SMTP";
@@ -1128,10 +1134,10 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="با موفقيت ساخته شد %s"
     ." پيکربندي فايل";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="با موفقيت حذف شد %s"
     ." پيکربندي فايل";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="مجموع";
 $lang['L_TABLE']="جدول";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="نام جدول";
+$lang['L_TABLENAME_EXPLAIN']="نام جدول";
 $lang['L_TABLES']="جدول ها";
 $lang['L_TABLESELECTION']="جدول هاي انتخابي";
 $lang['L_TABLE_CREATE_SUCC']="جدول '%s'  با موفقيت"
@@ -1155,8 +1161,8 @@ $lang['L_TOOLS']="ابزار ها";
 $lang['L_TOOLS_TOOLBOX']="انتخاب ديتابيس /"
     ." توابع ديتابيس / وارد"
     ." يا خارج کردن";
-$lang['L_TRUNCATE']="Truncate";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE']="کوتاه کردن";
+$lang['L_TRUNCATE_DATABASE']="کوتاه کردن ديتابيس";
 $lang['L_UNIT_KB']="کيلوبايت";
 $lang['L_UNIT_MB']="مگابايت";
 $lang['L_UNIT_PIXEL']="پيکسل";
@@ -1240,23 +1246,24 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="آدرس ایمیل ناصحیح
     ." است";
 $lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
     ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="نام ميزبان نامعتبر"
+    ." است";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="بروز خطا . String expected.";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="نام ميزبان مطابقت با"
+    ." مورد انتظار ندارد.";
 $lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
+    ." schema for given TLD";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="نام ميزبان شامل نام"
+    ." شبکه غير معتبر است";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="نام ميزبان با واژه"
+    ." مقابل مطابقت ندارد ="
+    ." URI syntax";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="آي پي آدرس ميزبان غير"
+    ." معتبر است .";
 $lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
     ." not allowed.";
 $lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="Cannot extract TLD part from hostname.";
 $lang['L_ZEND_ID_IS_EMPTY']="مقدار نمیتواند خالی"
     ." باشد";
 $lang['L_ZEND_ID_MISSING_TOKEN']="رمز ها یکسان نیستند";
