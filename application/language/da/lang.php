@@ -318,7 +318,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Kunne ikke flytte valgte fil til"
     ." upload folderen.";
 $lang['L_FM_UPLOADNOTALLOWED1']="Denne filtype understøttes ikke.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Gyldige typer er: *.gz og *.sql-filer";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="fundet db:";
 $lang['L_FROMFILE']="fra fil";
 $lang['L_FROMTEXTBOX']="fra tekstboks";

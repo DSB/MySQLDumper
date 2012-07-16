@@ -296,7 +296,6 @@ $lang['L_FM_UPLOADFILEREQUEST']="";
 $lang['L_FM_UPLOADMOVEERROR']="";
 $lang['L_FM_UPLOADNOTALLOWED1']="";
 $lang['L_FM_UPLOADNOTALLOWED2']="";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="";
 $lang['L_FROMFILE']="";
 $lang['L_FROMTEXTBOX']="";

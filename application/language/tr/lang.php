@@ -350,7 +350,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Yüklenen dosya yerine sürülemedi.";
 $lang['L_FM_UPLOADNOTALLOWED1']="Bu dosya tipi geçerli değil.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Geçerli dosya tipleri: *.gz und"
     ." *.sql-Dosyaları";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="Bulunan Veritabanı:";
 $lang['L_FROMFILE']="Dosyadan";
 $lang['L_FROMTEXTBOX']="Metin alanından";

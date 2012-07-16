@@ -359,7 +359,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Izbrane datoteke ni bilo mogoče"
 $lang['L_FM_UPLOADNOTALLOWED1']="Datoteka tega tipa ni podprta.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Veljavne datoteke so: *.gz in *.sql"
     ." datoteke";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="najdena PZ";
 $lang['L_FROMFILE']="iz datoteke";
 $lang['L_FROMTEXTBOX']="iz tekstovnega okna";

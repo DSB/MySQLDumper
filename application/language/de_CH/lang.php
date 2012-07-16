@@ -351,7 +351,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Dia ufeglade Datei hät nöd chöne in"
 $lang['L_FM_UPLOADNOTALLOWED1']="Dä Dateityp isch nöd erlaubt.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Gültigi Type sind: *.gz und"
     ." *.sql-Dateie";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="gfundeni DB:";
 $lang['L_FROMFILE']="us de Datei";
 $lang['L_FROMTEXTBOX']="usem Textfäld";

@@ -386,7 +386,6 @@ $lang['L_FM_UPLOADNOTALLOWED1']="Aquest tipus d'arxiu no està"
     ." suportat.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Els tipus d'arxius permesos són: *.gz"
     ." i *.sql";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="Trobada BBDD:";
 $lang['L_FROMFILE']="d'arxiu";
 $lang['L_FROMTEXTBOX']="des de casella de text";

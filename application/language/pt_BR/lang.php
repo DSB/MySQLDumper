@@ -336,7 +336,6 @@ $lang['L_FM_UPLOADNOTALLOWED1']="Este tipo de arquivo não é"
     ." suportado.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Os tipos válidos são: *.gz and"
     ." *.sql-files";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="bd localizado";
 $lang['L_FROMFILE']="do arquivo";
 $lang['L_FROMTEXTBOX']="da caixa de texto";

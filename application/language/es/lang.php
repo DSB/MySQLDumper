@@ -399,7 +399,6 @@ $lang['L_FM_UPLOADNOTALLOWED1']="Este tipo de archivo no está"
     ." permitido.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Los tipos de archivo permitidos son:"
     ." *.gz y *.sql";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="Encontrada BB.DD.:";
 $lang['L_FROMFILE']="de fichero";
 $lang['L_FROMTEXTBOX']="desde caja de texto";

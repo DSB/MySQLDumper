@@ -366,7 +366,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Kan geselecteerd bestand niet"
 $lang['L_FM_UPLOADNOTALLOWED1']="Dit bestands type wordt niet"
     ." ondersteund.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Valide types zijn: *.gz en *.sql-files";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="gevonden db";
 $lang['L_FROMFILE']="from file";
 $lang['L_FROMTEXTBOX']="from text box";

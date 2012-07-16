@@ -434,7 +434,6 @@ $lang['L_FM_UPLOADNOTALLOWED1']="هذا النوع من الملفات"
     ." غير مدعوم.";
 $lang['L_FM_UPLOADNOTALLOWED2']="الصيغ المدعومه هي: *.gz"
     ." و *.sql-ملفات";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="العثور على قاعدة"
     ." بيانات";
 $lang['L_FROMFILE']="ملف";

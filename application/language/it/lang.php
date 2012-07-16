@@ -377,7 +377,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Non è stato possibile spostare il"
 $lang['L_FM_UPLOADNOTALLOWED1']="Questo tipo di file non è supportato.";
 $lang['L_FM_UPLOADNOTALLOWED2']="I tipi di file validi sono: *.gz e"
     ." *.sql";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="database trovato:";
 $lang['L_FROMFILE']="dal file";
 $lang['L_FROMTEXTBOX']="dal campo testo";

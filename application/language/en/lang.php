@@ -355,7 +355,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Couldn't move selected file to the"
     ." upload directory.";
 $lang['L_FM_UPLOADNOTALLOWED1']="This file type is not supported.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Valid types are: *.gz and *.sql-files";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="found db";
 $lang['L_FROMFILE']="from file";
 $lang['L_FROMTEXTBOX']="from text box";

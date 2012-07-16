@@ -413,7 +413,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Le fichier téléversé n'a pas pu"
 $lang['L_FM_UPLOADNOTALLOWED1']="Ce type de fichier n'est pas permis.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Les types valides sont les fichiers:"
     ." *.gz et *.sql";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="Base de données trouvée";
 $lang['L_FROMFILE']="du fichier";
 $lang['L_FROMTEXTBOX']="de la zone de texte";

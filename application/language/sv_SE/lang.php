@@ -359,7 +359,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Den uppladdade filen kunde ej flyttas"
     ." till rätt mapp.";
 $lang['L_FM_UPLOADNOTALLOWED1']="Denna filtyp är ej tillåten.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Tillåtna filtyper: *.gz och *.sql";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="hittad databas:";
 $lang['L_FROMFILE']="ur fil";
 $lang['L_FROMTEXTBOX']="ur textfält";

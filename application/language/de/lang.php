@@ -393,7 +393,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Die hochgeladene Datei konnte nicht in"
 $lang['L_FM_UPLOADNOTALLOWED1']="Dieser Dateityp ist nicht erlaubt.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Gültige Typen sind: *.gz und"
     ." *.sql-Dateien";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="gefundene DB:";
 $lang['L_FROMFILE']="aus Datei";
 $lang['L_FROMTEXTBOX']="aus Textfeld";

@@ -366,7 +366,6 @@ $lang['L_FM_UPLOADMOVEERROR']="Nepodarilo sa presunúť zálohu do"
     ." zvoleného adresára .";
 $lang['L_FM_UPLOADNOTALLOWED1']="Tento typ zálohy nie je podporovaný.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Platné typy sú: *.gz a *.sql-súbor";
-$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="Nájdená db";
 $lang['L_FROMFILE']="zo súboru";
 $lang['L_FROMTEXTBOX']="od textového poľa";
