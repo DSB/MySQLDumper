@@ -57,7 +57,7 @@ $lang['L_CHANGE']="spremeni";
 $lang['L_CHANGEDIR']="Spremeni na Mapo";
 $lang['L_CHANGEDIRERROR']="Mape ni bilo mogoče spremeniti!";
 $lang['L_CHARSET']="nabor znakov";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="";
 $lang['L_CHECK']="Preveri";
 $lang['L_CHECK_DIRS']="Preveri moje mape";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper ni mogel samodejno zaznati"
@@ -157,8 +157,7 @@ $lang['L_CSV_NULL']="Zamenjaj NULL z";
 $lang['L_DATABASES_OF_USER']="Podatkovna zbirka uporabnikov";
 $lang['L_DATABASE_CREATED_FAILED']="Podatkovna zbirka ni bila kreirana.<br"
     ." />MySQL vrne:<br /><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASE_CREATED_SUCCESS']="";
 $lang['L_DATASIZE']="Velikost podatkov";
 $lang['L_DATASIZE_INFO']="To je velikost zapisov - ne velikost"
     ." arhivske datoteke";
@@ -170,7 +169,7 @@ $lang['L_DBPARAMETER']="Parametri podatkovne zbirke";
 $lang['L_DBS']="Podatkovne baze";
 $lang['L_DB_ADAPTER']="Vmesnik podatkovne zbirke";
 $lang['L_DB_BACKUPPARS']="Parameter arhiva podatkovne zbirke";
-$lang['L_DB_DEFAULT']="Default database";
+$lang['L_DB_DEFAULT']="";
 $lang['L_DB_HOST']="Gostitelj";
 $lang['L_DB_IN_LIST']="Podatkovna zbirka '%s' ni bila dodana"
     ." ker že obstaja.";
@@ -360,6 +359,7 @@ $lang['L_FM_UPLOADMOVEERROR']="Izbrane datoteke ni bilo mogoče"
 $lang['L_FM_UPLOADNOTALLOWED1']="Datoteka tega tipa ni podprta.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Veljavne datoteke so: *.gz in *.sql"
     ." datoteke";
+$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="najdena PZ";
 $lang['L_FROMFILE']="iz datoteke";
 $lang['L_FROMTEXTBOX']="iz tekstovnega okna";
@@ -449,7 +449,7 @@ $lang['L_IMPORTSOURCE']="Uvozi vir";
 $lang['L_IMPORTTABLE']="Uvozi v tabelo";
 $lang['L_IMPORT_NOTABLE']="Nobena tabela ni bila izbrana za uvoz!";
 $lang['L_IN']="v";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="";
 $lang['L_INFO_ACTDB']="Izbrana podatkovna baza";
 $lang['L_INFO_DATABASES']="Dostopne podatkovne baze";
 $lang['L_INFO_DBEMPTY']="Podatkovna baza je prazna!";
@@ -476,7 +476,7 @@ $lang['L_INFO_SIZE']="Velikost";
 $lang['L_INFO_SUM']="Skupaj";
 $lang['L_INSTALL']="Namestitev";
 $lang['L_INSTALLED']="Nameščeno";
-$lang['L_INSTALL_DB_DEFAULT']="Use as default database";
+$lang['L_INSTALL_DB_DEFAULT']="";
 $lang['L_INSTALL_HELP_PORT']="(prazno = privzeta vrata)";
 $lang['L_INSTALL_HELP_SOCKET']="(prazno = privzeta vtičnica)";
 $lang['L_IS_WRITABLE']="Je zapisljiv";
@@ -499,15 +499,13 @@ $lang['L_LOGOUT']="Odjava";
 $lang['L_LOG_CREATED']="Dnevniška datoteka je bila"
     ." ustvarjena.";
 $lang['L_LOG_DELETE']="odstrani dnevnik";
-$lang['L_LOG_MAXSIZE']="Maximum size of log files";
+$lang['L_LOG_MAXSIZE']="";
 $lang['L_LOG_NOT_READABLE']="Dnevniška datoteka '%s' ne obstaja"
     ." ali pa je ni možno prebrati.";
 $lang['L_MAILERROR']="Pošiljanje e-maila ni uspelo!";
 $lang['L_MAILPROGRAM']="Mail program";
 $lang['L_MAXIMUM_LENGTH']="Maksimalna dolžina";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="";
 $lang['L_MAXSIZE']="Največja velikost";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Za vsako podatkovno bazo";
 $lang['L_MAX_EXECUTION_TIME']="Maksimalni čas izvrševanja";
@@ -525,8 +523,8 @@ $lang['L_MESSAGE']="Sporočilo";
 $lang['L_MESSAGE_TYPE']="Tip sporočila";
 $lang['L_MINUTE']="Minuta";
 $lang['L_MINUTES']="Minute";
-$lang['L_MOBILE_OFF']="Off";
-$lang['L_MOBILE_ON']="On";
+$lang['L_MOBILE_OFF']="";
+$lang['L_MOBILE_ON']="";
 $lang['L_MODE_EASY']="Lahko";
 $lang['L_MODE_EXPERT']="Zahtevno";
 $lang['L_MSD_INFO']="MySQLDumper informacije";
@@ -544,13 +542,10 @@ $lang['L_MYSQL_CONNECTION_ENCODING']="Standardno kodiranje MySQL"
     ." strežnika<br />Standard encoding of"
     ." MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-podatki";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_ROUTINE']="";
+$lang['L_MYSQL_ROUTINES']="";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="";
+$lang['L_MYSQL_TABLES_EXPLAIN']="";
 $lang['L_MYSQL_VERSION']="MySQL različica";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Žal nam je: nameščena MySQL"
     ." različica %s je prestara in ne more"
@@ -563,11 +558,9 @@ $lang['L_MYSQL_VERSION_TOO_OLD']="Žal nam je: nameščena MySQL"
     ." MySQL različicami. Ampak izgubili"
     ." boste nekaj novih MySQLDumper"
     ." funkcionalnosti.";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEW']="";
+$lang['L_MYSQL_VIEWS']="";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="";
 $lang['L_NAME']="Ime";
 $lang['L_NEW']="nov";
 $lang['L_NEWTABLE']="Nova tabela";
@@ -580,7 +573,7 @@ $lang['L_NOGZPOSSIBLE']="Ker Zlib ni nameščen, ne morete"
 $lang['L_NONE']="brez";
 $lang['L_NOREVERSE']="Najstarejšz vnos na začetel";
 $lang['L_NOTAVAIL']="<em>ni na voljo</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="";
 $lang['L_NOTICE']="Obvestilo";
 $lang['L_NOTICES']="Obvestila";
 $lang['L_NOT_ACTIVATED']="ni aktivirano";
@@ -639,7 +632,7 @@ $lang['L_PERL_LOG']="Perl-dnevnik";
 $lang['L_PHPBUG']="Napaka v zlib! Stiskanje ni mogoče!";
 $lang['L_PHPMAIL']="PHP-funkcija mail()";
 $lang['L_PHP_EXTENSIONS']="PHP razširitve";
-$lang['L_PHP_LOG']="PHP-Log";
+$lang['L_PHP_LOG']="";
 $lang['L_PHP_VERSION']="PHP različica";
 $lang['L_PHP_VERSION_TOO_OLD']="Žal nam je: nameščena PHP"
     ." različica je prestara. MySQLDumper"
@@ -661,11 +654,8 @@ $lang['L_POSITION_NOTIFICATIONS']="Položaj obvestilnega okna";
 $lang['L_POSITION_TC']="zgoraj sredina";
 $lang['L_POSITION_TL']="zgoraj levo";
 $lang['L_POSITION_TR']="zgoraj desno";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
-    ." /><br />_cs = case sensitiv<br />_ci ="
-    ." case insensitive";
+$lang['L_POSSIBLE_COLLATIONS']="";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="";
 $lang['L_PREFIX']="Predpona";
 $lang['L_PRIMARYKEYS_CHANGED']="Primarni ključi spremenjeni";
 $lang['L_PRIMARYKEYS_CHANGINGERROR']="Napaka spreminjanja primarnih ključev";
@@ -684,8 +674,8 @@ $lang['L_PROGRESS_OVER_ALL']="Celoten napredek";
 $lang['L_PROGRESS_TABLE']="Napredek tabele";
 $lang['L_PROVIDER']="Ponudnik";
 $lang['L_PROZESSE']="Procesi";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY']="";
+$lang['L_QUERY_TYPE']="";
 $lang['L_RECHTE']="Dovoljenja";
 $lang['L_RECORDS']="Zapisi";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> zapisov vstavljenih.";
@@ -768,7 +758,7 @@ $lang['L_SETPRIMARYKEYSFOR']="Nastavi nov primarni ključ za tabelo";
 $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Prikazi vnos %s do %s od %s";
 $lang['L_SHOWRESULT']="prikaži rezultat";
 $lang['L_SHOW_TABLES']="Prikaži tabele";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="SMTP-gostitelj";
 $lang['L_SMTP_PORT']="SMTP-vrata";
@@ -831,9 +821,7 @@ $lang['L_SQL_FIELDNAMENOTVALID']="Napaka: Ni pravilnega imena polja";
 $lang['L_SQL_FIRST']="prvo";
 $lang['L_SQL_IMEXPORT']="Uvoz-Izvoz";
 $lang['L_SQL_IMPORT']="Uvoz v podatkovno zbirko '%s'";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="";
 $lang['L_SQL_INDEXES']="Določilo";
 $lang['L_SQL_INSERTFIELD']="vstavi polje";
 $lang['L_SQL_INSERTNEWFIELD']="vstavi novo polje";
@@ -907,7 +895,7 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavitvena datoteka \"%s\" je bila"
     ." uspešno kreirana.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavitvena datoteka \"%s\" je bila"
     ." uspešno izbrisana.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="";
 $lang['L_TABLE']="Tabela";
 $lang['L_TABLENAME']="Ime tabele";
 $lang['L_TABLENAME_EXPLAIN']="Ime tabele";
@@ -933,17 +921,16 @@ $lang['L_TO']="do";
 $lang['L_TOOLS']="Orodja";
 $lang['L_TOOLS_TOOLBOX']="Izberi podatkovno zbirko / funkcije"
     ." podatkovne zbirke / uvoz - izvoz";
-$lang['L_TRUNCATE']="Truncate";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE']="";
+$lang['L_TRUNCATE_DATABASE']="";
 $lang['L_UNIT_KB']="KB";
 $lang['L_UNIT_MB']="MB";
 $lang['L_UNIT_PIXEL']="Piksel";
 $lang['L_UNKNOWN']="neznano";
 $lang['L_UNKNOWN_SQLCOMMAND']="neznan SQL ukaz";
 $lang['L_UPDATE']="Posodobi";
-$lang['L_UPDATE_CONNECTION_FAILED']="Update failed because connection to"
-    ." server '%s' could not be established.";
-$lang['L_UPDATE_ERROR_RESPONSE']="Update failed, server returned: '%s'";
+$lang['L_UPDATE_CONNECTION_FAILED']="";
+$lang['L_UPDATE_ERROR_RESPONSE']="";
 $lang['L_UPTO']="do";
 $lang['L_USERNAME']="Uporabniško ime";
 $lang['L_USE_SSL']="Uporabi SSL";
@@ -968,22 +955,16 @@ $lang['L_WRONG_RIGHTS']="Datoteka ali mapa '%s' ni zapisljiva"
     ." biti nastavljena na %s.<br />";
 $lang['L_YES']="da";
 $lang['L_ZEND_FRAMEWORK_VERSION']="Zend Framework različica";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="The given filename '%value%' isn't a"
-    ." directory.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="The given filename '%value%' isn't a"
-    ." file.";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="The given target '%value%' is not a"
-    ." link.";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="The file or directory '%value%' isn't"
-    ." executable.";
+$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="";
+$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="";
+$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="";
+$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="";
 $lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="Datoteka ali mapa '%value%' ne"
     ." obstaja.";
 $lang['L_ZEND_ID_ACCESS_NOT_READABLE']="Datoteke ali mape '%value%' ni možno"
     ." prebrati.";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="The given file '%value%' isn't an"
-    ." uploaded file.";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="The file or directory '%value%' isn't"
-    ." writable.";
+$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="";
+$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="";
 $lang['L_ZEND_ID_DIGITS_INVALID']="Podan napačen tip. Pričakovan je"
     ." niz, celo število ali decimalno"
     ." število.";
@@ -1006,25 +987,17 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Email naslov je predolg. Najve
     ." dolžina je 320 znakov.";
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Email naslov ne more biti primerjan z"
     ." nizi v navednicah.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="";
 $lang['L_ZEND_ID_IS_EMPTY']="Vrednost je zahtevana in ne more biti"
     ." prazna.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Žeton ni bil določen za primerjavo.";

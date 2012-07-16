@@ -56,7 +56,7 @@ $lang['L_CHANGE']="wijzig";
 $lang['L_CHANGEDIR']="Verander van Directorie";
 $lang['L_CHANGEDIRERROR']="Kan de directorie niet wijzigen!";
 $lang['L_CHARSET']="Characterset";
-$lang['L_CHARSETS']="Character Sets";
+$lang['L_CHARSETS']="";
 $lang['L_CHECK']="Controleer";
 $lang['L_CHECK_DIRS']="Controleer mijn directories";
 $lang['L_CHOOSE_CHARSET']="MySQLDumper kan de ontcijfering van"
@@ -160,10 +160,8 @@ $lang['L_CSV_NAMEFIRSTLINE']="Field names in first line";
 $lang['L_CSV_NODATA']="No data found for import!";
 $lang['L_CSV_NULL']="Vervang NULL met";
 $lang['L_DATABASES_OF_USER']="Databases van gebruiker";
-$lang['L_DATABASE_CREATED_FAILED']="The database wasn't created.<br"
-    ." />MySQL returns:<br/><br />%s";
-$lang['L_DATABASE_CREATED_SUCCESS']="The database '%s' has been created"
-    ." successfully.";
+$lang['L_DATABASE_CREATED_FAILED']="";
+$lang['L_DATABASE_CREATED_SUCCESS']="";
 $lang['L_DATASIZE']="Data formaat";
 $lang['L_DATASIZE_INFO']="Dit is het formaat van de records -"
     ." niet het formaat van het backup"
@@ -176,7 +174,7 @@ $lang['L_DBPARAMETER']="Database Parameters";
 $lang['L_DBS']="Databases";
 $lang['L_DB_ADAPTER']="DB-Adapter<br />";
 $lang['L_DB_BACKUPPARS']="Database Backup Parameter";
-$lang['L_DB_DEFAULT']="Default database";
+$lang['L_DB_DEFAULT']="";
 $lang['L_DB_HOST']="Hostname";
 $lang['L_DB_IN_LIST']="De database '%s' kan niet worden"
     ." toegevoegd omdat deze reeds bestaat.";
@@ -196,7 +194,7 @@ $lang['L_DELETE_FILE_SUCCESS']="Bestand \"%s\" is succesvol"
     ." verwijderd.";
 $lang['L_DELETE_HTACCESS']="Verwijder directorie protectie"
     ." (verwijder .htaccess)";
-$lang['L_DESCRIPTION']="Description";
+$lang['L_DESCRIPTION']="";
 $lang['L_DESELECT_ALL']="Deselecteer alles";
 $lang['L_DIR']="Directorie";
 $lang['L_DISABLEDFUNCTIONS']="Niet toegestane functies";
@@ -368,6 +366,7 @@ $lang['L_FM_UPLOADMOVEERROR']="Kan geselecteerd bestand niet"
 $lang['L_FM_UPLOADNOTALLOWED1']="Dit bestands type wordt niet"
     ." ondersteund.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Valide types zijn: *.gz en *.sql-files";
+$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="gevonden db";
 $lang['L_FROMFILE']="from file";
 $lang['L_FROMTEXTBOX']="from text box";
@@ -457,7 +456,7 @@ $lang['L_IMPORTSOURCE']="Importeer Source";
 $lang['L_IMPORTTABLE']="Importeer in tabel";
 $lang['L_IMPORT_NOTABLE']="Geen tabel voor import geselecteerd!";
 $lang['L_IN']="in";
-$lang['L_INDEX_SIZE']="Size of index";
+$lang['L_INDEX_SIZE']="";
 $lang['L_INFO_ACTDB']="Geselecteerde Database";
 $lang['L_INFO_DATABASES']="De volgende database(s) zijn op uw"
     ." server";
@@ -485,7 +484,7 @@ $lang['L_INFO_SIZE']="Grootte";
 $lang['L_INFO_SUM']="totaal";
 $lang['L_INSTALL']="Installatie";
 $lang['L_INSTALLED']="Geïnstalleerd";
-$lang['L_INSTALL_DB_DEFAULT']="Use as default database";
+$lang['L_INSTALL_DB_DEFAULT']="";
 $lang['L_INSTALL_HELP_PORT']="(Leeg = Standaard Poort)";
 $lang['L_INSTALL_HELP_SOCKET']="(Leeg = Standaard Socket)";
 $lang['L_IS_WRITABLE']="Is beschrijfbaar";
@@ -512,10 +511,8 @@ $lang['L_LOG_NOT_READABLE']="Het log bestand '%s' bestaat niet of"
     ." is niet leesbaar.";
 $lang['L_MAILERROR']="Verzenden van email gefaald!";
 $lang['L_MAILPROGRAM']="Mail programma";
-$lang['L_MAXIMUM_LENGTH']="Maximum length";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="This is the maximum number of bytes"
-    ." one character needs, when it is saved"
-    ." to disk.";
+$lang['L_MAXIMUM_LENGTH']="";
+$lang['L_MAXIMUM_LENGTH_EXPLAIN']="";
 $lang['L_MAXSIZE']="max. grote";
 $lang['L_MAX_BACKUP_FILES_EACH2']="Voor iedere database";
 $lang['L_MAX_EXECUTION_TIME']="Max bewerkings tijd";
@@ -533,8 +530,8 @@ $lang['L_MESSAGE']="Bericht";
 $lang['L_MESSAGE_TYPE']="Bericht type";
 $lang['L_MINUTE']="Minuten";
 $lang['L_MINUTES']="Minuten";
-$lang['L_MOBILE_OFF']="Off";
-$lang['L_MOBILE_ON']="On";
+$lang['L_MOBILE_OFF']="";
+$lang['L_MOBILE_ON']="";
 $lang['L_MODE_EASY']="Makkelijk";
 $lang['L_MODE_EXPERT']="Expert";
 $lang['L_MSD_INFO']="MySQLDumper-Informatie";
@@ -551,13 +548,10 @@ $lang['L_MYSQL_CLIENT_VERSION']="MySQL Client";
 $lang['L_MYSQL_CONNECTION_ENCODING']="Standaard decoderen van de"
     ." MySQL-Server";
 $lang['L_MYSQL_DATA']="MySQL-Data";
-$lang['L_MYSQL_ROUTINE']="Routine";
-$lang['L_MYSQL_ROUTINES']="Routinen";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="Stored functions and procedures";
-$lang['L_MYSQL_TABLES_EXPLAIN']="Tables have a defined column structure"
-    ." in which one can save data (records)."
-    ." Each record represents a row in the"
-    ." table.";
+$lang['L_MYSQL_ROUTINE']="";
+$lang['L_MYSQL_ROUTINES']="";
+$lang['L_MYSQL_ROUTINES_EXPLAIN']="";
+$lang['L_MYSQL_TABLES_EXPLAIN']="";
 $lang['L_MYSQL_VERSION']="MySQL-Versie";
 $lang['L_MYSQL_VERSION_TOO_OLD']="Onze excuses: de geïnstalleerde"
     ." versie van MySQL is te oud om te"
@@ -569,11 +563,9 @@ $lang['L_MYSQL_VERSION_TOO_OLD']="Onze excuses: de geïnstalleerde"
     ." om te functioneren met oudere MySQL"
     ." versies. Maar u verliest sommige"
     ." nieuwe functies van MySQLDumper.";
-$lang['L_MYSQL_VIEW']="View";
-$lang['L_MYSQL_VIEWS']="Views";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="Views show (filtered) recordsets of"
-    ." one ore more tables but don't contain"
-    ." own records.";
+$lang['L_MYSQL_VIEW']="";
+$lang['L_MYSQL_VIEWS']="";
+$lang['L_MYSQL_VIEWS_EXPLAIN']="";
 $lang['L_NAME']="Naam";
 $lang['L_NEW']="nieuw";
 $lang['L_NEWTABLE']="Nieuwe tabel";
@@ -586,7 +578,7 @@ $lang['L_NOGZPOSSIBLE']="Omdat Zlib niet is ge�nstalleerd,"
 $lang['L_NONE']="geen";
 $lang['L_NOREVERSE']="Oudste invoer eerst";
 $lang['L_NOTAVAIL']="<em>niet beschikbaar</em>";
-$lang['L_NOTHING_TO_DO']="There is nothing to do.";
+$lang['L_NOTHING_TO_DO']="";
 $lang['L_NOTICE']="Aankondiging";
 $lang['L_NOTICES']="Notities";
 $lang['L_NOT_ACTIVATED']="niet geactiveerd";
@@ -615,8 +607,8 @@ $lang['L_NO_ENTRIES']="Tabel \"<b>%s</b>\" is leeg en heeft"
     ." geen entry.";
 $lang['L_NO_MSD_BACKUPFILE']="Backups van andere scripts";
 $lang['L_NO_NAME_GIVEN']="U heeft geen naam aangegeven.";
-$lang['L_NR_OF_QUERIES']="Number of queries";
-$lang['L_NR_OF_RECORDS']="Number of records";
+$lang['L_NR_OF_QUERIES']="";
+$lang['L_NR_OF_RECORDS']="";
 $lang['L_NR_TABLES_OPTIMIZED']="%s tabellen zijn geoptimaliseerd.";
 $lang['L_NUMBER_OF_FILES_FORM']="Verwijderd door aantal bestanden per"
     ." database";
@@ -648,7 +640,7 @@ $lang['L_PHPBUG']="Bug in zlib ! Geen Compressie"
     ." mogelijk!";
 $lang['L_PHPMAIL']="PHP-Functie mail()";
 $lang['L_PHP_EXTENSIONS']="PHP-Extensies";
-$lang['L_PHP_LOG']="PHP-Log";
+$lang['L_PHP_LOG']="";
 $lang['L_PHP_VERSION']="PHP-Versie";
 $lang['L_PHP_VERSION_TOO_OLD']="Onze excuses: de geïnstalleerde"
     ." PHP-Versie is te oud. MySQLDumper"
@@ -670,11 +662,8 @@ $lang['L_POSITION_NOTIFICATIONS']="Positie van notificatie scherm";
 $lang['L_POSITION_TC']="top center";
 $lang['L_POSITION_TL']="top links";
 $lang['L_POSITION_TR']="top rechts";
-$lang['L_POSSIBLE_COLLATIONS']="Possible collations";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="These are the possible collations one"
-    ." can choose for this character set.<br"
-    ." /><br />_cs = case sensitiv<br />_ci ="
-    ." case insensitive";
+$lang['L_POSSIBLE_COLLATIONS']="";
+$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="";
 $lang['L_PREFIX']="Prefix";
 $lang['L_PRIMARYKEYS_CHANGED']="Primary keys changed";
 $lang['L_PRIMARYKEYS_CHANGINGERROR']="Error changing primary keys";
@@ -694,8 +683,8 @@ $lang['L_PROGRESS_OVER_ALL']="Algehele voortgang";
 $lang['L_PROGRESS_TABLE']="Voortgang van de tabel";
 $lang['L_PROVIDER']="Provider";
 $lang['L_PROZESSE']="Processen";
-$lang['L_QUERY']="Query";
-$lang['L_QUERY_TYPE']="Query type";
+$lang['L_QUERY']="";
+$lang['L_QUERY_TYPE']="";
 $lang['L_RECHTE']="Permissie";
 $lang['L_RECORDS']="Records";
 $lang['L_RECORDS_INSERTED']="<b>%s</b> records ingevoegd.";
@@ -729,7 +718,7 @@ $lang['L_RESTORE_TABLES_COMPLETED']="Tot nu toe zijn er <b>%d</b> van de"
     ." <b>%d</b> tabellen aangemaakt.";
 $lang['L_RESTORE_TABLES_COMPLETED0']="Tot nu toe zijn er <b>%d</b> tabellen"
     ." aangemaakt.";
-$lang['L_RESULT']="Result";
+$lang['L_RESULT']="";
 $lang['L_REVERSE']="Laatste invoer eerst";
 $lang['L_SAFEMODEDESC']="Omdat PHP is draait in safe_mode moet"
     ." u de volgende directories handmatig"
@@ -780,7 +769,7 @@ $lang['L_SETPRIMARYKEYSFOR']="Stel nieuw primary sleutels in voor de"
 $lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Resultaat entry %s naar %s van %s";
 $lang['L_SHOWRESULT']="show result";
 $lang['L_SHOW_TABLES']="Toon tabel";
-$lang['L_SHOW_TOOLTIPS']="Show nicer tooltips";
+$lang['L_SHOW_TOOLTIPS']="";
 $lang['L_SMTP']="SMTP";
 $lang['L_SMTP_HOST']="SMTP-Server";
 $lang['L_SMTP_PORT']="SMTP-Poort";
@@ -843,9 +832,7 @@ $lang['L_SQL_FIELDNAMENOTVALID']="FOUT: geen geldige veldnaam";
 $lang['L_SQL_FIRST']="eerst";
 $lang['L_SQL_IMEXPORT']="Importeer-Exporteer";
 $lang['L_SQL_IMPORT']="Importeer in Database `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="%s: incomplete statement detected.<br"
-    ." />Couldn't find closing match for '%s'"
-    ." in query:<br />%s";
+$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="";
 $lang['L_SQL_INDEXES']="Indexes";
 $lang['L_SQL_INSERTFIELD']="plaats veld";
 $lang['L_SQL_INSERTNEWFIELD']="plaats nieuw veld";
@@ -917,10 +904,10 @@ $lang['L_SUCCESS_CONFIGFILE_CREATED']="Configuratie bestand %s is succesvol"
     ." aangemaakt.";
 $lang['L_SUCCESS_DELETING_CONFIGFILE']="Het configuratie bestand %s is"
     ." succesvol verwijderd.";
-$lang['L_SUM_TOTAL']="Sum";
+$lang['L_SUM_TOTAL']="";
 $lang['L_TABLE']="Tabel";
-$lang['L_TABLENAME']="Table name";
-$lang['L_TABLENAME_EXPLAIN']="Table name";
+$lang['L_TABLENAME']="";
+$lang['L_TABLENAME_EXPLAIN']="";
 $lang['L_TABLES']="Tabellen";
 $lang['L_TABLESELECTION']="Tabel selectie";
 $lang['L_TABLE_CREATE_SUCC']="De tabel '%s' is succesvol gecreëerd.";
@@ -942,8 +929,8 @@ $lang['L_TO']="naar";
 $lang['L_TOOLS']="Tools";
 $lang['L_TOOLS_TOOLBOX']="Select Database / Datebase functions /"
     ." Import - Export";
-$lang['L_TRUNCATE']="Truncate";
-$lang['L_TRUNCATE_DATABASE']="Truncate database";
+$lang['L_TRUNCATE']="";
+$lang['L_TRUNCATE_DATABASE']="";
 $lang['L_UNIT_KB']="KB";
 $lang['L_UNIT_MB']="MB";
 $lang['L_UNIT_PIXEL']="Pixel";
@@ -1018,25 +1005,17 @@ $lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="Het e-mailadress is te lang. D
 $lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="Het e-mailadress kan niet worden"
     ." vergeleken met de quoted-string"
     ." formaat.";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="The given punycode notation of the"
-    ." hostname cannot be decoded.";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="The hostname contains a dash in an"
-    ." invalid position.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="Invalid type given. String expected.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="The hostname does not match the"
-    ." expected structure.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="The hostname cannot match against"
-    ." schema for given TLD.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="The hostname contains an invalid local"
-    ." network name.";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="The hostname does not match the URI"
-    ." syntax.";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="IP addresses in hostnames are not"
-    ." allowed.";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="Local network names in hostnames are"
-    ." not allowed.";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="Cannot extract TLD part from hostname.";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="The hostname contains unknown TLD.";
+$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="";
+$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="";
+$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="";
+$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="";
+$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="";
+$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="";
+$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="";
 $lang['L_ZEND_ID_IS_EMPTY']="Waarde vereist en kan niet leeg zijn.";
 $lang['L_ZEND_ID_MISSING_TOKEN']="Geen teken was gegeven om overeen te"
     ." komen.";

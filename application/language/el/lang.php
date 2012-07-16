@@ -547,6 +547,7 @@ $lang['L_FM_UPLOADNOTALLOWED1']="Ο τύπος αρχείου δεν"
 $lang['L_FM_UPLOADNOTALLOWED2']="Υποστηριζόμενοι"
     ." τύποι είναι: αρχεία"
     ." *.gz και *.sql";
+$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="βρέθηκε Β.Δ.";
 $lang['L_FROMFILE']="από αρχείο";
 $lang['L_FROMTEXTBOX']="από το πλαίσιο"

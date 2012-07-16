@@ -401,6 +401,7 @@ $lang['L_FM_UPLOADNOTALLOWED1']="Kiểu file này không được hỗ"
     ." trợ.";
 $lang['L_FM_UPLOADNOTALLOWED2']="Các định dạng file được"
     ." chấp nhận: *.gz và *.sql";
+$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="tìm thấy db";
 $lang['L_FROMFILE']="từ file";
 $lang['L_FROMTEXTBOX']="từ text box";

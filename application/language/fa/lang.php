@@ -467,6 +467,7 @@ $lang['L_FM_UPLOADNOTALLOWED1']="فرمت اين فايل"
     ." پشتيباني نميشود.";
 $lang['L_FM_UPLOADNOTALLOWED2']="فرمت هاي قابل قبول :"
     ." *.gz and *.sql-files";
+$lang['L_FORCE_UPDATE']="";
 $lang['L_FOUND_DB']="ديتابيس هاي يافت شده";
 $lang['L_FROMFILE']="از فايل";
 $lang['L_FROMTEXTBOX']="از باکس متن";
