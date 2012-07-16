@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: capulux, CGPingu, DSB, Harry72, JanRei, Jens_K, JJT, Kyoya, newloki, norbert.schmidt, praiodan, StvN, thomas122333
+ * Maintained by: CGPingu, DSB, Harry72, JanRei, Jens_K, JJT, Kyoya, StvN
  */
 $lang=array(
 'L_ACTION' => 'Aktion',
