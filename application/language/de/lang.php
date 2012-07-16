@@ -10,7 +10,7 @@
  * Maintained by: capulux, CGPingu, DSB, Harry72, JanRei, Jens_K, JJT, Kyoya, newloki, norbert.schmidt, praiodan, StvN, thomas122333
  */
 $lang=array(
-'L_ACTION' => 'Aktion',
+'L_ACTION' => 'Aktion Test',
 'L_ACTIVATED' => 'aktiviert',
 'L_ACTUALLY_INSERTED_RECORDS' => 'Es wurden bisher <b>%s</b> Datensätze erfolgreich eingetragen.',
 'L_ACTUALLY_INSERTED_RECORDS_OF' => 'Es wurden bisher <b>%s</b> von <b>%s</b> Datensätzen erfolgreich eingetragen.',
