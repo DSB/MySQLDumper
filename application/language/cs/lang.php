@@ -4,991 +4,765 @@
  * http://www.mysqldumper.net
  *
  * @package       MySQLDumper
- * @subpackage    Language
+ * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
+ * Maintained by: 
  */
-$lang=array();
-$lang['L_ACTION']="Akce";
-$lang['L_ACTIVATED']="aktivní";
-$lang['L_ACTUALLY_INSERTED_RECORDS']="Doposud <b>%s</b> Bylo<br />"
-    ." úspěšně přidaných záznamů.";
-$lang['L_ACTUALLY_INSERTED_RECORDS_OF']="Právě <b>%s</b>  záznamů ze"
-    ." <b>%s</b><br />  bylo úspěšně"
-    ." přidáno.";
-$lang['L_ADD']="Přidat";
-$lang['L_ADDED']="přidané";
-$lang['L_ADD_DB_MANUALLY']="Přidat databázi manualně";
-$lang['L_ADD_RECIPIENT']="Přidat příjemce";
-$lang['L_ALL']="vše";
-$lang['L_ANALYZE']="Analyzovat";
-$lang['L_ANALYZING_TABLE']="Tabulka '<b>%s</b>' se obnovuje.";
-$lang['L_ASKDBCOPY']="Chcete zkopírovat databázi `%s` k<br"
-    ." /> databázi `%s`?";
-$lang['L_ASKDBDELETE']="Pokud chcete odstranit databázi `%s`"
-    ." s<br /> obsahem?";
-$lang['L_ASKDBEMPTY']="Chcete vyprázdnit databázi `%s` ?";
-$lang['L_ASKDELETEFIELD']="Chcete odstranit pole?";
-$lang['L_ASKDELETERECORD']="Jste si jisti, že chcete smazat"
-    ." tento<br /> záznam?";
-$lang['L_ASKDELETETABLE']="V případě, že tabulka `%s` bude<br"
-    ." /> smazaná?";
-$lang['L_ASKTABLEEMPTY']="V případě, že tabulka `%s` bude<br"
-    ." /> smazaná?";
-$lang['L_ASKTABLEEMPTYKEYS']="Chcete vymazat tabulku `%s` a<br />"
-    ." resetovat indexy?";
-$lang['L_ATTACHED_AS_FILE']="připojena jako soubor";
-$lang['L_ATTACH_BACKUP']="Pripojit zálohu";
-$lang['L_AUTHENTICATE']="";
-$lang['L_AUTHORIZE']="Povolit";
-$lang['L_AUTODELETE']="Smazat zálohy automatick";
-$lang['L_BACK']="zpět";
-$lang['L_BACKUPFILESANZAHL']="Počet záloh v adresáři";
-$lang['L_BACKUPS']="zálohy";
-$lang['L_BACKUP_DBS']="DB na zálohování";
-$lang['L_BACKUP_TABLE_DONE']="Záloha tabulky`%s`dokončena.";
-$lang['L_BACK_TO_OVERVIEW']="Databáze Přehled";
-$lang['L_CALL']="Volat";
-$lang['L_CANCEL']="Konec";
-$lang['L_CANT_CREATE_DIR']="Nepodařilo se vytvořit adresář"
-    ." '%s'.<br /> <br />Prosím, vytvořte"
-    ." jej pomocí FTP<br /> klienta";
-$lang['L_CHANGE']="změna";
-$lang['L_CHANGEDIR']="Změna adresáře";
-$lang['L_CHANGEDIRERROR']="Nemohu změnit adresář!";
-$lang['L_CHARSET']="Kódování";
-$lang['L_CHARSETS']="";
-$lang['L_CHECK']="Kontrola";
-$lang['L_CHECK_DIRS']="Vytvoření adresářů - work";
-$lang['L_CHOOSE_CHARSET']="MySQLDumper nemůže zjistit"
-    ." kódování<br /> souboru zálohy"
-    ." automaticky.<br /><br<br /> />Musíte"
-    ." vybrat znakovou sadu, s<br /> kterou"
-    ." byla tato záloha<br /> vytvořena.<br"
-    ." /><br />Zjistíte-li jakékoliv<br />"
-    ." problémy s některými znaky po<br />"
-    ." restaurování, můžete opakovat<br"
-    ." /> backup-pokrok a poté zvolte"
-    ." jinou<br /> znakovou sadu.<br /><br"
-    ." />Hodně štěstí. ;)";
-$lang['L_CHOOSE_DB']="Vyberte databázi";
-$lang['L_CLEAR_DATABASE']="Vyprázdnit databazi";
-$lang['L_CLOSE']="Zavřít";
-$lang['L_COLLATION']="Kódování";
-$lang['L_COMMAND']="Příkaz";
-$lang['L_COMMAND_AFTER_BACKUP']="Příkaz po zálohování";
-$lang['L_COMMAND_BEFORE_BACKUP']="Příkaz před zálohováním";
-$lang['L_COMMENT']="Komentář";
-$lang['L_COMPRESSED']="komprimované (gz)";
-$lang['L_CONFBASIC']="Základní nastavení";
-$lang['L_CONFIG']="Nastavení";
-$lang['L_CONFIGFILE']="Nastaveno zálohování";
-$lang['L_CONFIGFILES']="Nastaveno zálohování";
-$lang['L_CONFIGURATIONS']="Nastavení";
-$lang['L_CONFIG_AUTODELETE']="Automazanie";
-$lang['L_CONFIG_CRONPERL']="Cron zálohování - Nastavení pro"
-    ." Perl<br /> skript";
-$lang['L_CONFIG_EMAIL']="Email Oznámení";
-$lang['L_CONFIG_FTP']="FTP Převod záloh mezi ftp";
-$lang['L_CONFIG_HEADLINE']="Nastavení";
-$lang['L_CONFIG_INTERFACE']="Jazyk * Vzhled";
-$lang['L_CONFIG_LOADED']="Nastavení \"%s\" bylo úspěšně"
-    ." uloženo.";
-$lang['L_CONFIRM_CONFIGFILE_DELETE']="Opravdu smazat Nastavení"
-    ." zálohování<br /> %s?";
-$lang['L_CONFIRM_DELETE_FILE']="";
-$lang['L_CONFIRM_DELETE_TABLES']="Opravdu smazat vybrané tabulky?";
-$lang['L_CONFIRM_DROP_DATABASES']="Přejete si vybrané databáze"
-    ." opravdu<br /> vymazat? Upozornění:"
-    ." Všechny údaje<br /> budou vymazány!"
-    ." Možná byste měli<br /> vytvořit"
-    ." zálohu .";
-$lang['L_CONFIRM_RECIPIENT_DELETE']="Přejete si příjemce \"%s\" opravdu"
-    ." odstranit?";
-$lang['L_CONFIRM_TRUNCATE_DATABASES']="Přejete si vymazat všechny"
-    ." tabulky<br /> vybraných databází s?"
-    ." Upozornění:<br /> Všechny údaje"
-    ." budou vymazány! Možná<br /> byste"
-    ." měli udělat zálohu pro<br />"
-    ." pozdější obnovení.";
-$lang['L_CONFIRM_TRUNCATE_TABLES']="Opravdu li vyprázdnit vybrané<br />"
-    ." tabulky?";
-$lang['L_CONNECT']="připojit";
-$lang['L_CONNECTIONPARS']="Nastavení připojení";
-$lang['L_CONNECTTOMYSQL']="Pripojit k MySQL";
-$lang['L_CONTINUE_MULTIPART_RESTORE']="Spustit vícedílné obnovení zálohy"
-    ." <br /> '%s' .";
-$lang['L_CONVERTED_FILES']="Převedené soubory";
-$lang['L_CONVERTER']="Zálohování Konvert";
-$lang['L_CONVERTING']="Konverze";
-$lang['L_CONVERT_FILE']="Soubory, které mají být převedeny";
-$lang['L_CONVERT_FILENAME']="Jméno cílového souboru (bez"
-    ." přípony)";
-$lang['L_CONVERT_FILEREAD']="Konvertování zálohy '%s'";
-$lang['L_CONVERT_FINISHED']="Dokončení konverze, '%s' bylo<br />"
-    ." úspěšné.";
-$lang['L_CONVERT_START']="Začít konvertovat";
-$lang['L_CONVERT_TITLE']="Převést zálohu na MSD Format";
-$lang['L_CONVERT_WRONG_PARAMETERS']="Špatné nastavení! Převod není<br"
-    ." /> možný.";
-$lang['L_CREATE']="Vytvořit";
-$lang['L_CREATED']="";
-$lang['L_CREATEDIRS']="Vytvořit Adresáře";
-$lang['L_CREATE_AUTOINDEX']="Vytvořit Auto-Index";
-$lang['L_CREATE_CONFIGFILE']="Vytvoriť nové nastavenie";
-$lang['L_CREATE_DATABASE']="Vytvořit nové nastavení";
-$lang['L_CREATE_TABLE_SAVED']="Definice tabulky `%s` uložena.";
-$lang['L_CREDITS']="Pomoc";
-$lang['L_CRONSCRIPT']="Cron script";
-$lang['L_CRON_COMMENT']="Zadejte komentář";
-$lang['L_CRON_COMPLETELOG']="Log kompletní výstup";
-$lang['L_CRON_EXECPATH']="Cesta skriptů Perl";
-$lang['L_CRON_EXTENDER']="Přípona zálohy";
-$lang['L_CRON_PRINTOUT']="Tiskový výstup na obrazovku.";
-$lang['L_CSVOPTIONS']="CSV Možnosti";
-$lang['L_CSV_EOL']="Samostatné řádky s";
-$lang['L_CSV_ERRORCREATETABLE']="Chyba při vytváření tabulky `%s` !";
-$lang['L_CSV_FIELDCOUNT_NOMATCH']="Počet polí nesouhlasí s údaji o<br"
-    ." /> přesunu (%d na místo %d).";
-$lang['L_CSV_FIELDSENCLOSED']="Oblastech ohraničených";
-$lang['L_CSV_FIELDSEPERATE']="Oblasti oddělenými";
-$lang['L_CSV_FIELDSESCAPE']="Fields escaped with";
-$lang['L_CSV_FIELDSLINES']="%d pole znal, zcela %d linky";
-$lang['L_CSV_FILEOPEN']="Otevřít CSV soubor";
-$lang['L_CSV_NAMEFIRSTLINE']="Názvy polí v první linii";
-$lang['L_CSV_NODATA']="Nebyly nalezeny žádné data pro<br"
-    ." /> import!";
-$lang['L_CSV_NULL']="Nahradit NULL s";
-$lang['L_DATABASES_OF_USER']="";
-$lang['L_DATABASE_CREATED_FAILED']="";
-$lang['L_DATABASE_CREATED_SUCCESS']="";
-$lang['L_DATASIZE']="Velikost dat";
-$lang['L_DATASIZE_INFO']="Toto je velikost dat - ne velikost<br"
-    ." /> souboru zálohy";
-$lang['L_DAY']="Den";
-$lang['L_DAYS']="Dny";
-$lang['L_DB']="Databáze";
-$lang['L_DBCONNECTION']="Databaza Připojení";
-$lang['L_DBPARAMETER']="Údaje k Databázi";
-$lang['L_DBS']="Databáze";
-$lang['L_DB_ADAPTER']="";
-$lang['L_DB_BACKUPPARS']="Nastavení zálohování databáze";
-$lang['L_DB_DEFAULT']="";
-$lang['L_DB_HOST']="Hostitel";
-$lang['L_DB_IN_LIST']="Databázi '%s' se nepodařilo"
-    ." přidat,<br /> protože již existuje.";
-$lang['L_DB_NAME']="Název databáze";
-$lang['L_DB_PASS']="Heslo";
-$lang['L_DB_SELECT_ERROR']="<br />Chyba:<br />Výběr z databáze"
-    ." <b>";
-$lang['L_DB_SELECT_ERROR2']="</b> selhal!";
-$lang['L_DB_USER']="Uživatel";
-$lang['L_DEFAULT_CHARACTER_SET_NAME']="";
-$lang['L_DEFAULT_CHARSET']="Předvolená znaková sada";
-$lang['L_DEFAULT_COLLATION_NAME']="";
-$lang['L_DELETE']="Smazat";
-$lang['L_DELETE_DATABASE']="Smazat databázi";
-$lang['L_DELETE_FILE_ERROR']="Chyba při odstraňovaní zálohy"
-    ." \"%s\"!";
-$lang['L_DELETE_FILE_SUCCESS']="Záloha \"%s\" byla úspěšně"
-    ." odstraněna.";
-$lang['L_DELETE_HTACCESS']="Odstranit ochranu adresářů"
-    ." (smazat<br /> .htaccess)";
-$lang['L_DESCRIPTION']="";
-$lang['L_DESELECT_ALL']="Zrušit výběr";
-$lang['L_DIR']="Adresář";
-$lang['L_DISABLEDFUNCTIONS']="Blokována Funkce";
-$lang['L_DO']="Vykonat";
-$lang['L_DOCRONBUTTON']="Spustit Perl Cron skript";
-$lang['L_DONE']="Hotovo!";
-$lang['L_DONT_ATTACH_BACKUP']="Nepřipojovat zálohování";
-$lang['L_DOPERLTEST']="Test Perl Modul";
-$lang['L_DOSIMPLETEST']="Test Perl";
-$lang['L_DOWNLOAD_FILE']="Stáhnout soubor";
-$lang['L_DO_NOW']="Nyní běží";
-$lang['L_DUMP']="Záloha";
-$lang['L_DUMP_ENDERGEBNIS']="Záloha obsahuje <b>%s</b> tabulek"
-    ." a<br /> <b>%s</b> záznamů.<br />";
-$lang['L_DUMP_FILENAME']="Název zalohy";
-$lang['L_DUMP_HEADLINE']="Vytvářím zálohu ...";
-$lang['L_DUMP_NOTABLES']="Nebyly nalezeny žádné tabulky v"
-    ." databázi<br /> `<b>%s</b>`";
-$lang['L_DUMP_OF_DB_FINISHED']="Zálohování databáze `%s`"
-    ." dokončené";
-$lang['L_DURATION']="Doba trvání";
-$lang['L_EDIT']="upraviť";
-$lang['L_EHRESTORE_CONTINUE']="pokračovat v přepisování a<br />"
-    ." nahrávání chyby";
-$lang['L_EHRESTORE_STOP']="stop";
-$lang['L_EMAIL']="Mail";
-$lang['L_EMAILBODY_ATTACH']="Příloha obsahuje zálohu<br />"
-    ." MySQL-Databáze.<br />Zálohování<br"
-    ." /> databáze `%s`<br /><br /><br"
-    ." />Následující<br /> soubor byl"
-    ." vytvořen:<br /><br />%s <br<br />"
-    ." /><br />>S pozdravem<br /><br<br />"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_FOOTER']="`<br /><br />S pozdravem<br /><br<br"
-    ." /> />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_ATTACH']="Rozdělená Záloha byla"
-    ." vytvořena.<br<br /> />Záložní"
-    ." soubory jsou připojeny na<br />"
-    ." samostatné e-maily.<br"
-    ." />Zálohování<br /> databáze"
-    ." `%s`<br /><br /><br"
-    ." />Následující<br /> soubory byly"
-    ." vytvořeny:<br /><br />%s<br /> <br"
-    ." /><br />S pozdravem<br /><br<br />"
-    ." />MySQLDumper<br />";
-$lang['L_EMAILBODY_MP_NOATTACH']="Rozdělená Záloha byla"
-    ." vytvořena.<br<br /> />Záložné"
-    ." súbory nie sú pripojené<br /> na"
-    ." tento e-mail!<br />Zálohování<br />"
-    ." databáze `%s`<br /><br /><br"
-    ." />Následující<br /> soubory byly"
-    ." vytvořeny:<br /><br<br /> />%s<br"
-    ." /><br /><br />S pozdravem<br /><br<br"
-    ." /> />MySQLDumper<br />";
-$lang['L_EMAILBODY_NOATTACH']="Soubory nejsou připojeny na tento<br"
-    ." /> e-mail!<br />Zálohování"
-    ." databáze<br /> `%s`<br /><br /><br"
-    ." />Následující soubory<br /> byly"
-    ." vytvořeny:<br /><br />%s<br /><br"
-    ." /><br<br /> />S pozdravem<br /><br"
-    ." />MySQLDumper<br<br /> />";
-$lang['L_EMAILBODY_TOOBIG']="Záložní soubor překročil"
-    ." maximální<br /> velikost % s, a"
-    ." nebyl připojen k<br /> tomuto"
-    ." e-mailu.<br />Zálohování<br />"
-    ." databáze `%s`<br /><br /><br"
-    ." />Následující<br /> soubor byl"
-    ." vytvořený:<br /><br />%s<br /><br<br"
-    ." /> /><br />S pozdravem<br /><br<br />"
-    ." />MySQLDumper<br />";
-$lang['L_EMAIL_ADDRESS']="E-mailová adresa";
-$lang['L_EMAIL_CC']="E-mail přijímající CC";
-$lang['L_EMAIL_MAXSIZE']="Maximální velikost přílohy";
-$lang['L_EMAIL_ONLY_ATTACHMENT']="pouze přiloženou zálohu.";
-$lang['L_EMAIL_RECIPIENT']="Příjemce";
-$lang['L_EMAIL_SENDER']="Adresa odesílatele e-mailu";
-$lang['L_EMAIL_START']="Spustit odesílání e-mailů";
-$lang['L_EMAIL_WAS_SEND']="E-mail byl úspěšně odeslán";
-$lang['L_EMPTY']="Vyprázdniť";
-$lang['L_EMPTYKEYS']="prázdné a reset indexy";
-$lang['L_EMPTYTABLEBEFORE']="Prázdné tabulky před";
-$lang['L_EMPTY_DB_BEFORE_RESTORE']="Odstranit tabulky před obnovením";
-$lang['L_ENCODING']="Kódování";
-$lang['L_ENCRYPTION_TYPE']="Druh šifrování";
-$lang['L_ENGINE']="Typ";
-$lang['L_ENTER_DB_INFO']="Nejdřív kliknite na tlačidlo"
-    ." \"Připojit k<br /> MySQL\". Zde"
-    ." zadejte název databáze pouze<br />"
-    ." tehdy když se nedá připojit k<br />"
-    ." databázi.";
-$lang['L_ENTRY']="Vstup";
-$lang['L_ERROR']="Chyba";
-$lang['L_ERRORHANDLING_RESTORE']="Ošetření chyb při obnovování";
-$lang['L_ERROR_CONFIGFILE_NAME']="Záloha \"%s\" obsahuje neplatné"
-    ." znaky.";
-$lang['L_ERROR_DELETING_CONFIGFILE']="Chyba: nelze odstranit<br />"
-    ." konfigurační soubor %s!";
-$lang['L_ERROR_LOADING_CONFIGFILE']="Nepodařilo se načíst konfigurační"
-    ." soubor \"%s\".\"";
-$lang['L_ERROR_LOG']="Chyba Logu";
-$lang['L_ERROR_MULTIPART_RESTORE']="Vícedílná-Obnova: Nemohu najít<br"
-    ." /> další Zalohovací soubor '%s'!";
-$lang['L_ESTIMATED_END']="Předpokládané ukončení";
-$lang['L_EXCEL2003']="Excel od roku 2003";
-$lang['L_EXISTS']="Existuje";
-$lang['L_EXPORT']="Export";
-$lang['L_EXPORTFINISHED']="Export ukončen.";
-$lang['L_EXPORTLINES']="<strong>%s</strong> lines exported";
-$lang['L_EXPORTOPTIONS']="Volby exportu";
-$lang['L_EXTENDEDPARS']="Rozšířené Nastavení";
-$lang['L_FADE_IN_OUT']="Zobrazit on/off";
-$lang['L_FATAL_ERROR_DUMP']="Vážná chyba: Zpráva o"
-    ." vytvoření<br /> tabulky '%s' v"
-    ." databazi '%s' se nedá<br /> číst!";
-$lang['L_FIELDS']="Oblasti";
-$lang['L_FIELDS_OF_TABLE']="Oblasti tabulky";
-$lang['L_FILE']="Záloha";
-$lang['L_FILES']="Zálohy";
-$lang['L_FILESIZE']="Velikost zálohy";
-$lang['L_FILE_MANAGE']="Správa záloh";
-$lang['L_FILE_OPEN_ERROR']="Chyba: Nemohu vytvořit zálohu.";
-$lang['L_FILE_SAVED_SUCCESSFULLY']="Záloha byla úspěšně uložena.";
-$lang['L_FILE_SAVED_UNSUCCESSFULLY']="Zálohu se nepodařilo uložit!";
-$lang['L_FILE_UPLOAD_SUCCESSFULL']="Záloha '%s' byla úspěšně"
-    ." uložena.";
-$lang['L_FILTER_BY']="Filtrovat podle";
-$lang['L_FM_ALERTRESTORE1']="Chystáte se obnovit databázi";
-$lang['L_FM_ALERTRESTORE2']="vybrána záloha pro obnovení";
-$lang['L_FM_ALERTRESTORE3']="Přejete si ji obnovit?";
-$lang['L_FM_ALL_BU']="Všechny Zálohy";
-$lang['L_FM_ANZ_BU']="Zálohy";
-$lang['L_FM_ASKDELETE1']="Vybrali jste zalohu (y)";
-$lang['L_FM_ASKDELETE2']="Přejete si opravdu odstranit?";
-$lang['L_FM_ASKDELETE3']="Chcete smazat automazání a"
-    ." nastavit<br /> nová pravidla pro"
-    ." automazání?";
-$lang['L_FM_ASKDELETE4']="Chcete smazat všechny zálohy?";
-$lang['L_FM_ASKDELETE5']="Chcete smazat všechny zálohy s<br />"
-    ." příponou";
-$lang['L_FM_ASKDELETE5_2']="*  Nyní odstranit?";
-$lang['L_FM_AUTODEL1']="Automazaní: Následující zálohy"
-    ." byly<br /> vymazány, protože"
-    ." maximální<br /> ponechání záloh"
-    ." na ftp je:";
-$lang['L_FM_CHOOSE_ENCODING']="Vyberte kódování souboru zálohy";
-$lang['L_FM_COMMENT']="Zadejte komentář";
-$lang['L_FM_DELETE']="Smazat";
-$lang['L_FM_DELETE1']="Záloha";
-$lang['L_FM_DELETE2']="byla úspěšně odstraněna.";
-$lang['L_FM_DELETE3']="nelze odstranit!";
-$lang['L_FM_DELETEALL']="Smazat Všechny zálohy";
-$lang['L_FM_DELETEALLFILTER']="Smazat vše s";
-$lang['L_FM_DELETEAUTO']="Automazaní spustit manuálně";
-$lang['L_FM_DUMPSETTINGS']="Záloha Nastavení";
-$lang['L_FM_DUMP_HEADER']="Záloha";
-$lang['L_FM_FILEDATE']="Datum";
-$lang['L_FM_FILES1']="Záloha databáze";
-$lang['L_FM_FILESIZE']="Velikost";
-$lang['L_FM_FILEUPLOAD']="Nahrát zálohovaný soubor";
-$lang['L_FM_FREESPACE']="Volné místo Serveru";
-$lang['L_FM_LAST_BU']="Poslední záloha";
-$lang['L_FM_NOFILE']="Nevybrali jste zálohu na obnovení!";
-$lang['L_FM_NOFILESFOUND']="Nebyla nalezena žádná záloha.";
-$lang['L_FM_RECORDS']="Záznamů";
-$lang['L_FM_RESTORE']="Obnovit";
-$lang['L_FM_RESTORE_HEADER']="Obnova databáze `<strong>%s</strong>`";
-$lang['L_FM_SELECTTABLES']="Vybrat tabulky";
-$lang['L_FM_STARTDUMP']="Spustit novou zálohu";
-$lang['L_FM_TABLES']="Tabulek";
-$lang['L_FM_TOTALSIZE']="Celková velikost";
-$lang['L_FM_UPLOADFAILED']="Nahrávání selhalo!";
-$lang['L_FM_UPLOADFILEEXISTS']="Záloha se stejným názvem již"
-    ." existuje<br /> !";
-$lang['L_FM_UPLOADFILEREQUEST']="prosím, vyberte soubor.";
-$lang['L_FM_UPLOADMOVEERROR']="Nepodařilo se přesunout zálohu"
-    ." do<br /> zvoleného adresáře .";
-$lang['L_FM_UPLOADNOTALLOWED1']="Tento typ zálohy není podporován.";
-$lang['L_FM_UPLOADNOTALLOWED2']="Platné typy jsou: *.gz a *.sql-súbor";
-$lang['L_FOUND_DB']="Nalezená db";
-$lang['L_FROMFILE']="ze souboru";
-$lang['L_FROMTEXTBOX']="od textového pole";
-$lang['L_FTP']="FTP";
-$lang['L_FTP_ADD_CONNECTION']="Přidat připojení";
-$lang['L_FTP_CHOOSE_MODE']="FTP Přesun Mód";
-$lang['L_FTP_CONFIRM_DELETE']="Chcete toto FTP připojení opravdu<br"
-    ." /> zrušit?";
-$lang['L_FTP_CONNECTION']="FTP-připojení";
-$lang['L_FTP_CONNECTION_CLOSED']="FTP-Připojení ukončeno";
-$lang['L_FTP_CONNECTION_DELETE']="Odstranit připojení";
-$lang['L_FTP_CONNECTION_ERROR']="Připojení na server '% s' pomocí<br"
-    ." /> portu% s nemoholo být stanovené";
-$lang['L_FTP_CONNECTION_SUCCESS']="Připojení na server '% s' pomocí<br"
-    ." /> portu% s bylo založeno úspěšně";
-$lang['L_FTP_DIR']="Nahrát adresář";
-$lang['L_FTP_FILE_TRANSFER_ERROR']="Převod zálohy '% s' byl chybný";
-$lang['L_FTP_FILE_TRANSFER_SUCCESS']="Záloha '% s' byla převedena"
-    ." úspěšně";
-$lang['L_FTP_LOGIN_ERROR']="Registrace jako uživatel '% s'"
-    ." byla<br /> zamítnuta";
-$lang['L_FTP_LOGIN_SUCCESS']="Registrace jako uživatel '% s'"
-    ." byla<br /> úspěšná";
-$lang['L_FTP_OK']="FTP údaje jsou ok";
-$lang['L_FTP_PASS']="Heslo";
-$lang['L_FTP_PASSIVE']="používat pasivní mód";
-$lang['L_FTP_PASV_ERROR']="Změna v pasivním režimu FTP"
-    ." nebyla<br /> úspěšná";
-$lang['L_FTP_PASV_SUCCESS']="Změna v pasivním režimu FTP byla<br"
-    ." /> úspěšná";
-$lang['L_FTP_PORT']="Port";
-$lang['L_FTP_SEND_TO']="z <strong>%s</strong><br /> do<br />"
-    ." <strong>%s</strong>";
-$lang['L_FTP_SERVER']="Servr";
-$lang['L_FTP_SSL']="Bezpečné SSL FTP připojení";
-$lang['L_FTP_START']="Spuštění FTP přenos";
-$lang['L_FTP_TIMEOUT']="Připojení Timeout";
-$lang['L_FTP_TRANSFER']="FTP Převod";
-$lang['L_FTP_USER']="Uživatel";
-$lang['L_FTP_USESSL']="použít SSL připojení";
-$lang['L_GENERAL']="všeobecné";
-$lang['L_GZIP']="GZip komprese";
-$lang['L_GZIP_COMPRESSION']="GZip Komprese";
-$lang['L_HOME']="Obsa";
-$lang['L_HOUR']="Hodin";
-$lang['L_HOURS']="Hodin";
-$lang['L_HTACC_ACTIVATE_REWRITE_ENGINE']="Povolit přepisován";
-$lang['L_HTACC_ADD_HANDLER']="Zadejte dodavatel";
-$lang['L_HTACC_CONFIRM_DELETE']="Přejete si vytvořit adresář"
-    ." ochrany";
-$lang['L_HTACC_CONTENT']="Obsah soubor";
-$lang['L_HTACC_CREATE']="Vytvořit adresář ochran";
-$lang['L_HTACC_CREATED']="Adresář ochrany byl vytvořen";
-$lang['L_HTACC_CREATE_ERROR']="Došlo k chybě při vytváření"
-    ." adresáře<br /> ochrany!<br />Prosím"
-    ." vytvořte ručně 2<br /> soubory s"
-    ." následujícím obsahe";
-$lang['L_HTACC_CRYPT']="Crypt 8 Chars max (Linux and<br />"
-    ." Unix-Systems";
-$lang['L_HTACC_DENY_ALLOW']="Vypnout / Zapnou";
-$lang['L_HTACC_DIR_LISTING']="Výpis adresář";
-$lang['L_HTACC_EDIT']="Upravit .htacces";
-$lang['L_HTACC_ERROR_DOC']="Chyba Dokument";
-$lang['L_HTACC_EXAMPLES']="Další příklady a dokumentac";
-$lang['L_HTACC_EXISTS']="V současnosti již existuje"
-    ." adresář<br /> ochrany. Když"
-    ." vytvoříte nový, tím<br />"
-    ." přepíšete starý";
-$lang['L_HTACC_MAKE_EXECUTABLE']="Umožnit proveden";
-$lang['L_HTACC_MD5']="MD5 (Linux and Unix-Systems";
-$lang['L_HTACC_NO_ENCRYPTION']="čistí text, ne Cryption (Windows";
-$lang['L_HTACC_NO_USERNAME']="Musíte zadat jméno";
-$lang['L_HTACC_PROPOSED']="Naléhavé doporučen";
-$lang['L_HTACC_REDIRECT']="Přesměrován";
-$lang['L_HTACC_SCRIPT_EXEC']="Spuštění skript";
-$lang['L_HTACC_SHA1']="SHA1 (all Systems";
-$lang['L_HTACC_WARNING']="Pozor! . Htaccess přímo"
-    ." ovlivňuje<br /> chování"
-    ." prohlížeče. <br /> Při<br />"
-    ." nesprávném obsahu, může být"
-    ." že<br /> vaše stránky již nebudou"
-    ." dostupn";
-$lang['L_IMPORT']="Import Nastavenia";
-$lang['L_IMPORTIEREN']="Import";
-$lang['L_IMPORTOPTIONS']="Import Možnosti";
-$lang['L_IMPORTSOURCE']="Import Zdroj";
-$lang['L_IMPORTTABLE']="Import v tabulce";
-$lang['L_IMPORT_NOTABLE']="Nebyly vybrány Tabulky pro import!";
-$lang['L_IN']="v";
-$lang['L_INDEX_SIZE']="";
-$lang['L_INFO_ACTDB']="Zvolená Databáz";
-$lang['L_INFO_DATABASES']="Tyto databáze jsou na serveru";
-$lang['L_INFO_DBEMPTY']="Databáze je prázdná";
-$lang['L_INFO_FSOCKOPEN_DISABLED']="Na tomto serveru PHP-příkaz"
-    ." fsockopen<br /> () je zakázána"
-    ." konfigurace serveru.<br /> Protože"
-    ." toto automatické stahování<br />"
-    ." jazykových balíčků není"
-    ." možné.<br /> Pokud chcete toto"
-    ." obejít, můžete si<br /> stáhnout"
-    ." packack ručně, extrahujte jej<br />"
-    ." do vašeho počítače a nahrajte je"
-    ." do<br /> adresáře \"language\""
-    ." vaší<br /> instalace MySQLDumper."
-    ." Pak nový<br /> jazyk balíček je k"
-    ." dispozici na<br /> této stránce";
-$lang['L_INFO_LASTUPDATE']="Poslední aktualizac";
-$lang['L_INFO_LOCATION']="Vaše místo j";
-$lang['L_INFO_NODB']="databáze neexistuje";
-$lang['L_INFO_NOPROCESSES']="žádné běžící proces";
-$lang['L_INFO_NOSTATUS']="nejsou k dispozici žádné zprávy"
-    ." o<br /> stav";
-$lang['L_INFO_NOVARS']="ukazatele není k dispozic";
-$lang['L_INFO_OPTIMIZED']="optimalizovan";
-$lang['L_INFO_RECORDS']="zázna";
-$lang['L_INFO_SIZE']="Velikos";
-$lang['L_INFO_SUM']="celke";
-$lang['L_INSTALL']="Instalace";
-$lang['L_INSTALLED']="Nainstalované";
-$lang['L_INSTALL_DB_DEFAULT']="";
-$lang['L_INSTALL_HELP_PORT']="(prázdný = Default Port)";
-$lang['L_INSTALL_HELP_SOCKET']="(prázdný = Default Socket)";
-$lang['L_IS_WRITABLE']="Nenainstalované";
-$lang['L_KILL_PROCESS']="Ukončit proce";
-$lang['L_LANGUAGE']="Jazyk";
-$lang['L_LANGUAGE_NAME']="Czech";
-$lang['L_LASTBACKUP']="Poslední záloh";
-$lang['L_LOAD']="Nahrát výchozí nastavení";
-$lang['L_LOAD_DATABASE']="Znovu načíst databáz";
-$lang['L_LOAD_FILE']="Nahrát soubo";
-$lang['L_LOG']="Lo";
-$lang['L_LOGFILENOTWRITABLE']="Nelze zapsat log souboru";
-$lang['L_LOGFILES']="Nahrát soubor";
-$lang['L_LOGGED_IN']="";
-$lang['L_LOGIN']="";
-$lang['L_LOGIN_AUTOLOGIN']="";
-$lang['L_LOGIN_INVALID_USER']="";
-$lang['L_LOGOUT']="";
-$lang['L_LOG_CREATED']="";
-$lang['L_LOG_DELETE']="Smazat Log";
-$lang['L_LOG_MAXSIZE']="";
-$lang['L_LOG_NOT_READABLE']="";
-$lang['L_MAILERROR']="Odeslání e-mailu selhalo!";
-$lang['L_MAILPROGRAM']="Mail program";
-$lang['L_MAXIMUM_LENGTH']="";
-$lang['L_MAXIMUM_LENGTH_EXPLAIN']="";
-$lang['L_MAXSIZE']="max. Velikost";
-$lang['L_MAX_BACKUP_FILES_EACH2']="Pro každou databáz";
-$lang['L_MAX_EXECUTION_TIME']="Maximální doba realizac";
-$lang['L_MAX_UPLOAD_SIZE']="Maximální velikost";
-$lang['L_MAX_UPLOAD_SIZE_INFO']="Pokud je vaše záloha větší, jako"
-    ." je výše uvedená omezení,musíte ji"
-    ."  nahrát pomocí FTP do adresáře"
-    ." \"work/backup\". <br />Po tomto"
-    ." můžete pokračovat.";
-$lang['L_MEMORY']="Pamě";
-$lang['L_MENU_HIDE']="";
-$lang['L_MENU_SHOW']="";
-$lang['L_MESSAGE']="Oznámen";
-$lang['L_MESSAGE_TYPE']="Správy - typ";
-$lang['L_MINUTE']="Minut";
-$lang['L_MINUTES']="Minut";
-$lang['L_MOBILE_OFF']="";
-$lang['L_MOBILE_ON']="";
-$lang['L_MODE_EASY']="Jednoduch";
-$lang['L_MODE_EXPERT']="Odborní";
-$lang['L_MSD_INFO']="MySQL Dumpe";
-$lang['L_MSD_MODE']="MySQLDumper-Mód";
-$lang['L_MSD_VERSION']="MySQLDumper-Verz";
-$lang['L_MULTIDUMP']="Zálohování na část";
-$lang['L_MULTIDUMP_FINISHED']="Zálohování Databáze <b>% d </ b>"
-    ." dokončeno";
-$lang['L_MULTIPART_ACTUAL_PART']="Podle aktuálního soubor";
-$lang['L_MULTIPART_SIZE']="Maximální velikost záloh";
-$lang['L_MULTI_PART']="Rozdělení záloh";
-$lang['L_MYSQLVARS']="MySQL Ukazatel";
-$lang['L_MYSQL_CLIENT_VERSION']="MySQL-Klien";
-$lang['L_MYSQL_CONNECTION_ENCODING']="Standardní kódování MySQL-Serv";
-$lang['L_MYSQL_DATA']="MySQL-Data";
-$lang['L_MYSQL_ROUTINE']="";
-$lang['L_MYSQL_ROUTINES']="";
-$lang['L_MYSQL_ROUTINES_EXPLAIN']="";
-$lang['L_MYSQL_TABLES_EXPLAIN']="";
-$lang['L_MYSQL_VERSION']="MySQL-Verz";
-$lang['L_MYSQL_VERSION_TOO_OLD']="";
-$lang['L_MYSQL_VIEW']="";
-$lang['L_MYSQL_VIEWS']="";
-$lang['L_MYSQL_VIEWS_EXPLAIN']="";
-$lang['L_NAME']="Název";
-$lang['L_NEW']="nov";
-$lang['L_NEWTABLE']="Nová tabulka";
-$lang['L_NEXT_AUTO_INCREMENT']="Další automatický index";
-$lang['L_NEXT_AUTO_INCREMENT_SHORT']="n. Auto-Index";
-$lang['L_NO']="n";
-$lang['L_NOFTPPOSSIBLE']="Neexistují žádné FTP funkce";
-$lang['L_NOGZPOSSIBLE']="Vzhledem k tomu, Zlib není<br />"
-    ." nainstalován, nelze použít<br />"
-    ." gzip-Funkce";
-$lang['L_NONE']="žádn";
-$lang['L_NOREVERSE']="Nejstarší záznam první";
-$lang['L_NOTAVAIL']="<em>nie je k dispozícii</em";
-$lang['L_NOTHING_TO_DO']="";
-$lang['L_NOTICE']="Poznámka";
-$lang['L_NOTICES']="Oznámeni";
-$lang['L_NOT_ACTIVATED']="neaktivn";
-$lang['L_NOT_SUPPORTED']="Táto záloha nepodporuje túto"
-    ." funkciu.";
-$lang['L_NO_DB_FOUND']="Nepodarilo sa nájsť žiadne"
-    ." databázy!<br />Prosím zadajte údaje"
-    ." pripojenia a názov vašej databázy"
-    ." ručne.";
-$lang['L_NO_DB_FOUND_INFO']="Pripojenie k databáze bol"
-    ." úspešne<br /> nadviazané.<br /><br"
-    ." />Vaše užívateľské dáta sú"
-    ." platné a boli prijaté<br />"
-    ." MySQL-Server.<br /><br />MySQLDumper"
-    ." ale nebola schopná nájsť žiadnu<br"
-    ." /> databázu.<br /><br />Automatická"
-    ." detekcia<br /> pomocou skriptu je"
-    ." blokovaný na<br /> niektorých"
-    ." serveroch.<br /><br />Musíte<br />"
-    ." zadať názov databázy ručne po<br"
-    ." /> dokončení inštalácie.<br"
-    ." />Kliknite na \"nastavenie\""
-    ." \"Pripojenie Parameter -<br />"
-    ." display\" a zadajte názov databázy"
-    ." tu.";
-$lang['L_NO_DB_SELECTED']="Neexistuje žiadna zvolená databáza.";
-$lang['L_NO_ENTRIES']="Tabulka \"<b>%s</b>\" je prázdna a"
-    ." nemá žiadny záznam.";
-$lang['L_NO_MSD_BACKUPFILE']="Zálohovanie iných skriptov";
-$lang['L_NO_NAME_GIVEN']="Nezadali ste meno";
-$lang['L_NR_OF_QUERIES']="";
-$lang['L_NR_OF_RECORDS']="";
-$lang['L_NR_TABLES_OPTIMIZED']="%s tabuľiek bolo optimalizovaných.";
-$lang['L_NUMBER_OF_FILES_FORM']="Zmazať podľa počtu záloh v"
-    ." jednej<br /> databáze";
-$lang['L_OF']="z";
-$lang['L_OK']="O";
-$lang['L_OPTIMIZE']="Optimalizovať";
-$lang['L_OPTIMIZE_TABLES']="Optimalizovať tabuľky pred<br />"
-    ." Zálohovaním";
-$lang['L_OPTIMIZE_TABLE_ERR']="Chyba Optimalizácie tabuľky `%s`.";
-$lang['L_OPTIMIZE_TABLE_SUCC']="Tabuľka `%s` bola úspešne<br />"
-    ." optimalizovaná.";
-$lang['L_OS']="Operačný syste";
-$lang['L_OVERHEAD']="";
-$lang['L_PAGE']="";
-$lang['L_PAGE_REFRESHS']="Obnovená stránk";
-$lang['L_PASS']="Heslo";
-$lang['L_PASSWORD']="Heslo";
-$lang['L_PASSWORDS_UNEQUAL']="Heslá nie sú zhodné alebo prázdne";
-$lang['L_PASSWORD_REPEAT']="Heslo (opakovať)";
-$lang['L_PASSWORD_STRENGTH']="Sila hesla";
-$lang['L_PERLOUTPUT1']="Vstup do crondump.pl pre<br />"
-    ." absolute_path_of_configdir";
-$lang['L_PERLOUTPUT2']="URL pre prehliadače alebo pre"
-    ." externú<br /> prácu Cron";
-$lang['L_PERLOUTPUT3']="Príkazové pre Shell alebo pre"
-    ." crontab";
-$lang['L_PERL_COMPLETELOG']="Perl-kompletné-Log";
-$lang['L_PERL_LOG']="Perl-Log";
-$lang['L_PHPBUG']="Chyba v zlib!Nemožno kompresie";
-$lang['L_PHPMAIL']="PHP-Mail Funkcia()";
-$lang['L_PHP_EXTENSIONS']="PHP-Extension";
-$lang['L_PHP_LOG']="";
-$lang['L_PHP_VERSION']="PHP-Verzi";
-$lang['L_PHP_VERSION_TOO_OLD']="";
-$lang['L_POP3_PORT']="POP3-Port";
-$lang['L_POP3_SERVER']="POP3-Server";
-$lang['L_PORT']="Port";
-$lang['L_POSITION_BC']="dole v strede";
-$lang['L_POSITION_BL']="vľavo dole";
-$lang['L_POSITION_BR']="vpravo dole";
-$lang['L_POSITION_MC']="Stred-stred";
-$lang['L_POSITION_ML']="V strede vľavo";
-$lang['L_POSITION_MR']="V strede vpravo";
-$lang['L_POSITION_NOTIFICATIONS']="Pozícia oznámenia - okná";
-$lang['L_POSITION_TC']="hore v strede";
-$lang['L_POSITION_TL']="vľavo hore";
-$lang['L_POSITION_TR']="v pravo hore";
-$lang['L_POSSIBLE_COLLATIONS']="";
-$lang['L_POSSIBLE_COLLATIONS_EXPLAIN']="";
-$lang['L_PREFIX']="Prefi";
-$lang['L_PRIMARYKEYS_CHANGED']="Primárne kľúče zmenené";
-$lang['L_PRIMARYKEYS_CHANGINGERROR']="Chyba pri zmene primárneho kľúča";
-$lang['L_PRIMARYKEYS_SAVE']="Uložiť primárne kľúč";
-$lang['L_PRIMARYKEY_CONFIRMDELETE']="Naozaj zmazať primárny kľúč";
-$lang['L_PRIMARYKEY_DELETED']="Primárny kľúč odstránený";
-$lang['L_PRIMARYKEY_FIELD']="Pole Primárneho kľúč";
-$lang['L_PRIMARYKEY_NOTFOUND']="Primárny kľúč nenájdený";
-$lang['L_PROCESSKILL1']="Snažíme sa dokončiť proce";
-$lang['L_PROCESSKILL2']="do konca";
-$lang['L_PROCESSKILL3']="Skript sa pokúsi o";
-$lang['L_PROCESSKILL4']="sec. ukončiť tento proce";
-$lang['L_PROCESS_ID']="Process ID";
-$lang['L_PROGRESS_FILE']="Pokrok súbor";
-$lang['L_PROGRESS_OVER_ALL']="Celkový pokrok";
-$lang['L_PROGRESS_TABLE']="Záloha db / tabuľky";
-$lang['L_PROVIDER']="Poskytovate";
-$lang['L_PROZESSE']="Proces";
-$lang['L_QUERY']="";
-$lang['L_QUERY_TYPE']="";
-$lang['L_RECHTE']="Oprávneni";
-$lang['L_RECORDS']="Záznamo";
-$lang['L_RECORDS_INSERTED']="<b>%s</b> záznamov vložených.";
-$lang['L_RECORDS_OF_TABLE']="";
-$lang['L_RECORDS_PER_PAGECALL']="Záznamov na stránk";
-$lang['L_REFRESHTIME']="Aktualizácia času";
-$lang['L_REFRESHTIME_PROCESSLIST']="Update interval proces zoznamu";
-$lang['L_REGISTRATION_DESCRIPTION']="";
-$lang['L_RELOAD']="Reloa";
-$lang['L_REMOVE']="Odstrániť";
-$lang['L_REPAIR']="Opraviť";
-$lang['L_RESET']="Rese";
-$lang['L_RESET_SEARCHWORDS']="reset hľadané slová";
-$lang['L_RESTORE']="Obnov";
-$lang['L_RESTORE_COMPLETE']="<b>%s</b> tabuľiek vytvorených.";
-$lang['L_RESTORE_DB']="Databáza '<b>%s</b>' on '<b>%s</b>'.";
-$lang['L_RESTORE_DB_COMPLETE_IN']="Obnovenie databázy '%s' in %s<br />"
-    ." ukončené.";
-$lang['L_RESTORE_OF_TABLES']="Vyberte tabuľky ktoré majú byť<br"
-    ." /> obnovené";
-$lang['L_RESTORE_TABLE']="Obnova tabuľky '%s' dokončená";
-$lang['L_RESTORE_TABLES_COMPLETED']="Práve <b>%d</b> tabuliek zo <b>%d</b>"
-    ." <br /> bolo vytvorených.";
-$lang['L_RESTORE_TABLES_COMPLETED0']="<b>%d</b> Tabuliek bolo vytvorených";
-$lang['L_RESULT']="";
-$lang['L_REVERSE']="Posledný záznam prvý";
-$lang['L_SAFEMODEDESC']="Pretože PHP je spustená v"
-    ." safe_mode<br /> musíte tieto"
-    ." adresáre vytvoriť ručne<br />"
-    ." pomocou FTP-Programu:";
-$lang['L_SAVE']="Uloži";
-$lang['L_SAVEANDCONTINUE']="Uložiť a pokračovať v inštalácii";
-$lang['L_SAVE_ERROR']="Chyba - nemôžem uložiť nastavenie!";
-$lang['L_SAVE_SUCCESS']="Nastavenie bolo úspešne uložené"
-    ." do<br /> nastavenia zálohovania"
-    ." \"%s\".";
-$lang['L_SAVING_DATA_TO_FILE']="Ukladanie dát z databázy '% s' do<br"
-    ." /> zálohy '% s'";
-$lang['L_SAVING_DATA_TO_MULTIPART_FILE']="Maximálna veľkosť zálohy bola<br"
-    ." /> dosiahnutá: Pokračovanie v"
-    ." zálohe '%<br /> s'";
-$lang['L_SAVING_DB_FORM']="Databáz";
-$lang['L_SAVING_TABLE']="Uložené tabuľky";
-$lang['L_SEARCH_ACCESS_KEYS']="Prehľadávať: dopredu = ALT + V,<br"
-    ." /> dozadu = ALT + C";
-$lang['L_SEARCH_IN_TABLE']="Vyhľadávanie v tabuľke";
-$lang['L_SEARCH_NO_RESULTS']="Vyhľadávanie \"<b>%s</b>\" v"
-    ." tabuľke<br /> \"<b>%s</b>\" nenašlo"
-    ." žiadne<br /> výsledky!";
-$lang['L_SEARCH_OPTIONS']="Možnosti hľadania";
-$lang['L_SEARCH_OPTIONS_AND']="kolónka musí obsahovať všetky<br"
-    ." /> hľadané slová (AND-search)";
-$lang['L_SEARCH_OPTIONS_CONCAT']="riadok musí obsahovať všetky<br />"
-    ." hľadané slová, ale môžu byť v<br"
-    ." /> každom stĺpci (môže to nejaký"
-    ." čas<br /> trvať)";
-$lang['L_SEARCH_OPTIONS_OR']="stĺpce musia mať jeden z"
-    ." hľadaných<br /> slov (OR-search)";
-$lang['L_SEARCH_RESULTS']="Vyhľadávanie \"<b>%s</b>\" v"
-    ." tabuľke<br /> \"<b>%s</b>\" prináša"
-    ." nasledujúce<br /> výsledky";
-$lang['L_SECOND']="Sekun";
-$lang['L_SECONDS']="Sekún";
-$lang['L_SELECT']="Vybra";
-$lang['L_SELECTED_FILE']="Vybrantá záloha";
-$lang['L_SELECT_ALL']="Vybrať všetko";
-$lang['L_SELECT_FILE']="Vyberte zálohu";
-$lang['L_SELECT_LANGUAGE']="Vyberte jazyk";
-$lang['L_SENDMAIL']="Odoslať e-mail";
-$lang['L_SENDRESULTASFILE']="odoslať výsledok ako súbor";
-$lang['L_SEND_MAIL_FORM']="Poslať e-mail správu";
-$lang['L_SERVER']="Serve";
-$lang['L_SERVERCAPTION']="Zobraziť Serve";
-$lang['L_SETPRIMARYKEYSFOR']="Nastavte nové primárne kľúče"
-    ." na<br /> tabuľk";
-$lang['L_SHOWING_ENTRY_X_TO_Y_OF_Z']="Zobrazené dáta %s / %s zo %s";
-$lang['L_SHOWRESULT']="Zobraziť výsledky";
-$lang['L_SHOW_TABLES']="";
-$lang['L_SHOW_TOOLTIPS']="";
-$lang['L_SMTP']="SMTP";
-$lang['L_SMTP_HOST']="SMTP-Server";
-$lang['L_SMTP_PORT']="SMTP-Port";
-$lang['L_SOCKET']="Socke";
-$lang['L_SPEED']="Rýchlos";
-$lang['L_SQLBOX']="SQL-Box";
-$lang['L_SQLBOXHEIGHT']="Výška SQL-Box";
-$lang['L_SQLLIB_ACTIVATEBOARD']="aktivovať stránku";
-$lang['L_SQLLIB_BOARDS']="Stránka";
-$lang['L_SQLLIB_DEACTIVATEBOARD']="deactivovat stránku";
-$lang['L_SQLLIB_GENERALFUNCTIONS']="všeobecné funkcie";
-$lang['L_SQLLIB_RESETAUTO']="Auto-Reset hodnoty";
-$lang['L_SQLLIMIT']="Počet záznamov každej stránky";
-$lang['L_SQL_ACTIONS']="Akcia";
-$lang['L_SQL_AFTER']="po";
-$lang['L_SQL_ALLOWDUPS']="Duplikáty povolené";
-$lang['L_SQL_ATPOSITION']="vložiť na pozíciu";
-$lang['L_SQL_ATTRIBUTES']="Atribúty";
-$lang['L_SQL_BACKDBOVERVIEW']="Späť na prehľad";
-$lang['L_SQL_BEFEHLNEU']="Nový príkaz";
-$lang['L_SQL_BEFEHLSAVED1']="SQL Príkaz";
-$lang['L_SQL_BEFEHLSAVED2']="bola pridaná";
-$lang['L_SQL_BEFEHLSAVED3']="bol uložený";
-$lang['L_SQL_BEFEHLSAVED4']="bol presunutý do";
-$lang['L_SQL_BEFEHLSAVED5']="bol zrušený";
-$lang['L_SQL_BROWSER']="SQ";
-$lang['L_SQL_CARDINALITY']="Mohutnosť";
-$lang['L_SQL_CHANGED']="bol zmenený.";
-$lang['L_SQL_CHANGEFIELD']="zmeniť pole";
-$lang['L_SQL_CHOOSEACTION']="Vyberte si akciu";
-$lang['L_SQL_COLLATENOTMATCH']="Charset a znášanie nesedí"
-    ." dohromady!";
-$lang['L_SQL_COLUMNS']="Stĺpcov";
-$lang['L_SQL_COMMANDS']="SQL príkaz";
-$lang['L_SQL_COMMANDS_IN']="Riadky";
-$lang['L_SQL_COMMANDS_IN2']="Second(s) spracované.";
-$lang['L_SQL_COPYDATADB']="Kopírovať celú databázu pre";
-$lang['L_SQL_COPYSDB']="Kópia Štruktúra databázy";
-$lang['L_SQL_COPYTABLE']="kopírovať tabuľku";
-$lang['L_SQL_CREATED']="bol vytvorený";
-$lang['L_SQL_CREATEINDEX']="vytvoriť nový index";
-$lang['L_SQL_CREATETABLE']="vytvoriť tabuľku";
-$lang['L_SQL_DATAVIEW']="Zobrazenie dát";
-$lang['L_SQL_DBCOPY']="Obsah databázy `%s` bol kopírovaný"
-    ." k<br /> databáze `%s`.";
-$lang['L_SQL_DBSCOPY']="Štruktúra databázy `%s` bola<br />"
-    ." kopírovaná k databáze `%s`.";
-$lang['L_SQL_DELETED']="bol zrušený";
-$lang['L_SQL_DESTTABLE_EXISTS']="Tabuľka určenia existuje !";
-$lang['L_SQL_EDIT']="uprava";
-$lang['L_SQL_EDITFIELD']="Upravit pole";
-$lang['L_SQL_EDIT_TABLESTRUCTURE']="Upraviť štruktúry tabuľky";
-$lang['L_SQL_EMPTYDB']="Prázdne databázy";
-$lang['L_SQL_ERROR1']="Chyba v dotaze";
-$lang['L_SQL_ERROR2']="MySQL hovorí";
-$lang['L_SQL_EXEC']="Vykonať SQL Príkaz";
-$lang['L_SQL_EXPORT']="Export z databázy `%s`";
-$lang['L_SQL_FIELDDELETE1']="Pole";
-$lang['L_SQL_FIELDNAMENOTVALID']="Chyba: Žiadny platný názov poľa";
-$lang['L_SQL_FIRST']="prvá";
-$lang['L_SQL_IMEXPORT']="Import-Export";
-$lang['L_SQL_IMPORT']="Import v databáze `%s`";
-$lang['L_SQL_INCOMPLETE_STATEMENT_DETECTED']="";
-$lang['L_SQL_INDEXES']="Indexy";
-$lang['L_SQL_INSERTFIELD']="vložiť pole";
-$lang['L_SQL_INSERTNEWFIELD']="vložiť nové pole";
-$lang['L_SQL_LIBRARY']="SQL Knižnica";
-$lang['L_SQL_NAMEDEST_MISSING']="Meno miesto určenia chýba !";
-$lang['L_SQL_NEWFIELD']="Nové pole";
-$lang['L_SQL_NODATA']="žiadne záznamy";
-$lang['L_SQL_NODEST_COPY']="Žiadne kopírovanie bez určenia !";
-$lang['L_SQL_NOFIELDDELETE']="Zmazať, nie je možné, pretože<br"
-    ." /> tabuľky musí obsahovať aspoň"
-    ." jedno<br /> pole.";
-$lang['L_SQL_NOTABLESINDB']="Nenašli sa žiadne tabuľky v"
-    ." databáze";
-$lang['L_SQL_NOTABLESSELECTED']="Nie sú vybrané žiadne tabuľky !";
-$lang['L_SQL_OPENFILE']="Otvoriť SQL-Súbor";
-$lang['L_SQL_OPENFILE_BUTTON']="Nahrať";
-$lang['L_SQL_OUT1']="Prevedené";
-$lang['L_SQL_OUT2']="Príkazy";
-$lang['L_SQL_OUT3']="Tam boli";
-$lang['L_SQL_OUT4']="Komentár";
-$lang['L_SQL_OUT5']="Vzhľadom k tomu, výstup obsahuje"
-    ." viac<br /> ako 5000 riadkov nie je"
-    ." zobrazená.";
-$lang['L_SQL_OUTPUT']="SQL Výstup";
-$lang['L_SQL_QUERYENTRY']="Dotaz obsahuje";
-$lang['L_SQL_RECORDDELETED']="Záznam bol zmazaný";
-$lang['L_SQL_RECORDEDIT']="upraviť záznam";
-$lang['L_SQL_RECORDINSERTED']="Záznam bol pridaný";
-$lang['L_SQL_RECORDNEW']="nový záznam";
-$lang['L_SQL_RECORDUPDATED']="Záznam bol aktualizovaný";
-$lang['L_SQL_RENAMEDB']="Premenovať Databázu";
-$lang['L_SQL_RENAMEDTO']="bol premenovaný na";
-$lang['L_SQL_SCOPY']="Štruktúra tabuľky `%s` bola<br />"
-    ." kopírovaná k tabuľke `%s`.";
-$lang['L_SQL_SEARCH']="Hľadať";
-$lang['L_SQL_SEARCHWORDS']="Hľadané slovo(s)";
-$lang['L_SQL_SELECTTABLE']="vyberte tabuľku";
-$lang['L_SQL_SERVER']="";
-$lang['L_SQL_SHOWDATATABLE']="Ukázať Dáta v tabuľke";
-$lang['L_SQL_STRUCTUREDATA']="Štruktúra a dát";
-$lang['L_SQL_STRUCTUREONLY']="Iba Štruktúra";
-$lang['L_SQL_TABLEEMPTIED']="Tabuľka `%s` bola zmazaná.";
-$lang['L_SQL_TABLEEMPTIEDKEYS']="Tabuľka `%s` bola zmazaná a"
-    ." indexi<br /> boli resetované.";
-$lang['L_SQL_TABLEINDEXES']="Indexy v tabuľke";
-$lang['L_SQL_TABLENEW']="Úpravy tabuľky";
-$lang['L_SQL_TABLENOINDEXES']="Žiadene indexy v tabuľke";
-$lang['L_SQL_TABLENONAME']="Tabuľka potrebuje meno!";
-$lang['L_SQL_TABLESOFDB']="Tabulka databázy";
-$lang['L_SQL_TABLEVIEW']="Zobraziť Tabuľky";
-$lang['L_SQL_TBLNAMEEMPTY']="Názov tabuľky nesmie't byť"
-    ." prázdne!";
-$lang['L_SQL_TBLPROPSOF']="Vlastnosti tabuľky";
-$lang['L_SQL_TCOPY']="Tabuľka `%s` bola kopírovaná s<br"
-    ." /> dátami k tabuľke `%s`.";
-$lang['L_SQL_UPLOADEDFILE']="Nahrať zálohu:";
-$lang['L_SQL_VIEW_COMPACT']="Zobraziť: kompaktné";
-$lang['L_SQL_VIEW_STANDARD']="Zobraziť: standard";
-$lang['L_SQL_VONINS']="celkom";
-$lang['L_SQL_WARNING']="Vykonávanie príkazov SQL môžete<br"
-    ." /> manipulovať s dátami."
-    ." Pamätajte!<br /> Autori, nenesú"
-    ." žiadnu zodpovednosť za<br />"
-    ." poškodenie alebo stratu dát.";
-$lang['L_SQL_WASCREATED']="bol vytvorený";
-$lang['L_SQL_WASEMPTIED']="bol vyprázdnený";
-$lang['L_STARTDUMP']="Spustiť";
-$lang['L_START_RESTORE_DB_FILE']="Spustenie obnovenia databázy '%s'"
-    ." zo<br /> zálohy '%s'.";
-$lang['L_START_SQL_SEARCH']="začať hľadať";
-$lang['L_STATUS']="Sta";
-$lang['L_STEP']="Krok";
-$lang['L_SUCCESS_CONFIGFILE_CREATED']="Nastavenie zálohovania %s bolo<br />"
-    ." úspešne vytvorené.";
-$lang['L_SUCCESS_DELETING_CONFIGFILE']="Nastavenie zálohovania %s bolo<br />"
-    ." úspešne odstránené.";
-$lang['L_SUM_TOTAL']="";
-$lang['L_TABLE']="Tabulk";
-$lang['L_TABLENAME']="";
-$lang['L_TABLENAME_EXPLAIN']="";
-$lang['L_TABLES']="Tabulie";
-$lang['L_TABLESELECTION']="Tabuľka výberu";
-$lang['L_TABLE_CREATE_SUCC']="Tabuľka '%s'  bola úspešne<br />"
-    ." vytvorená";
-$lang['L_TABLE_TYPE']="Ty";
-$lang['L_TESTCONNECTION']="Test pripojeni";
-$lang['L_THEME']="Tema";
-$lang['L_TIME']="Ča";
-$lang['L_TIMESTAMP']="Časový interva";
-$lang['L_TITLE_INDEX']="Index";
-$lang['L_TITLE_KEY_FULLTEXT']="Fulltext key";
-$lang['L_TITLE_KEY_PRIMARY']="Primary key";
-$lang['L_TITLE_KEY_UNIQUE']="Unique key";
-$lang['L_TITLE_MYSQL_HELP']="MySQL Dokumentácia";
-$lang['L_TITLE_NOKEY']="Žiadne key";
-$lang['L_TITLE_SEARCH']="Hľadať";
-$lang['L_TITLE_SHOW_DATA']="Zobraziť údaj";
-$lang['L_TITLE_UPLOAD']="Nahrať SQL súbor";
-$lang['L_TO']="d";
-$lang['L_TOOLS']="Nástroje";
-$lang['L_TOOLS_TOOLBOX']="Vybrať databázu / Funkcie Databázy"
-    ." /<br /> Import - Export";
-$lang['L_TRUNCATE']="";
-$lang['L_TRUNCATE_DATABASE']="";
-$lang['L_UNIT_KB']="KB";
-$lang['L_UNIT_MB']="MB";
-$lang['L_UNIT_PIXEL']="Px";
-$lang['L_UNKNOWN']="neznám";
-$lang['L_UNKNOWN_SQLCOMMAND']="neznámy SQL-Príkaz";
-$lang['L_UPDATE']="Aktualizovať";
-$lang['L_UPDATE_CONNECTION_FAILED']="";
-$lang['L_UPDATE_ERROR_RESPONSE']="";
-$lang['L_UPTO']="až";
-$lang['L_USERNAME']="Užívaťeľské meno";
-$lang['L_USE_SSL']="Použiť SSL";
-$lang['L_VALUE']="Hodnot";
-$lang['L_VERSIONSINFORMATIONEN']="Verzi";
-$lang['L_VIEW']="zobrazi";
-$lang['L_VISIT_HOMEPAGE']="Ísť na obsa";
-$lang['L_VOM']="bol";
-$lang['L_WITH']="s";
-$lang['L_WITHATTACH']="sa pripojiť";
-$lang['L_WITHOUTATTACH']="bez prikladajú";
-$lang['L_WITHPRAEFIX']="prefix";
-$lang['L_WRONGCONNECTIONPARS']="Parametre pripojenia zlé alebo<br />"
-    ." chýbajúce";
-$lang['L_WRONG_CONNECTIONPARS']="Parametre pripojenia sú mylné !";
-$lang['L_WRONG_RIGHTS']="Do adresára'%s' nemožno"
-    ." zapisovať.<br<br /> /><br />Práva"
-    ." (chmod), nie sú nastavené<br />"
-    ." správne, alebo je zlý"
-    ." vlastník.<br<br /> /><br />Prosí"
-    ." nastavte správne atribúty<br />"
-    ." pomocou FTP klienta.<br /><br />Súbor"
-    ." alebo<br /> adresár musí byť"
-    ." nastavený na %s.<br<br /> /";
-$lang['L_YES']="áno";
-$lang['L_ZEND_FRAMEWORK_VERSION']="";
-$lang['L_ZEND_ID_ACCESS_NOT_A_DIRECTORY']="";
-$lang['L_ZEND_ID_ACCESS_NOT_A_FILE']="";
-$lang['L_ZEND_ID_ACCESS_NOT_A_LINK']="";
-$lang['L_ZEND_ID_ACCESS_NOT_EXECUTABLE']="";
-$lang['L_ZEND_ID_ACCESS_NOT_EXISTS']="";
-$lang['L_ZEND_ID_ACCESS_NOT_READABLE']="";
-$lang['L_ZEND_ID_ACCESS_NOT_UPLOADED']="";
-$lang['L_ZEND_ID_ACCESS_NOT_WRITABLE']="";
-$lang['L_ZEND_ID_DIGITS_INVALID']="";
-$lang['L_ZEND_ID_DIGITS_STRING_EMPTY']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED']="";
-$lang['L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING']="";
-$lang['L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE']="";
-$lang['L_ZEND_ID_HOSTNAME_DASH_CHARACTER']="";
-$lang['L_ZEND_ID_HOSTNAME_INVALID']="";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME']="";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA']="";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME']="";
-$lang['L_ZEND_ID_HOSTNAME_INVALID_URI']="";
-$lang['L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED']="";
-$lang['L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED']="";
-$lang['L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD']="";
-$lang['L_ZEND_ID_HOSTNAME_UNKNOWN_TLD']="";
-$lang['L_ZEND_ID_IS_EMPTY']="";
-$lang['L_ZEND_ID_MISSING_TOKEN']="";
-$lang['L_ZEND_ID_NOT_DIGITS']="";
-$lang['L_ZEND_ID_NOT_EMPTY_INVALID']="";
-$lang['L_ZEND_ID_NOT_SAME']="";
+$lang=array(
+'L_ACTION' => 'Akce',
+'L_ACTIVATED' => 'aktivní',
+'L_ACTUALLY_INSERTED_RECORDS' => 'Doposud <b>%s</b> Bylo<br /> úspěšně přidaných záznamů.',
+'L_ACTUALLY_INSERTED_RECORDS_OF' => 'Právě <b>%s</b>  záznamů ze <b>%s</b><br />  bylo úspěšně přidáno.',
+'L_ADD' => 'Přidat',
+'L_ADDED' => 'přidané',
+'L_ADD_DB_MANUALLY' => 'Přidat databázi manualně',
+'L_ADD_RECIPIENT' => 'Přidat příjemce',
+'L_ALL' => 'vše',
+'L_ANALYZE' => 'Analyzovat',
+'L_ANALYZING_TABLE' => 'Tabulka \'<b>%s</b>\' se obnovuje.',
+'L_ASKDBCOPY' => 'Chcete zkopírovat databázi `%s` k<br /> databázi `%s`?',
+'L_ASKDBDELETE' => 'Pokud chcete odstranit databázi `%s` s<br /> obsahem?',
+'L_ASKDBEMPTY' => 'Chcete vyprázdnit databázi `%s` ?',
+'L_ASKDELETEFIELD' => 'Chcete odstranit pole?',
+'L_ASKDELETERECORD' => 'Jste si jisti, že chcete smazat tento<br /> záznam?',
+'L_ASKDELETETABLE' => 'V případě, že tabulka `%s` bude<br /> smazaná?',
+'L_ASKTABLEEMPTY' => 'V případě, že tabulka `%s` bude<br /> smazaná?',
+'L_ASKTABLEEMPTYKEYS' => 'Chcete vymazat tabulku `%s` a<br /> resetovat indexy?',
+'L_ATTACHED_AS_FILE' => 'připojena jako soubor',
+'L_ATTACH_BACKUP' => 'Pripojit zálohu',
+'L_AUTHENTICATE' => '',
+'L_AUTHORIZE' => 'Povolit',
+'L_AUTODELETE' => 'Smazat zálohy automatick',
+'L_BACK' => 'zpět',
+'L_BACKUPFILESANZAHL' => 'Počet záloh v adresáři',
+'L_BACKUPS' => 'zálohy',
+'L_BACKUP_DBS' => 'DB na zálohování',
+'L_BACKUP_TABLE_DONE' => 'Záloha tabulky`%s`dokončena.',
+'L_BACK_TO_OVERVIEW' => 'Databáze Přehled',
+'L_CALL' => 'Volat',
+'L_CANCEL' => 'Konec',
+'L_CANT_CREATE_DIR' => 'Nepodařilo se vytvořit adresář \'%s\'.<br /> <br />Prosím, vytvořte jej pomocí FTP<br /> klienta',
+'L_CHANGE' => 'změna',
+'L_CHANGEDIR' => 'Změna adresáře',
+'L_CHANGEDIRERROR' => 'Nemohu změnit adresář!',
+'L_CHARSET' => 'Kódování',
+'L_CHARSETS' => '',
+'L_CHECK' => 'Kontrola',
+'L_CHECK_DIRS' => 'Vytvoření adresářů - work',
+'L_CHOOSE_CHARSET' => 'MySQLDumper nemůže zjistit kódování<br /> souboru zálohy automaticky.<br /><br<br /> />Musíte vybrat znakovou sadu, s<br /> kterou byla tato záloha<br /> vytvořena.<br /><br />Zjistíte-li jakékoliv<br /> problémy s některými znaky po<br /> restaurování, můžete opakovat<br /> backup-pokrok a poté zvolte jinou<br /> znakovou sadu.<br /><br />Hodně štěstí. ;)',
+'L_CHOOSE_DB' => 'Vyberte databázi',
+'L_CLEAR_DATABASE' => 'Vyprázdnit databazi',
+'L_CLOSE' => 'Zavřít',
+'L_COLLATION' => 'Kódování',
+'L_COMMAND' => 'Příkaz',
+'L_COMMAND_AFTER_BACKUP' => 'Příkaz po zálohování',
+'L_COMMAND_BEFORE_BACKUP' => 'Příkaz před zálohováním',
+'L_COMMENT' => 'Komentář',
+'L_COMPRESSED' => 'komprimované (gz)',
+'L_CONFBASIC' => 'Základní nastavení',
+'L_CONFIG' => 'Nastavení',
+'L_CONFIGFILE' => 'Nastaveno zálohování',
+'L_CONFIGFILES' => 'Nastaveno zálohování',
+'L_CONFIGURATIONS' => 'Nastavení',
+'L_CONFIG_AUTODELETE' => 'Automazanie',
+'L_CONFIG_CRONPERL' => 'Cron zálohování - Nastavení pro Perl<br /> skript',
+'L_CONFIG_EMAIL' => 'Email Oznámení',
+'L_CONFIG_FTP' => 'FTP Převod záloh mezi ftp',
+'L_CONFIG_HEADLINE' => 'Nastavení',
+'L_CONFIG_INTERFACE' => 'Jazyk * Vzhled',
+'L_CONFIG_LOADED' => 'Nastavení "%s" bylo úspěšně uloženo.',
+'L_CONFIRM_CONFIGFILE_DELETE' => 'Opravdu smazat Nastavení zálohování<br /> %s?',
+'L_CONFIRM_DELETE_FILE' => '',
+'L_CONFIRM_DELETE_TABLES' => 'Opravdu smazat vybrané tabulky?',
+'L_CONFIRM_DROP_DATABASES' => 'Přejete si vybrané databáze opravdu<br /> vymazat? Upozornění: Všechny údaje<br /> budou vymazány! Možná byste měli<br /> vytvořit zálohu .',
+'L_CONFIRM_RECIPIENT_DELETE' => 'Přejete si příjemce "%s" opravdu odstranit?',
+'L_CONFIRM_TRUNCATE_DATABASES' => 'Přejete si vymazat všechny tabulky<br /> vybraných databází s? Upozornění:<br /> Všechny údaje budou vymazány! Možná<br /> byste měli udělat zálohu pro<br /> pozdější obnovení.',
+'L_CONFIRM_TRUNCATE_TABLES' => 'Opravdu li vyprázdnit vybrané<br /> tabulky?',
+'L_CONNECT' => 'připojit',
+'L_CONNECTIONPARS' => 'Nastavení připojení',
+'L_CONNECTTOMYSQL' => 'Pripojit k MySQL',
+'L_CONTINUE_MULTIPART_RESTORE' => 'Spustit vícedílné obnovení zálohy <br /> \'%s\' .',
+'L_CONVERTED_FILES' => 'Převedené soubory',
+'L_CONVERTER' => 'Zálohování Konvert',
+'L_CONVERTING' => 'Konverze',
+'L_CONVERT_FILE' => 'Soubory, které mají být převedeny',
+'L_CONVERT_FILENAME' => 'Jméno cílového souboru (bez přípony)',
+'L_CONVERT_FILEREAD' => 'Konvertování zálohy \'%s\'',
+'L_CONVERT_FINISHED' => 'Dokončení konverze, \'%s\' bylo<br /> úspěšné.',
+'L_CONVERT_START' => 'Začít konvertovat',
+'L_CONVERT_TITLE' => 'Převést zálohu na MSD Format',
+'L_CONVERT_WRONG_PARAMETERS' => 'Špatné nastavení! Převod není<br /> možný.',
+'L_CREATE' => 'Vytvořit',
+'L_CREATED' => '',
+'L_CREATEDIRS' => 'Vytvořit Adresáře',
+'L_CREATE_AUTOINDEX' => 'Vytvořit Auto-Index',
+'L_CREATE_CONFIGFILE' => 'Vytvoriť nové nastavenie',
+'L_CREATE_DATABASE' => 'Vytvořit nové nastavení',
+'L_CREATE_TABLE_SAVED' => 'Definice tabulky `%s` uložena.',
+'L_CREDITS' => 'Pomoc',
+'L_CRONSCRIPT' => 'Cron script',
+'L_CRON_COMMENT' => 'Zadejte komentář',
+'L_CRON_COMPLETELOG' => 'Log kompletní výstup',
+'L_CRON_EXECPATH' => 'Cesta skriptů Perl',
+'L_CRON_EXTENDER' => 'Přípona zálohy',
+'L_CRON_PRINTOUT' => 'Tiskový výstup na obrazovku.',
+'L_CSVOPTIONS' => 'CSV Možnosti',
+'L_CSV_EOL' => 'Samostatné řádky s',
+'L_CSV_ERRORCREATETABLE' => 'Chyba při vytváření tabulky `%s` !',
+'L_CSV_FIELDCOUNT_NOMATCH' => 'Počet polí nesouhlasí s údaji o<br /> přesunu (%d na místo %d).',
+'L_CSV_FIELDSENCLOSED' => 'Oblastech ohraničených',
+'L_CSV_FIELDSEPERATE' => 'Oblasti oddělenými',
+'L_CSV_FIELDSESCAPE' => 'Fields escaped with',
+'L_CSV_FIELDSLINES' => '%d pole znal, zcela %d linky',
+'L_CSV_FILEOPEN' => 'Otevřít CSV soubor',
+'L_CSV_NAMEFIRSTLINE' => 'Názvy polí v první linii',
+'L_CSV_NODATA' => 'Nebyly nalezeny žádné data pro<br /> import!',
+'L_CSV_NULL' => 'Nahradit NULL s',
+'L_DATABASES_OF_USER' => '',
+'L_DATABASE_CREATED_FAILED' => '',
+'L_DATABASE_CREATED_SUCCESS' => '',
+'L_DATASIZE' => 'Velikost dat',
+'L_DATASIZE_INFO' => 'Toto je velikost dat - ne velikost<br /> souboru zálohy',
+'L_DAY' => 'Den',
+'L_DAYS' => 'Dny',
+'L_DB' => 'Databáze',
+'L_DBCONNECTION' => 'Databaza Připojení',
+'L_DBPARAMETER' => 'Údaje k Databázi',
+'L_DBS' => 'Databáze',
+'L_DB_ADAPTER' => '',
+'L_DB_BACKUPPARS' => 'Nastavení zálohování databáze',
+'L_DB_DEFAULT' => '',
+'L_DB_HOST' => 'Hostitel',
+'L_DB_IN_LIST' => 'Databázi \'%s\' se nepodařilo přidat,<br /> protože již existuje.',
+'L_DB_NAME' => 'Název databáze',
+'L_DB_PASS' => 'Heslo',
+'L_DB_SELECT_ERROR' => '<br />Chyba:<br />Výběr z databáze <b>',
+'L_DB_SELECT_ERROR2' => '</b> selhal!',
+'L_DB_USER' => 'Uživatel',
+'L_DEFAULT_CHARACTER_SET_NAME' => '',
+'L_DEFAULT_CHARSET' => 'Předvolená znaková sada',
+'L_DEFAULT_COLLATION_NAME' => '',
+'L_DELETE' => 'Smazat',
+'L_DELETE_DATABASE' => 'Smazat databázi',
+'L_DELETE_FILE_ERROR' => 'Chyba při odstraňovaní zálohy "%s"!',
+'L_DELETE_FILE_SUCCESS' => 'Záloha "%s" byla úspěšně odstraněna.',
+'L_DELETE_HTACCESS' => 'Odstranit ochranu adresářů (smazat<br /> .htaccess)',
+'L_DESCRIPTION' => '',
+'L_DESELECT_ALL' => 'Zrušit výběr',
+'L_DIR' => 'Adresář',
+'L_DISABLEDFUNCTIONS' => 'Blokována Funkce',
+'L_DO' => 'Vykonat',
+'L_DOCRONBUTTON' => 'Spustit Perl Cron skript',
+'L_DONE' => 'Hotovo!',
+'L_DONT_ATTACH_BACKUP' => 'Nepřipojovat zálohování',
+'L_DOPERLTEST' => 'Test Perl Modul',
+'L_DOSIMPLETEST' => 'Test Perl',
+'L_DOWNLOAD_FILE' => 'Stáhnout soubor',
+'L_DO_NOW' => 'Nyní běží',
+'L_DUMP' => 'Záloha',
+'L_DUMP_ENDERGEBNIS' => 'Záloha obsahuje <b>%s</b> tabulek a<br /> <b>%s</b> záznamů.<br />',
+'L_DUMP_FILENAME' => 'Název zalohy',
+'L_DUMP_HEADLINE' => 'Vytvářím zálohu ...',
+'L_DUMP_NOTABLES' => 'Nebyly nalezeny žádné tabulky v databázi<br /> `<b>%s</b>`',
+'L_DUMP_OF_DB_FINISHED' => 'Zálohování databáze `%s` dokončené',
+'L_DURATION' => 'Doba trvání',
+'L_EDIT' => 'upraviť',
+'L_EHRESTORE_CONTINUE' => 'pokračovat v přepisování a<br /> nahrávání chyby',
+'L_EHRESTORE_STOP' => 'stop',
+'L_EMAIL' => 'Mail',
+'L_EMAILBODY_ATTACH' => 'Příloha obsahuje zálohu<br /> MySQL-Databáze.<br />Zálohování<br /> databáze `%s`<br /><br /><br />Následující<br /> soubor byl vytvořen:<br /><br />%s <br<br /> /><br />>S pozdravem<br /><br<br /> />MySQLDumper<br />',
+'L_EMAILBODY_FOOTER' => '`<br /><br />S pozdravem<br /><br<br /> />MySQLDumper<br />',
+'L_EMAILBODY_MP_ATTACH' => 'Rozdělená Záloha byla vytvořena.<br<br /> />Záložní soubory jsou připojeny na<br /> samostatné e-maily.<br />Zálohování<br /> databáze `%s`<br /><br /><br />Následující<br /> soubory byly vytvořeny:<br /><br />%s<br /> <br /><br />S pozdravem<br /><br<br /> />MySQLDumper<br />',
+'L_EMAILBODY_MP_NOATTACH' => 'Rozdělená Záloha byla vytvořena.<br<br /> />Záložné súbory nie sú pripojené<br /> na tento e-mail!<br />Zálohování<br /> databáze `%s`<br /><br /><br />Následující<br /> soubory byly vytvořeny:<br /><br<br /> />%s<br /><br /><br />S pozdravem<br /><br<br /> />MySQLDumper<br />',
+'L_EMAILBODY_NOATTACH' => 'Soubory nejsou připojeny na tento<br /> e-mail!<br />Zálohování databáze<br /> `%s`<br /><br /><br />Následující soubory<br /> byly vytvořeny:<br /><br />%s<br /><br /><br<br /> />S pozdravem<br /><br />MySQLDumper<br<br /> />',
+'L_EMAILBODY_TOOBIG' => 'Záložní soubor překročil maximální<br /> velikost % s, a nebyl připojen k<br /> tomuto e-mailu.<br />Zálohování<br /> databáze `%s`<br /><br /><br />Následující<br /> soubor byl vytvořený:<br /><br />%s<br /><br<br /> /><br />S pozdravem<br /><br<br /> />MySQLDumper<br />',
+'L_EMAIL_ADDRESS' => 'E-mailová adresa',
+'L_EMAIL_CC' => 'E-mail přijímající CC',
+'L_EMAIL_MAXSIZE' => 'Maximální velikost přílohy',
+'L_EMAIL_ONLY_ATTACHMENT' => 'pouze přiloženou zálohu.',
+'L_EMAIL_RECIPIENT' => 'Příjemce',
+'L_EMAIL_SENDER' => 'Adresa odesílatele e-mailu',
+'L_EMAIL_START' => 'Spustit odesílání e-mailů',
+'L_EMAIL_WAS_SEND' => 'E-mail byl úspěšně odeslán',
+'L_EMPTY' => 'Vyprázdniť',
+'L_EMPTYKEYS' => 'prázdné a reset indexy',
+'L_EMPTYTABLEBEFORE' => 'Prázdné tabulky před',
+'L_EMPTY_DB_BEFORE_RESTORE' => 'Odstranit tabulky před obnovením',
+'L_ENCODING' => 'Kódování',
+'L_ENCRYPTION_TYPE' => 'Druh šifrování',
+'L_ENGINE' => 'Typ',
+'L_ENTER_DB_INFO' => 'Nejdřív kliknite na tlačidlo "Připojit k<br /> MySQL". Zde zadejte název databáze pouze<br /> tehdy když se nedá připojit k<br /> databázi.',
+'L_ENTRY' => 'Vstup',
+'L_ERROR' => 'Chyba',
+'L_ERRORHANDLING_RESTORE' => 'Ošetření chyb při obnovování',
+'L_ERROR_CONFIGFILE_NAME' => 'Záloha "%s" obsahuje neplatné znaky.',
+'L_ERROR_DELETING_CONFIGFILE' => 'Chyba: nelze odstranit<br /> konfigurační soubor %s!',
+'L_ERROR_LOADING_CONFIGFILE' => 'Nepodařilo se načíst konfigurační soubor "%s"."',
+'L_ERROR_LOG' => 'Chyba Logu',
+'L_ERROR_MULTIPART_RESTORE' => 'Vícedílná-Obnova: Nemohu najít<br /> další Zalohovací soubor \'%s\'!',
+'L_ESTIMATED_END' => 'Předpokládané ukončení',
+'L_EXCEL2003' => 'Excel od roku 2003',
+'L_EXISTS' => 'Existuje',
+'L_EXPORT' => 'Export',
+'L_EXPORTFINISHED' => 'Export ukončen.',
+'L_EXPORTLINES' => '<strong>%s</strong> lines exported',
+'L_EXPORTOPTIONS' => 'Volby exportu',
+'L_EXTENDEDPARS' => 'Rozšířené Nastavení',
+'L_FADE_IN_OUT' => 'Zobrazit on/off',
+'L_FATAL_ERROR_DUMP' => 'Vážná chyba: Zpráva o vytvoření<br /> tabulky \'%s\' v databazi \'%s\' se nedá<br /> číst!',
+'L_FIELDS' => 'Oblasti',
+'L_FIELDS_OF_TABLE' => 'Oblasti tabulky',
+'L_FILE' => 'Záloha',
+'L_FILES' => 'Zálohy',
+'L_FILESIZE' => 'Velikost zálohy',
+'L_FILE_MANAGE' => 'Správa záloh',
+'L_FILE_OPEN_ERROR' => 'Chyba: Nemohu vytvořit zálohu.',
+'L_FILE_SAVED_SUCCESSFULLY' => 'Záloha byla úspěšně uložena.',
+'L_FILE_SAVED_UNSUCCESSFULLY' => 'Zálohu se nepodařilo uložit!',
+'L_FILE_UPLOAD_SUCCESSFULL' => 'Záloha \'%s\' byla úspěšně uložena.',
+'L_FILTER_BY' => 'Filtrovat podle',
+'L_FM_ALERTRESTORE1' => 'Chystáte se obnovit databázi',
+'L_FM_ALERTRESTORE2' => 'vybrána záloha pro obnovení',
+'L_FM_ALERTRESTORE3' => 'Přejete si ji obnovit?',
+'L_FM_ALL_BU' => 'Všechny Zálohy',
+'L_FM_ANZ_BU' => 'Zálohy',
+'L_FM_ASKDELETE1' => 'Vybrali jste zalohu (y)',
+'L_FM_ASKDELETE2' => 'Přejete si opravdu odstranit?',
+'L_FM_ASKDELETE3' => 'Chcete smazat automazání a nastavit<br /> nová pravidla pro automazání?',
+'L_FM_ASKDELETE4' => 'Chcete smazat všechny zálohy?',
+'L_FM_ASKDELETE5' => 'Chcete smazat všechny zálohy s<br /> příponou',
+'L_FM_ASKDELETE5_2' => '*  Nyní odstranit?',
+'L_FM_AUTODEL1' => 'Automazaní: Následující zálohy byly<br /> vymazány, protože maximální<br /> ponechání záloh na ftp je:',
+'L_FM_CHOOSE_ENCODING' => 'Vyberte kódování souboru zálohy',
+'L_FM_COMMENT' => 'Zadejte komentář',
+'L_FM_DELETE' => 'Smazat',
+'L_FM_DELETE1' => 'Záloha',
+'L_FM_DELETE2' => 'byla úspěšně odstraněna.',
+'L_FM_DELETE3' => 'nelze odstranit!',
+'L_FM_DELETEALL' => 'Smazat Všechny zálohy',
+'L_FM_DELETEALLFILTER' => 'Smazat vše s',
+'L_FM_DELETEAUTO' => 'Automazaní spustit manuálně',
+'L_FM_DUMPSETTINGS' => 'Záloha Nastavení',
+'L_FM_DUMP_HEADER' => 'Záloha',
+'L_FM_FILEDATE' => 'Datum',
+'L_FM_FILES1' => 'Záloha databáze',
+'L_FM_FILESIZE' => 'Velikost',
+'L_FM_FILEUPLOAD' => 'Nahrát zálohovaný soubor',
+'L_FM_FREESPACE' => 'Volné místo Serveru',
+'L_FM_LAST_BU' => 'Poslední záloha',
+'L_FM_NOFILE' => 'Nevybrali jste zálohu na obnovení!',
+'L_FM_NOFILESFOUND' => 'Nebyla nalezena žádná záloha.',
+'L_FM_RECORDS' => 'Záznamů',
+'L_FM_RESTORE' => 'Obnovit',
+'L_FM_RESTORE_HEADER' => 'Obnova databáze `<strong>%s</strong>`',
+'L_FM_SELECTTABLES' => 'Vybrat tabulky',
+'L_FM_STARTDUMP' => 'Spustit novou zálohu',
+'L_FM_TABLES' => 'Tabulek',
+'L_FM_TOTALSIZE' => 'Celková velikost',
+'L_FM_UPLOADFAILED' => 'Nahrávání selhalo!',
+'L_FM_UPLOADFILEEXISTS' => 'Záloha se stejným názvem již existuje<br /> !',
+'L_FM_UPLOADFILEREQUEST' => 'prosím, vyberte soubor.',
+'L_FM_UPLOADMOVEERROR' => 'Nepodařilo se přesunout zálohu do<br /> zvoleného adresáře .',
+'L_FM_UPLOADNOTALLOWED1' => 'Tento typ zálohy není podporován.',
+'L_FM_UPLOADNOTALLOWED2' => 'Platné typy jsou: *.gz a *.sql-súbor',
+'L_FOUND_DB' => 'Nalezená db',
+'L_FROMFILE' => 'ze souboru',
+'L_FROMTEXTBOX' => 'od textového pole',
+'L_FTP' => 'FTP',
+'L_FTP_ADD_CONNECTION' => 'Přidat připojení',
+'L_FTP_CHOOSE_MODE' => 'FTP Přesun Mód',
+'L_FTP_CONFIRM_DELETE' => 'Chcete toto FTP připojení opravdu<br /> zrušit?',
+'L_FTP_CONNECTION' => 'FTP-připojení',
+'L_FTP_CONNECTION_CLOSED' => 'FTP-Připojení ukončeno',
+'L_FTP_CONNECTION_DELETE' => 'Odstranit připojení',
+'L_FTP_CONNECTION_ERROR' => 'Připojení na server \'% s\' pomocí<br /> portu% s nemoholo být stanovené',
+'L_FTP_CONNECTION_SUCCESS' => 'Připojení na server \'% s\' pomocí<br /> portu% s bylo založeno úspěšně',
+'L_FTP_DIR' => 'Nahrát adresář',
+'L_FTP_FILE_TRANSFER_ERROR' => 'Převod zálohy \'% s\' byl chybný',
+'L_FTP_FILE_TRANSFER_SUCCESS' => 'Záloha \'% s\' byla převedena úspěšně',
+'L_FTP_LOGIN_ERROR' => 'Registrace jako uživatel \'% s\' byla<br /> zamítnuta',
+'L_FTP_LOGIN_SUCCESS' => 'Registrace jako uživatel \'% s\' byla<br /> úspěšná',
+'L_FTP_OK' => 'FTP údaje jsou ok',
+'L_FTP_PASS' => 'Heslo',
+'L_FTP_PASSIVE' => 'používat pasivní mód',
+'L_FTP_PASV_ERROR' => 'Změna v pasivním režimu FTP nebyla<br /> úspěšná',
+'L_FTP_PASV_SUCCESS' => 'Změna v pasivním režimu FTP byla<br /> úspěšná',
+'L_FTP_PORT' => 'Port',
+'L_FTP_SEND_TO' => 'z <strong>%s</strong><br /> do<br /> <strong>%s</strong>',
+'L_FTP_SERVER' => 'Servr',
+'L_FTP_SSL' => 'Bezpečné SSL FTP připojení',
+'L_FTP_START' => 'Spuštění FTP přenos',
+'L_FTP_TIMEOUT' => 'Připojení Timeout',
+'L_FTP_TRANSFER' => 'FTP Převod',
+'L_FTP_USER' => 'Uživatel',
+'L_FTP_USESSL' => 'použít SSL připojení',
+'L_GENERAL' => 'všeobecné',
+'L_GZIP' => 'GZip komprese',
+'L_GZIP_COMPRESSION' => 'GZip Komprese',
+'L_HOME' => 'Obsa',
+'L_HOUR' => 'Hodin',
+'L_HOURS' => 'Hodin',
+'L_HTACC_ACTIVATE_REWRITE_ENGINE' => 'Povolit přepisován',
+'L_HTACC_ADD_HANDLER' => 'Zadejte dodavatel',
+'L_HTACC_CONFIRM_DELETE' => 'Přejete si vytvořit adresář ochrany',
+'L_HTACC_CONTENT' => 'Obsah soubor',
+'L_HTACC_CREATE' => 'Vytvořit adresář ochran',
+'L_HTACC_CREATED' => 'Adresář ochrany byl vytvořen',
+'L_HTACC_CREATE_ERROR' => 'Došlo k chybě při vytváření adresáře<br /> ochrany!<br />Prosím vytvořte ručně 2<br /> soubory s následujícím obsahe',
+'L_HTACC_CRYPT' => 'Crypt 8 Chars max (Linux and<br /> Unix-Systems',
+'L_HTACC_DENY_ALLOW' => 'Vypnout / Zapnou',
+'L_HTACC_DIR_LISTING' => 'Výpis adresář',
+'L_HTACC_EDIT' => 'Upravit .htacces',
+'L_HTACC_ERROR_DOC' => 'Chyba Dokument',
+'L_HTACC_EXAMPLES' => 'Další příklady a dokumentac',
+'L_HTACC_EXISTS' => 'V současnosti již existuje adresář<br /> ochrany. Když vytvoříte nový, tím<br /> přepíšete starý',
+'L_HTACC_MAKE_EXECUTABLE' => 'Umožnit proveden',
+'L_HTACC_MD5' => 'MD5 (Linux and Unix-Systems',
+'L_HTACC_NO_ENCRYPTION' => 'čistí text, ne Cryption (Windows',
+'L_HTACC_NO_USERNAME' => 'Musíte zadat jméno',
+'L_HTACC_PROPOSED' => 'Naléhavé doporučen',
+'L_HTACC_REDIRECT' => 'Přesměrován',
+'L_HTACC_SCRIPT_EXEC' => 'Spuštění skript',
+'L_HTACC_SHA1' => 'SHA1 (all Systems',
+'L_HTACC_WARNING' => 'Pozor! . Htaccess přímo ovlivňuje<br /> chování prohlížeče. <br /> Při<br /> nesprávném obsahu, může být že<br /> vaše stránky již nebudou dostupn',
+'L_IMPORT' => 'Import Nastavenia',
+'L_IMPORTIEREN' => 'Import',
+'L_IMPORTOPTIONS' => 'Import Možnosti',
+'L_IMPORTSOURCE' => 'Import Zdroj',
+'L_IMPORTTABLE' => 'Import v tabulce',
+'L_IMPORT_NOTABLE' => 'Nebyly vybrány Tabulky pro import!',
+'L_IN' => 'v',
+'L_INDEX_SIZE' => '',
+'L_INFO_ACTDB' => 'Zvolená Databáz',
+'L_INFO_DATABASES' => 'Tyto databáze jsou na serveru',
+'L_INFO_DBEMPTY' => 'Databáze je prázdná',
+'L_INFO_FSOCKOPEN_DISABLED' => 'Na tomto serveru PHP-příkaz fsockopen<br /> () je zakázána konfigurace serveru.<br /> Protože toto automatické stahování<br /> jazykových balíčků není možné.<br /> Pokud chcete toto obejít, můžete si<br /> stáhnout packack ručně, extrahujte jej<br /> do vašeho počítače a nahrajte je do<br /> adresáře "language" vaší<br /> instalace MySQLDumper. Pak nový<br /> jazyk balíček je k dispozici na<br /> této stránce',
+'L_INFO_LASTUPDATE' => 'Poslední aktualizac',
+'L_INFO_LOCATION' => 'Vaše místo j',
+'L_INFO_NODB' => 'databáze neexistuje',
+'L_INFO_NOPROCESSES' => 'žádné běžící proces',
+'L_INFO_NOSTATUS' => 'nejsou k dispozici žádné zprávy o<br /> stav',
+'L_INFO_NOVARS' => 'ukazatele není k dispozic',
+'L_INFO_OPTIMIZED' => 'optimalizovan',
+'L_INFO_RECORDS' => 'zázna',
+'L_INFO_SIZE' => 'Velikos',
+'L_INFO_SUM' => 'celke',
+'L_INSTALL' => 'Instalace',
+'L_INSTALLED' => 'Nainstalované',
+'L_INSTALL_DB_DEFAULT' => '',
+'L_INSTALL_HELP_PORT' => '(prázdný = Default Port)',
+'L_INSTALL_HELP_SOCKET' => '(prázdný = Default Socket)',
+'L_IS_WRITABLE' => 'Nenainstalované',
+'L_KILL_PROCESS' => 'Ukončit proce',
+'L_LANGUAGE' => 'Jazyk',
+'L_LANGUAGE_NAME' => 'Czech',
+'L_LASTBACKUP' => 'Poslední záloh',
+'L_LOAD' => 'Nahrát výchozí nastavení',
+'L_LOAD_DATABASE' => 'Znovu načíst databáz',
+'L_LOAD_FILE' => 'Nahrát soubo',
+'L_LOG' => 'Lo',
+'L_LOGFILENOTWRITABLE' => 'Nelze zapsat log souboru',
+'L_LOGFILES' => 'Nahrát soubor',
+'L_LOGGED_IN' => '',
+'L_LOGIN' => '',
+'L_LOGIN_AUTOLOGIN' => '',
+'L_LOGIN_INVALID_USER' => '',
+'L_LOGOUT' => '',
+'L_LOG_CREATED' => '',
+'L_LOG_DELETE' => 'Smazat Log',
+'L_LOG_MAXSIZE' => '',
+'L_LOG_NOT_READABLE' => '',
+'L_MAILERROR' => 'Odeslání e-mailu selhalo!',
+'L_MAILPROGRAM' => 'Mail program',
+'L_MAXIMUM_LENGTH' => '',
+'L_MAXIMUM_LENGTH_EXPLAIN' => '',
+'L_MAXSIZE' => 'max. Velikost',
+'L_MAX_BACKUP_FILES_EACH2' => 'Pro každou databáz',
+'L_MAX_EXECUTION_TIME' => 'Maximální doba realizac',
+'L_MAX_UPLOAD_SIZE' => 'Maximální velikost',
+'L_MAX_UPLOAD_SIZE_INFO' => 'Pokud je vaše záloha větší, jako je výše uvedená omezení,musíte ji  nahrát pomocí FTP do adresáře "work/backup". <br />Po tomto můžete pokračovat.',
+'L_MEMORY' => 'Pamě',
+'L_MENU_HIDE' => '',
+'L_MENU_SHOW' => '',
+'L_MESSAGE' => 'Oznámen',
+'L_MESSAGE_TYPE' => 'Správy - typ',
+'L_MINUTE' => 'Minut',
+'L_MINUTES' => 'Minut',
+'L_MOBILE_OFF' => '',
+'L_MOBILE_ON' => '',
+'L_MODE_EASY' => 'Jednoduch',
+'L_MODE_EXPERT' => 'Odborní',
+'L_MSD_INFO' => 'MySQL Dumpe',
+'L_MSD_MODE' => 'MySQLDumper-Mód',
+'L_MSD_VERSION' => 'MySQLDumper-Verz',
+'L_MULTIDUMP' => 'Zálohování na část',
+'L_MULTIDUMP_FINISHED' => 'Zálohování Databáze <b>% d </ b> dokončeno',
+'L_MULTIPART_ACTUAL_PART' => 'Podle aktuálního soubor',
+'L_MULTIPART_SIZE' => 'Maximální velikost záloh',
+'L_MULTI_PART' => 'Rozdělení záloh',
+'L_MYSQLVARS' => 'MySQL Ukazatel',
+'L_MYSQL_CLIENT_VERSION' => 'MySQL-Klien',
+'L_MYSQL_CONNECTION_ENCODING' => 'Standardní kódování MySQL-Serv',
+'L_MYSQL_DATA' => 'MySQL-Data',
+'L_MYSQL_ROUTINE' => '',
+'L_MYSQL_ROUTINES' => '',
+'L_MYSQL_ROUTINES_EXPLAIN' => '',
+'L_MYSQL_TABLES_EXPLAIN' => '',
+'L_MYSQL_VERSION' => 'MySQL-Verz',
+'L_MYSQL_VERSION_TOO_OLD' => '',
+'L_MYSQL_VIEW' => '',
+'L_MYSQL_VIEWS' => '',
+'L_MYSQL_VIEWS_EXPLAIN' => '',
+'L_NAME' => 'Název',
+'L_NEW' => 'nov',
+'L_NEWTABLE' => 'Nová tabulka',
+'L_NEXT_AUTO_INCREMENT' => 'Další automatický index',
+'L_NEXT_AUTO_INCREMENT_SHORT' => 'n. Auto-Index',
+'L_NO' => 'n',
+'L_NOFTPPOSSIBLE' => 'Neexistují žádné FTP funkce',
+'L_NOGZPOSSIBLE' => 'Vzhledem k tomu, Zlib není<br /> nainstalován, nelze použít<br /> gzip-Funkce',
+'L_NONE' => 'žádn',
+'L_NOREVERSE' => 'Nejstarší záznam první',
+'L_NOTAVAIL' => '<em>nie je k dispozícii</em',
+'L_NOTHING_TO_DO' => '',
+'L_NOTICE' => 'Poznámka',
+'L_NOTICES' => 'Oznámeni',
+'L_NOT_ACTIVATED' => 'neaktivn',
+'L_NOT_SUPPORTED' => 'Táto záloha nepodporuje túto funkciu.',
+'L_NO_DB_FOUND' => 'Nepodarilo sa nájsť žiadne databázy!<br />Prosím zadajte údaje pripojenia a názov vašej databázy ručne.',
+'L_NO_DB_FOUND_INFO' => 'Pripojenie k databáze bol úspešne<br /> nadviazané.<br /><br />Vaše užívateľské dáta sú platné a boli prijaté<br /> MySQL-Server.<br /><br />MySQLDumper ale nebola schopná nájsť žiadnu<br /> databázu.<br /><br />Automatická detekcia<br /> pomocou skriptu je blokovaný na<br /> niektorých serveroch.<br /><br />Musíte<br /> zadať názov databázy ručne po<br /> dokončení inštalácie.<br />Kliknite na "nastavenie" "Pripojenie Parameter -<br /> display" a zadajte názov databázy tu.',
+'L_NO_DB_SELECTED' => 'Neexistuje žiadna zvolená databáza.',
+'L_NO_ENTRIES' => 'Tabulka "<b>%s</b>" je prázdna a nemá žiadny záznam.',
+'L_NO_MSD_BACKUPFILE' => 'Zálohovanie iných skriptov',
+'L_NO_NAME_GIVEN' => 'Nezadali ste meno',
+'L_NR_OF_QUERIES' => '',
+'L_NR_OF_RECORDS' => '',
+'L_NR_TABLES_OPTIMIZED' => '%s tabuľiek bolo optimalizovaných.',
+'L_NUMBER_OF_FILES_FORM' => 'Zmazať podľa počtu záloh v jednej<br /> databáze',
+'L_OF' => 'z',
+'L_OK' => 'O',
+'L_OPTIMIZE' => 'Optimalizovať',
+'L_OPTIMIZE_TABLES' => 'Optimalizovať tabuľky pred<br /> Zálohovaním',
+'L_OPTIMIZE_TABLE_ERR' => 'Chyba Optimalizácie tabuľky `%s`.',
+'L_OPTIMIZE_TABLE_SUCC' => 'Tabuľka `%s` bola úspešne<br /> optimalizovaná.',
+'L_OS' => 'Operačný syste',
+'L_OVERHEAD' => '',
+'L_PAGE' => '',
+'L_PAGE_REFRESHS' => 'Obnovená stránk',
+'L_PASS' => 'Heslo',
+'L_PASSWORD' => 'Heslo',
+'L_PASSWORDS_UNEQUAL' => 'Heslá nie sú zhodné alebo prázdne',
+'L_PASSWORD_REPEAT' => 'Heslo (opakovať)',
+'L_PASSWORD_STRENGTH' => 'Sila hesla',
+'L_PERLOUTPUT1' => 'Vstup do crondump.pl pre<br /> absolute_path_of_configdir',
+'L_PERLOUTPUT2' => 'URL pre prehliadače alebo pre externú<br /> prácu Cron',
+'L_PERLOUTPUT3' => 'Príkazové pre Shell alebo pre crontab',
+'L_PERL_COMPLETELOG' => 'Perl-kompletné-Log',
+'L_PERL_LOG' => 'Perl-Log',
+'L_PHPBUG' => 'Chyba v zlib!Nemožno kompresie',
+'L_PHPMAIL' => 'PHP-Mail Funkcia()',
+'L_PHP_EXTENSIONS' => 'PHP-Extension',
+'L_PHP_LOG' => '',
+'L_PHP_VERSION' => 'PHP-Verzi',
+'L_PHP_VERSION_TOO_OLD' => '',
+'L_POP3_PORT' => 'POP3-Port',
+'L_POP3_SERVER' => 'POP3-Server',
+'L_PORT' => 'Port',
+'L_POSITION_BC' => 'dole v strede',
+'L_POSITION_BL' => 'vľavo dole',
+'L_POSITION_BR' => 'vpravo dole',
+'L_POSITION_MC' => 'Stred-stred',
+'L_POSITION_ML' => 'V strede vľavo',
+'L_POSITION_MR' => 'V strede vpravo',
+'L_POSITION_NOTIFICATIONS' => 'Pozícia oznámenia - okná',
+'L_POSITION_TC' => 'hore v strede',
+'L_POSITION_TL' => 'vľavo hore',
+'L_POSITION_TR' => 'v pravo hore',
+'L_POSSIBLE_COLLATIONS' => '',
+'L_POSSIBLE_COLLATIONS_EXPLAIN' => '',
+'L_PREFIX' => 'Prefi',
+'L_PRIMARYKEYS_CHANGED' => 'Primárne kľúče zmenené',
+'L_PRIMARYKEYS_CHANGINGERROR' => 'Chyba pri zmene primárneho kľúča',
+'L_PRIMARYKEYS_SAVE' => 'Uložiť primárne kľúč',
+'L_PRIMARYKEY_CONFIRMDELETE' => 'Naozaj zmazať primárny kľúč',
+'L_PRIMARYKEY_DELETED' => 'Primárny kľúč odstránený',
+'L_PRIMARYKEY_FIELD' => 'Pole Primárneho kľúč',
+'L_PRIMARYKEY_NOTFOUND' => 'Primárny kľúč nenájdený',
+'L_PROCESSKILL1' => 'Snažíme sa dokončiť proce',
+'L_PROCESSKILL2' => 'do konca',
+'L_PROCESSKILL3' => 'Skript sa pokúsi o',
+'L_PROCESSKILL4' => 'sec. ukončiť tento proce',
+'L_PROCESS_ID' => 'Process ID',
+'L_PROGRESS_FILE' => 'Pokrok súbor',
+'L_PROGRESS_OVER_ALL' => 'Celkový pokrok',
+'L_PROGRESS_TABLE' => 'Záloha db / tabuľky',
+'L_PROVIDER' => 'Poskytovate',
+'L_PROZESSE' => 'Proces',
+'L_QUERY' => '',
+'L_QUERY_TYPE' => '',
+'L_RECHTE' => 'Oprávneni',
+'L_RECORDS' => 'Záznamo',
+'L_RECORDS_INSERTED' => '<b>%s</b> záznamov vložených.',
+'L_RECORDS_OF_TABLE' => '',
+'L_RECORDS_PER_PAGECALL' => 'Záznamov na stránk',
+'L_REFRESHTIME' => 'Aktualizácia času',
+'L_REFRESHTIME_PROCESSLIST' => 'Update interval proces zoznamu',
+'L_REGISTRATION_DESCRIPTION' => '',
+'L_RELOAD' => 'Reloa',
+'L_REMOVE' => 'Odstrániť',
+'L_REPAIR' => 'Opraviť',
+'L_RESET' => 'Rese',
+'L_RESET_SEARCHWORDS' => 'reset hľadané slová',
+'L_RESTORE' => 'Obnov',
+'L_RESTORE_COMPLETE' => '<b>%s</b> tabuľiek vytvorených.',
+'L_RESTORE_DB' => 'Databáza \'<b>%s</b>\' on \'<b>%s</b>\'.',
+'L_RESTORE_DB_COMPLETE_IN' => 'Obnovenie databázy \'%s\' in %s<br /> ukončené.',
+'L_RESTORE_OF_TABLES' => 'Vyberte tabuľky ktoré majú byť<br /> obnovené',
+'L_RESTORE_TABLE' => 'Obnova tabuľky \'%s\' dokončená',
+'L_RESTORE_TABLES_COMPLETED' => 'Práve <b>%d</b> tabuliek zo <b>%d</b> <br /> bolo vytvorených.',
+'L_RESTORE_TABLES_COMPLETED0' => '<b>%d</b> Tabuliek bolo vytvorených',
+'L_RESULT' => '',
+'L_REVERSE' => 'Posledný záznam prvý',
+'L_SAFEMODEDESC' => 'Pretože PHP je spustená v safe_mode<br /> musíte tieto adresáre vytvoriť ručne<br /> pomocou FTP-Programu:',
+'L_SAVE' => 'Uloži',
+'L_SAVEANDCONTINUE' => 'Uložiť a pokračovať v inštalácii',
+'L_SAVE_ERROR' => 'Chyba - nemôžem uložiť nastavenie!',
+'L_SAVE_SUCCESS' => 'Nastavenie bolo úspešne uložené do<br /> nastavenia zálohovania "%s".',
+'L_SAVING_DATA_TO_FILE' => 'Ukladanie dát z databázy \'% s\' do<br /> zálohy \'% s\'',
+'L_SAVING_DATA_TO_MULTIPART_FILE' => 'Maximálna veľkosť zálohy bola<br /> dosiahnutá: Pokračovanie v zálohe \'%<br /> s\'',
+'L_SAVING_DB_FORM' => 'Databáz',
+'L_SAVING_TABLE' => 'Uložené tabuľky',
+'L_SEARCH_ACCESS_KEYS' => 'Prehľadávať: dopredu = ALT + V,<br /> dozadu = ALT + C',
+'L_SEARCH_IN_TABLE' => 'Vyhľadávanie v tabuľke',
+'L_SEARCH_NO_RESULTS' => 'Vyhľadávanie "<b>%s</b>" v tabuľke<br /> "<b>%s</b>" nenašlo žiadne<br /> výsledky!',
+'L_SEARCH_OPTIONS' => 'Možnosti hľadania',
+'L_SEARCH_OPTIONS_AND' => 'kolónka musí obsahovať všetky<br /> hľadané slová (AND-search)',
+'L_SEARCH_OPTIONS_CONCAT' => 'riadok musí obsahovať všetky<br /> hľadané slová, ale môžu byť v<br /> každom stĺpci (môže to nejaký čas<br /> trvať)',
+'L_SEARCH_OPTIONS_OR' => 'stĺpce musia mať jeden z hľadaných<br /> slov (OR-search)',
+'L_SEARCH_RESULTS' => 'Vyhľadávanie "<b>%s</b>" v tabuľke<br /> "<b>%s</b>" prináša nasledujúce<br /> výsledky',
+'L_SECOND' => 'Sekun',
+'L_SECONDS' => 'Sekún',
+'L_SELECT' => 'Vybra',
+'L_SELECTED_FILE' => 'Vybrantá záloha',
+'L_SELECT_ALL' => 'Vybrať všetko',
+'L_SELECT_FILE' => 'Vyberte zálohu',
+'L_SELECT_LANGUAGE' => 'Vyberte jazyk',
+'L_SENDMAIL' => 'Odoslať e-mail',
+'L_SENDRESULTASFILE' => 'odoslať výsledok ako súbor',
+'L_SEND_MAIL_FORM' => 'Poslať e-mail správu',
+'L_SERVER' => 'Serve',
+'L_SERVERCAPTION' => 'Zobraziť Serve',
+'L_SETPRIMARYKEYSFOR' => 'Nastavte nové primárne kľúče na<br /> tabuľk',
+'L_SHOWING_ENTRY_X_TO_Y_OF_Z' => 'Zobrazené dáta %s / %s zo %s',
+'L_SHOWRESULT' => 'Zobraziť výsledky',
+'L_SHOW_TABLES' => '',
+'L_SHOW_TOOLTIPS' => '',
+'L_SMTP' => 'SMTP',
+'L_SMTP_HOST' => 'SMTP-Server',
+'L_SMTP_PORT' => 'SMTP-Port',
+'L_SOCKET' => 'Socke',
+'L_SPEED' => 'Rýchlos',
+'L_SQLBOX' => 'SQL-Box',
+'L_SQLBOXHEIGHT' => 'Výška SQL-Box',
+'L_SQLLIB_ACTIVATEBOARD' => 'aktivovať stránku',
+'L_SQLLIB_BOARDS' => 'Stránka',
+'L_SQLLIB_DEACTIVATEBOARD' => 'deactivovat stránku',
+'L_SQLLIB_GENERALFUNCTIONS' => 'všeobecné funkcie',
+'L_SQLLIB_RESETAUTO' => 'Auto-Reset hodnoty',
+'L_SQLLIMIT' => 'Počet záznamov každej stránky',
+'L_SQL_ACTIONS' => 'Akcia',
+'L_SQL_AFTER' => 'po',
+'L_SQL_ALLOWDUPS' => 'Duplikáty povolené',
+'L_SQL_ATPOSITION' => 'vložiť na pozíciu',
+'L_SQL_ATTRIBUTES' => 'Atribúty',
+'L_SQL_BACKDBOVERVIEW' => 'Späť na prehľad',
+'L_SQL_BEFEHLNEU' => 'Nový príkaz',
+'L_SQL_BEFEHLSAVED1' => 'SQL Príkaz',
+'L_SQL_BEFEHLSAVED2' => 'bola pridaná',
+'L_SQL_BEFEHLSAVED3' => 'bol uložený',
+'L_SQL_BEFEHLSAVED4' => 'bol presunutý do',
+'L_SQL_BEFEHLSAVED5' => 'bol zrušený',
+'L_SQL_BROWSER' => 'SQ',
+'L_SQL_CARDINALITY' => 'Mohutnosť',
+'L_SQL_CHANGED' => 'bol zmenený.',
+'L_SQL_CHANGEFIELD' => 'zmeniť pole',
+'L_SQL_CHOOSEACTION' => 'Vyberte si akciu',
+'L_SQL_COLLATENOTMATCH' => 'Charset a znášanie nesedí dohromady!',
+'L_SQL_COLUMNS' => 'Stĺpcov',
+'L_SQL_COMMANDS' => 'SQL príkaz',
+'L_SQL_COMMANDS_IN' => 'Riadky',
+'L_SQL_COMMANDS_IN2' => 'Second(s) spracované.',
+'L_SQL_COPYDATADB' => 'Kopírovať celú databázu pre',
+'L_SQL_COPYSDB' => 'Kópia Štruktúra databázy',
+'L_SQL_COPYTABLE' => 'kopírovať tabuľku',
+'L_SQL_CREATED' => 'bol vytvorený',
+'L_SQL_CREATEINDEX' => 'vytvoriť nový index',
+'L_SQL_CREATETABLE' => 'vytvoriť tabuľku',
+'L_SQL_DATAVIEW' => 'Zobrazenie dát',
+'L_SQL_DBCOPY' => 'Obsah databázy `%s` bol kopírovaný k<br /> databáze `%s`.',
+'L_SQL_DBSCOPY' => 'Štruktúra databázy `%s` bola<br /> kopírovaná k databáze `%s`.',
+'L_SQL_DELETED' => 'bol zrušený',
+'L_SQL_DESTTABLE_EXISTS' => 'Tabuľka určenia existuje !',
+'L_SQL_EDIT' => 'uprava',
+'L_SQL_EDITFIELD' => 'Upravit pole',
+'L_SQL_EDIT_TABLESTRUCTURE' => 'Upraviť štruktúry tabuľky',
+'L_SQL_EMPTYDB' => 'Prázdne databázy',
+'L_SQL_ERROR1' => 'Chyba v dotaze',
+'L_SQL_ERROR2' => 'MySQL hovorí',
+'L_SQL_EXEC' => 'Vykonať SQL Príkaz',
+'L_SQL_EXPORT' => 'Export z databázy `%s`',
+'L_SQL_FIELDDELETE1' => 'Pole',
+'L_SQL_FIELDNAMENOTVALID' => 'Chyba: Žiadny platný názov poľa',
+'L_SQL_FIRST' => 'prvá',
+'L_SQL_IMEXPORT' => 'Import-Export',
+'L_SQL_IMPORT' => 'Import v databáze `%s`',
+'L_SQL_INCOMPLETE_STATEMENT_DETECTED' => '',
+'L_SQL_INDEXES' => 'Indexy',
+'L_SQL_INSERTFIELD' => 'vložiť pole',
+'L_SQL_INSERTNEWFIELD' => 'vložiť nové pole',
+'L_SQL_LIBRARY' => 'SQL Knižnica',
+'L_SQL_NAMEDEST_MISSING' => 'Meno miesto určenia chýba !',
+'L_SQL_NEWFIELD' => 'Nové pole',
+'L_SQL_NODATA' => 'žiadne záznamy',
+'L_SQL_NODEST_COPY' => 'Žiadne kopírovanie bez určenia !',
+'L_SQL_NOFIELDDELETE' => 'Zmazať, nie je možné, pretože<br /> tabuľky musí obsahovať aspoň jedno<br /> pole.',
+'L_SQL_NOTABLESINDB' => 'Nenašli sa žiadne tabuľky v databáze',
+'L_SQL_NOTABLESSELECTED' => 'Nie sú vybrané žiadne tabuľky !',
+'L_SQL_OPENFILE' => 'Otvoriť SQL-Súbor',
+'L_SQL_OPENFILE_BUTTON' => 'Nahrať',
+'L_SQL_OUT1' => 'Prevedené',
+'L_SQL_OUT2' => 'Príkazy',
+'L_SQL_OUT3' => 'Tam boli',
+'L_SQL_OUT4' => 'Komentár',
+'L_SQL_OUT5' => 'Vzhľadom k tomu, výstup obsahuje viac<br /> ako 5000 riadkov nie je zobrazená.',
+'L_SQL_OUTPUT' => 'SQL Výstup',
+'L_SQL_QUERYENTRY' => 'Dotaz obsahuje',
+'L_SQL_RECORDDELETED' => 'Záznam bol zmazaný',
+'L_SQL_RECORDEDIT' => 'upraviť záznam',
+'L_SQL_RECORDINSERTED' => 'Záznam bol pridaný',
+'L_SQL_RECORDNEW' => 'nový záznam',
+'L_SQL_RECORDUPDATED' => 'Záznam bol aktualizovaný',
+'L_SQL_RENAMEDB' => 'Premenovať Databázu',
+'L_SQL_RENAMEDTO' => 'bol premenovaný na',
+'L_SQL_SCOPY' => 'Štruktúra tabuľky `%s` bola<br /> kopírovaná k tabuľke `%s`.',
+'L_SQL_SEARCH' => 'Hľadať',
+'L_SQL_SEARCHWORDS' => 'Hľadané slovo(s)',
+'L_SQL_SELECTTABLE' => 'vyberte tabuľku',
+'L_SQL_SERVER' => '',
+'L_SQL_SHOWDATATABLE' => 'Ukázať Dáta v tabuľke',
+'L_SQL_STRUCTUREDATA' => 'Štruktúra a dát',
+'L_SQL_STRUCTUREONLY' => 'Iba Štruktúra',
+'L_SQL_TABLEEMPTIED' => 'Tabuľka `%s` bola zmazaná.',
+'L_SQL_TABLEEMPTIEDKEYS' => 'Tabuľka `%s` bola zmazaná a indexi<br /> boli resetované.',
+'L_SQL_TABLEINDEXES' => 'Indexy v tabuľke',
+'L_SQL_TABLENEW' => 'Úpravy tabuľky',
+'L_SQL_TABLENOINDEXES' => 'Žiadene indexy v tabuľke',
+'L_SQL_TABLENONAME' => 'Tabuľka potrebuje meno!',
+'L_SQL_TABLESOFDB' => 'Tabulka databázy',
+'L_SQL_TABLEVIEW' => 'Zobraziť Tabuľky',
+'L_SQL_TBLNAMEEMPTY' => 'Názov tabuľky nesmie\'t byť prázdne!',
+'L_SQL_TBLPROPSOF' => 'Vlastnosti tabuľky',
+'L_SQL_TCOPY' => 'Tabuľka `%s` bola kopírovaná s<br /> dátami k tabuľke `%s`.',
+'L_SQL_UPLOADEDFILE' => 'Nahrať zálohu:',
+'L_SQL_VIEW_COMPACT' => 'Zobraziť: kompaktné',
+'L_SQL_VIEW_STANDARD' => 'Zobraziť: standard',
+'L_SQL_VONINS' => 'celkom',
+'L_SQL_WARNING' => 'Vykonávanie príkazov SQL môžete<br /> manipulovať s dátami. Pamätajte!<br /> Autori, nenesú žiadnu zodpovednosť za<br /> poškodenie alebo stratu dát.',
+'L_SQL_WASCREATED' => 'bol vytvorený',
+'L_SQL_WASEMPTIED' => 'bol vyprázdnený',
+'L_STARTDUMP' => 'Spustiť',
+'L_START_RESTORE_DB_FILE' => 'Spustenie obnovenia databázy \'%s\' zo<br /> zálohy \'%s\'.',
+'L_START_SQL_SEARCH' => 'začať hľadať',
+'L_STATUS' => 'Sta',
+'L_STEP' => 'Krok',
+'L_SUCCESS_CONFIGFILE_CREATED' => 'Nastavenie zálohovania %s bolo<br /> úspešne vytvorené.',
+'L_SUCCESS_DELETING_CONFIGFILE' => 'Nastavenie zálohovania %s bolo<br /> úspešne odstránené.',
+'L_SUM_TOTAL' => '',
+'L_TABLE' => 'Tabulk',
+'L_TABLENAME' => '',
+'L_TABLENAME_EXPLAIN' => '',
+'L_TABLES' => 'Tabulie',
+'L_TABLESELECTION' => 'Tabuľka výberu',
+'L_TABLE_CREATE_SUCC' => 'Tabuľka \'%s\'  bola úspešne<br /> vytvorená',
+'L_TABLE_TYPE' => 'Ty',
+'L_TESTCONNECTION' => 'Test pripojeni',
+'L_THEME' => 'Tema',
+'L_TIME' => 'Ča',
+'L_TIMESTAMP' => 'Časový interva',
+'L_TITLE_INDEX' => 'Index',
+'L_TITLE_KEY_FULLTEXT' => 'Fulltext key',
+'L_TITLE_KEY_PRIMARY' => 'Primary key',
+'L_TITLE_KEY_UNIQUE' => 'Unique key',
+'L_TITLE_MYSQL_HELP' => 'MySQL Dokumentácia',
+'L_TITLE_NOKEY' => 'Žiadne key',
+'L_TITLE_SEARCH' => 'Hľadať',
+'L_TITLE_SHOW_DATA' => 'Zobraziť údaj',
+'L_TITLE_UPLOAD' => 'Nahrať SQL súbor',
+'L_TO' => 'd',
+'L_TOOLS' => 'Nástroje',
+'L_TOOLS_TOOLBOX' => 'Vybrať databázu / Funkcie Databázy /<br /> Import - Export',
+'L_TRUNCATE' => '',
+'L_TRUNCATE_DATABASE' => '',
+'L_UNIT_KB' => 'KB',
+'L_UNIT_MB' => 'MB',
+'L_UNIT_PIXEL' => 'Px',
+'L_UNKNOWN' => 'neznám',
+'L_UNKNOWN_SQLCOMMAND' => 'neznámy SQL-Príkaz',
+'L_UPDATE' => 'Aktualizovať',
+'L_UPDATE_CONNECTION_FAILED' => '',
+'L_UPDATE_ERROR_RESPONSE' => '',
+'L_UPTO' => 'až',
+'L_USERNAME' => 'Užívaťeľské meno',
+'L_USE_SSL' => 'Použiť SSL',
+'L_VALUE' => 'Hodnot',
+'L_VERSIONSINFORMATIONEN' => 'Verzi',
+'L_VIEW' => 'zobrazi',
+'L_VISIT_HOMEPAGE' => 'Ísť na obsa',
+'L_VOM' => 'bol',
+'L_WITH' => 's',
+'L_WITHATTACH' => 'sa pripojiť',
+'L_WITHOUTATTACH' => 'bez prikladajú',
+'L_WITHPRAEFIX' => 'prefix',
+'L_WRONGCONNECTIONPARS' => 'Parametre pripojenia zlé alebo<br /> chýbajúce',
+'L_WRONG_CONNECTIONPARS' => 'Parametre pripojenia sú mylné !',
+'L_WRONG_RIGHTS' => 'Do adresára\'%s\' nemožno zapisovať.<br<br /> /><br />Práva (chmod), nie sú nastavené<br /> správne, alebo je zlý vlastník.<br<br /> /><br />Prosí nastavte správne atribúty<br /> pomocou FTP klienta.<br /><br />Súbor alebo<br /> adresár musí byť nastavený na %s.<br<br /> /',
+'L_YES' => 'áno',
+'L_ZEND_FRAMEWORK_VERSION' => '',
+'L_ZEND_ID_ACCESS_NOT_A_DIRECTORY' => '',
+'L_ZEND_ID_ACCESS_NOT_A_FILE' => '',
+'L_ZEND_ID_ACCESS_NOT_A_LINK' => '',
+'L_ZEND_ID_ACCESS_NOT_EXECUTABLE' => '',
+'L_ZEND_ID_ACCESS_NOT_EXISTS' => '',
+'L_ZEND_ID_ACCESS_NOT_READABLE' => '',
+'L_ZEND_ID_ACCESS_NOT_UPLOADED' => '',
+'L_ZEND_ID_ACCESS_NOT_WRITABLE' => '',
+'L_ZEND_ID_DIGITS_INVALID' => '',
+'L_ZEND_ID_DIGITS_STRING_EMPTY' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_DOT_ATOM' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING' => '',
+'L_ZEND_ID_HOSTNAME_CANNOT_DECODE_PUNYCODE' => '',
+'L_ZEND_ID_HOSTNAME_DASH_CHARACTER' => '',
+'L_ZEND_ID_HOSTNAME_INVALID' => '',
+'L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME' => '',
+'L_ZEND_ID_HOSTNAME_INVALID_HOSTNAME_SCHEMA' => '',
+'L_ZEND_ID_HOSTNAME_INVALID_LOCAL_NAME' => '',
+'L_ZEND_ID_HOSTNAME_INVALID_URI' => '',
+'L_ZEND_ID_HOSTNAME_IP_ADDRESS_NOT_ALLOWED' => '',
+'L_ZEND_ID_HOSTNAME_LOCAL_NAME_NOT_ALLOWED' => '',
+'L_ZEND_ID_HOSTNAME_UNDECIPHERABLE_TLD' => '',
+'L_ZEND_ID_HOSTNAME_UNKNOWN_TLD' => '',
+'L_ZEND_ID_IS_EMPTY' => '',
+'L_ZEND_ID_MISSING_TOKEN' => '',
+'L_ZEND_ID_NOT_DIGITS' => '',
+'L_ZEND_ID_NOT_EMPTY_INVALID' => '',
+'L_ZEND_ID_NOT_SAME' => '',
+);
 return $lang;
