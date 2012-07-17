@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev: 1227 $
  * @author        $Author: DSB $
- * Maintained by: Eleariel
+ * Maintained by: Eleariel (434)
  */
 $lang=array(
 'L_ACTION' => '',

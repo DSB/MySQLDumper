@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: AlleyKat
+ * Maintained by: 
  */
 $lang=array(
 'L_ACTION' => '',

@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: gapa
+ * Maintained by: gapa (759)
  */
 $lang=array(
 'L_ACTION' => 'Akcija',
@@ -121,7 +121,7 @@ $lang=array(
 'L_CSV_NULL' => 'Zamenjaj NULL z',
 'L_DATABASES_OF_USER' => 'Podatkovna zbirka uporabnikov',
 'L_DATABASE_CREATED_FAILED' => 'Podatkovna zbirka ni bila kreirana.<br />MySQL vrne:<br /><br />%s',
-'L_DATABASE_CREATED_SUCCESS' => '',
+'L_DATABASE_CREATED_SUCCESS' => 'Podatkovna zbirka \'%s\' je bila uspešno kreirana.',
 'L_DATASIZE' => 'Velikost podatkov',
 'L_DATASIZE_INFO' => 'To je velikost zapisov - ne velikost arhivske datoteke',
 'L_DAY' => 'Dan',
@@ -132,7 +132,7 @@ $lang=array(
 'L_DBS' => 'Podatkovne baze',
 'L_DB_ADAPTER' => 'Vmesnik podatkovne zbirke',
 'L_DB_BACKUPPARS' => 'Parameter arhiva podatkovne zbirke',
-'L_DB_DEFAULT' => '',
+'L_DB_DEFAULT' => 'Privzeta podatkovna zbirka',
 'L_DB_HOST' => 'Gostitelj',
 'L_DB_IN_LIST' => 'Podatkovna zbirka \'%s\' ni bila dodana ker že obstaja.',
 'L_DB_NAME' => 'Ime podatkovne zbirke',
@@ -333,7 +333,7 @@ $lang=array(
 'L_IMPORTTABLE' => 'Uvozi v tabelo',
 'L_IMPORT_NOTABLE' => 'Nobena tabela ni bila izbrana za uvoz!',
 'L_IN' => 'v',
-'L_INDEX_SIZE' => '',
+'L_INDEX_SIZE' => 'Velikost indeksa',
 'L_INFO_ACTDB' => 'Izbrana podatkovna baza',
 'L_INFO_DATABASES' => 'Dostopne podatkovne baze',
 'L_INFO_DBEMPTY' => 'Podatkovna baza je prazna!',
@@ -350,7 +350,7 @@ $lang=array(
 'L_INFO_SUM' => 'Skupaj',
 'L_INSTALL' => 'Namestitev',
 'L_INSTALLED' => 'Nameščeno',
-'L_INSTALL_DB_DEFAULT' => '',
+'L_INSTALL_DB_DEFAULT' => 'Uporabi kot privzeto podatkovno zbirko',
 'L_INSTALL_HELP_PORT' => '(prazno = privzeta vrata)',
 'L_INSTALL_HELP_SOCKET' => '(prazno = privzeta vtičnica)',
 'L_IS_WRITABLE' => 'Je zapisljiv',
@@ -371,7 +371,7 @@ $lang=array(
 'L_LOGOUT' => 'Odjava',
 'L_LOG_CREATED' => 'Dnevniška datoteka je bila ustvarjena.',
 'L_LOG_DELETE' => 'odstrani dnevnik',
-'L_LOG_MAXSIZE' => '',
+'L_LOG_MAXSIZE' => 'Maksimalna velikost dnevniških datotek',
 'L_LOG_NOT_READABLE' => 'Dnevniška datoteka \'%s\' ne obstaja ali pa je ni možno prebrati.',
 'L_MAILERROR' => 'Pošiljanje e-maila ni uspelo!',
 'L_MAILPROGRAM' => 'Mail program',
@@ -389,8 +389,8 @@ $lang=array(
 'L_MESSAGE_TYPE' => 'Tip sporočila',
 'L_MINUTE' => 'Minuta',
 'L_MINUTES' => 'Minute',
-'L_MOBILE_OFF' => '',
-'L_MOBILE_ON' => '',
+'L_MOBILE_OFF' => 'Izklopljeno',
+'L_MOBILE_ON' => 'Vklopljeno',
 'L_MODE_EASY' => 'Lahko',
 'L_MODE_EXPERT' => 'Zahtevno',
 'L_MSD_INFO' => 'MySQLDumper informacije',
@@ -463,7 +463,7 @@ $lang=array(
 'L_PHPBUG' => 'Napaka v zlib! Stiskanje ni mogoče!',
 'L_PHPMAIL' => 'PHP-funkcija mail()',
 'L_PHP_EXTENSIONS' => 'PHP razširitve',
-'L_PHP_LOG' => '',
+'L_PHP_LOG' => 'PHP-dnevnik',
 'L_PHP_VERSION' => 'PHP različica',
 'L_PHP_VERSION_TOO_OLD' => 'Žal nam je: nameščena PHP različica je prestara. MySQLDumper potrebuje PHP različico %s ali več. Strežnik ima PHP različico %s, katera je prestara. Pred namestitvijo in uporabo MySQLDumper-ja morate nadgraditi vaš strežnik.',
 'L_POP3_PORT' => 'POP3-port',

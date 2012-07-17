@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: Hardlayers, new
+ * Maintained by: Hardlayers (2)
  */
 $lang=array(
 'L_ACTION' => 'العمل',

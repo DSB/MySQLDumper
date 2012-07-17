@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: batzidi
+ * Maintained by: batzidi (61)
  */
 $lang=array(
 'L_ACTION' => 'Действие',

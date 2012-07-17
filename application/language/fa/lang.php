@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: majidfire2003
+ * Maintained by: DSB (1), majidfire2003 (151)
  */
 $lang=array(
 'L_ACTION' => 'عمليات',

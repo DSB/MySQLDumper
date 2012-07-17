@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: UX
+ * Maintained by: UX (306)
  */
 $lang=array(
 'L_ACTION' => 'Actiunea',

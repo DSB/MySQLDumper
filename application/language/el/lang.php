@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: diastasi
+ * Maintained by: diastasi (243)
  */
 $lang=array(
 'L_ACTION' => 'Ενέργεια',

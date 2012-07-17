@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev: 1227 $
  * @author        $Author: DSB $
- * Maintained by: fmben
+ * Maintained by: fmben (1)
  */
 $lang=array(
 'L_ACTION' => '',

@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: katpatuka, midnightcoder, mrdoc, muchul, Tango
+ * Maintained by: katpatuka (23), Tango (39)
  */
 $lang=array(
 'L_ACTION' => 'İşlem',

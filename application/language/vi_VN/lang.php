@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: f4s, laze
+ * Maintained by: laze (254)
  */
 $lang=array(
 'L_ACTION' => 'Thực hiện',

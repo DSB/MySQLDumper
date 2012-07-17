@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: beduino
+ * Maintained by: 
  */
 $lang=array(
 'L_ACTION' => '',
