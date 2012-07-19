@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: batzidi (61)
+ * Maintained by: batzidi (69)
  */
 $lang=array(
 'L_ACTION' => 'Действие',
@@ -47,10 +47,10 @@ $lang=array(
 'L_CHANGEDIR' => 'Промени директория',
 'L_CHANGEDIRERROR' => 'Не може де се промени директорията!',
 'L_CHARSET' => 'Символна подребда',
-'L_CHARSETS' => '',
+'L_CHARSETS' => 'Енкодинг',
 'L_CHECK' => 'Провери',
 'L_CHECK_DIRS' => 'Провери моите директории',
-'L_CHOOSE_CHARSET' => '',
+'L_CHOOSE_CHARSET' => 'Избери енкодинг',
 'L_CHOOSE_DB' => 'Избери БД',
 'L_CLEAR_DATABASE' => 'Изчисти БД',
 'L_CLOSE' => 'Затвори',
@@ -70,10 +70,10 @@ $lang=array(
 'L_CONFIG_EMAIL' => '',
 'L_CONFIG_FTP' => 'FTP трансфер на архивния файл',
 'L_CONFIG_HEADLINE' => '',
-'L_CONFIG_INTERFACE' => '',
+'L_CONFIG_INTERFACE' => 'Конфигуриране интерфейс',
 'L_CONFIG_LOADED' => 'Конфигурацията "%s" е внесена успешно.',
 'L_CONFIRM_CONFIGFILE_DELETE' => '',
-'L_CONFIRM_DELETE_FILE' => '',
+'L_CONFIRM_DELETE_FILE' => 'Сигурни ли сте, че желаете да изтриете файла',
 'L_CONFIRM_DELETE_TABLES' => '',
 'L_CONFIRM_DROP_DATABASES' => '',
 'L_CONFIRM_RECIPIENT_DELETE' => '',
@@ -93,8 +93,8 @@ $lang=array(
 'L_CONVERT_START' => '',
 'L_CONVERT_TITLE' => '',
 'L_CONVERT_WRONG_PARAMETERS' => '',
-'L_CREATE' => '',
-'L_CREATED' => '',
+'L_CREATE' => 'Създай',
+'L_CREATED' => 'Създадена',
 'L_CREATEDIRS' => '',
 'L_CREATE_AUTOINDEX' => '',
 'L_CREATE_CONFIGFILE' => '',
@@ -144,7 +144,7 @@ $lang=array(
 'L_DEFAULT_CHARSET' => '',
 'L_DEFAULT_COLLATION_NAME' => '',
 'L_DELETE' => '',
-'L_DELETE_DATABASE' => '',
+'L_DELETE_DATABASE' => 'Изтрий БД',
 'L_DELETE_FILE_ERROR' => '',
 'L_DELETE_FILE_SUCCESS' => '',
 'L_DELETE_HTACCESS' => '',
@@ -194,7 +194,7 @@ $lang=array(
 'L_ENGINE' => '',
 'L_ENTER_DB_INFO' => '',
 'L_ENTRY' => '',
-'L_ERROR' => '',
+'L_ERROR' => 'Грешка',
 'L_ERRORHANDLING_RESTORE' => '',
 'L_ERROR_CONFIGFILE_NAME' => '',
 'L_ERROR_DELETING_CONFIGFILE' => '',
