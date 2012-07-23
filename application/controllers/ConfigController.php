@@ -202,10 +202,7 @@ class ConfigController extends Zend_Controller_Action
      */
     private function _getSubformIni($subform)
     {
-        $subFormIni = new Zend_Config_Ini(
-            APPLICATION_PATH . DS . 'forms' . DS . 'Config' . DS . $subform .
-                '.ini'
-        );
+        $subFormIni = new Zend_Config_Ini(APPLICATION_PATH . '/forms/Config/' . $subform . '.ini');
         $options    = array('displayGroupPrefixPath' => $subform . '_');
         return new Zend_Form_SubForm($subFormIni, $options);
     }
