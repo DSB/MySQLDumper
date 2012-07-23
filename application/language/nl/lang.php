@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: JesseB (367)
+ * Maintained by: DSB (1), JesseB (367)
  */
 $lang=array(
 'L_ACTION' => 'Actie',
@@ -617,7 +617,7 @@ $lang=array(
 'L_SQL_FIRST' => 'eerst',
 'L_SQL_IMEXPORT' => 'Importeer-Exporteer',
 'L_SQL_IMPORT' => 'Importeer in Database `%s`',
-'L_SQL_INCOMPLETE_STATEMENT_DETECTED' => '% s: onvolledige verklaring gevonden <br /> Kon geen gelijke match voor \\'% s \. \'in query: <br />% s\'',
+'L_SQL_INCOMPLETE_STATEMENT_DETECTED' => '% s: onvolledige verklaring gevonden <br /> Kon geen gelijke match voor \'% s\' in query: <br />% s',
 'L_SQL_INDEXES' => 'Indexes',
 'L_SQL_INSERTFIELD' => 'plaats veld',
 'L_SQL_INSERTNEWFIELD' => 'plaats nieuw veld',
