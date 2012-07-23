@@ -401,11 +401,7 @@ class ConfigController extends Zend_Controller_Action
             foreach ($elements as $element) {
                 $element = str_replace($group . '_', '', $element);
                 $element = str_replace('_', '.', $element);
-                $value   = $this->view->config->get(
-                    'config.' .
-                        $group . '.' .
-                        $element
-                );
+                $value   = $this->view->config->get('config.' . $group . '.' . $element);
                 if ($value !== null) {
                     $subForm->setDefault($element, $value);
                 }
