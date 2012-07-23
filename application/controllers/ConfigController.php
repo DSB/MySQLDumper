@@ -33,7 +33,7 @@ class ConfigController extends Zend_Controller_Action
     {
         $form = new Zend_Form(
             array(
-                 'disableLoadDefaultDecorators' => true,
+                'disableLoadDefaultDecorators' => true,
             )
         );
         $form->addElementPrefixPath(
@@ -49,8 +49,8 @@ class ConfigController extends Zend_Controller_Action
         $form->setAction(
             $this->view->url(
                 array(
-                     'controller' => 'config',
-                     'action' => 'index'
+                    'controller' => 'config',
+                    'action'     => 'index'
                 )
             )
         );
@@ -58,7 +58,7 @@ class ConfigController extends Zend_Controller_Action
         $langs = $this->view->lang->getAvailableLanguages();
         asort($langs);
 
-        $formGeneral = $this->_getSubformIni('general');
+        $formGeneral  = $this->_getSubformIni('general');
         $elementTitle = $formGeneral->getElement('title');
         $elementTitle->setValue(
             $this->view->config->get('config.general.title')
@@ -72,7 +72,7 @@ class ConfigController extends Zend_Controller_Action
         $form->addSubForm($this->_getSubformIni('cronscript'), 'cronscript');
 
         $formInterface = $this->_getSubformIni('interface');
-        $themeSelect = $formInterface->getElement('theme');
+        $themeSelect   = $formInterface->getElement('theme');
         $themeSelect->setMultiOptions(Msd_File::getThemeList());
         $langSelect = $formInterface->getElement('language');
         $langSelect->setMultiOptions($langs);
@@ -81,21 +81,21 @@ class ConfigController extends Zend_Controller_Action
         $form->clearDecorators();
         $translator = $this->view->lang->getTranslator();
 
-        $saveIcon =  $this->view->getIcon('save', $translator->_('L_SAVE'));
+        $saveIcon = $this->view->getIcon('save', $translator->_('L_SAVE'));
         $form->addElement(
             'submit',
             'save',
             array(
-                 'class' => 'Formbutton',
-                 'helper' => 'formButton',
-                 'content' => $saveIcon . ' ' . $translator->_('L_SAVE'),
-                 'escape' => false,
-                 'type' => 'submit',
-                 'disableLoadDefaultDecorators' => true,
-                 'decorators' => array(
-                     'ViewHelper',
-                     'Tooltip'
-                 )
+                'class'                        => 'Formbutton',
+                'helper'                       => 'formButton',
+                'content'                      => $saveIcon . ' ' . $translator->_('L_SAVE'),
+                'escape'                       => false,
+                'type'                         => 'submit',
+                'disableLoadDefaultDecorators' => true,
+                'decorators'                   => array(
+                    'ViewHelper',
+                    'Tooltip'
+                )
             )
         );
         $form->addDecorator('ConfigForm');
@@ -136,29 +136,29 @@ class ConfigController extends Zend_Controller_Action
      */
     private function _getFormErrors($messages)
     {
-        $message = array();
+        $message  = array();
         $firstTab = null;
-        $form = $this->view->form;
+        $form     = $this->view->form;
         foreach ($messages as $tabKey => $tabMessage) {
             foreach ($tabMessage as $inputName => $inputMessage) {
                 foreach ($inputMessage as $messageId => $messageText) {
                     if ($firstTab === null) {
                         $firstTab = 'tab_' . $tabKey;
                     }
-                    $subForm = $form->getSubForm($tabKey);
-                    $formElement = $subForm->getElement($inputName);
+                    $subForm      = $form->getSubForm($tabKey);
+                    $formElement  = $subForm->getElement($inputName);
                     $elementClass = $formElement->getAttrib('class');
                     $elementClass .= ' ' . 'inputError';
                     $formElement->setAttrib('class', $elementClass);
                     $message[] = $formElement->getLabel() . ': ' .
-                                 $this->view->lang->translateZendId(
-                                     $messageId,
-                                     $messageText
-                                 );
+                        $this->view->lang->translateZendId(
+                            $messageId,
+                            $messageText
+                        );
                 }
             }
         }
-        $ret = array();
+        $ret             = array();
         $ret['messages'] = implode('<br />', $message);
         $ret['firstTab'] = $firstTab;
         return $ret;
@@ -204,9 +204,9 @@ class ConfigController extends Zend_Controller_Action
     {
         $subFormIni = new Zend_Config_Ini(
             APPLICATION_PATH . DS . 'forms' . DS . 'Config' . DS . $subform .
-            '.ini'
+                '.ini'
         );
-        $options = array('displayGroupPrefixPath' => $subform . '_');
+        $options    = array('displayGroupPrefixPath' => $subform . '_');
         return new Zend_Form_SubForm($subFormIni, $options);
     }
 
@@ -221,10 +221,10 @@ class ConfigController extends Zend_Controller_Action
         if ($recipientsCc === null) {
             $recipientsCc = array();
         }
-        $index = count($recipientsCc);
-        $recipientsCc[$index]['Name'] = '';
+        $index                           = count($recipientsCc);
+        $recipientsCc[$index]['Name']    = '';
         $recipientsCc[$index]['Address'] = '';
-        $recipientsCc = array_values($recipientsCc);
+        $recipientsCc                    = array_values($recipientsCc);
         $this->view->config->set('config.email.RecipientCc', $recipientsCc);
         $this->_forward('index');
     }
@@ -237,7 +237,7 @@ class ConfigController extends Zend_Controller_Action
     public function deleteRecipientCcAction()
     {
         $recipientToDelete = (int)$this->_request->getPost('param');
-        $recipientsCc = $this->view->config->get('config.email.RecipientCc');
+        $recipientsCc      = $this->view->config->get('config.email.RecipientCc');
         if (isset($recipientsCc[$recipientToDelete])) {
             unset($recipientsCc[$recipientToDelete]);
         }
@@ -253,15 +253,15 @@ class ConfigController extends Zend_Controller_Action
     public function addFtpConnectionAction()
     {
         $ftpConfig = $this->view->config->get('config.ftp');
-        $index = 0;
+        $index     = 0;
         if (!empty($ftpConfig)) {
             $index = max(array_keys($ftpConfig)) + 1;
         }
-        $default = $this->view->config->loadConfiguration(
+        $default           = $this->view->config->loadConfiguration(
             'defaultConfig',
             false
         );
-        $default = $default->toArray();
+        $default           = $default->toArray();
         $ftpConfig[$index] = $default['ftp'][0];
         $this->view->config->set('config.ftp', $ftpConfig);
         $this->_forward('index');
@@ -274,7 +274,7 @@ class ConfigController extends Zend_Controller_Action
      */
     public function deleteFtpConnectionAction()
     {
-        $index = (int)$this->_request->getPost('param');
+        $index     = (int)$this->_request->getPost('param');
         $ftpConfig = $this->view->config->get('config.ftp');
         if (count($ftpConfig) > 1) {
             if (isset($ftpConfig[$index])) {
@@ -286,11 +286,11 @@ class ConfigController extends Zend_Controller_Action
         $this->_forward('index');
     }
 
-   /**
-    * Test FTP-Connection
-    *
-    * @return void
-    */
+    /**
+     * Test FTP-Connection
+     *
+     * @return void
+     */
     public function testFtpConnectionAction()
     {
         $translator = $this->view->lang->getTranslator();
@@ -298,23 +298,23 @@ class ConfigController extends Zend_Controller_Action
         if ($this->_request->isPost()) {
 
             $postData = $this->_request->getPost();
-            $index = (int)$this->_request->getPost('param');
+            $index    = (int)$this->_request->getPost('param');
 
             // fetch the required params
-            $server     = $postData['ftp_'.$index.'_server'];
-            $port       = $postData['ftp_'.$index.'_port'];
-            $timeout    = $postData['ftp_'.$index.'_timeout'];
-            $mode       = $postData['ftp_'.$index.'_passiveMode'];
-            $ssl        = $postData['ftp_'.$index.'_ssl'];
-            $user       = $postData['ftp_'.$index.'_user'];
-            $password   = $postData['ftp_'.$index.'_pass'];
-            $directory  = $postData['ftp_'.$index.'_dir'];
+            $server    = $postData['ftp_' . $index . '_server'];
+            $port      = $postData['ftp_' . $index . '_port'];
+            $timeout   = $postData['ftp_' . $index . '_timeout'];
+            $mode      = $postData['ftp_' . $index . '_passiveMode'];
+            $ssl       = $postData['ftp_' . $index . '_ssl'];
+            $user      = $postData['ftp_' . $index . '_user'];
+            $password  = $postData['ftp_' . $index . '_pass'];
+            $directory = $postData['ftp_' . $index . '_dir'];
 
             // Params for transferring a test file
-            $name = 'ftp_transfer_testfile.txt';
-            $filename = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_transfer_testfile.txt';
+            $name         = 'ftp_transfer_testfile.txt';
+            $filename     = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_transfer_testfile.txt';
             $targetFolder = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_target/';
-            $upload = false;
+            $upload       = false;
 
             // try to connect via ssl to the ftp server
             if ($ssl == 'y' && function_exists('ftp_ssl_connect')) {
@@ -328,7 +328,7 @@ class ConfigController extends Zend_Controller_Action
             if (!is_resource($ftpStream)) {
                 $message = sprintf($translator->_('L_FTP_CONNECTION_ERROR'), $server, $port);
 
-            // connection ok? let's try to login
+                // connection ok? let's try to login
             } else if (!ftp_login($ftpStream, $user, $password)) {
                 $message = sprintf($translator->_('L_FTP_LOGIN_ERROR'), $user);
 
@@ -337,26 +337,26 @@ class ConfigController extends Zend_Controller_Action
                     ftp_pasv($ftpStream, true);
                 }
 
-            // login ok? let's set/change the ftp upload directory
+                // login ok? let's set/change the ftp upload directory
             } else if (!ftp_chdir($ftpStream, $directory)) {
                 $message = sprintf($translator->_('L_CHANGEDIRERROR'));
-            // chmod target_folder if it's necessary
+                // chmod target_folder if it's necessary
             } else if (file_exists($targetFolder) && substr(sprintf('%o', fileperms($targetFolder)), -4) < '0755') {
                 ftp_chmod($ftpStream, 0755, $targetFolder);
                 $message = '';
-            // ftp directory exists and chmod ok? let's test the ftp transfer with a test file
-            } else if (!ftp_put($ftpStream, $targetFolder.$name, $filename, FTP_ASCII)) {
+                // ftp directory exists and chmod ok? let's test the ftp transfer with a test file
+            } else if (!ftp_put($ftpStream, $targetFolder . $name, $filename, FTP_ASCII)) {
                 $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_ERROR'), $name);
 
             } else {
-                $upload = true;
+                $upload  = true;
                 $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_SUCCESS'), $name)
-                                   . '<br /><br />' .
-                                   $translator->_('L_FTP_OK');
+                    . '<br /><br />' .
+                    $translator->_('L_FTP_OK');
 
                 // delete the test file after a successful transfer test
-                if (file_exists($targetFolder.$name)) {
-                    ftp_delete($ftpStream, $targetFolder.$name);
+                if (file_exists($targetFolder . $name)) {
+                    ftp_delete($ftpStream, $targetFolder . $name);
                 }
             }
 
@@ -370,7 +370,7 @@ class ConfigController extends Zend_Controller_Action
                         'modal' => true
                     )
                 );
-            // or show the confirmation message
+                // or show the confirmation message
             } else if ($upload && count($message) > 0) {
                 $this->view->popUpMessage()->addMessage(
                     'config-validate-message',
@@ -399,15 +399,15 @@ class ConfigController extends Zend_Controller_Action
     {
         $subForms = $form->getSubForms();
         foreach ($subForms as $subForm) {
-            $group = $subForm->getName();
+            $group    = $subForm->getName();
             $elements = array_keys($subForm->getElements());
             foreach ($elements as $element) {
                 $element = str_replace($group . '_', '', $element);
                 $element = str_replace('_', '.', $element);
-                $value = $this->view->config->get(
+                $value   = $this->view->config->get(
                     'config.' .
-                    $group . '.' .
-                    $element
+                        $group . '.' .
+                        $element
                 );
                 if ($value !== null) {
                     $subForm->setDefault($element, $value);
@@ -424,7 +424,7 @@ class ConfigController extends Zend_Controller_Action
     private function _validateForm()
     {
         $postData = $this->_request->getPost();
-        $form = $this->view->form;
+        $form     = $this->view->form;
         $form->setDefaults($postData);
         if (isset($postData['save'])) {
             if (!$form->isValid($postData)) {
@@ -435,17 +435,17 @@ class ConfigController extends Zend_Controller_Action
                         'L_ERROR',
                         $errors['messages'],
                         array(
-                             'modal' => true
+                            'modal' => true
                         )
                     );
                     // jump to first tab with validation error
                     $this->_activeTab = $errors['firstTab'];
                 }
             } else {
-                $configData = $form->getValidValues($postData);
-                $configData = $this->_addNonConfigurableConfigParams($configData);
+                $configData      = $form->getValidValues($postData);
+                $configData      = $this->_addNonConfigurableConfigParams($configData);
                 $configValidator =
-                        new Application_Model_Config_FormValidator($configData);
+                    new Application_Model_Config_FormValidator($configData);
                 $configValidator->validate($this->view);
             }
         }
@@ -460,7 +460,7 @@ class ConfigController extends Zend_Controller_Action
      */
     private function _addNonConfigurableConfigParams($configData)
     {
-        $config = Msd_Configuration::getInstance();
+        $config                        = Msd_Configuration::getInstance();
         $configData['systemDatabases'] = $config->get('config.systemDatabases');
         return $configData;
     }
@@ -475,15 +475,15 @@ class ConfigController extends Zend_Controller_Action
      */
     private function _setGroupVisibilities(Zend_Form $form)
     {
-        $visibilityMap = array(
-            true => 'block',
+        $visibilityMap      = array(
+            true  => 'block',
             false => 'none',
         );
-        $emailForm = $form->getSubForm('email');
-        $sendmailConfig = $emailForm->getDisplayGroup('sendmailConfig');
-        $smtpConfig = $emailForm->getDisplayGroup('smtpConfig');
+        $emailForm          = $form->getSubForm('email');
+        $sendmailConfig     = $emailForm->getDisplayGroup('sendmailConfig');
+        $smtpConfig         = $emailForm->getDisplayGroup('smtpConfig');
         $sendmailVisibility = false;
-        $smtpVisibility = false;
+        $smtpVisibility     = false;
         switch ($this->view->config->get('config.email.Program')) {
             case 'sendmail':
                 $sendmailVisibility = true;
@@ -494,13 +494,13 @@ class ConfigController extends Zend_Controller_Action
         }
         $sendmailConfig->addAttribs(
             array(
-                 'style' => 'display:'
-                            . $visibilityMap[$sendmailVisibility] . ';',
+                'style' => 'display:'
+                    . $visibilityMap[$sendmailVisibility] . ';',
             )
         );
         $smtpConfig->addAttribs(
             array(
-                 'style' => 'display:' . $visibilityMap[$smtpVisibility] . ';',
+                'style' => 'display:' . $visibilityMap[$smtpVisibility] . ';',
             )
         );
     }
