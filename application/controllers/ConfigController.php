@@ -313,14 +313,14 @@ class ConfigController extends Zend_Controller_Action
             // Params for transferring a test file
             $name = 'ftp_transfer_testfile.txt';
             $filename = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_transfer_testfile.txt';
-            $target_folder = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_target/';
+            $targetFolder = APPLICATION_PATH . '/forms/Config/ftp_transfertest/ftp_target/';
             $upload = false;
 
             // try to connect via ssl to the ftp server
             if ($ssl == 'y' && function_exists('ftp_ssl_connect')) {
                 $ftpStream = ftp_ssl_connect($server, $port, $timeout);
             } else {
-            // otherwise try to connect to the ftp server normally
+                // otherwise try to connect to the ftp server normally
                 $ftpStream = ftp_connect($server, $port, $timeout);
             }
 
@@ -341,11 +341,11 @@ class ConfigController extends Zend_Controller_Action
             } else if (!ftp_chdir($ftpStream, $directory)) {
                 $message = sprintf($translator->_('L_CHANGEDIRERROR'));
             // chmod target_folder if it's necessary
-            } else if (file_exists($target_folder) && substr(sprintf('%o', fileperms($target_folder)), -4) < '0755') {
-                ftp_chmod($ftpStream, 0755, $target_folder);
+            } else if (file_exists($targetFolder) && substr(sprintf('%o', fileperms($targetFolder)), -4) < '0755') {
+                ftp_chmod($ftpStream, 0755, $targetFolder);
                 $message = '';
             // ftp directory exists and chmod ok? let's test the ftp transfer with a test file
-            } else if (!ftp_put($ftpStream, $target_folder.$name, $filename, FTP_ASCII)) {
+            } else if (!ftp_put($ftpStream, $targetFolder.$name, $filename, FTP_ASCII)) {
                 $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_ERROR'), $name);
 
             } else {
@@ -355,30 +355,30 @@ class ConfigController extends Zend_Controller_Action
                                    $translator->_('L_FTP_OK');
 
                 // delete the test file after a successful transfer test
-                if (file_exists($target_folder.$name)) {
-                    ftp_delete($ftpStream, $target_folder.$name);
+                if (file_exists($targetFolder.$name)) {
+                    ftp_delete($ftpStream, $targetFolder.$name);
                 }
             }
 
             // let's show the error messages
             if (!$upload && count($message) > 0) {
                 $this->view->popUpMessage()->addMessage(
-                        'config-validate-error',
-                        'L_ERROR',
-                        $message,
-                        array(
-                            'modal' => true
-                        )
+                    'config-validate-error',
+                    'L_ERROR',
+                    $message,
+                    array(
+                        'modal' => true
+                    )
                 );
             // or show the confirmation message
             } else if ($upload && count($message) > 0) {
                 $this->view->popUpMessage()->addMessage(
-                        'config-validate-message',
-                        'L_NOTICE',
-                        $message,
-                        array(
-                            'modal' => true
-                        )
+                    'config-validate-message',
+                    'L_NOTICE',
+                    $message,
+                    array(
+                        'modal' => true
+                    )
                 );
             }
 
