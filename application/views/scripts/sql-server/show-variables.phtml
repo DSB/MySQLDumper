@@ -19,19 +19,33 @@
         <th class="right">#</th>
         <th><strong><?php echo $this->lang->L_NAME;?></strong></th>
         <th><strong><?php echo $this->lang->L_VALUE;?></strong></th>
+        <th class="nowrap"><?php echo $this->lang->L_INTERPRETED_AS_BYTES;?></th>
     </tr>
     <?php
         $i = 1;
         $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
-        foreach ($this->variables as $name => $value) : ?>
+        foreach ($this->variables as $name => $value) {
+            if (strpos($value, ',') !== false) {
+                $value = str_replace(',', ', ', $value);
+            }
+            ?>
             <tr class="<?php echo $cycleHelper->next()?>">
                 <td class="small right"><?php echo $i;?>.</td>
                 <td class="small"><?php echo $this->escape($name);?></td>
                 <td class="small"><?php echo $this->escape($value);?></td>
-            </tr>
-    <?php
-        ++$i;
-        endforeach;
+                <td class="small nowrap">
+                    <?php
+                        if (is_numeric($value)) {
+                            echo $this->byteOutput($value);
+                        } else {
+                            echo '-';
+                        }
+                    ?>
+                </td>
+
+            </tr><?php
+            ++$i;
+        };
     ?>
 </table>
 <br /><br /><br />

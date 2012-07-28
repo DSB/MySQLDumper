@@ -38,7 +38,7 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
      * $this->_connectionHandle.
      * Returns true on success or false if connection couldn't be established.
      *
-     * @throws Exception
+     * @throws Msd_Exception
      * 	@return bool
      **/
     protected function _dbConnect()
@@ -124,7 +124,7 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
      *
      * Returns true if selection was succesfull otherwise false.
      *
-     * @throws Exception
+     * @throws Msd_Exception
      * @param string $database The database to select
      *
      * @return bool

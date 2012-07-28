@@ -31,6 +31,8 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
      * Create a connection to MySQL and store the connection handle in
      * $this->connectionHandle.
      *
+     * @throws Msd_Exception
+     *
      * @return boolean
      **/
     protected function _dbConnect()
@@ -49,6 +51,8 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
             $this->_socket
         );
         error_reporting($errorReporting);
+        $this->_mysqli->init();
+        $this->_mysqli->options(MYSQLI_READ_DEFAULT_GROUP, 'max_allowed_packet=64M');
         if ($this->_mysqli->connect_errno) {
             $error = $this->_mysqli->connect_error;
             $errno = $this->_mysqli->connect_errno;
@@ -141,8 +145,8 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
      * is returned.
      *
      * @param string  $query   The query to execute
-     * @param const   $kind    Type of result set
-     * @param boolean $getRows Wether to fetch all rows and return them
+     * @param int     $kind    Type of result set
+     * @param boolean $getRows Whether to fetch all rows and return them
      *
      * @return resource|array
      */
@@ -183,7 +187,7 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
      *
      * Can be used to walk through result sets.
      *
-     * @param const $kind
+     * @param int $kind
      *
      * @return array|object
      */
@@ -197,6 +201,7 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
                return $this->_resultHandle->fetch_object();
                break;
            case self::ARRAY_NUMERIC:
+           default:
                return $this->_resultHandle->fetch_array(MYSQLI_NUM);
                break;
        }
