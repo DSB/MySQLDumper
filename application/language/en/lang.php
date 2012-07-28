@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: DSB (256), JanRei (14), Kyoya (31), StvN (6), zuma (20)
+ * Maintained by: DSB (257), JanRei (14), Kyoya (31), StvN (6), zuma (20)
  */
 $lang=array(
 'L_ACTION' => 'Action',
@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Use as default database',
 'L_INSTALL_HELP_PORT' => '(empty = Default Port)',
 'L_INSTALL_HELP_SOCKET' => '(empty = Default Socket)',
+'L_INTERPRETED_AS_BYTES' => 'Interpreted as bytes',
 'L_IS_WRITABLE' => 'Is writable',
 'L_KILL_PROCESS' => 'Stop process',
 'L_LANGUAGE' => 'Language',

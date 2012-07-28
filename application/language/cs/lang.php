@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => '',
 'L_INSTALL_HELP_PORT' => '(prázdný = Default Port)',
 'L_INSTALL_HELP_SOCKET' => '(prázdný = Default Socket)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'Nenainstalované',
 'L_KILL_PROCESS' => 'Ukončit proce',
 'L_LANGUAGE' => 'Jazyk',

@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'استفاده از ديتابيس پيشفرض',
 'L_INSTALL_HELP_PORT' => '(پورت پيشفرض = خالي)',
 'L_INSTALL_HELP_SOCKET' => '(سوکت پيشفرض = خالي)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'قابل نوشتن هست',
 'L_KILL_PROCESS' => 'توقف فرآيند',
 'L_LANGUAGE' => 'زبان',

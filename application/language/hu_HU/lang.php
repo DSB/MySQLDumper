@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => '',
 'L_INSTALL_HELP_PORT' => '(üres = alapértelmezett port)',
 'L_INSTALL_HELP_SOCKET' => '',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'Írható',
 'L_KILL_PROCESS' => 'Folyamat befejezése',
 'L_LANGUAGE' => 'Nyelv',

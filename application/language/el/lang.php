@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Χρήση ώς προεπιλεγμένης Β.Δεδομένων',
 'L_INSTALL_HELP_PORT' => '(άδειο = προεπιλεγμένη θύρα)',
 'L_INSTALL_HELP_SOCKET' => '(άδειο = προεπιλεγμένο Socket)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'είναι εγγράψιμο',
 'L_KILL_PROCESS' => 'Σταμάτημα διαδικασίας',
 'L_LANGUAGE' => 'Γλώσσα',

@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => '',
 'L_INSTALL_HELP_PORT' => '(vuoto = porta di default)',
 'L_INSTALL_HELP_SOCKET' => '(vuoto = Socket di default)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'E\' scrivibile',
 'L_KILL_PROCESS' => 'Termina processo',
 'L_LANGUAGE' => 'Lingua',

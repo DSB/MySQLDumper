@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Uporabi kot privzeto podatkovno zbirko',
 'L_INSTALL_HELP_PORT' => '(prazno = privzeta vrata)',
 'L_INSTALL_HELP_SOCKET' => '(prazno = privzeta vtičnica)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'Je zapisljiv',
 'L_KILL_PROCESS' => 'Ustavi proces',
 'L_LANGUAGE' => 'Jezik',

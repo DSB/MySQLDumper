@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Ställ in som standarddatabas',
 'L_INSTALL_HELP_PORT' => '(tom = standardport)',
 'L_INSTALL_HELP_SOCKET' => '(tom = standardsocket)',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'Är skrivbart',
 'L_KILL_PROCESS' => 'Avsluta processen',
 'L_LANGUAGE' => 'Språk',

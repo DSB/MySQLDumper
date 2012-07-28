@@ -353,6 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'استخدم كقاعدة بيانات افتراضية',
 'L_INSTALL_HELP_PORT' => '(فارغ = المنفذ الافتراضي)',
 'L_INSTALL_HELP_SOCKET' => '',
+'L_INTERPRETED_AS_BYTES' => '',
 'L_IS_WRITABLE' => 'قابل للكتابة',
 'L_KILL_PROCESS' => 'إيقاف العملية',
 'L_LANGUAGE' => 'اللغة',
