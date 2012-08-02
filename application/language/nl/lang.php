@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: DSB (1), JesseB (367)
+ * Maintained by: DSB (1), JesseB (367), pavdeijk (1)
  */
 $lang=array(
 'L_ACTION' => 'Actie',
@@ -353,7 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Gebruik als standaard database',
 'L_INSTALL_HELP_PORT' => '(Leeg = Standaard Poort)',
 'L_INSTALL_HELP_SOCKET' => '(Leeg = Standaard Socket)',
-'L_INTERPRETED_AS_BYTES' => '',
+'L_INTERPRETED_AS_BYTES' => 'geïnterpretteeerd als bytes',
 'L_IS_WRITABLE' => 'Is beschrijfbaar',
 'L_KILL_PROCESS' => 'Process beëindigen',
 'L_LANGUAGE' => 'Taal',
