@@ -247,8 +247,7 @@ class IndexController extends Msd_Controller_Action
                         // user is not listed in users.ini
                         break;
                     case Msd_User::SUCCESS:
-                        $defaultDb = $this->view->config->getParam('dbuser.defaultDb'
-                        );
+                        $defaultDb = $this->view->config->getParam('dbuser.defaultDb');
 
                         // set actualDb to defaultDb
                         if ($defaultDb != '') {
@@ -266,14 +265,14 @@ class IndexController extends Msd_Controller_Action
                 // if we get here wrong credentials are given
                 $this->view->popUpMessage()
                     ->addMessage(
-                    'login-message',
-                    'L_LOGIN',
-                    $user->getAuthMessages(),
-                    array(
-                        'modal'       => true,
-                        'dialogClass' => 'error'
-                    )
-                );
+                        'login-message',
+                        'L_LOGIN',
+                        $user->getAuthMessages(),
+                        array(
+                            'modal'       => true,
+                            'dialogClass' => 'error'
+                        )
+                    );
             }
         }
         $this->view->form = $form;
