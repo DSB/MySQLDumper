@@ -198,7 +198,7 @@ class Msd_Configuration
         }
         $configWriter = new Zend_Config_Writer_Ini(
             array(
-                 'filename' => $this->get('paths.config') . DS . $fileName,
+                 'filename' => $this->get('paths.config') . '/' . $fileName,
                  'config' => $configData,
             )
         );
@@ -253,11 +253,10 @@ class Msd_Configuration
         if ($configName != 'defaultConfig') {
             $configName .= '.ini';
             $configPath = $this->get('paths.config');
-            $configFile = $configPath . DS . $configName;
+            $configFile = $configPath . '/' . $configName;
         } else {
             // special case - defaultConfig.ini is in application/configs
-            $configFile = realpath(APPLICATION_PATH . DS . 'configs')
-                          . DS . 'defaultConfig.ini';
+            $configFile = realpath(APPLICATION_PATH . '/configs') . '/defaultConfig.ini';
         }
         if (!is_readable($configFile)) {
             throw new Msd_Exception(
@@ -286,7 +285,7 @@ class Msd_Configuration
     private function _loadUserDirectories()
     {
         // set paths
-        $workRoot = realpath(APPLICATION_PATH . DS . '..') . DS . 'work' . DS;
+        $workRoot = realpath(APPLICATION_PATH . '/..') . '/work/';
         $directories = array(
             'work' => $workRoot,
             'log' => $workRoot . 'log',

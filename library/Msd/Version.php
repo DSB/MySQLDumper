@@ -42,7 +42,7 @@ class Msd_Version
      * @param array $options Option-array to overwrite required PHP/MySQL
      *                       versions
      *
-     * @return void
+     * @return Msd_Version
      */
     public function __construct($options = array())
     {

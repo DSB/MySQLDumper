@@ -35,15 +35,36 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     /**
-     *
-     * Set Firebug_logger in registry
+     * Initialize configuration.
      *
      * @return void
      */
-    public function _initFirbugLogger()
+    public function _initConfiguration()
     {
-        $writer = new Zend_Log_Writer_Firebug();
-        $logger = new Zend_Log($writer);
-        Zend_Registry::set('logger', $logger);
+        $dynamicConfig = new Msd_Config_Dynamic();
+        $configFile = $dynamicConfig->getParam('configFile', 'defaultConfig.ini');
+        $config = new Msd_Config(
+            'Default',
+            array('directories' => APPLICATION_PATH . '/configs')
+        );
+        $config->load($configFile);
+        Msd_Registry::setConfig($config);
+
+        Msd_Registry::setDynamicConfig($dynamicConfig);
     }
+
+    /**
+     * Un-quote a string or array
+     *
+     * @param string|array $value The value to strip
+     *
+     * @return string|array
+     */
+    public static function stripslashes_deep($value)
+    {
+        $value = is_array($value) ? array_map('Bootstrap::stripslashes_deep', $value) : stripslashes($value);
+        return $value;
+    }
+
+
 }

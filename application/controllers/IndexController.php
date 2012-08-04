@@ -55,11 +55,10 @@ class IndexController extends Zend_Controller_Action
                 'badversion',
                 'install',
                 'default',
-                array(
-                     'message' => 'L_PHP_VERSION_TOO_OLD'
-                )
+                array('message' => 'L_PHP_VERSION_TOO_OLD')
             );
         }
+
         try {
             $dbo = Msd_Db::getAdapter();
             $data = Msd_File::getLatestBackupInfo();

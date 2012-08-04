@@ -42,7 +42,9 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
      *
      * @param string $iniFilename Filename for registered users
      *
-     * @return void
+     * @throws Msd_Exception
+     *
+     * @return Msd_Auth_Adapter_Ini
      */
     public function __construct($iniFilename)
     {
@@ -57,6 +59,8 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
     /**
      * set the username, which is used for authentication.
      *
+     * @param string $username The username
+     *
      * @return void
      */
     public function setUsername($username)
@@ -67,6 +71,8 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
     /**
      * Set the password, which is used for authentication.
      *
+     * @param string $password The password
+     *
      * @return void
      */
     public function setPassword($password)
@@ -76,6 +82,8 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
 
     /**
      * Authenticate with the given credentials.
+     *
+     * @throws Msd_Exception
      *
      * @return Zend_Auth_Result
      */

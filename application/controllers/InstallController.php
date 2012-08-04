@@ -108,8 +108,7 @@ class InstallController extends Zend_Controller_Action
             $languagesStatus[$langId] = array(
                 'langName' => $langName,
                 'installed' => file_exists(
-                    APPLICATION_PATH . DS . 'language' .
-                    DS . $langId . DS . 'lang.php'
+                    APPLICATION_PATH . '/language/' . $langId . '/lang.php'
                 )
             );
         }
@@ -197,9 +196,9 @@ class InstallController extends Zend_Controller_Action
                     ->setToken($postData['pass']);
             if ($form->isValid($postData)) {
                 $ini = new Msd_Ini();
-                $ini->set('name', $postData['user'], '0');
-                $ini->set('pass', md5($postData['pass']), '0');
-                $ini->save(APPLICATION_PATH . DS . 'configs' . DS . 'users.ini');
+                $ini->set('name', $postData['user'], 'user');
+                $ini->set('pass', md5($postData['pass']), 'user');
+                $ini->saveFile(APPLICATION_PATH . '/configs/users.ini');
                 $redirectUrl = $this->view->url(array('controller' => 'install', 'action' => 'step4'), null, true);
                 $this->_response->setRedirect($redirectUrl);
             }
@@ -288,8 +287,8 @@ class InstallController extends Zend_Controller_Action
         $lang = Msd_Language::getInstance();
         $version = new Msd_Version();
         $files = array(
-            'lang' => ':language' . DS . 'lang.php',
-            'flag' => ':language' . DS . 'flag.gif'
+            'lang' => ':language/lang.php',
+            'flag' => ':language/flag.gif'
         );
         if ($language === null) {
             if (!isset($_SESSION['langlist'])) {
@@ -305,8 +304,7 @@ class InstallController extends Zend_Controller_Action
             return;
         }
         $update = new Msd_Update(
-            APPLICATION_PATH . DS . 'configs' .
-            DS . 'update.ini'
+            APPLICATION_PATH . '/configs/update.ini'
         );
         $update->setUpdateParam('language', $language);
         $update->setUpdateParam('version', $version->getMsdVersion());

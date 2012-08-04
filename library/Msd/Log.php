@@ -145,16 +145,16 @@ class Msd_Log
         $filename = '';
         switch ($file) {
             case self::PHP:
-                $filename = $this->_paths->log . DS . 'php.log';
+                $filename = $this->_paths->log . '/php.log';
                 break;
             case self::PERL:
-                $filename = $this->_paths->log . DS . 'perl.log';
+                $filename = $this->_paths->log . '/perl.log';
                 break;
             case self::PERL_COMPLETE:
-                $filename = $this->_paths->log . DS . 'perlComplete.log';
+                $filename = $this->_paths->log . '/perlComplete.log';
                 break;
             case self::ERROR:
-                $filename = $this->_paths->log . DS . 'phpError.log';
+                $filename = $this->_paths->log . '/phpError.log';
         }
         return $filename;
     }

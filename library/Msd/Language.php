@@ -60,8 +60,8 @@ class Msd_Language
      */
     public function loadLanguage($language)
     {
-        $this->_baseLanguageDir = APPLICATION_PATH . DS . 'language' . DS;
-        $file = $this->_baseLanguageDir . $language . DS . 'lang.php';
+        $this->_baseLanguageDir = APPLICATION_PATH . '/language/';
+        $file = $this->_baseLanguageDir . $language . '/lang.php';
         $translator = $this->getTranslator();
         if ($translator === null) {
             $translator = new Zend_Translate('array', $file, $language);

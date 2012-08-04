@@ -21,35 +21,35 @@ class Msd_User
      *
      * @var int
      */
-    const SUCCESS           = 0x00;
+    const SUCCESS = 0x00;
 
     /**
      * There is no file with user identities and credentials.
      *
      * @var int
      */
-    const NO_USER_FILE      = 0x01;
+    const NO_USER_FILE = 0x01;
 
     /**
      * The user file doesn't contain any valid user logins.
      *
      * @var int
      */
-    const NO_VALID_USER     = 0x02;
+    const NO_VALID_USER = 0x02;
 
     /**
      * The given identity is unknown or the password is wrong.
      *
      * @var int
      */
-    const UNKNOWN_IDENTITY  = 0x03;
+    const UNKNOWN_IDENTITY = 0x03;
 
     /**
      * An unknown error occured.
      *
      * @var int
      */
-    const GENERAL_FAILURE   = 0xFF;
+    const GENERAL_FAILURE = 0xFF;
 
     /**
      * Path and filename of the user ini file.
@@ -96,14 +96,13 @@ class Msd_User
     /**
      * Constructor
      *
-     * @return void
+     * @return Msd_User
      */
     public function __construct()
     {
-        $this->_usersFile = APPLICATION_PATH . DS . 'configs' . DS
-            . 'users.ini';
+        $this->_usersFile   = APPLICATION_PATH . '/configs/users.ini';
         $this->_authStorage = new Zend_Auth_Storage_Session();
-        $auth = $this->_authStorage->read();
+        $auth               = $this->_authStorage->read();
         if (!empty($auth)) {
             if (isset($auth['name'])) {
                 $this->_userName = $auth['name'];
@@ -157,8 +156,8 @@ class Msd_User
             return self::NO_USER_FILE;
         }
 
-        $usersIni = new Msd_Ini($this->_usersFile);
-        $users = $usersIni->getAll();
+        $usersConfig = new Msd_Ini($this->_usersFile);
+        $users = $usersConfig->get('user');
 
         $hasValidUser = false;
         foreach ($users as $user) {
@@ -167,7 +166,6 @@ class Msd_User
                 break;
             }
         }
-
         if (!$hasValidUser) {
             return self::NO_VALID_USER;
         }
@@ -175,14 +173,14 @@ class Msd_User
         $authAdapter = new Msd_Auth_Adapter_Ini($this->_usersFile);
         $authAdapter->setUsername($username);
         $authAdapter->setPassword($password);
-        $auth = Zend_Auth::getInstance();
-        $authResult = $auth->authenticate($authAdapter);
+        $auth                = Zend_Auth::getInstance();
+        $authResult          = $auth->authenticate($authAdapter);
         $this->_authMessages = $authResult->getMessages();
         if ($authResult->isValid()) {
             $this->_isLoggedIn = true;
             if ($autoLogin) {
                 Zend_Session::regenerateId();
-                $crypt = Msd_Crypt::getInstance('MySQLDumper27112010');
+                $crypt    = Msd_Crypt::getInstance('MySQLDumper27112010');
                 $identity = $crypt->encrypt(
                     $username . ':' . $password
                 );
@@ -204,7 +202,7 @@ class Msd_User
     private function _loginByCookie()
     {
         $request = Zend_Controller_Front::getInstance()->getRequest();
-        $cookie = $request->get('msd_autologin');
+        $cookie  = $request->get('msd_autologin');
         if ($cookie === null || $cookie == '') {
             // no cookie found
             return false;
@@ -221,6 +219,7 @@ class Msd_User
         // to stay logged in until you logout.
         $this->login($username, $pass, true);
     }
+
     /**
      * Clear the user identity and logout the user.
      *
@@ -236,7 +235,7 @@ class Msd_User
     /**
      * Set default configuration for user
      *
-     *  @return void
+     * @return void
      */
     public function setDefaultConfiguration()
     {

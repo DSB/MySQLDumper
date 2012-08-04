@@ -73,8 +73,8 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
         if (!$icons) {
             $config = Msd_Configuration::getInstance();
             $file = realpath(
-                APPLICATION_PATH . DS . '..' . DS . 'public'
-                . DS . $config->get('paths.iconpath') . DS . 'icon.ini'
+                APPLICATION_PATH . '/../public/'
+                . $config->get('paths.iconpath') . '/icon.ini'
             );
             $iconsIni = new Zend_Config_Ini($file, 'icons');
             $icons = $iconsIni->toArray();
