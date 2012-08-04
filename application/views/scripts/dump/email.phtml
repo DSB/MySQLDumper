@@ -6,7 +6,7 @@ $this->lang = $this->parent->lang;
     <td class="small"><?php echo $this->lang->L_SEND_MAIL_FORM?>:</td>
     <td class="small right">
     <?php
-        if ($this->config->get('config.email.sendMail') == 0) {
+        if ($this->config->getParam('email.sendMail') == 0) {
             echo $this->lang->L_NO;
         } else {
             echo $this->lang->L_YES;

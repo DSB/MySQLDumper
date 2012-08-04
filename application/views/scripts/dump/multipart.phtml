@@ -2,7 +2,7 @@
 $this->config = $this->parent->config;
 $this->lang = $this->parent->lang;
 $d = $this->parent->dumpData;
-if ($this->config->get('config.general.multiPart') == 0) { ?>
+if ($this->config->getParam('general.multiPart') == 0) { ?>
     <tr class="row-odd">
         <td class="small"><?php echo $this->lang->L_MULTI_PART?>:</td>
         <td class="small right" colspan="2"><?php echo $this->lang->L_NO?></td>

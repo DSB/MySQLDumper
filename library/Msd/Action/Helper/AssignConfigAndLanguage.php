@@ -16,8 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Action_Helper
  */
-class Msd_Action_Helper_AssignConfigAndLanguage
-    extends Zend_Controller_Action_Helper_Abstract
+class Msd_Action_Helper_AssignConfigAndLanguage extends Zend_Controller_Action_Helper_Abstract
 {
     /**
      * Actual Zend_View instance
@@ -36,9 +35,10 @@ class Msd_Action_Helper_AssignConfigAndLanguage
         if ($controllerName == 'install') {
             return;
         }
-        $view = $this->getView();
-        $view->config = Msd_Configuration::getInstance();
-        $view->lang = Msd_Language::getInstance();
+        $view                = $this->getView();
+        $view->config        = Msd_Registry::getConfig();
+        $view->dynamicConfig = Msd_Registry::getDynamicConfig();
+        $view->lang          = Msd_Language::getInstance();
     }
 
     /**
@@ -51,7 +51,7 @@ class Msd_Action_Helper_AssignConfigAndLanguage
         if (null !== $this->_view) {
             return $this->_view;
         } else {
-            $controller = $this->getActionController();
+            $controller  = $this->getActionController();
             $this->_view = $controller->view;
             return $this->_view;
         }

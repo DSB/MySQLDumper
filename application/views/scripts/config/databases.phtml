@@ -109,11 +109,11 @@
                 </td>
             </tr>
 <?php
-$dbs = $this->config->get('config.databases');
+$dbs = $this->config->getParam('databases');
 echo $this->partial(
     'config/databases/listDbs.phtml',
     array('databases' => $dbs,
-        'dbActual' => $this->config->get('dynamic.dbActual'),
+        'dbActual' => $this->dynamicConfig->getParam('dbActual'),
         'parent' => $this,
     )
 );

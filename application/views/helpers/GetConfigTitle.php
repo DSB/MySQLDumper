@@ -19,8 +19,6 @@ class Msd_View_Helper_GetConfigTitle extends Zend_View_Helper_Abstract
 {
     public function getConfigTitle($configName)
     {
-        $config = Msd_Configuration::getInstance();
-        $configData = $config->loadConfiguration($configName, false);
-        return $configData->general->title;
+        return $this->view->config->getConfigTitle($configName);
     }
 }

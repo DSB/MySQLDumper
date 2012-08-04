@@ -25,7 +25,7 @@ $('#sqltextarea').bind('keyup', function(e){
                 <br class="clear" />
             </div>
             <div>
-                <textarea style="height:<?php echo $this->config->get('config.interface.sqlboxHeight');?>px;" name="sqltextarea" id="sqltextarea" rows="4" cols="10"><?php echo $this->boxcontent;?></textarea>
+                <textarea style="height:<?php echo $this->config->getParam('interface.sqlboxHeight');?>px;" name="sqltextarea" id="sqltextarea" rows="4" cols="10"><?php echo $this->boxcontent;?></textarea>
                 <div class="sqlbox-warning small center"><?php echo $this->lang->L_SQL_WARNING;?></div>
             </div>
         </form>

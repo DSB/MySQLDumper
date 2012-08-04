@@ -29,7 +29,7 @@ class Msd_Log
     /**
      * Init file handles
      *
-     * @return void
+     * @return Msd_Log
      */
     public function __construct()
     {
@@ -41,8 +41,8 @@ class Msd_Log
         $this->handle[self::ERROR] = false;
 
         // get config
-        $config = Msd_Configuration::getInstance();
-        $this->_paths = (object)$config->get('paths');
+        $config = Msd_Registry::getConfig();
+        $this->_paths = (object) $config->getParam('paths');
     }
 
     /**

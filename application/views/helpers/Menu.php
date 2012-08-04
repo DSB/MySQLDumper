@@ -53,15 +53,15 @@ class Msd_View_Helper_Menu extends Zend_View_Helper_Abstract
      */
     private function _getDatabases()
     {
-        $actualDb = $this->view->config->get('dynamic.dbActual');
-        $databases = $this->view->config->get('dynamic.databases');
+        $actualDb = $this->view->dynamicConfig->getParam('dbActual');
+        $databases = $this->view->dynamicConfig->getParam('databases', array());
         $dbo = Msd_Db::getAdapter();
         if (empty($databases) || $dbo->selectDb($actualDb) !== true) {
             // couldn't connect to db - refresh db-list
             $databases = $dbo->getDatabaseNames();
             // if database was deleted or is not accessible by user
             // fallback to default db
-            $defaultDb = $this->view->config->get('config.dbuser.defaultDb');
+            $defaultDb = $this->view->config->getParam('dbuser.defaultDb');
             if ($defaultDb != '') {
                 $actualDb = $defaultDb;
                 if ($dbo->selectDb($actualDb) !== true) {
@@ -70,8 +70,8 @@ class Msd_View_Helper_Menu extends Zend_View_Helper_Abstract
                     $dbo->selectDb($actualDb);
                 }
             }
-            $this->view->config->set('dynamic.dbActual', $actualDb);
-            $this->view->config->set('dynamic.databases', $databases);
+            $this->view->dynamicConfig->setParam('dbActual', $actualDb);
+            $this->view->dynamicConfig->setParam('databases', $databases);
         }
         return $databases;
     }

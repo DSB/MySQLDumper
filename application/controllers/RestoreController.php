@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class RestoreController extends Zend_Controller_Action
+class RestoreController extends Msd_Controller_Action
 {
     public function indexAction()
     {

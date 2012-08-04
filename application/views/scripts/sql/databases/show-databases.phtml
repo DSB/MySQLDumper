@@ -1,10 +1,10 @@
 <?php
-$systemDatabases = $this->config->get('config.systemDatabases');
+$systemDatabases = $this->config->getParam('systemDatabases');
 $formUrl = $this->url(array('controller'=>'sql','action'=>'index'));
 $cycleHelper = $this->getHelper('cycle')->cycle(array('row-even', 'row-odd'));
 ?>
 <div id="content">
-<h2><?php echo $this->lang->L_DATABASES_OF_USER;?> '<?php echo $this->config->get('config.dbuser.user').'\'@\''.$this->config->get('config.dbuser.host');?>'</h2>
+<h2><?php echo $this->lang->L_DATABASES_OF_USER;?> '<?php echo $this->config->getParam('dbuser.user').'\'@\''.$this->config->getParam('dbuser.host');?>'</h2>
 <?php echo $this->sqlHeadNavi(); ?>
 <?php
 if (isset($this->actionResults)) {
@@ -100,7 +100,7 @@ if (isset($this->actionResults)) {
         ?>
         <tr class="nowrap
         <?php
-            if ($dbName == $this->config->get('dynamic.dbActual')) {
+            if ($dbName == $this->dynamicConfig->getParam('dbActual')) {
                 echo 'row-highlight';
             } else {
                 echo $this->cycle(array('row-even', 'row-odd'))->next();

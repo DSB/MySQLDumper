@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class ConfigController extends Zend_Controller_Action
+class ConfigController extends Msd_Controller_Action
 {
     /**
      * Active jQuery tab Id
@@ -61,7 +61,7 @@ class ConfigController extends Zend_Controller_Action
         $formGeneral  = $this->_getSubformIni('general');
         $elementTitle = $formGeneral->getElement('title');
         $elementTitle->setValue(
-            $this->view->config->get('config.general.title')
+            $this->view->config->getParam('general.title')
         );
 
         $form->addSubForm($formGeneral, 'general');
@@ -184,9 +184,9 @@ class ConfigController extends Zend_Controller_Action
 
         // set dynamic actual database if it's changed in the panel
         if ($this->_request->isPost()) {
-            $actualDb = $this->view->config->get('dynamic.dbActual');
+            $actualDb = $this->view->dynamicConfig->getParam('dbActual');
             if (isset($_POST['defaultDb']) && ($_POST['defaultDb'] != $actualDb)) {
-                $this->view->config->set('dynamic.dbActual', $_POST['defaultDb']);
+                $this->view->dynamicConfig->setParam('dbActual', $_POST['defaultDb']);
             }
         }
 
@@ -214,7 +214,7 @@ class ConfigController extends Zend_Controller_Action
      */
     public function addRecipientCcAction()
     {
-        $recipientsCc = $this->view->config->get('config.email.RecipientCc');
+        $recipientsCc = $this->view->config->Param('email.RecipientCc');
         if ($recipientsCc === null) {
             $recipientsCc = array();
         }
@@ -222,7 +222,7 @@ class ConfigController extends Zend_Controller_Action
         $recipientsCc[$index]['Name']    = '';
         $recipientsCc[$index]['Address'] = '';
         $recipientsCc                    = array_values($recipientsCc);
-        $this->view->config->set('config.email.RecipientCc', $recipientsCc);
+        $this->view->config->setParam('email.RecipientCc', $recipientsCc);
         $this->_forward('index');
     }
 
@@ -234,11 +234,11 @@ class ConfigController extends Zend_Controller_Action
     public function deleteRecipientCcAction()
     {
         $recipientToDelete = (int)$this->_request->getPost('param');
-        $recipientsCc      = $this->view->config->get('config.email.RecipientCc');
+        $recipientsCc      = $this->view->config->getParam('email.RecipientCc');
         if (isset($recipientsCc[$recipientToDelete])) {
             unset($recipientsCc[$recipientToDelete]);
         }
-        $this->view->config->set('config.email.RecipientCc', $recipientsCc);
+        $this->view->config->setParam('email.RecipientCc', $recipientsCc);
         $this->_forward('index');
     }
 
@@ -249,18 +249,15 @@ class ConfigController extends Zend_Controller_Action
      */
     public function addFtpConnectionAction()
     {
-        $ftpConfig = $this->view->config->get('config.ftp');
+        $ftpConfig = $this->view->config->getParam('ftp');
         $index     = 0;
         if (!empty($ftpConfig)) {
             $index = max(array_keys($ftpConfig)) + 1;
         }
-        $default           = $this->view->config->loadConfiguration(
-            'defaultConfig',
-            false
-        );
+        $default = $this->view->config->load('defaultConfig');
         $default           = $default->toArray();
         $ftpConfig[$index] = $default['ftp'][0];
-        $this->view->config->set('config.ftp', $ftpConfig);
+        $this->view->config->Param('ftp', $ftpConfig);
         $this->_forward('index');
     }
 
@@ -272,13 +269,13 @@ class ConfigController extends Zend_Controller_Action
     public function deleteFtpConnectionAction()
     {
         $index     = (int)$this->_request->getPost('param');
-        $ftpConfig = $this->view->config->get('config.ftp');
+        $ftpConfig = $this->view->config->getParam('ftp');
         if (count($ftpConfig) > 1) {
             if (isset($ftpConfig[$index])) {
                 unset($ftpConfig[$index]);
                 sort($ftpConfig);
             }
-            $this->view->config->set('config.ftp', $ftpConfig);
+            $this->view->config->setParam('ftp', $ftpConfig);
         }
         $this->_forward('index');
     }
@@ -403,7 +400,7 @@ class ConfigController extends Zend_Controller_Action
             foreach ($elements as $element) {
                 $element = str_replace($group . '_', '', $element);
                 $element = str_replace('_', '.', $element);
-                $value   = $this->view->config->get('config.' . $group . '.' . $element);
+                $value   = $this->view->config->getParam($group . '.' . $element);
                 if ($value !== null) {
                     $subForm->setDefault($element, $value);
                 }
@@ -455,8 +452,7 @@ class ConfigController extends Zend_Controller_Action
      */
     private function _addNonConfigurableConfigParams($configData)
     {
-        $config                        = Msd_Configuration::getInstance();
-        $configData['systemDatabases'] = $config->get('config.systemDatabases');
+        $configData['systemDatabases'] = $this->view->config->getParam('systemDatabases');
         return $configData;
     }
 
@@ -479,7 +475,7 @@ class ConfigController extends Zend_Controller_Action
         $smtpConfig         = $emailForm->getDisplayGroup('smtpConfig');
         $sendmailVisibility = false;
         $smtpVisibility     = false;
-        switch ($this->view->config->get('config.email.Program')) {
+        switch ($this->view->config->getParam('email.Program')) {
             case 'sendmail':
                 $sendmailVisibility = true;
                 break;

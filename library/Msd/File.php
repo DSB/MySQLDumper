@@ -58,9 +58,9 @@ class Msd_File
      */
     public static function getLatestBackupInfo()
     {
-        $config = Msd_Configuration::getInstance();
+        $config = Msd_Registry::getConfig();
         $latestBackup = array();
-        $dir = new DirectoryIterator($config->get('paths.backup'));
+        $dir = new DirectoryIterator($config->getParam('paths.backup'));
         foreach ($dir as $file) {
             if ($file->isFile()) {
                 $fileMtime = $file->getMTime();
@@ -84,11 +84,12 @@ class Msd_File
      */
     public static function getConfigNames()
     {
-        $config = Msd_Configuration::getInstance();
-        $configPath = $config->get('paths.config');
+        $config = Msd_Registry::getConfig();
+        $configPath = $config->getParam('paths.config');
         if (!is_readable($configPath)) {
             return array();
         }
+
         $dir = new DirectoryIterator($configPath);
         $files = array();
         foreach ($dir as $file) {

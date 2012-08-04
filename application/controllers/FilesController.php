@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class FilesController extends Zend_Controller_Action
+class FilesController extends Msd_Controller_Action
 {
 
     public function indexAction()

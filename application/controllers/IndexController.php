@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class IndexController extends Zend_Controller_Action
+class IndexController extends Msd_Controller_Action
 {
     /**
      * Remember last controler
@@ -37,9 +37,9 @@ class IndexController extends Zend_Controller_Action
      */
     public function init()
     {
-        $request = $this->getRequest();
+        $request               = $this->getRequest();
         $this->_lastController = $request->getParam('lastController', 'index');
-        $this->_lastAction = $request->getParam('lastAction', 'index');
+        $this->_lastAction     = $request->getParam('lastAction', 'index');
     }
 
     /**
@@ -60,22 +60,21 @@ class IndexController extends Zend_Controller_Action
         }
 
         try {
-            $dbo = Msd_Db::getAdapter();
+            $dbo  = Msd_Db::getAdapter();
             $data = Msd_File::getLatestBackupInfo();
             if (!empty($data)) {
-                $statusline = Msd_File_Dump::getStatusline($data['filename']);
+                $statusline       = Msd_File_Dump::getStatusline($data['filename']);
                 $data['filename'] = $statusline['dbname'];
             } else {
                 $data['filename'] = '';
             }
-            $data['mysqlServerVersion'] = $dbo->getServerInfo();
-            $data['mysqlClientVersion'] = $dbo->getClientInfo();
-            $data['serverMaxExecutionTime'] =
-                    (int)@get_cfg_var('max_execution_time');
+            $data['mysqlServerVersion']     = $dbo->getServerInfo();
+            $data['mysqlClientVersion']     = $dbo->getClientInfo();
+            $data['serverMaxExecutionTime'] = (int)@get_cfg_var('max_execution_time');
             $this->view->assign($data);
-            if ($this->view->config->get('dynamic.dbActual') == '') {
+            if ($this->view->dynamicConfig->getParam('dbActual', '') == '') {
                 $dbNames = $dbo->getDatabaseNames();
-                $this->view->config->set('dynamic.dbActual', $dbNames[0]);
+                $this->view->dynamicConfig->setParam('dbActual', $dbNames[0]);
             }
         } catch (Exception $e) {
             $configNames = Msd_File::getConfigNames();
@@ -97,7 +96,7 @@ class IndexController extends Zend_Controller_Action
                 array('message' => 'L_MYSQL_VERSION_TOO_OLD')
             );
         }
-        $this->view->version = $version;
+        $this->view->version   = $version;
         $this->view->dbAdapter = get_class($dbo);
     }
 
@@ -112,9 +111,9 @@ class IndexController extends Zend_Controller_Action
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $request = $this->getRequest();
-        $file = base64_decode($request->getParam('selectedConfig'));
-        $this->view->config = Msd_Configuration::getInstance();
-        $this->view->config->loadConfiguration($file);
+        $file    = base64_decode($request->getParam('selectedConfig'));
+        $this->_config->load($file);
+        $this->view->config->load($file);
         if ($this->_lastAction != 'switchconfig') { //prevent endless loop
             $this->_forward($this->_lastAction, $this->_lastController);
         }
@@ -128,14 +127,14 @@ class IndexController extends Zend_Controller_Action
     public function selectdbAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
-        $request = $this->getRequest();
+        $request    = $this->getRequest();
         $selectedDb = base64_decode($request->getParam('selectedDb'));
-        $this->view->config->set('dynamic.dbActual', $selectedDb);
+        $this->view->dynamicConfig->setParam('dbActual', $selectedDb);
         if ($this->_lastAction != 'selectdb') { //prevent endless loop
             $redirectUrl = $this->view->url(
                 array(
-                     'controller' => $this->_lastController,
-                     'action' => $this->_lastAction,
+                    'controller' => $this->_lastController,
+                    'action'     => $this->_lastAction,
                 ),
                 null,
                 true
@@ -152,19 +151,19 @@ class IndexController extends Zend_Controller_Action
     public function dbrefreshAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
-        $dbo = Msd_Db::getAdapter();
+        $dbo       = Msd_Db::getAdapter();
         $databases = $dbo->getDatabaseNames();
-        $this->view->config->set('dynamic.databases', $databases);
-        $actualDb = $this->view->config->get('dynamic.dbActual');
+        $this->view->dynamicConfig->setParam('databases', $databases);
+        $actualDb = $this->view->dynamicConfig->getParam('dbActual');
         if ($dbo->selectDb($actualDb) !== true) {
             //actual db is no longer available -> switch to first one
-            $this->view->config->set('dynamic.dbActual', $databases[0]);
+            $this->view->dynamicConfig->setParam('dbActual', $databases[0]);
         }
         if ($this->_lastAction != 'refreshdb') { //prevent endless loop
             $redirectUrl = $this->view->url(
                 array(
-                     'controller' => $this->_lastController,
-                     'action' => $this->_lastAction,
+                    'controller' => $this->_lastController,
+                    'action'     => $this->_lastAction,
                 ),
                 null,
                 true
@@ -208,8 +207,8 @@ class IndexController extends Zend_Controller_Action
         }
         $this->_doRedirect(
             array(
-                 'controller' => 'index',
-                 'action' => 'login'
+                'controller' => 'index',
+                'action'     => 'login'
             )
         );
     }
@@ -223,11 +222,11 @@ class IndexController extends Zend_Controller_Action
     {
         $form = new Application_Form_Login();
         if ($this->_request->isPost()) {
-            $user = new Msd_User();
+            $user     = new Msd_User();
             $postData = $this->_request->getParams();
             if ($form->isValid($postData)) {
-                $autoLogin = ($postData['autologin'] == 1) ? true : false;
-                $loginResult = $user->login(
+                $autoLogin            = ($postData['autologin'] == 1) ? true : false;
+                $loginResult          = $user->login(
                     $postData['user'],
                     $postData['pass'],
                     $autoLogin
@@ -239,8 +238,8 @@ class IndexController extends Zend_Controller_Action
                         // users.ini doesn't exist or doesn't have entries
                         $this->_doRedirect(
                             array(
-                                 'controller' => 'install',
-                                 'action' => 'index'
+                                'controller' => 'install',
+                                'action'     => 'index'
                             )
                         );
                         break;
@@ -248,21 +247,17 @@ class IndexController extends Zend_Controller_Action
                         // user is not listed in users.ini
                         break;
                     case Msd_User::SUCCESS:
-                        $defaultDb = $this->view->config->get(
-                            'config.dbuser.defaultDb'
+                        $defaultDb = $this->view->config->getParam('dbuser.defaultDb'
                         );
 
                         // set actualDb to defaultDb
                         if ($defaultDb != '') {
-                            $this->view->config->set(
-                                'dynamic.dbActual',
-                                $defaultDb
-                            );
+                            $this->view->dynamicConfig->setParam('dbActual', $defaultDb);
                         }
                         $this->_doRedirect(
                             array(
-                                 'controller' => 'index',
-                                 'action' => 'index'
+                                'controller' => 'index',
+                                'action'     => 'index'
                             )
                         );
                         return;
@@ -270,15 +265,15 @@ class IndexController extends Zend_Controller_Action
                 }
                 // if we get here wrong credentials are given
                 $this->view->popUpMessage()
-                      ->addMessage(
-                          'login-message',
-                          'L_LOGIN',
-                          $user->getAuthMessages(),
-                          array(
-                               'modal' => true,
-                               'dialogClass' => 'error'
-                          )
-                      );
+                    ->addMessage(
+                    'login-message',
+                    'L_LOGIN',
+                    $user->getAuthMessages(),
+                    array(
+                        'modal'       => true,
+                        'dialogClass' => 'error'
+                    )
+                );
             }
         }
         $this->view->form = $form;

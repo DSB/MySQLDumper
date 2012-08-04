@@ -124,13 +124,13 @@ abstract class Msd_Db
     public static function getAdapter($options = null, $forceMysql = false)
     {
         if ($options === null) {
-            $config = Msd_Configuration::getInstance();
+            $config = Msd_Registry::getConfig();
             $options = array(
-                'host' => $config->get('config.dbuser.host'),
-                'user' => $config->get('config.dbuser.user'),
-                'pass' => $config->get('config.dbuser.pass'),
-                'port' => (int) $config->get('config.dbuser.port'),
-                'socket' => $config->get('config.dbuser.socket'),
+                'host' => $config->getParam('dbuser.host'),
+                'user' => $config->getParam('dbuser.user'),
+                'pass' => $config->getParam('dbuser.pass'),
+                'port' => (int) $config->getParam('dbuser.port'),
+                'socket' => $config->getParam('dbuser.socket'),
             );
         }
         if (function_exists('mysqli_connect') && !$forceMysql) {

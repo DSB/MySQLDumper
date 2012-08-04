@@ -28,8 +28,8 @@ class Msd_File_Dump extends Msd_File
      */
     public static function getStatusline($filename)
     {
-        $config = Msd_Configuration::getInstance();
-        $path = $config->get('paths.backup'). DS;
+        $config = Msd_Registry::getConfig();
+        $path = $config->getParam('paths.backup'). '/';
         if (strtolower(substr($filename, -3)) == '.gz') {
             $fileHandle = gzopen($path . $filename, "r");
             if ($fileHandle === false) {

@@ -29,7 +29,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     public function init()
     {
-        $config = Msd_Configuration::getInstance();
+        $config = Msd_Registry::getConfig();
         $this->_lang = Msd_Language::getInstance();
         $this->setDisableLoadDefaultDecorators(true);
         $this->setDecorators(array('SubForm'));
@@ -40,7 +40,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
         $this->setDisplayGroupDecorators(array('DisplayGroup'));
         $this->_addButtonFtpAdd();
 
-        $ftpConfig = $config->get('config.ftp');
+        $ftpConfig = $config->getParam('ftp');
         $ftpKeys = array_keys($ftpConfig);
         $nrOfFtpProfiles = count($ftpKeys, 1);
         foreach ($ftpKeys as $ftpConnectionId) {

@@ -21,8 +21,8 @@ class Application_Model_Sqlbox
     public function getTableSelectBox()
     {
         $this->_db = Msd_Db::getAdapter();
-        $config = Msd_Configuration::getInstance();
-        $db = $config->get('dynamic.dbActual');
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $db = $dynamicConfig->getParam('dbActual');
         $tableNames = $this->_db->getTables($db);
         $options = array();
         foreach ($tableNames as $table) {

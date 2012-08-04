@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class SqlServerController extends Zend_Controller_Action
+class SqlServerController extends Msd_Controller_Action
 {
     /**
      * Init

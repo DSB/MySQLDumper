@@ -2,9 +2,10 @@
 $this->config = $this->parent->config;
 $this->lang = $this->parent->lang;
 
-if (count($this->config->get('config.ftp'))>0) {
+$ftpConfigurations = $this->config->getParam('ftp');
+if (count($ftpConfigurations) > 0) {
     $ftpNr = 1;
-    foreach ($this->config->get('config.ftp') as $ftp) {
+    foreach ($ftpConfigurations as $ftp) {
         if ($ftp['use'] == 'y') {
 ?>
     <tr class="row-even">

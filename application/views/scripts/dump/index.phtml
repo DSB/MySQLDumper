@@ -54,7 +54,7 @@ $d = $this->dumpData;
                 </td>
             </tr>
 
-            <?php if ($this->config->get('config.mode') > 0) { ?>
+            <?php if ($this->config->getParam('mode', 0) > 0) { ?>
                 <tr class="row-odd">
                     <td><label for="backup_using_updates">Update (REPLACE Command):</label></td>
                     <td><input type="checkbox" class="checkbox noleftmargin" name="backup_using_updates" id="backup_using_updates" value="1" /></td>
@@ -76,10 +76,14 @@ $d = $this->dumpData;
 </div>
 <br />
 <?php
-echo $this->partial('dump/settings.phtml',array('parent' => $this));
+echo $this->partial('dump/settings.phtml', array(
+    'parent' => $this,
+    'config' => $this->config,
+    'dynamicConfig' => $this->dynamicConfig)
+);
 ?>
 <div id="panel_perl" class="panel" style="display:none">
-    <h3><?php echo $this->lang->L_DUMP?> PERL (<?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->config->get('dynamic.configFile')?>)</h3>
+    <h3><?php echo $this->lang->L_DUMP?> PERL (<?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->dynamicConfig->getParam('configFile');?>)</h3>
         <button class="Formbutton" name="DoCronscript" onclick="show_perl_output('<?php echo $d->PERL_HTTP_CALL?>')"><?php echo $this->lang->L_DOCRONBUTTON?></button>
         <button class="Formbutton" name="DoSimpleTest" onclick="show_perl_output('<?php echo $d->PERL_TEST?>')"><?php echo $this->lang->L_DOSIMPLETEST?></button>
         <button class="Formbutton" name="DoPerlTest" onclick="show_perl_output('<?php echo PERL_MODULTEST?>')"><?php echo $this->lang->L_DOPERLTEST?></button>

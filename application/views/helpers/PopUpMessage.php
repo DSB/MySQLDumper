@@ -167,8 +167,7 @@ class Msd_View_Helper_PopUpMessage extends Zend_View_Helper_Abstract
      */
     private function _getDefaultPosition()
     {
-        $config = Msd_Configuration::getInstance();
-        $position = $config->get('config.interface.notificationWindowPosition');
+        $position = $this->view->config->getParam('interface.notificationWindowPosition');
         if (isset($this->_positions[$position])) {
             $position = $this->_positions[$position];
         }

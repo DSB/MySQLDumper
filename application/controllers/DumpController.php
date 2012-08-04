@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class DumpController extends Zend_Controller_Action
+class DumpController extends Msd_Controller_Action
 {
     /**
      * Show dump page
@@ -46,7 +46,6 @@ class DumpController extends Zend_Controller_Action
     {
         $taskList = Msd_TaskManager::getInstance('backupTasks');
         $tasks = $taskList->getTasks();
-        $this->view->config = Msd_Configuration::getInstance();
         $this->view->sessionId = Zend_Session::getId();
     }
 
@@ -63,7 +62,7 @@ class DumpController extends Zend_Controller_Action
         $tasks = $taskList->getTasks();
         $ret = array(
             'backup_in_progress' => false,
-            'config_file' => $this->view->config->get('dynamic.configFile')
+            'config_file' => $this->view->dynamicConfig->getParam('configFile')
 
         );
         echo json_encode($ret);

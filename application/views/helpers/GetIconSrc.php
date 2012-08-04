@@ -37,20 +37,20 @@ class Msd_View_Helper_GetIconSrc  extends Zend_View_Helper_Abstract
                 'GetIconSrc: unknown icon \''.$name . '\' requested'
             );
         }
-        $config = Msd_Configuration::getInstance();
+        $config = Msd_Registry::getConfig();
         $img = $baseUrl.'/%s/%s';
         if ($size>'') {
             $img = $baseUrl.'/%s/%sx%s/%s';
             $ret = sprintf(
                 $img,
-                $config->get('paths.iconpath'),
+                $config->getParam('paths.iconPath'),
                 $size,
                 $size,
                 $icons[$name]
             );
         } else {
             $ret = sprintf(
-                $img, $config->get('paths.iconpath'), $icons[$name]
+                $img, $config->getParam('paths.iconPath'), $icons[$name]
             );
         }
         return $ret;
@@ -65,10 +65,10 @@ class Msd_View_Helper_GetIconSrc  extends Zend_View_Helper_Abstract
     {
         static $icons = false;
         if (!$icons) {
-            $config = Msd_Configuration::getInstance();
+            $config = Msd_Registry::getConfig();
             $file = realpath(
                 APPLICATION_PATH . '/../public/'
-                . $config->get('paths.iconpath') . '/icon.ini'
+                . $config->getParam('paths.iconPath') . '/icon.ini'
             );
             $iconsIni = new Zend_Config_Ini($file, 'icons');
             $icons = $iconsIni->toArray();

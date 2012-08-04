@@ -143,7 +143,7 @@ class InstallController extends Zend_Controller_Action
             'config' => $config->get('paths.config'),
             'log' => $config->get('paths.log'),
             'backup' => $config->get('paths.backup'),
-            'iconpath' => $config->get('paths.iconpath')
+            'iconpath' => $config->get('paths.iconPath')
         );
 
         foreach ($checkDirs as $checkDir) {

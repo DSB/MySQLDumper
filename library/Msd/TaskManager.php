@@ -31,7 +31,7 @@ class Msd_TaskManager
     /**
      * Instance
      *
-     * @var Msd_Configuration
+     * @var Msd_TaskManager
      */
     private static $_instance = NULL;
 
@@ -48,12 +48,10 @@ class Msd_TaskManager
      *
      * Get task list from session or init an empty list.
      *
-     * @param string  $taskType Task type to get or create.
-     *                          Defaults to "backupTasks".
-     * @param boolean Whether to create a new task list and delete all entries
-     *                or to get it from the session
+     * @param string  $taskType The name of the task type
+     * @param boolean $clear    Whether to clear all tasks
      *
-     * @return void
+     * @return Msd_TaskManager
      */
     private function __construct($taskType, $clear = false)
     {
@@ -69,15 +67,12 @@ class Msd_TaskManager
     /**
      * Returns the task manager instance
      *
-     * @param string  $configname   The name of the configuration file to load.
-     *                              If not set we will load the config from
-     *                              session if present.
-     * @param boolean $forceLoading If set the config will be read from file.
+     * @param string  $taskType The name of the task type
+     * @param boolean $clear    Whether to clear all tasks
      *
-     * @return Msd_Configuration
+     * @return Msd_TaskManager
      */
-    public static function getInstance($taskType = 'backupTasks',
-                                        $clear = false)
+    public static function getInstance($taskType = 'backupTasks', $clear = false)
     {
         if (null == self::$_instance) {
             self::$_instance = new self($taskType, $clear);

@@ -100,6 +100,7 @@ class Zend_Config_Ini extends Zend_Config
     public function __construct($filename, $section = null, $options = false)
     {
         if (empty($filename)) {
+            var_export(debug_backtrace());
             /**
              * @see Zend_Config_Exception
              */

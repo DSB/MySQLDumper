@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class LogController extends Zend_Controller_Action
+class LogController extends Msd_Controller_Action
 {
     /**
      * Delete a log file
@@ -78,7 +78,7 @@ class LogController extends Zend_Controller_Action
         $reverse = $this->_getParam('reverse', 0);
         $page = $this->_getParam('offset', 1);
         $entriesPerPage =
-                $this->view->config->get('config.interface.recordsPerPage');
+                $this->view->config->getParam('interface.recordsPerPage');
         $this->_helper->layout()->disableLayout();
         $logger = Msd_Log::getInstance();
         $lines = $logger->read($logType, $reverse);

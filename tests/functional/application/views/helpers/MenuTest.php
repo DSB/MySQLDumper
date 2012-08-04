@@ -20,8 +20,8 @@ class MenuTest extends ControllerTestCase
     public function testCanRenderMenuWithInvalidActualDatabase()
     {
         $this->loginUser();
-        $config = Msd_Configuration::getInstance();
-        $config->set('dynamic.dbActual', -1);
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $dynamicConfig->setParam('dbActual', -1);
         $this->dispatch('/');
         $this->assertQueryContentContains('#selectedDb', 'information_schema');
     }
@@ -29,9 +29,10 @@ class MenuTest extends ControllerTestCase
     public function testCanFallbackToDefaultDbIfActualDbIsInvalid()
     {
         $this->loginUser();
-        $config = Msd_Configuration::getInstance();
-        $config->set('dynamic.dbActual', 'i_dont_exist');
-        $config->set('config.dbuser.defaultDb', 'information_schema');
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $dynamicConfig->setParam('dbActual', 'i_dont_exist');
+        $config = Msd_Registry::getConfig();
+        $config->set('dbuser.defaultDb', 'information_schema');
         $this->dispatch('/');
         $this->assertQueryContentContains('#selectedDb', 'information_schema');
     }
@@ -39,9 +40,10 @@ class MenuTest extends ControllerTestCase
     public function testCanFallbackToFirstDbIfActualAndDefaultDbsAreInvalid()
     {
         $this->loginUser();
-        $config = Msd_Configuration::getInstance();
-        $config->set('dynamic.dbActual', 'i_dont_exist');
-        $config->set('config.dbuser.defaultDb', 'I_dont_exist');
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $dynamicConfig->setParam('dbActual', 'i_dont_exist');
+        $config = Msd_Registry::getConfig();
+        $config->setParam('dbuser.defaultDb', 'I_dont_exist');
         $this->dispatch('/');
         $this->assertQueryContentContains('#selectedDb', 'information_schema');
     }

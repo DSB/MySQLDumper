@@ -102,7 +102,7 @@ $(document).ready( function () {
     <td class="small"><?php echo $this->lang->L_CONFIG;?>:</td>
     <td class="small right">
         <span id="config_file">
-        <?php echo $this->config->get('dynamic.configFile')?>
+        <?php echo $this->dynamicConfig->getParam('configFile')?>
         </span>
     </td>
 </tr>

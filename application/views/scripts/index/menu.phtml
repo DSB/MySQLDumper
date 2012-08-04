@@ -1,5 +1,5 @@
 <?php
-$theme = $this->config->get('config.interface.theme');
+$theme = $this->config->getParam('interface.theme', 'msd');
 $request = Zend_Controller_Front::getInstance()->getRequest();
 $this->controller = $request->getControllerName();
 $this->action = $request->getActionName();
@@ -41,7 +41,7 @@ $('#fadeMenuIn').click(function() {
     return false;
 });
 <?php
-    if ($this->config->get('config.interface.showTooltips') == 'y') { ?>
+    if ($this->config->getParam('interface.showTooltips') == 'y') { ?>
         SetupTooltips();
 <?php }
 $this->jQuery()->onLoadCaptureEnd();
@@ -58,11 +58,11 @@ $this->jQuery()->onLoadCaptureEnd();
 
 <div id="version">
     <div id="fadeMenuOut" title="blend out menu">
-        <img style="margin-left:6px;" src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/icons/handLeft.png"
+        <img style="margin-left:6px;" src="<?php echo $this->baseUrl(); ?>/css/<?php echo $theme?>/icons/handLeft.png"
             alt="<?php echo $this->lang->L_MENU_HIDE;?>" title="<?php echo $this->lang->L_MENU_HIDE;?>" />
     </div>
         <span class="version-line">Version <?php echo $this->msdVersion;?></span>
-        <?php if ($this->config->get('config.general.mode') == 'easy') {?>
+        <?php if ($this->config->getParam('general.mode') == 'easy') {?>
             <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/pics/navi_bg.jpg" alt="" />
         <?php } else { ?>
             <img src="<?php echo $this->baseUrl(); ?>/css/<?php echo$theme?>/pics/navi_bg_expert.jpg" alt="" />
@@ -143,7 +143,7 @@ $this->jQuery()->onLoadCaptureEnd();
                     $this->databases = $dbAdapter->getDatabaseNames();
                     foreach ($this->databases as $db) {
                         echo '<option value="'.base64_encode($db).'"';
-                        if ($db == $this->config->get('dynamic.dbActual')) {
+                        if ($db == $this->dynamicConfig->getParam('dbActual')) {
                             echo ' selected="selected"';
                         }
                         echo '>'.$db.'</option>';
@@ -165,16 +165,16 @@ $this->jQuery()->onLoadCaptureEnd();
                 $this->configFiles = Msd_File::getConfigNames();
                 foreach ($this->configFiles as $file) {
                     echo "\n" . '<option value="' . base64_encode($file) . '"';
-                    if ($this->config->get('dynamic.configFile') == $file) {
+                    if ($this->dynamicConfig->getParam('configFile') == $file) {
                         echo ' selected="selected"';
                     }
-                    echo '>'.$this->getConfigTitle($file).'</option>';
+                    echo '>'. $this->config->getConfigTitle($file) . '</option>';
                 }
             ?>
             </select>
         </fieldset>
     </form>
-    <?php if (in_array($this->config->get('config.interface.language'), array('de', 'ch'))) {; ?>
+    <?php if (in_array($this->config->getParam('interface.language'), array('de', 'ch'))) {; ?>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <p style="text-align:center">
             <input type="image" src="<?php echo $this->baseUrl();?>/images/paypal-de.gif" name="submit" alt="Spende an MySQLDumper" />
@@ -198,7 +198,7 @@ $this->jQuery()->onLoadCaptureEnd();
 </div>
 
 <?php
-if ($this->config->get('config.interface.showServerCaption') == "y") {
+if ($this->config->getParam('interface.showServerCaption') == "y") {
 ?>
     <div id="server0">
         <?php echo$this->lang->L_SERVER;?>:

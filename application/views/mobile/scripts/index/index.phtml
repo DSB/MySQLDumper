@@ -146,7 +146,7 @@ $t = Msd_Language::getInstance()->getTranslator();
                 <?php
                     foreach ($this->databases as $db) {
                         echo '<option value="'.base64_encode($db).'"';
-                        if ($db == $this->config->get('dynamic.dbActual')) {
+                        if ($db == $this->dynamicConfig->getParam('dbActual')) {
                             echo ' selected="selected"';
                         }
                         echo '>'.$db.'</option>';
@@ -173,7 +173,7 @@ $t = Msd_Language::getInstance()->getTranslator();
                     $this->configFiles = Msd_File::getConfigNames();
                     foreach ($this->configFiles as $file) {
                         echo "\n" . '<option value="' . base64_encode($file) . '"';
-                        if ($this->config->get('dynamic.configFile') == $file) {
+                        if ($this->dynamicConfig->getParam('configFile') == $file) {
                             echo ' selected="selected"';
                         }
                         echo '>'.$this->getConfigTitle($file).'</option>';

@@ -246,6 +246,7 @@ class Msd_User
                 $configFile = $files[0];
             }
         }
-        Msd_Configuration::getInstance($configFile, true);
+        $config = Msd_Registry::getConfig();
+        $config->load($configFile . '.ini');
     }
 }

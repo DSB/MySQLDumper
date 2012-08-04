@@ -62,8 +62,8 @@ class Msd_Dump
      */
     private function _getDbsToBackup()
     {
-        $config = Msd_Configuration::getInstance();
-        $databases = $config->get('dynamic.databases');
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $databases = $dynamicConfig->getParam('dynamic.databases');
         // first check if any db is marked to be dumped
         $dbToDumpExists = false;
         if (!empty($databases)) {
@@ -77,7 +77,7 @@ class Msd_Dump
         }
         if (!$dbToDumpExists) {
             // no db selected for dump -> set actual db to be dumped
-            $index = $config->get('dynamic.dbActual');
+            $index = $dynamicConfig->getParam('dbActual');
             $this->dbsToBackup[$index] = array();
             $this->dbsToBackup[$index]['dump'] = 1;
         }

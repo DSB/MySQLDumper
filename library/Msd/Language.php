@@ -21,7 +21,7 @@ class Msd_Language
     /**
      * Instance
      *
-     * @var Msd_Configuration
+     * @var Msd_Language
      */
     private static $_instance = NULL;
 
@@ -42,12 +42,12 @@ class Msd_Language
     /**
      * Constructor gets the configuration params
      *
-     * @return array
+     * @return Msd_Language
      */
-    private function __construct ()
+    private function __construct()
     {
-        $config = Msd_Configuration::getInstance();
-        $language = $config->get('config.interface.language');
+        $config   = Msd_Registry::getConfig();
+        $language = $config->getParam('interface.language', 'en');
         $this->loadLanguage($language);
     }
 
@@ -61,8 +61,8 @@ class Msd_Language
     public function loadLanguage($language)
     {
         $this->_baseLanguageDir = APPLICATION_PATH . '/language/';
-        $file = $this->_baseLanguageDir . $language . '/lang.php';
-        $translator = $this->getTranslator();
+        $file                   = $this->_baseLanguageDir . $language . '/lang.php';
+        $translator             = $this->getTranslator();
         if ($translator === null) {
             $translator = new Zend_Translate('array', $file, $language);
         } else {
@@ -70,15 +70,18 @@ class Msd_Language
                 array(
                     'adapter' => 'array',
                     'content' => $file,
-                    'locale' => $language
+                    'locale'  => $language
                 )
             );
         }
         $this->setTranslator($translator);
         Zend_Registry::set('Zend_Translate', $translator);
     }
+
     /**
      * No cloning for singleton
+     *
+     * @throws Msd_Exception
      *
      * @return void
      */
@@ -90,25 +93,26 @@ class Msd_Language
     /**
      * Magic getter to keep syntax in rest of script short
      *
-     * @param mixed $var
+     * @param mixed $name Name of language var to translate
      *
      * @return mixed
      */
-    public function __get ($property)
+    public function __get($name)
     {
-        $translated = $this->getTranslator()->_($property);
-        if ($translated == $property && substr($property, 0, 2) == 'L_') {
+        $translated = $this->getTranslator()->_($name);
+        if ($translated == $name && substr($name, 0, 2) == 'L_') {
             // no translation found -> remove prefix L_
-            return substr($property, 2);
+            return substr($name, 2);
         }
         return $translated;
     }
+
     /**
      * Returns the single instance
      *
      * @return Msd_Language
      */
-    public static function getInstance ()
+    public static function getInstance()
     {
         if (NULL == self::$_instance) {
             self::$_instance = new self;
@@ -126,7 +130,7 @@ class Msd_Language
      */
     public function translateZendId($zendMessageId, $messageText = '')
     {
-        if (substr($zendMessageId, 0, 6) =='access' && $messageText > '') {
+        if (substr($zendMessageId, 0, 6) == 'access' && $messageText > '') {
             // message is already translated by validator access
             return $messageText;
         }

@@ -52,7 +52,7 @@ class Msd_Config
         if (is_string($ioHandler)) {
             $pluginLoader = new Zend_Loader_PluginLoader(
                 array(
-                    'Msd_Config_IoHandler_' => APPLICATION_PATH . '/../library/Msd/Config/IoHandler/',
+                    'Msd_Config_IoHandler_'    => APPLICATION_PATH . '/../library/Msd/Config/IoHandler/',
                     'Module_Config_IoHandler_' => APPLICATION_PATH . '/../modules/library/Config/IoHandler/',
                 )
             );
@@ -79,6 +79,25 @@ class Msd_Config
     public function load($configFilename)
     {
         $this->_config = $this->_ioHandler->load($configFilename);
+        $this->_setPaths();
+    }
+
+    /**
+     * Add paths to config
+     *
+     * @return void
+     */
+    private function _setPaths()
+    {
+        $workRoot    = realpath(APPLICATION_PATH . '/..') . '/work/';
+        $directories = array(
+            'work'     => $workRoot,
+            'log'      => $workRoot . 'log',
+            'backup'   => $workRoot . 'backup',
+            'config'   => $workRoot . 'config',
+            'iconPath' => 'css/' . $this->getParam('interface.theme', 'msd') . '/icons'
+        );
+        $this->setParam('paths', $directories);
     }
 
     /**
@@ -95,13 +114,23 @@ class Msd_Config
     /**
      * Retrieves the value of a configuration parameter.
      *
-     * @param string $paramName    Name of the configuration parameter.
+     * @param string $paramName    Name of the configuration parameter. May be prefixed with section.
      * @param mixed  $defaultValue Default value to return, if param isn't set.
      *
      * @return mixed
      */
     public function getParam($paramName, $defaultValue = null)
     {
+        // check for section e.g. interface.theme
+        if (strpos($paramName, '.') !== false) {
+            list($section, $paramName) = explode('.', $paramName);
+            if (isset($this->_config[$section][$paramName])) {
+                return $this->_config[$section][$paramName];
+            } else {
+                return $defaultValue;
+            }
+        }
+
         if (isset($this->_config[$paramName])) {
             return $this->_config[$paramName];
         }
@@ -120,7 +149,14 @@ class Msd_Config
      */
     public function setParam($paramName, $paramValue)
     {
-        $this->_config[$paramName] = $paramValue;
+        if (strpos('paramName', '.') !== false) {
+            list($section, $paramName) = explode('.', $paramName);
+            $this->_config[$section][$paramName] = $paramValue;
+
+        } else {
+            $this->_config[$paramName] = $paramValue;
+        }
+
         if ($this->_autosave) {
             $this->save();
         }
@@ -145,7 +181,7 @@ class Msd_Config
      */
     public function setConfig($config)
     {
-        $this->_config = (array) $config;
+        $this->_config = (array)$config;
         if ($this->_autosave) {
             $this->save();
         }
@@ -190,4 +226,18 @@ class Msd_Config
     {
         return $this->_autosave;
     }
+
+    /**
+     * Get the title from a configuration file without aplying it.
+     *
+     * @param string $fileName The file name of the configuration
+     *
+     * @return string
+     */
+    public function getConfigTitle($fileName)
+    {
+        $configData = parse_ini_file($this->getParam('paths.config') . '/' . $fileName . '.ini', true);
+        return $configData['general']['title'];
+    }
+
 }

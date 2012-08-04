@@ -189,8 +189,8 @@ $testFtpConnectionUrl = $this->url(
 </script>
 
 <div id="content">
-<h2><?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->config->get('dynamic.configFile');?>
-<span class="small">(<?php echo $this->lang->L_MSD_MODE;?>: <?php echo $this->config->get('config.general.mode');?>)</span></h2>
+<h2><?php echo $this->lang->L_CONFIG_HEADLINE;?>: <?php echo $this->dynamicConfig->getParam('configFile');?>
+<span class="small">(<?php echo $this->lang->L_MSD_MODE;?>: <?php echo $this->config->getParam('general.mode');?>)</span></h2>
 <form method="post" action="<?php
 echo $this->url(
     array(
@@ -254,7 +254,7 @@ echo $this->url(
 
 <script type="text/javascript">
 /* <![CDATA[ */
-    <?php if (count((array) $this->config->get('dynamic.databases')) == 0): ?>
+    <?php if (count((array) $this->dynamicConfig->getParam('databases')) == 0): ?>
         mySlideDown('connection-params');
     <?php endif; ?>
 /*]]>*/

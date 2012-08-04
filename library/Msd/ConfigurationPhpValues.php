@@ -117,7 +117,9 @@ class Msd_ConfigurationPhpValues
      * First try to read via ini_get(), then fall back to get_cfg_var()
      *
      * @param string  $varName     The name of the setting to read
-     * @param boolean $returnAsInt Whether to return value as integer
+     * @param bool    $returnAsInt Whether to return value as integer
+     *
+     * @return mixed
      */
     private function _getConfigSetting($varName, $returnAsInt = false)
     {

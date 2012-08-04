@@ -51,7 +51,7 @@ class Application_Model_Config_FormValidator
     public function validate(Zend_View $view)
     {
         $saveConfig = false;
-        $config = Msd_Configuration::getInstance();
+        $config = $view->config;
         $translator = Msd_Language::getInstance()->getTranslator();
         $db = Msd_Db::getAdapter($this->_configData['dbuser']);
         try {
@@ -73,13 +73,13 @@ class Application_Model_Config_FormValidator
 
         if ($saveConfig) {
             $config->save(
-                $config->get('dynamic.configFile'),
+                $view->dynamicConfig->getParam('configFile'),
                 $this->_configData
             );
             $view->popUpMessage()->addMessage(
                 'save-config',
                 'L_NOTICE',
-                array('L_SAVE_SUCCESS', $config->get('dynamic.configFile')),
+                array('L_SAVE_SUCCESS', $view->dynamicConfig->getParam('configFile')),
                 array(
                     'modal' => true,
                     'dialogClass' => 'notice'

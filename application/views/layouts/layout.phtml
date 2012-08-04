@@ -1,9 +1,9 @@
 <?php
 $version = new Msd_Version();
-$config = Msd_Configuration::getInstance();
+$config = Msd_Registry::getConfig();
 $lang = Msd_Language::getInstance();
-$theme = $config->get('config.interface.theme');
-$language = $config->get('config.interface.language');
+$theme = $config->getParam('interface.theme');
+$language = $config->getParam('interface.language');
 $this->headMeta()->appendHttpEquiv('content-language', $language);
 $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=utf-8')
      ->appendHttpEquiv('expires', 'Wed, 26 Feb 1997 08:21:57 GMT')

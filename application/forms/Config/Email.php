@@ -36,7 +36,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
      */
     public function init()
     {
-        $this->_config = Msd_Configuration::getInstance();
+        $this->_config = Msd_Registry::getConfig();
         $this->_lang = Msd_Language::getInstance();
         $this->setDisableLoadDefaultDecorators(true);
         $this->setDecorators(array('SubForm'));
@@ -58,7 +58,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
 
         // add Recipients CC
         $ccElements = $this->_setRecipientCc(
-            $this->_config->get('config.email.RecipientCc'),
+            $this->_config->getParam('email.RecipientCc'),
             $activateValidator
         );
 

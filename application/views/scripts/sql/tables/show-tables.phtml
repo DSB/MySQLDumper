@@ -1,5 +1,5 @@
 <div id="content">
-<h2><?php echo $this->lang->L_SQL_TABLESOFDB;?> `<?php echo $this->config->get('dynamic.dbActual');?>`
+<h2><?php echo $this->lang->L_SQL_TABLESOFDB;?> `<?php echo $this->dynamicConfig->getParam('dbActual');?>`
 </h2>
 <?php
 echo $this->sqlHeadNavi();

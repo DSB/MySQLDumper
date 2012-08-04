@@ -22,9 +22,9 @@ $this->jQuery()->javascriptCaptureStart(); ?>
             <a href="#">
             <?php
                 echo $this->getIcon('Server', '', 16)
-                     . $this->config->get('config.dbuser.user') .'@'
-                     . $this->config->get('config.dbuser.host');
-                $port = $this->config->get('config.dbuser.port');
+                     . $this->config->getParam('dbuser.user') .'@'
+                     . $this->config->getParam('dbuser.host');
+                $port = $this->config->getParam('dbuser.port');
                 if ($port > 0) {
                     echo ':' . $port;
                 }
@@ -34,11 +34,11 @@ $this->jQuery()->javascriptCaptureStart(); ?>
         <li>
             <a href="<?php echo $showDatabasesUrl;?>">
                 <?php echo$this->getIcon('Database', '', 16);?>
-                <?php echo $this->out($this->config->get('dynamic.dbActual'));?>
+                <?php echo $this->out($this->dynamicConfig->getParam('dbActual'));?>
             </a>
         </li>
         <?php
-        $actualTable = $this->config->get('dynamic.tableActual');
+        $actualTable = $this->dynamicConfig->getParam('tableActual');
         if ($actualTable > '') {
         ?>
             <li>

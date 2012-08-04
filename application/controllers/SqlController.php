@@ -16,7 +16,7 @@
  * @package         MySQLDumper
  * @subpackage      Controllers
  */
-class SqlController extends Zend_Controller_Action
+class SqlController extends Msd_Controller_Action
 {
     /**
      * Db-handle
@@ -54,7 +54,7 @@ class SqlController extends Zend_Controller_Action
         $this->_helper->viewRenderer('databases/show-databases');
         $databases = $this->_db->getDatabases(true);
         $dbNames = $this->_db->getDatabaseNames();
-        $dbActual = $this->view->config->get('dynamic.dbActual');
+        $dbActual = $this->view->dynamicConfig->getParam('dbActual');
         //Fallback to first found db if actual db doesn't exist
         if (!in_array($dbActual, $dbNames)) {
             $dbActual = $dbNames[0];
@@ -72,13 +72,11 @@ class SqlController extends Zend_Controller_Action
     {
         $this->_helper->viewRenderer('tables/show-tables');
         $pageNum = $this->_getParam('offset', 1);
-        $itemCountPerPage = $this->view->config->get(
-            'config.interface.recordsPerPage'
-        );
+        $itemCountPerPage = $this->view->config->getParam('interface.recordsPerPage');
 
         $dbActual = $this->_getParam(
             'database',
-            $this->view->config->get('dynamic.dbActual')
+            $this->view->dynamicConfig->getParam('dbActual')
         );
         if ($this->_getParam('dbName') !== null) {
             $dbActual = base64_decode($this->_getParam('dbName'));
@@ -106,11 +104,11 @@ class SqlController extends Zend_Controller_Action
     public function showTableDataAction()
     {
         $this->_getDynamicParams();
-        $dbName = $this->view->config->get('dynamic.dbActual');
+        $dbName = $this->view->dynamicConfig->getParam('dbActual');
         $offset = (int)$this->_getParam('offset', 0);
-        $limit = $this->view->config->get('config.interface.recordsPerPage');
+        $limit = $this->view->config->getParam('interface.recordsPerPage');
         $this->_db->selectDb($dbName);
-        $tableName = $this->view->config->get('dynamic.tableActual');
+        $tableName = $this->view->dynamicConfig->getParam('tableActual');
         try {
             $this->view->columns = $this->_db->getTableColumns($tableName);
             $tables = $this->_db->getTableStatus($tableName);
@@ -127,7 +125,7 @@ class SqlController extends Zend_Controller_Action
                 $tableName = '';
             }
         }
-        $this->view->config->set('dynamic.tableActual', $tableName);
+        $this->view->dynamicConfig->setParam('tableActual', $tableName);
         if (!empty($tables)) {
             $query = sprintf(
                 'SELECT SQL_CALC_FOUND_ROWS * FROM `%s` LIMIT %s, %s',
@@ -253,7 +251,7 @@ class SqlController extends Zend_Controller_Action
         $tables = $this->_request->getParam('tables', array());
         $optimizeResults = array();
         $this->view->action = $this->view->lang->L_OPTIMIZE;
-        $database = $this->view->config->get('dynamic.dbActual');
+        $database = $this->view->dynamicConfig->getParam('dbActual');
         $this->_db->selectDb($database);
         if ($this->_request->isPost() && !empty($tables)) {
 
@@ -278,7 +276,7 @@ class SqlController extends Zend_Controller_Action
         $tables = $this->_request->getParam('tables', array());
         $analyzeResults = array();
         $this->view->action = $this->view->lang->L_ANALYZE;
-        $database = $this->view->config->get('dynamic.dbActual');
+        $database = $this->view->dynamicConfig->getParam('dbActual');
         $this->_db->selectDb($database);
         if ($this->_request->isPost() && !empty($tables)) {
 
@@ -303,7 +301,7 @@ class SqlController extends Zend_Controller_Action
         $tables = $this->_request->getParam('tables', array());
         $analyzeResults = array();
         $this->view->action = $this->view->lang->L_ANALYZE;
-        $database = $this->view->config->get('dynamic.dbActual');
+        $database = $this->view->dynamicConfig->getParam('dbActual');
         $this->_db->selectDb($database);
         if ($this->_request->isPost() && !empty($tables)) {
 
@@ -328,7 +326,7 @@ class SqlController extends Zend_Controller_Action
         $tables = $this->_request->getParam('tables', array());
         $analyzeResults = array();
         $this->view->action = $this->view->lang->L_ANALYZE;
-        $database = $this->view->config->get('dynamic.dbActual');
+        $database = $this->view->dynamicConfig->getParam('dbActual');
         $this->_db->selectDb($database);
         if ($this->_request->isPost() && !empty($tables)) {
 
@@ -353,7 +351,7 @@ class SqlController extends Zend_Controller_Action
         $tables = $this->_request->getParam('tables', array());
         $truncateResults = array();
         $this->view->action = $this->view->lang->L_TRUNCATE;
-        $database = $this->view->config->get('dynamic.dbActual');
+        $database = $this->view->dynamicConfig->getParam('dbActual');
         $this->_db->selectDb($database);
         if ($this->_request->isPost() && !empty($tables)) {
 
@@ -377,17 +375,17 @@ class SqlController extends Zend_Controller_Action
         $sqlboxModel = new Application_Model_Sqlbox();
         $this->view->tableSelectBox = $sqlboxModel->getTableSelectBox();
         $request = $this->getRequest();
-        $config = $this->view->config;
+        $dynamicConfig = $this->view->dynamicConfig;
         $query = '';
-        if ($lastQuery = $config->get('dynamic.sqlboxQuery')) {
+        if ($lastQuery = $dynamicConfig->getParam('sqlboxQuery')) {
             $query = $lastQuery;
         }
         if ($request->isPost()) {
             $query = $request->getParam('sqltextarea', '');
-            $config->set('dynamic.sqlboxQuery', $query);
+            $dynamicConfig->setParam('sqlboxQuery', $query);
             $query = trim($query);
             if ($query > '') {
-                $this->_db->selectDb($config->get('dynamic.dbActual'));
+                $this->_db->selectDb($dynamicConfig->getParam('dbActual'));
                 $sqlObject = new Msd_Sql_Object($query);
                 $parser = new Msd_Sql_Parser($sqlObject, true);
                 $parser->parse();
@@ -430,7 +428,7 @@ class SqlController extends Zend_Controller_Action
     private function _refreshDbList()
     {
         $databases = $this->_db->getDatabaseNames();
-        $this->view->config->set('dynamic.databases', $databases);
+        $this->view->dynamicConfig->setParam('databases', $databases);
     }
 
     /**
@@ -444,10 +442,10 @@ class SqlController extends Zend_Controller_Action
     private function _setDynamicParams($dbActual = false, $tableActual = '')
     {
         if ($dbActual === false) {
-            $dbActual = $this->view->config->get('dynamic.dbActual');
+            $dbActual = $this->view->dynamicConfig->getParam('dbActual');
         }
-        $this->view->config->set('dynamic.dbActual', $dbActual);
-        $this->view->config->set('dynamic.tableActual', $tableActual);
+        $this->view->dynamicConfig->setParam('dbActual', $dbActual);
+        $this->view->dynamicConfig->setParam('tableActual', $tableActual);
     }
 
     /**
@@ -460,12 +458,12 @@ class SqlController extends Zend_Controller_Action
         $params = $this->_request->getParams();
         if (isset($params['dbName'])) {
             $dbName = base64_decode($params['dbName']);
-            $this->view->config->set('dynamic.dbActual', $dbName);
+            $this->view->dynamicConfig->setParam('dbActual', $dbName);
         }
 
         if (isset($params['tableName'])) {
             $dbName = base64_decode($params['tableName']);
-            $this->view->config->set('dynamic.tableActual', $dbName);
+            $this->view->dynamicConfig->setParam('tableActual', $dbName);
         }
     }
 }
