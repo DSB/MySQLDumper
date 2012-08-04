@@ -17,10 +17,10 @@
 class Msd_Log
 {
     // Define constants
-    const PHP = 'PHP-Log';
-    const PERL = 'PERL-Log';
+    const PHP           = 'PHP-Log';
+    const PERL          = 'PERL-Log';
     const PERL_COMPLETE = 'PERL-Complete-Log';
-    const ERROR = 'Error-Log';
+    const ERROR         = 'Error-Log';
 
     // Define static Instance
     private static $_instance = NULL;
@@ -34,15 +34,14 @@ class Msd_Log
     public function __construct()
     {
         // define instance handler
-        $this->handle = array();
-        $this->handle[self::PHP] = false;
-        $this->handle[self::PERL] = false;
+        $this->handle                      = array();
+        $this->handle[self::PHP]           = false;
+        $this->handle[self::PERL]          = false;
         $this->handle[self::PERL_COMPLETE] = false;
-        $this->handle[self::ERROR] = false;
+        $this->handle[self::ERROR]         = false;
 
-        // get config
-        $config = Msd_Registry::getConfig();
-        $this->_paths = (object) $config->getParam('paths');
+        $config       = Msd_Registry::getConfig();
+        $this->_paths = (object)$config->getParam('paths');
     }
 
     /**
@@ -73,7 +72,7 @@ class Msd_Log
      */
     private function _close($file)
     {
-        $filename = $this->getFile($file);
+        $filename  = $this->getFile($file);
         $extension = pathinfo($filename, PATHINFO_EXTENSION);
         if ($extension == 'gz') {
             gzclose($this->handle[$file]);
@@ -108,9 +107,9 @@ class Msd_Log
     public function getLogInstance($type)
     {
         if (!isset($this->_logInstance[$type])) {
-            $writer = new Zend_Log_Writer_Stream($this->getFile($type));
+            $writer    = new Zend_Log_Writer_Stream($this->getFile($type));
             $formatter =
-                    new Zend_Log_Formatter_Simple("%timestamp% %message%\n");
+                new Zend_Log_Formatter_Simple("%timestamp% %message%\n");
             $writer->setFormatter($formatter);
             $this->_logInstance[$type] = new Zend_Log($writer);
         }
@@ -129,7 +128,7 @@ class Msd_Log
     {
         // @todo if log_maxsize reached => archive/delete log
         $logger = self::getInstance();
-        $log = $logger->getLogInstance($type);
+        $log    = $logger->getLogInstance($type);
         return $log->info($message);
     }
 
@@ -162,7 +161,7 @@ class Msd_Log
     /**
      * Delete a log file and recreate it.
      *
-     * @param string $file      Filename
+     * @param string $type Filename
      *
      * @return void
      */
@@ -174,30 +173,31 @@ class Msd_Log
         $translator = Msd_Language::getInstance()->getTranslator();
         $this->write($type, $translator->_('L_LOG_CREATED'));
     }
+
     /**
      * Read a logfile and return content as array.
      *
      * If $revers is set to true the ordering of lines is reversed.
      *
-     * @param parent::const $type    The type of logfile to read
-     * @param boolean       $reverse Wether to place latest entries first
+     * @param string $type    The type of logfile to read
+     * @param bool   $reverse Whether to place latest entries first
      *
-     * @return array        Log data from file as array
+     * @return array Log data from file as array
      */
     public function read($type = self::PHP, $reverse = false)
     {
         $filename = $this->getFile($type);
         if (!is_readable($filename)) {
             $timestamp = Zend_Date::ISO_8601;
-            $lang = Msd_Language::getInstance()->getTranslator();
-            $msg = $timestamp . ' <span class="error">' .
+            $lang      = Msd_Language::getInstance()->getTranslator();
+            $msg       = $timestamp . ' <span class="error">' .
                 sprintf($lang->_('L_LOG_NOT_READABLE'), $filename) . '</span>';
             return array($msg);
         } else {
             $output = file($filename);
         }
         if ($reverse == 1) {
-           $output = array_reverse($output);
+            $output = array_reverse($output);
         }
 
         return $output;

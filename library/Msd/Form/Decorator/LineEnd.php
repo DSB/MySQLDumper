@@ -33,9 +33,9 @@ class Msd_Form_Decorator_LineEnd extends Msd_Form_Decorator_Abstract
         $separator = $this->getSeparator();
         $placement = $this->getPlacement();
         switch ($placement) {
-            case (self::PREPEND):
+            case self::PREPEND:
                 return $output . $separator . $content;
-            case (self::APPEND):
+            case self::APPEND:
             default:
                 return $content . $separator . $output;
         }

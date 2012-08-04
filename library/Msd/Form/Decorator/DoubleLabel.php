@@ -85,9 +85,9 @@ class Msd_Form_Decorator_DoubleLabel extends Msd_Form_Decorator_Abstract
                     </tr>';
         $output = sprintf($output, $label, $input, $secondLabel);
         switch ($placement) {
-            case (self::PREPEND):
+            case self::PREPEND:
                 return $output . $separator . $content;
-            case (self::APPEND):
+            case self::APPEND:
             default:
                 return $content . $separator . $output;
         }

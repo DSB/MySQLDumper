@@ -56,9 +56,9 @@ class Msd_Form_Decorator_DisplayGroup extends Msd_Form_Decorator_Abstract
         $placement = $this->getPlacement();
         $separator = $this->getSeparator();
         switch ($placement) {
-            case (self::PREPEND):
+            case self::PREPEND:
                 return $sElements . $separator . $content;
-            case (self::APPEND):
+            case self::APPEND:
             default:
                 return $content . $separator . $sElements;
         }

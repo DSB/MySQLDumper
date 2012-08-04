@@ -43,9 +43,9 @@ class Msd_Form_Decorator_SubForm extends Msd_Form_Decorator_Abstract
         $separator = $this->getSeparator();
         $placement = $this->getPlacement();
         switch ($placement) {
-            case (self::PREPEND):
+            case self::PREPEND:
                 return $htmlOutput . $separator . $content;
-            case (self::APPEND):
+            case self::APPEND:
             default:
                 return $content . $separator . $htmlOutput;
         }

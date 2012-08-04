@@ -38,9 +38,9 @@ class Msd_Form_Decorator_LineStart extends Msd_Form_Decorator_Abstract
         $input = $this->buildInput();
         $output = '<tr><td>' . $label . '</td>' . '<td>' . $input;
         switch ($placement) {
-            case (self::PREPEND):
+            case self::PREPEND:
                 return $output . $separator . $content;
-            case (self::APPEND):
+            case self::APPEND:
             default:
                 return $content . $separator . $output;
         }
