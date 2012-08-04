@@ -380,7 +380,9 @@ class ConfigController extends Zend_Controller_Action
             }
 
             // close ftp connection
-            ftp_close($ftpStream);
+            if (is_resource($ftpStream)) {
+                ftp_close($ftpStream);
+            }
         }
         $this->_forward('index');
     }
