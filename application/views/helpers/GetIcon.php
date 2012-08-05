@@ -28,7 +28,6 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
      */
     public function getIcon($name, $title='', $size='')
     {
-        //return true;
         static $baseUrl = false;
         if (!$baseUrl) {
             $baseUrl = Zend_Controller_Front::getInstance()->getBaseUrl();
@@ -40,11 +39,12 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
             );
         }
         $img = '<img src="'.$baseUrl.'/%s/%s" alt="%s" title="%s" />';
+        $config = Msd_Registry::getConfig();
         if ($size>'') {
             $img = '<img src="'.$baseUrl.'/%s/%sx%s/%s" alt="%s" title="%s" />';
             $ret = sprintf(
                 $img,
-                $this->view->config->getParam('paths.iconPath'),
+                $config->getParam('paths.iconPath'),
                 $size,
                 $size,
                 $icons[$name],
@@ -53,7 +53,7 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
         } else {
             $ret = sprintf(
                 $img,
-                $this->view->config->getParam('paths.iconPath'),
+                $config->getParam('paths.iconPath'),
                 $icons[$name],
                 $title,
                 $title

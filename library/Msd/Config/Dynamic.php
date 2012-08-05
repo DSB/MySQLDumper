@@ -32,7 +32,7 @@ class Msd_Config_Dynamic
      */
     public function __construct($sessionNsName = 'Dynamic')
     {
-        $this->_namespace = new Zend_Session_Namespace($sessionNsName);
+        $this->_namespace = new Zend_Session_Namespace($sessionNsName, true);
         $this->getDynamicValues();
     }
 

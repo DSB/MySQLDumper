@@ -81,7 +81,6 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
             // Search for the config file in the given directories.
             $this->_initIni();
             $config = $this->_iniConfig->getIniData();
-
             // Put configuration into session.
             $this->_sessionNamespace->config = $config;
         }

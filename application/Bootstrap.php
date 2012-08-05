@@ -32,6 +32,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         Zend_Session::setOptions(array('strict' => true));
         Zend_Session::start();
+
+        // check if server has magic quotes enabled and normalize params
+        if ( (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc() == 1)) {
+            $_POST = Bootstrap::stripslashes_deep($_POST);
+        }
+
     }
 
     /**
@@ -41,22 +47,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     public function _initConfiguration()
     {
-        $dynamicConfig = Msd_Registry::getDynamicConfig();
-        if ($dynamicConfig === null) {
-            $dynamicConfig = new Msd_Config_Dynamic();
-            Msd_Registry::setDynamicConfig($dynamicConfig);
-        }
-
-        $config = Msd_Registry::getConfig();
-        if ($config === null) {
-            $configFile = $dynamicConfig->getParam('configFile', 'defaultConfig.ini');
-            $config     = new Msd_Config(
-                'Default',
-                array('directories' => APPLICATION_PATH . '/configs')
-            );
-            $config->load($configFile);
-        }
+        $dynamicConfig = new Msd_Config_Dynamic();
+        $configFile = $dynamicConfig->getParam('configFile', 'mysqldumper.ini');
+        $config     = new Msd_Config(
+            'Default',
+            array('directories' => realpath(APPLICATION_PATH . '/../work/config'))
+        );
+        $config->load($configFile);
         Msd_Registry::setConfig($config);
+        Msd_Registry::setDynamicConfig($dynamicConfig);
     }
 
     /**
@@ -71,6 +70,5 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $value = is_array($value) ? array_map('Bootstrap::stripslashes_deep', $value) : stripslashes($value);
         return $value;
     }
-
 
 }

@@ -42,7 +42,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
         $ftpConfig = $config->getParam('ftp');
         $ftpKeys = array_keys($ftpConfig);
-        $nrOfFtpProfiles = count($ftpKeys, 1);
+        $nrOfFtpProfiles = count($ftpKeys);
         foreach ($ftpKeys as $ftpConnectionId) {
             $this->_addRadioActivated($ftpConnectionId);
             $this->_addInputTimeout($ftpConnectionId);
@@ -60,9 +60,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
 
             $this->_addButtonsTestAndDelete($ftpConnectionId, $buttonDelete);
 
-            $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION')
-                . ' ' . ($ftpConnectionId + 1);
-
+            $legend = $this->_lang->getTranslator()->_('L_FTP_CONNECTION') . ' ' . ($ftpConnectionId + 1);
             $this->addDisplayGroup(
                 array(
                     'ftp_' . $ftpConnectionId . '_use',
@@ -342,8 +340,8 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             array(
                 'disableLoadDefaultDecorators' => true,
                 'content' =>
-                    $this->getView()->getIcon('delete') . ' ' .
-                    $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
+                    $this->getView()->getIcon('delete') . ' '
+                        . $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
                 'decorators' => array('LineEnd'),
                 'escape' => false,
                 'label' => '',
@@ -404,12 +402,14 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
     /**
      * Set input default value
      *
-     * @param string $name
-     * @param string $value
+     * @param string $name  Var-Name
+     * @param string $value The Value to set
+     *
+     * @return Zend_Form
      */
     public function setDefault($name, $value)
     {
-        $name = 'ftp_'.str_replace('.', '_', $name);
+        $name = 'ftp_' . str_replace('.', '_', $name);
         parent::setDefault($name, $value);
     }
 }

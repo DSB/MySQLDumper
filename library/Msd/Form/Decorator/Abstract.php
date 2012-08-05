@@ -49,10 +49,12 @@ abstract class Msd_Form_Decorator_Abstract extends Zend_Form_Decorator_Abstract
         $element = $this->getElement();
         $helper = $element->helper;
         $value = $element->getValue();
+        /*
         $translator = $element->getTranslator();
         if ($translator !== null) {
             $value = $translator->translate($value);
         }
+        */
         $ret = $element->getView()->$helper(
             $element->getName(),
             $value,

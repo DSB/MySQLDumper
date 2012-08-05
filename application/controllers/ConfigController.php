@@ -254,10 +254,19 @@ class ConfigController extends Msd_Controller_Action
         if (!empty($ftpConfig)) {
             $index = max(array_keys($ftpConfig)) + 1;
         }
-        $default = $this->view->config->load('defaultConfig');
-        $default           = $default->toArray();
-        $ftpConfig[$index] = $default['ftp'][0];
-        $this->view->config->Param('ftp', $ftpConfig);
+        $default           = array(
+            'use'         => "n",
+            'timeout'     => "10",
+            'passiveMode' => "y",
+            'ssl'         => "n",
+            'server'      => "",
+            'port'        => "21",
+            'user'        => "",
+            'pass'        => "",
+            'dir'         => "/"
+        );
+        $ftpConfig[$index] = $default;
+        $this->view->config->setParam('ftp', $ftpConfig);
         $this->_forward('index');
     }
 
@@ -436,9 +445,8 @@ class ConfigController extends Msd_Controller_Action
             } else {
                 $configData      = $form->getValidValues($postData);
                 $configData      = $this->_addNonConfigurableConfigParams($configData);
-                $configValidator =
-                    new Application_Model_Config_FormValidator($configData);
-                $configValidator->validate($this->view);
+                $configValidator = new Application_Model_Config_FormValidator($configData);
+                $configValidator->validateAndSaveConfig($this->view);
             }
         }
     }

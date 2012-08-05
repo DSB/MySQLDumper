@@ -9,7 +9,7 @@
  * @author          $Author$
  */
 /**
- * Abstract decorator for form elements of Msd_Form
+ * Registry
  *
  * @package         MySQLDumper
  * @subpackage      Registry

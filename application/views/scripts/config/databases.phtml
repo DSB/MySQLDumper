@@ -115,6 +115,7 @@ echo $this->partial(
     array('databases' => $dbs,
         'dbActual' => $this->dynamicConfig->getParam('dbActual'),
         'parent' => $this,
+        'lang' => $this->lang
     )
 );
 ?>
