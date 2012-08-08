@@ -18,10 +18,34 @@
 abstract class Msd_Db
 {
     // define result set types
-    const ARRAY_NUMERIC = 0; // return resultset as numeric array
-    const ARRAY_ASSOC = 1; // return resultset as associative array
-    const ARRAY_OBJECT = 2; // return resultset as array of object
-    const SIMPLE = 3; // return result as boolean
+    /**
+     * Return result-set as an numeric array.
+     *
+     * @const int
+     */
+    const ARRAY_NUMERIC = 0;
+
+    /**
+     * Return result-set as an associative array.
+     *
+     * @const int
+     */
+    const ARRAY_ASSOC = 1;
+
+    /**
+     * return result-set as an array of objects
+     *
+     * @const int
+     */
+    const ARRAY_OBJECT = 2;
+
+    /**
+     * Return the return value of the query function/method.
+     *
+     * @const int
+     */
+    const SIMPLE = 3;
+
     /**
      * SQL-Server
      *
@@ -59,6 +83,7 @@ abstract class Msd_Db
 
     /**
      * List of databases adn default settings
+     *
      * @var array
      */
     protected $_databases = null;
@@ -103,33 +128,34 @@ abstract class Msd_Db
      *
      * @param array $options Array containing connection options
      *
-     * @return void
+     * @return Msd_Db
      */
-    protected function __construct ($options)
+    protected function __construct($options)
     {
-        $this->_server = $options['host'];
-        $this->_user = $options['user'];
+        $this->_server   = $options['host'];
+        $this->_user     = $options['user'];
         $this->_password = $options['pass'];
-        $this->_port = (int) $options['port'];
-        $this->_socket = $options['socket'];
+        $this->_port     = (int) $options['port'];
+        $this->_socket   = $options['socket'];
     }
+
     /**
      * Create database adapter
      *
      * @param array   $options    Connection options
      * @param boolean $forceMysql Whether to force the use of MySQL
      *
-     * @return MsdDbFactory
+     * @return Msd_Db_MysqlCommon
      */
     public static function getAdapter($options = null, $forceMysql = false)
     {
         if ($options === null) {
-            $config = Msd_Registry::getConfig();
+            $config  = Msd_Registry::getConfig();
             $options = array(
-                'host' => $config->getParam('dbuser.host'),
-                'user' => $config->getParam('dbuser.user'),
-                'pass' => $config->getParam('dbuser.pass'),
-                'port' => (int) $config->getParam('dbuser.port'),
+                'host'   => $config->getParam('dbuser.host'),
+                'user'   => $config->getParam('dbuser.user'),
+                'pass'   => $config->getParam('dbuser.pass'),
+                'port'   => (int) $config->getParam('dbuser.port'),
                 'socket' => $config->getParam('dbuser.socket'),
             );
         }
@@ -147,31 +173,36 @@ abstract class Msd_Db
      *
      * @return bool if connection is successfull
      * */
-    abstract protected function _dbConnect ();
+    abstract protected function _dbConnect();
+
     /**
      * Get selected database
      *
      * @return string
      */
-    abstract public function getSelectedDb ();
+    abstract public function getSelectedDb();
+
     /**
      * Get version nr of sql server
      *
      * @return string
      */
-    abstract public function getServerInfo ();
+    abstract public function getServerInfo();
+
     /**
      * Get version nr of sql client
      *
      * @return string
      */
-    abstract public function getClientInfo ();
+    abstract public function getClientInfo();
+
     /**
      * Get all known character sets of this SQL-Server.
      *
      * @return array
      */
-    abstract public function getCharsets ();
+    abstract public function getCharsets();
+
     /**
      * Set character set of the MySQL-connection.
      *
@@ -179,12 +210,14 @@ abstract class Msd_Db
      * Throw Exception on failure.
      *
      * @param string $charset
+     *
      * @throws Exception
      *
      * @return string
      */
-    abstract public function setConnectionCharset (
-    $charset = 'utf8');
+    abstract public function setConnectionCharset(
+        $charset = 'utf8');
+
     /**
      * Get list of databases
      *
@@ -194,36 +227,39 @@ abstract class Msd_Db
      *
      * @return array
      */
-    abstract public function getDatabases ();
+    abstract public function getDatabases();
+
     /**
      * Select the given database to use it as the target for following queries.
      *
      * Returns true if selection was succesfull otherwise false.
      *
      * @throws Exception
+     *
      * @param string  $database
      *
      * @return bool
      */
-    abstract public function selectDb ($database);
+    abstract public function selectDb($database);
+
     /**
      * Execute a query and set _resultHandle
      *
      * If $getRows is true alls rows are fetched and returned
      *
      * @param string  $query   The query to execute
-     * @param const   $kind    Type of result set
+     * @param int     $kind    Type of result set
      * @param boolean $getRows Whether to fetch all rows and return them
      *
      * @return boolean|array
      */
-    abstract public function query ($query,
-    $kind = self::ARRAY_OBJECT, $getRows = true);
+    abstract public function query($query,
+                                   $kind = self::ARRAY_OBJECT, $getRows = true);
 
     /**
      * Get next row from result set
      *
-     * @param const $kind
+     * @param int   $kind
      *
      * @return array|object
      */
@@ -236,7 +272,8 @@ abstract class Msd_Db
      *
      * @return array
      */
-    abstract public function getTables ($dbName);
+    abstract public function getTables($dbName);
+
     /**
      * Gets extended table information for one or all tables
      *
@@ -244,16 +281,19 @@ abstract class Msd_Db
      *
      * @return array
      */
-    abstract public function getTableStatus ($table = false);
+    abstract public function getTableStatus($table = false);
+
     /**
      * Returns the CREATE Statement of a table.
      *
      * @throws Exception
+     *
      * @param string $table    Get CREATE-Statement for this table
      *
      * @return string Create statement
      */
-    abstract public function getTableCreate ($table);
+    abstract public function getTableCreate($table);
+
     /**
      * Gets the full description of all columns of a table
      *
@@ -263,19 +303,23 @@ abstract class Msd_Db
      *
      * @return array
      */
-    abstract public function getTableColumns ($table);
+    abstract public function getTableColumns($table);
+
     /**
      * Gets the number of affected rows of the last query
      *
      * @return int
      */
-    abstract public function getAffectedRows ();
+    abstract public function getAffectedRows();
+
     /**
      * Gets the servers variables
      *
      * @return array
      */
-    abstract public function getVariables ();
+
+    abstract public function getVariables();
+
     /**
      * Escape a value for inserting it in query
      *
@@ -283,7 +327,8 @@ abstract class Msd_Db
      *
      * @return string
      */
-    abstract public function escape ($val);
+    abstract public function escape($val);
+
     /**
      * Optimize a table. Returns true on success or MySQL-Error.
      *
@@ -291,7 +336,9 @@ abstract class Msd_Db
      *
      * @return string|bool Returned optimize message or false on error
      */
-    abstract public function optimizeTable ($table);
+
+    abstract public function optimizeTable($table);
+
     /**
      * Creates a new database with the given name, charackter set and collation.
      *
@@ -308,6 +355,7 @@ abstract class Msd_Db
         $databaseCharset = '',
         $databaseCollation = ''
     );
+
     /**
      * Retrieves the collations from information schema.
      *
@@ -316,6 +364,7 @@ abstract class Msd_Db
      * @return array
      */
     abstract public function getCollations($charsetName = null);
+
     /**
      * Retrieves the default collation for the charset or the given charset.
      *
@@ -324,22 +373,25 @@ abstract class Msd_Db
      * @return array|string
      */
     abstract public function getDefaultCollations($charsetName = null);
+
     /**
      * Retrieves the last MySQL error.
      *
      * @return array
      */
     abstract public function getLastError();
+
     /**
      * Handles a SQL-Error
      *
      * @param string $errmsg
      * @param int    $errno
-     * @throws MsdEception
+     *
+     * @throws Msd_Exception
      *
      * @return void
      */
-    public function sqlError ($errmsg, $errno)
+    public function sqlError($errmsg, $errno)
     {
         throw new Msd_Exception($errmsg, $errno);
     }

@@ -3,17 +3,16 @@
  * This file is part of MySQLDumper released under the GNU/GPL 2 license
  * http://www.mysqldumper.net
  *
- * @package         MySQLDumper
- * @subpackage      Config
- * @version         SVN: $Rev$
- * @author          $Author$
+ * @package    MySQLDumper
+ * @subpackage Config
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 /**
- * Class to handle the configuration
+ * Class to handle the configuration.
  *
- * @throws Msd_Config_Exception
- * @package         MySQLDumper
- * @subpackage      Config
+ * @package    MySQLDumper
+ * @subpackage Config
  */
 class Msd_Config
 {
@@ -46,6 +45,8 @@ class Msd_Config
      * @param array                                 $handlerOptions Options for the IO-Handler.
      *
      * @throws Msd_Config_Exception
+     *
+     * @return Msd_Config
      */
     public function __construct($ioHandler, $handlerOptions = array())
     {
@@ -152,7 +153,6 @@ class Msd_Config
         if (strpos('paramName', '.') !== false) {
             list($section, $paramName) = explode('.', $paramName);
             $this->_config[$section][$paramName] = $paramValue;
-
         } else {
             $this->_config[$paramName] = $paramValue;
         }
@@ -165,6 +165,8 @@ class Msd_Config
     /**
      * Class destructor.
      * If auto-save is enabled the configuration will be saved.
+     *
+     * @return void
      */
     public function __destruct()
     {
@@ -178,13 +180,16 @@ class Msd_Config
      * If auto-save is enabled the configuration is also saved.
      *
      * @param array $config New configuration.
+     *
+     * @return void
      */
     public function setConfig($config)
     {
-        $this->_config = (array)$config;
+        $this->_config = (array) $config;
         if ($this->_autosave) {
             $this->save();
         }
+        $this->_setPaths();
     }
 
     /**
@@ -239,5 +244,4 @@ class Msd_Config
         $configData = parse_ini_file($this->getParam('paths.config') . '/' . $fileName . '.ini', true);
         return $configData['general']['title'];
     }
-
 }

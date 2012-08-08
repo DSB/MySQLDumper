@@ -17,14 +17,35 @@
 class Msd_Registry extends Zend_Registry
 {
     /**
+     * Key for the configuration filename. This is used inside the registry.
+     *
+     * @const string
+     */
+    const CONFIG_FILENAME_KEY = '_configFilename';
+
+    /**
+     * Key for the dynamic configuration. This is used inside the registry.
+     *
+     * @const string
+     */
+    const DYNAMIC_CONFIG_KEY = '_dynamic';
+
+    /**
+     * Key for the configuration. This is used inside the registry.
+     *
+     * @const string
+     */
+    const CONFIG_KEY = '_config';
+
+    /**
      * Returns the config instance if it has been registered, returns null otherwise.
      *
      * @return Msd_Config|null
      */
     public static function getConfig()
     {
-        if (self::isRegistered('_config')) {
-            return self::get('_config');
+        if (self::isRegistered(self::CONFIG_KEY)) {
+            return self::get(self::CONFIG_KEY);
         }
 
         return null;
@@ -41,7 +62,7 @@ class Msd_Registry extends Zend_Registry
      */
     public static function setConfig(Msd_Config $config)
     {
-        self::set('_config', $config);
+        self::set(self::CONFIG_KEY . '', $config);
     }
 
     /**
@@ -53,8 +74,8 @@ class Msd_Registry extends Zend_Registry
      */
     public static function getDynamicConfig()
     {
-        if (self::isRegistered('_dynamic')) {
-            return self::get('_dynamic');
+        if (self::isRegistered(self::DYNAMIC_CONFIG_KEY)) {
+            return self::get(self::DYNAMIC_CONFIG_KEY);
         }
 
         return null;
@@ -71,6 +92,31 @@ class Msd_Registry extends Zend_Registry
      */
     public static function setDynamicConfig(Msd_Config_Dynamic $config)
     {
-        self::set('_dynamic', $config);
+        self::set(self::DYNAMIC_CONFIG_KEY, $config);
+    }
+
+    /**
+     * Returns the name of the current configuration file.
+     *
+     * @return string
+     */
+    public static function getConfigFilename()
+    {
+        if (self::isRegistered(self::CONFIG_FILENAME_KEY)) {
+            return self::get(self::CONFIG_FILENAME_KEY);
+        }
+        return null;
+    }
+
+    /**
+     * Sets the name of the current configuration file.
+     *
+     * @param string $configFilename Name of configuration file.
+     *
+     * @return void
+     */
+    public static function setConfigFilename($configFilename)
+    {
+        self::set(self::CONFIG_FILENAME_KEY, $configFilename);
     }
 }

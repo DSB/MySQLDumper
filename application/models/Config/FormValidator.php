@@ -20,6 +20,13 @@
 class Application_Model_Config_FormValidator
 {
     /**
+     * Current configuration.
+     *
+     * @var Msd_Config|null
+     */
+    protected $_config;
+
+    /**
      * Config data to validate
      * @var array
      */
@@ -32,6 +39,7 @@ class Application_Model_Config_FormValidator
      */
     public function __construct($configData)
     {
+        $this->_config = Msd_Registry::getConfig();
         // unset values we only used for form handling
         unset(
             $configData['general']['selectedTab'],
@@ -51,7 +59,6 @@ class Application_Model_Config_FormValidator
     public function validateAndSaveConfig(Zend_View $view)
     {
         $saveConfig = false;
-        $config = Msd_Registry::getConfig();
         $translator = Msd_Language::getInstance()->getTranslator();
         $db = Msd_Db::getAdapter($this->_configData['dbuser']);
         try {
@@ -72,13 +79,14 @@ class Application_Model_Config_FormValidator
         }
 
         if ($saveConfig) {
-            $config->setConfig($this->_configData);
-            $saved = $config->save();
+            $this->_config->setConfig($this->_configData);
+            $saved = $this->_config->save();
+            $this->_config->load(Msd_Registry::getConfigFilename());
             if ($saved === true) {
             $view->popUpMessage()->addMessage(
                 'save-config',
                 'L_NOTICE',
-                array('L_SAVE_SUCCESS', $view->config->getParam('general.title')),
+                array('L_SAVE_SUCCESS', $this->_config->getParam('general.title')),
                 array(
                     'modal' => true,
                     'dialogClass' => 'notice'

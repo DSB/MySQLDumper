@@ -161,8 +161,7 @@ class Msd_Db_Mysqli extends Msd_Db_MysqlCommon
                     $this->_getHandle()->errno
                 );
             }
-            if (!$this->_resultHandle instanceof mysqli_result
-                || $kind === self::SIMPLE) {
+            if (!$this->_resultHandle instanceof mysqli_result || $kind === self::SIMPLE) {
                 return $this->_resultHandle;
             }
             // return result set?

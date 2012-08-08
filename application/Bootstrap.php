@@ -3,14 +3,14 @@
  * This file is part of MySQLDumper released under the GNU/GPL 2 license
  * http://www.mysqldumper.net
  *
- * @package         MySQLDumper
- * @version         SVN: $Rev$
- * @author          $Author$
+ * @package MySQLDumper
+ * @version SVN: $Rev$
+ * @author  $Author$
  */
 /**
  * Bootstrap class
  *
- * @package         MySQLDumper
+ * @package MySQLDumper
  */
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
@@ -24,7 +24,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     /**
      * Start session
      *
-     * Anyhing else is set in configs/application.ini
+     * Anything else is set in configs/application.ini
      *
      * @return void
      */
@@ -34,8 +34,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Session::start();
 
         // check if server has magic quotes enabled and normalize params
-        if ( (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc() == 1)) {
-            $_POST = Bootstrap::stripslashes_deep($_POST);
+        if ((function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc() == 1)) {
+            $_POST = Bootstrap::stripSlashesDeep($_POST);
         }
 
     }
@@ -49,6 +49,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         $dynamicConfig = new Msd_Config_Dynamic();
         $configFile = $dynamicConfig->getParam('configFile', 'mysqldumper.ini');
+        Msd_Registry::setConfigFilename($configFile);
         $config     = new Msd_Config(
             'Default',
             array('directories' => realpath(APPLICATION_PATH . '/../work/config'))
@@ -65,9 +66,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      *
      * @return string|array
      */
-    public static function stripslashes_deep($value)
+    public static function stripSlashesDeep($value)
     {
-        $value = is_array($value) ? array_map('Bootstrap::stripslashes_deep', $value) : stripslashes($value);
+        $value = is_array($value) ? array_map(array('Bootstrap', 'stripSlashesDeep'), $value) : stripslashes($value);
         return $value;
     }
 

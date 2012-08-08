@@ -148,7 +148,7 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
      * is returned.
      *
      * @param string  $query   The query to execute
-     * @param const   $kind    Type of result set
+     * @param int     $kind    Type of result set
      * @param boolean $getRows Wether to fetch all rows and return them
      *
      * @return boolean|array
@@ -175,6 +175,8 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
             $this->_resultHandle = null;
             return $ret;
         }
+
+        return true;
     }
 
     /**
@@ -182,7 +184,7 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
      *
      * Can be used to walk through result sets.
      *
-     * @param const $kind
+     * @param int $kind
      *
      * @return array|object
      */
@@ -199,6 +201,8 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
            case self::ARRAY_ASSOC:
                return mysql_fetch_array($this->_resultHandle, MYSQL_ASSOC);
        }
+
+        return false;
     }
 
     /**
@@ -228,7 +232,7 @@ class Msd_Db_Mysql extends Msd_Db_MysqlCommon
     /**
      * Retrieves the last MySQL error.
      *
-     * @return void
+     * @return array
      */
     public function getLastError()
     {

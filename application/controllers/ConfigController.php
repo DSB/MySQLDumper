@@ -3,23 +3,24 @@
  * This file is part of MySQLDumper released under the GNU/GPL 2 license
  * http://www.mysqldumper.net
  *
- * @package         MySQLDumper
- * @subpackage      Controllers
- * @version         SVN: $Rev$
- * @author          $Author$
+ * @package    MySQLDumper
+ * @subpackage Controllers
+ * @version    SVN: $Rev$
+ * @author     $Author$
  */
 /**
- * Config Controller
+ * Config Controller.
  *
- * Controller to handle actions triggered on configuration screen
+ * Controller to handle actions triggered on configuration screen.
  *
- * @package         MySQLDumper
- * @subpackage      Controllers
+ * @package    MySQLDumper
+ * @subpackage Controllers
  */
 class ConfigController extends Msd_Controller_Action
 {
     /**
      * Active jQuery tab Id
+     *
      * @var string
      */
     private $_activeTab = 'tab_general';
@@ -61,7 +62,7 @@ class ConfigController extends Msd_Controller_Action
         $formGeneral  = $this->_getSubformIni('general');
         $elementTitle = $formGeneral->getElement('title');
         $elementTitle->setValue(
-            $this->view->config->getParam('general.title')
+            $this->_config->getParam('general.title')
         );
 
         $form->addSubForm($formGeneral, 'general');
@@ -151,10 +152,10 @@ class ConfigController extends Msd_Controller_Action
                     $elementClass .= ' ' . 'inputError';
                     $formElement->setAttrib('class', $elementClass);
                     $message[] = $formElement->getLabel() . ': ' .
-                        $this->view->lang->translateZendId(
-                            $messageId,
-                            $messageText
-                        );
+                         $this->view->lang->translateZendId(
+                             $messageId,
+                             $messageText
+                         );
                 }
             }
         }
@@ -184,9 +185,9 @@ class ConfigController extends Msd_Controller_Action
 
         // set dynamic actual database if it's changed in the panel
         if ($this->_request->isPost()) {
-            $actualDb = $this->view->dynamicConfig->getParam('dbActual');
+            $actualDb = $this->_dynamicConfig->getParam('dbActual');
             if (isset($_POST['defaultDb']) && ($_POST['defaultDb'] != $actualDb)) {
-                $this->view->dynamicConfig->setParam('dbActual', $_POST['defaultDb']);
+                $this->_dynamicConfig->setParam('dbActual', $_POST['defaultDb']);
             }
         }
 
@@ -196,14 +197,14 @@ class ConfigController extends Msd_Controller_Action
     /**
      * Read ini file and create subform
      *
-     * @param string $subform
+     * @param string $subForm
      *
      * @return Zend_Form_SubForm
      */
-    private function _getSubformIni($subform)
+    private function _getSubformIni($subForm)
     {
-        $subFormIni = new Zend_Config_Ini(APPLICATION_PATH . '/forms/Config/' . $subform . '.ini');
-        $options    = array('displayGroupPrefixPath' => $subform . '_');
+        $subFormIni = new Zend_Config_Ini(APPLICATION_PATH . '/forms/Config/' . $subForm . '.ini');
+        $options    = array('displayGroupPrefixPath' => $subForm . '_');
         return new Zend_Form_SubForm($subFormIni, $options);
     }
 
@@ -214,7 +215,7 @@ class ConfigController extends Msd_Controller_Action
      */
     public function addRecipientCcAction()
     {
-        $recipientsCc = $this->view->config->Param('email.RecipientCc');
+        $recipientsCc = $this->_config->Param('email.RecipientCc');
         if ($recipientsCc === null) {
             $recipientsCc = array();
         }
@@ -222,7 +223,7 @@ class ConfigController extends Msd_Controller_Action
         $recipientsCc[$index]['Name']    = '';
         $recipientsCc[$index]['Address'] = '';
         $recipientsCc                    = array_values($recipientsCc);
-        $this->view->config->setParam('email.RecipientCc', $recipientsCc);
+        $this->_config->setParam('email.RecipientCc', $recipientsCc);
         $this->_forward('index');
     }
 
@@ -233,12 +234,12 @@ class ConfigController extends Msd_Controller_Action
      */
     public function deleteRecipientCcAction()
     {
-        $recipientToDelete = (int)$this->_request->getPost('param');
-        $recipientsCc      = $this->view->config->getParam('email.RecipientCc');
+        $recipientToDelete = (int) $this->_request->getPost('param');
+        $recipientsCc      = $this->_config->getParam('email.RecipientCc');
         if (isset($recipientsCc[$recipientToDelete])) {
             unset($recipientsCc[$recipientToDelete]);
         }
-        $this->view->config->setParam('email.RecipientCc', $recipientsCc);
+        $this->_config->setParam('email.RecipientCc', $recipientsCc);
         $this->_forward('index');
     }
 
@@ -249,7 +250,7 @@ class ConfigController extends Msd_Controller_Action
      */
     public function addFtpConnectionAction()
     {
-        $ftpConfig = $this->view->config->getParam('ftp');
+        $ftpConfig = $this->_config->getParam('ftp');
         $index     = 0;
         if (!empty($ftpConfig)) {
             $index = max(array_keys($ftpConfig)) + 1;
@@ -266,7 +267,7 @@ class ConfigController extends Msd_Controller_Action
             'dir'         => "/"
         );
         $ftpConfig[$index] = $default;
-        $this->view->config->setParam('ftp', $ftpConfig);
+        $this->_config->setParam('ftp', $ftpConfig);
         $this->_forward('index');
     }
 
@@ -277,14 +278,14 @@ class ConfigController extends Msd_Controller_Action
      */
     public function deleteFtpConnectionAction()
     {
-        $index     = (int)$this->_request->getPost('param');
-        $ftpConfig = $this->view->config->getParam('ftp');
+        $index     = (int) $this->_request->getPost('param');
+        $ftpConfig = $this->_config->getParam('ftp');
         if (count($ftpConfig) > 1) {
             if (isset($ftpConfig[$index])) {
                 unset($ftpConfig[$index]);
                 sort($ftpConfig);
             }
-            $this->view->config->setParam('ftp', $ftpConfig);
+            $this->_config->setParam('ftp', $ftpConfig);
         }
         $this->_forward('index');
     }
@@ -301,7 +302,7 @@ class ConfigController extends Msd_Controller_Action
         if ($this->_request->isPost()) {
 
             $postData = $this->_request->getPost();
-            $index    = (int)$this->_request->getPost('param');
+            $index    = (int) $this->_request->getPost('param');
 
             // fetch the required params
             $server    = $postData['ftp_' . $index . '_server'];
@@ -330,7 +331,6 @@ class ConfigController extends Msd_Controller_Action
             // got resource?
             if (!is_resource($ftpStream)) {
                 $message = sprintf($translator->_('L_FTP_CONNECTION_ERROR'), $server, $port);
-
                 // connection ok? let's try to login
             } else if (!ftp_login($ftpStream, $user, $password)) {
                 $message = sprintf($translator->_('L_FTP_LOGIN_ERROR'), $user);
@@ -339,7 +339,6 @@ class ConfigController extends Msd_Controller_Action
                 if ($mode == 'y') {
                     ftp_pasv($ftpStream, true);
                 }
-
                 // login ok? let's set/change the ftp upload directory
             } else if (!ftp_chdir($ftpStream, $directory)) {
                 $message = sprintf($translator->_('L_CHANGEDIRERROR'));
@@ -350,12 +349,11 @@ class ConfigController extends Msd_Controller_Action
                 // ftp directory exists and chmod ok? let's test the ftp transfer with a test file
             } else if (!ftp_put($ftpStream, $targetFolder . $name, $filename, FTP_ASCII)) {
                 $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_ERROR'), $name);
-
             } else {
                 $upload  = true;
                 $message = sprintf($translator->_('L_FTP_FILE_TRANSFER_SUCCESS'), $name)
-                    . '<br /><br />' .
-                    $translator->_('L_FTP_OK');
+                           . '<br /><br />' .
+                           $translator->_('L_FTP_OK');
 
                 // delete the test file after a successful transfer test
                 if (file_exists($targetFolder . $name)) {
@@ -409,7 +407,7 @@ class ConfigController extends Msd_Controller_Action
             foreach ($elements as $element) {
                 $element = str_replace($group . '_', '', $element);
                 $element = str_replace('_', '.', $element);
-                $value   = $this->view->config->getParam($group . '.' . $element);
+                $value   = $this->_config->getParam($group . '.' . $element);
                 if (is_array($value)) {
                     list (, $key) = explode('.', $element);
                     $subForm->setDefault($element, $value[$key]);
@@ -463,7 +461,7 @@ class ConfigController extends Msd_Controller_Action
      */
     private function _addNonConfigurableConfigParams($configData)
     {
-        $configData['systemDatabases'] = $this->view->config->getParam('systemDatabases');
+        $configData['systemDatabases'] = $this->_config->getParam('systemDatabases');
         return $configData;
     }
 
@@ -486,7 +484,7 @@ class ConfigController extends Msd_Controller_Action
         $smtpConfig         = $emailForm->getDisplayGroup('smtpConfig');
         $sendmailVisibility = false;
         $smtpVisibility     = false;
-        switch ($this->view->config->getParam('email.Program')) {
+        switch ($this->_config->getParam('email.Program')) {
             case 'sendmail':
                 $sendmailVisibility = true;
                 break;
@@ -497,7 +495,7 @@ class ConfigController extends Msd_Controller_Action
         $sendmailConfig->addAttribs(
             array(
                 'style' => 'display:'
-                    . $visibilityMap[$sendmailVisibility] . ';',
+                           . $visibilityMap[$sendmailVisibility] . ';',
             )
         );
         $smtpConfig->addAttribs(

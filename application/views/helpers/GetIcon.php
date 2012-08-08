@@ -15,7 +15,7 @@
  * @package         MySQLDumper
  * @subpackage      View_Helpers
  */
-class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
+class Msd_View_Helper_GetIcon extends Zend_View_Helper_Abstract
 {
     /**
      * Get html-img-tag for icon image
@@ -26,7 +26,7 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
      *
      * @return string
      */
-    public function getIcon($name, $title='', $size='')
+    public function getIcon($name, $title = '', $size = null)
     {
         static $baseUrl = false;
         if (!$baseUrl) {
@@ -35,13 +35,13 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
         $icons = self::_getIconFilenames();
         if (!isset($icons[$name])) {
             throw new Msd_Exception(
-                'GetIcon: unknown icon \''.$name .'\' requested'
+                'GetIcon: unknown icon \'' . $name . '\' requested'
             );
         }
-        $img = '<img src="'.$baseUrl.'/%s/%s" alt="%s" title="%s" />';
+        $img    = '<img src="' . $baseUrl . '/%s/%s" alt="%s" title="%s" />';
         $config = Msd_Registry::getConfig();
-        if ($size>'') {
-            $img = '<img src="'.$baseUrl.'/%s/%sx%s/%s" alt="%s" title="%s" />';
+        if ($size !== null) {
+            $img = '<img src="' . $baseUrl . '/%s/%sx%s/%s" alt="%s" title="%s" />';
             $ret = sprintf(
                 $img,
                 $config->getParam('paths.iconPath'),
@@ -67,20 +67,19 @@ class Msd_View_Helper_GetIcon  extends Zend_View_Helper_Abstract
      *
      * @return object
      */
-    private function _getIconFilenames ()
+    private function _getIconFilenames()
     {
         static $icons = false;
         if (!$icons) {
-            $config = $this->view->config;
-            $file = realpath(
+            $config   = $this->view->config;
+            $file     = realpath(
                 APPLICATION_PATH . '/../public/'
                 . $config->getParam('paths.iconPath') . '/icon.ini'
             );
             $iconsIni = new Zend_Config_Ini($file, 'icons');
-            $icons = $iconsIni->toArray();
+            $icons    = $iconsIni->toArray();
             unset($iconsIni);
         }
         return $icons;
     }
-
 }
