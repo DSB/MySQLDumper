@@ -156,7 +156,7 @@ class Msd_Language
     /**
      * Get Translator
      *
-     * @return Zend_Translate
+     * @return Zend_Translate_Adapter
      */
     public function getTranslator()
     {

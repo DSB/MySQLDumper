@@ -410,7 +410,10 @@ class ConfigController extends Msd_Controller_Action
                 $element = str_replace($group . '_', '', $element);
                 $element = str_replace('_', '.', $element);
                 $value   = $this->view->config->getParam($group . '.' . $element);
-                if ($value !== null) {
+                if (is_array($value)) {
+                    list (, $key) = explode('.', $element);
+                    $subForm->setDefault($element, $value[$key]);
+                } else if ($value !== null) {
                     $subForm->setDefault($element, $value);
                 }
             }

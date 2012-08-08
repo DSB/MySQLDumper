@@ -409,6 +409,9 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     public function setDefault($name, $value)
     {
+        if (is_array($value)) {
+            list($ftpId, $key) = explode('.', $name);
+        }
         $name = 'ftp_' . str_replace('.', '_', $name);
         parent::setDefault($name, $value);
     }
