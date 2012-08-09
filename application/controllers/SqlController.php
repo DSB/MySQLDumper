@@ -179,10 +179,7 @@ class SqlController extends Msd_Controller_Action
                     $newDbInfo['dbCollation']
                 );
                 //db created - refresh db list for menu
-                $this->view->config->set(
-                    'dynamic.dbActual',
-                    $newDbInfo['dbName']
-                );
+                $this->_dynamicConfig->setParam('dbActual', $newDbInfo['dbName']);
                 $this->_refreshDbList('create.database');
             } catch (Msd_Exception $e) {
                 $dbCreated = false;
@@ -195,6 +192,7 @@ class SqlController extends Msd_Controller_Action
             $this->view->errorInfo = $errorInfo;
         }
         $this->view->newDbInfo = $newDbInfo;
+        $this->view->dynamicConfig = $this->_dynamicConfig;
     }
 
     /**
