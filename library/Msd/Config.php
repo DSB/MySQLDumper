@@ -122,6 +122,10 @@ class Msd_Config
      */
     public function getParam($paramName, $defaultValue = null)
     {
+        if (isset($this->_config[$paramName])) {
+            return $this->_config[$paramName];
+        }
+
         // check for section e.g. interface.theme
         if (strpos($paramName, '.') !== false) {
             list($section, $paramName) = explode('.', $paramName);
@@ -130,10 +134,6 @@ class Msd_Config
             } else {
                 return $defaultValue;
             }
-        }
-
-        if (isset($this->_config[$paramName])) {
-            return $this->_config[$paramName];
         }
 
         return $defaultValue;
@@ -150,7 +150,7 @@ class Msd_Config
      */
     public function setParam($paramName, $paramValue)
     {
-        if (strpos('paramName', '.') !== false) {
+        if (strpos($paramName, '.') !== false) {
             list($section, $paramName) = explode('.', $paramName);
             $this->_config[$section][$paramName] = $paramValue;
         } else {
