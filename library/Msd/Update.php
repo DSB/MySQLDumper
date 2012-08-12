@@ -49,7 +49,7 @@ class Msd_Update
      *
      * @param array $updateConfigFile
      *
-     * @return void
+     * @return Msd_Update
      */
     public function __construct($updateConfigFile)
     {
@@ -64,7 +64,7 @@ class Msd_Update
      * @param string $updateSection INI-Section with update information
      * @param array  $fileList      List of files to update.
      *
-     * @return true|array
+     * @return bool|array
      */
     public function doUpdate($updateSection, $fileList)
     {
@@ -77,7 +77,7 @@ class Msd_Update
         }
 
         $sourceFileKey = $config['request']['sourceFileKey'];
-        $targetPath = $config['targetBaseDir'] . DS;
+        $targetPath = $config['targetBaseDir'] . '/';
         foreach ($fileList as $sourceFile => $targetFile) {
             $sourceFilename = $this->_applyUpdateParams($sourceFile);
             $params[$sourceFileKey] = $sourceFile;
