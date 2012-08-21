@@ -57,12 +57,9 @@ class InstallController extends Msd_Controller_Action
         $this->_config->setParam('paths.iconPath', 'css/msd/icons');
         $this->_config->setParam('configFile', 'mysqldumper.ini');
         $this->view->config = $this->_config;
-        $lang               = $_SESSION['msd_lang'];
-        if ($lang == '') {
-            $lang = 'en';
-        }
-        $translator       = Msd_Language::getInstance();
-        $this->view->lang = $translator->loadLanguage($lang);
+        $lang               = isset($_SESSION['msd_lang']) ? $_SESSION['msd_lang'] : 'en';
+        $translator         = Msd_Language::getInstance();
+        $this->view->lang   = $translator->loadLanguage($lang);
     }
 
     /**
