@@ -277,6 +277,7 @@ class InstallController extends Msd_Controller_Action
                 $this->_response->setRedirect($redirectUrl);
             }
         }
+        $this->view->lang = Msd_Language::getInstance();
     }
 
     /**
