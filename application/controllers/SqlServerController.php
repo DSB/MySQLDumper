@@ -90,8 +90,7 @@ class SqlServerController extends Msd_Controller_Action
     public function showProcesslistAction()
     {
         $this->getProcesslistAction(false);
-        $interval = $this->view->config
-                ->get('config.interface.refreshProcesslist');
+        $interval = $this->view->config->getParam('interface.refreshProcesslist');
         if ($interval < 2) {
             $interval = 2;
         }

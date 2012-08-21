@@ -107,8 +107,14 @@ class Msd_Config
      *
      * @return bool
      */
-    public function save()
+    public function save($configFilenameAndPath = null)
     {
+        //$configFilename = $this->getParam('configFile');
+        //echo "Dateiname: ". $configFilename;
+        if ($configFilenameAndPath !== null) {
+            $this->_ioHandler->setConfigFilename(basename($configFilenameAndPath));
+        }
+
         return $this->_ioHandler->save($this->_config);
     }
 

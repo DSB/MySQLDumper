@@ -176,8 +176,8 @@ class Msd_Application_Controller_IndexControllerTest
                         'lastController' => 'index'
                     )
               );
-        $config = Msd_Configuration::getInstance();
-        $config->set('dynamic.dbActual', -1);
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $dynamicConfig->set('dbActual', -1);
         $this->dispatch('/index/dbrefresh');
         $this->assertRedirectTo('/index/phpinfo');
     }
@@ -185,9 +185,9 @@ class Msd_Application_Controller_IndexControllerTest
     public function testCanSelectDb()
     {
         $this->loginUser();
-        $config = Msd_Configuration::getInstance();
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
         // set invalid active db
-        $config->set('dynamic.dbActual', -1);
+        $dynamicConfig->setParam('dbActual', -1);
         $this->getRequest()
               ->setMethod('POST')
               ->setParams(
@@ -202,7 +202,7 @@ class Msd_Application_Controller_IndexControllerTest
         // check if actual db was switched
         $this->assertEquals(
             'information_schema',
-            $config->get('dynamic.dbActual')
+            $dynamicConfig->getParam('dbActual')
         );
     }
 
@@ -228,8 +228,8 @@ class Msd_Application_Controller_IndexControllerTest
                     )
               );
         $this->dispatch('/index/switchconfig');
-        $config = Msd_Configuration::getInstance();
-        $this->assertEquals('mysqldumper', $config->get('dynamic.configFile'));
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        $this->assertEquals('mysqldumper', $dynamicConfig->getParam('configFile'));
         // are we still on the phpinfo page?
         $this->assertQueryCount('#phpinfo', 1);
 

@@ -27,6 +27,11 @@ class Msd_Controller_Action extends Zend_Controller_Action
     protected $_dynamicConfig;
 
     /**
+     * @var Msd_Language
+     */
+    protected $_lang;
+
+    /**
      * Class constructor
      *
      * The request and response objects should be registered with the
@@ -59,8 +64,9 @@ class Msd_Controller_Action extends Zend_Controller_Action
         array $invokeArgs = array()
     )
     {
-        $this->_config = Msd_Registry::getConfig();
+        $this->_config        = Msd_Registry::getConfig();
         $this->_dynamicConfig = Msd_Registry::getDynamicConfig();
+        $this->_lang          = Msd_Language::getInstance();
         parent::__construct($request, $response, $invokeArgs);
     }
 }

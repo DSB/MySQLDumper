@@ -47,12 +47,19 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     public function _initConfiguration()
     {
-        $dynamicConfig = new Msd_Config_Dynamic();
-        $configFile = $dynamicConfig->getParam('configFile', 'mysqldumper.ini');
+        $dynamicConfig = Msd_Registry::getDynamicConfig();
+        if ($dynamicConfig === null) {
+            $dynamicConfig = new Msd_Config_Dynamic();
+        }
+        $configFile    = $dynamicConfig->getParam('configFile', 'defaultConfig.ini');
         Msd_Registry::setConfigFilename($configFile);
-        $config     = new Msd_Config(
+        $config = new Msd_Config(
             'Default',
-            array('directories' => realpath(APPLICATION_PATH . '/../work/config'))
+            array('directories' => array(
+                    realpath(APPLICATION_PATH . '/../work/config'),
+                    realpath(APPLICATION_PATH . '/configs')
+                )
+            )
         );
         $config->load($configFile);
         Msd_Registry::setConfig($config);

@@ -35,7 +35,13 @@ class Msd_Action_Helper_AssignConfigAndLanguage extends Zend_Controller_Action_H
         if ($controllerName == 'install') {
             return;
         }
-        $view                = $this->getView();
+
+        $view = $this->getView();
+        if (Msd_Registry::getConfigFilename() == 'defaultConfig.ini') {
+            $redirectUrl = $view->serverUrl() . $view->url(array('controller' => 'install', 'action' => 'index', null, true));
+            $redirector = Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
+            $redirector->gotoUrl($redirectUrl);
+        }
         $view->config        = Msd_Registry::getConfig();
         $view->dynamicConfig = Msd_Registry::getDynamicConfig();
         $view->lang          = Msd_Language::getInstance();

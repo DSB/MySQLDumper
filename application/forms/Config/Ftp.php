@@ -329,8 +329,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton ftpToggle' . $index,
-                'onclick' => "testFtpConnection(" .
-                    $index . ");",
+                'onclick' => "testFtpConnection(" . $index . ");",
             )
         );
 
@@ -346,8 +345,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'escape' => false,
                 'label' => '',
                 'class' => 'Formbutton',
-                'onclick' => "deleteFtpConnection(" .
-                    $index . ");",
+                'onclick' => "deleteFtpConnection(" . $index . ");",
             )
         );
     }
@@ -361,19 +359,21 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     public function getValidValues($data)
     {
-        $values = parent::getValidValues($data, true);
-        while (false !== (list($key, $value) = each($values))) {
+        //$values = parent::getValidValues($data, true);
+        $ftpData = array();
+        foreach ($data as $key => $value) {
             if (substr($key, 0, 4) != 'ftp_') {
                 continue;
             }
             list(, $ftpId, $ftpKey) = explode('_', $key);
-            if (!isset($values[$ftpId])) {
-                $values[$ftpId] = array();
+            if (!isset($ftpData[$ftpId])) {
+                $ftpData[$ftpId] = array();
             }
-            $values[$ftpId][$ftpKey] = $value;
-            unset($values[$key]);
+            $ftpData[$ftpId][$ftpKey] = $value;
+            //unset($values[$key]);
         }
-        return $values;
+        //var_dump($ftpData);   die();
+        return $ftpData;
     }
 
     /**
@@ -409,9 +409,6 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     public function setDefault($name, $value)
     {
-        if (is_array($value)) {
-            list($ftpId, $key) = explode('.', $name);
-        }
         $name = 'ftp_' . str_replace('.', '_', $name);
         parent::setDefault($name, $value);
     }

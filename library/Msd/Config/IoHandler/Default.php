@@ -79,13 +79,23 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
         if (count($config) == 0) {
 
             // Search for the config file in the given directories.
-            $this->_initIni();
+            $this->_initIni($config);
             $config = $this->_iniConfig->getIniData();
             // Put configuration into session.
             $this->_sessionNamespace->config = $config;
         }
 
         return $config;
+    }
+
+    /**
+     * Set configuration file name
+     *
+     * @param string $configFilename File name of configuration file (without path)
+     */
+    public function setConfigFilename($configFilename)
+    {
+        $this->_configFilename = $configFilename;
     }
 
     /**
@@ -98,7 +108,7 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
     public function save($config)
     {
         if ($this->_iniConfig === null) {
-            $this->_initIni();
+            $this->_initIni($config);
         }
         // Save config to session
         $this->_sessionNamespace->config = $config;
@@ -111,17 +121,21 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
     /**
      * Initializes the .ini file handler and sets the full filename of the .ini file.
      *
+     * @param array Configuration as array
+     *
      * @return void
      */
-    private function _initIni()
+    private function _initIni($config)
     {
         foreach ($this->_configDirectories as $configDir) {
             $filename = rtrim($configDir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $this->_configFilename;
             if (file_exists($filename)) {
                 $this->_configFilename = $filename;
                 $this->_iniConfig = new Msd_Ini($filename);
-                break;
+                return;
             }
         }
+        $this->_iniConfig = new Msd_Ini();
+        $this->_iniConfig->setIniData($config);
     }
 }

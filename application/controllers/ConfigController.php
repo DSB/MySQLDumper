@@ -215,7 +215,7 @@ class ConfigController extends Msd_Controller_Action
      */
     public function addRecipientCcAction()
     {
-        $recipientsCc = $this->_config->Param('email.RecipientCc');
+        $recipientsCc = $this->_config->getParam('email.RecipientCc');
         if ($recipientsCc === null) {
             $recipientsCc = array();
         }
@@ -286,6 +286,7 @@ class ConfigController extends Msd_Controller_Action
                 sort($ftpConfig);
             }
             $this->_config->setParam('ftp', $ftpConfig);
+            //$this->_config->save();
         }
         $this->_forward('index');
     }
@@ -410,6 +411,7 @@ class ConfigController extends Msd_Controller_Action
                 $value   = $this->_config->getParam($group . '.' . $element);
                 if (is_array($value)) {
                     list (, $key) = explode('.', $element);
+                    $value[$key] = isset($value[$key]) ? $value[$key] : '';
                     $subForm->setDefault($element, $value[$key]);
                 } else if ($value !== null) {
                     $subForm->setDefault($element, $value);

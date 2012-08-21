@@ -58,7 +58,6 @@ class IndexController extends Msd_Controller_Action
                 array('message' => 'L_PHP_VERSION_TOO_OLD')
             );
         }
-
         try {
             $dbo  = Msd_Db::getAdapter();
             $data = Msd_File::getLatestBackupInfo();
@@ -265,14 +264,14 @@ class IndexController extends Msd_Controller_Action
                 // if we get here wrong credentials are given
                 $this->view->popUpMessage()
                     ->addMessage(
-                        'login-message',
-                        'L_LOGIN',
-                        $user->getAuthMessages(),
-                        array(
-                            'modal'       => true,
-                            'dialogClass' => 'error'
-                        )
-                    );
+                    'login-message',
+                    'L_LOGIN',
+                    $user->getAuthMessages(),
+                    array(
+                        'modal'       => true,
+                        'dialogClass' => 'error'
+                    )
+                );
             }
         }
         $this->view->form = $form;

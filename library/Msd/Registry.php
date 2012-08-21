@@ -21,21 +21,21 @@ class Msd_Registry extends Zend_Registry
      *
      * @const string
      */
-    const CONFIG_FILENAME_KEY = '_configFilename';
+    const CONFIG_FILENAME_KEY = 'configFilename';
 
     /**
      * Key for the dynamic configuration. This is used inside the registry.
      *
      * @const string
      */
-    const DYNAMIC_CONFIG_KEY = '_dynamic';
+    const DYNAMIC_CONFIG_KEY = 'Dynamic';
 
     /**
      * Key for the configuration. This is used inside the registry.
      *
      * @const string
      */
-    const CONFIG_KEY = '_config';
+    const CONFIG_KEY = 'Config';
 
     /**
      * Returns the config instance if it has been registered, returns null otherwise.

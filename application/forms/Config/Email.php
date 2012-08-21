@@ -25,7 +25,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
 
     /**
      * Configuration
-     * @var Msd_Configuration
+     * @var Msd_Config
      */
     protected $_config;
 
@@ -596,7 +596,7 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
      * @param string $name
      * @param string $value
      *
-     * @return void
+     * @return Zend_Form
      */
     public function setDefault($name, $value)
     {

@@ -54,7 +54,7 @@ class Application_Model_Config_FormValidator
      * Checks database connection params.
      * If connection is successfull the values are saved to the config file.
      *
-     * @param Zend_View $view The view of the form for adding messages
+     * @param Zend_View_Interface $view The view of the form for adding messages
      */
     public function validateAndSaveConfig(Zend_View $view)
     {
@@ -81,17 +81,17 @@ class Application_Model_Config_FormValidator
         if ($saveConfig) {
             $this->_config->setConfig($this->_configData);
             $saved = $this->_config->save();
-            $this->_config->load(Msd_Registry::getConfigFilename());
             if ($saved === true) {
-            $view->popUpMessage()->addMessage(
-                'save-config',
-                'L_NOTICE',
-                array('L_SAVE_SUCCESS', $this->_config->getParam('general.title')),
-                array(
-                    'modal' => true,
-                    'dialogClass' => 'notice'
-                )
-            );
+                $this->_config->load(Msd_Registry::getConfigFilename());
+                $view->popUpMessage()->addMessage(
+                    'save-config',
+                    'L_NOTICE',
+                    array('L_SAVE_SUCCESS', $this->_config->getParam('general.title')),
+                    array(
+                        'modal' => true,
+                        'dialogClass' => 'notice'
+                    )
+                );
             } else {
                 die("Fehler beim Speichern der Konfiguration!");
             }
