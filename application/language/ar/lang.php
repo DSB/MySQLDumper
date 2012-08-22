@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: DSB (15), Hardlayers (2), mega_soft (214)
+ * Maintained by: DSB (15), Hardlayers (2), mega_soft (216)
  */
 $lang=array(
 'L_ACTION' => 'حدث',
@@ -488,8 +488,8 @@ $lang=array(
 'L_PRIMARYKEYS_SAVE' => 'تم حفظ المفتاح الاساسي',
 'L_PRIMARYKEY_CONFIRMDELETE' => 'هل تود حذف المفتاح الاساسي ؟',
 'L_PRIMARYKEY_DELETED' => 'تم حذف المفتاح الاساسي',
-'L_PRIMARYKEY_FIELD' => '',
-'L_PRIMARYKEY_NOTFOUND' => '',
+'L_PRIMARYKEY_FIELD' => 'حقل المفتاح الرئيسي',
+'L_PRIMARYKEY_NOTFOUND' => 'لا يوجد مفتاح رئيسي',
 'L_PROCESSKILL1' => 'المخطوطة تحاول افشال العملية',
 'L_PROCESSKILL2' => '.',
 'L_PROCESSKILL3' => 'المخطوطة تحاول منذ',

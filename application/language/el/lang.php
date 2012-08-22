@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: diastasi (243)
+ * Maintained by: diastasi (244)
  */
 $lang=array(
 'L_ACTION' => 'Ενέργεια',
@@ -353,7 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Χρήση ώς προεπιλεγμένης Β.Δεδομένων',
 'L_INSTALL_HELP_PORT' => '(άδειο = προεπιλεγμένη θύρα)',
 'L_INSTALL_HELP_SOCKET' => '(άδειο = προεπιλεγμένο Socket)',
-'L_INTERPRETED_AS_BYTES' => '',
+'L_INTERPRETED_AS_BYTES' => 'Ερμηνεύτηκε ώς bytes',
 'L_IS_WRITABLE' => 'είναι εγγράψιμο',
 'L_KILL_PROCESS' => 'Σταμάτημα διαδικασίας',
 'L_LANGUAGE' => 'Γλώσσα',
