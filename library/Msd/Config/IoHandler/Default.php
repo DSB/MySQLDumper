@@ -58,7 +58,7 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
         }
 
         // Create new namespace for session access.
-        $this->_sessionNamespace = new Zend_Session_Namespace('Config');
+        $this->_sessionNamespace = new Zend_Session_Namespace('config');
     }
 
     /**
@@ -101,7 +101,9 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
     /**
      * Saves the configuration to session and .ini file.
      *
-     * @param array  $config Configuration to save.
+     * @param array $config Configuration to save.
+     *
+     * @throws Msd_Config_Exception
      *
      * @return bool
      */
@@ -110,18 +112,23 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
         if ($this->_iniConfig === null) {
             $this->_initIni($config);
         }
-        // Save config to session
-        $this->_sessionNamespace->config = $config;
 
         // Save config to .ini file
         $this->_iniConfig->setIniData($config);
-        return $this->_iniConfig->saveFile($this->_configFilename);
+
+        // Save config to session
+        $this->_sessionNamespace->config = $config;
+        if (!isset($this->_configDirectories[0])) {
+            throw new Msd_Config_Exception('No directory for saving the configuration set!');
+        }
+        $configDirectory = $this->_configDirectories[0];
+        return $this->_iniConfig->saveFile($configDirectory . '/' . $this->_configFilename);
     }
 
     /**
      * Initializes the .ini file handler and sets the full filename of the .ini file.
      *
-     * @param array Configuration as array
+     * @param array $config Configuration as array
      *
      * @return void
      */
@@ -130,7 +137,7 @@ class Msd_Config_IoHandler_Default implements Msd_Config_IoHandler_Interface
         foreach ($this->_configDirectories as $configDir) {
             $filename = rtrim($configDir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $this->_configFilename;
             if (file_exists($filename)) {
-                $this->_configFilename = $filename;
+                $this->_configFilename = basename($filename);
                 $this->_iniConfig = new Msd_Ini($filename);
                 return;
             }

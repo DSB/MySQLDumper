@@ -105,14 +105,14 @@ class Msd_Config
      * Saves the configuration for the next request.
      * The filename is used for static storage.
      *
+     * @param string filename The file name of the fiel to save (without path)
+     *
      * @return bool
      */
-    public function save($configFilenameAndPath = null)
+    public function save($filename = null)
     {
-        //$configFilename = $this->getParam('configFile');
-        //echo "Dateiname: ". $configFilename;
-        if ($configFilenameAndPath !== null) {
-            $this->_ioHandler->setConfigFilename(basename($configFilenameAndPath));
+        if ($filename !== null) {
+            $this->_ioHandler->setConfigFilename($filename);
         }
 
         return $this->_ioHandler->save($this->_config);

@@ -265,14 +265,16 @@ class InstallController extends Msd_Controller_Action
                 return;
             }
 
-            $saveParam = $this->_getParam('save');
+            $saveParam = $this->_getParam('save', null);
             $this->_config->setParam('dbuser', $options);
-            if ($saveParam !== null && $saveParam == 1) {
+            if ($saveParam == 1) {
                 $this->_config->setParam('general.title', 'MySQLDumper');
                 $this->_config->setParam('dbuser.defaultDb', $this->_getParam('defaultDb'));
                 $this->_config->save('mysqldumper.ini');
+                Msd_Registry::setConfig($this->_config);
                 unset($_SESSION['msd_lang']);
                 unset($_SESSION['msd_install']);
+                $this->_config->load('mysqldumper.ini');
                 $redirectUrl = $this->view->url(array('controller' => 'index', 'action' => 'index', null, true));
                 $this->_response->setRedirect($redirectUrl);
             }
