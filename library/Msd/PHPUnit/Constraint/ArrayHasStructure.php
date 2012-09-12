@@ -12,7 +12,7 @@
  * PHPUnit constraint to check an array for the given structure.
  *
  * @package         MySQLDumper
- * @subpackage      Archive
+ * @subpackage      PHPUnit_Constraint
  */
 class Msd_PHPUnit_Constraint_ArrayHasStructure extends PHPUnit_Framework_Constraint
 {
