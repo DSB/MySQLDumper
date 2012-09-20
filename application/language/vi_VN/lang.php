@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: laze (254)
+ * Maintained by: laze (255)
  */
 $lang=array(
 'L_ACTION' => 'Thực hiện',
@@ -353,7 +353,7 @@ $lang=array(
 'L_INSTALL_DB_DEFAULT' => 'Sử dụng như là cơ sở dữ liệu mặc định',
 'L_INSTALL_HELP_PORT' => '(để trống = Cổng mặc định)',
 'L_INSTALL_HELP_SOCKET' => '(để trống = Socket mặc định)',
-'L_INTERPRETED_AS_BYTES' => '',
+'L_INTERPRETED_AS_BYTES' => 'Byte',
 'L_IS_WRITABLE' => 'Có thể ghi',
 'L_KILL_PROCESS' => 'Dừng tiến trình',
 'L_LANGUAGE' => 'Language (Ngôn ngữ)',
