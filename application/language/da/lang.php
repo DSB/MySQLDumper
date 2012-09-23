@@ -7,7 +7,7 @@
  * @subpackage    Languages
  * @version       $Rev$
  * @author        $Author$
- * Maintained by: jsm (353)
+ * Maintained by: jsm (359)
  */
 $lang=array(
 'L_ACTION' => 'Aktion',
@@ -82,7 +82,7 @@ $lang=array(
 'L_CONNECT' => 'forbind',
 'L_CONNECTIONPARS' => 'Forbindelsesparametre',
 'L_CONNECTTOMYSQL' => 'Forbind til MySQL',
-'L_CONTINUE_MULTIPART_RESTORE' => '',
+'L_CONTINUE_MULTIPART_RESTORE' => 'Fortsæt mulipart-gendannelse med næste fil \'%s\'.',
 'L_CONVERTED_FILES' => 'Konverterede filer',
 'L_CONVERTER' => 'Backupkonvertering',
 'L_CONVERTING' => 'Konverterer',
@@ -481,7 +481,7 @@ $lang=array(
 'L_POSITION_TL' => 'øverst til venstre',
 'L_POSITION_TR' => 'øverst til højre',
 'L_POSSIBLE_COLLATIONS' => 'Mulige sorteringer',
-'L_POSSIBLE_COLLATIONS_EXPLAIN' => '',
+'L_POSSIBLE_COLLATIONS_EXPLAIN' => 'Mulige sorteringsregler for dette tegnsæt<br /><br />_cs = case sensitiv -> versalfølsom<br />_ci = case insensitive -> ikke versalfølsom',
 'L_PREFIX' => 'Præfiks',
 'L_PRIMARYKEYS_CHANGED' => 'Primærnøgle ændret',
 'L_PRIMARYKEYS_CHANGINGERROR' => 'Fejl, ved ændring af den primære nøgle',
@@ -509,7 +509,7 @@ $lang=array(
 'L_RECORDS_PER_PAGECALL' => 'Poster pr. sidevisning',
 'L_REFRESHTIME' => 'Opdateringsinterval',
 'L_REFRESHTIME_PROCESSLIST' => 'Opdateringsinterval for proceslisten',
-'L_REGISTRATION_DESCRIPTION' => '',
+'L_REGISTRATION_DESCRIPTION' => 'Indtast dine oplysninger til administratorkontoen. Med denne bruger vil du være i stand til at logge ind MySQLDumper  fremover. Bemærk data omhyggeligt. <br /> <br /> Du kan frit vælge et brugernavn og en adgangskode. Sørg for at vælge den sikreste mulige kombination af brugernavn og adgangskode for at kontrollere adgangen til MySQLDumper og for at beskytte mod uautoriseret adgang!',
 'L_RELOAD' => 'Genindlæs',
 'L_REMOVE' => 'Fjern',
 'L_REPAIR' => 'Reparer',
@@ -614,7 +614,7 @@ $lang=array(
 'L_SQL_EXEC' => 'Udfør SQL-sætning',
 'L_SQL_EXPORT' => 'Eksport fra Database `%s`',
 'L_SQL_FIELDDELETE1' => 'Feltet',
-'L_SQL_FIELDNAMENOTVALID' => 'Fejl: Ikke gyldigt feltnavn',
+'L_SQL_FIELDNAMENOTVALID' => 'Fejl: ugyldigt feltnavn',
 'L_SQL_FIRST' => 'først',
 'L_SQL_IMEXPORT' => 'Import-Eksport',
 'L_SQL_IMPORT' => 'Import i Database `%s`',
@@ -744,8 +744,8 @@ $lang=array(
 'L_ZEND_ID_EMAIL_ADDRESS_INVALID' => 'Ugyldig type overført. Forventet en streng.',
 'L_ZEND_ID_EMAIL_ADDRESS_INVALID_FORMAT' => 'Ugyldigt e-mail adresse format.',
 'L_ZEND_ID_EMAIL_ADDRESS_INVALID_HOSTNAME' => 'Domænnavnet er ugyldigt.',
-'L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART' => '',
-'L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD' => '',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_LOCAL_PART' => 'Den lokale del af e-mail adressen (lokal-del@domain.TLD) er ugyldig.',
+'L_ZEND_ID_EMAIL_ADDRESS_INVALID_MX_RECORD' => 'Der er ingen gyldig MX-post for e-mailen.',
 'L_ZEND_ID_EMAIL_ADDRESS_INVALID_SEGMENT' => 'Værtsnavnet er ikke i et netværkssegment, der kan routes. E-mail adressen kan derfor ikke opløses af det offentlige netværk.',
 'L_ZEND_ID_EMAIL_ADDRESS_LENGTH_EXCEEDED' => 'E-mail adressen er for lang. Den maksimale længde er 320 tegn.',
 'L_ZEND_ID_EMAIL_ADDRESS_QUOTED_STRING' => 'E-mail adressen kan ikke kontrolleres i Quoted-String formatet.',
