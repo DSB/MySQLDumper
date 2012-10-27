@@ -22,6 +22,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      * @var Msd_Language
      */
     protected $_lang;
+
     /**
      * Init form and add all elements
      *
@@ -29,7 +30,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      */
     public function init()
     {
-        $config = Msd_Registry::getConfig();
+        $config      = Msd_Registry::getConfig();
         $this->_lang = Msd_Language::getInstance();
         $this->setDisableLoadDefaultDecorators(true);
         $this->setDecorators(array('SubForm'));
@@ -40,8 +41,8 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
         $this->setDisplayGroupDecorators(array('DisplayGroup'));
         $this->_addButtonFtpAdd();
 
-        $ftpConfig = $config->getParam('ftp');
-        $ftpKeys = array_keys($ftpConfig);
+        $ftpConfig       = $config->getParam('ftp');
+        $ftpKeys         = array_keys($ftpConfig);
         $nrOfFtpProfiles = count($ftpKeys);
         foreach ($ftpKeys as $ftpConnectionId) {
             $this->_addRadioActivated($ftpConnectionId);
@@ -78,8 +79,8 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 'ftp' . $ftpConnectionId,
                 array(
                     'disableLoadDefaultDecorators' => true,
-                    'decorators' => array('DisplayGroup'),
-                    'legend' => $legend,
+                    'decorators'                   => array('DisplayGroup'),
+                    'legend'                       => $legend,
                 )
             );
         }
@@ -97,14 +98,14 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'headElement',
             array(
                 'disableLoadDefaultDecorators' => true,
-                'content' =>
-                    $this->getView()->getIcon('plus') . ' ' .
+                'content'                      =>
+                $this->getView()->getIcon('plus') . ' ' .
                     $this->_lang->getTranslator()->_('L_FTP_ADD_CONNECTION'),
-                'decorators' => array('Default'),
-                'escape' => false,
-                'label' => '',
-                'class' => 'Formbutton',
-                'onclick' => "addFtpConnection();",
+                'decorators'                   => array('Default'),
+                'escape'                       => false,
+                'label'                        => '',
+                'class'                        => 'Formbutton',
+                'onclick'                      => "addFtpConnection();",
             )
         );
     }
@@ -122,16 +123,16 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'radio',
             'ftp_' . $index . '_use',
             array(
-                'class' => 'radio toggler',
-                'label' => 'L_FTP_TRANSFER',
-                'onclick' => "myToggle(this, 'y', 'ftpToggle" . $index . "');",
-                'listsep' => ' ',
+                'class'                        => 'radio toggler',
+                'label'                        => 'L_FTP_TRANSFER',
+                'onclick'                      => "myToggle(this, 'y', 'ftpToggle" . $index . "');",
+                'listsep'                      => ' ',
                 'disableLoadDefaultDecorators' => true,
-                'multiOptions' => array(
+                'multiOptions'                 => array(
                     'y' => 'L_ACTIVATED',
                     'n' => 'L_NOT_ACTIVATED',
                 ),
-                'decorators' => array('Default'),
+                'decorators'                   => array('Default'),
             )
         );
     }
@@ -149,14 +150,14 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'text',
             'ftp_' . $index . '_timeout',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_FTP_TIMEOUT',
-                'secondLabel' => 'L_SECONDS',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_FTP_TIMEOUT',
+                'secondLabel'                  => 'L_SECONDS',
                 'disableLoadDefaultDecorators' => true,
-                'size' => 3,
-                'maxlength' => 3,
-                'decorators' => array('DoubleLabel'),
-                'validators' => array('Digits'),
+                'size'                         => 3,
+                'maxlength'                    => 3,
+                'decorators'                   => array('DoubleLabel'),
+                'validators'                   => array('Digits'),
             )
         );
     }
@@ -174,13 +175,13 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'checkbox',
             'ftp_' . $index . '_passiveMode',
             array(
-                'class' => 'checkbox ftpToggle' . $index,
-                'label' => 'L_FTP_CHOOSE_MODE',
-                'secondLabel' => 'L_FTP_PASSIVE',
+                'class'                        => 'checkbox ftpToggle' . $index,
+                'label'                        => 'L_FTP_CHOOSE_MODE',
+                'secondLabel'                  => 'L_FTP_PASSIVE',
                 'disableLoadDefaultDecorators' => true,
-                'checkedValue' => 'y',
-                'uncheckedValue' => 'n',
-                'decorators' => array('DoubleLabel'),
+                'checkedValue'                 => 'y',
+                'uncheckedValue'               => 'n',
+                'decorators'                   => array('DoubleLabel'),
             )
         );
     }
@@ -198,13 +199,13 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'checkbox',
             'ftp_' . $index . '_ssl',
             array(
-                'class' => 'checkbox ftpToggle' . $index,
-                'label' => 'L_FTP_SSL',
-                'secondLabel' => 'L_FTP_USESSL',
+                'class'                        => 'checkbox ftpToggle' . $index,
+                'label'                        => 'L_FTP_SSL',
+                'secondLabel'                  => 'L_FTP_USESSL',
                 'disableLoadDefaultDecorators' => true,
-                'checkedValue' => 'y',
-                'uncheckedValue' => 'n',
-                'decorators' => array('DoubleLabel'),
+                'checkedValue'                 => 'y',
+                'uncheckedValue'               => 'n',
+                'decorators'                   => array('DoubleLabel'),
             )
         );
     }
@@ -222,10 +223,10 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'text',
             'ftp_' . $index . '_server',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_FTP_SERVER',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_FTP_SERVER',
                 'disableLoadDefaultDecorators' => true,
-                'decorators' => array('Default'),
+                'decorators'                   => array('Default'),
             )
         );
 
@@ -233,17 +234,18 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'text',
             'ftp_' . $index . '_port',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_FTP_PORT',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_FTP_PORT',
                 'disableLoadDefaultDecorators' => true,
-                'size' => 4,
-                'maxlength' => 5,
-                'validators' => array('Digits'),
-                'decorators' => array('Default'),
+                'size'                         => 4,
+                'maxlength'                    => 5,
+                'validators'                   => array('Digits'),
+                'decorators'                   => array('Default'),
             )
         );
     }
-        /**
+
+    /**
      * Add input "user"
      *
      * @param int $index
@@ -256,11 +258,11 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'text',
             'ftp_' . $index . '_user',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_FTP_USER',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_FTP_USER',
                 'disableLoadDefaultDecorators' => true,
-                'size' => 60,
-                'decorators' => array('Default'),
+                'size'                         => 60,
+                'decorators'                   => array('Default'),
             )
         );
 
@@ -268,12 +270,12 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'password',
             'ftp_' . $index . '_pass',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_FTP_PASS',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_FTP_PASS',
                 'disableLoadDefaultDecorators' => true,
-                'size' => 60,
-                'decorators' => array('Default'),
-                'renderPassword' => true,
+                'size'                         => 60,
+                'decorators'                   => array('Default'),
+                'renderPassword'               => true,
             )
         );
     }
@@ -291,11 +293,11 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'text',
             'ftp_' . $index . '_dir',
             array(
-                'class' => 'text ftpToggle' . $index,
-                'label' => 'L_DIR',
+                'class'                        => 'text ftpToggle' . $index,
+                'label'                        => 'L_DIR',
                 'disableLoadDefaultDecorators' => true,
-                'size' => 60,
-                'decorators' => array('Default'),
+                'size'                         => 60,
+                'decorators'                   => array('Default'),
             )
         );
     }
@@ -322,14 +324,14 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'ftpCheck' . $index,
             array(
                 'disableLoadDefaultDecorators' => true,
-                'content' =>
-                    $this->getView()->getIcon('Connect', '', 16) . ' ' .
+                'content'                      =>
+                $this->getView()->getIcon('Connect', '', 16) . ' ' .
                     $this->_lang->getTranslator()->_('L_TESTCONNECTION'),
-                'decorators' => array($buttonDecorator),
-                'escape' => false,
-                'label' => '',
-                'class' => 'Formbutton ftpToggle' . $index,
-                'onclick' => "testFtpConnection(" . $index . ");",
+                'decorators'                   => array($buttonDecorator),
+                'escape'                       => false,
+                'label'                        => '',
+                'class'                        => 'Formbutton ftpToggle' . $index,
+                'onclick'                      => "testFtpConnection(" . $index . ");",
             )
         );
 
@@ -338,14 +340,14 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
             'ftpDelete' . $index,
             array(
                 'disableLoadDefaultDecorators' => true,
-                'content' =>
-                    $this->getView()->getIcon('delete') . ' '
-                        . $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
-                'decorators' => array('LineEnd'),
-                'escape' => false,
-                'label' => '',
-                'class' => 'Formbutton',
-                'onclick' => "deleteFtpConnection(" . $index . ");",
+                'content'                      =>
+                $this->getView()->getIcon('delete') . ' '
+                    . $this->_lang->getTranslator()->_('L_FTP_CONNECTION_DELETE'),
+                'decorators'                   => array('LineEnd'),
+                'escape'                       => false,
+                'label'                        => '',
+                'class'                        => 'Formbutton',
+                'onclick'                      => "deleteFtpConnection(" . $index . ");",
             )
         );
     }
@@ -354,12 +356,12 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      * Get valid values
      *
      * @param array $data
+     * @param  bool $suppressArrayNotation
      *
      * @return array
      */
-    public function getValidValues($data)
+    public function getValidValues($data, $suppressArrayNotation = false)
     {
-        //$values = parent::getValidValues($data, true);
         $ftpData = array();
         foreach ($data as $key => $value) {
             if (substr($key, 0, 4) != 'ftp_') {
@@ -370,9 +372,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
                 $ftpData[$ftpId] = array();
             }
             $ftpData[$ftpId][$ftpKey] = $value;
-            //unset($values[$key]);
         }
-        //var_dump($ftpData);   die();
         return $ftpData;
     }
 
@@ -383,7 +383,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
      *
      * @return Zend_Form
      */
-    public function setDefaults($defaults)
+    public function setDefaults(array $defaults)
     {
         if (!empty($defaults['ftp'])) {
             $ftp = array();

@@ -536,10 +536,11 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
      * Extracts an multi array from flat element names and values
      *
      * @param array $data The values to extract index and values from
+     * @param  bool $suppressArrayNotation
      *
      * @return array The converted array
      */
-    public function getValidValues($data)
+    public function getValidValues($data, $suppressArrayNotation = false)
     {
         $values = parent::getValidValues($data, true);
         $newArray = array();
@@ -566,11 +567,11 @@ class Application_Form_Config_Email extends Zend_Form_SubForm
     /**
      * Set default values
      *
-     * @param $defaults
+     * @param array $defaults
      *
      * @return Zend_Form
      */
-    public function setDefaults($defaults)
+    public function setDefaults(array $defaults)
     {
         if (isset($defaults['email']['RecipientCc'])) {
             $recipientCc = array();
