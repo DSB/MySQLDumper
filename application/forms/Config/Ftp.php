@@ -387,9 +387,7 @@ class Application_Form_Config_Ftp extends Zend_Form_SubForm
     {
         if (!empty($defaults['ftp'])) {
             $ftp = array();
-            while (
-                false !== (list($ftpId, $ftpData) = each($defaults['ftp']))
-            ) {
+            while (false !== (list($ftpId, $ftpData) = each($defaults['ftp']))) {
                 foreach ($ftpData as $ftpKey => $ftpValue) {
                     $ftp['ftp_' . $ftpId . '_' . $ftpKey] = $ftpValue;
                 }

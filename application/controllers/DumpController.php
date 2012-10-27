@@ -27,7 +27,7 @@ class DumpController extends Msd_Controller_Action
     {
         $dump = new Msd_Dump();
         $dump->prepareDumpProcess();
-        $this->view->dumpData = '';
+        $this->view->dumpData = new StdClass();
         $this->view->dumpData->nrOfDatabasesToBackup =
                 count($dump->dbsToBackup);
         $this->view->dumpData->databasesToBackup =
