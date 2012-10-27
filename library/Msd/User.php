@@ -156,15 +156,11 @@ class Msd_User
             return self::NO_USER_FILE;
         }
 
-        $usersConfig = new Msd_Ini($this->_usersFile);
-        $users = $usersConfig->get('user');
-
+        $usersConfig  = new Msd_Ini($this->_usersFile);
+        $users        = $usersConfig->get('users');
         $hasValidUser = false;
-        foreach ($users as $user) {
-            if (isset($user['name']) && isset($user['pass'])) {
-                $hasValidUser = true;
-                break;
-            }
+        if (!empty($users)) {
+            $hasValidUser = true;
         }
         if (!$hasValidUser) {
             return self::NO_VALID_USER;

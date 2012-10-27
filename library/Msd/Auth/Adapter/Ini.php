@@ -65,7 +65,7 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
      */
     public function setUsername($username)
     {
-        $this->_username = (string) $username;
+        $this->_username = (string)$username;
     }
 
     /**
@@ -77,7 +77,7 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
      */
     public function setPassword($password)
     {
-        $this->_password = (string) $password;
+        $this->_password = (string)$password;
     }
 
     /**
@@ -96,14 +96,11 @@ class Msd_Auth_Adapter_Ini implements Zend_Auth_Adapter_Interface
         }
 
         $authResult = false;
-        foreach ($this->_users as $userId => $user) {
-            if (
-                $this->_username == $user['name'] &&
-                md5($this->_password) == $user['pass']
-            ) {
+        foreach ($this->_users['users']['user'] as $name => $pass) {
+            if ($this->_username == $name && md5($this->_password) == $pass) {
                 $authResult = array(
-                    'id' => $userId,
-                    'name' => $user['name'],
+                    'id'   => $name,
+                    'name' => $name,
                 );
             }
         }

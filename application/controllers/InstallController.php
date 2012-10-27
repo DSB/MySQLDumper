@@ -204,8 +204,7 @@ class InstallController extends Msd_Controller_Action
             $form->getElement('pass_confirm')->getValidator('Identical')->setToken($postData['pass']);
             if ($form->isValid($postData)) {
                 $ini = new Msd_Ini();
-                $ini->set('name', $postData['user'], 'user');
-                $ini->set('pass', md5($postData['pass']), 'user');
+                $ini->set('user[\'' . $postData['user'] . '\']', md5($postData['pass']), 'users');
                 $ini->saveFile(APPLICATION_PATH . '/configs/users.ini');
                 $redirectUrl = $this->view->url(array('controller' => 'install', 'action' => 'step4'), null, true);
                 $this->_response->setRedirect($redirectUrl);
