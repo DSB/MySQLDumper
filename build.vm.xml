@@ -67,7 +67,7 @@
  <target name="phpcpd">
   <exec dir="${repodir}" executable="phpcpd">
    <arg line="--log-pmd ${logdir}/pmd-cpd.xml
-        --suffixes php
+        --names *.php
         --exclude ${repodir}/library/Zend
         --exclude ${repodir}/application/language
         --exclude ${repodir}/library/ZendX
