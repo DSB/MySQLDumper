@@ -20,9 +20,11 @@ class Msd_View_Helper_GetIcon extends Zend_View_Helper_Abstract
     /**
      * Get html-img-tag for icon image
      *
-     * @param string $name
-     * @param string $title
-     * @param int    $size
+     * @throws Msd_Exception
+     *
+     * @param string $name  Icon name
+     * @param string $title HTML title tag
+     * @param int    $size Size in Pixel (defines the sub folder to load from)
      *
      * @return string
      */
@@ -32,7 +34,7 @@ class Msd_View_Helper_GetIcon extends Zend_View_Helper_Abstract
         if (!$baseUrl) {
             $baseUrl = Zend_Controller_Front::getInstance()->getBaseUrl();
         }
-        $icons = self::_getIconFilenames();
+        $icons = $this->_getIconFilenames();
         if (!isset($icons[$name])) {
             throw new Msd_Exception(
                 'GetIcon: unknown icon \'' . $name . '\' requested'

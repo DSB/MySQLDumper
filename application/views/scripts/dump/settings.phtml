@@ -1,113 +1,113 @@
 <?php
-$d = $this->parent->dumpData;
-$sumTotal = $this->parent->dumpData->sumTotal;
-$this->lang = $this->parent->lang;
+$d            = $this->parent->dumpData;
+$sumTotal     = $this->parent->dumpData->sumTotal;
+$this->lang   = $this->parent->lang;
 $this->config = $this->parent->config;
 ?>
 <div id="dumpsettings">
-<h3><?php echo $this->lang->L_FM_DUMPSETTINGS;?></h3>
-<table class="bdr floatLeft" summary="Dump settings">
-    <tr class="row-even">
-        <td class="small"><?php echo $this->lang->L_CONFIG_HEADLINE?></td>
-        <td class="small right"><?php echo $this->dynamicConfig->getParam('configFile')?></td>
-    </tr>
-    <tr class="dbrow">
-        <td class="small"><?php echo $this->lang->L_DBS?>:</td>
-        <td class="small right">
-            <?php echo $d->databasesToBackup?> (<?php echo $d->nrOfDatabasesToBackup?>)
-        </td>
-    </tr>
-    <tr class="row-odd">
-        <td class="small"><?php echo $this->lang->L_TABLES?>:</td>
-        <td class="small right"><?php echo $this->numberFormat($sumTotal['tablesTotal'])?>
-        </td>
-    </tr>
-    <tr class="dbrow">
-        <td class="small"><?php echo $this->lang->L_RECORDS?>:</td>
-        <td class="small right"><?php echo $this->numberFormat($sumTotal['recordsTotal'])?></td>
-    </tr>
-    <tr class="row-odd">
-        <td class="small"><?php echo $this->lang->L_DATASIZE?>:</td>
-        <td class="small right"><?php echo $this->byteOutput($sumTotal['datasizeTotal'])?></td>
-    </tr>
-    <tr class="row-odd">
-        <td colspan="2" class="small">
-            <span class="small right">(<?php echo $this->lang->L_DATASIZE_INFO?>.)</span>
-        </td>
-    </tr>
-
-    <tr class="dbrow">
-        <td class="small nowrap"><?php echo $this->lang->L_GZIP?>:</td>
-        <td class="small right"><?php echo $this->dynamicConfig->getParam('compression') ? $this->lang->L_YES: $this->lang->L_NO; ?></td>
-    </tr>
-
-<?php
-echo $this->partial('dump/multipart.phtml', array('parent' => $this->parent));
-echo $this->partial('dump/email.phtml', array('parent' => $this->parent));
-echo $this->partial('dump/ftp.phtml', array('parent' => $this->parent));
-
-?>
-</table>
-<?php
-if (!empty($sumTotal['tables'])) {
-?>
-    <table class="bdr floatLeft" style="margin-left:12px;" summary="Info table types and records">
-        <tr class="thead">
-            <th><?php echo $this->lang->L_TABLE_TYPE;?></th>
-                <?php
-                    $details = $sumTotal['tables'];
-                    $keys = array_keys($details);
-                    foreach ($keys as $tableType) {
-                        echo '<th>'.$tableType.'</th>';
-                    }
-                ?>
-            <th><?php echo $this->lang->L_INFO_SUM;?></th>
+    <h3><?php echo $this->lang->L_FM_DUMPSETTINGS;?></h3>
+    <table class="bdr floatLeft" summary="Dump settings">
+        <tr class="row-even">
+            <td class="small"><?php echo $this->lang->L_CONFIG_HEADLINE?></td>
+            <td class="small right"><?php echo $this->config->getParam('general.title')?></td>
+        </tr>
+        <tr class="dbrow">
+            <td class="small"><?php echo $this->lang->L_DBS?>:</td>
+            <td class="small right">
+                <?php echo $d->databasesToBackup?> (<?php echo $d->nrOfDatabasesToBackup?>)
+            </td>
         </tr>
         <tr class="row-odd">
-            <td class="small"><?php echo $this->lang->L_TABLES;?>:</td>
-            <?php
+            <td class="small"><?php echo $this->lang->L_TABLES?>:</td>
+            <td class="small right"><?php echo $this->numberFormat($sumTotal['tablesTotal'])?>
+            </td>
+        </tr>
+        <tr class="dbrow">
+            <td class="small"><?php echo $this->lang->L_RECORDS?>:</td>
+            <td class="small right"><?php echo $this->numberFormat($sumTotal['recordsTotal'])?></td>
+        </tr>
+        <tr class="row-odd">
+            <td class="small"><?php echo $this->lang->L_DATASIZE?>:</td>
+            <td class="small right"><?php echo $this->byteOutput($sumTotal['datasizeTotal'])?></td>
+        </tr>
+        <tr class="row-odd">
+            <td colspan="2" class="small">
+                <span class="small right">(<?php echo $this->lang->L_DATASIZE_INFO?>.)</span>
+            </td>
+        </tr>
+
+        <tr class="dbrow">
+            <td class="small nowrap"><?php echo $this->lang->L_GZIP?>:</td>
+            <td class="small right"><?php echo $this->dynamicConfig->getParam('compression') ? $this->lang->L_YES : $this->lang->L_NO; ?></td>
+        </tr>
+
+        <?php
+        echo $this->partial('dump/multipart.phtml', array('parent' => $this->parent));
+        echo $this->partial('dump/email.phtml', array('parent' => $this->parent));
+        echo $this->partial('dump/ftp.phtml', array('parent' => $this->parent));
+
+        ?>
+    </table>
+    <?php
+    if (!empty($sumTotal['tables'])) {
+        ?>
+        <table class="bdr floatLeft" style="margin-left:12px;" summary="Info table types and records">
+            <tr class="thead">
+                <th><?php echo $this->lang->L_TABLE_TYPE;?></th>
+                <?php
+                $details = $sumTotal['tables'];
+                $keys    = array_keys($details);
+                foreach ($keys as $tableType) {
+                    echo '<th>' . $tableType . '</th>';
+                }
+                ?>
+                <th><?php echo $this->lang->L_INFO_SUM;?></th>
+            </tr>
+            <tr class="row-odd">
+                <td class="small"><?php echo $this->lang->L_TABLES;?>:</td>
+                <?php
                 $tablesTotal = 0;
                 foreach ($keys as $tableType) {
                     echo '<td class="small right">'
-                        .$this->numberFormat($details[$tableType]['tablesTotal'])
-                        .'</td>';
+                        . $this->numberFormat($details[$tableType]['tablesTotal'])
+                        . '</td>';
                     $tablesTotal += $details[$tableType]['tablesTotal'];
                 }
-            ?>
-            <td class="small right">
-                <?php echo $this->numberFormat($tablesTotal);?>
-            </td>
-        </tr>
-        <tr class="row-even">
-            <td class="small"><?php echo $this->lang->L_RECORDS;?>:</td>
-            <?php
+                ?>
+                <td class="small right">
+                    <?php echo $this->numberFormat($tablesTotal);?>
+                </td>
+            </tr>
+            <tr class="row-even">
+                <td class="small"><?php echo $this->lang->L_RECORDS;?>:</td>
+                <?php
                 $recordsTotal = 0;
                 foreach ($keys as $tableType) {
                     echo '<td class="small right">'
-                        .$this->numberFormat($details[$tableType]['recordsTotal'])
-                        .'</td>';
+                        . $this->numberFormat($details[$tableType]['recordsTotal'])
+                        . '</td>';
                     $recordsTotal += $details[$tableType]['recordsTotal'];
                 }
-            ?>
-            <td class="small right">
-                <?php echo $this->numberFormat($recordsTotal);?>
-            </td>
-        </tr>
-        <tr class="row-odd">
-            <td class="small"><?php echo $this->lang->L_DATASIZE;?>:</td>
-            <?php
+                ?>
+                <td class="small right">
+                    <?php echo $this->numberFormat($recordsTotal);?>
+                </td>
+            </tr>
+            <tr class="row-odd">
+                <td class="small"><?php echo $this->lang->L_DATASIZE;?>:</td>
+                <?php
                 $datasizeTotal = 0;
                 foreach ($keys as $tableType) {
                     echo '<td class="small right">'
-                        .$this->byteOutput($details[$tableType]['datasizeTotal'])
-                        .'</td>';
+                        . $this->byteOutput($details[$tableType]['datasizeTotal'])
+                        . '</td>';
                     $datasizeTotal += $details[$tableType]['datasizeTotal'];
                 }
-            ?>
-            <td class="small right">
-                <?php echo $this->byteOutput($datasizeTotal);?>
-            </td>
-        </tr>
-    </table>
-<?php } ?>
+                ?>
+                <td class="small right">
+                    <?php echo $this->byteOutput($datasizeTotal);?>
+                </td>
+            </tr>
+        </table>
+        <?php } ?>
 </div>
