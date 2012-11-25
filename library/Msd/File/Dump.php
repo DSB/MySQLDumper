@@ -21,10 +21,12 @@ class Msd_File_Dump extends Msd_File
 {
     /**
      * Get statusline information from backup file
-     * 
+     *
+     * @throws Exception
+     *
      * @param string $filename Name of file to read
      * 
-     * @param array
+     * @return array
      */
     public static function getStatusline($filename)
     {
@@ -35,17 +37,17 @@ class Msd_File_Dump extends Msd_File
             if ($fileHandle === false) {
                 throw new Exception('Can\'t open file '.$filename);
             }
-            $statusline = gzgets($fileHandle, 40960);
+            $statusLine = gzgets($fileHandle, 40960);
             gzclose($fileHandle);
         } else {
             $fileHandle=fopen($path . $filename, "r");
             if ($fileHandle === false) {
                 throw new Exception('Can\'t open file '.$filename);
             }
-            $statusline = fgets($fileHandle, 5000);
+            $statusLine = fgets($fileHandle, 5000);
             fclose($fileHandle);
         }
-        return self::_explodeStatusline($statusline);
+        return self::_explodeStatusline($statusLine);
     }
 
     /**
@@ -55,14 +57,14 @@ class Msd_File_Dump extends Msd_File
      * 
      * @return array
      */
-    private function _explodeStatusline($line)
+    private static function _explodeStatusline($line)
     {
         /*Construction of statusline (first line in backup file):
             -- Status : NrOfTables : nrOfRecords : Multipart : DatabaseName : 
             script : scriptversion : Comment : MySQLVersion : 
             Backupflags (unused): SQLBefore : SQLAfter : Charset : EXTINFO
         */
-        $statusline = array();
+        $statusLine = array();
         $compare = substr($line, 0, 8);
         if ( $compare != '# Status' && $compare != '-- Statu') { 
             // not a backup of MySQLDumper
@@ -77,28 +79,28 @@ class Msd_File_Dump extends Msd_File
                     $flag[]='';
                 }
             }
-            $statusline['tables'] = $flag[1];
-            $statusline['records'] = $flag[2];
+            $statusLine['tables'] = $flag[1];
+            $statusLine['records'] = $flag[2];
             if ($flag[3] == '' || $flag[3] == 'MP_0') {
-                $statusline['part']= 'MP_0';
+                $statusLine['part']= 'MP_0';
             } else {
-                $statusline['part'] = $flag[3];
+                $statusLine['part'] = $flag[3];
             }
-            $statusline['dbname'] = $flag[4];
-            $statusline['script'] = $flag[5];
-            $statusline['scriptversion'] = $flag[6];
-            $statusline['comment'] = $flag[7];
-            $statusline['mysqlversion'] = $flag[8];
-            $statusline['flags'] = $flag[9];
-            $statusline['sqlbefore'] = $flag[10];
-            $statusline['sqlafter'] = $flag[11];
+            $statusLine['dbname'] = $flag[4];
+            $statusLine['script'] = $flag[5];
+            $statusLine['scriptversion'] = $flag[6];
+            $statusLine['comment'] = $flag[7];
+            $statusLine['mysqlversion'] = $flag[8];
+            $statusLine['flags'] = $flag[9];
+            $statusLine['sqlbefore'] = $flag[10];
+            $statusLine['sqlafter'] = $flag[11];
             if ( isset($flag[12]) && trim($flag[12])!='EXTINFO') {
-                $statusline['charset']=$flag[12];
+                $statusLine['charset']=$flag[12];
             } else {
-                $statusline['charset']='?';
+                $statusLine['charset']='?';
             }
         }
-        return $statusline;
+        return $statusLine;
     }
 
     /**
@@ -106,21 +108,21 @@ class Msd_File_Dump extends Msd_File
      * 
      * @return array
      */
-    private function _getDefaultStatusline()
+    private static function _getDefaultStatusline()
     {
-        $statusline['tables'] = -1;
-        $statusline['records'] = -1;
-        $statusline['part'] = 'MP_0';
-        $statusline['dbname'] = 'unknown';
-        $statusline['script'] = '';
-        $statusline['scriptversion'] = '';
-        $statusline['comment'] = '';
-        $statusline['mysqlversion'] = 'unknown';
-        $statusline['flags'] = '2222222';
-        $statusline['sqlbefore'] = '';
-        $statusline['sqlafter'] = '';
-        $statusline['charset'] = '?';
-        return $statusline;
+        $statusLine['tables'] = -1;
+        $statusLine['records'] = -1;
+        $statusLine['part'] = 'MP_0';
+        $statusLine['dbname'] = 'unknown';
+        $statusLine['script'] = '';
+        $statusLine['scriptversion'] = '';
+        $statusLine['comment'] = '';
+        $statusLine['mysqlversion'] = 'unknown';
+        $statusLine['flags'] = '2222222';
+        $statusLine['sqlbefore'] = '';
+        $statusLine['sqlafter'] = '';
+        $statusLine['charset'] = '?';
+        return $statusLine;
     }
     
 }
