@@ -5,8 +5,8 @@
  *
  * @package       MySQLDumper
  * @subpackage    Languages
- * @version       $Rev$
- * @author        $Author$
+ * @version       $Rev: 1227 $
+ * @author        $Author: DSB $
  * Maintained by: caos30 (766), DSB (7)
  */
 $lang=array(

@@ -5,12 +5,12 @@
  *
  * @package       MySQLDumper
  * @subpackage    Languages
- * @version       $Rev$
- * @author        $Author$
- * Maintained by: DSB (284), JanRei (23), Kyoya (31), StvN (2)
+ * @version       $Rev: 1227 $
+ * @author        $Author: DSB $
+ * Maintained by: DSB (285), JanRei (23), Kyoya (31), StvN (2)
  */
 $lang=array(
-'L_ACTION' => 'Aktion',
+'L_ACTION' => 'Aktion test',
 'L_ACTIVATED' => 'aktiviert',
 'L_ACTUALLY_INSERTED_RECORDS' => 'Es wurden bisher <b>%s</b> Datensätze erfolgreich eingetragen.',
 'L_ACTUALLY_INSERTED_RECORDS_OF' => 'Es wurden bisher <b>%s</b> von <b>%s</b> Datensätzen erfolgreich eingetragen.',
