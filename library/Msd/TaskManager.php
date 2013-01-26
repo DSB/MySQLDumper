@@ -106,7 +106,7 @@ class Msd_TaskManager
      *
      * @param string $type
      *
-     * @return array|false
+     * @return array|bool
      */
     public function getTasks($type = '')
     {

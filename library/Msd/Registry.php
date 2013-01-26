@@ -62,7 +62,7 @@ class Msd_Registry extends Zend_Registry
      */
     public static function setConfig(Msd_Config $config)
     {
-        self::set(self::CONFIG_KEY . '', $config);
+        self::set(self::CONFIG_KEY, $config);
     }
 
     /**
