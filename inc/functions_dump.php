@@ -185,7 +185,7 @@ function get_content($db,$table)
 			{
 				if (!isset($row[$j])) $insert.='NULL,';
 				else 
-					if ($row[$j]!='') $insert.='\''.mysql_escape_string($row[$j]).'\',';
+					if ($row[$j]!='') $insert.='\''.mysql_real_escape_string($row[$j]).'\',';
 					else
 						$insert.='\'\',';
 			}
