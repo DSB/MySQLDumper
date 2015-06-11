@@ -410,13 +410,20 @@ function WriteCronScript($restore_values = false)
 
     $newDbNames = $databases['Name'];
     //remove database we don't want to backup
-    foreach ($databases['Name'] as $k => $v) {
+	// from newDbNames
+    foreach ($databases['Name'] as $k=>$v) {
+        if (in_array($v, $dontBackupDatabases)) {
+            unset($newDbNames[$k]);
+        }
+    }
+	// and from cron (cron_db_array has different length to newDbNames: at least mysql and information_schema are missing)
+    foreach ($cron_db_array as $k=>$v) {
         if (in_array($v, $dontBackupDatabases)) {
             unset($cron_db_array[$k],
                 $cron_dbpraefix_array[$k],
                 $cron_command_before_dump[$k],
-                $cron_command_after_dump[$k],
-                $newDbNames[$k]);
+                $cron_command_after_dump[$k]
+			);
         }
     }
 
