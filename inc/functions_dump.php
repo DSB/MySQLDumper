@@ -185,7 +185,7 @@ function get_content($db,$table)
 			{
 				if (!isset($row[$j])) $insert.='NULL,';
 				else 
-					if ($row[$j]!='') $insert.='\''.((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $row[$j]) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : "")).'\',';
+					if ($row[$j]!='') $insert.='\''. mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $row[$j]) .'\',';
 					else
 						$insert.='\'\',';
 			}
