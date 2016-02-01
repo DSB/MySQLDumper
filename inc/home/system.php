@@ -2,18 +2,18 @@
 if (!defined('MSD_VERSION')) die('No direct access.');
 $sysaction=(isset($_GET['dosys'])) ? $_GET['dosys'] : 0;
 $msg="";
-$res=@mysql_query("SHOW VARIABLES LIKE 'datadir'",$config['dbconnection']);
+$res=@mysqli_query($config['dbconnection'], "SHOW VARIABLES LIKE 'datadir'");
 if ($res)
 {
-	$row=mysql_fetch_array($res);
+	$row=mysqli_fetch_array($res);
 	$data_dir=$row[1];
 }
 switch ($sysaction)
 {
 	case 1: //FLUSH PRIVILEGES
 		$msg="&gt; operating FLUSH PRIVILEGES<br>";
-		$res=@mysql_query("FLUSH PRIVILEGES",$config['dbconnection']);
-		$meldung=mysql_error($config['dbconnection']);
+		$res=@mysqli_query($config['dbconnection'], "FLUSH PRIVILEGES");
+		$meldung=((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 		if ($meldung!="")
 		{
 			$msg.='&gt; MySQL-Error: '.$meldung;
@@ -25,8 +25,8 @@ switch ($sysaction)
 		break;
 	case 2: //FLUSH STATUS
 		$msg="&gt; operating FLUSH STATUS<br>";
-		$res=@mysql_query("FLUSH STATUS",$config['dbconnection']);
-		$meldung=mysql_error($config['dbconnection']);
+		$res=@mysqli_query($config['dbconnection'], "FLUSH STATUS");
+		$meldung=((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 		if ($meldung!="")
 		{
 			$msg.='&gt; MySQL-Error: '.$meldung;
@@ -38,8 +38,8 @@ switch ($sysaction)
 		break;
 	case 3: //FLUSH HOSTS
 		$msg="&gt; operating FLUSH HOSTS<br>";
-		$res=@mysql_query("FLUSH HOSTS",$config['dbconnection']);
-		$meldung=mysql_error($config['dbconnection']);
+		$res=@mysqli_query($config['dbconnection'], "FLUSH HOSTS");
+		$meldung=((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 		if ($meldung!="")
 		{
 			$msg.='&gt; MySQL-Error: '.$meldung;
@@ -52,15 +52,15 @@ switch ($sysaction)
 		break;
 	case 4: //SHOW MASTER LOGS
 		$msg="> operating SHOW MASTER LOGS<br>";
-		$res=@mysql_query("SHOW MASTER LOGS",$config['dbconnection']);
-		$meldung=mysql_error($config['dbconnection']);
+		$res=@mysqli_query($config['dbconnection'], "SHOW MASTER LOGS");
+		$meldung=((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 		if ($meldung!="")
 		{
 			$msg.='&gt; MySQL-Error: '.$meldung;
 		}
 		else
 		{
-			$numrows=mysql_num_rows($res);
+			$numrows=mysqli_num_rows($res);
 			if ($numrows==0||$numrows===false)
 			{
 				$msg.='&gt; there are no master log-files';
@@ -70,7 +70,7 @@ switch ($sysaction)
 				$msg.='&gt; there are '.$numrows.' logfiles<br>';
 				for ($i=0; $i<$numrows; $i++)
 				{
-					$row=mysql_fetch_row($res);
+					$row=mysqli_fetch_row($res);
 					$msg.='&gt; '.$row[0].'&nbsp;&nbsp;&nbsp;'.(($data_dir) ? byte_output(@filesize($data_dir.$row[0])) : '').'<br>';
 				}
 			}
@@ -78,8 +78,8 @@ switch ($sysaction)
 		break;
 	case 5: //RESET MASTER
 		$msg="&gt; operating RESET MASTER<br>";
-		$res=@mysql_query("RESET MASTER",$config['dbconnection']);
-		$meldung=mysql_error($config['dbconnection']);
+		$res=@mysqli_query($config['dbconnection'], "RESET MASTER");
+		$meldung=((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 		if ($meldung!="")
 		{
 			$msg.='&gt; MySQL-Error: '.$meldung;

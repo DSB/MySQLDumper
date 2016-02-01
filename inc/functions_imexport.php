@@ -38,12 +38,12 @@ function ExportCSV()
 		$res=MSD_query($sqlt);
 		if ($res)
 		{
-			$numfields=mysql_numrows($res);
+			$numfields=mysqli_num_rows($res);
 			if ($sql['export']['namefirstline'] == 1)
 			{
 				for ($feld=0; $feld < $numfields; $feld++)
 				{
-					$row=mysql_fetch_row($res);
+					$row=mysqli_fetch_row($res);
 					if ($sql['export']['enc'] != "") $t.=$sql['export']['enc'] . $row[0] . $sql['export']['enc'] . ( ( $feld + 1 < $numfields ) ? $sql['export']['trenn'] : '' );
 					else $t.=$row[0] . ( ( $feld + 1 < $numfields ) ? $sql['export']['trenn'] : '' );
 				}
@@ -55,10 +55,10 @@ function ExportCSV()
 		$res=MSD_query($sqlt);
 		if ($res)
 		{
-			$numrows=mysql_numrows($res);
+			$numrows=mysqli_num_rows($res);
 			for ($data=0; $data < $numrows; $data++)
 			{
-				$row=mysql_fetch_row($res);
+				$row=mysqli_fetch_row($res);
 				for ($feld=0; $feld < $numfields; $feld++)
 				{
 					if (!isset($row[$feld]) || is_null($row[$feld]))
@@ -145,7 +145,7 @@ function DoImport()
 	if ($sql['import']['tablecreate'] == 0)
 	{
 		$res=MSD_query("show fields FROM " . $sql['import']['table']);
-		$tabellenfelder=mysql_num_rows($res);
+		$tabellenfelder=mysqli_num_rows($res);
 		if ($importfelder != $tabellenfelder)
 		{
 			$r.='<br>' . sprintf($lang['L_CSV_FIELDCOUNT_NOMATCH'],$tabellenfelder,$importfelder);
@@ -206,11 +206,11 @@ function ImportCreateTable()
 {
 	global $sql,$lang,$db,$config;
 	$tbl=Array();
-	$tabellen=mysql_list_tables($db,$config['dbconnection']);
-	$num_tables=mysql_num_rows($tabellen);
+	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM $db");
+	$num_tables=mysqli_num_rows($tabellen);
 	for ($i=0; $i < $num_tables; $i++)
 	{
-		$tbl[]=strtolower(mysql_tablename($tabellen,$i));
+		$tbl[]=strtolower(((mysqli_data_seek($tabellen, $i) && (($___mysqli_tmp = mysqli_fetch_row($tabellen)) !== NULL)) ? array_shift($___mysqli_tmp) : false));
 	}
 	$i=0;
 	$sql['import']['table']=$sql['import']['table'] . $i;
@@ -237,7 +237,7 @@ function ImportCreateTable()
 	else $create=substr($create,0,strlen($create) - 2);
 	
 	$create.=') ' . ( ( MSD_NEW_VERSION ) ? 'ENGINE' : 'TYPE' ) . "=MyISAM COMMENT='imported at " . date("l dS of F Y H:i:s A") . "'";
-	$res=mysql_query($create,$config['dbconnection']) || die(SQLError($create,mysql_error()));
+	$res=mysqli_query($config['dbconnection'], $create) || die(SQLError($create,((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 	return 1;
 }
 
@@ -258,13 +258,13 @@ function ExportXML()
 		$res=MSD_query($sqlt);
 		if ($res)
 		{
-			$numfields=mysql_num_rows($res);
+			$numfields=mysqli_num_rows($res);
 			if ($sql['export']['xmlstructure'] == 1)
 			{
 				$t.=str_repeat($tab,$level++) . '<structure>' . "\n";
 				for ($feld=0; $feld < $numfields; $feld++)
 				{
-					$row=mysql_fetch_array($res);
+					$row=mysqli_fetch_array($res);
 					$t.=str_repeat($tab,$level++) . '<field no="' . $feld . '">' . "\n";
 					$t.=str_repeat($tab,$level) . '<name>' . $row['Field'] . '</name>' . "\n";
 					$t.=str_repeat($tab,$level) . '<type>' . $row['Type'] . '</type>' . "\n";
@@ -282,12 +282,12 @@ function ExportXML()
 		$res=MSD_query($sqlt);
 		if ($res)
 		{
-			$numrows=mysql_numrows($res);
+			$numrows=mysqli_num_rows($res);
 			for ($data=0; $data < $numrows; $data++)
 			{
 				$t.=str_repeat($tab,$level) . "<row>\n";
 				$level++;
-				$row=mysql_fetch_row($res);
+				$row=mysqli_fetch_row($res);
 				for ($feld=0; $feld < $numfields; $feld++)
 				{
 					$t.=str_repeat($tab,$level) . '<field no="' . $feld . '">' . $row[$feld] . '</field>' . "\n";
@@ -336,10 +336,10 @@ function ExportHTML()
 		{
 			$field=$fieldname=$fieldtyp=Array();
 			$structure="<table class=\"Table\">\n";
-			$numfields=mysql_numrows($res);
+			$numfields=mysqli_num_rows($res);
 			for ($feld=0; $feld < $numfields; $feld++)
 			{
-				$row=mysql_fetch_row($res);
+				$row=mysqli_fetch_row($res);
 				$field[$feld]=$row[0];
 				
 				if ($feld == 0)
@@ -347,7 +347,7 @@ function ExportHTML()
 					$structure.="<tr class=\"Header\">\n";
 					for ($i=0; $i < count($row); $i++)
 					{
-						$str=mysql_fetch_field($res,$i);
+						$str=(((($___mysqli_tmp = mysqli_fetch_field_direct($res, 0)) && is_object($___mysqli_tmp)) ? ( (!is_null($___mysqli_tmp->primary_key = ($___mysqli_tmp->flags & MYSQLI_PRI_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->multiple_key = ($___mysqli_tmp->flags & MYSQLI_MULTIPLE_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->unique_key = ($___mysqli_tmp->flags & MYSQLI_UNIQUE_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->numeric = (int)(($___mysqli_tmp->type <= MYSQLI_TYPE_INT24) || ($___mysqli_tmp->type == MYSQLI_TYPE_YEAR) || ((defined("MYSQLI_TYPE_NEWDECIMAL")) ? ($___mysqli_tmp->type == MYSQLI_TYPE_NEWDECIMAL) : 0)))) && (!is_null($___mysqli_tmp->blob = (int)in_array($___mysqli_tmp->type, array(MYSQLI_TYPE_TINY_BLOB, MYSQLI_TYPE_BLOB, MYSQLI_TYPE_MEDIUM_BLOB, MYSQLI_TYPE_LONG_BLOB)))) && (!is_null($___mysqli_tmp->unsigned = ($___mysqli_tmp->flags & MYSQLI_UNSIGNED_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->zerofill = ($___mysqli_tmp->flags & MYSQLI_ZEROFILL_FLAG) ? 1 : 0)) && (!is_null($___mysqli_type = $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = (($___mysqli_type == MYSQLI_TYPE_STRING) || ($___mysqli_type == MYSQLI_TYPE_VAR_STRING)) ? "type" : "")) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && in_array($___mysqli_type, array(MYSQLI_TYPE_TINY, MYSQLI_TYPE_SHORT, MYSQLI_TYPE_LONG, MYSQLI_TYPE_LONGLONG, MYSQLI_TYPE_INT24))) ? "int" : $___mysqli_tmp->type)) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && in_array($___mysqli_type, array(MYSQLI_TYPE_FLOAT, MYSQLI_TYPE_DOUBLE, MYSQLI_TYPE_DECIMAL, ((defined("MYSQLI_TYPE_NEWDECIMAL")) ? constant("MYSQLI_TYPE_NEWDECIMAL") : -1)))) ? "real" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_TIMESTAMP) ? "timestamp" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_YEAR) ? "year" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && (($___mysqli_type == MYSQLI_TYPE_DATE) || ($___mysqli_type == MYSQLI_TYPE_NEWDATE))) ? "date " : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_TIME) ? "time" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_SET) ? "set" : $___mysqli_tmp->type)) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_ENUM) ? "enum" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_GEOMETRY) ? "geometry" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_DATETIME) ? "datetime" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && (in_array($___mysqli_type, array(MYSQLI_TYPE_TINY_BLOB, MYSQLI_TYPE_BLOB, MYSQLI_TYPE_MEDIUM_BLOB, MYSQLI_TYPE_LONG_BLOB)))) ? "blob" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_NULL) ? "null" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type) ? "unknown" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->not_null = ($___mysqli_tmp->flags & MYSQLI_NOT_NULL_FLAG) ? 1 : 0)) ) : false ) ? $___mysqli_tmp : false);
 						$fieldname[$i]=$str->name;
 						$fieldtyp[$i]=$str->type;
 						$structure.="<th>" . $str->name . "</th>\n";
@@ -369,7 +369,7 @@ function ExportHTML()
 		$res=MSD_query($dsql);
 		if ($res)
 		{
-			$anz=mysql_num_rows($res);
+			$anz=mysqli_num_rows($res);
 			$content.="<h3>Daten ($anz Datens&auml;tze)</h3>\n";
 			$content.="<table class=\"Table\">\n";
 			for ($feld=0; $feld < count($field); $feld++)
@@ -386,7 +386,7 @@ function ExportHTML()
 			}
 			for ($d=0; $d < $anz; $d++)
 			{
-				$row=mysql_fetch_row($res);
+				$row=mysqli_fetch_row($res);
 				$content.="<tr>\n";
 				for ($i=0; $i < count($row); $i++)
 				{

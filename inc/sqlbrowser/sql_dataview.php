@@ -100,7 +100,7 @@ else
 			$res=@MSD_query($sql_temp,false);
 			if ($res)
 			{
-				if ($row=mysql_fetch_object($res))
+				if ($row=mysqli_fetch_object($res))
 				{
 					$numrowsabs=$row->anzahl;
 				}
@@ -116,7 +116,7 @@ else
 
 $sqltmp=$sql['sql_statement'] . $sql['order_statement'] . ( strpos(strtolower($sql['sql_statement'] . $sql['order_statement']),' limit ') ? '' : $limit );
 if (!$skip_mysql_execution) $res=MSD_query($sqltmp);
-$numrows=@mysql_num_rows($res);
+$numrows=@mysqli_num_rows($res);
 if ($numrowsabs == -1) $numrowsabs=$numrows;
 if ($limitende > $numrowsabs) $limitende=$numrowsabs;
 
@@ -149,7 +149,7 @@ if ($numrowsabs > 0 && $Anzahl_SQLs <= 1)
 	{
 		//Infos und Header holen
 		//1.Datensatz fuer Feldinfos
-		$row=mysql_fetch_row($res);
+		$row=mysqli_fetch_row($res);
 		//Kompaktmodus-Switcher
 		$t='<td colspan="' . ( count($row) + 1 ) . '" align="left"><a href="sql.php?db=' . $db . '&amp;tablename=' . $tablename . '&amp;dbid=' . $dbid . '&amp;order=' . urlencode($order) . '&amp;orderdir=' . $orderdir . '&amp;limitstart=' . $limitstart . '&amp;sql_statement=' . urlencode($sql['sql_statement']) . '&amp;tdc=' . ( ( $tdcompact == 0 ) ? '1' : '0' ) . '">' . ( ( $tdcompact == 1 ) ? $lang['L_SQL_VIEW_STANDARD'] : $lang['L_SQL_VIEW_COMPACT'] ) . '</a>';
 		$t.='&nbsp;&nbsp;&nbsp;' . $lang['L_SQL_QUERYENTRY'] . ' ' . count($row) . ' ' . $lang['L_SQL_COLUMNS'];
@@ -159,7 +159,7 @@ if ($numrowsabs > 0 && $Anzahl_SQLs <= 1)
 
 		for ($x=0; $x < count($row); $x++)
 		{
-			$temp[$x]['data']=mysql_fetch_field($res,$x);
+			$temp[$x]['data']=(((($___mysqli_tmp = mysqli_fetch_field_direct($res, 0)) && is_object($___mysqli_tmp)) ? ( (!is_null($___mysqli_tmp->primary_key = ($___mysqli_tmp->flags & MYSQLI_PRI_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->multiple_key = ($___mysqli_tmp->flags & MYSQLI_MULTIPLE_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->unique_key = ($___mysqli_tmp->flags & MYSQLI_UNIQUE_KEY_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->numeric = (int)(($___mysqli_tmp->type <= MYSQLI_TYPE_INT24) || ($___mysqli_tmp->type == MYSQLI_TYPE_YEAR) || ((defined("MYSQLI_TYPE_NEWDECIMAL")) ? ($___mysqli_tmp->type == MYSQLI_TYPE_NEWDECIMAL) : 0)))) && (!is_null($___mysqli_tmp->blob = (int)in_array($___mysqli_tmp->type, array(MYSQLI_TYPE_TINY_BLOB, MYSQLI_TYPE_BLOB, MYSQLI_TYPE_MEDIUM_BLOB, MYSQLI_TYPE_LONG_BLOB)))) && (!is_null($___mysqli_tmp->unsigned = ($___mysqli_tmp->flags & MYSQLI_UNSIGNED_FLAG) ? 1 : 0)) && (!is_null($___mysqli_tmp->zerofill = ($___mysqli_tmp->flags & MYSQLI_ZEROFILL_FLAG) ? 1 : 0)) && (!is_null($___mysqli_type = $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = (($___mysqli_type == MYSQLI_TYPE_STRING) || ($___mysqli_type == MYSQLI_TYPE_VAR_STRING)) ? "type" : "")) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && in_array($___mysqli_type, array(MYSQLI_TYPE_TINY, MYSQLI_TYPE_SHORT, MYSQLI_TYPE_LONG, MYSQLI_TYPE_LONGLONG, MYSQLI_TYPE_INT24))) ? "int" : $___mysqli_tmp->type)) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && in_array($___mysqli_type, array(MYSQLI_TYPE_FLOAT, MYSQLI_TYPE_DOUBLE, MYSQLI_TYPE_DECIMAL, ((defined("MYSQLI_TYPE_NEWDECIMAL")) ? constant("MYSQLI_TYPE_NEWDECIMAL") : -1)))) ? "real" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_TIMESTAMP) ? "timestamp" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_YEAR) ? "year" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && (($___mysqli_type == MYSQLI_TYPE_DATE) || ($___mysqli_type == MYSQLI_TYPE_NEWDATE))) ? "date " : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_TIME) ? "time" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_SET) ? "set" : $___mysqli_tmp->type)) &&(!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_ENUM) ? "enum" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_GEOMETRY) ? "geometry" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_DATETIME) ? "datetime" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && (in_array($___mysqli_type, array(MYSQLI_TYPE_TINY_BLOB, MYSQLI_TYPE_BLOB, MYSQLI_TYPE_MEDIUM_BLOB, MYSQLI_TYPE_LONG_BLOB)))) ? "blob" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type && $___mysqli_type == MYSQLI_TYPE_NULL) ? "null" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->type = ("" == $___mysqli_tmp->type) ? "unknown" : $___mysqli_tmp->type)) && (!is_null($___mysqli_tmp->not_null = ($___mysqli_tmp->flags & MYSQLI_NOT_NULL_FLAG) ? 1 : 0)) ) : false ) ? $___mysqli_tmp : false);
 			$temp[$x]['sort']=add_sortkey($temp[$x]['data']->name);
 		}
 
@@ -214,14 +214,14 @@ if ($numrowsabs > 0 && $Anzahl_SQLs <= 1)
 
 		$temp=array();
 		//und jetzt Daten holen
-		mysql_data_seek($res,0);
+		mysqli_data_seek($res, 0);
 
 		$s=$keysort;
 		$s=array_flip($keysort);
 		ksort($s);
 		for ($i=0; $i < $numrows; $i++)
 		{
-			$data[0]=mysql_fetch_array($res,MYSQL_ASSOC);
+			$data[0]=mysqli_fetch_array($res, MYSQLI_ASSOC);
 			if ($showtables == 1 && $tabellenansicht == 1)
 			{
 				// Spalten sortieren, wenn wir uns in einer Tabellenuebersicht befinden

@@ -162,8 +162,8 @@ function SetDefault($load_default = false)
     //DB-Liste holen
     MSD_mysql_connect();
 
-    $res = mysql_query('SHOW DATABASES', $config['dbconnection']);
-    WHILE ($row = mysql_fetch_row($res)) {
+    $res = mysqli_query( $config['dbconnection'], 'SHOW DATABASES');
+    WHILE ($row = mysqli_fetch_row($res)) {
         $found_dbs[] = $row[0];
     }
     $found_dbs = array_merge($oldDbArray, $found_dbs);
@@ -173,7 +173,7 @@ function SetDefault($load_default = false)
     $a = 0;
     for ($i = 0; $i < count($found_dbs); $i++) {
         $found_db = $found_dbs[$i];
-        $use      = @mysql_select_db($found_db);
+        $use      = @((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $found_db));
         if ($use) {
             if (isset($old_db) && $found_db == $old_db) {
                 $databases['db_selected_index'] = $a;
@@ -703,9 +703,9 @@ function SearchDatabases($printout, $db = '')
         $db_list[] = $db; // DB wurde manuell angegeben
     }
     // Datenbanken automatisch erkennen
-    $show_dbs = mysql_query("SHOW DATABASES", $config['dbconnection']);
+    $show_dbs = mysqli_query( $config['dbconnection'], "SHOW DATABASES");
     if (!$show_dbs === false) {
-        WHILE ($row = mysql_fetch_row($show_dbs)) {
+        WHILE ($row = mysqli_fetch_row($show_dbs)) {
             if (trim($row[0]) > '') {
                 $db_list[] = $row[0];
             }
@@ -717,7 +717,7 @@ function SearchDatabases($printout, $db = '')
         $databases['db_selected_index'] = 0;
         for ($i = 0; $i < sizeof($db_list); $i++) {
             // Test-Select um zu sehen, ob Berechtigungen existieren
-            if (!@mysql_query("SHOW TABLES FROM `" . $db_list[$i] . "`", $config['dbconnection']) === false) {
+            if (!@mysqli_query( $config['dbconnection'], "SHOW TABLES FROM `" . $db_list[$i] . "`") === false) {
                 $databases['Name'][$i]                = $db_list[$i];
                 $databases['praefix'][$i]             = '';
                 $databases['command_before_dump'][$i] = '';
@@ -789,14 +789,10 @@ function my_quotes($value)
 function db_escape($string)
 {
     global $config;
-    if (function_exists('mysql_real_escape_string')) {
-        $string = mysql_real_escape_string($string, $config['dbconnection']);
+    if (function_exists('mysqli_real_escape_string')) {
+        $string = mysqli_real_escape_string( $config['dbconnection'], $string);
     } else {
-        if (function_exists('mysql_escape_string')) {
-            $string = mysql_escape_string($string, $config['dbconnection']);
-        } else {
-            $string = addslashes($string);
-        }
+        $string = addslashes($string);
     }
 
     return $string;

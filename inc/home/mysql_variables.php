@@ -14,8 +14,8 @@ echo '<p>&nbsp;</p>';
 switch ($var)
 {
 	case "variables":
-		$res=@mysql_query("SHOW variables");
-		if ($res) $numrows=mysql_num_rows($res);
+		$res=@mysqli_query($GLOBALS["___mysqli_ston"], "SHOW variables");
+		if ($res) $numrows=mysqli_num_rows($res);
 		if ($numrows==0)
 		{
 			echo $lang['L_INFO_NOVARS'];
@@ -25,7 +25,7 @@ switch ($var)
 			echo '<table class="bdr"><tr class="thead"><th><strong>Name</strong></th><th><strong>'.$lang['L_INHALT'].'</strong></th></tr>';
 			for ($i=0; $i<$numrows; $i++)
 			{
-				$row=mysql_fetch_array($res);
+				$row=mysqli_fetch_array($res);
 				$cl=($i%2) ? "dbrow" : "dbrow1";
 				echo '<tr class="'.$cl.'"><td align="left">'.$row[0].'</td><td  align="left">'.$row[1].'</td></tr>';
 			}
@@ -33,8 +33,8 @@ switch ($var)
 		echo '</table>';
 		break;
 	case "status":
-		$res=@mysql_query("SHOW STATUS");
-		if ($res) $numrows=mysql_num_rows($res);
+		$res=@mysqli_query($GLOBALS["___mysqli_ston"], "SHOW STATUS");
+		if ($res) $numrows=mysqli_num_rows($res);
 		if ($numrows==0)
 		{
 			echo $lang['L_INFO_NOSTATUS'];
@@ -45,7 +45,7 @@ switch ($var)
 			for ($i=0; $i<$numrows; $i++)
 			{
 				$cl=($i%2) ? "dbrow" : "dbrow1";
-				$row=mysql_fetch_array($res);
+				$row=mysqli_fetch_array($res);
 				echo '<tr class="'.$cl.'"><td align="left" valign="top">'.$row[0].'</td><td align="left" valign="top">'.$row[1].'</td></tr>';
 			}
 		}
@@ -59,7 +59,7 @@ switch ($var)
 			$wait=(isset($_GET['wait'])) ? $_GET['wait'] : 0;
 			if ($wait==0)
 			{
-				$ret=mysql_query("KILL ".$_GET['killid']);
+				$ret=mysqli_query($GLOBALS["___mysqli_ston"], "KILL ".$_GET['killid']);
 				$wait=2;
 			}
 			else
@@ -77,8 +77,8 @@ switch ($var)
 		}
 		
 		$killid=$wait=0;
-		$res=@mysql_query("SHOW FULL PROCESSLIST ");
-		if ($res) $numrows=mysql_num_rows($res);
+		$res=@mysqli_query($GLOBALS["___mysqli_ston"], "SHOW FULL PROCESSLIST ");
+		if ($res) $numrows=mysqli_num_rows($res);
 		if ($numrows==0)
 		{
 			echo $lang['L_INFO_NOPROCESSES'];
@@ -89,7 +89,7 @@ switch ($var)
 			for ($i=0; $i<$numrows; $i++)
 			{
 				$cl=($i%2) ? "dbrow" : "dbrow1";
-				$row=mysql_fetch_array($res);
+				$row=mysqli_fetch_array($res);
 				echo '<tr><td>'.$row[0].'</td><td>'.$row[1].'</td>
 					<td>'.$row[2].'</td><td>'.$row[3].'</td><td>'.$row[4].'</td><td>'.$row[5].'</td>
 					<td>'.$row[6].'</td><td>'.$row[7].'</td>

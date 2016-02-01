@@ -72,18 +72,18 @@ function GetStatusLine($kind="php")
 	$r=0;
 	$t_zeile="$mysql_commentstring\n$mysql_commentstring TABLE-INFO\r\n";
 	MSD_mysql_connect();
-	$res=mysql_query("SHOW TABLE STATUS FROM `".$databases['Name'][$dump['dbindex']]."`");
-	$numrows=intval(@mysql_num_rows($res));
+	$res=mysqli_query($GLOBALS["___mysqli_ston"], "SHOW TABLE STATUS FROM `".$databases['Name'][$dump['dbindex']]."`");
+	$numrows=intval(@mysqli_num_rows($res));
 	for($i=0;$i<$numrows;$i++)
 	{
-		$erg=mysql_fetch_array($res);
+		$erg=mysqli_fetch_array($res);
 		// Get nr of records -> need to do it this way because of incorrect returns when using InnoDBs
 		$sql_2="SELECT count(*) as `count_records` FROM `".$databases['Name'][$dump['dbindex']]."`.`".$erg['Name']."`";
-		$res2=@mysql_query($sql_2);
+		$res2=@mysqli_query($GLOBALS["___mysqli_ston"], $sql_2);
 		if ($res2===false)
 		{
 			// error reading table definition
-			$read_create_error=sprintf($lang['L_FATAL_ERROR_DUMP'],$databases['Name'][$dump['dbindex']],$erg['Name']).': '.mysql_error($config['dbconnection']);
+			$read_create_error=sprintf($lang['L_FATAL_ERROR_DUMP'],$databases['Name'][$dump['dbindex']],$erg['Name']).': '.((is_object($config['dbconnection'])) ? mysqli_error($config['dbconnection']) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 			Errorlog("DUMP",$databases['Name'][$dump['dbindex']],'',$read_create_error,0);
 			WriteLog($read_create_error);
 			if ($config['stop_with_error']>0)
@@ -95,7 +95,7 @@ function GetStatusLine($kind="php")
 		}
 		else
 		{
-			$row2=mysql_fetch_array($res2);
+			$row2=mysqli_fetch_array($res2);
 			$erg['Rows']=$row2['count_records'];
 			
 			if (($databases['db_actual_tableselected']==''||($databases['db_actual_tableselected']!=''&&(in_array($erg[0],$t_array))))&&(substr($erg[0],0,strlen($databases['praefix'][$dump['dbindex']]))==$databases['praefix'][$dump['dbindex']]))
@@ -129,9 +129,9 @@ function get_def($db,$table,$withdata=1)
 	}
 	else
 		$def.="DROP TABLE IF EXISTS `$table`;\n";
-	mysql_select_db($db);
-	$result=mysql_query('SHOW CREATE TABLE `'.$table.'`',$config['dbconnection']);
-	$row=@mysql_fetch_row($result);
+	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $db));
+	$result=mysqli_query($config['dbconnection'], 'SHOW CREATE TABLE `'.$table.'`');
+	$row=@mysqli_fetch_row($result);
 	if ($row===false) return false;
 	$def.=$row[1].';'."\n\n";
 	if ($withdata==1)
@@ -152,12 +152,12 @@ function get_content($db,$table)
 	
 	$table_ready=0;
 	$query='SELECT * FROM `'.$table.'` LIMIT '.$dump['zeilen_offset'].','.($dump['restzeilen']+1);
-	mysql_select_db($db);
-	$result=mysql_query($query,$config['dbconnection']);
-	$ergebnisse=@mysql_num_rows($result);
+	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $db));
+	$result=mysqli_query($config['dbconnection'], $query);
+	$ergebnisse=@mysqli_num_rows($result);
 	if ($ergebnisse!==false)
 	{
-		$num_felder=mysql_num_fields($result);
+		$num_felder=(($___mysqli_tmp = mysqli_num_fields($result)) ? $___mysqli_tmp : false);
 		$first=1;
 		
 		if ($ergebnisse>$dump['restzeilen'])
@@ -176,7 +176,7 @@ function get_content($db,$table)
 		$ax=0;
 		for($x=0;$x<$ergebnisse;$x++)
 		{
-			$row=mysql_fetch_row($result);
+			$row=mysqli_fetch_row($result);
 			$ax++;
 			
 			$insert='INSERT INTO `'.$table.'` '.$complete.'VALUES (';
@@ -185,7 +185,7 @@ function get_content($db,$table)
 			{
 				if (!isset($row[$j])) $insert.='NULL,';
 				else 
-					if ($row[$j]!='') $insert.='\''.mysql_real_escape_string($row[$j]).'\',';
+					if ($row[$j]!='') $insert.='\''.((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $row[$j]) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : "")).'\',';
 					else
 						$insert.='\'\',';
 			}
@@ -211,7 +211,7 @@ function get_content($db,$table)
 			WriteToDumpFile();
 		}
 	}
-	@mysql_free_result($result);
+	@((mysqli_free_result($result) || (is_object($result) && (get_class($result) == "mysqli_result"))) ? true : false);
 }
 
 function WriteToDumpFile()
@@ -275,7 +275,7 @@ function ExecuteCommand($when)
 		if (substr(strtolower($cd),0,7)!='system:')
 		{
 			$cad=array();
-			@mysql_select_db($databases['Name'][$dump['dbindex']]);
+			@((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dump['dbindex']]));
 			if (strpos($cd,';'))
 			{
 				$cad=explode(';',$cd);
@@ -287,12 +287,12 @@ function ExecuteCommand($when)
 			{
 				if (trim($cad[$i])>'')
 				{
-					$result=@mysql_query($cad[$i],$config['dbconnection']);
+					$result=@mysqli_query($config['dbconnection'], $cad[$i]);
 					
 					if ($result===false)
 					{
-						WriteLog("Error executing Query '$cad[$i]'! MySQL returns: ".trim(mysql_error()));
-						ErrorLog("Error executing Query '$cad[$i]'!",$databases['Name'][$dump['dbindex']],$cad[$i],mysql_error(),0);
+						WriteLog("Error executing Query '$cad[$i]'! MySQL returns: ".trim(((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
+						ErrorLog("Error executing Query '$cad[$i]'!",$databases['Name'][$dump['dbindex']],$cad[$i],((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)),0);
 						$dump['errors']++;
 						$out.='<span class="error">Error executing Query '.$cad[$i].'</span>'.$lf;
 					}

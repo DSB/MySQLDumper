@@ -21,24 +21,24 @@ if ($tblr == 'Backup')
 	$button_name='dump_tbl';
 	//Info aus der Datenbank lesen
 	MSD_mysql_connect();
-	$res=mysql_query('SHOW TABLE STATUS FROM `' . $databases['db_actual'] . '`');
-	$numrows=mysql_num_rows($res);
+	$res=mysqli_query($GLOBALS["___mysqli_ston"], 'SHOW TABLE STATUS FROM `' . $databases['db_actual'] . '`');
+	$numrows=mysqli_num_rows($res);
 	$tbl_zeile='';
 	for ($i=0; $i < $numrows; $i++)
 	{
-		$row=mysql_fetch_array($res,MYSQL_ASSOC);
+		$row=mysqli_fetch_array($res, MYSQLI_ASSOC);
 		//v($row);	
 		// Get nr of records -> need to do it this way because of incorrect returns when using InnoDBs
 		$sql_2="SELECT count(*) as `count_records` FROM `" . $databases['db_actual'] . "`.`" . $row['Name'] . "`";
-		$res2=@mysql_query($sql_2);
+		$res2=@mysqli_query($GLOBALS["___mysqli_ston"], $sql_2);
 		if ($res2 === false)
 		{
-			$read_error='(' . mysql_errno() . ') ' . mysql_error();
+			$read_error='(' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_errno($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_errno()) ? $___mysqli_res : false)) . ') ' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 			$row['Rows']='<span class="error">' . $lang['L_ERROR'] . ': ' . $read_error . '</span>';
 		}
 		else
 		{
-			$row2=@mysql_fetch_array($res2);
+			$row2=@mysqli_fetch_array($res2);
 			$row['Rows']=$row2['count_records'];
 		}
 		

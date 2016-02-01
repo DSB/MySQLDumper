@@ -278,10 +278,10 @@ if (isset($_POST['newfield_posted']))
 		$fields_infos=getFieldinfos($databases['Name'][$dbid],$table_edit_name);
 	}
 }
-mysql_select_db($databases['Name'][$dbid]);
+((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dbid]));
 $sqlt="SHOW TABLE STATUS FROM `".$databases['Name'][$dbid]."` ;";
 $res=MSD_query($sqlt);
-$anz_tabellen=mysql_numrows($res);
+$anz_tabellen=mysqli_num_rows($res);
 $p="sql.php?db=".$databases['Name'][$dbid]."&amp;dbid=$dbid&amp;tablename=$table_edit_name&amp;context=2";
 
 echo '<form action="sql.php?db='.$databases['Name'][$dbid].'&amp;dbid='.$dbid.'&amp;tablename='.$table_edit_name.'&amp;context=2" method="post">';
@@ -299,7 +299,7 @@ else
 	echo '<td colspan="2"><select name="tableselect" onchange="this.form.submit()"><option value="1" SELECTED></option>';
 	for ($i=0; $i<$anz_tabellen; $i++)
 	{
-		$row=mysql_fetch_array($res);
+		$row=mysqli_fetch_array($res);
 		echo '<option value="'.$row['Name'].'">'.$row['Name'].'</option>';
 	}
 	echo '</select>&nbsp;&nbsp;</td>';
@@ -310,7 +310,7 @@ if ($table_edit_name!="")
 {
 	$sqlf="SHOW FULL FIELDS FROM `".$databases['Name'][$dbid]."`.`$table_edit_name` ;";
 	$res=MSD_query($sqlf);
-	$anz_fields=mysql_num_rows($res);
+	$anz_fields=mysqli_num_rows($res);
 	$fields_infos=getFieldinfos($databases['Name'][$dbid],$table_edit_name);
 
 	if (MSD_NEW_VERSION) $t_engine=(isset($fields_infos['_tableinfo_']['ENGINE'])) ? $fields_infos['_tableinfo_']['ENGINE'] : "MyISAM";
@@ -462,7 +462,7 @@ if ($table_edit_name!="")
 	   </tr>';
 	$sqlk="SHOW KEYS FROM `".$databases['Name'][$dbid]."`.`$table_edit_name`;";
 	$res=MSD_query($sqlk);
-	$num=mysql_numrows($res);
+	$num=mysqli_num_rows($res);
 	if ($num==0)
 	{
 		echo '<tr><td colspan="6">'.$lang['L_SQL_TABLENOINDEXES'].'</td></tr>';
@@ -471,7 +471,7 @@ if ($table_edit_name!="")
 	{
 		for ($i=0; $i<$num; $i++)
 		{
-			$row=mysql_fetch_array($res,MYSQL_ASSOC);
+			$row=mysqli_fetch_array($res, MYSQLI_ASSOC);
 			if (!isset($row['Comment'])) {
 			    $row['Comment'] = '';
 			}
@@ -535,7 +535,7 @@ if ($table_edit_name!="")
 		//body
 		$sqlFelder="DESCRIBE `".$databases['Name'][$dbid]."`.`".$_GET['tablename']."`;";
 		$res=MSD_query($sqlFelder);
-		$num=mysql_numrows($res);
+		$num=mysqli_num_rows($res);
 		if ($num==0)
 		{
 			echo '<tr><td>'.$lang['L_SQL_TABLENOINDEXES'].'</td></tr>';
@@ -554,7 +554,7 @@ if ($table_edit_name!="")
             echo '<table class="bdr">';
     		echo '<tr class="thead"><th>#</th><th>'.$lang['L_PRIMARYKEY_FIELD'].'</th><th>'.$lang['L_INFO_SIZE'].'</th>';
 
-			while ($row=mysql_fetch_array($res, MYSQL_ASSOC))
+			while ($row=mysqli_fetch_array($res,  MYSQLI_ASSOC))
 			{
 				$feldArray[$row['Field']]=$row['Type'];
 			}

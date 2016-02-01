@@ -209,11 +209,11 @@ else
 	$res=MSD_query($sqlt);
 	if ($res)
 	{
-		$sql['export']['tablecount']=mysql_numrows($res);
+		$sql['export']['tablecount']=mysqli_num_rows($res);
 		$sql['export']['recordcount']=0;
 		for ($i=0; $i < $sql['export']['tablecount']; $i++)
 		{
-			$row=mysql_fetch_array($res);
+			$row=mysqli_fetch_array($res);
 			$tblstr.='<option value="' . $row['Name'] . '" ' . ( ( isset($sql['export']['tables']) && in_array($row['Name'],$sql['export']['tables']) ) ? "selected" : "" ) . '>' . $row['Name'] . ' (' . $row['Rows'] . ')</option>' . "\n";
 			$sql['export']['recordcount']+=$row['Rows'];
 		}
