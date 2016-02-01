@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
-    error_reporting(E_ALL & ~E_DEPRECATED);
+    error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 }
 
 if (function_exists("date_default_timezone_set")) date_default_timezone_set(@date_default_timezone_get());

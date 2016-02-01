@@ -4,7 +4,7 @@
  *
  * Add configuration file names to array $excludedConfigurationFiles to skip configurations.
  */
-error_reporting(E_ALL ^ ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE);
 $verbose = true;
 /**
  * Build exclude array with configuration files that should be skipped
