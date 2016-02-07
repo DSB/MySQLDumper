@@ -9,7 +9,7 @@ $fields=getExtendedFieldInfo($db,$tablename);
 
 $sqledit="SELECT * FROM `$tablename` WHERE ".$recordkey;
 $res=MSD_query($sqledit);
-$record=mysql_fetch_array($res,MYSQL_ASSOC); // get the record
+$record=mysqli_fetch_array($res, MYSQLI_ASSOC); // get the record
 $num=sizeof($record); // get the nr of fields of the record
 
 

@@ -4,7 +4,7 @@
  *
  * Add configuration file names to array $excludedConfigurationFiles to skip configurations.
  */
-error_reporting(E_ALL ^ ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE);
 $verbose = true;
 /**
  * Build exclude array with configuration files that should be skipped
@@ -44,7 +44,7 @@ foreach ($configFiles as $configFile) {
     include($config['paths']['config'] . $configFile . '.php');
     $out = '';
     if (isset($config['dbconnection']) && is_resource($config['dbconnection'])) {
-        mysql_close($config['dbconnection']);
+        ((is_null($___mysqli_res = mysqli_close($config['dbconnection']))) ? false : $___mysqli_res);
         $config['dbconnection'] = false;
     }
     SetDefault();
