@@ -86,7 +86,7 @@ function DeleteFilesM($dir, $pattern = "*.*")
     if (is_dir($dir)) {
         $d = opendir($dir);
         while ($file = readdir($d)) {
-            if (is_file($dir . $file) && ereg("^" . $pattern . "$", $file)) {
+            if (is_file($dir . $file) && preg_match("/^" . $pattern . "$/", $file)) {
                 if (unlink($dir . $file)) {
                     $deleted[$file] = true;
                 } else {
