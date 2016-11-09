@@ -1,5 +1,5 @@
 <?php
-$msd_path = realpath(dirname(__FILE__) . '/../') . '/';
+$msd_path = basePath();
 if (!defined('MSD_PATH')) {
     define('MSD_PATH', $msd_path);
 }
