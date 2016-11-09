@@ -670,7 +670,8 @@ function CreateDirsFTP()
 
 function ftp_mkdirs($config, $dirname)
 {
-    $dir = split("/", $dirname);
+    $path = '';
+    $dir = explode("/", $dirname);
     for ($i = 0; $i < count($dir) - 1; $i++) {
         $path .= $dir[$i] . "/";
         @ftp_mkdir($config['dbconnection'], $path);
