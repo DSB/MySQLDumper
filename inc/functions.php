@@ -249,7 +249,7 @@ function WriteParams($as = 0, $restore_values = false)
         $config['cron_execution_path'] = "msd_cron/";
     }
     if ($as == 0) {
-        $config['paths']['root'] = addslashes(Realpfad("./"));
+        $config['paths']['root'] = addslashes(basePath());
     }
     $config['files']['parameter'] = $config['paths']['config'] . $config['config_file'] . '.php';
     $config['files']['iconpath']  = './css/' . $config['theme'] . '/icons/';

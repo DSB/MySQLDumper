@@ -432,7 +432,7 @@ switch ($phase)
 
 		echo '<form action="install.php?language=' . $language . '&phase=9" method="post"><input type="hidden" name="connstr" value="' . $connstr . '"><table>';
 		echo '<tr><td class="hd2" colspan="2">' . $lang['L_IDOMANUAL'] . '</td></tr>';
-		echo '<tr><td colspan="2">' . $lang['L_DOFROM'] . '<br><div class="small">' . Realpfad('./') . '</div></td></tr>';
+		echo '<tr><td colspan="2">' . $lang['L_DOFROM'] . '<br><div class="small">' . basePath() . '</div></td></tr>';
 		echo '<tr><td><strong>work</strong></td><td>' . ( ( $iw[0] ) ? $img_ok : $img_failed ) . '</td></tr>';
 		echo '<tr><td><strong>work/config</strong></td><td>' . ( ( $iw[1] ) ? $img_ok : $img_failed ) . '</td></tr>';
 		echo '<tr><td><strong>work/log</strong></td><td>' . ( ( $iw[2] ) ? $img_ok : $img_failed ) . '</td></tr>';
@@ -463,7 +463,7 @@ switch ($phase)
 		echo '<form action="install.php?language=' . $language . '&phase=10" method="post"><input type="hidden" name="connstr" value="' . $connstr . '">
 		<table width="80%"><tr><td width="50%" valign="top"><table>';
 		echo '<tr><td class="hd2" colspan="2">' . $lang['L_IDOMANUAL'] . '</td></tr>';
-		echo '<tr><td colspan="2">' . $lang['L_DOFROM'] . '<br><div class="small">' . Realpfad('./') . '</div></td></tr>';
+		echo '<tr><td colspan="2">' . $lang['L_DOFROM'] . '<br><div class="small">' . basePath() . '</div></td></tr>';
 		echo '<tr><td><strong>work</strong></td><td>' . ( ( $iw[0] ) ? $img_ok : $img_failed ) . '</td></tr>';
 		echo '<tr><td><strong>work/config</strong></td><td>' . ( ( $iw[1] ) ? $img_ok : $img_failed ) . '</td></tr>';
 		echo '<tr><td><strong>work/log</strong></td><td>' . ( ( $iw[2] ) ? $img_ok : $img_failed ) . '</td></tr>';
@@ -532,7 +532,7 @@ switch ($phase)
 		{
 			// das Verzeichnis wurde korrekt gelöscht
 			echo '<p>' . $lang['L_UI6'] . '</p>';
-			echo $lang['L_UI7'] . "<br>\"" . Realpfad("./") . "\"<br> " . $lang['L_MANUELL'] . ".<br><br>";
+			echo $lang['L_UI7'] . "<br>\"" . basePath() . "\"<br> " . $lang['L_MANUELL'] . ".<br><br>";
 			echo '<a href="../">' . $lang['L_UI8'] . '</a>';
 
 		}

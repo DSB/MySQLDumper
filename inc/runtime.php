@@ -13,7 +13,7 @@ if (!defined('config') || !is_array($config)) $config=array();
 if (!defined('databases') || !is_array($databases)) $databases=array();
 
 //Pfade und Files
-$config['paths']['root']=Realpfad('./');
+$config['paths']['root']=basePath();
 $config['paths']['work']='work/';
 $config['paths']['backup']=$config['paths']['work'] . 'backup/';
 $config['paths']['log']=$config['paths']['work'] . 'log/';

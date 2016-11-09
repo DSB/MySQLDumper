@@ -307,8 +307,8 @@ switch ($action)
 		$scriptdir=$config['cron_execution_path'].'crondump.'.$cext;
 		$sfile=$config['cron_execution_path']."perltest.$cext";
 		$simplefile=$config['cron_execution_path']."simpletest.$cext";
-		$scriptentry=Realpfad("./").$config['paths']['config'];
-		$cronabsolute=(substr($config['cron_execution_path'],0,1)=="/") ? $_SERVER['DOCUMENT_ROOT'].$scriptdir : Realpfad("./").$scriptdir;
+		$scriptentry=basePath(). $config['paths']['config'];
+		$cronabsolute=(substr($config['cron_execution_path'],0,1)=="/") ? $_SERVER['DOCUMENT_ROOT'].$scriptdir : basePath().$scriptdir;
 		$confabsolute=$config['config_file'];
 		$scriptref=getServerProtocol().$_SERVER['SERVER_NAME'].$refdir.$config['cron_execution_path'].'crondump.'.$cext."?config=".$confabsolute;
 		$cronref="perl ".$cronabsolute." -config=".$confabsolute." -html_output=0";
