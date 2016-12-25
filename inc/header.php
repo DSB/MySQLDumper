@@ -1,11 +1,11 @@
 <?php
+session_name('MySQLDumper');
+session_start();
 include(dirname(__FILE__) . '/functions.php');
 $msd_path = basePath();
 if (!defined('MSD_PATH')) {
     define('MSD_PATH', $msd_path);
 }
-session_name('MySQLDumper');
-session_start();
 if (!isset($download)) {
     header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
     header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
