@@ -278,7 +278,7 @@ if (isset($_POST['newfield_posted']))
 		$fields_infos=getFieldinfos($databases['Name'][$dbid],$table_edit_name);
 	}
 }
-((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dbid]));
+mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$dbid]);
 $sqlt="SHOW TABLE STATUS FROM `".$databases['Name'][$dbid]."` ;";
 $res=MSD_query($sqlt);
 $anz_tabellen=mysqli_num_rows($res);

@@ -226,7 +226,7 @@ function DB_Copy($source, $destination, $drop_source=0, $insert_data=1)
             return false;
         }
 	}
-    ((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $destination));
+    mysqli_select_db($GLOBALS["___mysqli_ston"], $destination);
     $res=MSD_DoSQL($SQL_Array);
     if ($drop_source == 1 && $res) MSD_query("DROP DATABASE `$source`;");
     return $res;

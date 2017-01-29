@@ -116,7 +116,7 @@ function DBDetailInfo($index)
     $databases['Detailinfo']['tables'] = $databases['Detailinfo']['records'] = $databases['Detailinfo']['size'] = 0;
     MSD_mysql_connect();
     if (isset($databases['Name'][$index])) {
-        ((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$index]));
+        mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$index]);
         $databases['Detailinfo']['Name'] = $databases['Name'][$index];
         $res                             = @mysqli_query(
             $GLOBALS["___mysqli_ston"],

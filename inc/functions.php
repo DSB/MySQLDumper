@@ -173,7 +173,7 @@ function SetDefault($load_default = false)
     $a = 0;
     for ($i = 0; $i < count($found_dbs); $i++) {
         $found_db = $found_dbs[$i];
-        $use      = @((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $found_db));
+        $use      = @mysqli_select_db($GLOBALS["___mysqli_ston"], $found_db);
         if ($use) {
             if (isset($old_db) && $found_db == $old_db) {
                 $databases['db_selected_index'] = $a;

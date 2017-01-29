@@ -403,7 +403,7 @@ function getDBInfos()
 				}
                     if ($config['optimize_tables_beforedump'] == 1 && $dump['table_offset'] == -1
                         && $databases['Name'][$dump['dbindex']]!='information_schema') {
-                        ((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dump['dbindex']]));
+                        mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$dump['dbindex']]);
                         $opt = 'OPTIMIZE TABLE `' . $row['Name'] . '`';
                         $res = mysqli_query($GLOBALS["___mysqli_ston"], 'OPTIMIZE TABLE `' . $row['Name'] . '`');
                         if ($res === false) {

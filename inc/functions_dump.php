@@ -129,7 +129,7 @@ function get_def($db,$table,$withdata=1)
 	}
 	else
 		$def.="DROP TABLE IF EXISTS `$table`;\n";
-	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $db));
+	mysqli_select_db($GLOBALS["___mysqli_ston"], $db);
 	$result=mysqli_query($config['dbconnection'], 'SHOW CREATE TABLE `'.$table.'`');
 	$row=@mysqli_fetch_row($result);
 	if ($row===false) return false;
@@ -152,7 +152,7 @@ function get_content($db,$table)
 	
 	$table_ready=0;
 	$query='SELECT * FROM `'.$table.'` LIMIT '.$dump['zeilen_offset'].','.($dump['restzeilen']+1);
-	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $db));
+	mysqli_select_db($GLOBALS["___mysqli_ston"], $db);
 	$result=mysqli_query($config['dbconnection'], $query);
 	$ergebnisse=@mysqli_num_rows($result);
 	if ($ergebnisse!==false)
@@ -275,7 +275,7 @@ function ExecuteCommand($when)
 		if (substr(strtolower($cd),0,7)!='system:')
 		{
 			$cad=array();
-			@((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dump['dbindex']]));
+			mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$dump['dbindex']]);
 			if (strpos($cd,';'))
 			{
 				$cad=explode(';',$cd);
