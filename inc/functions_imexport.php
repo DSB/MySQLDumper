@@ -206,7 +206,7 @@ function ImportCreateTable()
 {
 	global $sql,$lang,$db,$config;
 	$tbl=Array();
-	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM $db");
+	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM `$db`");
 	$num_tables=mysqli_num_rows($tabellen);
 	for ($i=0; $i < $num_tables; $i++)
 	{

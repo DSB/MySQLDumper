@@ -97,7 +97,7 @@ function Table_ComboBox()
 function TableComboBox($default='')
 {
 	global $db,$config,$lang,$nl;
-	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM $db");
+	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM `$db`");
 	$num_tables=mysqli_num_rows($tabellen);
 	$s='<option value="" ' . ( ( $default == '' ) ? 'selected' : '' ) . '>                 </option>' . $nl;
 	for ($i=0; $i < $num_tables; $i++)
@@ -207,7 +207,7 @@ function DB_Copy($source, $destination, $drop_source=0, $insert_data=1)
         }
     }
 	$SQL_Array.="USE `$destination` ;\n";
-	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM $source");
+	$tabellen=mysqli_query($config['dbconnection'], "SHOW TABLES FROM `$source`");
 	$num_tables=mysqli_num_rows($tabellen);
 	for ($i=0; $i < $num_tables; $i++)
 	{
