@@ -252,8 +252,8 @@ function MSD_mysql_connect($encoding='utf8', $keycheck_off=false, $actual_table=
     if (isset($config['dbconnection']) && is_resource($config['dbconnection'])) {
         return $config['dbconnection'];
     }
-	$port=( isset($config['dbport']) && !empty($config['dbport']) ) ? $config['dbport'] : '';
-	$socket=( isset($config['dbsocket']) && !empty($config['dbsocket']) ) ? $config['dbsocket'] : '';
+	$port=( isset($config['dbport']) && !empty($config['dbport']) ) ? $config['dbport'] : ini_get("mysqli.default_port");
+	$socket=( isset($config['dbsocket']) && !empty($config['dbsocket']) ) ? $config['dbsocket'] : ini_get("mysqli.default_socket");
 	$config['dbconnection']=($GLOBALS["___mysqli_ston"] = mysqli_connect($config['dbhost'], $config['dbuser'], $config['dbpass'], "", $port, $socket))  or die(SQLError("Error establishing a database connection!", ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 	if (!defined('MSD_MYSQL_VERSION')) GetMySQLVersion();
 
