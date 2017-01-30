@@ -23,7 +23,7 @@ for ($i=0; $i<count($databases['Name']); $i++)
 	}
 	if (isset($_POST['optimize'.$i]))
 	{
-	    ((bool)mysqli_query( $config['dbconnection'], "USE " . $databases['Name'][$i]));
+	    mysqli_select_db($config['dbconnection'], $databases['Name'][$i]);
         $res=mysqli_query($config['dbconnection'], 'SHOW TABLES FROM `'.$databases['Name'][$i].'`');
 		$tabellen='';
 		WHILE ($row=mysqli_fetch_row($res))
@@ -63,7 +63,7 @@ for ($i=0; $i<count($databases['Name']); $i++)
 	if ($i==$databases['db_selected_index']) $rowclass="dbrowsel";
 
 	//gibts die Datenbank überhaupt?
-	if (!((bool)mysqli_query($config['dbconnection'], "USE " . $databases['Name'][$i])))
+	if (!mysqli_select_db($config['dbconnection'], $databases['Name'][$i]))
 	{
 		$tpl->assign_block_vars('DB_NOT_FOUND',array(
 			'ROWCLASS' => $rowclass,
@@ -73,7 +73,7 @@ for ($i=0; $i<count($databases['Name']); $i++)
 	}
 	else
 	{
-		((bool)mysqli_query($config['dbconnection'], "USE " . $databases['Name'][$i]));
+		mysqli_select_db($config['dbconnection'], $databases['Name'][$i]);
 		$tabellen=mysqli_query($config['dbconnection'], 'SHOW TABLES FROM `'.$databases['Name'][$i].'`');
 		$num_tables=mysqli_num_rows($tabellen);
 		$tpl->assign_block_vars('ROW',array(
@@ -102,7 +102,7 @@ if (isset($_GET['dbid']))
 
 	$numrows=0;
 	$res=@mysqli_query($GLOBALS["___mysqli_ston"], "SHOW TABLE STATUS FROM `".$databases['Name'][$dbid]."`");
-	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dbid]));
+	mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$dbid]);
 	if ($res) $numrows=mysqli_num_rows($res);
 	$tpl->assign_vars(array(
 		'DB_NAME' => $databases['Name'][$dbid],

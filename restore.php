@@ -78,7 +78,7 @@ $pageheader=MSDheader().headline($lang['L_RESTORE']);
 $aus1=$page_parameter='';
 $RestoreFertig=$eingetragen=$dauer=$filegroesse=0;
 MSD_mysql_connect($restore['dump_encoding'],true,$restore['actual_table']);
-@((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['db_actual'])) or die($lang['L_DB_SELECT_ERROR'].$databases['db_actual'].$lang['L_DB_SELECT_ERROR2']);
+@mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['db_actual']) or die($lang['L_DB_SELECT_ERROR'].$databases['db_actual'].$lang['L_DB_SELECT_ERROR2']);
 
 // open backup file
 $restore['filehandle']=($restore['compressed']==1) ? gzopen($config['paths']['backup'].$restore['filename'],'r') : fopen($config['paths']['backup'].$restore['filename'],'r');

@@ -254,7 +254,7 @@ function MSD_mysql_connect($encoding='utf8', $keycheck_off=false, $actual_table=
     }
 	$port=( isset($config['dbport']) && !empty($config['dbport']) ) ? $config['dbport'] : ini_get("mysqli.default_port");
 	$socket=( isset($config['dbsocket']) && !empty($config['dbsocket']) ) ? $config['dbsocket'] : ini_get("mysqli.default_socket");
-	$config['dbconnection']=($GLOBALS["___mysqli_ston"] = mysqli_connect($config['dbhost'], $config['dbuser'], $config['dbpass'], "", $port, $socket))  or die(SQLError("Error establishing a database connection!", ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
+	$config['dbconnection']=@($GLOBALS["___mysqli_ston"] = mysqli_connect($config['dbhost'], $config['dbuser'], $config['dbpass'], "", $port, $socket))  or die(SQLError("Error establishing a database connection!", ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 	if (!defined('MSD_MYSQL_VERSION')) GetMySQLVersion();
 
 	if (!isset($config['mysql_standard_character_set']) || $config['mysql_standard_character_set'] == '') get_sql_encodings();
@@ -403,7 +403,7 @@ function getDBInfos()
 				}
                     if ($config['optimize_tables_beforedump'] == 1 && $dump['table_offset'] == -1
                         && $databases['Name'][$dump['dbindex']]!='information_schema') {
-                        ((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $databases['Name'][$dump['dbindex']]));
+                        mysqli_select_db($GLOBALS["___mysqli_ston"], $databases['Name'][$dump['dbindex']]);
                         $opt = 'OPTIMIZE TABLE `' . $row['Name'] . '`';
                         $res = mysqli_query($GLOBALS["___mysqli_ston"], 'OPTIMIZE TABLE `' . $row['Name'] . '`');
                         if ($res === false) {
