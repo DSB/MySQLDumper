@@ -1,0 +1,100 @@
+Versión 1.24.4
+
+Hemos abordado los siguientes temas:
+- General: Si "inc" estaba en cualquier parte de la ruta o el dominio a la MySQLDumper-Root-Diretory, el archivo runtime.php no pudo ser incluido.
+- Configuración: Al guardar el archivo de configuración de Perl, las bases de datos seleccionadas para realizar una copia de seguridad se han guardado incorrectamente.
+- Protección de inicio / directorio: Al crear la protección se mostraron PHP-Advertencias si se ejecuta PHP inferior a 5.3.0.
+- Perl: Algunos cambios cosméticos en la salida
+- Perl: Escribir "DROP VIEW" en lugar de "DROP TABLE" al archivo de copia de seguridad si la tabla es una vista.
+- Perl: Se agregó el tipo de tabla para registrar la salida.
+
+Versión 1.24.3
+
+Hemos abordado los siguientes temas:
+- Configuración / Bases de datos / Parámetro de conexión: adición manual de bases de datos: El manejo interno fue completamente modificado. El archivo dbs_manual.php ya no es necesario. Las bases de datos añadidas manualmente se almacenan ahora en el perfil de configuración seleccionado.
+- Protección de inicio / directorio: Corregido un error que invirtió el mensaje resultante de éxito / fracaso.
+- Protección de inicio / directorio: Si falla la creación automática de la protección de directorio, el contenido mostrado en el archivo .htaccess que se va a crear manualmente contiene algún código html desordenado.
+- Protección de inicio / directorio: El archivo .htaccess creado se extendió con "RewriteEngine off". Esto soluciona algunos problemas si MySQLDumper se instaló en una subcarpeta de un sitio web existente que también usaba archivos .htaccess con "mod_rewrite".
+- Protección de inicio / directorio: Se revisó la funcionalidad para editar una protección existente.
+- Inicio / Bases de datos: El estado clave se determinó de manera incompleta de modo que sólo se consideró el primer índice de cada tabla.
+- SQL-Navegador / estructura de tabla: Se agregó la fila "comentario" en la visualización de campos e índices.
+- SQL-Browser / estructura de tabla: Se revisó la funcionalidad para gestionar claves. Ahora es posible definir cualquier tipo de claves que estuviera limitada a las claves primarias.
+- SQL-Browser: La tabla de sistema "information_schema" ahora se muestra y se puede navegar.
+- SQL-Browser: Se ha corregido un error que podría impedir que la búsqueda funcione correctamente.
+- SQL-Browser: Para algunas consultas el número de registros no se determinó correctamente.
+- SQL-Browser: Registros que contienen el carácter "|" No se pudo editar en algunos casos.
+- SQL-Browser: Se ha mejorado el manejo de errores.
+- Restaurar: Al restaurar copias de seguridad que no se crearon con MySQLDumper, las sentencias CREATE DATABASE no fueron reconocidas correctamente.
+- File-Administration / Backup Converter: Dentro del convertidor de copia de seguridad había una rutina de buggy que causó un mensaje de error.
+- Backup / Perl: Cuando la opción de configuración "autodelete" fue activada y la carpeta work / backup contenía archivos no creados por MySQLDumper, el script perl crondump.pl emitió mensajes de advertencia.
+- Perl: Mostrar versión de Perl, mejor manejo de errores, mejor fuente con html
+- Perl: Se ha añadido soporte para FTP a través de SSL (NET :: FTPLL perl modul necesario).
+- Perl: Los comandos SQL opcionales (Command Before / After) ahora pueden manejar varias consultas.
+
+Versión 1.24.2
+
+Hemos abordado los siguientes temas:
+- Aunque MySQLDumper ignora los timeouts (tiempos fuera) de espera al cuidar el max_execution_time de PHP, puede suceder que construir el índice de una tabla grande conduzca a un tiempo de espera.
+Ahora puede configurar MySQLDumper para ignorar las sentencias "ENABLE KEYS" mientras restaura una copia de seguridad. Pero recuerde habilitarlos manualmente después.
+Esto se realiza en Inicio / Bases de datos / Seleccionar base de datos / Botón: Habilitar claves. Esta opción y un mensaje solo aparecerán si MySQLDumper detecta claves o índices inhabilitados.
+
+- Cuando los sistemas usan el valor 0 para campos de auto_increment (por ejemplo, Magento), la restauración podría cambiar el valor que podría provocar que la aplicación funcione mal.
+Mientras restaura MySQLDumper ahora establece el modo SQL como "NO_AUTO_VALUE_ON_ZERO" para la sesión de restauración.
+
+- El script de Perl crondump.pl lanzó advertencias al realizar copias de seguridad de vistas.
+
+- Al realizar una copia de seguridad a través del gui, la opción "optimizar tablas" no tiene ningún efecto debido a una consulta incompleta.
+
+--------------------
+Versión 1.24
+
+Changelog de los cambios más importantes en comparación con la versión 1.22 (1.23 nunca dejó el estado beta):
+
+- MySQLDumper 1.24 sigue trabajando en PHP4 y PHP5
+- estilo nuevo, ligero y amistoso. El "viejo" estilo sigue siendo incluido.
+- mejor uso de la RAM
+- la copia de seguridad y restauración a través de PHP es aproximadamente un 25% más rápida
+- posibilidad de seleccionar tablas al hacer una copia de seguridad o restauración
+- utilizar diferentes perfiles de configuración para gestionar diferentes MySQL-Server o -user.
+  De esta manera usted puede mantener diferentes MySQL-Server con un solo MySQLDumper-Instalación.
+- el SQL-Parser interno se ha mejorado (más copias de seguridad de otros programas pueden ser importet)
+- SQLBrowser: un montón de correcciones de errores y algunas mejoras (sin embargo, debe ser considerado como experimental)
+- SQLBrowser: una cómoda búsqueda fulltext le permite encontrar texto incluso cuando no sabe en qué columna puede ocurrir
+  Después de editar un registro volverá a la lista de resultados. Eso realmente es cómodo cuando se necesita cambiar los datos.
+- Herramientas: en la versión 1.22 la exportación de datos como archivo no funcionó. Ahora está funcionando de nuevo.
+- la GUI Web ha sido simplificada. Se han eliminado algunos parámetros. (Casi no tienes la oportunidad de configurar algo incorrectamente :))
+- FTP-Transfer: direcciona hasta 3 configuraciones de ftp simultáneamente en un proceso de reserva
+- Ahora se detectan las tablas de tipo VIEW o MEMORY y los datos no se guardan, pero la estructura de la tabla es
+- el directorio de trabajo / estructura ya no es necesario
+- se ha eliminado la copia de seguridad automática de "estructura única"
+- mejor y más seguro manejo de las codificaciones de los archivos de copia de seguridad
+- mejor y más seguro manejo de errores
+- el convertidor de copia de seguridad ha sido reescrito. Ahora también convierte automáticamente archivos grandes en archivos Multipart.
+- no hay avisos en los registros del servidor
+- al agregar consultas SQL a la biblioteca de SQL, ahora puede introducir más de una consulta. Si utiliza "commadn antes / después de la copia de seguridad"
+  Estas consultas se ejecutarán en una fila. Suces o falla se escribe en el archivo de registro.
+- Al crear una protección por contraseña se visualiza la fuerza de la contraseña.
+
+Crodump.pl:
+- cuando se puede llamar a crondump.pl en el directorio estándar "msd_cron" ya no es necesario ingresar el
+  "$ Absolute_path_of_configdir" manualmente. Se añadió una detección automática.
+- una mejor y más segura captura de errores
+- registro de eventos es mucho más preciso y le da declaraciones claras lo que sucedió
+- la eliminación automática ahora considera archivos Multipart como una copia de seguridad completa y funciona de la manera que usted espera que funcione
+- la eliminación automática se realiza después del proceso de copia de seguridad. En caso de errores, esto conserva las copias de seguridad antiguas que pueda necesitar.
+- el parámetro de configuración - el perfil de configuración que se va a utilizar - se puede configurar de tres maneras. El sufijo faltante
+  ".conf.php" se añadirá dinámicamente.
+1. config = mysqldumper.conf.php
+2. config = mysqdumper.conf
+3. config = mysqldumper
+
+- manipulador de señales eliminado:
+Cuando crondump.pl se inició a través de un cronjob hubo un mal funcionamiento. En algunos, un servidor raro este manipulador de señales causó un segundo
+O tercera instancia de la secuencia de comandos que nunca se detuvo y se quedó en la lista de procesos. En este caso el proceso debe ser eliminado manualmente.
+
+... y muchos más pequeños o grandes correcciones de errores y la limpieza del código
+
+Cuando quiera saber más, eche un vistazo al changelog de mis cambios de código en Sourceforge. Cada cambio
+Del código se documenta aquí:
+
+Http://mysqldumper.svn.sourceforge.net/viewvc/mysqldumper/trunk/?view=log

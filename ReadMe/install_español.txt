@@ -1,0 +1,6 @@
+Instalación:
+
+- Descargue la carpeta MySQLDumper en su espacio web
+- Cambie los derechos de config.php a 777
+- Navegue a su sitio (por ejemplo: http://www.su_sitio_de_internet.mx/mysqldumper/)
+- Sigue la instalación
