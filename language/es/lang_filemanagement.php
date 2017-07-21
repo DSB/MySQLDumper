@@ -75,5 +75,5 @@ Usted debe elegir el conjunto de caracteres con el que se guardó la copia de se
 Si usted descubre algún problema con algunos caracteres después de la restauración, puede repetir la restauración de la copia de seguridad con otro conjunto de caracteres. <br>
 Buena suerte. ;)";
 $lang['L_DOWNLOAD_FILE']="Descargos ficheros";
-$lang['L_BACKUP_NOT_POSSIBLE'] = "A backup of the system database `%s` is not possible!";
+$lang['L_BACKUP_NOT_POSSIBLE'] = "¡Una copia de seguridad de la base de datos del sistema `%s` no es posible realizarla!";
 ?>
