@@ -86,7 +86,7 @@ $lang['L_SAFEMODEDESC']="Επειδή η PHP τρέχει σε ασφαλή λε
 
 
 ";
-$lang['L_ENTER_DB_INFO']="First click the button \"Connect to MySQL\". Only if no database could be detected you need to provide a database name here.";
+$lang['L_ENTER_DB_INFO']="Πρώτα πατήστε το κουμπί \"Σύνδεση στη MySQL\". Μόνο αν δεν μπορέσει να ανιχνευτεί βάση δεδομένων θα πρέπει να παρέχετε ένα όνομα βάσης δεδομένων εδώ.";
 
 
 ?>
