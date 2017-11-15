@@ -92,7 +92,7 @@ $lang['L_CREATE_DATABASE']="Δημιουργία νέας Β.Δεδομένων"
 $lang['L_EXPORTFINISHED']="Εξαγωγή τελειωμένη.";
 $lang['L_SQL_BROWSER']="Πλοηγός SQL";
 $lang['L_SERVER']="Διακομιστής";
-$lang['L_MYSQL_CONNECTION_ENCODING']="Στανταρ κωδικοποίηση του διακομιστή MySQL
+$lang['L_MYSQL_CONNECTION_ENCODING']="Στάνταρ κωδικοποίηση του διακομιστή MySQL
 
 
 ";
@@ -105,11 +105,11 @@ $lang['L_CANCEL']="άκυρο";
 $lang['L_VISIT_HOMEPAGE']="Επισκεφθείτε την Ιστοσελίδα";
 $lang['L_SECONDS']="Δευτερόλεπτα";
 $lang['L_BACKUPS']="Αντίγραφα Ασφαλείας";
-$lang['L_MINUTES']="Minutes";
-$lang['L_PAGE_REFRESHS']="Page refreshs";
-$lang['L_MINUTE']="Minute";
-$lang['L_SETKEYSFOR']="Set new indexes for table";
-$lang['L_KEY_CONFIRMDELETE']="Really delete index?";
+$lang['L_MINUTES']="Λεπτά";
+$lang['L_PAGE_REFRESHS']="Ανανεώσεις σελίδας";
+$lang['L_MINUTE']="Λεπτό";
+$lang['L_SETKEYSFOR']="Ορισμός νέων index για τον πίνακα";
+$lang['L_KEY_CONFIRMDELETE']="Πραγματικά διαγραφή του index;";
 
 
 ?>
