@@ -185,10 +185,10 @@ $lang['L_PASSWORD']="Κωδικός";
 $lang['L_PASSWORD_REPEAT']="Κωδικός (Επανάληψη)";
 $lang['L_INFO_SIZE']="Μέγεθος";
 $lang['L_TABLE_TYPE']="Τύπος";
-$lang['L_KEY_DELETED']="Index deleted";
-$lang['L_KEY_DELETEERROR']="Error deleting index";
-$lang['L_KEY_ADDED']="Index added";
-$lang['L_KEY_ADDERROR']="Error adding index";
+$lang['L_KEY_DELETED']="Το index διαγράφηκε";
+$lang['L_KEY_DELETEERROR']="Σφάλμα κατά τη διαγραφή του index";
+$lang['L_KEY_ADDED']="Το index προστέθηκε";
+$lang['L_KEY_ADDERROR']="Σφάλμα κατά την προσθήκη του index";
 
 
 ?>
