@@ -75,5 +75,5 @@ $lang['L_CHOOSE_CHARSET']="Το MySQLDumper δε μπόρεσε να αναγν�
 <br>Αν παρουσιαστούν προβλήματα με κάποιους χαρακτήρες μετά την επαναφορά, επαναλάβετε την επαναφορά κι επιλέξτε άλλο σετ χαρακτήρων.
 <br>Καλή επιτυχία. ;)";
 $lang['L_DOWNLOAD_FILE']="Μεταφόρτωση αρχείου";
-$lang['L_BACKUP_NOT_POSSIBLE'] = "A backup of the system database `%s` is not possible!";
+$lang['L_BACKUP_NOT_POSSIBLE'] = "Δεν είναι δυνατή η λήψη αντιγράφου ασφαλείας της βάσης δεδομένων `%s` του συστήματος!";
 ?>
