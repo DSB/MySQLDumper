@@ -18,7 +18,7 @@ function ReadSQL()
 		fclose($fp);
 		@chmod($sf,0777);
 	}
-	if (count($SQL_ARRAY) == 0 && filesize($sf) > 0)
+	if ((!is_array($SQL_ARRAY) || count($SQL_ARRAY) == 0) && filesize($sf) > 0)
 	{
 		$SQL_ARRAY=file($sf);
 	}
@@ -63,7 +63,7 @@ function SQL_ComboBox()
 {
 	global $SQL_ARRAY,$tablename,$nl;
 	$s='';
-	if (count($SQL_ARRAY) > 0)
+	if (is_array($SQL_ARRAY) && count($SQL_ARRAY) > 0)
 	{
 		$s=$nl . $nl . '<select class="SQLCombo" name="sqlcombo" onchange="this.form.sqltextarea.value=this.options[this.selectedIndex].value;">' . $nl;
 		$s.='<option value="" selected>---</option>' . $nl;
@@ -533,7 +533,7 @@ function correct_post_index($index)
 function ComboCommandDump($when, $index, $disabled = '')
 {
 	global $SQL_ARRAY,$nl,$databases,$lang;
-	if (count($SQL_ARRAY) == 0)
+	if (!is_array($SQL_ARRAY) || count($SQL_ARRAY) == 0)
 	{
 		$r='<a href="sql.php?context=1" class="uls">' . $lang['L_SQL_BEFEHLE'] . '</a>';
 		if ($when == 0) $r.='<input type="hidden" name="command_before_' . $index . '" value="">';

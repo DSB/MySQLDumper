@@ -7,12 +7,12 @@ function nl2null($string)
 	return trim(str_replace($search,$replace,$string));	
 }
 //SQL-Strings
-echo $aus.='<h4>' . $lang['L_SQL_BEFEHLE'] . ' (' . count($SQL_ARRAY) . ')</h4>';
+echo $aus.='<h4>' . $lang['L_SQL_BEFEHLE'] . ' (' . (is_array($SQL_ARRAY)? count($SQL_ARRAY) : 0) . ')</h4>';
 echo '<a href="' . $params . '&amp;sqlconfig=1&amp;new=1">' . $lang['L_SQL_BEFEHLNEU'] . '</a><br><br>';
 if (isset($_POST['sqlnewupdate']))
 {
-	$ind=count($SQL_ARRAY);
-	if (count($SQL_ARRAY) > 0) array_push($SQL_ARRAY,$_POST['sqlname' . $ind] . "|" . $_POST['sqlstring' . $ind]);
+	$ind=(is_array($SQL_ARRAY))? count($SQL_ARRAY) : 0;
+	if ($ind > 0) array_push($SQL_ARRAY,$_POST['sqlname' . $ind] . "|" . $_POST['sqlstring' . $ind]);
 	else $SQL_ARRAY[0]=htmlspecialchars($_POST['sqlname0'],ENT_COMPAT ,'UTF-8') . '|' . $_POST['sqlstring0'];
 	WriteSQL();
 	echo '<p>' . $lang['L_SQL_BEFEHLSAVED1'] . ' \'' . $_POST['sqlname' . $ind] . '\' ' . $lang['L_SQL_BEFEHLSAVED2'] . '</p>';
@@ -24,7 +24,7 @@ echo '<form name="sqlform" action="sql.php" method="post">
 	<input type="hidden" name="dbid" value="' . $dbid . '">';
 echo '<table class="bdr" style="width:100%"><tr class="thead"><th>#</th><th>' . $lang['L_NAME'] . '</th><th>SQL</th><th>' . $lang['L_COMMAND'] . '</th></tr>';
 $i=0;
-if (count($SQL_ARRAY) > 0)
+if (is_array($SQL_ARRAY) && count($SQL_ARRAY) > 0)
 {
 	for ($i=0; $i < count($SQL_ARRAY); $i++)
 	{

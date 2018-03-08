@@ -120,7 +120,7 @@ if ($restore['filehandle'])
 		{
 			@mysqli_query($config['dbconnection'], '/*!40000 ALTER TABLE `'.$restore['actual_table'].'` DISABLE KEYS */;');
 		}
-		elseif (sizeof($restore['tables_to_restore'])==0&&($restore['actual_table']>''&&$restore['actual_table']!='unbekannt')) @mysqli_query($config['dbconnection'], '/*!40000 ALTER TABLE `'.$restore['actual_table'].'` DISABLE KEYS */;');
+		elseif ((!is_array($restore['tables_to_restore'])||sizeof($restore['tables_to_restore'])==0)&&($restore['actual_table']>''&&$restore['actual_table']!='unbekannt')) @mysqli_query($config['dbconnection'], '/*!40000 ALTER TABLE `'.$restore['actual_table'].'` DISABLE KEYS */;');
 		
 		WHILE (($a<$restore['anzahl_zeilen'])&&(!$restore['fileEOF'])&&($dauer<$restore['max_zeit'])&&!$restore['EOB'])
 		{
